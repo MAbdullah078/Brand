@@ -1,0 +1,304 @@
+
+
+
+<!-- <app-loader></app-loader> -->
+<div class="flexy signin-signup signupwa">
+    <form class="form-content"  (ngSubmit)="!userFormControl.hasError('required')
+    && !firstnameFormControl.hasError('required')
+      && !lastnameFormControl.hasError('required')
+       && !passwordFormControl.hasError('required')">
+        <div class="heading">
+          <img class="w-50" src="../../assets/img/Logo.png" alt="image">
+            <span class="d-block">Sign Up To Your Account</span>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="w-100 mb-2">
+                    <input matInput placeholder="Username" [(ngModel)]="model.username" name="un" required>
+                    <mat-error *ngIf="userFormControl.hasError('required')">
+                      Username is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                 
+                  <!-- <input type="text" matInput  name="lastname" placeholder=" Last Name" formControlName="lastName"  [(ngModel)]="model.last_name"required> -->
+          
+
+                  <mat-form-field class="w-100 mb-2">
+                    <input matInput placeholder="Firstname" [(ngModel)]="model.firstname" name="ft" required>
+
+                    <mat-error *ngIf="firstnameFormControl.hasError('required')">
+                      Firstname is <strong>required</strong>
+                    </mat-error>
+                  
+                    </mat-form-field>
+
+                    <!-- <input type="text" matInput  name="firstname" placeholder=" First Name" required> -->
+                   
+
+
+                    <mat-form-field class="w-100 mb-2">
+                      <input matInput placeholder="Lastname" [(ngModel)]="model.lastname" name="lt" required>
+
+                      <mat-error *ngIf="lastnameFormControl.hasError('required')">
+                        Lastname is <strong>required</strong>
+                      </mat-error>
+                      </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 mb-2">
+                    <input matInput placeholder="Email" [(ngModel)]="model.email" type="email" name="el" required>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                    
+                    </mat-form-field>
+                    <mat-form-field class="w-100 mb-2">
+                      <input [type]="hide ? 'password' : 'text'" matInput placeholder="Password" [(ngModel)]="model.password"  name="pd" required onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off>
+                      <mat-icon class="pointer" data-toggle="tooltip" title="{{hide? 'Show' : 'Hide'}}Password" matSuffix (click)="hide=!hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  
+                      <mat-error *ngIf="passwordFormControl.hasError('required')">
+                        Password is <strong>required</strong>
+                      </mat-error>
+                      <mat-error *ngIf="passwordFormControl.hasError('minLength')">
+                        Password must be 8 characters long
+                      </mat-error>
+                      <mat-error *ngIf="passwordFormControl.hasError('maxLength')">
+                        Password must be less than 30 characters characters long
+                      </mat-error>
+                      </mat-form-field>
+                      <mat-form-field class="w-100 mb-2">
+                      <input  [type]="hide ? 'password' : 'text'" matInput placeholder="Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"    name="pd" required onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off>
+                      <mat-icon class="pointer" data-toggle="tooltip" title="{{hide? 'Show' : 'Hide'}}Password" matSuffix (click)="hide=!hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    
+                      <mat-error *ngIf="passwordFormControl.hasError('required')">
+                        Password is <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                <!-- <mat-form-field class="w-100 mb-2">
+                    <input  type="text"  matInput id="pho" matInput placeholder="Phone" formControlName="phoNe"  name="pass"   [(ngModel)]="model.phone"required>
+                    <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback">
+                      <span *ngIf="f.phoNe.errors.required">Phone is required</span>
+                    </mat-error>
+                  </mat-form-field> -->
+
+                 
+                 
+
+
+
+                  <!-- <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
+                        <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
+                      </mat-select>
+                  
+          <mat-error *ngIf="submitted && f.counTry.errors" class="invalid-feedback">
+            <span *ngIf="f.counTry.errors.required">Country is required</span>
+          </mat-error>
+        </mat-form-field> -->
+
+<!-- 
+                  <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select State" formControlName="staTe" name="relationship" style="color: #000"  [(ngModel)]="model.state"  (ngModelChange)="getCities($event)" >
+                        <mat-option *ngFor="let data of getContryData1" [value]="data.name">{{ data.name }}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="submitted && f.staTe.errors" class="invalid-feedback">
+                        <span *ngIf="f.staTe.errors.required">State is required</span>
+                      </mat-error>
+                  </mat-form-field> -->
+
+         
+
+
+                  <!-- <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select City"  name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city"  >
+                        <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="submitted && f.ciTy.errors" class="invalid-feedback">
+                        <span *ngIf="f.ciTy.errors.required">City is required</span>
+                      </mat-error>
+                  </mat-form-field> -->
+
+                 
+
+
+
+<!-- 
+                  <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select Gender" name="relationship" formControlName="gendeR"  style="color: #000"[(ngModel)]="model.gender"  >
+                        <mat-option *ngFor="let g of genders" [value]="g.value">{{ g.show }}</mat-option>
+                      </mat-select>
+                    <mat-error *ngIf="submitted && f.gendeR.errors" class="invalid-feedback">
+                      <span *ngIf="f.gendeR.errors.required">Gender is required</span>
+                    </mat-error>
+                    </mat-form-field> -->
+              
+            </div>
+            <div class="col-md-4">
+              <div [ngClass]="{ 'has-error':!recaptcha}">
+                <app-recapcha></app-recapcha>
+  <div *ngIf="!recaptcha" >Recaptcha is require</div>
+            </div>
+            </div>
+            <div class="col-md-8 p-0">
+                  <mat-slide-toggle>
+                      By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
+                      AI and ALL other related Technology Platforms are subject to the <a class="anchor" href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">Terms of Use</a> and <a class="anchor" href="https://www.influexpai.com/privacy_policy">Privacy Policy</a>.
+                  </mat-slide-toggle>
+<div class="col-md-12 text-center mt-4">
+                  <button type="submit" class="btn btn-primary mr-2"  (click)="freeSignup()">Start Trail</button>
+                  <button type="submit" class="btn btn-primary" (click)="paidSignup()">Paid Sign up</button>
+               
+                  <p class="signup-auth text-center">Already have account. <a class="anchor" [routerLink]="['/login']">Sign In</a></p>
+                
+                </div>
+              </div>
+        </div>
+      </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <preloader-full></preloader-full>
+<div class="">
+  <div class="">
+    <div class="login-page">
+      <div class="col-lg-7 col-md-9 col-sm-12 col-xs-12 login-wrap">
+        <form class="ng-untouched ng-pristine ng-valid"
+              (ngSubmit)="!userFormControl.hasError('required')
+                && !firstnameFormControl.hasError('required')
+                  && !lastnameFormControl.hasError('required')
+                   && !passwordFormControl.hasError('required')">
+          <div class="card signup-from">
+            <div class="card-header text-center" data-background-color="rose">
+              <h4 class="card-title">
+                <label class="signin-heading"> Sign up to Your Account</label></h4>
+
+            </div>
+
+            <div class="card-content">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <mat-form-field class="loginfrom">
+                    <input matInput placeholder="Username" [(ngModel)]="model.username" name="un" required>
+                    <mat-error *ngIf="userFormControl.hasError('required')">
+                      Username is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                  <mat-form-field class="loginfrom">
+                    <input matInput placeholder="Firstname" [(ngModel)]="model.firstname" name="ft" required>
+
+                    <mat-error *ngIf="firstnameFormControl.hasError('required')">
+                      Firstname is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+
+                </div>
+              </div>
+              <div class="row mt10px">
+                <div class="col-md-6 col-sm-12">
+                  <mat-form-field class="loginfrom">
+                    <input matInput placeholder="Lastname" [(ngModel)]="model.lastname" name="lt" required>
+
+                    <mat-error *ngIf="lastnameFormControl.hasError('required')">
+                      Lastname is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6 col-sm-12">
+
+                  <mat-form-field class="loginfrom">
+                    <input matInput placeholder="Email" [(ngModel)]="model.email" type="email" name="el" required>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div> <div class="row mt10px">
+                <div class="col-md-6 col-sm-12">
+
+                  <mat-form-field class="loginfrom">
+                    <input [type]="hide ? 'password' : 'text'" matInput placeholder="Password" [(ngModel)]="model.password"  name="pd" required onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off>
+                    <mat-icon class="pointer" data-toggle="tooltip" title="{{hide? 'Show' : 'Hide'}}Password" matSuffix (click)="hide=!hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="passwordFormControl.hasError('minLength')">
+                      Password must be 8 characters long
+                    </mat-error>
+                    <mat-error *ngIf="passwordFormControl.hasError('maxLength')">
+                      Password must be less than 30 characters characters long
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              <div class="col-md-6 col-sm-12">
+
+                <mat-form-field class="loginfrom">
+                  <input  [type]="hide ? 'password' : 'text'" matInput placeholder="Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"    name="pd" required onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off>
+                  <mat-icon class="pointer" data-toggle="tooltip" title="{{hide? 'Show' : 'Hide'}}Password" matSuffix (click)="hide=!hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                  <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 mt10px" [ngClass]="{ 'has-error':!recaptcha}">
+                                <app-recapcha></app-recapcha>
+                  <div  style="font-size: 21px;font-weight: bold;color: red"  *ngIf="!recaptcha" >Recaptcha is require</div>
+                </div>
+              </div>
+            <div class="footer text-center">
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <button type="submit" class="btn-fill"  (click)="freeSignup()" style="color: #ffffff!important; font-size: 21px!important;" >Start Trail</button>
+
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn-fill" (click)="paidSignup()"  style="color: #ffffff!important; font-size: 21px!important;" >Paid Sign up</button>
+
+                </div>
+              </div>
+
+              <div class="have-account mt10px"> Already have account.
+                <a  [routerLink]="['/login']"><b style="color: #007dff;">Sign In</b> </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 col-md-3"></div>
+    </div>
+  </div>
+</div>
+
+
+
+ -->

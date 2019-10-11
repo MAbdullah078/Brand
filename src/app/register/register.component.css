@@ -1,0 +1,111 @@
+ /* input{
+    width: 100%!important;
+     font-size: 23px!important;
+     color: black!important;
+}
+ .popup-close-button{
+     width: 50px;
+     height: 40px;
+     border-radius: 38px;
+     background: #000000;
+     position: absolute;
+     top: -25px;
+     right: -18px;
+     cursor: pointer;
+     transition: all .1s ease-in-out;
+     color: #fff;
+     font-size: 18px;
+     font-family: "Open Sans", sans-serif;
+     font-weight: bolder;
+     text-align: center;
+     line-height: 50px;
+     z-index: 1;
+ }
+ .card-header1{
+     width: 82%;
+     height: 42px;
+     border-radius: 5px;
+     background: #000000;
+     position: absolute;
+     top: -20px;
+     right: 30px;
+     padding: 1px;
+     cursor: pointer;
+     transition: all .1s ease-in-out;
+     color: #fff;
+     font-size: 26px;
+     font-family: "Open Sans", sans-serif;
+     font-weight: 500;
+     text-align: center;
+     line-height: 50px;
+     z-index: 1;
+ }
+
+ .tab-content>.active{
+     background-color: #ffffff;
+ }
+ .login-page{
+     padding: 150px 50px 30px!important;
+ }
+ input.mat-input-element {
+     margin-top: 2px !important;
+ }
+
+ mat-form-field{
+     font-size: 17px;
+ }
+ .mat-icon{
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    cursor: pointer;
+  }
+.signup-from{
+    max-width: 703px;
+    box-shadow: 0 0 15px #ccc !important;
+} 
+.card [data-background-color]{
+    margin: -29px 15px 0;
+} */
+
+.flexy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: url(../../assets/img/LoginInflu.png)center/100% no-repeat;
+    padding: 30px 0;
+  }
+  .heading{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .form-content{
+    width: 700px;
+    background: url(../../assets/img/backkk.png);
+    padding: 10px 20px 20px;
+    opacity: 0.8;
+    border-radius: 20px;
+  }
+  .mat-form-field input,
+  .mat-select {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .mat-option{
+    font-size: 16px!important;
+  }
+  .signup-auth{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0 0;
+  }
+  .anchor{
+    color: #007bff;
+  }
+  .anchor:hover{
+    color: #c00;
+  }

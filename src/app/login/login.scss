@@ -1,0 +1,119 @@
+
+// input{
+//   color: black;
+//   font-size: 22px;
+// }
+// mat-form-field{
+//   font-size: 21px;
+//   font-weight: 600;
+//   font-family: inherit;
+// }
+// .btn-login{
+//   background-color: #000;
+//   border-radius: 50px;
+//   padding: 10px 0;
+//   color: #fff;
+//   width: 100%;
+//   font-size: 20px;
+//   font-weight: 400;
+//   box-shadow: 0 0 12px #ccc;
+//   border: none;
+// }
+// a{
+//   color:#007dff;
+//   text-decoration: underline;
+// cursor: pointer;
+// }
+// .md-slide-toggle-thumb{
+//   background-color: #000;
+// }
+// .mat-form-field-appearance-legacy .mat-form-field-infix{
+//   padding: .3375em 0;
+// }
+// .mat-icon{
+//   width: 1em;
+//   height: 1em;
+//   position: absolute;
+//   bottom: -8px;
+//   right: 0;
+//   cursor: pointer;
+// }
+// .form-1-sl{
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//       margin: 0;
+// }
+// .form-1-sl li{
+//   padding: 0px 15px;
+// }
+// .forgot-pass{
+//   color: #0a97d2;
+//   font-size: 14px !important;
+//   font-weight: bold;
+//   cursor: pointer;
+// }
+// .card{
+//   padding-bottom: 10px;
+// }
+.flexy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url(../../assets/img/LoginInflu.png)center/100% no-repeat;
+  padding: 68px 0;
+}
+.flexy ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexy ul li a img{
+  transition: all .4s ease-in-out;
+}
+.flexy ul li a img:hover{
+  transform: scale(1.2);
+}
+.form-content{
+  width: 400px;
+  background: url(../../assets/img/backkk.png);
+  padding: 10px 20px 20px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+.fa-eye,
+.fa-eye-slash,
+.fa-close {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.forgot,
+.privacy {
+  font-size: 12px;
+  color: #304ffe;
+  font-weight: 600;
+  display: inline-block;
+}
+.forgot,
+.privacy a{
+  color: #304ffe;
+}
+.signup-label {
+  margin: 0;
+  color: #304ffe;
+  font-size: 16px;
+  display: block;
+  font-weight: 600;
+}
+// .mat-form-field input{
+//   font-size: 24px;
+//   font-weight: 600;
+// }
+// .form-1-sl>li>a>i{font-size:30px;color:#fff}.form-1-sl{padding:0;margin:0}.form-1-sl>li{list-style:none;margin:5px 25px;display:inline-block}.form-1-sl>li>a{color:#fff;text-decoration:none;-webkit-transition:.5s;-o-transition:.5s;transition:.5s}.form-1-sl>li>a>i:hover{-webkit-animation-name:tada;animation-name:tada;-webkit-animation-duration:2s;animation-duration:2s}.form-1-img{background:url(assets/img/Modify.gif) center no-repeat;background-size:100%;padding:55px 0;overflow-x:hidden}.form-1{-webkit-box-shadow:0 0 10px #ccc;box-shadow:0 0 10px #ccc;background:#fff;padding:20px;border-radius:5px;margin:0 auto;float:none}.form-1-forgot{color:#007dff!important;font-weight:600;font-size:16px;-webkit-transition:none;-o-transition:none;transition:none}.form-1-forgot:hover{cursor:pointer;text-decoration:underline!important}.form-1-forgot{font-size:16px;text-align:center}.form-width{width:421px}.have-account{font-weight:600;margin-top:10px}.have-account a{color:#0275d8}.have-account a:hover,.terms-cond a:hover{color:#c00;text-decoration:underline}.terms-cond a{color:#0275d8;font-weight:400;font-size:13px;margin-left:15px}.login-comp .mat-form-field-label{top:1.8em}.form-1-body{padding-top:20px}input{font-size: 24px}

@@ -1,0 +1,11 @@
+.com-table strong{font-weight:700!important}.com-table .fa-check{color:#00cd00;font-size:21px}.com-table .fa-times{color:#cd0a0e;font-size:21px}.com-table table tr td a{color:#000000}.right{right:-42px}.items img{margin-left:10%} .com-table .fa-times{color: black}
+.page-section{
+    margin-top: 50px;
+}
+.pricing [class^=col-] {
+    padding: 0;
+    margin-top: 0px;
+}
+.fa-check{
+    color: #01b301;
+}
