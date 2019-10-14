@@ -118,8 +118,12 @@ mat-form-field{
     /*height: 165px;*/
     margin-top: 18px;
 }
-.row{
-  margin-bottom: 1%;
+.search-button{
+    background: #82d0dc;
+    color: #fff;
+}
+.search-form{
+    margin: 0px;
 }
 .loaded-container{
     width: 100%;
@@ -142,7 +146,6 @@ mat-form-field{
     /* height: 100%; */
     /* padding-left: 12px; */
     padding-right: 12px;
-    border-right: 1px solid #ebecf3;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
@@ -158,10 +161,11 @@ input[type=checkbox]{
 .tbl-cell{
     font-weight: 600;
     font-size: 14px;
+    padding-top: 13px;
 }
-i{
+/* i{
     color: #000;
-}
+} */
 .item-content{
 
     color: #919fa9;

@@ -94,8 +94,9 @@ color: #79CDCD;
   cursor: pointer;
 }
 .crete-list-button{
-  background: #000;
-  margin: 17px!important;;
+  background: #82d0dc;
+  color: #fff;
+  margin: 17px !important;
 }
 .crete-list-button:hover{
   color:#fff;
@@ -163,4 +164,25 @@ mat-tab-header{
   font-size: 18px;
   font-weight: bold;
   color: #000;
+}
+.fa-globe {
+  color: #0b29ff;
+}
+.fa-twitter {
+  color: #1da5de;
+}
+.fa-newspaper {
+  color: #ff4900;
+}
+.fa-youtube {
+  color: #d20008;
+}
+.fa-instagram {
+  color: #ff0043;
+}
+.fa-facebook {
+    color: #345396;
+}
+.fa-pinterest {
+  color: #d80007;
 }

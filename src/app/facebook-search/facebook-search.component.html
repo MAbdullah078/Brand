@@ -45,7 +45,7 @@
                         </ng-template>
                         <div class="body">
                             <div class="container">
-                                <form (submit)="setPage(1)">
+                                <form (submit)="setPage(1)" class="search-form">
                                 <div class="row">
                                     <div class="col-md-6">
                                             <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -84,8 +84,8 @@
                                     </div>
                                 </div>
 
-                                <div class="row" style="margin-bottom: 1%">
-                                    <div class="col-md-2 offset-md-4 text-right">
+                                <div class="row" >
+                                    <div class="col-md-12 text-center">
                                         <button type="submit"  class="btn btn-primary" >
                                             Search <i class="fa fa-sliders"></i>
                                         </button>
@@ -496,7 +496,7 @@
                     </div> -->
                     <div class="col-md-6 description-divison">
                         <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
-                        <label class="item-loc"> <i class="fa fa-map-marker marker-icon" style="font-size:16px;color:#c00"></i>  <span class="list-item1" *ngIf="item['category']['location']"> {{item['category']['location']}}</span></label>
+                        <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" *ngIf="item['category']['location']"> {{item['category']['location']}}</span></label>
                             <label class="item-content"
                          title="{{item['email']}}">{{item['email']}}</label>
                          <div class="row" >
