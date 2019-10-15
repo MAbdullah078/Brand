@@ -491,10 +491,10 @@
                                 <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                                 <label for="table-check-{{item['id']}}"></label>
                             </div>
-                    <!-- <div class="col-md-5  ">
+                    <div class="col-md-4  ">
                         <img [src]="item['image_url']"  class="twitter-image">
-                    </div> -->
-                    <div class="col-md-6 description-divison">
+                    </div>
+                    <div class="col-md-7 description-divison">
                         <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
                         <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" *ngIf="item['category']['location']"> {{item['category']['location']}}</span></label>
                             <label class="item-content"
@@ -502,7 +502,7 @@
                          <div class="row" >
                             <ul class="profile-url p-1 ">
                                 <li> <span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span> </li>
-                                <li> <span class="right-item"> <i class="fa fa-link" style="font-size:16px;color:#0a4069"></i> Phone:</span> <span class="list-item1">{{item['phone']}}   </span></li>
+                                <li> <span class="right-item">  Phone:</span> <span class="list-item1">{{item['phone']}}   </span></li>
                             </ul>
                             <ul class="profile-url p-1 ">
                                 <li>   <span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i>
@@ -537,7 +537,7 @@
                               <li><span class="followers-percen">40-45</span><div class="progress">
                                 <div class="progress-bar bg-info" role="progressbar" style="width:35%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                               </div><span class="followers-percen1">35%</span></li>
-                              <li>        <h5 class="text-center">Age</h5></li>
+                              
                         </ul>
     
             </div>

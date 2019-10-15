@@ -10117,7 +10117,7 @@ width: 16%;
 }
 .marker-icon{
   font-size: 16px;
-    color: #7a00ff;
+    color: #7a00ff!important;
   margin: 5px;
 }
 
