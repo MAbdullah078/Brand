@@ -87,7 +87,7 @@
     width: 700px;
     background: url(../../assets/img/backkk.png);
     padding: 10px 20px 20px;
-    opacity: 0.8;
+    opacity: 1.0;
     border-radius: 20px;
   }
   .mat-form-field input,

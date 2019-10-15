@@ -64,6 +64,12 @@
   background: url(../../assets/img/LoginInflu.png)center/100% no-repeat;
   padding: 68px 0;
 }
+.forgot-pass{
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  color: #304ffe;
+}
 .flexy ul{
   list-style: none;
   padding: 0;
@@ -79,10 +85,10 @@
   transform: scale(1.2);
 }
 .form-content{
-  width: 400px;
+  width: 500px;
   background: url(../../assets/img/backkk.png);
   padding: 10px 20px 20px;
-  opacity: 0.8;
+  opacity: 1.0;
   border-radius: 20px;
 }
 .fa-eye,
@@ -106,11 +112,14 @@
   color: #304ffe;
 }
 .signup-label {
-  margin: 0;
-  color: #304ffe;
+  margin: 8px;
+
   font-size: 16px;
   display: block;
   font-weight: 600;
+}
+.signup-label a{
+  color: #304ffe;
 }
 // .mat-form-field input{
 //   font-size: 24px;

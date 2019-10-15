@@ -12,7 +12,7 @@
     <div >
         <div class="row" *ngIf="!loaded">
             <div class="container-fluid ">
-                <mat-tab-group   style="background: #000;  ">
+                <mat-tab-group >
 
 
                     <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -575,7 +575,7 @@
                         <div id="ck-button">
                             <label>
 
-                                <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+                                <input type="checkbox"   (change)="cheakall($event.target.checked)" ><span>Select All</span>
                             </label>
                         </div>
 
@@ -936,16 +936,16 @@
         <div class="row" id="myHeader">
             <div class="col-md-12 list-row">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <!--<button  class="btn btn-success">Select All</button>-->
                         <div id="ck-button">
                             <label>
 
-                                <input type="checkbox"  (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                                <input type="checkbox" class="checkbox"  (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
                             </label>
                         </div>
 
-                        <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+                        <button  class="btn btn-lg add-to-list pull-right" (click)="add_create_list()"> Add to list</button>
 
                     </div>
                 </div>

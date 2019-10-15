@@ -204,17 +204,17 @@
 <div class="container-fluid" >
 
   <div class="row" id="myHeader">
-      <div class="col-md-6">
+      <div class="col-md-12 row">
         <div class="col-md-3">
           <div id="ck-button">
             <label>
 
-              <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+              <input type="checkbox" class="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
             </label>
           </div>
         </div>
-        <div class="col-md-9 text-left">
-          <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+        <div class="col-md-9 text-right">
+          <button  class="btn btn-lg add-to-list" (click)="add_create_list()"> Add to list</button>
 
         </div>
       </div>

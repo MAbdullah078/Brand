@@ -5693,7 +5693,9 @@ pre.code {
 
 [placeholder],
 input[placeholder] {
-    color: #8e9fa7
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 ::-webkit-input-placeholder {
