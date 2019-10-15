@@ -10,6 +10,9 @@ import {tap} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
+    rejectRFM(id: any) {
+        throw new Error("Method not implemented.");
+    }
     constructor(private http: Http) { }
 
     getAll() {
@@ -23,6 +26,8 @@ export class UserService {
           return response.json();
         }))
     }
+
+
 
     getUserTweets(username: string) {
         return this.http.get(Config.api+'/gettweets/' + username+'/', this.jwt()).pipe(tap((response: Response) => {

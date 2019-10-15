@@ -1,0 +1,4 @@
+
+*.md
+*.ts
+node_modules/zone.js/dist/zone-patch-user-media.min.js
