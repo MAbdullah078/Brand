@@ -168,6 +168,58 @@ mat-tab-group{
   font-size: 18px;
   text-align: center;
 }
+.subscribers-li2{
+  background: #98e080;
+    padding: 5px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+.rank-li1{
+  background: tomato;
+    padding: 5px;
+    border-radius: 5px;
+}
+.rank-li2{
+  background: tomato;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 3px;
+}
+.subscribers-li{
+  background: #98e080;
+  padding: 5px;
+  border-radius: 5px;
+}
+.right-item{
+  color: #fff;
+  font-size: 12px;
+  margin-right: 3px;
+
+}
+.list-item1{
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+
+}
+.description-divison{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.twitter-image2{
+  width: 120px;
+  height:120px
+}
+.image-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-button{
+  background: #82d0dc;
+  color:#fff
+}
 .add-to-list{
   background: #82d0dc;
   color: #fff;
@@ -10082,8 +10134,8 @@ ul.tab-nav.tab-nav2 li:first-child {
 }
 .real-heading{
   margin: 0;
-    color: #82d0dc;
-    font-size: 28px;
+    color: #98e080;
+    font-size: 19px;
 }
 .male-detail{
   margin-left: 33px;
@@ -10107,6 +10159,7 @@ ul.tab-nav.tab-nav2 li:first-child {
 .profile-url{ 
   display: flex;
   margin: 0;
+  margin-bottom: 5px;
 }
 #select-all-button1{
 width: 16%;
@@ -10117,7 +10170,7 @@ width: 16%;
 }
 .marker-icon{
   font-size: 16px;
-    color: #7a00ff!important;
+    color: #a5e080!important;
   margin: 5px;
 }
 

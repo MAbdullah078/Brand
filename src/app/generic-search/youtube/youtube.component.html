@@ -258,21 +258,21 @@
   <div class="container-fluid" >
 
     <div class="row" id="myHeader">
-      <div class="col-md-6">
+      <div class="col-md-12 row p-3">
         <div class="col-md-3">
           <div id="ck-button">
             <label>
 
-              <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+              <input type="checkbox" class="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
             </label>
           </div>
         </div>
-        <div class="col-md-9 text-left">
-          <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+        <div class="col-md-9 text-right">
+          <button  class="btn btn-lg add-to-list" (click)="add_create_list()"> Add to list</button>
 
         </div>
       </div>
-      <div class="col-md-6 text-right">
+      <div class="col-md-12 text-center">
         <h5 style="margin: 10px; color: gray; ">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
 
       </div>
@@ -283,11 +283,13 @@
 
 
 
-            <div class="col-md-3 image-area">
+            <div class="col-md-1 image-area">
                 <div class="p-checkbox" type="checkbox">
                     <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                     <label for="table-check-{{item['id']}}"></label>
                 </div>
+            </div>
+            <div class="col-md-3">
                 <div class="p-img">
                     <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  >
                     <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  >
@@ -296,7 +298,7 @@
             </div>
 
 
-            <div class="col-md-9 detail-area">
+            <div class="col-md-8 detail-area">
                 <h3 class="">
                     <img src="../../assets/img/youtub.png">
                     {{item['name']}}</h3>

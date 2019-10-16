@@ -250,6 +250,7 @@ input[type=checkbox]{
   font-weight: 600;
   font-size: 14px;
   padding-top: 12px;
+  margin:0px
 
 }
 i{
@@ -262,10 +263,6 @@ i{
   font-size: 12px;
   font-weight: 500!important;
   margin: 0;
-}
-.profile-url{ 
-   display: flex;
-   margin: 0;
 }
 
 .influcener-div{
@@ -323,29 +320,25 @@ i{
   color:#d83838;
   margin: 3px;
 }
-.real-heading{
-  margin: 0;
-    color: #C42A72;
-    font-size: 28px;
-}
+// .real-heading{
+//   margin: 0;
+//     color: #C42A72;
+//     font-size: 28px;
+// }
 
-.marker-icon{
-  font-size: 16px;
-  color: #6248b1;
-  margin: 9px;
-}
+
 hr{
   margin: 0!important;
 }
-.list-item1{
-  color: #382222;
-  font-weight: 700;
-  font-size: 11px;
-}
-.right-item{
-  color: #919fa9;
-  font-size: 14px;
-}
+// .list-item1{
+//   color: #382222;
+//   font-weight: 700;
+//   font-size: 11px;
+// }
+// .right-item{
+//   color: #919fa9;
+//   font-size: 14px;
+// }
 .btn-success{
   background: black;
   border-radius: 50px;

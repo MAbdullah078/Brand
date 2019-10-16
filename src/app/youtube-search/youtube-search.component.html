@@ -17,7 +17,7 @@
 
                         <div class="row">
                             <div class="col-md-3">
-                                <h6 style="padding: 20px 20px 2px 20px; font-weight: bolder"> Youtube Influencers</h6>
+                                <h6 class="influencer-hading"> Youtube Influencers</h6>
                             </div>
                             <div class="col-md-6 text-center p-auto">
 
@@ -45,7 +45,7 @@
                     </ng-template>
                     <div class="body">
                         <div class="container">
-                            <form (submit)="setPage(1)">
+                            <form (submit)="setPage(1)" class="m-0">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -84,14 +84,14 @@
                                     </div>
                                 </div>
 
-                                <div class="row" style="margin-bottom: 1%">
+                                <div class="row" >
                                     <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="tomorrow_upload_video" placeholder="Serch by Tommorow Upload Videos" name="er">
                                         </mat-form-field>
                                     </div>
-                                    <div class="col-md-2 offset-md-4 text-right">
-                                        <button type="submit"  class="btn btn-rounded" >
+                                    <div class="col-md-12  text-center">
+                                        <button type="submit"  class="btn btn-priamry search-button" >
                                             Search <i class="fa fa-sliders"></i>
                                         </button>
                                     </div>
@@ -109,7 +109,7 @@
 
     <div class="row" *ngIf="!loaded" style="margin-top: 3%">
         <div class="col-md-12 text-left">
-            <h4 style="font-weight: bolder">Featured Youtube Influencers</h4>
+            <h5 class="text-center" >Featured Youtube Influencers</h5>
         </div>
 
     </div>
@@ -263,72 +263,45 @@
             </div>
         </div> -->
         <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
-            <div class="col-md-6">
-            <div class="row">
                     <div class="col-md-1 profile-checkbox" type="checkbox">
                             <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                             <label for="table-check-{{item['id']}}"></label>
                         </div>
-                <div class="col-md-4  ">
+                <div class="col-md-2 image-div ">
                     <img [src]="item['thumbnail_url']"  class="twitter-image">
                 </div>
-                <div class="col-md-7 description-divison">
+                <div class="col-md-4 description-divison">
                     <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-                    <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" > {{item['location']}}</span></label>
                         <label class="item-content"
                         title="{{item['description']}}">{{item['description']}}</label>
                      <div class="row" >
                         <ul class="profile-url p-1 ">
-                            <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i></span> <span class="list-item1">{{item['subscribers']}}</span> </li>
-                            <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> </span> <span class="list-item1">{{item['total_views']}}</span></li>
+                            <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li>
+                            <li class="subscribers-li2"><span class="right-item">  Total Views:</span> <span class="list-item1">{{item['total_views']}}</span></li>
                         </ul>
                         <ul class="profile-url p-1 ">
-                            <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>
-                            <li><span class="right-item"><i class="fa fa-calendar-o" style="font-size:16px;color:#0a4069"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
+                            <li class="rank-li1"><span class="right-item"> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>
+                            <li class="rank-li2"><span class="right-item"> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
 
                         </ul>
                     </div>
              
                 </div>
                 
-            </div>
+        
+            <div class="col-md-2 image-div">
+                <img [src]="item['thumbnail_url']"  class="twitter-image2"> 
         </div>
-            <div class="col-md-1 followers-profile">
-                <h4 class="real-heading">97%</h4>
-                <h5>Real</h5>
-            </div>
-            <div class="col-md-4">
-                <ul class="progress-url">
-                        <li>
-                            <span class="followers-percen">25-30</span>
-                            <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 56%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>  <span class="followers-percen1">56%</span></li>
-                          <li>   <span  class="followers-percen">30-35</span><div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 29%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div><span  class="followers-percen1">29%</span></li>
-                          <li><span class="followers-percen" >35-40</span><div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 45%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div><span class="followers-percen1">45%</span></li>
-                          <li><span class="followers-percen">40-45</span><div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width:35%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div><span class="followers-percen1">35%</span></li>
-                          
-                    </ul>
-
+        <div class="col-md-2 image-div">
+            <img [src]="item['thumbnail_url']"  class="twitter-image2">
         </div>
-        <div class="col-md-1 male-follwers">
-            <div>
-                <i class="fas fa-venus"></i><span>83%</span>
-                <h5>Female</h5>
-            </div>
-            <div>
-                    <i class="fas fa-venus"></i><span>33%</span>
-                    <h5>Male</h5>
-                </div>
-        </div>
+        <div class="col-md-1 followers-profile">
+            <h4 class="real-heading">{{item['subscribers']}}</h4>
+            <h6>Subcriber</h6>
         </div>
     </div>
+        <!-- </div>
+    </div> -->
 
   <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
     <div class="box-typical box-typical-full-height" style="min-height: 119px;">

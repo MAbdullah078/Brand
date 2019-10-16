@@ -16,7 +16,7 @@
 
             <div class="row">
               <div class="col-md-3">
-                <h6 style="padding: 20px 20px 2px 20px; font-weight: bolder"> Instagram Influencers</h6>
+                <h6 class="influencer-hading"> Instagram Influencers</h6>
               </div>
               <div class="col-md-6 text-center p-auto">
 
@@ -44,7 +44,7 @@
           </ng-template>
           <div class="body">
             <div class="container">
-                <form (submit)="setPage(1)">
+                <form (submit)="setPage(1)" class="m-0">
                     <div class="row">
                         <div class="col-md-6">
                             <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -83,9 +83,9 @@
                         </div>
                     </div>
 
-                    <div class="row" style="margin-bottom: 1%">
+                    <div class="row">
                         <div class="col-md-2 offset-md-4 text-right">
-                            <button type="submit"  class="btn btn-rounded" >
+                            <button type="submit"  class="btn btn-primary" >
                                 Search <i class="fa fa-sliders"></i>
                             </button>
                         </div>
