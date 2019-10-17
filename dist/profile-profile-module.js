@@ -57,6 +57,7 @@ var ProfileComponent = /** @class */ (function () {
     ProfileComponent.prototype.ngOnInit = function () {
         console.log('Profile Picture is.....', this.currentUser.profile_image);
         this.loadprofilepic();
+        window.scroll(0, 0);
     };
     ProfileComponent.prototype.onChange = function ($event) {
         var _this = this;

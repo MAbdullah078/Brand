@@ -21,6 +21,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
             console.log('Profile Picture is.....',this.currentUser.profile_image);
       this.loadprofilepic();
+      window.scroll(0,0);
 
   }
      currentUser= JSON.parse(localStorage.getItem('currentUser'));

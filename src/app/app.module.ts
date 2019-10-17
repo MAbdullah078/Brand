@@ -28,6 +28,7 @@ import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'a
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { SocialLoginModule, AuthService } from 'angular5-social-login';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {RfmComponent} from './rfm/rfm.component';
 import {
   BlogComponent,
   HowItWorksComponent,
@@ -53,6 +54,7 @@ import {AuthGuard} from './_guards';
 import {PushNotificationsService} from 'angular2-notifications/dist';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { MyRfmComponent } from './my-rfm/my-rfm.component';
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
   
@@ -82,6 +84,7 @@ export function provideConfig() {
     AgenciesComponent,
     BrandComponent,
     ContactComponent,
+    MyRfmComponent,
     GetpaymentComponent,
     RegisterComponent,
     ConfirmPasswordComponent,
@@ -96,6 +99,8 @@ export function provideConfig() {
     TermsAndConditionsComponent,
     TermsComponent,
     WhatIsInfluexpaiComponent,
+    MyRfmComponent,
+    RfmComponent
     // GenericSearchComponent
   ],
   imports: [
