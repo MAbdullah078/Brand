@@ -18,7 +18,7 @@ module.exports = ".preloader-full{z-index:100;position:fixed;top:0;left:0;right:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"preloader-full\"\r\n     *ngIf=\"preloaderService.getPreloaderCount('full') > 0\">\r\n  <div class=\"spinner\"></div>\r\n</div>\r\n"
+module.exports = "<!-- <div class=\"preloader-full\"\r\n     *ngIf=\"preloaderService.getPreloaderCount('full') > 0\">\r\n  <div class=\"spinner\"></div>\r\n</div> -->\r\n"
 
 /***/ }),
 

@@ -4,126 +4,114 @@
 /*!***************************************************!*\
   !*** ./node_modules/ngx-pipes/fesm5/ngx-pipes.js ***!
   \***************************************************/
-/*! exports provided: NgPipesModule, NgArrayPipesModule, DiffPipe, InitialPipe, FlattenPipe, IntersectionPipe, ReversePipe, TailPipe, TrurthifyPipe, UnionPipe, UniquePipe, WithoutPipe, PluckPipe, ShufflePipe, EveryPipe, SomePipe, SamplePipe, GroupByPipe, FilterByPipe, OrderByPipe, GroupByImpurePipe, FilterByImpurePipe, OrderByImpurePipe, RangePipe, NgObjectPipesModule, KeysPipe, ValuesPipe, PairsPipe, PickPipe, OmitPipe, InvertPipe, InvertByPipe, DiffObjPipe, STRING_PIPES, NgStringPipesModule, AorAnPipe, UcWordsPipe, LeftTrimPipe, RepeatPipe, RightTrimPipe, ScanPipe, ShortenPipe, StripTagsPipe, TrimPipe, UcFirstPipe, SlugifyPipe, CamelizePipe, LatinisePipe, LinesPipe, UnderscorePipe, MatchPipe, TestPipe, LeftPadPipe, RightPadPipe, MakePluralStringPipe, WrapPipe, MATH_PIPES, NgMathPipesModule, MaxPipe, MinPipe, PercentagePipe, SumPipe, FloorPipe, RoundPipe, SqrtPipe, PowerPipe, CeilPipe, DegreesPipe, BytesPipe, BOOLEAN_PIPES, NgBooleanPipesModule, IsDefinedPipe, IsNullPipe, IsUndefinedPipe, IsStringPipe, IsFunctionPipe, IsNumberPipe, IsArrayPipe, IsObjectPipe, IsGreaterEqualThanPipe, IsGreaterThanPipe, IsLessEqualThanPipe, IsEqualToPipe, IsNotEqualToPipe, IsIdenticalToPipe, IsNotIdenticalToPipe, IsLessThanPipe, DATE_PIPES, NgDatePipesModule, TimeAgoPipe, ɵa, ɵb */
+/*! exports provided: AorAnPipe, BOOLEAN_PIPES, BytesPipe, CamelizePipe, CeilPipe, ChunkPipe, DATE_PIPES, DegreesPipe, DiffObjPipe, DiffPipe, EveryPipe, FilterByImpurePipe, FilterByPipe, FlattenPipe, FloorPipe, GroupByImpurePipe, GroupByPipe, InitialPipe, IntersectionPipe, InvertByPipe, InvertPipe, IsArrayPipe, IsDefinedPipe, IsEqualToPipe, IsFunctionPipe, IsGreaterEqualThanPipe, IsGreaterThanPipe, IsIdenticalToPipe, IsLessEqualThanPipe, IsLessThanPipe, IsNotEqualToPipe, IsNotIdenticalToPipe, IsNullPipe, IsNumberPipe, IsObjectPipe, IsStringPipe, IsUndefinedPipe, KeysPipe, LatinisePipe, LeftPadPipe, LeftTrimPipe, LinesPipe, MATH_PIPES, MakePluralStringPipe, MatchPipe, MaxPipe, MinPipe, NgArrayPipesModule, NgBooleanPipesModule, NgDatePipesModule, NgMathPipesModule, NgObjectPipesModule, NgPipesModule, NgStringPipesModule, OmitPipe, OrderByImpurePipe, OrderByPipe, PairsPipe, PercentagePipe, PickPipe, PluckPipe, PowerPipe, RangePipe, RepeatPipe, ReversePipe, RightPadPipe, RightTrimPipe, RoundPipe, STRING_PIPES, SamplePipe, ScanPipe, ShortenPipe, ShufflePipe, SlugifyPipe, SomePipe, SqrtPipe, StripTagsPipe, SumPipe, TailPipe, TestPipe, TimeAgoPipe, TrimPipe, TrurthifyPipe, UcFirstPipe, UcWordsPipe, UnderscorePipe, UnionPipe, UniquePipe, ValuesPipe, WithoutPipe, WrapPipe, ɵa, ɵb, ɵc */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgPipesModule", function() { return NgPipesModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgArrayPipesModule", function() { return NgArrayPipesModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiffPipe", function() { return DiffPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InitialPipe", function() { return InitialPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlattenPipe", function() { return FlattenPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntersectionPipe", function() { return IntersectionPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReversePipe", function() { return ReversePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TailPipe", function() { return TailPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrurthifyPipe", function() { return TrurthifyPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UnionPipe", function() { return UnionPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UniquePipe", function() { return UniquePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WithoutPipe", function() { return WithoutPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PluckPipe", function() { return PluckPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShufflePipe", function() { return ShufflePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EveryPipe", function() { return EveryPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SomePipe", function() { return SomePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SamplePipe", function() { return SamplePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupByPipe", function() { return GroupByPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterByPipe", function() { return FilterByPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderByPipe", function() { return OrderByPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupByImpurePipe", function() { return GroupByImpurePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterByImpurePipe", function() { return FilterByImpurePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderByImpurePipe", function() { return OrderByImpurePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangePipe", function() { return RangePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgObjectPipesModule", function() { return NgObjectPipesModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeysPipe", function() { return KeysPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValuesPipe", function() { return ValuesPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PairsPipe", function() { return PairsPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PickPipe", function() { return PickPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OmitPipe", function() { return OmitPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvertPipe", function() { return InvertPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvertByPipe", function() { return InvertByPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiffObjPipe", function() { return DiffObjPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STRING_PIPES", function() { return STRING_PIPES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgStringPipesModule", function() { return NgStringPipesModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AorAnPipe", function() { return AorAnPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UcWordsPipe", function() { return UcWordsPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftTrimPipe", function() { return LeftTrimPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RepeatPipe", function() { return RepeatPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightTrimPipe", function() { return RightTrimPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScanPipe", function() { return ScanPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShortenPipe", function() { return ShortenPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StripTagsPipe", function() { return StripTagsPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrimPipe", function() { return TrimPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UcFirstPipe", function() { return UcFirstPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SlugifyPipe", function() { return SlugifyPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CamelizePipe", function() { return CamelizePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LatinisePipe", function() { return LatinisePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinesPipe", function() { return LinesPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UnderscorePipe", function() { return UnderscorePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchPipe", function() { return MatchPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestPipe", function() { return TestPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftPadPipe", function() { return LeftPadPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightPadPipe", function() { return RightPadPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MakePluralStringPipe", function() { return MakePluralStringPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WrapPipe", function() { return WrapPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MATH_PIPES", function() { return MATH_PIPES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgMathPipesModule", function() { return NgMathPipesModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaxPipe", function() { return MaxPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MinPipe", function() { return MinPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PercentagePipe", function() { return PercentagePipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SumPipe", function() { return SumPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FloorPipe", function() { return FloorPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoundPipe", function() { return RoundPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SqrtPipe", function() { return SqrtPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PowerPipe", function() { return PowerPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CeilPipe", function() { return CeilPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DegreesPipe", function() { return DegreesPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BytesPipe", function() { return BytesPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BOOLEAN_PIPES", function() { return BOOLEAN_PIPES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgBooleanPipesModule", function() { return NgBooleanPipesModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsDefinedPipe", function() { return IsDefinedPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNullPipe", function() { return IsNullPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsUndefinedPipe", function() { return IsUndefinedPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsStringPipe", function() { return IsStringPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsFunctionPipe", function() { return IsFunctionPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNumberPipe", function() { return IsNumberPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BytesPipe", function() { return BytesPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CamelizePipe", function() { return CamelizePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CeilPipe", function() { return CeilPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChunkPipe", function() { return ChunkPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DATE_PIPES", function() { return DATE_PIPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DegreesPipe", function() { return DegreesPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiffObjPipe", function() { return DiffObjPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiffPipe", function() { return DiffPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EveryPipe", function() { return EveryPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterByImpurePipe", function() { return FilterByImpurePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterByPipe", function() { return FilterByPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlattenPipe", function() { return FlattenPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FloorPipe", function() { return FloorPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupByImpurePipe", function() { return GroupByImpurePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GroupByPipe", function() { return GroupByPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InitialPipe", function() { return InitialPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntersectionPipe", function() { return IntersectionPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvertByPipe", function() { return InvertByPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvertPipe", function() { return InvertPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsArrayPipe", function() { return IsArrayPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsObjectPipe", function() { return IsObjectPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsDefinedPipe", function() { return IsDefinedPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsEqualToPipe", function() { return IsEqualToPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsFunctionPipe", function() { return IsFunctionPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsGreaterEqualThanPipe", function() { return IsGreaterEqualThanPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsGreaterThanPipe", function() { return IsGreaterThanPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsLessEqualThanPipe", function() { return IsLessEqualThanPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsEqualToPipe", function() { return IsEqualToPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNotEqualToPipe", function() { return IsNotEqualToPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsIdenticalToPipe", function() { return IsIdenticalToPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNotIdenticalToPipe", function() { return IsNotIdenticalToPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsLessEqualThanPipe", function() { return IsLessEqualThanPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsLessThanPipe", function() { return IsLessThanPipe; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DATE_PIPES", function() { return DATE_PIPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNotEqualToPipe", function() { return IsNotEqualToPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNotIdenticalToPipe", function() { return IsNotIdenticalToPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNullPipe", function() { return IsNullPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNumberPipe", function() { return IsNumberPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsObjectPipe", function() { return IsObjectPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsStringPipe", function() { return IsStringPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsUndefinedPipe", function() { return IsUndefinedPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeysPipe", function() { return KeysPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LatinisePipe", function() { return LatinisePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftPadPipe", function() { return LeftPadPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftTrimPipe", function() { return LeftTrimPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinesPipe", function() { return LinesPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MATH_PIPES", function() { return MATH_PIPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MakePluralStringPipe", function() { return MakePluralStringPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchPipe", function() { return MatchPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaxPipe", function() { return MaxPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MinPipe", function() { return MinPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgArrayPipesModule", function() { return NgArrayPipesModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgBooleanPipesModule", function() { return NgBooleanPipesModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgDatePipesModule", function() { return NgDatePipesModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgMathPipesModule", function() { return NgMathPipesModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgObjectPipesModule", function() { return NgObjectPipesModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgPipesModule", function() { return NgPipesModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgStringPipesModule", function() { return NgStringPipesModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OmitPipe", function() { return OmitPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderByImpurePipe", function() { return OrderByImpurePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderByPipe", function() { return OrderByPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PairsPipe", function() { return PairsPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PercentagePipe", function() { return PercentagePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PickPipe", function() { return PickPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PluckPipe", function() { return PluckPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PowerPipe", function() { return PowerPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangePipe", function() { return RangePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RepeatPipe", function() { return RepeatPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReversePipe", function() { return ReversePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightPadPipe", function() { return RightPadPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightTrimPipe", function() { return RightTrimPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoundPipe", function() { return RoundPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STRING_PIPES", function() { return STRING_PIPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SamplePipe", function() { return SamplePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScanPipe", function() { return ScanPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShortenPipe", function() { return ShortenPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShufflePipe", function() { return ShufflePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SlugifyPipe", function() { return SlugifyPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SomePipe", function() { return SomePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SqrtPipe", function() { return SqrtPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StripTagsPipe", function() { return StripTagsPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SumPipe", function() { return SumPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TailPipe", function() { return TailPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestPipe", function() { return TestPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeAgoPipe", function() { return TimeAgoPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrimPipe", function() { return TrimPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrurthifyPipe", function() { return TrurthifyPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UcFirstPipe", function() { return UcFirstPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UcWordsPipe", function() { return UcWordsPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UnderscorePipe", function() { return UnderscorePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UnionPipe", function() { return UnionPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UniquePipe", function() { return UniquePipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValuesPipe", function() { return ValuesPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WithoutPipe", function() { return WithoutPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WrapPipe", function() { return WrapPipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return isString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return RadiansPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return FromPairsPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return RadiansPipe; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var DiffPipe = /** @class */ (function () {
     function DiffPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {...?} args
-     * @return {?}
-     */
-    DiffPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {...?} args
-     * @return {?}
-     */
-    function (input) {
+    DiffPipe.prototype.transform = function (input) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
@@ -132,122 +120,56 @@ var DiffPipe = /** @class */ (function () {
             return input;
         }
         // tslint:disable-next-line no-bitwise
-        return args.reduce((/**
-         * @param {?} d
-         * @param {?} c
-         * @return {?}
-         */
-        function (d, c) { return d.filter((/**
-         * @param {?} e
-         * @return {?}
-         */
-        function (e) { return !~c.indexOf(e); })); }), input);
+        return args.reduce(function (d, c) { return d.filter(function (e) { return !~c.indexOf(e); }); }, input);
     };
-    DiffPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'diff' },] }
-    ];
+    DiffPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'diff' })
+    ], DiffPipe);
     return DiffPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var InitialPipe = /** @class */ (function () {
     function InitialPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} num
-     * @return {?}
-     */
-    InitialPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} num
-     * @return {?}
-     */
-    function (input, num) {
+    InitialPipe.prototype.transform = function (input, num) {
         if (num === void 0) { num = 0; }
         return Array.isArray(input) ? input.slice(0, input.length - num) : input;
     };
-    InitialPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'initial' },] }
-    ];
+    InitialPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'initial' })
+    ], InitialPipe);
     return InitialPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var FlattenPipe = /** @class */ (function () {
     function FlattenPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} shallow
-     * @return {?}
-     */
-    FlattenPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} shallow
-     * @return {?}
-     */
-    function (input, shallow) {
+    FlattenPipe.prototype.transform = function (input, shallow) {
         if (shallow === void 0) { shallow = false; }
         if (!Array.isArray(input)) {
             return input;
         }
         return shallow ? [].concat.apply([], input) : this.flatten(input);
     };
-    /**
-     * @private
-     * @param {?} array
-     * @return {?}
-     */
-    FlattenPipe.prototype.flatten = /**
-     * @private
-     * @param {?} array
-     * @return {?}
-     */
-    function (array) {
+    FlattenPipe.prototype.flatten = function (array) {
         var _this = this;
-        return array.reduce((/**
-         * @param {?} arr
-         * @param {?} elm
-         * @return {?}
-         */
-        function (arr, elm) {
+        return array.reduce(function (arr, elm) {
             if (Array.isArray(elm)) {
                 return arr.concat(_this.flatten(elm));
             }
             return arr.concat(elm);
-        }), []);
+        }, []);
     };
-    FlattenPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'flatten' },] }
-    ];
+    FlattenPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'flatten' })
+    ], FlattenPipe);
     return FlattenPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IntersectionPipe = /** @class */ (function () {
     function IntersectionPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {...?} args
-     * @return {?}
-     */
-    IntersectionPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {...?} args
-     * @return {?}
-     */
-    function (input) {
+    IntersectionPipe.prototype.transform = function (input) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
@@ -256,181 +178,80 @@ var IntersectionPipe = /** @class */ (function () {
             return input;
         }
         // tslint:disable-next-line no-bitwise
-        return args.reduce((/**
-         * @param {?} n
-         * @param {?} c
-         * @return {?}
-         */
-        function (n, c) { return n.filter((/**
-         * @param {?} e
-         * @return {?}
-         */
-        function (e) { return !!~c.indexOf(e); })); }), input);
+        return args.reduce(function (n, c) { return n.filter(function (e) { return !!~c.indexOf(e); }); }, input);
     };
-    IntersectionPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'intersection' },] }
-    ];
+    IntersectionPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'intersection' })
+    ], IntersectionPipe);
     return IntersectionPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @param {?} value
- * @return {?}
- */
 function isUndefined(value) {
     return typeof value === 'undefined';
 }
-/**
- * @param {?} value
- * @return {?}
- */
 function isFunction(value) {
     return typeof value === 'function';
 }
-/**
- * @param {?} value
- * @return {?}
- */
 function isNumber(value) {
     return typeof value === 'number';
 }
-/**
- * @param {?} value
- * @return {?}
- */
 function isString(value) {
     return typeof value === 'string';
 }
-/**
- * @param {?} value
- * @return {?}
- */
 function isBoolean(value) {
     return typeof value === 'boolean';
 }
-/**
- * @param {?} value
- * @return {?}
- */
 function isObject(value) {
     return value !== null && typeof value === 'object';
 }
-/**
- * @param {?} value
- * @return {?}
- */
 function isNumberFinite(value) {
     return isNumber(value) && isFinite(value);
 }
-/**
- * @param {?} letter
- * @return {?}
- */
 function isVowel(letter) {
-    /** @type {?} */
     var vowels = ['a', 'e', 'i', 'o', 'u'];
     return vowels.indexOf(letter) !== -1;
 }
-/**
- * @param {?} text
- * @return {?}
- */
 function ucFirst(text) {
     var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(text.split(/\s/g)), part = _a[0], split = _a.slice(1);
-    /** @type {?} */
     var ucd = part
         .toLowerCase()
         .split(/(?=['|-])/g)
-        .map((/**
-     * @param {?} word
-     * @return {?}
-     */
-    function (word) {
+        .map(function (word) {
         return word.indexOf('-') + word.indexOf("'") > -2
             ? word.slice(0, 2).toUpperCase() + word.slice(2)
             : word.slice(0, 1).toUpperCase() + word.slice(1);
-    }))
+    })
         .join('');
     return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])([ucd], split).join(' ');
 }
-/**
- * @param {?} num
- * @param {?} precision
- * @return {?}
- */
 function applyPrecision(num, precision) {
     if (precision <= 0) {
         return Math.round(num);
     }
-    /** @type {?} */
     var tho = Math.pow(10, precision);
     return Math.round(num * tho) / tho;
 }
-/**
- * @param {?} obj
- * @param {?} map
- * @return {?}
- */
 function extractDeepPropertyByMapKey(obj, map) {
-    /** @type {?} */
     var keys = map.split('.');
-    /** @type {?} */
     var head = keys.shift();
-    return keys.reduce((/**
-     * @param {?} prop
-     * @param {?} key
-     * @return {?}
-     */
-    function (prop, key) {
+    return keys.reduce(function (prop, key) {
         return !isUndefined(prop) && !isUndefined(prop[key]) ? prop[key] : undefined;
-    }), obj[head || '']);
+    }, obj[head || '']);
 }
-/**
- * @param {?} obj
- * @param {?} map
- * @return {?}
- */
 function extractDeepPropertyByParentMapKey(obj, map) {
-    /** @type {?} */
     var keys = map.split('.');
-    /** @type {?} */
     var tail = keys.pop();
-    /** @type {?} */
     var props = extractDeepPropertyByMapKey(obj, keys.join('.'));
     return { props: props, tail: tail };
 }
-/**
- * @param {?} obj
- * @param {?} other
- * @return {?}
- */
 function getKeysTwoObjects(obj, other) {
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(Object.keys(obj), Object.keys(other)).filter((/**
-     * @param {?} key
-     * @param {?} index
-     * @param {?} array
-     * @return {?}
-     */
-    function (key, index, array) { return array.indexOf(key) === index; }));
+    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(Object.keys(obj), Object.keys(other)).filter(function (key, index, array) { return array.indexOf(key) === index; });
 }
-/**
- * @param {?} obj
- * @param {?} other
- * @return {?}
- */
 function isDeepEqual(obj, other) {
     if (!isObject(obj) || !isObject(other)) {
         return obj === other;
     }
-    return getKeysTwoObjects(obj, other).every((/**
-     * @param {?} key
-     * @return {?}
-     */
-    function (key) {
+    return getKeysTwoObjects(obj, other).every(function (key) {
         if (!isObject(obj[key]) && !isObject(other[key])) {
             return obj[key] === other[key];
         }
@@ -438,25 +259,13 @@ function isDeepEqual(obj, other) {
             return false;
         }
         return isDeepEqual(obj[key], other[key]);
-    }));
+    });
 }
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var ReversePipe = /** @class */ (function () {
     function ReversePipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    ReversePipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    ReversePipe.prototype.transform = function (input) {
         if (isString(input)) {
             return input
                 .split('')
@@ -465,147 +274,67 @@ var ReversePipe = /** @class */ (function () {
         }
         return Array.isArray(input) ? input.slice().reverse() : input;
     };
-    ReversePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'reverse' },] }
-    ];
+    ReversePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'reverse' })
+    ], ReversePipe);
     return ReversePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var TailPipe = /** @class */ (function () {
     function TailPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} num
-     * @return {?}
-     */
-    TailPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} num
-     * @return {?}
-     */
-    function (input, num) {
+    TailPipe.prototype.transform = function (input, num) {
         if (num === void 0) { num = 0; }
         return Array.isArray(input) ? input.slice(num) : input;
     };
-    TailPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'tail' },] }
-    ];
+    TailPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'tail' })
+    ], TailPipe);
     return TailPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var TrurthifyPipe = /** @class */ (function () {
     function TrurthifyPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    TrurthifyPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
-        return Array.isArray(input) ? input.filter((/**
-         * @param {?} e
-         * @return {?}
-         */
-        function (e) { return !!e; })) : input;
+    TrurthifyPipe.prototype.transform = function (input) {
+        return Array.isArray(input) ? input.filter(function (e) { return !!e; }) : input;
     };
-    TrurthifyPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'truthify' },] }
-    ];
+    TrurthifyPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'truthify' })
+    ], TrurthifyPipe);
     return TrurthifyPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var UnionPipe = /** @class */ (function () {
     function UnionPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} args
-     * @return {?}
-     */
-    UnionPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} args
-     * @return {?}
-     */
-    function (input, args) {
+    UnionPipe.prototype.transform = function (input, args) {
         if (args === void 0) { args = []; }
         if (!Array.isArray(input) || !Array.isArray(args)) {
             return input;
         }
-        return args.reduce((/**
-         * @param {?} newArr
-         * @param {?} currArr
-         * @return {?}
-         */
-        function (newArr, currArr) {
-            return newArr.concat(currArr.reduce((/**
-             * @param {?} noDupArr
-             * @param {?} curr
-             * @return {?}
-             */
-            function (noDupArr, curr) {
+        return args.reduce(function (newArr, currArr) {
+            return newArr.concat(currArr.reduce(function (noDupArr, curr) {
                 // tslint:disable-next-line:no-bitwise
                 return !~noDupArr.indexOf(curr) && !~newArr.indexOf(curr) ? noDupArr.concat([curr]) : noDupArr;
-            }), []));
-        }), input);
+            }, []));
+        }, input);
     };
-    UnionPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'union' },] }
-    ];
+    UnionPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'union' })
+    ], UnionPipe);
     return UnionPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var UniquePipe = /** @class */ (function () {
     function UniquePipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} propertyName
-     * @return {?}
-     */
-    UniquePipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} propertyName
-     * @return {?}
-     */
-    function (input, propertyName) {
-        /** @type {?} */
+    UniquePipe.prototype.transform = function (input, propertyName) {
         var uniques = [];
         return Array.isArray(input)
             ? isUndefined(propertyName)
-                ? input.filter((/**
-                 * @param {?} e
-                 * @param {?} i
-                 * @return {?}
-                 */
-                function (e, i) { return input.indexOf(e) === i; }))
-                : input.filter((/**
-                 * @param {?} e
-                 * @param {?} i
-                 * @return {?}
-                 */
-                function (e, i) {
-                    /** @type {?} */
+                ? input.filter(function (e, i) { return input.indexOf(e) === i; })
+                : input.filter(function (e, i) {
                     var value = extractDeepPropertyByMapKey(e, propertyName);
                     value = isObject(value) ? JSON.stringify(value) : value;
                     if (isUndefined(value) || uniques[value]) {
@@ -613,237 +342,120 @@ var UniquePipe = /** @class */ (function () {
                     }
                     uniques[value] = true;
                     return true;
-                }))
+                })
             : input;
     };
-    UniquePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'unique' },] }
-    ];
+    UniquePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'unique' })
+    ], UniquePipe);
     return UniquePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var WithoutPipe = /** @class */ (function () {
     function WithoutPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} args
-     * @return {?}
-     */
-    WithoutPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} args
-     * @return {?}
-     */
-    function (input, args) {
+    WithoutPipe.prototype.transform = function (input, args) {
         if (args === void 0) { args = []; }
         return Array.isArray(input)
             ? // tslint:disable-next-line:no-bitwise
-                input.filter((/**
-                 * @param {?} e
-                 * @return {?}
-                 */
-                function (e) { return !~args.indexOf(e); }))
+                input.filter(function (e) { return !~args.indexOf(e); })
             : input;
     };
-    WithoutPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'without' },] }
-    ];
+    WithoutPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'without' })
+    ], WithoutPipe);
     return WithoutPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var PluckPipe = /** @class */ (function () {
     function PluckPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} map
-     * @return {?}
-     */
-    PluckPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} map
-     * @return {?}
-     */
-    function (input, map) {
+    PluckPipe.prototype.transform = function (input, map) {
         if (Array.isArray(input)) {
-            return input.map((/**
-             * @param {?} e
-             * @return {?}
-             */
-            function (e) { return extractDeepPropertyByMapKey(e, map); }));
+            return input.map(function (e) { return extractDeepPropertyByMapKey(e, map); });
         }
         return isObject(input) ? extractDeepPropertyByMapKey(input, map) : input;
     };
-    PluckPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'pluck', pure: false },] }
-    ];
+    PluckPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'pluck', pure: false })
+    ], PluckPipe);
     return PluckPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var ShufflePipe = /** @class */ (function () {
     function ShufflePipe() {
     }
     // Using a version of the Fisher-Yates shuffle algorithm
     // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-    // Using a version of the Fisher-Yates shuffle algorithm
-    // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    ShufflePipe.prototype.transform = 
-    // Using a version of the Fisher-Yates shuffle algorithm
-    // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    ShufflePipe.prototype.transform = function (input) {
         var _a;
         if (!Array.isArray(input)) {
             return input;
         }
-        /** @type {?} */
         var shuffled = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(input);
-        /** @type {?} */
         var n = input.length - 1;
         for (var i = 0; i < n; ++i) {
-            /** @type {?} */
             var j = Math.floor(Math.random() * (n - i + 1)) + i;
             _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])([shuffled[j], shuffled[i]], 2), shuffled[i] = _a[0], shuffled[j] = _a[1];
         }
         return shuffled;
     };
-    ShufflePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'shuffle' },] }
-    ];
+    ShufflePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'shuffle' })
+    ], ShufflePipe);
     return ShufflePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var EveryPipe = /** @class */ (function () {
     function EveryPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} predicate
-     * @return {?}
-     */
-    EveryPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} predicate
-     * @return {?}
-     */
-    function (input, predicate) {
+    EveryPipe.prototype.transform = function (input, predicate) {
         return Array.isArray(input) ? input.every(predicate) : false;
     };
-    EveryPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'every' },] }
-    ];
+    EveryPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'every' })
+    ], EveryPipe);
     return EveryPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var SomePipe = /** @class */ (function () {
     function SomePipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} predicate
-     * @return {?}
-     */
-    SomePipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} predicate
-     * @return {?}
-     */
-    function (input, predicate) {
+    SomePipe.prototype.transform = function (input, predicate) {
         return Array.isArray(input) ? input.some(predicate) : input;
     };
-    SomePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'some' },] }
-    ];
+    SomePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'some' })
+    ], SomePipe);
     return SomePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var SamplePipe = /** @class */ (function () {
     function SamplePipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} len
-     * @return {?}
-     */
-    SamplePipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} len
-     * @return {?}
-     */
-    function (input, len) {
+    SamplePipe.prototype.transform = function (input, len) {
         if (len === void 0) { len = 1; }
         if (!Array.isArray(input)) {
             return input;
         }
-        /** @type {?} */
         var sample = [];
-        /** @type {?} */
         var tmp = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(input);
-        /** @type {?} */
         var l = len < tmp.length ? len : tmp.length;
         for (var i = 0; i < l; ++i) {
             sample = sample.concat(tmp.splice(Math.floor(Math.random() * tmp.length), 1));
         }
         return sample;
     };
-    SamplePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'sample' },] }
-    ];
+    SamplePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'sample' })
+    ], SamplePipe);
     return SamplePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var GroupByPipe = /** @class */ (function () {
     function GroupByPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} discriminator
-     * @param {?=} delimiter
-     * @return {?}
-     */
-    GroupByPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} discriminator
-     * @param {?=} delimiter
-     * @return {?}
-     */
-    function (input, discriminator, delimiter) {
+    GroupByPipe.prototype.transform = function (input, discriminator, delimiter) {
         if (discriminator === void 0) { discriminator = []; }
         if (delimiter === void 0) { delimiter = '|'; }
         if (!Array.isArray(input)) {
@@ -851,242 +463,115 @@ var GroupByPipe = /** @class */ (function () {
         }
         return this.groupBy(input, discriminator, delimiter);
     };
-    /**
-     * @private
-     * @param {?} list
-     * @param {?} discriminator
-     * @param {?} delimiter
-     * @return {?}
-     */
-    GroupByPipe.prototype.groupBy = /**
-     * @private
-     * @param {?} list
-     * @param {?} discriminator
-     * @param {?} delimiter
-     * @return {?}
-     */
-    function (list, discriminator, delimiter) {
+    GroupByPipe.prototype.groupBy = function (list, discriminator, delimiter) {
         var _this = this;
-        return list.reduce((/**
-         * @param {?} acc
-         * @param {?} payload
-         * @return {?}
-         */
-        function (acc, payload) {
-            /** @type {?} */
+        return list.reduce(function (acc, payload) {
             var key = _this.extractKeyByDiscriminator(discriminator, payload, delimiter);
             acc[key] = Array.isArray(acc[key]) ? acc[key].concat([payload]) : [payload];
             return acc;
-        }), {});
+        }, {});
     };
-    /**
-     * @private
-     * @param {?} discriminator
-     * @param {?} payload
-     * @param {?} delimiter
-     * @return {?}
-     */
-    GroupByPipe.prototype.extractKeyByDiscriminator = /**
-     * @private
-     * @param {?} discriminator
-     * @param {?} payload
-     * @param {?} delimiter
-     * @return {?}
-     */
-    function (discriminator, payload, delimiter) {
+    GroupByPipe.prototype.extractKeyByDiscriminator = function (discriminator, payload, delimiter) {
         if (isFunction(discriminator)) {
-            return ((/** @type {?} */ (discriminator)))(payload);
+            return discriminator(payload);
         }
         if (Array.isArray(discriminator)) {
-            return discriminator.map((/**
-             * @param {?} k
-             * @return {?}
-             */
-            function (k) { return extractDeepPropertyByMapKey(payload, k); })).join(delimiter);
+            return discriminator.map(function (k) { return extractDeepPropertyByMapKey(payload, k); }).join(delimiter);
         }
-        return extractDeepPropertyByMapKey(payload, (/** @type {?} */ (discriminator)));
+        return extractDeepPropertyByMapKey(payload, discriminator);
     };
-    GroupByPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'groupBy' },] }
-    ];
+    GroupByPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'groupBy' })
+    ], GroupByPipe);
     return GroupByPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 // tslint:disable no-bitwise
 var FilterByPipe = /** @class */ (function () {
     function FilterByPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} props
-     * @param {?=} search
-     * @param {?=} strict
-     * @return {?}
-     */
-    FilterByPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} props
-     * @param {?=} search
-     * @param {?=} strict
-     * @return {?}
-     */
-    function (input, props, search, strict) {
+    FilterByPipe.prototype.transform = function (input, props, search, strict) {
         if (search === void 0) { search = ''; }
         if (strict === void 0) { strict = false; }
         if (!Array.isArray(input) ||
             (!Array.isArray(search) && !isString(search) && !isNumberFinite(search) && !isBoolean(search))) {
             return input;
         }
-        /** @type {?} */
         var terms = String(search)
             .toLowerCase()
             .split(',');
-        return input.filter((/**
-         * @param {?} obj
-         * @return {?}
-         */
-        function (obj) {
-            return props.some((/**
-             * @param {?} prop
-             * @return {?}
-             */
-            function (prop) {
-                return terms.some((/**
-                 * @param {?} term
-                 * @return {?}
-                 */
-                function (term) {
-                    /** @type {?} */
+        return input.filter(function (obj) {
+            return props.some(function (prop) {
+                return terms.some(function (term) {
                     var value = extractDeepPropertyByMapKey(obj, prop);
                     /* tslint:disable */
                     var _a = extractDeepPropertyByParentMapKey(obj, prop), props = _a.props, tail = _a.tail;
                     if (isUndefined(value) && !isUndefined(props) && Array.isArray(props)) {
-                        return props.some((/**
-                         * @param {?} parent
-                         * @return {?}
-                         */
-                        function (parent) {
-                            /** @type {?} */
+                        return props.some(function (parent) {
                             var str = String(parent[tail]).toLowerCase();
                             return strict ? str === term : !!~str.indexOf(term);
-                        }));
+                        });
                     }
                     if (isUndefined(value)) {
                         return false;
                     }
-                    /** @type {?} */
                     var strValue = String(value).toLowerCase();
                     return strict ? term === strValue : !!~strValue.indexOf(term);
-                }));
-            }));
-        }));
+                });
+            });
+        });
     };
-    FilterByPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'filterBy' },] }
-    ];
+    FilterByPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'filterBy' })
+    ], FilterByPipe);
     return FilterByPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var OrderByPipe = /** @class */ (function () {
     function OrderByPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?=} config
-     * @return {?}
-     */
-    OrderByPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?=} config
-     * @return {?}
-     */
-    function (input, config) {
+    OrderByPipe_1 = OrderByPipe;
+    OrderByPipe.prototype.transform = function (input, config) {
         if (!Array.isArray(input)) {
             return input;
         }
-        /** @type {?} */
         var out = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(input);
         // sort by multiple properties
         if (Array.isArray(config)) {
-            return out.sort((/**
-             * @param {?} a
-             * @param {?} b
-             * @return {?}
-             */
-            function (a, b) {
-                /** @type {?} */
+            return out.sort(function (a, b) {
                 var l = config.length;
                 for (var i = 0; i < l; ++i) {
-                    var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(OrderByPipe.extractFromConfig(config[i]), 2), prop = _a[0], asc = _a[1];
-                    /** @type {?} */
-                    var pos = OrderByPipe.orderCompare(prop, asc, a, b);
+                    var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(OrderByPipe_1.extractFromConfig(config[i]), 2), prop = _a[0], asc = _a[1];
+                    var pos = OrderByPipe_1.orderCompare(prop, asc, a, b);
                     if (pos !== 0) {
                         return pos;
                     }
                 }
                 return 0;
-            }));
+            });
         }
         // sort by a single property value
         if (isString(config)) {
-            var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(OrderByPipe.extractFromConfig(config), 3), prop = _a[0], asc = _a[1], sign = _a[2];
+            var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(OrderByPipe_1.extractFromConfig(config), 3), prop = _a[0], asc = _a[1], sign = _a[2];
             if (config.length === 1) {
                 // tslint:disable-next-line:switch-default
                 switch (sign) {
                     case '+':
-                        return out.sort(OrderByPipe.simpleSort.bind(this));
+                        return out.sort(OrderByPipe_1.simpleSort.bind(this));
                     case '-':
-                        return out.sort(OrderByPipe.simpleSort.bind(this)).reverse();
+                        return out.sort(OrderByPipe_1.simpleSort.bind(this)).reverse();
                 }
             }
-            return out.sort(OrderByPipe.orderCompare.bind(this, prop, asc));
+            return out.sort(OrderByPipe_1.orderCompare.bind(this, prop, asc));
         }
         // default sort by value
-        return out.sort(OrderByPipe.simpleSort.bind(this));
+        return out.sort(OrderByPipe_1.simpleSort.bind(this));
     };
-    /**
-     * @private
-     * @param {?} a
-     * @param {?} b
-     * @return {?}
-     */
-    OrderByPipe.simpleSort = /**
-     * @private
-     * @param {?} a
-     * @param {?} b
-     * @return {?}
-     */
-    function (a, b) {
+    OrderByPipe.simpleSort = function (a, b) {
         return isString(a) && isString(b) ? a.toLowerCase().localeCompare(b.toLowerCase()) : a - b;
     };
-    /**
-     * @private
-     * @param {?} prop
-     * @param {?} asc
-     * @param {?} a
-     * @param {?} b
-     * @return {?}
-     */
-    OrderByPipe.orderCompare = /**
-     * @private
-     * @param {?} prop
-     * @param {?} asc
-     * @param {?} a
-     * @param {?} b
-     * @return {?}
-     */
-    function (prop, asc, a, b) {
-        /** @type {?} */
+    OrderByPipe.orderCompare = function (prop, asc, a, b) {
         var first = extractDeepPropertyByMapKey(a, prop);
-        /** @type {?} */
         var second = extractDeepPropertyByMapKey(b, prop);
         if (first === second) {
             return 0;
@@ -1098,128 +583,122 @@ var OrderByPipe = /** @class */ (function () {
             return -1;
         }
         if (isString(first) && isString(second)) {
-            /** @type {?} */
             var pos = first.toLowerCase().localeCompare(second.toLowerCase());
             return asc ? pos : -pos;
         }
         return asc ? first - second : second - first;
     };
-    /**
-     * @private
-     * @param {?} config
-     * @return {?}
-     */
-    OrderByPipe.extractFromConfig = /**
-     * @private
-     * @param {?} config
-     * @return {?}
-     */
-    function (config) {
-        /** @type {?} */
+    OrderByPipe.extractFromConfig = function (config) {
         var sign = config.substr(0, 1);
-        /** @type {?} */
         var prop = config.replace(/^[-+]/, '');
-        /** @type {?} */
         var asc = sign !== '-';
         return [prop, asc, sign];
     };
-    OrderByPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'orderBy' },] }
-    ];
+    var OrderByPipe_1;
+    OrderByPipe = OrderByPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'orderBy' })
+    ], OrderByPipe);
     return OrderByPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 // tslint:disable use-pipe-transform-interface
 var GroupByImpurePipe = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(GroupByImpurePipe, _super);
     function GroupByImpurePipe() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    GroupByImpurePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'groupByImpure', pure: false },] }
-    ];
+    GroupByImpurePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'groupByImpure', pure: false })
+    ], GroupByImpurePipe);
     return GroupByImpurePipe;
 }(GroupByPipe));
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 // tslint:disable use-pipe-transform-interface
 var FilterByImpurePipe = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FilterByImpurePipe, _super);
     function FilterByImpurePipe() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    FilterByImpurePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'filterByImpure', pure: false },] }
-    ];
+    FilterByImpurePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'filterByImpure', pure: false })
+    ], FilterByImpurePipe);
     return FilterByImpurePipe;
 }(FilterByPipe));
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 // tslint:disable use-pipe-transform-interface
 var OrderByImpurePipe = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(OrderByImpurePipe, _super);
     function OrderByImpurePipe() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    OrderByImpurePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'orderByImpure', pure: false },] }
-    ];
+    OrderByImpurePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'orderByImpure', pure: false })
+    ], OrderByImpurePipe);
     return OrderByImpurePipe;
 }(OrderByPipe));
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var RangePipe = /** @class */ (function () {
     function RangePipe() {
     }
-    /**
-     * @param {?=} start
-     * @param {?=} count
-     * @param {?=} step
-     * @return {?}
-     */
-    RangePipe.prototype.transform = /**
-     * @param {?=} start
-     * @param {?=} count
-     * @param {?=} step
-     * @return {?}
-     */
-    function (start, count, step) {
+    RangePipe.prototype.transform = function (start, count, step) {
         if (start === void 0) { start = 1; }
         if (count === void 0) { count = 0; }
         if (step === void 0) { step = 1; }
         return Array(count)
             .fill('')
-            .map((/**
-         * @param {?} v
-         * @param {?} i
-         * @return {?}
-         */
-        function (v, i) { return step * i + start; }));
+            .map(function (v, i) { return step * i + start; });
     };
-    RangePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'range' },] }
-    ];
+    RangePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'range' })
+    ], RangePipe);
     return RangePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
+var ChunkPipe = /** @class */ (function () {
+    function ChunkPipe() {
+    }
+    ChunkPipe.prototype.transform = function (input, size) {
+        if (size === void 0) { size = 1; }
+        if (isString(input)) {
+            return this.chunk(input
+                .split(''), size);
+        }
+        return Array.isArray(input) ? this.chunk(input, size) : input;
+    };
+    ChunkPipe.prototype.chunk = function (input, size) {
+        return Array(Math.ceil(input.length / size))
+            .fill([])
+            .map(function (_, index) { return index * size; })
+            .map(function (begin) { return input.slice(begin, begin + size); });
+    };
+    ChunkPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'chunk' })
+    ], ChunkPipe);
+    return ChunkPipe;
+}());
+
+var FromPairsPipe = /** @class */ (function () {
+    function FromPairsPipe() {
+    }
+    FromPairsPipe.prototype.transform = function (input) {
+        if (!Array.isArray(input)) {
+            return input;
+        }
+        return input.reduce(function (obj, arr) {
+            if (!Array.isArray(arr)) {
+                return obj;
+            }
+            var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(arr, 2), prop = _a[0], val = _a[1];
+            obj[prop] = val;
+            return obj;
+        }, {});
+    };
+    FromPairsPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'fromPairs' })
+    ], FromPairsPipe);
+    return FromPairsPipe;
+}());
+
 var ARRAY_PIPES = [
     DiffPipe,
     FlattenPipe,
@@ -1243,127 +722,71 @@ var ARRAY_PIPES = [
     OrderByPipe,
     OrderByImpurePipe,
     RangePipe,
+    ChunkPipe,
+    FromPairsPipe
 ];
 var NgArrayPipesModule = /** @class */ (function () {
     function NgArrayPipesModule() {
     }
-    NgArrayPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: ARRAY_PIPES,
-                    imports: [],
-                    exports: ARRAY_PIPES,
-                },] }
-    ];
+    NgArrayPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: ARRAY_PIPES,
+            imports: [],
+            exports: ARRAY_PIPES,
+        })
+    ], NgArrayPipesModule);
     return NgArrayPipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var KeysPipe = /** @class */ (function () {
     function KeysPipe() {
     }
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    KeysPipe.prototype.transform = /**
-     * @param {?} obj
-     * @return {?}
-     */
-    function (obj) {
+    KeysPipe.prototype.transform = function (obj) {
         if (Array.isArray(obj) || !isObject(obj)) {
             return obj;
         }
         return Object.keys(obj);
     };
-    KeysPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'keys' },] }
-    ];
+    KeysPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'keys' })
+    ], KeysPipe);
     return KeysPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var ValuesPipe = /** @class */ (function () {
     function ValuesPipe() {
     }
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    ValuesPipe.prototype.transform = /**
-     * @param {?} obj
-     * @return {?}
-     */
-    function (obj) {
+    ValuesPipe.prototype.transform = function (obj) {
         if (Array.isArray(obj) || !isObject(obj)) {
             return obj;
         }
-        return Object.keys(obj).map((/**
-         * @param {?} k
-         * @return {?}
-         */
-        function (k) { return obj[k]; }));
+        return Object.keys(obj).map(function (k) { return obj[k]; });
     };
-    ValuesPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'values' },] }
-    ];
+    ValuesPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'values' })
+    ], ValuesPipe);
     return ValuesPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var PairsPipe = /** @class */ (function () {
     function PairsPipe() {
     }
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    PairsPipe.prototype.transform = /**
-     * @param {?} obj
-     * @return {?}
-     */
-    function (obj) {
+    PairsPipe.prototype.transform = function (obj) {
         if (Array.isArray(obj) || !isObject(obj)) {
             return obj;
         }
-        return Object.keys(obj).map((/**
-         * @param {?} k
-         * @return {?}
-         */
-        function (k) { return [k, obj[k]]; }));
+        return Object.entries(obj);
     };
-    PairsPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'pairs' },] }
-    ];
+    PairsPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'pairs' })
+    ], PairsPipe);
     return PairsPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var PickPipe = /** @class */ (function () {
     function PickPipe() {
     }
-    /**
-     * @param {?} obj
-     * @param {...?} args
-     * @return {?}
-     */
-    PickPipe.prototype.transform = /**
-     * @param {?} obj
-     * @param {...?} args
-     * @return {?}
-     */
-    function (obj) {
+    PickPipe.prototype.transform = function (obj) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
@@ -1371,40 +794,21 @@ var PickPipe = /** @class */ (function () {
         if (Array.isArray(obj) || !isObject(obj)) {
             return obj;
         }
-        return args.reduce((/**
-         * @param {?} o
-         * @param {?} k
-         * @return {?}
-         */
-        function (o, k) {
+        return args.reduce(function (o, k) {
             var _a;
             return Object.assign(o, (_a = {}, _a[k] = obj[k], _a));
-        }), {});
+        }, {});
     };
-    PickPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'pick' },] }
-    ];
+    PickPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'pick' })
+    ], PickPipe);
     return PickPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var OmitPipe = /** @class */ (function () {
     function OmitPipe() {
     }
-    /**
-     * @param {?} obj
-     * @param {...?} args
-     * @return {?}
-     */
-    OmitPipe.prototype.transform = /**
-     * @param {?} obj
-     * @param {...?} args
-     * @return {?}
-     */
-    function (obj) {
+    OmitPipe.prototype.transform = function (obj) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
@@ -1414,164 +818,90 @@ var OmitPipe = /** @class */ (function () {
         }
         return (Object.keys(obj)
             // tslint:disable-next-line:no-bitwise
-            .filter((/**
-         * @param {?} k
-         * @return {?}
-         */
-        function (k) { return !~args.indexOf(k); }))
-            .reduce((/**
-         * @param {?} o
-         * @param {?} k
-         * @return {?}
-         */
-        function (o, k) {
+            .filter(function (k) { return !~args.indexOf(k); })
+            .reduce(function (o, k) {
             var _a;
             return Object.assign(o, (_a = {}, _a[k] = obj[k], _a));
-        }), {}));
+        }, {}));
     };
-    OmitPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'omit' },] }
-    ];
+    OmitPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'omit' })
+    ], OmitPipe);
     return OmitPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var InvertPipe = /** @class */ (function () {
     function InvertPipe() {
     }
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    InvertPipe.prototype.transform = /**
-     * @param {?} obj
-     * @return {?}
-     */
-    function (obj) {
+    InvertPipe.prototype.transform = function (obj) {
         if (Array.isArray(obj) || !isObject(obj)) {
             return obj;
         }
-        return Object.keys(obj).reduce((/**
-         * @param {?} o
-         * @param {?} k
-         * @return {?}
-         */
-        function (o, k) {
+        return Object.keys(obj).reduce(function (o, k) {
             var _a;
             return Object.assign(o, (_a = {}, _a[obj[k]] = k, _a));
-        }), {});
+        }, {});
     };
-    InvertPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'invert' },] }
-    ];
+    InvertPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'invert' })
+    ], InvertPipe);
     return InvertPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var InvertByPipe = /** @class */ (function () {
     function InvertByPipe() {
     }
-    /**
-     * @param {?} obj
-     * @param {?=} cb
-     * @return {?}
-     */
-    InvertByPipe.prototype.transform = /**
-     * @param {?} obj
-     * @param {?=} cb
-     * @return {?}
-     */
-    function (obj, cb) {
+    InvertByPipe.prototype.transform = function (obj, cb) {
         if (Array.isArray(obj) || !isObject(obj)) {
             return obj;
         }
-        return Object.keys(obj).reduce((/**
-         * @param {?} o
-         * @param {?} k
-         * @return {?}
-         */
-        function (o, k) {
+        return Object.keys(obj).reduce(function (o, k) {
             var _a;
-            /** @type {?} */
             var key = cb ? cb(obj[k]) : obj[k];
             return Array.isArray(o[key]) ? (o[key].push(k), o) : Object.assign(o, (_a = {}, _a[key] = [k], _a));
-        }), {});
+        }, {});
     };
-    InvertByPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'invertBy' },] }
-    ];
+    InvertByPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'invertBy' })
+    ], InvertByPipe);
     return InvertByPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var DiffObjPipe = /** @class */ (function () {
     function DiffObjPipe() {
     }
-    /**
-     * @param {?} obj
-     * @param {?=} original
-     * @return {?}
-     */
-    DiffObjPipe.prototype.transform = /**
-     * @param {?} obj
-     * @param {?=} original
-     * @return {?}
-     */
-    function (obj, original) {
+    DiffObjPipe.prototype.transform = function (obj, original) {
         if (original === void 0) { original = {}; }
         if (Array.isArray(obj) || Array.isArray(original) || !isObject(obj) || !isObject(original)) {
             return {};
         }
-        return getKeysTwoObjects(obj, original).reduce((/**
-         * @param {?} diff
-         * @param {?} key
-         * @return {?}
-         */
-        function (diff, key) {
+        return getKeysTwoObjects(obj, original).reduce(function (diff, key) {
             if (!isDeepEqual(original[key], obj[key])) {
                 diff[key] = obj[key];
             }
             return diff;
-        }), {});
+        }, {});
     };
-    DiffObjPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'diffObj' },] }
-    ];
+    DiffObjPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'diffObj' })
+    ], DiffObjPipe);
     return DiffObjPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 var OBJECT_PIPES = [KeysPipe, ValuesPipe, PairsPipe, PickPipe, InvertPipe, InvertByPipe, OmitPipe, DiffObjPipe];
 var NgObjectPipesModule = /** @class */ (function () {
     function NgObjectPipesModule() {
     }
-    NgObjectPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: OBJECT_PIPES,
-                    imports: [],
-                    exports: OBJECT_PIPES,
-                },] }
-    ];
+    NgObjectPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: OBJECT_PIPES,
+            imports: [],
+            exports: OBJECT_PIPES,
+        })
+    ], NgObjectPipesModule);
     return NgObjectPipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var AorAnPipe = /** @class */ (function () {
     function AorAnPipe() {
         this.irregularMap = {
@@ -1585,20 +915,11 @@ var AorAnPipe = /** @class */ (function () {
             unicorn: 'a',
         };
     }
-    /**
-     * @param {?} stringEntity
-     * @return {?}
-     */
-    AorAnPipe.prototype.transform = /**
-     * @param {?} stringEntity
-     * @return {?}
-     */
-    function (stringEntity) {
+    AorAnPipe.prototype.transform = function (stringEntity) {
         if (!stringEntity || stringEntity === '') {
             return '';
         }
         else {
-            /** @type {?} */
             var firstWord = stringEntity.trim().split(' ')[0];
             if (this.irregularMap[firstWord.toLocaleLowerCase()]) {
                 return this.irregularMap[firstWord.toLocaleLowerCase()] + " " + stringEntity;
@@ -1608,95 +929,55 @@ var AorAnPipe = /** @class */ (function () {
             }
         }
     };
-    AorAnPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{
-                    name: 'aOrAn',
-                },] }
-    ];
+    AorAnPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+            name: 'aOrAn',
+        })
+        /**
+         * Takes a string and returns the string prepended by 'a' or 'an'.
+         * Uses both naive and holdout-list approaches.
+         * @constructor
+         * @param {string} stringEntity - Entity to prepend 'a' or 'an' to.
+         */
+    ], AorAnPipe);
     return AorAnPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var UcWordsPipe = /** @class */ (function () {
     function UcWordsPipe() {
     }
-    /**
-     * @param {?} text
-     * @return {?}
-     */
-    UcWordsPipe.prototype.transform = /**
-     * @param {?} text
-     * @return {?}
-     */
-    function (text) {
+    UcWordsPipe.prototype.transform = function (text) {
         if (isString(text)) {
             return text
                 .split(' ')
-                .map((/**
-             * @param {?} sub
-             * @return {?}
-             */
-            function (sub) { return ucFirst(sub); }))
+                .map(function (sub) { return ucFirst(sub); })
                 .join(' ');
         }
         return text;
     };
-    UcWordsPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'ucwords' },] }
-    ];
+    UcWordsPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'ucwords' })
+    ], UcWordsPipe);
     return UcWordsPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var LeftTrimPipe = /** @class */ (function () {
     function LeftTrimPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    LeftTrimPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
+    LeftTrimPipe.prototype.transform = function (text, chars) {
         if (chars === void 0) { chars = '\\s'; }
         return isString(text) ? text.replace(new RegExp("^[" + chars + "]+"), '') : text;
     };
-    LeftTrimPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'ltrim' },] }
-    ];
+    LeftTrimPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'ltrim' })
+    ], LeftTrimPipe);
     return LeftTrimPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var RepeatPipe = /** @class */ (function () {
     function RepeatPipe() {
     }
-    /**
-     * @param {?} str
-     * @param {?=} n
-     * @param {?=} separator
-     * @return {?}
-     */
-    RepeatPipe.prototype.transform = /**
-     * @param {?} str
-     * @param {?=} n
-     * @param {?=} separator
-     * @return {?}
-     */
-    function (str, n, separator) {
+    RepeatPipe.prototype.transform = function (str, n, separator) {
         if (n === void 0) { n = 1; }
         if (separator === void 0) { separator = ''; }
         if (n <= 0) {
@@ -1704,112 +985,47 @@ var RepeatPipe = /** @class */ (function () {
         }
         return n === 1 ? str : this.repeat(str, n - 1, separator);
     };
-    /**
-     * @private
-     * @param {?} str
-     * @param {?} n
-     * @param {?} separator
-     * @return {?}
-     */
-    RepeatPipe.prototype.repeat = /**
-     * @private
-     * @param {?} str
-     * @param {?} n
-     * @param {?} separator
-     * @return {?}
-     */
-    function (str, n, separator) {
+    RepeatPipe.prototype.repeat = function (str, n, separator) {
         return isString(str) ? (n === 0 ? str : str + separator + this.repeat(str, n - 1, separator)) : str;
     };
-    RepeatPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'repeat' },] }
-    ];
+    RepeatPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'repeat' })
+    ], RepeatPipe);
     return RepeatPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var RightTrimPipe = /** @class */ (function () {
     function RightTrimPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    RightTrimPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
+    RightTrimPipe.prototype.transform = function (text, chars) {
         if (chars === void 0) { chars = '\\s'; }
         return isString(text) ? text.replace(new RegExp("[" + chars + "]+$"), '') : text;
     };
-    RightTrimPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'rtrim' },] }
-    ];
+    RightTrimPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'rtrim' })
+    ], RightTrimPipe);
     return RightTrimPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var ScanPipe = /** @class */ (function () {
     function ScanPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} args
-     * @return {?}
-     */
-    ScanPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} args
-     * @return {?}
-     */
-    function (text, args) {
+    ScanPipe.prototype.transform = function (text, args) {
         if (args === void 0) { args = []; }
         return isString(text)
-            ? text.replace(/\{(\d+)}/g, (/**
-             * @param {?} match
-             * @param {?} index
-             * @return {?}
-             */
-            function (match, index) { return (!isUndefined(args[index]) ? args[index] : match); }))
+            ? text.replace(/\{(\d+)}/g, function (match, index) { return (!isUndefined(args[index]) ? args[index] : match); })
             : text;
     };
-    ScanPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'scan' },] }
-    ];
+    ScanPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'scan' })
+    ], ScanPipe);
     return ScanPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var ShortenPipe = /** @class */ (function () {
     function ShortenPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} length
-     * @param {?=} suffix
-     * @param {?=} wordBreak
-     * @return {?}
-     */
-    ShortenPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} length
-     * @param {?=} suffix
-     * @param {?=} wordBreak
-     * @return {?}
-     */
-    function (text, length, suffix, wordBreak) {
+    ShortenPipe.prototype.transform = function (text, length, suffix, wordBreak) {
         if (length === void 0) { length = 0; }
         if (suffix === void 0) { suffix = ''; }
         if (wordBreak === void 0) { wordBreak = true; }
@@ -1827,30 +1043,16 @@ var ShortenPipe = /** @class */ (function () {
         }
         return text;
     };
-    ShortenPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'shorten' },] }
-    ];
+    ShortenPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'shorten' })
+    ], ShortenPipe);
     return ShortenPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var StripTagsPipe = /** @class */ (function () {
     function StripTagsPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {...?} allowedTags
-     * @return {?}
-     */
-    StripTagsPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {...?} allowedTags
-     * @return {?}
-     */
-    function (text) {
+    StripTagsPipe.prototype.transform = function (text) {
         var allowedTags = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             allowedTags[_i - 1] = arguments[_i];
@@ -1859,79 +1061,41 @@ var StripTagsPipe = /** @class */ (function () {
             ? text.replace(new RegExp("<(?!/?(" + allowedTags.join('|') + ")s*/?)[^>]+>", 'g'), '')
             : text.replace(/<(?:.|\s)*?>/g, '');
     };
-    StripTagsPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'stripTags' },] }
-    ];
+    StripTagsPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'stripTags' })
+    ], StripTagsPipe);
     return StripTagsPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var TrimPipe = /** @class */ (function () {
     function TrimPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    TrimPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
+    TrimPipe.prototype.transform = function (text, chars) {
         if (chars === void 0) { chars = '\\s'; }
         return isString(text) ? text.replace(new RegExp("^[" + chars + "]+|[" + chars + "]+$", 'g'), '') : text;
     };
-    TrimPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'trim' },] }
-    ];
+    TrimPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'trim' })
+    ], TrimPipe);
     return TrimPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var UcFirstPipe = /** @class */ (function () {
     function UcFirstPipe() {
     }
-    /**
-     * @param {?} text
-     * @return {?}
-     */
-    UcFirstPipe.prototype.transform = /**
-     * @param {?} text
-     * @return {?}
-     */
-    function (text) {
+    UcFirstPipe.prototype.transform = function (text) {
         return isString(text) ? ucFirst(text) : text;
     };
-    UcFirstPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'ucfirst' },] }
-    ];
+    UcFirstPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'ucfirst' })
+    ], UcFirstPipe);
     return UcFirstPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var SlugifyPipe = /** @class */ (function () {
     function SlugifyPipe() {
     }
-    /**
-     * @param {?} str
-     * @return {?}
-     */
-    SlugifyPipe.prototype.transform = /**
-     * @param {?} str
-     * @return {?}
-     */
-    function (str) {
+    SlugifyPipe.prototype.transform = function (str) {
         return isString(str)
             ? str
                 .toLowerCase()
@@ -1940,1072 +1104,946 @@ var SlugifyPipe = /** @class */ (function () {
                 .replace(/\s+/g, '-')
             : str;
     };
-    SlugifyPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'slugify' },] }
-    ];
+    SlugifyPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'slugify' })
+    ], SlugifyPipe);
     return SlugifyPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var CamelizePipe = /** @class */ (function () {
     function CamelizePipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    CamelizePipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
-        if (chars === void 0) { chars = '\\s'; }
+    CamelizePipe.prototype.transform = function (text, chars) {
         if (!isString(text)) {
             return text;
         }
         return text
             .toLowerCase()
             .split(/[-_\s]/g)
-            .filter((/**
-         * @param {?} v
-         * @return {?}
-         */
-        function (v) { return !!v; }))
-            .map((/**
-         * @param {?} word
-         * @param {?} key
-         * @return {?}
-         */
-        function (word, key) {
+            .filter(function (v) { return !!v; })
+            .map(function (word, key) {
             return !key ? word : word.slice(0, 1).toUpperCase() + word.slice(1);
-        }))
+        })
             .join('');
     };
-    CamelizePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'camelize' },] }
-    ];
+    CamelizePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'camelize' })
+    ], CamelizePipe);
     return CamelizePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var LatinisePipe = /** @class */ (function () {
     function LatinisePipe() {
         // Source: http://semplicewebsites.com/removing-accents-javascript
         // tslint:disable-next-line whitespace max-line-length object-literal-key-quotes
         this.latinMap = {
-            Á: 'A',
-            Ă: 'A',
-            Ắ: 'A',
-            Ặ: 'A',
-            Ằ: 'A',
-            Ẳ: 'A',
-            Ẵ: 'A',
-            Ǎ: 'A',
-            Â: 'A',
-            Ấ: 'A',
-            Ậ: 'A',
-            Ầ: 'A',
-            Ẩ: 'A',
-            Ẫ: 'A',
-            Ä: 'A',
-            Ǟ: 'A',
-            Ȧ: 'A',
-            Ǡ: 'A',
-            Ạ: 'A',
-            Ȁ: 'A',
-            À: 'A',
-            Ả: 'A',
-            Ȃ: 'A',
-            Ā: 'A',
-            Ą: 'A',
-            Å: 'A',
-            Ǻ: 'A',
-            Ḁ: 'A',
-            Ⱥ: 'A',
-            Ã: 'A',
-            Ꜳ: 'AA',
-            Æ: 'AE',
-            Ǽ: 'AE',
-            Ǣ: 'AE',
-            Ꜵ: 'AO',
-            Ꜷ: 'AU',
-            Ꜹ: 'AV',
-            Ꜻ: 'AV',
-            Ꜽ: 'AY',
-            Ḃ: 'B',
-            Ḅ: 'B',
-            Ɓ: 'B',
-            Ḇ: 'B',
-            Ƀ: 'B',
-            Ƃ: 'B',
-            Ć: 'C',
-            Č: 'C',
-            Ç: 'C',
-            Ḉ: 'C',
-            Ĉ: 'C',
-            Ċ: 'C',
-            Ƈ: 'C',
-            Ȼ: 'C',
-            Ď: 'D',
-            Ḑ: 'D',
-            Ḓ: 'D',
-            Ḋ: 'D',
-            Ḍ: 'D',
-            Ɗ: 'D',
-            Ḏ: 'D',
-            ǲ: 'D',
-            ǅ: 'D',
-            Đ: 'D',
-            Ƌ: 'D',
-            Ǳ: 'DZ',
-            Ǆ: 'DZ',
-            É: 'E',
-            Ĕ: 'E',
-            Ě: 'E',
-            Ȩ: 'E',
-            Ḝ: 'E',
-            Ê: 'E',
-            Ế: 'E',
-            Ệ: 'E',
-            Ề: 'E',
-            Ể: 'E',
-            Ễ: 'E',
-            Ḙ: 'E',
-            Ë: 'E',
-            Ė: 'E',
-            Ẹ: 'E',
-            Ȅ: 'E',
-            È: 'E',
-            Ẻ: 'E',
-            Ȇ: 'E',
-            Ē: 'E',
-            Ḗ: 'E',
-            Ḕ: 'E',
-            Ę: 'E',
-            Ɇ: 'E',
-            Ẽ: 'E',
-            Ḛ: 'E',
-            Ꝫ: 'ET',
-            Ḟ: 'F',
-            Ƒ: 'F',
-            Ǵ: 'G',
-            Ğ: 'G',
-            Ǧ: 'G',
-            Ģ: 'G',
-            Ĝ: 'G',
-            Ġ: 'G',
-            Ɠ: 'G',
-            Ḡ: 'G',
-            Ǥ: 'G',
-            Ḫ: 'H',
-            Ȟ: 'H',
-            Ḩ: 'H',
-            Ĥ: 'H',
-            Ⱨ: 'H',
-            Ḧ: 'H',
-            Ḣ: 'H',
-            Ḥ: 'H',
-            Ħ: 'H',
-            Í: 'I',
-            Ĭ: 'I',
-            Ǐ: 'I',
-            Î: 'I',
-            Ï: 'I',
-            Ḯ: 'I',
-            İ: 'I',
-            Ị: 'I',
-            Ȉ: 'I',
-            Ì: 'I',
-            Ỉ: 'I',
-            Ȋ: 'I',
-            Ī: 'I',
-            Į: 'I',
-            Ɨ: 'I',
-            Ĩ: 'I',
-            Ḭ: 'I',
-            Ꝺ: 'D',
-            Ꝼ: 'F',
-            Ᵹ: 'G',
-            Ꞃ: 'R',
-            Ꞅ: 'S',
-            Ꞇ: 'T',
-            Ꝭ: 'IS',
-            Ĵ: 'J',
-            Ɉ: 'J',
-            Ḱ: 'K',
-            Ǩ: 'K',
-            Ķ: 'K',
-            Ⱪ: 'K',
-            Ꝃ: 'K',
-            Ḳ: 'K',
-            Ƙ: 'K',
-            Ḵ: 'K',
-            Ꝁ: 'K',
-            Ꝅ: 'K',
-            Ĺ: 'L',
-            Ƚ: 'L',
-            Ľ: 'L',
-            Ļ: 'L',
-            Ḽ: 'L',
-            Ḷ: 'L',
-            Ḹ: 'L',
-            Ⱡ: 'L',
-            Ꝉ: 'L',
-            Ḻ: 'L',
-            Ŀ: 'L',
-            Ɫ: 'L',
-            ǈ: 'L',
-            Ł: 'L',
-            Ǉ: 'LJ',
-            Ḿ: 'M',
-            Ṁ: 'M',
-            Ṃ: 'M',
-            Ɱ: 'M',
-            Ń: 'N',
-            Ň: 'N',
-            Ņ: 'N',
-            Ṋ: 'N',
-            Ṅ: 'N',
-            Ṇ: 'N',
-            Ǹ: 'N',
-            Ɲ: 'N',
-            Ṉ: 'N',
-            Ƞ: 'N',
-            ǋ: 'N',
-            Ñ: 'N',
-            Ǌ: 'NJ',
-            Ó: 'O',
-            Ŏ: 'O',
-            Ǒ: 'O',
-            Ô: 'O',
-            Ố: 'O',
-            Ộ: 'O',
-            Ồ: 'O',
-            Ổ: 'O',
-            Ỗ: 'O',
-            Ö: 'O',
-            Ȫ: 'O',
-            Ȯ: 'O',
-            Ȱ: 'O',
-            Ọ: 'O',
-            Ő: 'O',
-            Ȍ: 'O',
-            Ò: 'O',
-            Ỏ: 'O',
-            Ơ: 'O',
-            Ớ: 'O',
-            Ợ: 'O',
-            Ờ: 'O',
-            Ở: 'O',
-            Ỡ: 'O',
-            Ȏ: 'O',
-            Ꝋ: 'O',
-            Ꝍ: 'O',
-            Ō: 'O',
-            Ṓ: 'O',
-            Ṑ: 'O',
-            Ɵ: 'O',
-            Ǫ: 'O',
-            Ǭ: 'O',
-            Ø: 'O',
-            Ǿ: 'O',
-            Õ: 'O',
-            Ṍ: 'O',
-            Ṏ: 'O',
-            Ȭ: 'O',
-            Ƣ: 'OI',
-            Ꝏ: 'OO',
-            Ɛ: 'E',
-            Ɔ: 'O',
-            Ȣ: 'OU',
-            Ṕ: 'P',
-            Ṗ: 'P',
-            Ꝓ: 'P',
-            Ƥ: 'P',
-            Ꝕ: 'P',
-            Ᵽ: 'P',
-            Ꝑ: 'P',
-            Ꝙ: 'Q',
-            Ꝗ: 'Q',
-            Ŕ: 'R',
-            Ř: 'R',
-            Ŗ: 'R',
-            Ṙ: 'R',
-            Ṛ: 'R',
-            Ṝ: 'R',
-            Ȑ: 'R',
-            Ȓ: 'R',
-            Ṟ: 'R',
-            Ɍ: 'R',
-            Ɽ: 'R',
-            Ꜿ: 'C',
-            Ǝ: 'E',
-            Ś: 'S',
-            Ṥ: 'S',
-            Š: 'S',
-            Ṧ: 'S',
-            Ş: 'S',
-            Ŝ: 'S',
-            Ș: 'S',
-            Ṡ: 'S',
-            Ṣ: 'S',
-            Ṩ: 'S',
-            ẞ: 'SS',
-            Ť: 'T',
-            Ţ: 'T',
-            Ṱ: 'T',
-            Ț: 'T',
-            Ⱦ: 'T',
-            Ṫ: 'T',
-            Ṭ: 'T',
-            Ƭ: 'T',
-            Ṯ: 'T',
-            Ʈ: 'T',
-            Ŧ: 'T',
-            Ɐ: 'A',
-            Ꞁ: 'L',
-            Ɯ: 'M',
-            Ʌ: 'V',
-            Ꜩ: 'TZ',
-            Ú: 'U',
-            Ŭ: 'U',
-            Ǔ: 'U',
-            Û: 'U',
-            Ṷ: 'U',
-            Ü: 'U',
-            Ǘ: 'U',
-            Ǚ: 'U',
-            Ǜ: 'U',
-            Ǖ: 'U',
-            Ṳ: 'U',
-            Ụ: 'U',
-            Ű: 'U',
-            Ȕ: 'U',
-            Ù: 'U',
-            Ủ: 'U',
-            Ư: 'U',
-            Ứ: 'U',
-            Ự: 'U',
-            Ừ: 'U',
-            Ử: 'U',
-            Ữ: 'U',
-            Ȗ: 'U',
-            Ū: 'U',
-            Ṻ: 'U',
-            Ų: 'U',
-            Ů: 'U',
-            Ũ: 'U',
-            Ṹ: 'U',
-            Ṵ: 'U',
-            Ꝟ: 'V',
-            Ṿ: 'V',
-            Ʋ: 'V',
-            Ṽ: 'V',
-            Ꝡ: 'VY',
-            Ẃ: 'W',
-            Ŵ: 'W',
-            Ẅ: 'W',
-            Ẇ: 'W',
-            Ẉ: 'W',
-            Ẁ: 'W',
-            Ⱳ: 'W',
-            Ẍ: 'X',
-            Ẋ: 'X',
-            Ý: 'Y',
-            Ŷ: 'Y',
-            Ÿ: 'Y',
-            Ẏ: 'Y',
-            Ỵ: 'Y',
-            Ỳ: 'Y',
-            Ƴ: 'Y',
-            Ỷ: 'Y',
-            Ỿ: 'Y',
-            Ȳ: 'Y',
-            Ɏ: 'Y',
-            Ỹ: 'Y',
-            Ź: 'Z',
-            Ž: 'Z',
-            Ẑ: 'Z',
-            Ⱬ: 'Z',
-            Ż: 'Z',
-            Ẓ: 'Z',
-            Ȥ: 'Z',
-            Ẕ: 'Z',
-            Ƶ: 'Z',
-            Ĳ: 'IJ',
-            Œ: 'OE',
-            ᴀ: 'A',
-            ᴁ: 'AE',
-            ʙ: 'B',
-            ᴃ: 'B',
-            ᴄ: 'C',
-            ᴅ: 'D',
-            ᴇ: 'E',
-            ꜰ: 'F',
-            ɢ: 'G',
-            ʛ: 'G',
-            ʜ: 'H',
-            ɪ: 'I',
-            ʁ: 'R',
-            ᴊ: 'J',
-            ᴋ: 'K',
-            ʟ: 'L',
-            ᴌ: 'L',
-            ᴍ: 'M',
-            ɴ: 'N',
-            ᴏ: 'O',
-            ɶ: 'OE',
-            ᴐ: 'O',
-            ᴕ: 'OU',
-            ᴘ: 'P',
-            ʀ: 'R',
-            ᴎ: 'N',
-            ᴙ: 'R',
-            ꜱ: 'S',
-            ᴛ: 'T',
-            ⱻ: 'E',
-            ᴚ: 'R',
-            ᴜ: 'U',
-            ᴠ: 'V',
-            ᴡ: 'W',
-            ʏ: 'Y',
-            ᴢ: 'Z',
-            á: 'a',
-            ă: 'a',
-            ắ: 'a',
-            ặ: 'a',
-            ằ: 'a',
-            ẳ: 'a',
-            ẵ: 'a',
-            ǎ: 'a',
-            â: 'a',
-            ấ: 'a',
-            ậ: 'a',
-            ầ: 'a',
-            ẩ: 'a',
-            ẫ: 'a',
-            ä: 'a',
-            ǟ: 'a',
-            ȧ: 'a',
-            ǡ: 'a',
-            ạ: 'a',
-            ȁ: 'a',
-            à: 'a',
-            ả: 'a',
-            ȃ: 'a',
-            ā: 'a',
-            ą: 'a',
-            ᶏ: 'a',
-            ẚ: 'a',
-            å: 'a',
-            ǻ: 'a',
-            ḁ: 'a',
-            ⱥ: 'a',
-            ã: 'a',
-            ꜳ: 'aa',
-            æ: 'ae',
-            ǽ: 'ae',
-            ǣ: 'ae',
-            ꜵ: 'ao',
-            ꜷ: 'au',
-            ꜹ: 'av',
-            ꜻ: 'av',
-            ꜽ: 'ay',
-            ḃ: 'b',
-            ḅ: 'b',
-            ɓ: 'b',
-            ḇ: 'b',
-            ᵬ: 'b',
-            ᶀ: 'b',
-            ƀ: 'b',
-            ƃ: 'b',
-            ɵ: 'o',
-            ć: 'c',
-            č: 'c',
-            ç: 'c',
-            ḉ: 'c',
-            ĉ: 'c',
-            ɕ: 'c',
-            ċ: 'c',
-            ƈ: 'c',
-            ȼ: 'c',
-            ď: 'd',
-            ḑ: 'd',
-            ḓ: 'd',
-            ȡ: 'd',
-            ḋ: 'd',
-            ḍ: 'd',
-            ɗ: 'd',
-            ᶑ: 'd',
-            ḏ: 'd',
-            ᵭ: 'd',
-            ᶁ: 'd',
-            đ: 'd',
-            ɖ: 'd',
-            ƌ: 'd',
-            ı: 'i',
-            ȷ: 'j',
-            ɟ: 'j',
-            ʄ: 'j',
-            ǳ: 'dz',
-            ǆ: 'dz',
-            é: 'e',
-            ĕ: 'e',
-            ě: 'e',
-            ȩ: 'e',
-            ḝ: 'e',
-            ê: 'e',
-            ế: 'e',
-            ệ: 'e',
-            ề: 'e',
-            ể: 'e',
-            ễ: 'e',
-            ḙ: 'e',
-            ë: 'e',
-            ė: 'e',
-            ẹ: 'e',
-            ȅ: 'e',
-            è: 'e',
-            ẻ: 'e',
-            ȇ: 'e',
-            ē: 'e',
-            ḗ: 'e',
-            ḕ: 'e',
-            ⱸ: 'e',
-            ę: 'e',
-            ᶒ: 'e',
-            ɇ: 'e',
-            ẽ: 'e',
-            ḛ: 'e',
-            ꝫ: 'et',
-            ḟ: 'f',
-            ƒ: 'f',
-            ᵮ: 'f',
-            ᶂ: 'f',
-            ǵ: 'g',
-            ğ: 'g',
-            ǧ: 'g',
-            ģ: 'g',
-            ĝ: 'g',
-            ġ: 'g',
-            ɠ: 'g',
-            ḡ: 'g',
-            ᶃ: 'g',
-            ǥ: 'g',
-            ḫ: 'h',
-            ȟ: 'h',
-            ḩ: 'h',
-            ĥ: 'h',
-            ⱨ: 'h',
-            ḧ: 'h',
-            ḣ: 'h',
-            ḥ: 'h',
-            ɦ: 'h',
-            ẖ: 'h',
-            ħ: 'h',
-            ƕ: 'hv',
-            í: 'i',
-            ĭ: 'i',
-            ǐ: 'i',
-            î: 'i',
-            ï: 'i',
-            ḯ: 'i',
-            ị: 'i',
-            ȉ: 'i',
-            ì: 'i',
-            ỉ: 'i',
-            ȋ: 'i',
-            ī: 'i',
-            į: 'i',
-            ᶖ: 'i',
-            ɨ: 'i',
-            ĩ: 'i',
-            ḭ: 'i',
-            ꝺ: 'd',
-            ꝼ: 'f',
-            ᵹ: 'g',
-            ꞃ: 'r',
-            ꞅ: 's',
-            ꞇ: 't',
-            ꝭ: 'is',
-            ǰ: 'j',
-            ĵ: 'j',
-            ʝ: 'j',
-            ɉ: 'j',
-            ḱ: 'k',
-            ǩ: 'k',
-            ķ: 'k',
-            ⱪ: 'k',
-            ꝃ: 'k',
-            ḳ: 'k',
-            ƙ: 'k',
-            ḵ: 'k',
-            ᶄ: 'k',
-            ꝁ: 'k',
-            ꝅ: 'k',
-            ĺ: 'l',
-            ƚ: 'l',
-            ɬ: 'l',
-            ľ: 'l',
-            ļ: 'l',
-            ḽ: 'l',
-            ȴ: 'l',
-            ḷ: 'l',
-            ḹ: 'l',
-            ⱡ: 'l',
-            ꝉ: 'l',
-            ḻ: 'l',
-            ŀ: 'l',
-            ɫ: 'l',
-            ᶅ: 'l',
-            ɭ: 'l',
-            ł: 'l',
-            ǉ: 'lj',
-            ſ: 's',
-            ẜ: 's',
-            ẛ: 's',
-            ẝ: 's',
-            ḿ: 'm',
-            ṁ: 'm',
-            ṃ: 'm',
-            ɱ: 'm',
-            ᵯ: 'm',
-            ᶆ: 'm',
-            ń: 'n',
-            ň: 'n',
-            ņ: 'n',
-            ṋ: 'n',
-            ȵ: 'n',
-            ṅ: 'n',
-            ṇ: 'n',
-            ǹ: 'n',
-            ɲ: 'n',
-            ṉ: 'n',
-            ƞ: 'n',
-            ᵰ: 'n',
-            ᶇ: 'n',
-            ɳ: 'n',
-            ñ: 'n',
-            ǌ: 'nj',
-            ó: 'o',
-            ŏ: 'o',
-            ǒ: 'o',
-            ô: 'o',
-            ố: 'o',
-            ộ: 'o',
-            ồ: 'o',
-            ổ: 'o',
-            ỗ: 'o',
-            ö: 'o',
-            ȫ: 'o',
-            ȯ: 'o',
-            ȱ: 'o',
-            ọ: 'o',
-            ő: 'o',
-            ȍ: 'o',
-            ò: 'o',
-            ỏ: 'o',
-            ơ: 'o',
-            ớ: 'o',
-            ợ: 'o',
-            ờ: 'o',
-            ở: 'o',
-            ỡ: 'o',
-            ȏ: 'o',
-            ꝋ: 'o',
-            ꝍ: 'o',
-            ⱺ: 'o',
-            ō: 'o',
-            ṓ: 'o',
-            ṑ: 'o',
-            ǫ: 'o',
-            ǭ: 'o',
-            ø: 'o',
-            ǿ: 'o',
-            õ: 'o',
-            ṍ: 'o',
-            ṏ: 'o',
-            ȭ: 'o',
-            ƣ: 'oi',
-            ꝏ: 'oo',
-            ɛ: 'e',
-            ᶓ: 'e',
-            ɔ: 'o',
-            ᶗ: 'o',
-            ȣ: 'ou',
-            ṕ: 'p',
-            ṗ: 'p',
-            ꝓ: 'p',
-            ƥ: 'p',
-            ᵱ: 'p',
-            ᶈ: 'p',
-            ꝕ: 'p',
-            ᵽ: 'p',
-            ꝑ: 'p',
-            ꝙ: 'q',
-            ʠ: 'q',
-            ɋ: 'q',
-            ꝗ: 'q',
-            ŕ: 'r',
-            ř: 'r',
-            ŗ: 'r',
-            ṙ: 'r',
-            ṛ: 'r',
-            ṝ: 'r',
-            ȑ: 'r',
-            ɾ: 'r',
-            ᵳ: 'r',
-            ȓ: 'r',
-            ṟ: 'r',
-            ɼ: 'r',
-            ᵲ: 'r',
-            ᶉ: 'r',
-            ɍ: 'r',
-            ɽ: 'r',
-            ↄ: 'c',
-            ꜿ: 'c',
-            ɘ: 'e',
-            ɿ: 'r',
-            ś: 's',
-            ṥ: 's',
-            š: 's',
-            ṧ: 's',
-            ş: 's',
-            ŝ: 's',
-            ș: 's',
-            ṡ: 's',
-            ṣ: 's',
-            ṩ: 's',
-            ʂ: 's',
-            ᵴ: 's',
-            ᶊ: 's',
-            ȿ: 's',
-            ɡ: 'g',
-            ß: 'ss',
-            ᴑ: 'o',
-            ᴓ: 'o',
-            ᴝ: 'u',
-            ť: 't',
-            ţ: 't',
-            ṱ: 't',
-            ț: 't',
-            ȶ: 't',
-            ẗ: 't',
-            ⱦ: 't',
-            ṫ: 't',
-            ṭ: 't',
-            ƭ: 't',
-            ṯ: 't',
-            ᵵ: 't',
-            ƫ: 't',
-            ʈ: 't',
-            ŧ: 't',
-            ᵺ: 'th',
-            ɐ: 'a',
-            ᴂ: 'ae',
-            ǝ: 'e',
-            ᵷ: 'g',
-            ɥ: 'h',
-            ʮ: 'h',
-            ʯ: 'h',
-            ᴉ: 'i',
-            ʞ: 'k',
-            ꞁ: 'l',
-            ɯ: 'm',
-            ɰ: 'm',
-            ᴔ: 'oe',
-            ɹ: 'r',
-            ɻ: 'r',
-            ɺ: 'r',
-            ⱹ: 'r',
-            ʇ: 't',
-            ʌ: 'v',
-            ʍ: 'w',
-            ʎ: 'y',
-            ꜩ: 'tz',
-            ú: 'u',
-            ŭ: 'u',
-            ǔ: 'u',
-            û: 'u',
-            ṷ: 'u',
-            ü: 'u',
-            ǘ: 'u',
-            ǚ: 'u',
-            ǜ: 'u',
-            ǖ: 'u',
-            ṳ: 'u',
-            ụ: 'u',
-            ű: 'u',
-            ȕ: 'u',
-            ù: 'u',
-            ủ: 'u',
-            ư: 'u',
-            ứ: 'u',
-            ự: 'u',
-            ừ: 'u',
-            ử: 'u',
-            ữ: 'u',
-            ȗ: 'u',
-            ū: 'u',
-            ṻ: 'u',
-            ų: 'u',
-            ᶙ: 'u',
-            ů: 'u',
-            ũ: 'u',
-            ṹ: 'u',
-            ṵ: 'u',
-            ᵫ: 'ue',
-            ꝸ: 'um',
-            ⱴ: 'v',
-            ꝟ: 'v',
-            ṿ: 'v',
-            ʋ: 'v',
-            ᶌ: 'v',
-            ⱱ: 'v',
-            ṽ: 'v',
-            ꝡ: 'vy',
-            ẃ: 'w',
-            ŵ: 'w',
-            ẅ: 'w',
-            ẇ: 'w',
-            ẉ: 'w',
-            ẁ: 'w',
-            ⱳ: 'w',
-            ẘ: 'w',
-            ẍ: 'x',
-            ẋ: 'x',
-            ᶍ: 'x',
-            ý: 'y',
-            ŷ: 'y',
-            ÿ: 'y',
-            ẏ: 'y',
-            ỵ: 'y',
-            ỳ: 'y',
-            ƴ: 'y',
-            ỷ: 'y',
-            ỿ: 'y',
-            ȳ: 'y',
-            ẙ: 'y',
-            ɏ: 'y',
-            ỹ: 'y',
-            ź: 'z',
-            ž: 'z',
-            ẑ: 'z',
-            ʑ: 'z',
-            ⱬ: 'z',
-            ż: 'z',
-            ẓ: 'z',
-            ȥ: 'z',
-            ẕ: 'z',
-            ᵶ: 'z',
-            ᶎ: 'z',
-            ʐ: 'z',
-            ƶ: 'z',
-            ɀ: 'z',
-            ﬀ: 'ff',
-            ﬃ: 'ffi',
-            ﬄ: 'ffl',
-            ﬁ: 'fi',
-            ﬂ: 'fl',
-            ĳ: 'ij',
-            œ: 'oe',
-            ﬆ: 'st',
-            ₐ: 'a',
-            ₑ: 'e',
-            ᵢ: 'i',
-            ⱼ: 'j',
-            ₒ: 'o',
-            ᵣ: 'r',
-            ᵤ: 'u',
-            ᵥ: 'v',
-            ₓ: 'x',
+            'Á': 'A',
+            'Ă': 'A',
+            'Ắ': 'A',
+            'Ặ': 'A',
+            'Ằ': 'A',
+            'Ẳ': 'A',
+            'Ẵ': 'A',
+            'Ǎ': 'A',
+            'Â': 'A',
+            'Ấ': 'A',
+            'Ậ': 'A',
+            'Ầ': 'A',
+            'Ẩ': 'A',
+            'Ẫ': 'A',
+            'Ä': 'A',
+            'Ǟ': 'A',
+            'Ȧ': 'A',
+            'Ǡ': 'A',
+            'Ạ': 'A',
+            'Ȁ': 'A',
+            'À': 'A',
+            'Ả': 'A',
+            'Ȃ': 'A',
+            'Ā': 'A',
+            'Ą': 'A',
+            'Å': 'A',
+            'Ǻ': 'A',
+            'Ḁ': 'A',
+            'Ⱥ': 'A',
+            'Ã': 'A',
+            'Ꜳ': 'AA',
+            'Æ': 'AE',
+            'Ǽ': 'AE',
+            'Ǣ': 'AE',
+            'Ꜵ': 'AO',
+            'Ꜷ': 'AU',
+            'Ꜹ': 'AV',
+            'Ꜻ': 'AV',
+            'Ꜽ': 'AY',
+            'Ḃ': 'B',
+            'Ḅ': 'B',
+            'Ɓ': 'B',
+            'Ḇ': 'B',
+            'Ƀ': 'B',
+            'Ƃ': 'B',
+            'Ć': 'C',
+            'Č': 'C',
+            'Ç': 'C',
+            'Ḉ': 'C',
+            'Ĉ': 'C',
+            'Ċ': 'C',
+            'Ƈ': 'C',
+            'Ȼ': 'C',
+            'Ď': 'D',
+            'Ḑ': 'D',
+            'Ḓ': 'D',
+            'Ḋ': 'D',
+            'Ḍ': 'D',
+            'Ɗ': 'D',
+            'Ḏ': 'D',
+            'ǲ': 'D',
+            'ǅ': 'D',
+            'Đ': 'D',
+            'Ƌ': 'D',
+            'Ǳ': 'DZ',
+            'Ǆ': 'DZ',
+            'É': 'E',
+            'Ĕ': 'E',
+            'Ě': 'E',
+            'Ȩ': 'E',
+            'Ḝ': 'E',
+            'Ê': 'E',
+            'Ế': 'E',
+            'Ệ': 'E',
+            'Ề': 'E',
+            'Ể': 'E',
+            'Ễ': 'E',
+            'Ḙ': 'E',
+            'Ë': 'E',
+            'Ė': 'E',
+            'Ẹ': 'E',
+            'Ȅ': 'E',
+            'È': 'E',
+            'Ẻ': 'E',
+            'Ȇ': 'E',
+            'Ē': 'E',
+            'Ḗ': 'E',
+            'Ḕ': 'E',
+            'Ę': 'E',
+            'Ɇ': 'E',
+            'Ẽ': 'E',
+            'Ḛ': 'E',
+            'Ꝫ': 'ET',
+            'Ḟ': 'F',
+            'Ƒ': 'F',
+            'Ǵ': 'G',
+            'Ğ': 'G',
+            'Ǧ': 'G',
+            'Ģ': 'G',
+            'Ĝ': 'G',
+            'Ġ': 'G',
+            'Ɠ': 'G',
+            'Ḡ': 'G',
+            'Ǥ': 'G',
+            'Ḫ': 'H',
+            'Ȟ': 'H',
+            'Ḩ': 'H',
+            'Ĥ': 'H',
+            'Ⱨ': 'H',
+            'Ḧ': 'H',
+            'Ḣ': 'H',
+            'Ḥ': 'H',
+            'Ħ': 'H',
+            'Í': 'I',
+            'Ĭ': 'I',
+            'Ǐ': 'I',
+            'Î': 'I',
+            'Ï': 'I',
+            'Ḯ': 'I',
+            'İ': 'I',
+            'Ị': 'I',
+            'Ȉ': 'I',
+            'Ì': 'I',
+            'Ỉ': 'I',
+            'Ȋ': 'I',
+            'Ī': 'I',
+            'Į': 'I',
+            'Ɨ': 'I',
+            'Ĩ': 'I',
+            'Ḭ': 'I',
+            'Ꝺ': 'D',
+            'Ꝼ': 'F',
+            'Ᵹ': 'G',
+            'Ꞃ': 'R',
+            'Ꞅ': 'S',
+            'Ꞇ': 'T',
+            'Ꝭ': 'IS',
+            'Ĵ': 'J',
+            'Ɉ': 'J',
+            'Ḱ': 'K',
+            'Ǩ': 'K',
+            'Ķ': 'K',
+            'Ⱪ': 'K',
+            'Ꝃ': 'K',
+            'Ḳ': 'K',
+            'Ƙ': 'K',
+            'Ḵ': 'K',
+            'Ꝁ': 'K',
+            'Ꝅ': 'K',
+            'Ĺ': 'L',
+            'Ƚ': 'L',
+            'Ľ': 'L',
+            'Ļ': 'L',
+            'Ḽ': 'L',
+            'Ḷ': 'L',
+            'Ḹ': 'L',
+            'Ⱡ': 'L',
+            'Ꝉ': 'L',
+            'Ḻ': 'L',
+            'Ŀ': 'L',
+            'Ɫ': 'L',
+            'ǈ': 'L',
+            'Ł': 'L',
+            'Ǉ': 'LJ',
+            'Ḿ': 'M',
+            'Ṁ': 'M',
+            'Ṃ': 'M',
+            'Ɱ': 'M',
+            'Ń': 'N',
+            'Ň': 'N',
+            'Ņ': 'N',
+            'Ṋ': 'N',
+            'Ṅ': 'N',
+            'Ṇ': 'N',
+            'Ǹ': 'N',
+            'Ɲ': 'N',
+            'Ṉ': 'N',
+            'Ƞ': 'N',
+            'ǋ': 'N',
+            'Ñ': 'N',
+            'Ǌ': 'NJ',
+            'Ó': 'O',
+            'Ŏ': 'O',
+            'Ǒ': 'O',
+            'Ô': 'O',
+            'Ố': 'O',
+            'Ộ': 'O',
+            'Ồ': 'O',
+            'Ổ': 'O',
+            'Ỗ': 'O',
+            'Ö': 'O',
+            'Ȫ': 'O',
+            'Ȯ': 'O',
+            'Ȱ': 'O',
+            'Ọ': 'O',
+            'Ő': 'O',
+            'Ȍ': 'O',
+            'Ò': 'O',
+            'Ỏ': 'O',
+            'Ơ': 'O',
+            'Ớ': 'O',
+            'Ợ': 'O',
+            'Ờ': 'O',
+            'Ở': 'O',
+            'Ỡ': 'O',
+            'Ȏ': 'O',
+            'Ꝋ': 'O',
+            'Ꝍ': 'O',
+            'Ō': 'O',
+            'Ṓ': 'O',
+            'Ṑ': 'O',
+            'Ɵ': 'O',
+            'Ǫ': 'O',
+            'Ǭ': 'O',
+            'Ø': 'O',
+            'Ǿ': 'O',
+            'Õ': 'O',
+            'Ṍ': 'O',
+            'Ṏ': 'O',
+            'Ȭ': 'O',
+            'Ƣ': 'OI',
+            'Ꝏ': 'OO',
+            'Ɛ': 'E',
+            'Ɔ': 'O',
+            'Ȣ': 'OU',
+            'Ṕ': 'P',
+            'Ṗ': 'P',
+            'Ꝓ': 'P',
+            'Ƥ': 'P',
+            'Ꝕ': 'P',
+            'Ᵽ': 'P',
+            'Ꝑ': 'P',
+            'Ꝙ': 'Q',
+            'Ꝗ': 'Q',
+            'Ŕ': 'R',
+            'Ř': 'R',
+            'Ŗ': 'R',
+            'Ṙ': 'R',
+            'Ṛ': 'R',
+            'Ṝ': 'R',
+            'Ȑ': 'R',
+            'Ȓ': 'R',
+            'Ṟ': 'R',
+            'Ɍ': 'R',
+            'Ɽ': 'R',
+            'Ꜿ': 'C',
+            'Ǝ': 'E',
+            'Ś': 'S',
+            'Ṥ': 'S',
+            'Š': 'S',
+            'Ṧ': 'S',
+            'Ş': 'S',
+            'Ŝ': 'S',
+            'Ș': 'S',
+            'Ṡ': 'S',
+            'Ṣ': 'S',
+            'Ṩ': 'S',
+            'ẞ': 'SS',
+            'Ť': 'T',
+            'Ţ': 'T',
+            'Ṱ': 'T',
+            'Ț': 'T',
+            'Ⱦ': 'T',
+            'Ṫ': 'T',
+            'Ṭ': 'T',
+            'Ƭ': 'T',
+            'Ṯ': 'T',
+            'Ʈ': 'T',
+            'Ŧ': 'T',
+            'Ɐ': 'A',
+            'Ꞁ': 'L',
+            'Ɯ': 'M',
+            'Ʌ': 'V',
+            'Ꜩ': 'TZ',
+            'Ú': 'U',
+            'Ŭ': 'U',
+            'Ǔ': 'U',
+            'Û': 'U',
+            'Ṷ': 'U',
+            'Ü': 'U',
+            'Ǘ': 'U',
+            'Ǚ': 'U',
+            'Ǜ': 'U',
+            'Ǖ': 'U',
+            'Ṳ': 'U',
+            'Ụ': 'U',
+            'Ű': 'U',
+            'Ȕ': 'U',
+            'Ù': 'U',
+            'Ủ': 'U',
+            'Ư': 'U',
+            'Ứ': 'U',
+            'Ự': 'U',
+            'Ừ': 'U',
+            'Ử': 'U',
+            'Ữ': 'U',
+            'Ȗ': 'U',
+            'Ū': 'U',
+            'Ṻ': 'U',
+            'Ų': 'U',
+            'Ů': 'U',
+            'Ũ': 'U',
+            'Ṹ': 'U',
+            'Ṵ': 'U',
+            'Ꝟ': 'V',
+            'Ṿ': 'V',
+            'Ʋ': 'V',
+            'Ṽ': 'V',
+            'Ꝡ': 'VY',
+            'Ẃ': 'W',
+            'Ŵ': 'W',
+            'Ẅ': 'W',
+            'Ẇ': 'W',
+            'Ẉ': 'W',
+            'Ẁ': 'W',
+            'Ⱳ': 'W',
+            'Ẍ': 'X',
+            'Ẋ': 'X',
+            'Ý': 'Y',
+            'Ŷ': 'Y',
+            'Ÿ': 'Y',
+            'Ẏ': 'Y',
+            'Ỵ': 'Y',
+            'Ỳ': 'Y',
+            'Ƴ': 'Y',
+            'Ỷ': 'Y',
+            'Ỿ': 'Y',
+            'Ȳ': 'Y',
+            'Ɏ': 'Y',
+            'Ỹ': 'Y',
+            'Ź': 'Z',
+            'Ž': 'Z',
+            'Ẑ': 'Z',
+            'Ⱬ': 'Z',
+            'Ż': 'Z',
+            'Ẓ': 'Z',
+            'Ȥ': 'Z',
+            'Ẕ': 'Z',
+            'Ƶ': 'Z',
+            'Ĳ': 'IJ',
+            'Œ': 'OE',
+            'ᴀ': 'A',
+            'ᴁ': 'AE',
+            'ʙ': 'B',
+            'ᴃ': 'B',
+            'ᴄ': 'C',
+            'ᴅ': 'D',
+            'ᴇ': 'E',
+            'ꜰ': 'F',
+            'ɢ': 'G',
+            'ʛ': 'G',
+            'ʜ': 'H',
+            'ɪ': 'I',
+            'ʁ': 'R',
+            'ᴊ': 'J',
+            'ᴋ': 'K',
+            'ʟ': 'L',
+            'ᴌ': 'L',
+            'ᴍ': 'M',
+            'ɴ': 'N',
+            'ᴏ': 'O',
+            'ɶ': 'OE',
+            'ᴐ': 'O',
+            'ᴕ': 'OU',
+            'ᴘ': 'P',
+            'ʀ': 'R',
+            'ᴎ': 'N',
+            'ᴙ': 'R',
+            'ꜱ': 'S',
+            'ᴛ': 'T',
+            'ⱻ': 'E',
+            'ᴚ': 'R',
+            'ᴜ': 'U',
+            'ᴠ': 'V',
+            'ᴡ': 'W',
+            'ʏ': 'Y',
+            'ᴢ': 'Z',
+            'á': 'a',
+            'ă': 'a',
+            'ắ': 'a',
+            'ặ': 'a',
+            'ằ': 'a',
+            'ẳ': 'a',
+            'ẵ': 'a',
+            'ǎ': 'a',
+            'â': 'a',
+            'ấ': 'a',
+            'ậ': 'a',
+            'ầ': 'a',
+            'ẩ': 'a',
+            'ẫ': 'a',
+            'ä': 'a',
+            'ǟ': 'a',
+            'ȧ': 'a',
+            'ǡ': 'a',
+            'ạ': 'a',
+            'ȁ': 'a',
+            'à': 'a',
+            'ả': 'a',
+            'ȃ': 'a',
+            'ā': 'a',
+            'ą': 'a',
+            'ᶏ': 'a',
+            'ẚ': 'a',
+            'å': 'a',
+            'ǻ': 'a',
+            'ḁ': 'a',
+            'ⱥ': 'a',
+            'ã': 'a',
+            'ꜳ': 'aa',
+            'æ': 'ae',
+            'ǽ': 'ae',
+            'ǣ': 'ae',
+            'ꜵ': 'ao',
+            'ꜷ': 'au',
+            'ꜹ': 'av',
+            'ꜻ': 'av',
+            'ꜽ': 'ay',
+            'ḃ': 'b',
+            'ḅ': 'b',
+            'ɓ': 'b',
+            'ḇ': 'b',
+            'ᵬ': 'b',
+            'ᶀ': 'b',
+            'ƀ': 'b',
+            'ƃ': 'b',
+            'ɵ': 'o',
+            'ć': 'c',
+            'č': 'c',
+            'ç': 'c',
+            'ḉ': 'c',
+            'ĉ': 'c',
+            'ɕ': 'c',
+            'ċ': 'c',
+            'ƈ': 'c',
+            'ȼ': 'c',
+            'ď': 'd',
+            'ḑ': 'd',
+            'ḓ': 'd',
+            'ȡ': 'd',
+            'ḋ': 'd',
+            'ḍ': 'd',
+            'ɗ': 'd',
+            'ᶑ': 'd',
+            'ḏ': 'd',
+            'ᵭ': 'd',
+            'ᶁ': 'd',
+            'đ': 'd',
+            'ɖ': 'd',
+            'ƌ': 'd',
+            'ı': 'i',
+            'ȷ': 'j',
+            'ɟ': 'j',
+            'ʄ': 'j',
+            'ǳ': 'dz',
+            'ǆ': 'dz',
+            'é': 'e',
+            'ĕ': 'e',
+            'ě': 'e',
+            'ȩ': 'e',
+            'ḝ': 'e',
+            'ê': 'e',
+            'ế': 'e',
+            'ệ': 'e',
+            'ề': 'e',
+            'ể': 'e',
+            'ễ': 'e',
+            'ḙ': 'e',
+            'ë': 'e',
+            'ė': 'e',
+            'ẹ': 'e',
+            'ȅ': 'e',
+            'è': 'e',
+            'ẻ': 'e',
+            'ȇ': 'e',
+            'ē': 'e',
+            'ḗ': 'e',
+            'ḕ': 'e',
+            'ⱸ': 'e',
+            'ę': 'e',
+            'ᶒ': 'e',
+            'ɇ': 'e',
+            'ẽ': 'e',
+            'ḛ': 'e',
+            'ꝫ': 'et',
+            'ḟ': 'f',
+            'ƒ': 'f',
+            'ᵮ': 'f',
+            'ᶂ': 'f',
+            'ǵ': 'g',
+            'ğ': 'g',
+            'ǧ': 'g',
+            'ģ': 'g',
+            'ĝ': 'g',
+            'ġ': 'g',
+            'ɠ': 'g',
+            'ḡ': 'g',
+            'ᶃ': 'g',
+            'ǥ': 'g',
+            'ḫ': 'h',
+            'ȟ': 'h',
+            'ḩ': 'h',
+            'ĥ': 'h',
+            'ⱨ': 'h',
+            'ḧ': 'h',
+            'ḣ': 'h',
+            'ḥ': 'h',
+            'ɦ': 'h',
+            'ẖ': 'h',
+            'ħ': 'h',
+            'ƕ': 'hv',
+            'í': 'i',
+            'ĭ': 'i',
+            'ǐ': 'i',
+            'î': 'i',
+            'ï': 'i',
+            'ḯ': 'i',
+            'ị': 'i',
+            'ȉ': 'i',
+            'ì': 'i',
+            'ỉ': 'i',
+            'ȋ': 'i',
+            'ī': 'i',
+            'į': 'i',
+            'ᶖ': 'i',
+            'ɨ': 'i',
+            'ĩ': 'i',
+            'ḭ': 'i',
+            'ꝺ': 'd',
+            'ꝼ': 'f',
+            'ᵹ': 'g',
+            'ꞃ': 'r',
+            'ꞅ': 's',
+            'ꞇ': 't',
+            'ꝭ': 'is',
+            'ǰ': 'j',
+            'ĵ': 'j',
+            'ʝ': 'j',
+            'ɉ': 'j',
+            'ḱ': 'k',
+            'ǩ': 'k',
+            'ķ': 'k',
+            'ⱪ': 'k',
+            'ꝃ': 'k',
+            'ḳ': 'k',
+            'ƙ': 'k',
+            'ḵ': 'k',
+            'ᶄ': 'k',
+            'ꝁ': 'k',
+            'ꝅ': 'k',
+            'ĺ': 'l',
+            'ƚ': 'l',
+            'ɬ': 'l',
+            'ľ': 'l',
+            'ļ': 'l',
+            'ḽ': 'l',
+            'ȴ': 'l',
+            'ḷ': 'l',
+            'ḹ': 'l',
+            'ⱡ': 'l',
+            'ꝉ': 'l',
+            'ḻ': 'l',
+            'ŀ': 'l',
+            'ɫ': 'l',
+            'ᶅ': 'l',
+            'ɭ': 'l',
+            'ł': 'l',
+            'ǉ': 'lj',
+            'ſ': 's',
+            'ẜ': 's',
+            'ẛ': 's',
+            'ẝ': 's',
+            'ḿ': 'm',
+            'ṁ': 'm',
+            'ṃ': 'm',
+            'ɱ': 'm',
+            'ᵯ': 'm',
+            'ᶆ': 'm',
+            'ń': 'n',
+            'ň': 'n',
+            'ņ': 'n',
+            'ṋ': 'n',
+            'ȵ': 'n',
+            'ṅ': 'n',
+            'ṇ': 'n',
+            'ǹ': 'n',
+            'ɲ': 'n',
+            'ṉ': 'n',
+            'ƞ': 'n',
+            'ᵰ': 'n',
+            'ᶇ': 'n',
+            'ɳ': 'n',
+            'ñ': 'n',
+            'ǌ': 'nj',
+            'ó': 'o',
+            'ŏ': 'o',
+            'ǒ': 'o',
+            'ô': 'o',
+            'ố': 'o',
+            'ộ': 'o',
+            'ồ': 'o',
+            'ổ': 'o',
+            'ỗ': 'o',
+            'ö': 'o',
+            'ȫ': 'o',
+            'ȯ': 'o',
+            'ȱ': 'o',
+            'ọ': 'o',
+            'ő': 'o',
+            'ȍ': 'o',
+            'ò': 'o',
+            'ỏ': 'o',
+            'ơ': 'o',
+            'ớ': 'o',
+            'ợ': 'o',
+            'ờ': 'o',
+            'ở': 'o',
+            'ỡ': 'o',
+            'ȏ': 'o',
+            'ꝋ': 'o',
+            'ꝍ': 'o',
+            'ⱺ': 'o',
+            'ō': 'o',
+            'ṓ': 'o',
+            'ṑ': 'o',
+            'ǫ': 'o',
+            'ǭ': 'o',
+            'ø': 'o',
+            'ǿ': 'o',
+            'õ': 'o',
+            'ṍ': 'o',
+            'ṏ': 'o',
+            'ȭ': 'o',
+            'ƣ': 'oi',
+            'ꝏ': 'oo',
+            'ɛ': 'e',
+            'ᶓ': 'e',
+            'ɔ': 'o',
+            'ᶗ': 'o',
+            'ȣ': 'ou',
+            'ṕ': 'p',
+            'ṗ': 'p',
+            'ꝓ': 'p',
+            'ƥ': 'p',
+            'ᵱ': 'p',
+            'ᶈ': 'p',
+            'ꝕ': 'p',
+            'ᵽ': 'p',
+            'ꝑ': 'p',
+            'ꝙ': 'q',
+            'ʠ': 'q',
+            'ɋ': 'q',
+            'ꝗ': 'q',
+            'ŕ': 'r',
+            'ř': 'r',
+            'ŗ': 'r',
+            'ṙ': 'r',
+            'ṛ': 'r',
+            'ṝ': 'r',
+            'ȑ': 'r',
+            'ɾ': 'r',
+            'ᵳ': 'r',
+            'ȓ': 'r',
+            'ṟ': 'r',
+            'ɼ': 'r',
+            'ᵲ': 'r',
+            'ᶉ': 'r',
+            'ɍ': 'r',
+            'ɽ': 'r',
+            'ↄ': 'c',
+            'ꜿ': 'c',
+            'ɘ': 'e',
+            'ɿ': 'r',
+            'ś': 's',
+            'ṥ': 's',
+            'š': 's',
+            'ṧ': 's',
+            'ş': 's',
+            'ŝ': 's',
+            'ș': 's',
+            'ṡ': 's',
+            'ṣ': 's',
+            'ṩ': 's',
+            'ʂ': 's',
+            'ᵴ': 's',
+            'ᶊ': 's',
+            'ȿ': 's',
+            'ɡ': 'g',
+            'ß': 'ss',
+            'ᴑ': 'o',
+            'ᴓ': 'o',
+            'ᴝ': 'u',
+            'ť': 't',
+            'ţ': 't',
+            'ṱ': 't',
+            'ț': 't',
+            'ȶ': 't',
+            'ẗ': 't',
+            'ⱦ': 't',
+            'ṫ': 't',
+            'ṭ': 't',
+            'ƭ': 't',
+            'ṯ': 't',
+            'ᵵ': 't',
+            'ƫ': 't',
+            'ʈ': 't',
+            'ŧ': 't',
+            'ᵺ': 'th',
+            'ɐ': 'a',
+            'ᴂ': 'ae',
+            'ǝ': 'e',
+            'ᵷ': 'g',
+            'ɥ': 'h',
+            'ʮ': 'h',
+            'ʯ': 'h',
+            'ᴉ': 'i',
+            'ʞ': 'k',
+            'ꞁ': 'l',
+            'ɯ': 'm',
+            'ɰ': 'm',
+            'ᴔ': 'oe',
+            'ɹ': 'r',
+            'ɻ': 'r',
+            'ɺ': 'r',
+            'ⱹ': 'r',
+            'ʇ': 't',
+            'ʌ': 'v',
+            'ʍ': 'w',
+            'ʎ': 'y',
+            'ꜩ': 'tz',
+            'ú': 'u',
+            'ŭ': 'u',
+            'ǔ': 'u',
+            'û': 'u',
+            'ṷ': 'u',
+            'ü': 'u',
+            'ǘ': 'u',
+            'ǚ': 'u',
+            'ǜ': 'u',
+            'ǖ': 'u',
+            'ṳ': 'u',
+            'ụ': 'u',
+            'ű': 'u',
+            'ȕ': 'u',
+            'ù': 'u',
+            'ủ': 'u',
+            'ư': 'u',
+            'ứ': 'u',
+            'ự': 'u',
+            'ừ': 'u',
+            'ử': 'u',
+            'ữ': 'u',
+            'ȗ': 'u',
+            'ū': 'u',
+            'ṻ': 'u',
+            'ų': 'u',
+            'ᶙ': 'u',
+            'ů': 'u',
+            'ũ': 'u',
+            'ṹ': 'u',
+            'ṵ': 'u',
+            'ᵫ': 'ue',
+            'ꝸ': 'um',
+            'ⱴ': 'v',
+            'ꝟ': 'v',
+            'ṿ': 'v',
+            'ʋ': 'v',
+            'ᶌ': 'v',
+            'ⱱ': 'v',
+            'ṽ': 'v',
+            'ꝡ': 'vy',
+            'ẃ': 'w',
+            'ŵ': 'w',
+            'ẅ': 'w',
+            'ẇ': 'w',
+            'ẉ': 'w',
+            'ẁ': 'w',
+            'ⱳ': 'w',
+            'ẘ': 'w',
+            'ẍ': 'x',
+            'ẋ': 'x',
+            'ᶍ': 'x',
+            'ý': 'y',
+            'ŷ': 'y',
+            'ÿ': 'y',
+            'ẏ': 'y',
+            'ỵ': 'y',
+            'ỳ': 'y',
+            'ƴ': 'y',
+            'ỷ': 'y',
+            'ỿ': 'y',
+            'ȳ': 'y',
+            'ẙ': 'y',
+            'ɏ': 'y',
+            'ỹ': 'y',
+            'ź': 'z',
+            'ž': 'z',
+            'ẑ': 'z',
+            'ʑ': 'z',
+            'ⱬ': 'z',
+            'ż': 'z',
+            'ẓ': 'z',
+            'ȥ': 'z',
+            'ẕ': 'z',
+            'ᵶ': 'z',
+            'ᶎ': 'z',
+            'ʐ': 'z',
+            'ƶ': 'z',
+            'ɀ': 'z',
+            'ﬀ': 'ff',
+            'ﬃ': 'ffi',
+            'ﬄ': 'ffl',
+            'ﬁ': 'fi',
+            'ﬂ': 'fl',
+            'ĳ': 'ij',
+            'œ': 'oe',
+            'ﬆ': 'st',
+            'ₐ': 'a',
+            'ₑ': 'e',
+            'ᵢ': 'i',
+            'ⱼ': 'j',
+            'ₒ': 'o',
+            'ᵣ': 'r',
+            'ᵤ': 'u',
+            'ᵥ': 'v',
+            'ₓ': 'x',
         };
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    LatinisePipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
+    LatinisePipe.prototype.transform = function (text, chars) {
         var _this = this;
-        if (chars === void 0) { chars = '\\s'; }
         return isString(text)
-            ? text.replace(/[^A-Za-z0-9]/g, (/**
-             * @param {?} key
-             * @return {?}
-             */
-            function (key) {
+            ? text.replace(/[^A-Za-z0-9]/g, function (key) {
                 return _this.latinMap[key] || key;
-            }))
+            })
             : text;
     };
-    LatinisePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'latinise' },] }
-    ];
+    LatinisePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'latinise' })
+    ], LatinisePipe);
     return LatinisePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var LinesPipe = /** @class */ (function () {
     function LinesPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    LinesPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
-        if (chars === void 0) { chars = '\\s'; }
+    LinesPipe.prototype.transform = function (text, chars) {
         return isString(text) ? text.replace(/\r\n/g, '\n').split('\n') : text;
     };
-    LinesPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'lines' },] }
-    ];
+    LinesPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'lines' })
+    ], LinesPipe);
     return LinesPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var UnderscorePipe = /** @class */ (function () {
     function UnderscorePipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    UnderscorePipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?=} chars
-     * @return {?}
-     */
-    function (text, chars) {
-        if (chars === void 0) { chars = '\\s'; }
+    UnderscorePipe.prototype.transform = function (text, chars) {
         return isString(text)
             ? text
                 .trim()
                 .replace(/\s+/g, '')
-                .replace(/[A-Z]/g, (/**
-             * @param {?} c
-             * @param {?} k
-             * @return {?}
-             */
-            function (c, k) {
+                .replace(/[A-Z]/g, function (c, k) {
                 return k ? "_" + c.toLowerCase() : c.toLowerCase();
-            }))
+            })
             : text;
     };
-    UnderscorePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'underscore' },] }
-    ];
+    UnderscorePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'underscore' })
+    ], UnderscorePipe);
     return UnderscorePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var MatchPipe = /** @class */ (function () {
     function MatchPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?} pattern
-     * @param {?=} flags
-     * @return {?}
-     */
-    MatchPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?} pattern
-     * @param {?=} flags
-     * @return {?}
-     */
-    function (text, pattern, flags) {
+    MatchPipe.prototype.transform = function (text, pattern, flags) {
         if (!isString(text)) {
             return text;
         }
         return text.match(new RegExp(pattern, flags));
     };
-    MatchPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'match' },] }
-    ];
+    MatchPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'match' })
+    ], MatchPipe);
     return MatchPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var TestPipe = /** @class */ (function () {
     function TestPipe() {
     }
-    /**
-     * @param {?} text
-     * @param {?} pattern
-     * @param {?=} flags
-     * @return {?}
-     */
-    TestPipe.prototype.transform = /**
-     * @param {?} text
-     * @param {?} pattern
-     * @param {?=} flags
-     * @return {?}
-     */
-    function (text, pattern, flags) {
+    TestPipe.prototype.transform = function (text, pattern, flags) {
         if (!isString(text)) {
             return text;
         }
         return new RegExp(pattern, flags).test(text);
     };
-    TestPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'test' },] }
-    ];
+    TestPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'test' })
+    ], TestPipe);
     return TestPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var LeftPadPipe = /** @class */ (function () {
     function LeftPadPipe() {
     }
-    /**
-     * @param {?} str
-     * @param {?} length
-     * @param {?=} padCharacter
-     * @return {?}
-     */
-    LeftPadPipe.prototype.transform = /**
-     * @param {?} str
-     * @param {?} length
-     * @param {?=} padCharacter
-     * @return {?}
-     */
-    function (str, length, padCharacter) {
+    LeftPadPipe.prototype.transform = function (str, length, padCharacter) {
         if (padCharacter === void 0) { padCharacter = ' '; }
         if (!isString(str) || str.length >= length) {
             return str;
@@ -3015,32 +2053,16 @@ var LeftPadPipe = /** @class */ (function () {
         }
         return str;
     };
-    LeftPadPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'lpad' },] }
-    ];
+    LeftPadPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'lpad' })
+    ], LeftPadPipe);
     return LeftPadPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var RightPadPipe = /** @class */ (function () {
     function RightPadPipe() {
     }
-    /**
-     * @param {?} str
-     * @param {?=} length
-     * @param {?=} padCharacter
-     * @return {?}
-     */
-    RightPadPipe.prototype.transform = /**
-     * @param {?} str
-     * @param {?=} length
-     * @param {?=} padCharacter
-     * @return {?}
-     */
-    function (str, length, padCharacter) {
+    RightPadPipe.prototype.transform = function (str, length, padCharacter) {
         if (length === void 0) { length = 1; }
         if (padCharacter === void 0) { padCharacter = ' '; }
         if (!isString(str) || str.length >= length) {
@@ -3051,16 +2073,12 @@ var RightPadPipe = /** @class */ (function () {
         }
         return str;
     };
-    RightPadPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'rpad' },] }
-    ];
+    RightPadPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'rpad' })
+    ], RightPadPipe);
     return RightPadPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var MakePluralStringPipe = /** @class */ (function () {
     function MakePluralStringPipe() {
         this.irregularMap = {
@@ -3205,17 +2223,7 @@ var MakePluralStringPipe = /** @class */ (function () {
             zero: 'zeroes',
         };
     }
-    /**
-     * @param {?} singularEntity
-     * @param {?=} quantity
-     * @return {?}
-     */
-    MakePluralStringPipe.prototype.transform = /**
-     * @param {?} singularEntity
-     * @param {?=} quantity
-     * @return {?}
-     */
-    function (singularEntity, quantity) {
+    MakePluralStringPipe.prototype.transform = function (singularEntity, quantity) {
         if (quantity === void 0) { quantity = 0; }
         if (!singularEntity || singularEntity === '') {
             return '';
@@ -3224,7 +2232,6 @@ var MakePluralStringPipe = /** @class */ (function () {
             return singularEntity;
         }
         else {
-            /** @type {?} */
             var lastWord = singularEntity.trim().split(' ')[singularEntity.trim().split(' ').length - 1];
             if (this.irregularMap[lastWord.toLocaleLowerCase()]) {
                 if (lastWord[0] === lastWord[0].toLocaleUpperCase()) {
@@ -3248,34 +2255,30 @@ var MakePluralStringPipe = /** @class */ (function () {
             }
         }
     };
-    MakePluralStringPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{
-                    name: 'makePluralString',
-                },] }
-    ];
+    MakePluralStringPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+            name: 'makePluralString',
+        })
+        /**
+         * Takes a singular entity string and pluralizes it.
+         * Uses both naive and holdout-list approaches.
+         * If several words appear in the string, only the last word is pluralized -- this
+         * means that if "your story" was passed in, "your stories" would be passed out.
+         *
+         * @param {string} singularEntity - Entity to pluralize. Pass as a singular ('story' or 'house').
+         *          NOTE: The last word is examined. So you can pass in e.g. 'my story'.
+         * @param {number} [quantity=0] quantity - How many of the entity are there? If left blank, this will
+         *          pluralize the string (e.g. 'story' -> 'stories', 'house' -> 'houses'). If given a value,
+         *          this will pluralize appropriately (e.g. ('story', 1) -> 'story', ('story', 2) -> 'stories').
+         */
+    ], MakePluralStringPipe);
     return MakePluralStringPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var WrapPipe = /** @class */ (function () {
     function WrapPipe() {
     }
-    /**
-     * @param {?} str
-     * @param {?=} prefix
-     * @param {?=} suffix
-     * @return {?}
-     */
-    WrapPipe.prototype.transform = /**
-     * @param {?} str
-     * @param {?=} prefix
-     * @param {?=} suffix
-     * @return {?}
-     */
-    function (str, prefix, suffix) {
+    WrapPipe.prototype.transform = function (str, prefix, suffix) {
         if (prefix === void 0) { prefix = ''; }
         if (suffix === void 0) { suffix = ''; }
         if (!isString(str)) {
@@ -3283,17 +2286,12 @@ var WrapPipe = /** @class */ (function () {
         }
         return (!!prefix && isString(prefix) ? prefix : '') + str + (!!suffix && isString(suffix) ? suffix : '');
     };
-    WrapPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'wrap' },] }
-    ];
+    WrapPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'wrap' })
+    ], WrapPipe);
     return WrapPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 var STRING_PIPES = [
     AorAnPipe,
     LeftTrimPipe,
@@ -3320,301 +2318,157 @@ var STRING_PIPES = [
 var NgStringPipesModule = /** @class */ (function () {
     function NgStringPipesModule() {
     }
-    NgStringPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: STRING_PIPES,
-                    imports: [],
-                    exports: STRING_PIPES,
-                },] }
-    ];
+    NgStringPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: STRING_PIPES,
+            imports: [],
+            exports: STRING_PIPES,
+        })
+    ], NgStringPipesModule);
     return NgStringPipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var MaxPipe = /** @class */ (function () {
     function MaxPipe() {
     }
-    /**
-     * @param {?} arr
-     * @return {?}
-     */
-    MaxPipe.prototype.transform = /**
-     * @param {?} arr
-     * @return {?}
-     */
-    function (arr) {
+    MaxPipe.prototype.transform = function (arr) {
         return Array.isArray(arr) ? Math.max.apply(Math, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(arr)) : arr;
     };
-    MaxPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'max' },] }
-    ];
+    MaxPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'max' })
+    ], MaxPipe);
     return MaxPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var MinPipe = /** @class */ (function () {
     function MinPipe() {
     }
-    /**
-     * @param {?} arr
-     * @return {?}
-     */
-    MinPipe.prototype.transform = /**
-     * @param {?} arr
-     * @return {?}
-     */
-    function (arr) {
+    MinPipe.prototype.transform = function (arr) {
         return Array.isArray(arr) ? Math.min.apply(Math, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(arr)) : arr;
     };
-    MinPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'min' },] }
-    ];
+    MinPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'min' })
+    ], MinPipe);
     return MinPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var PercentagePipe = /** @class */ (function () {
     function PercentagePipe() {
     }
-    /**
-     * @param {?} num
-     * @param {?=} total
-     * @param {?=} floor
-     * @return {?}
-     */
-    PercentagePipe.prototype.transform = /**
-     * @param {?} num
-     * @param {?=} total
-     * @param {?=} floor
-     * @return {?}
-     */
-    function (num, total, floor) {
+    PercentagePipe.prototype.transform = function (num, total, floor) {
         if (total === void 0) { total = 100; }
         if (floor === void 0) { floor = false; }
         if (isNaN(num)) {
             return num;
         }
-        /** @type {?} */
         var percent = (num * 100) / total;
         return floor ? Math.floor(percent) : percent;
     };
-    PercentagePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'percentage' },] }
-    ];
+    PercentagePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'percentage' })
+    ], PercentagePipe);
     return PercentagePipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var SumPipe = /** @class */ (function () {
     function SumPipe() {
     }
-    /**
-     * @param {?} arr
-     * @return {?}
-     */
-    SumPipe.prototype.transform = /**
-     * @param {?} arr
-     * @return {?}
-     */
-    function (arr) {
-        return Array.isArray(arr) ? arr.reduce((/**
-         * @param {?} sum
-         * @param {?} curr
-         * @return {?}
-         */
-        function (sum, curr) { return sum + curr; }), 0) : arr;
+    SumPipe.prototype.transform = function (arr) {
+        return Array.isArray(arr) ? arr.reduce(function (sum, curr) { return sum + curr; }, 0) : arr;
     };
-    SumPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'sum' },] }
-    ];
+    SumPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'sum' })
+    ], SumPipe);
     return SumPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var FloorPipe = /** @class */ (function () {
     function FloorPipe() {
     }
-    /**
-     * @param {?} num
-     * @param {?=} precision
-     * @return {?}
-     */
-    FloorPipe.prototype.transform = /**
-     * @param {?} num
-     * @param {?=} precision
-     * @return {?}
-     */
-    function (num, precision) {
+    FloorPipe.prototype.transform = function (num, precision) {
         if (precision === void 0) { precision = 0; }
         if (precision <= 0) {
             return Math.floor(num);
         }
-        /** @type {?} */
         var tho = Math.pow(10, precision);
         return Math.floor(num * tho) / tho;
     };
-    FloorPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'floor' },] }
-    ];
+    FloorPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'floor' })
+    ], FloorPipe);
     return FloorPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var RoundPipe = /** @class */ (function () {
     function RoundPipe() {
     }
-    /**
-     * @param {?} num
-     * @param {?=} precision
-     * @return {?}
-     */
-    RoundPipe.prototype.transform = /**
-     * @param {?} num
-     * @param {?=} precision
-     * @return {?}
-     */
-    function (num, precision) {
+    RoundPipe.prototype.transform = function (num, precision) {
         if (precision === void 0) { precision = 0; }
         return applyPrecision(num, precision);
     };
-    RoundPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'round' },] }
-    ];
+    RoundPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'round' })
+    ], RoundPipe);
     return RoundPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var SqrtPipe = /** @class */ (function () {
     function SqrtPipe() {
     }
-    /**
-     * @param {?} num
-     * @return {?}
-     */
-    SqrtPipe.prototype.transform = /**
-     * @param {?} num
-     * @return {?}
-     */
-    function (num) {
+    SqrtPipe.prototype.transform = function (num) {
         return !isNaN(num) ? Math.sqrt(num) : num;
     };
-    SqrtPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'sqrt' },] }
-    ];
+    SqrtPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'sqrt' })
+    ], SqrtPipe);
     return SqrtPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var PowerPipe = /** @class */ (function () {
     function PowerPipe() {
     }
-    /**
-     * @param {?} num
-     * @param {?=} power
-     * @return {?}
-     */
-    PowerPipe.prototype.transform = /**
-     * @param {?} num
-     * @param {?=} power
-     * @return {?}
-     */
-    function (num, power) {
+    PowerPipe.prototype.transform = function (num, power) {
         if (power === void 0) { power = 2; }
         return !isNaN(num) ? Math.pow(num, power) : num;
     };
-    PowerPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'pow' },] }
-    ];
+    PowerPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'pow' })
+    ], PowerPipe);
     return PowerPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var CeilPipe = /** @class */ (function () {
     function CeilPipe() {
     }
-    /**
-     * @param {?} num
-     * @param {?=} precision
-     * @return {?}
-     */
-    CeilPipe.prototype.transform = /**
-     * @param {?} num
-     * @param {?=} precision
-     * @return {?}
-     */
-    function (num, precision) {
+    CeilPipe.prototype.transform = function (num, precision) {
         if (precision === void 0) { precision = 0; }
         if (precision <= 0) {
             return Math.ceil(num);
         }
-        /** @type {?} */
         var tho = Math.pow(10, precision);
         return Math.ceil(num * tho) / tho;
     };
-    CeilPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'ceil' },] }
-    ];
+    CeilPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'ceil' })
+    ], CeilPipe);
     return CeilPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var DegreesPipe = /** @class */ (function () {
     function DegreesPipe() {
     }
-    /**
-     * @param {?} radians
-     * @return {?}
-     */
-    DegreesPipe.prototype.transform = /**
-     * @param {?} radians
-     * @return {?}
-     */
-    function (radians) {
+    DegreesPipe.prototype.transform = function (radians) {
         if (!isNumberFinite(radians)) {
             return NaN;
         }
         return (radians * 180) / Math.PI;
     };
-    DegreesPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'degrees' },] }
-    ];
+    DegreesPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'degrees' })
+    ], DegreesPipe);
     return DegreesPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var BytesPipe = /** @class */ (function () {
     function BytesPipe() {
         this.dictionary = [
@@ -3624,70 +2478,36 @@ var BytesPipe = /** @class */ (function () {
             { max: 1.0995116e12, type: 'GB' },
         ];
     }
-    /**
-     * @param {?} value
-     * @param {?=} precision
-     * @return {?}
-     */
-    BytesPipe.prototype.transform = /**
-     * @param {?} value
-     * @param {?=} precision
-     * @return {?}
-     */
-    function (value, precision) {
+    BytesPipe.prototype.transform = function (value, precision) {
         if (!isNumberFinite(value)) {
             return NaN;
         }
-        /** @type {?} */
-        var format = this.dictionary.find((/**
-         * @param {?} d
-         * @return {?}
-         */
-        function (d) { return value < d.max; })) || this.dictionary[this.dictionary.length - 1];
-        /** @type {?} */
+        var format = this.dictionary.find(function (d) { return value < d.max; }) || this.dictionary[this.dictionary.length - 1];
         var calc = value / (format.max / 1024);
-        /** @type {?} */
         var num = isUndefined(precision) ? calc : applyPrecision(calc, precision);
         return num + " " + format.type;
     };
-    BytesPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'bytes' },] }
-    ];
+    BytesPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'bytes' })
+    ], BytesPipe);
     return BytesPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var RadiansPipe = /** @class */ (function () {
     function RadiansPipe() {
     }
-    /**
-     * @param {?} degrees
-     * @return {?}
-     */
-    RadiansPipe.prototype.transform = /**
-     * @param {?} degrees
-     * @return {?}
-     */
-    function (degrees) {
+    RadiansPipe.prototype.transform = function (degrees) {
         if (!isNumberFinite(degrees)) {
             return NaN;
         }
         return (degrees * Math.PI) / 180;
     };
-    RadiansPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'radians' },] }
-    ];
+    RadiansPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'radians' })
+    ], RadiansPipe);
     return RadiansPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 var MATH_PIPES = [
     MaxPipe,
     MinPipe,
@@ -3705,423 +2525,210 @@ var MATH_PIPES = [
 var NgMathPipesModule = /** @class */ (function () {
     function NgMathPipesModule() {
     }
-    NgMathPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: MATH_PIPES,
-                    imports: [],
-                    exports: MATH_PIPES,
-                },] }
-    ];
+    NgMathPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: MATH_PIPES,
+            imports: [],
+            exports: MATH_PIPES,
+        })
+    ], NgMathPipesModule);
     return NgMathPipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsDefinedPipe = /** @class */ (function () {
     function IsDefinedPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsDefinedPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsDefinedPipe.prototype.transform = function (input) {
         return !isUndefined(input);
     };
-    IsDefinedPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isDefined' },] }
-    ];
+    IsDefinedPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isDefined' })
+    ], IsDefinedPipe);
     return IsDefinedPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsNullPipe = /** @class */ (function () {
     function IsNullPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsNullPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsNullPipe.prototype.transform = function (input) {
         return input === null;
     };
-    IsNullPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isNull' },] }
-    ];
+    IsNullPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isNull' })
+    ], IsNullPipe);
     return IsNullPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsUndefinedPipe = /** @class */ (function () {
     function IsUndefinedPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsUndefinedPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsUndefinedPipe.prototype.transform = function (input) {
         return isUndefined(input);
     };
-    IsUndefinedPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isUndefined' },] }
-    ];
+    IsUndefinedPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isUndefined' })
+    ], IsUndefinedPipe);
     return IsUndefinedPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsStringPipe = /** @class */ (function () {
     function IsStringPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsStringPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsStringPipe.prototype.transform = function (input) {
         return isString(input);
     };
-    IsStringPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isString' },] }
-    ];
+    IsStringPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isString' })
+    ], IsStringPipe);
     return IsStringPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsFunctionPipe = /** @class */ (function () {
     function IsFunctionPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsFunctionPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsFunctionPipe.prototype.transform = function (input) {
         return isFunction(input);
     };
-    IsFunctionPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isFunction' },] }
-    ];
+    IsFunctionPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isFunction' })
+    ], IsFunctionPipe);
     return IsFunctionPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsNumberPipe = /** @class */ (function () {
     function IsNumberPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsNumberPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsNumberPipe.prototype.transform = function (input) {
         return isNumber(input);
     };
-    IsNumberPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isNumber' },] }
-    ];
+    IsNumberPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isNumber' })
+    ], IsNumberPipe);
     return IsNumberPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsArrayPipe = /** @class */ (function () {
     function IsArrayPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsArrayPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsArrayPipe.prototype.transform = function (input) {
         return Array.isArray(input);
     };
-    IsArrayPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isArray' },] }
-    ];
+    IsArrayPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isArray' })
+    ], IsArrayPipe);
     return IsArrayPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsObjectPipe = /** @class */ (function () {
     function IsObjectPipe() {
     }
-    /**
-     * @param {?} input
-     * @return {?}
-     */
-    IsObjectPipe.prototype.transform = /**
-     * @param {?} input
-     * @return {?}
-     */
-    function (input) {
+    IsObjectPipe.prototype.transform = function (input) {
         return isObject(input);
     };
-    IsObjectPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isObject' },] }
-    ];
+    IsObjectPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isObject' })
+    ], IsObjectPipe);
     return IsObjectPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsGreaterEqualThanPipe = /** @class */ (function () {
     function IsGreaterEqualThanPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsGreaterEqualThanPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsGreaterEqualThanPipe.prototype.transform = function (input, other) {
         return input >= other;
     };
-    IsGreaterEqualThanPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isGreaterEqualThan' },] }
-    ];
+    IsGreaterEqualThanPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isGreaterEqualThan' })
+    ], IsGreaterEqualThanPipe);
     return IsGreaterEqualThanPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsGreaterThanPipe = /** @class */ (function () {
     function IsGreaterThanPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsGreaterThanPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsGreaterThanPipe.prototype.transform = function (input, other) {
         return input > other;
     };
-    IsGreaterThanPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isGreaterThan' },] }
-    ];
+    IsGreaterThanPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isGreaterThan' })
+    ], IsGreaterThanPipe);
     return IsGreaterThanPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsLessEqualThanPipe = /** @class */ (function () {
     function IsLessEqualThanPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsLessEqualThanPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsLessEqualThanPipe.prototype.transform = function (input, other) {
         return input <= other;
     };
-    IsLessEqualThanPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isLessEqualThan' },] }
-    ];
+    IsLessEqualThanPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isLessEqualThan' })
+    ], IsLessEqualThanPipe);
     return IsLessEqualThanPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsEqualToPipe = /** @class */ (function () {
     function IsEqualToPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsEqualToPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsEqualToPipe.prototype.transform = function (input, other) {
         // tslint:disable-next-line:triple-equals
         return input == other;
     };
-    IsEqualToPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isEqualTo' },] }
-    ];
+    IsEqualToPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isEqualTo' })
+    ], IsEqualToPipe);
     return IsEqualToPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsNotEqualToPipe = /** @class */ (function () {
     function IsNotEqualToPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsNotEqualToPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsNotEqualToPipe.prototype.transform = function (input, other) {
         // tslint:disable-next-line:triple-equals
         return input != other;
     };
-    IsNotEqualToPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isNotEqualTo' },] }
-    ];
+    IsNotEqualToPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isNotEqualTo' })
+    ], IsNotEqualToPipe);
     return IsNotEqualToPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsIdenticalToPipe = /** @class */ (function () {
     function IsIdenticalToPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsIdenticalToPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsIdenticalToPipe.prototype.transform = function (input, other) {
         return input === other;
     };
-    IsIdenticalToPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isIdenticalTo' },] }
-    ];
+    IsIdenticalToPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isIdenticalTo' })
+    ], IsIdenticalToPipe);
     return IsIdenticalToPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsNotIdenticalToPipe = /** @class */ (function () {
     function IsNotIdenticalToPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsNotIdenticalToPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsNotIdenticalToPipe.prototype.transform = function (input, other) {
         return input !== other;
     };
-    IsNotIdenticalToPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isNotIdenticalTo' },] }
-    ];
+    IsNotIdenticalToPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isNotIdenticalTo' })
+    ], IsNotIdenticalToPipe);
     return IsNotIdenticalToPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var IsLessThanPipe = /** @class */ (function () {
     function IsLessThanPipe() {
     }
-    /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    IsLessThanPipe.prototype.transform = /**
-     * @param {?} input
-     * @param {?} other
-     * @return {?}
-     */
-    function (input, other) {
+    IsLessThanPipe.prototype.transform = function (input, other) {
         return input < other;
     };
-    IsLessThanPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'isLessThan' },] }
-    ];
+    IsLessThanPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'isLessThan' })
+    ], IsLessThanPipe);
     return IsLessThanPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 var BOOLEAN_PIPES = [
     IsDefinedPipe,
     IsNullPipe,
@@ -4144,50 +2751,35 @@ var BOOLEAN_PIPES = [
 var NgBooleanPipesModule = /** @class */ (function () {
     function NgBooleanPipesModule() {
     }
-    NgBooleanPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: BOOLEAN_PIPES,
-                    imports: [],
-                    exports: BOOLEAN_PIPES,
-                },] }
-    ];
+    NgBooleanPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: BOOLEAN_PIPES,
+            imports: [],
+            exports: BOOLEAN_PIPES,
+        })
+    ], NgBooleanPipesModule);
     return NgBooleanPipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var TimeAgoPipe = /** @class */ (function () {
     function TimeAgoPipe() {
     }
+    TimeAgoPipe_1 = TimeAgoPipe;
     /**
      * @param inputDate: Date | Moment - not included as TypeScript interface,
      * in order to keep `ngx-pipes` "pure" from dependencies!
      */
-    /**
-     * @param {?} inputDate
-     * @return {?}
-     */
-    TimeAgoPipe.prototype.transform = /**
-     * @param {?} inputDate
-     * @return {?}
-     */
-    function (inputDate) {
+    TimeAgoPipe.prototype.transform = function (inputDate) {
         if (!inputDate || (!inputDate.getTime && !inputDate.toDate)) {
             return 'Invalid date';
         }
-        /** @type {?} */
         var past = inputDate.toDate ? inputDate.toDate() : inputDate.getTime();
-        /** @type {?} */
         var now = +new Date();
         if (past > now) {
             return 'in the future';
         }
-        for (var i = 0, l = TimeAgoPipe.MAPPER.length, ms = now - past, div = TimeAgoPipe.YEAR_MS; i < l; ++i) {
-            /** @type {?} */
-            var elm = TimeAgoPipe.MAPPER[i];
-            /** @type {?} */
+        for (var i = 0, l = TimeAgoPipe_1.MAPPER.length, ms = now - past, div = TimeAgoPipe_1.YEAR_MS; i < l; ++i) {
+            var elm = TimeAgoPipe_1.MAPPER[i];
             var unit = Math.floor(ms / (div /= elm.div));
             if (unit >= 1) {
                 return unit === 1 ? elm.single : unit + " " + elm.many + " ago";
@@ -4195,6 +2787,7 @@ var TimeAgoPipe = /** @class */ (function () {
         }
         return 'just now';
     };
+    var TimeAgoPipe_1;
     TimeAgoPipe.YEAR_MS = 1000 * 60 * 60 * 24 * 7 * 4 * 12;
     TimeAgoPipe.MAPPER = [
         { single: 'last year', many: 'years', div: 1 },
@@ -4204,66 +2797,47 @@ var TimeAgoPipe = /** @class */ (function () {
         { single: 'an hour ago', many: 'hours', div: 24 },
         { single: 'just now', many: 'minutes', div: 60 },
     ];
-    TimeAgoPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"], args: [{ name: 'timeAgo' },] }
-    ];
+    TimeAgoPipe = TimeAgoPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({ name: 'timeAgo' })
+    ], TimeAgoPipe);
     return TimeAgoPipe;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 var DATE_PIPES = [TimeAgoPipe];
 var NgDatePipesModule = /** @class */ (function () {
     function NgDatePipesModule() {
     }
-    NgDatePipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: DATE_PIPES,
-                    imports: [],
-                    exports: DATE_PIPES,
-                },] }
-    ];
+    NgDatePipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: DATE_PIPES,
+            imports: [],
+            exports: DATE_PIPES,
+        })
+    ], NgDatePipesModule);
     return NgDatePipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var NgPipesModule = /** @class */ (function () {
     function NgPipesModule() {
     }
-    NgPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    exports: [
-                        NgArrayPipesModule,
-                        NgStringPipesModule,
-                        NgMathPipesModule,
-                        NgBooleanPipesModule,
-                        NgObjectPipesModule,
-                        NgDatePipesModule,
-                    ],
-                },] }
-    ];
+    NgPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            exports: [
+                NgArrayPipesModule,
+                NgStringPipesModule,
+                NgMathPipesModule,
+                NgBooleanPipesModule,
+                NgObjectPipesModule,
+                NgDatePipesModule,
+            ],
+        })
+    ], NgPipesModule);
     return NgPipesModule;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-
 
 //# sourceMappingURL=ngx-pipes.js.map
+
 
 /***/ }),
 
@@ -4403,7 +2977,7 @@ var AccordionTab = /** @class */ (function () {
     AccordionTab = __decorate([
         core_1.Component({
             selector: 'p-accordionTab',
-            template: "\n        <div class=\"ui-accordion-header ui-state-default ui-corner-all\" [ngClass]=\"{'ui-state-active': selected,'ui-state-disabled':disabled}\">\n            <a tabindex=\"0\" [attr.id]=\"id\" [attr.aria-controls]=\"id + '-content'\" role=\"tab\" [attr.aria-expanded]=\"selected\" (click)=\"toggle($event)\" \n                (keydown)=\"onKeydown($event)\">\n                <span class=\"ui-accordion-toggle-icon\" [ngClass]=\"selected ? accordion.collapseIcon : accordion.expandIcon\"></span>\n                <span class=\"ui-accordion-header-text\" *ngIf=\"!hasHeaderFacet\">\n                    {{header}}\n                </span>\n                <ng-content select=\"p-header\" *ngIf=\"hasHeaderFacet\"></ng-content>\n            </a>\n        </div>\n        <div [attr.id]=\"id + '-content'\" class=\"ui-accordion-content-wrapper\" [@tabContent]=\"selected ? {value: 'visible', params: {transitionParams: transitionOptions}} : {value: 'hidden', params: {transitionParams: transitionOptions}}\" (@tabContent.done)=\"onToggleDone($event)\"\n            [ngClass]=\"{'ui-accordion-content-wrapper-overflown': !selected||animating}\" \n            role=\"tabpanel\" [attr.aria-hidden]=\"!selected\" [attr.aria-labelledby]=\"id\">\n            <div class=\"ui-accordion-content ui-widget-content\">\n                <ng-content></ng-content>\n                <ng-container *ngIf=\"contentTemplate && (cache ? loaded : selected)\">\n                    <ng-container *ngTemplateOutlet=\"contentTemplate\"></ng-container>\n                </ng-container>\n            </div>\n        </div>\n    ",
+            template: "\n        <div class=\"ui-accordion-header ui-state-default ui-corner-all\" [ngClass]=\"{'ui-state-active': selected,'ui-state-disabled':disabled}\">\n            <a [attr.tabindex]=\"disabled ? -1 : 0\" [attr.id]=\"id\" [attr.aria-controls]=\"id + '-content'\" role=\"tab\" [attr.aria-expanded]=\"selected\" (click)=\"toggle($event)\" \n                (keydown)=\"onKeydown($event)\">\n                <span class=\"ui-accordion-toggle-icon\" [ngClass]=\"selected ? accordion.collapseIcon : accordion.expandIcon\"></span>\n                <span class=\"ui-accordion-header-text\" *ngIf=\"!hasHeaderFacet\">\n                    {{header}}\n                </span>\n                <ng-content select=\"p-header\" *ngIf=\"hasHeaderFacet\"></ng-content>\n            </a>\n        </div>\n        <div [attr.id]=\"id + '-content'\" class=\"ui-accordion-content-wrapper\" [@tabContent]=\"selected ? {value: 'visible', params: {transitionParams: transitionOptions}} : {value: 'hidden', params: {transitionParams: transitionOptions}}\" (@tabContent.done)=\"onToggleDone($event)\"\n            [ngClass]=\"{'ui-accordion-content-wrapper-overflown': !selected||animating}\" \n            role=\"tabpanel\" [attr.aria-hidden]=\"!selected\" [attr.aria-labelledby]=\"id\">\n            <div class=\"ui-accordion-content ui-widget-content\">\n                <ng-content></ng-content>\n                <ng-container *ngIf=\"contentTemplate && (cache ? loaded : selected)\">\n                    <ng-container *ngTemplateOutlet=\"contentTemplate\"></ng-container>\n                </ng-container>\n            </div>\n        </div>\n    ",
             animations: [
                 animations_1.trigger('tabContent', [
                     animations_1.state('hidden', animations_1.style({
@@ -4639,9 +3213,11 @@ var AutoComplete = /** @class */ (function () {
         }
         if (this.highlightOptionChanged) {
             setTimeout(function () {
-                var listItem = domhandler_1.DomHandler.findSingle(_this.overlay, 'li.ui-state-highlight');
-                if (listItem) {
-                    domhandler_1.DomHandler.scrollInView(_this.overlay, listItem);
+                if (_this.overlay) {
+                    var listItem = domhandler_1.DomHandler.findSingle(_this.overlay, 'li.ui-state-highlight');
+                    if (listItem) {
+                        domhandler_1.DomHandler.scrollInView(_this.overlay, listItem);
+                    }
                 }
             }, 1);
             this.highlightOptionChanged = false;
@@ -5262,7 +3838,7 @@ var AutoComplete = /** @class */ (function () {
     AutoComplete = __decorate([
         core_1.Component({
             selector: 'p-autoComplete',
-            template: "\n        <span [ngClass]=\"{'ui-autocomplete ui-widget':true,'ui-autocomplete-dd':dropdown,'ui-autocomplete-multiple':multiple}\" [ngStyle]=\"style\" [class]=\"styleClass\">\n            <input *ngIf=\"!multiple\" #in [attr.type]=\"type\" [attr.id]=\"inputId\" [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" autocomplete=\"off\" [attr.required]=\"required\"\n            [ngClass]=\"'ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input'\" [value]=\"inputFieldValue\"\n            (click)=\"onInputClick($event)\" (input)=\"onInput($event)\" (keydown)=\"onKeydown($event)\" (keyup)=\"onKeyup($event)\" [attr.autofocus]=\"autofocus\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\" (change)=\"onInputChange($event)\" (paste)=\"onInputPaste($event)\"\n            [attr.placeholder]=\"placeholder\" [attr.size]=\"size\" [attr.maxlength]=\"maxlength\" [attr.tabindex]=\"tabindex\" [readonly]=\"readonly\" [disabled]=\"disabled\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledBy\" [attr.aria-required]=\"required\"\n            ><ul *ngIf=\"multiple\" #multiContainer class=\"ui-autocomplete-multiple-container ui-widget ui-inputtext ui-state-default ui-corner-all\" [ngClass]=\"{'ui-state-disabled':disabled,'ui-state-focus':focus}\" (click)=\"multiIn.focus()\">\n                <li #token *ngFor=\"let val of value\" class=\"ui-autocomplete-token ui-state-highlight ui-corner-all\">\n                    <span class=\"ui-autocomplete-token-icon pi pi-fw pi-times\" (click)=\"removeItem(token)\" *ngIf=\"!disabled\"></span>\n                    <span *ngIf=\"!selectedItemTemplate\" class=\"ui-autocomplete-token-label\">{{resolveFieldData(val)}}</span>\n                    <ng-container *ngTemplateOutlet=\"selectedItemTemplate; context: {$implicit: val}\"></ng-container>\n                </li>\n                <li class=\"ui-autocomplete-input-token\">\n                    <input #multiIn [attr.type]=\"type\" [attr.id]=\"inputId\" [disabled]=\"disabled\" [attr.placeholder]=\"(value&&value.length ? null : placeholder)\" [attr.tabindex]=\"tabindex\" (input)=\"onInput($event)\"  (click)=\"onInputClick($event)\"\n                            (keydown)=\"onKeydown($event)\" [readonly]=\"readonly\" (keyup)=\"onKeyup($event)\" [attr.autofocus]=\"autofocus\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\" (change)=\"onInputChange($event)\" (paste)=\"onInputPaste($event)\" autocomplete=\"off\" \n                            [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledBy\" [attr.aria-required]=\"required\">\n                </li>\n            </ul\n            ><i *ngIf=\"loading\" class=\"ui-autocomplete-loader pi pi-spinner pi-spin\"></i><button #ddBtn type=\"button\" pButton [icon]=\"dropdownIcon\" class=\"ui-autocomplete-dropdown\" [disabled]=\"disabled\"\n                (click)=\"handleDropdownClick($event)\" *ngIf=\"dropdown\"></button>\n            <div #panel *ngIf=\"overlayVisible\" class=\"ui-autocomplete-panel ui-widget ui-widget-content ui-corner-all ui-shadow\" [style.max-height]=\"scrollHeight\"\n                [@overlayAnimation]=\"{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}\" (@overlayAnimation.start)=\"onOverlayAnimationStart($event)\" (@overlayAnimation.done)=\"onOverlayAnimationDone($event)\">\n                <ul class=\"ui-autocomplete-items ui-autocomplete-list ui-widget-content ui-widget ui-corner-all ui-helper-reset\">\n                    <li *ngFor=\"let option of suggestions; let idx = index\" [ngClass]=\"{'ui-autocomplete-list-item ui-corner-all':true,'ui-state-highlight':(highlightOption==option)}\"\n                        (mouseenter)=\"highlightOption=option\" (mouseleave)=\"highlightOption=null\" (click)=\"selectItem(option)\">\n                        <span *ngIf=\"!itemTemplate\">{{resolveFieldData(option)}}</span>\n                        <ng-container *ngTemplateOutlet=\"itemTemplate; context: {$implicit: option, index: idx}\"></ng-container>\n                    </li>\n                    <li *ngIf=\"noResults && emptyMessage\" class=\"ui-autocomplete-list-item ui-corner-all\">{{emptyMessage}}</li>\n                </ul>\n            </div>\n        </span>\n    ",
+            template: "\n        <span [ngClass]=\"{'ui-autocomplete ui-widget':true,'ui-autocomplete-dd':dropdown,'ui-autocomplete-multiple':multiple}\" [ngStyle]=\"style\" [class]=\"styleClass\">\n            <input *ngIf=\"!multiple\" #in [attr.type]=\"type\" [attr.id]=\"inputId\" [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" autocomplete=\"off\" [attr.required]=\"required\"\n            [ngClass]=\"'ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input'\" [value]=\"inputFieldValue\" aria-autocomplete=\"list\" role=\"combobox\" [attr.aria-expanded]=\"overlayVisible\" aria-haspopup=\"true\" [attr.aria-activedescendant]=\"'p-highlighted-option'\"\n            (click)=\"onInputClick($event)\" (input)=\"onInput($event)\" (keydown)=\"onKeydown($event)\" (keyup)=\"onKeyup($event)\" [attr.autofocus]=\"autofocus\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\" (change)=\"onInputChange($event)\" (paste)=\"onInputPaste($event)\"\n            [attr.placeholder]=\"placeholder\" [attr.size]=\"size\" [attr.maxlength]=\"maxlength\" [attr.tabindex]=\"tabindex\" [readonly]=\"readonly\" [disabled]=\"disabled\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledBy\" [attr.aria-required]=\"required\"\n            ><ul *ngIf=\"multiple\" #multiContainer class=\"ui-autocomplete-multiple-container ui-widget ui-inputtext ui-state-default ui-corner-all\" [ngClass]=\"{'ui-state-disabled':disabled,'ui-state-focus':focus}\" (click)=\"multiIn.focus()\">\n                <li #token *ngFor=\"let val of value\" class=\"ui-autocomplete-token ui-state-highlight ui-corner-all\">\n                    <span class=\"ui-autocomplete-token-icon pi pi-fw pi-times\" (click)=\"removeItem(token)\" *ngIf=\"!disabled\"></span>\n                    <span *ngIf=\"!selectedItemTemplate\" class=\"ui-autocomplete-token-label\">{{resolveFieldData(val)}}</span>\n                    <ng-container *ngTemplateOutlet=\"selectedItemTemplate; context: {$implicit: val}\"></ng-container>\n                </li>\n                <li class=\"ui-autocomplete-input-token\">\n                    <input #multiIn [attr.type]=\"type\" [attr.id]=\"inputId\" [disabled]=\"disabled\" [attr.placeholder]=\"(value&&value.length ? null : placeholder)\" [attr.tabindex]=\"tabindex\" (input)=\"onInput($event)\"  (click)=\"onInputClick($event)\"\n                            (keydown)=\"onKeydown($event)\" [readonly]=\"readonly\" (keyup)=\"onKeyup($event)\" [attr.autofocus]=\"autofocus\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\" (change)=\"onInputChange($event)\" (paste)=\"onInputPaste($event)\" autocomplete=\"off\" \n                            [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" [attr.aria-label]=\"ariaLabel\" [attr.aria-labelledby]=\"ariaLabelledBy\" [attr.aria-required]=\"required\"\n                            aria-autocomplete=\"list\" role=\"combobox\" [attr.aria-expanded]=\"overlayVisible\" aria-haspopup=\"true\" [attr.aria-activedescendant]=\"'p-highlighted-option'\">\n                </li>\n            </ul\n            ><i *ngIf=\"loading\" class=\"ui-autocomplete-loader pi pi-spinner pi-spin\"></i><button #ddBtn type=\"button\" pButton [icon]=\"dropdownIcon\" class=\"ui-autocomplete-dropdown\" [disabled]=\"disabled\"\n                (click)=\"handleDropdownClick($event)\" *ngIf=\"dropdown\"></button>\n            <div #panel *ngIf=\"overlayVisible\" class=\"ui-autocomplete-panel ui-widget ui-widget-content ui-corner-all ui-shadow\" [style.max-height]=\"scrollHeight\"\n                [@overlayAnimation]=\"{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}\" (@overlayAnimation.start)=\"onOverlayAnimationStart($event)\" (@overlayAnimation.done)=\"onOverlayAnimationDone($event)\">\n                <ul role=\"listbox\" class=\"ui-autocomplete-items ui-autocomplete-list ui-widget-content ui-widget ui-corner-all ui-helper-reset\">\n                    <li role=\"option\"  *ngFor=\"let option of suggestions; let idx = index\" [ngClass]=\"{'ui-autocomplete-list-item ui-corner-all':true,'ui-state-highlight':(highlightOption==option)}\"\n                        (mouseenter)=\"highlightOption=option\" (mouseleave)=\"highlightOption=null\" [id]=\"highlightOption == option ? 'p-highlighted-option':''\" (click)=\"selectItem(option)\">\n                        <span *ngIf=\"!itemTemplate\">{{resolveFieldData(option)}}</span>\n                        <ng-container *ngTemplateOutlet=\"itemTemplate; context: {$implicit: option, index: idx}\"></ng-container>\n                    </li>\n                    <li *ngIf=\"noResults && emptyMessage\" class=\"ui-autocomplete-list-item ui-corner-all\">{{emptyMessage}}</li>\n                </ul>\n            </div>\n        </span>\n    ",
             animations: [
                 animations_1.trigger('overlayAnimation', [
                     animations_1.state('void', animations_1.style({
@@ -5766,6 +4342,7 @@ var Calendar = /** @class */ (function () {
         this.stepSecond = 1;
         this.showSeconds = false;
         this.showOnFocus = true;
+        this.showWeek = false;
         this.dataType = 'date';
         this.selectionMode = 'single';
         this.todayButtonStyleClass = 'ui-button-secondary';
@@ -5797,7 +4374,8 @@ var Calendar = /** @class */ (function () {
             monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             today: 'Today',
             clear: 'Clear',
-            dateFormat: 'mm/dd/yy'
+            dateFormat: 'mm/dd/yy',
+            weekHeader: 'Wk'
         };
         this.onModelChange = function () { };
         this.onModelTouched = function () { };
@@ -5866,6 +4444,21 @@ var Calendar = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Calendar.prototype, "yearRange", {
+        get: function () {
+            return this._yearRange;
+        },
+        set: function (yearRange) {
+            if (this.yearNavigator && yearRange) {
+                var years = yearRange.split(':');
+                var yearStart = parseInt(years[0]);
+                var yearEnd = parseInt(years[1]);
+                this.populateYearOptions(yearStart, yearEnd);
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(Calendar.prototype, "showTime", {
         get: function () {
             return this._showTime;
@@ -5901,12 +4494,6 @@ var Calendar = /** @class */ (function () {
         var date = this.defaultDate || new Date();
         this.currentMonth = date.getMonth();
         this.currentYear = date.getFullYear();
-        if (this.yearNavigator && this.yearRange) {
-            var years = this.yearRange.split(':');
-            var yearStart = parseInt(years[0]);
-            var yearEnd = parseInt(years[1]);
-            this.populateYearOptions(yearStart, yearEnd);
-        }
         if (this.view === 'date') {
             this.createWeekDays();
             this.initTime(date);
@@ -5962,14 +4549,22 @@ var Calendar = /** @class */ (function () {
             this.months.push(this.createMonth(m, y));
         }
     };
+    Calendar.prototype.getWeekNumber = function (date) {
+        var checkDate = new Date(date.getTime());
+        checkDate.setDate(checkDate.getDate() + 4 - (checkDate.getDay() || 7));
+        var time = checkDate.getTime();
+        checkDate.setMonth(0);
+        checkDate.setDate(1);
+        return Math.floor(Math.round((time - checkDate.getTime()) / 86400000) / 7) + 1;
+    };
     Calendar.prototype.createMonth = function (month, year) {
         var dates = [];
         var firstDay = this.getFirstDayOfMonthIndex(month, year);
         var daysLength = this.getDaysCountInMonth(month, year);
         var prevMonthDaysLength = this.getDaysCountInPrevMonth(month, year);
-        var sundayIndex = this.getSundayIndex();
         var dayNo = 1;
         var today = new Date();
+        var weekNumbers = [];
         for (var i = 0; i < 6; i++) {
             var week = [];
             if (i == 0) {
@@ -6000,12 +4595,16 @@ var Calendar = /** @class */ (function () {
                     dayNo++;
                 }
             }
+            if (this.showWeek) {
+                weekNumbers.push(this.getWeekNumber(new Date(week[0].year, week[0].month, week[0].day)));
+            }
             dates.push(week);
         }
         return {
             month: month,
             year: year,
-            dates: dates
+            dates: dates,
+            weekNumbers: weekNumbers
         };
     };
     Calendar.prototype.initTime = function (date) {
@@ -6043,7 +4642,6 @@ var Calendar = /** @class */ (function () {
             this.onMonthChange.emit({ month: this.currentMonth + 1, year: this.currentYear });
             this.createMonths(this.currentMonth, this.currentYear);
         }
-        event.preventDefault();
     };
     Calendar.prototype.navForward = function (event) {
         if (this.disabled) {
@@ -6064,7 +4662,6 @@ var Calendar = /** @class */ (function () {
             this.onMonthChange.emit({ month: this.currentMonth + 1, year: this.currentYear });
             this.createMonths(this.currentMonth, this.currentYear);
         }
-        event.preventDefault();
     };
     Calendar.prototype.decrementYear = function () {
         this.currentYear--;
@@ -6120,7 +4717,7 @@ var Calendar = /** @class */ (function () {
     };
     Calendar.prototype.shouldSelectDate = function (dateMeta) {
         if (this.isMultipleSelection())
-            return !this.maxDateCount || !this.value || this.maxDateCount > this.value.length;
+            return this.maxDateCount != null ? this.maxDateCount > (this.value ? this.value.length : 0) : true;
         else
             return true;
     };
@@ -6411,7 +5008,6 @@ var Calendar = /** @class */ (function () {
         this.onFocus.emit(event);
     };
     Calendar.prototype.onInputClick = function (event) {
-        this.datepickerClick = true;
         if (this.overlay && this.autoZIndex) {
             this.overlay.style.zIndex = String(this.baseZIndex + (++domhandler_1.DomHandler.zindex));
         }
@@ -6435,7 +5031,6 @@ var Calendar = /** @class */ (function () {
         else {
             this.hideOverlay();
         }
-        this.datepickerClick = true;
     };
     Calendar.prototype.onInputKeydown = function (event) {
         this.isKeydown = true;
@@ -6680,17 +5275,31 @@ var Calendar = /** @class */ (function () {
         var val = event.target.value;
         try {
             var value = this.parseValueFromString(val);
-            if (this.isSelectable(value.getDate(), value.getMonth(), value.getFullYear(), false)) {
+            if (this.isValidSelection(value)) {
                 this.updateModel(value);
                 this.updateUI();
             }
         }
         catch (err) {
             //invalid date
-            this.updateModel(null);
         }
         this.filled = val != null && val.length;
         this.onInput.emit(event);
+    };
+    Calendar.prototype.isValidSelection = function (value) {
+        var _this = this;
+        var isValid = true;
+        if (this.isSingleSelection()) {
+            if (!this.isSelectable(value.getDate(), value.getMonth(), value.getFullYear(), false)) {
+                isValid = false;
+            }
+        }
+        else if (value.every(function (v) { return _this.isSelectable(v.getDate(), v.getMonth(), v.getFullYear(), false); })) {
+            if (this.isRangeSelection()) {
+                isValid = value.length > 1 && value[1] > value[0] ? true : false;
+            }
+        }
+        return isValid;
     };
     Calendar.prototype.parseValueFromString = function (text) {
         if (!text || text.trim().length === 0) {
@@ -6772,12 +5381,11 @@ var Calendar = /** @class */ (function () {
             this.currentSecond = val.getSeconds();
         }
     };
-    Calendar.prototype.onDatePickerClick = function (event) {
-        this.datepickerClick = true;
-    };
     Calendar.prototype.showOverlay = function () {
-        this.updateUI();
-        this.overlayVisible = true;
+        if (!this.overlayVisible) {
+            this.updateUI();
+            this.overlayVisible = true;
+        }
     };
     Calendar.prototype.hideOverlay = function () {
         this.overlayVisible = false;
@@ -6796,13 +5404,22 @@ var Calendar = /** @class */ (function () {
                         this.overlay.style.zIndex = String(this.baseZIndex + (++domhandler_1.DomHandler.zindex));
                     }
                     this.alignOverlay();
-                    this.bindDocumentClickListener();
-                    this.bindDocumentResizeListener();
                 }
                 break;
             case 'void':
                 this.onOverlayHide();
                 this.onClose.emit(event);
+                break;
+        }
+    };
+    Calendar.prototype.onOverlayAnimationDone = function (event) {
+        switch (event.toState) {
+            case 'visible':
+            case 'visibleTouchUI':
+                if (!this.inline) {
+                    this.bindDocumentClickListener();
+                    this.bindDocumentResizeListener();
+                }
                 break;
         }
     };
@@ -7181,10 +5798,9 @@ var Calendar = /** @class */ (function () {
         var _this = this;
         if (!this.documentClickListener) {
             this.documentClickListener = this.renderer.listen('document', 'click', function (event) {
-                if (!_this.datepickerClick && _this.overlayVisible) {
+                if (_this.isOutsideClicked(event) && _this.overlayVisible) {
                     _this.hideOverlay();
                 }
-                _this.datepickerClick = false;
                 _this.cd.detectChanges();
             });
         }
@@ -7207,8 +5823,16 @@ var Calendar = /** @class */ (function () {
             this.documentResizeListener = null;
         }
     };
+    Calendar.prototype.isOutsideClicked = function (event) {
+        return !(this.el.nativeElement.isSameNode(event.target) || this.isNavIconClicked(event) ||
+            this.el.nativeElement.contains(event.target) || (this.overlay && this.overlay.contains(event.target)));
+    };
+    Calendar.prototype.isNavIconClicked = function (event) {
+        return (domhandler_1.DomHandler.hasClass(event.target, 'ui-datepicker-prev') || domhandler_1.DomHandler.hasClass(event.target, 'ui-datepicker-prev-icon')
+            || domhandler_1.DomHandler.hasClass(event.target, 'ui-datepicker-next') || domhandler_1.DomHandler.hasClass(event.target, 'ui-datepicker-next-icon'));
+    };
     Calendar.prototype.onWindowResize = function () {
-        if (this.overlayVisible) {
+        if (this.overlayVisible && !domhandler_1.DomHandler.isAndroid()) {
             this.hideOverlay();
         }
     };
@@ -7305,10 +5929,6 @@ var Calendar = /** @class */ (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], Calendar.prototype, "yearRange", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
     ], Calendar.prototype, "hourFormat", void 0);
     __decorate([
         core_1.Input(),
@@ -7338,6 +5958,10 @@ var Calendar = /** @class */ (function () {
         core_1.Input(),
         __metadata("design:type", Boolean)
     ], Calendar.prototype, "showOnFocus", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], Calendar.prototype, "showWeek", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
@@ -7485,6 +6109,11 @@ var Calendar = /** @class */ (function () {
     ], Calendar.prototype, "disabledDays", null);
     __decorate([
         core_1.Input(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], Calendar.prototype, "yearRange", null);
+    __decorate([
+        core_1.Input(),
         __metadata("design:type", Boolean),
         __metadata("design:paramtypes", [Boolean])
     ], Calendar.prototype, "showTime", null);
@@ -7496,7 +6125,7 @@ var Calendar = /** @class */ (function () {
     Calendar = __decorate([
         core_1.Component({
             selector: 'p-calendar',
-            template: "\n        <span [ngClass]=\"{'ui-calendar':true, 'ui-calendar-w-btn': showIcon, 'ui-calendar-timeonly': timeOnly}\" [ngStyle]=\"style\" [class]=\"styleClass\">\n            <ng-template [ngIf]=\"!inline\">\n                <input #inputfield type=\"text\" [attr.id]=\"inputId\" [attr.name]=\"name\" [attr.required]=\"required\" [value]=\"inputFieldValue\" (focus)=\"onInputFocus($event)\" (keydown)=\"onInputKeydown($event)\" (click)=\"onInputClick($event)\" (blur)=\"onInputBlur($event)\"\n                    [readonly]=\"readonlyInput\" (input)=\"onUserInput($event)\" [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" [placeholder]=\"placeholder||''\" [disabled]=\"disabled\" [attr.tabindex]=\"tabindex\"\n                    [ngClass]=\"'ui-inputtext ui-widget ui-state-default ui-corner-all'\" autocomplete=\"off\"\n                    ><button type=\"button\" [icon]=\"icon\" pButton *ngIf=\"showIcon\" (click)=\"onButtonClick($event,inputfield)\" class=\"ui-datepicker-trigger ui-calendar-button\"\n                    [ngClass]=\"{'ui-state-disabled':disabled}\" [disabled]=\"disabled\" tabindex=\"-1\"></button>\n            </ng-template>\n            <div [class]=\"panelStyleClass\" [ngStyle]=\"panelStyle\" [ngClass]=\"{'ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all': true, 'ui-datepicker-inline':inline,'ui-shadow':!inline,\n                'ui-state-disabled':disabled,'ui-datepicker-timeonly':timeOnly,'ui-datepicker-multiple-month': this.numberOfMonths > 1, 'ui-datepicker-monthpicker': (view === 'month'), 'ui-datepicker-touch-ui': touchUI}\"\n                (click)=\"onDatePickerClick($event)\" [@overlayAnimation]=\"touchUI ? {value: 'visibleTouchUI', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}: \n                                            {value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}\" \n                                            [@.disabled]=\"inline === true\" (@overlayAnimation.start)=\"onOverlayAnimationStart($event)\" *ngIf=\"inline || overlayVisible\">\n                <ng-container *ngIf=\"!timeOnly\">\n                    <div class=\"ui-datepicker-group ui-widget-content\" *ngFor=\"let month of months; let i = index;\">\n                        <div class=\"ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all\">\n                            <ng-content select=\"p-header\"></ng-content>\n                            <a class=\"ui-datepicker-prev ui-corner-all\" tabindex=\"0\" (click)=\"navBackward($event)\" *ngIf=\"i === 0\">\n                                <span class=\"pi pi-chevron-left\"></span>\n                            </a>\n                            <a class=\"ui-datepicker-next ui-corner-all\" tabindex=\"0\" (click)=\"navForward($event)\" *ngIf=\"numberOfMonths === 1 ? true : (i === numberOfMonths -1)\">\n                                <span class=\"pi pi-chevron-right\"></span>\n                            </a>\n                            <div class=\"ui-datepicker-title\">\n                                <span class=\"ui-datepicker-month\" *ngIf=\"!monthNavigator && (view !== 'month')\">{{locale.monthNames[month.month]}}</span>\n                                <select class=\"ui-datepicker-month\" *ngIf=\"monthNavigator && (view !== 'month') && numberOfMonths === 1\" (change)=\"onMonthDropdownChange($event.target.value)\">\n                                    <option [value]=\"i\" *ngFor=\"let monthName of locale.monthNames;let i = index\" [selected]=\"i === month.month\">{{monthName}}</option>\n                                </select>\n                                <select class=\"ui-datepicker-year\" *ngIf=\"yearNavigator && numberOfMonths === 1\" (change)=\"onYearDropdownChange($event.target.value)\">\n                                    <option [value]=\"year\" *ngFor=\"let year of yearOptions\" [selected]=\"year === currentYear\">{{year}}</option>\n                                </select>\n                                <span class=\"ui-datepicker-year\" *ngIf=\"!yearNavigator\">{{view === 'month' ? currentYear : month.year}}</span>\n                            </div>\n                        </div>\n                        <div class=\"ui-datepicker-calendar-container\" *ngIf=\"view ==='date'\">\n                            <table class=\"ui-datepicker-calendar\">\n                                <thead>\n                                    <tr>\n                                        <th scope=\"col\" *ngFor=\"let weekDay of weekDays;let begin = first; let end = last\">\n                                            <span>{{weekDay}}</span>\n                                        </th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr *ngFor=\"let week of month.dates\">\n                                        <td *ngFor=\"let date of week\" [ngClass]=\"{'ui-datepicker-other-month': date.otherMonth,\n                                            'ui-datepicker-current-day':isSelected(date),'ui-datepicker-today':date.today}\">\n                                            <ng-container *ngIf=\"date.otherMonth ? showOtherMonths : true\">\n                                                <a class=\"ui-state-default\" *ngIf=\"date.selectable\" [ngClass]=\"{'ui-state-active':isSelected(date), 'ui-state-highlight':date.today}\"\n                                                    (click)=\"onDateSelect($event,date)\" draggable=\"false\">\n                                                    <ng-container *ngIf=\"!dateTemplate\">{{date.day}}</ng-container>\n                                                    <ng-container *ngTemplateOutlet=\"dateTemplate; context: {$implicit: date}\"></ng-container>\n                                                </a>\n                                                <span class=\"ui-state-default ui-state-disabled\" [ngClass]=\"{'ui-state-active':isSelected(date), 'ui-state-highlight':date.today}\" *ngIf=\"!date.selectable\">\n                                                    {{date.day}}\n                                                </span>\n                                            </ng-container>\n                                        </td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                    <div class=\"ui-monthpicker\" *ngIf=\"view === 'month'\">\n                        <a tabindex=\"0\" *ngFor=\"let m of monthPickerValues; let i = index\" (click)=\"onMonthSelect($event, i)\" class=\"ui-monthpicker-month\" [ngClass]=\"{'ui-state-active': isMonthSelected(i)}\">\n                            {{m}}\n                        </a>\n                    </div>\n                </ng-container>\n                <div class=\"ui-timepicker ui-widget-header ui-corner-all\" *ngIf=\"showTime||timeOnly\">\n                    <div class=\"ui-hour-picker\">\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 0, 1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span [ngStyle]=\"{'display': currentHour < 10 ? 'inline': 'none'}\">0</span><span>{{currentHour}}</span>\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 0, -1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-separator\">\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span>{{timeSeparator}}</span>\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-minute-picker\">\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 1, 1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span [ngStyle]=\"{'display': currentMinute < 10 ? 'inline': 'none'}\">0</span><span>{{currentMinute}}</span>\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 1, -1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-separator\" *ngIf=\"showSeconds\">\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span>{{timeSeparator}}</span>\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-second-picker\" *ngIf=\"showSeconds\">\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 2, 1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span [ngStyle]=\"{'display': currentSecond < 10 ? 'inline': 'none'}\">0</span><span>{{currentSecond}}</span>\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 2, -1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-ampm-picker\" *ngIf=\"hourFormat=='12'\">\n                        <a tabindex=\"0\" (click)=\"toggleAMPM($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span>{{pm ? 'PM' : 'AM'}}</span>\n                        <a tabindex=\"0\" (click)=\"toggleAMPM($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                </div>\n                <div class=\"ui-datepicker-buttonbar ui-widget-header\" *ngIf=\"showButtonBar\">\n                    <div class=\"ui-g\">\n                        <div class=\"ui-g-6\">\n                            <button type=\"button\" [label]=\"_locale.today\" (click)=\"onTodayButtonClick($event)\" pButton [ngClass]=\"[todayButtonStyleClass]\"></button>\n                        </div>\n                        <div class=\"ui-g-6\">\n                            <button type=\"button\" [label]=\"_locale.clear\" (click)=\"onClearButtonClick($event)\" pButton [ngClass]=\"[clearButtonStyleClass]\"></button>\n                        </div>\n                    </div>\n                </div>\n                <ng-content select=\"p-footer\"></ng-content>\n            </div>\n        </span>\n    ",
+            template: "\n        <span [ngClass]=\"{'ui-calendar':true, 'ui-calendar-w-btn': showIcon, 'ui-calendar-timeonly': timeOnly}\" [ngStyle]=\"style\" [class]=\"styleClass\">\n            <ng-template [ngIf]=\"!inline\">\n                <input #inputfield type=\"text\" [attr.id]=\"inputId\" [attr.name]=\"name\" [attr.required]=\"required\" [value]=\"inputFieldValue\" (focus)=\"onInputFocus($event)\" (keydown)=\"onInputKeydown($event)\" (click)=\"onInputClick($event)\" (blur)=\"onInputBlur($event)\"\n                    [readonly]=\"readonlyInput\" (input)=\"onUserInput($event)\" [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" [placeholder]=\"placeholder||''\" [disabled]=\"disabled\" [attr.tabindex]=\"tabindex\"\n                    [ngClass]=\"'ui-inputtext ui-widget ui-state-default ui-corner-all'\" autocomplete=\"off\"\n                    ><button type=\"button\" [icon]=\"icon\" pButton *ngIf=\"showIcon\" (click)=\"onButtonClick($event,inputfield)\" class=\"ui-datepicker-trigger ui-calendar-button\"\n                    [ngClass]=\"{'ui-state-disabled':disabled}\" [disabled]=\"disabled\" tabindex=\"-1\"></button>\n            </ng-template>\n            <div [class]=\"panelStyleClass\" [ngStyle]=\"panelStyle\" [ngClass]=\"{'ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all': true, 'ui-datepicker-inline':inline,'ui-shadow':!inline,\n                'ui-state-disabled':disabled,'ui-datepicker-timeonly':timeOnly,'ui-datepicker-multiple-month': this.numberOfMonths > 1, 'ui-datepicker-monthpicker': (view === 'month'), 'ui-datepicker-touch-ui': touchUI}\"\n                [@overlayAnimation]=\"touchUI ? {value: 'visibleTouchUI', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}: \n                                            {value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}\" \n                                            [@.disabled]=\"inline === true\" (@overlayAnimation.start)=\"onOverlayAnimationStart($event)\" (@overlayAnimation.done)=\"onOverlayAnimationDone($event)\" *ngIf=\"inline || overlayVisible\">\n                <ng-container *ngIf=\"!timeOnly\">\n                    <div class=\"ui-datepicker-group ui-widget-content\" *ngFor=\"let month of months; let i = index;\">\n                        <div class=\"ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all\">\n                            <ng-content select=\"p-header\"></ng-content>\n                            <a class=\"ui-datepicker-prev ui-corner-all\" (click)=\"navBackward($event)\" *ngIf=\"i === 0\">\n                                <span class=\"ui-datepicker-prev-icon pi pi-chevron-left\"></span>\n                            </a>\n                            <a class=\"ui-datepicker-next ui-corner-all\" (click)=\"navForward($event)\" *ngIf=\"numberOfMonths === 1 ? true : (i === numberOfMonths -1)\">\n                                <span class=\"ui-datepicker-next-icon pi pi-chevron-right\"></span>\n                            </a>\n                            <div class=\"ui-datepicker-title\">\n                                <span class=\"ui-datepicker-month\" *ngIf=\"!monthNavigator && (view !== 'month')\">{{locale.monthNames[month.month]}}</span>\n                                <select class=\"ui-datepicker-month\" *ngIf=\"monthNavigator && (view !== 'month') && numberOfMonths === 1\" (change)=\"onMonthDropdownChange($event.target.value)\">\n                                    <option [value]=\"i\" *ngFor=\"let monthName of locale.monthNames;let i = index\" [selected]=\"i === month.month\">{{monthName}}</option>\n                                </select>\n                                <select class=\"ui-datepicker-year\" *ngIf=\"yearNavigator && numberOfMonths === 1\" (change)=\"onYearDropdownChange($event.target.value)\">\n                                    <option [value]=\"year\" *ngFor=\"let year of yearOptions\" [selected]=\"year === currentYear\">{{year}}</option>\n                                </select>\n                                <span class=\"ui-datepicker-year\" *ngIf=\"!yearNavigator\">{{view === 'month' ? currentYear : month.year}}</span>\n                            </div>\n                        </div>\n                        <div class=\"ui-datepicker-calendar-container\" *ngIf=\"view ==='date'\">\n                            <table class=\"ui-datepicker-calendar\">\n                                <thead>\n                                    <tr>\n                                        <th *ngIf=\"showWeek\" class=\"ui-datepicker-weekheader\">\n                                            <span>{{locale['weekHeader']}}</span>\n                                        </th>\n                                        <th scope=\"col\" *ngFor=\"let weekDay of weekDays;let begin = first; let end = last\">\n                                            <span>{{weekDay}}</span>\n                                        </th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr *ngFor=\"let week of month.dates; let i = index;\">\n                                        <td *ngIf=\"showWeek\" class=\"ui-datepicker-weeknumber ui-state-disabled\">\n                                            <span>\n                                                {{month.weekNumbers[i]}}\n                                            </span>\n                                        </td>\n                                        <td *ngFor=\"let date of week\" [ngClass]=\"{'ui-datepicker-other-month': date.otherMonth,\n                                            'ui-datepicker-current-day':isSelected(date),'ui-datepicker-today':date.today}\">\n                                            <ng-container *ngIf=\"date.otherMonth ? showOtherMonths : true\">\n                                                <a class=\"ui-state-default\" *ngIf=\"date.selectable\" [ngClass]=\"{'ui-state-active':isSelected(date), 'ui-state-highlight':date.today}\"\n                                                    (click)=\"onDateSelect($event,date)\" draggable=\"false\">\n                                                    <ng-container *ngIf=\"!dateTemplate\">{{date.day}}</ng-container>\n                                                    <ng-container *ngTemplateOutlet=\"dateTemplate; context: {$implicit: date}\"></ng-container>\n                                                </a>\n                                                <span class=\"ui-state-default ui-state-disabled\" [ngClass]=\"{'ui-state-active':isSelected(date), 'ui-state-highlight':date.today}\" *ngIf=\"!date.selectable\">\n                                                    {{date.day}}\n                                                </span>\n                                            </ng-container>\n                                        </td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                    <div class=\"ui-monthpicker\" *ngIf=\"view === 'month'\">\n                        <a tabindex=\"0\" *ngFor=\"let m of monthPickerValues; let i = index\" (click)=\"onMonthSelect($event, i)\" class=\"ui-monthpicker-month\" [ngClass]=\"{'ui-state-active': isMonthSelected(i)}\">\n                            {{m}}\n                        </a>\n                    </div>\n                </ng-container>\n                <div class=\"ui-timepicker ui-widget-header ui-corner-all\" *ngIf=\"showTime||timeOnly\">\n                    <div class=\"ui-hour-picker\">\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 0, 1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span [ngStyle]=\"{'display': currentHour < 10 ? 'inline': 'none'}\">0</span><span>{{currentHour}}</span>\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 0, -1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-separator\">\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span>{{timeSeparator}}</span>\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-minute-picker\">\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 1, 1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span [ngStyle]=\"{'display': currentMinute < 10 ? 'inline': 'none'}\">0</span><span>{{currentMinute}}</span>\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 1, -1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-separator\" *ngIf=\"showSeconds\">\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span>{{timeSeparator}}</span>\n                        <a tabindex=\"0\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-second-picker\" *ngIf=\"showSeconds\">\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 2, 1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span [ngStyle]=\"{'display': currentSecond < 10 ? 'inline': 'none'}\">0</span><span>{{currentSecond}}</span>\n                        <a tabindex=\"0\" (mousedown)=\"onTimePickerElementMouseDown($event, 2, -1)\" (mouseup)=\"onTimePickerElementMouseUp($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                    <div class=\"ui-ampm-picker\" *ngIf=\"hourFormat=='12'\">\n                        <a tabindex=\"0\" (click)=\"toggleAMPM($event)\">\n                            <span class=\"pi pi-chevron-up\"></span>\n                        </a>\n                        <span>{{pm ? 'PM' : 'AM'}}</span>\n                        <a tabindex=\"0\" (click)=\"toggleAMPM($event)\">\n                            <span class=\"pi pi-chevron-down\"></span>\n                        </a>\n                    </div>\n                </div>\n                <div class=\"ui-datepicker-buttonbar ui-widget-header\" *ngIf=\"showButtonBar\">\n                    <div class=\"ui-g\">\n                        <div class=\"ui-g-6\">\n                            <button type=\"button\" [label]=\"_locale.today\" (click)=\"onTodayButtonClick($event)\" pButton [ngClass]=\"[todayButtonStyleClass]\"></button>\n                        </div>\n                        <div class=\"ui-g-6\">\n                            <button type=\"button\" [label]=\"_locale.clear\" (click)=\"onClearButtonClick($event)\" pButton [ngClass]=\"[clearButtonStyleClass]\"></button>\n                        </div>\n                    </div>\n                </div>\n                <ng-content select=\"p-footer\"></ng-content>\n            </div>\n        </span>\n    ",
             animations: [
                 animations_1.trigger('overlayAnimation', [
                     animations_1.state('visible', animations_1.style({
@@ -8318,6 +6947,7 @@ exports.CHECKBOX_VALUE_ACCESSOR = {
 var Checkbox = /** @class */ (function () {
     function Checkbox(cd) {
         this.cd = cd;
+        this.checkboxIcon = 'pi pi-check';
         this.onChange = new core_1.EventEmitter();
         this.onModelChange = function () { };
         this.onModelTouched = function () { };
@@ -8437,13 +7067,17 @@ var Checkbox = /** @class */ (function () {
         __metadata("design:type", forms_1.FormControl)
     ], Checkbox.prototype, "formControl", void 0);
     __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], Checkbox.prototype, "checkboxIcon", void 0);
+    __decorate([
         core_1.Output(),
         __metadata("design:type", core_1.EventEmitter)
     ], Checkbox.prototype, "onChange", void 0);
     Checkbox = __decorate([
         core_1.Component({
             selector: 'p-checkbox',
-            template: "\n        <div [ngStyle]=\"style\" [ngClass]=\"'ui-chkbox ui-widget'\" [class]=\"styleClass\">\n            <div class=\"ui-helper-hidden-accessible\">\n                <input #cb type=\"checkbox\" [attr.id]=\"inputId\" [name]=\"name\" [value]=\"value\" [checked]=\"checked\" (focus)=\"onFocus($event)\" (blur)=\"onBlur($event)\"\n                [ngClass]=\"{'ui-state-focus':focused}\" (change)=\"handleChange($event)\" [disabled]=\"disabled\" [attr.tabindex]=\"tabindex\">\n            </div>\n            <div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\" (click)=\"onClick($event,cb,true)\"\n                        [ngClass]=\"{'ui-state-active':checked,'ui-state-disabled':disabled,'ui-state-focus':focused}\">\n                <span class=\"ui-chkbox-icon ui-clickable\" [ngClass]=\"{'pi pi-check':checked}\"></span>\n            </div>\n        </div>\n        <label (click)=\"onClick($event,cb,true)\" [class]=\"labelStyleClass\"\n                [ngClass]=\"{'ui-chkbox-label': true, 'ui-label-active':checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}\"\n                *ngIf=\"label\" [attr.for]=\"inputId\">{{label}}</label>\n    ",
+            template: "\n        <div [ngStyle]=\"style\" [ngClass]=\"'ui-chkbox ui-widget'\" [class]=\"styleClass\">\n            <div class=\"ui-helper-hidden-accessible\">\n                <input #cb type=\"checkbox\" [attr.id]=\"inputId\" [name]=\"name\" [value]=\"value\" [checked]=\"checked\" (focus)=\"onFocus($event)\" (blur)=\"onBlur($event)\"\n                [ngClass]=\"{'ui-state-focus':focused}\" (change)=\"handleChange($event)\" [disabled]=\"disabled\" [attr.tabindex]=\"tabindex\">\n            </div>\n            <div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\" (click)=\"onClick($event,cb,true)\"\n                        [ngClass]=\"{'ui-state-active':checked,'ui-state-disabled':disabled,'ui-state-focus':focused}\">\n                <span class=\"ui-chkbox-icon ui-clickable\" [ngClass]=\"checked ? checkboxIcon : null\"></span>\n            </div>\n        </div>\n        <label (click)=\"onClick($event,cb,true)\" [class]=\"labelStyleClass\"\n                [ngClass]=\"{'ui-chkbox-label': true, 'ui-label-active':checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}\"\n                *ngIf=\"label\" [attr.for]=\"inputId\">{{label}}</label>\n    ",
             providers: [exports.CHECKBOX_VALUE_ACCESSOR]
         }),
         __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
@@ -9915,7 +8549,7 @@ var ConfirmDialog = /** @class */ (function () {
         this.closable = true;
         this.autoZIndex = true;
         this.baseZIndex = 0;
-        this.transitionOptions = '400ms cubic-bezier(0.25, 0.8, 0.25, 1)';
+        this.transitionOptions = '150ms cubic-bezier(0, 0, 0.2, 1)';
         this.subscription = this.confirmationService.requireConfirmation$.subscribe(function (confirmation) {
             if (confirmation.key === _this.key) {
                 _this.confirmation = confirmation;
@@ -10043,7 +8677,7 @@ var ConfirmDialog = /** @class */ (function () {
         if (this.closeOnEscape && this.closable && !this.documentEscapeListener) {
             this.documentEscapeListener = this.renderer.listen('document', 'keydown', function (event) {
                 if (event.which == 27) {
-                    if (parseInt(_this.container.style.zIndex) === domhandler_1.DomHandler.zindex && _this.visible) {
+                    if (parseInt(_this.container.style.zIndex) === (domhandler_1.DomHandler.zindex + _this.baseZIndex) && _this.visible) {
                         _this.close(event);
                     }
                 }
@@ -10197,11 +8831,11 @@ var ConfirmDialog = /** @class */ (function () {
             animations: [
                 animations_1.trigger('animation', [
                     animations_1.state('void', animations_1.style({
-                        transform: 'translate3d(-50%, -25%, 0) scale(0.9)',
+                        transform: 'translateX(-50%) translateY(-50%) translateZ(0) scale(0.7)',
                         opacity: 0
                     })),
                     animations_1.state('visible', animations_1.style({
-                        transform: 'translateX(-50%) translateY(-50%)',
+                        transform: 'translateX(-50%) translateY(-50%) translateZ(0) scale(1)',
                         opacity: 1
                     })),
                     animations_1.transition('* => *', animations_1.animate('{{transitionParams}}'))
@@ -10261,14 +8895,14 @@ var ContextMenuSub = /** @class */ (function () {
         this.contextMenu = contextMenu;
     }
     ContextMenuSub.prototype.onItemMouseEnter = function (event, item, menuitem) {
-        if (menuitem.disabled) {
-            return;
-        }
         if (this.hideTimeout) {
             clearTimeout(this.hideTimeout);
             this.hideTimeout = null;
         }
         this.activeItem = item;
+        if (menuitem.disabled) {
+            return;
+        }
         var nextElement = item.children[0].nextElementSibling;
         if (nextElement) {
             var sublist = nextElement.children[0];
@@ -13813,7 +12447,8 @@ var Dialog = /** @class */ (function () {
         this.minX = 0;
         this.minY = 0;
         this.focusOnShow = true;
-        this.transitionOptions = '400ms cubic-bezier(0.25, 0.8, 0.25, 1)';
+        this.focusTrap = true;
+        this.transitionOptions = '150ms cubic-bezier(0, 0, 0.2, 1)';
         this.closeIcon = 'pi pi-times';
         this.minimizeIcon = 'pi pi-window-minimize';
         this.maximizeIcon = 'pi pi-window-maximize';
@@ -13876,7 +12511,7 @@ var Dialog = /** @class */ (function () {
     };
     Dialog.prototype.positionOverlay = function () {
         var viewport = domhandler_1.DomHandler.getViewport();
-        if (domhandler_1.DomHandler.getOuterHeight(this.container) > viewport.height) {
+        if (domhandler_1.DomHandler.getOuterHeight(this.container) + this.contentViewChild.nativeElement.scrollHeight - this.contentViewChild.nativeElement.clientHeight > viewport.height) {
             this.contentViewChild.nativeElement.style.height = (viewport.height * .75) + 'px';
             this.container.style.height = 'auto';
         }
@@ -13969,7 +12604,6 @@ var Dialog = /** @class */ (function () {
         event.preventDefault();
     };
     Dialog.prototype.maximize = function () {
-        domhandler_1.DomHandler.addClass(this.container, 'ui-dialog-maximized');
         this.preMaximizePageX = parseFloat(this.container.style.top);
         this.preMaximizePageY = parseFloat(this.container.style.left);
         this.preMaximizeContainerWidth = domhandler_1.DomHandler.getOuterWidth(this.container);
@@ -13987,7 +12621,9 @@ var Dialog = /** @class */ (function () {
             diffHeight += domhandler_1.DomHandler.getOuterHeight(this.footerViewChild.nativeElement);
         }
         this.contentViewChild.nativeElement.style.height = 'calc(100vh - ' + diffHeight + 'px)';
+        domhandler_1.DomHandler.addClass(this.container, 'ui-dialog-maximized');
         domhandler_1.DomHandler.addClass(document.body, 'ui-overflow-hidden');
+        this.moveOnTop();
         this.maximized = true;
     };
     Dialog.prototype.revertMaximize = function () {
@@ -14027,6 +12663,44 @@ var Dialog = /** @class */ (function () {
             this.lastPageX = event.pageX;
             this.lastPageY = event.pageY;
             domhandler_1.DomHandler.addClass(document.body, 'ui-unselectable-text');
+        }
+    };
+    Dialog.prototype.getFocusableElements = function () {
+        var focusableElements = domhandler_1.DomHandler.find(this.container, "button:not([tabindex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden]), \n                [href][clientHeight][clientWidth]:not([tabindex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden]), \n                input:not([tabindex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden]), select:not([tabindex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden]), \n                textarea:not([tabindex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden]), [tabIndex]:not([tabIndex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden]), \n                [contenteditable]:not([tabIndex = \"-1\"]):not([disabled]):not([style*=\"display:none\"]):not([hidden])");
+        var visibleFocusableElements = [];
+        for (var _i = 0, focusableElements_1 = focusableElements; _i < focusableElements_1.length; _i++) {
+            var focusableElement = focusableElements_1[_i];
+            if (getComputedStyle(focusableElement).display != "none" && getComputedStyle(focusableElement).visibility != "hidden")
+                visibleFocusableElements.push(focusableElement);
+        }
+        return visibleFocusableElements;
+    };
+    Dialog.prototype.onKeydown = function (event) {
+        if (this.focusTrap) {
+            if (event.which === 9) {
+                event.preventDefault();
+                var focusableElements = this.getFocusableElements();
+                if (focusableElements && focusableElements.length > 0) {
+                    if (!document.activeElement) {
+                        focusableElements[0].focus();
+                    }
+                    else {
+                        var focusedIndex = focusableElements.indexOf(document.activeElement);
+                        if (event.shiftKey) {
+                            if (focusedIndex == -1 || focusedIndex === 0)
+                                focusableElements[focusableElements.length - 1].focus();
+                            else
+                                focusableElements[focusedIndex - 1].focus();
+                        }
+                        else {
+                            if (focusedIndex == -1 || focusedIndex === (focusableElements.length - 1))
+                                focusableElements[0].focus();
+                            else
+                                focusableElements[focusedIndex + 1].focus();
+                        }
+                    }
+                }
+            }
         }
     };
     Dialog.prototype.onDrag = function (event) {
@@ -14095,6 +12769,9 @@ var Dialog = /** @class */ (function () {
         }
     };
     Dialog.prototype.bindGlobalListeners = function () {
+        if (this.modal) {
+            this.bindDocumentKeydownListener();
+        }
         if (this.draggable) {
             this.bindDocumentDragListener();
             this.bindDocumentDragEndListener();
@@ -14111,10 +12788,24 @@ var Dialog = /** @class */ (function () {
     };
     Dialog.prototype.unbindGlobalListeners = function () {
         this.unbindDocumentDragListener();
+        this.unbindDocumentKeydownListener();
         this.unbindDocumentDragEndListener();
         this.unbindDocumentResizeListeners();
         this.unbindDocumentResponsiveListener();
         this.unbindDocumentEscapeListener();
+    };
+    Dialog.prototype.bindDocumentKeydownListener = function () {
+        var _this = this;
+        this.zone.runOutsideAngular(function () {
+            _this.documentKeydownListener = _this.onKeydown.bind(_this);
+            window.document.addEventListener('keydown', _this.documentKeydownListener);
+        });
+    };
+    Dialog.prototype.unbindDocumentKeydownListener = function () {
+        if (this.documentKeydownListener) {
+            window.document.removeEventListener('keydown', this.documentKeydownListener);
+            this.documentKeydownListener = null;
+        }
     };
     Dialog.prototype.bindDocumentDragListener = function () {
         var _this = this;
@@ -14382,6 +13073,10 @@ var Dialog = /** @class */ (function () {
     ], Dialog.prototype, "maximizable", void 0);
     __decorate([
         core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], Dialog.prototype, "focusTrap", void 0);
+    __decorate([
+        core_1.Input(),
         __metadata("design:type", String)
     ], Dialog.prototype, "transitionOptions", void 0);
     __decorate([
@@ -14455,7 +13150,7 @@ var Dialog = /** @class */ (function () {
             animations: [
                 animations_1.trigger('animation', [
                     animations_1.state('void', animations_1.style({
-                        transform: 'translate3d(0, 25%, 0) scale(0.9)',
+                        transform: 'scale(0.7)',
                         opacity: 0
                     })),
                     animations_1.state('visible', animations_1.style({
@@ -14542,7 +13237,10 @@ var DomHandler = /** @class */ (function () {
         return Array.from(element.querySelectorAll(selector));
     };
     DomHandler.findSingle = function (element, selector) {
-        return element.querySelector(selector);
+        if (element) {
+            return element.querySelector(selector);
+        }
+        return null;
     };
     DomHandler.index = function (element) {
         var children = element.parentNode.childNodes;
@@ -14575,7 +13273,7 @@ var DomHandler = /** @class */ (function () {
         if ((targetOffset.top + targetHeight + elementDimensions.height) > viewport.height) {
             top = -1 * (elementDimensions.height);
             if (targetOffset.top + top < 0) {
-                top = 0;
+                top = -1 * targetOffset.top;
             }
         }
         else {
@@ -14610,7 +13308,7 @@ var DomHandler = /** @class */ (function () {
         if (targetOffset.top + targetOuterHeight + elementOuterHeight > viewport.height) {
             top = targetOffset.top + windowScrollTop - elementOuterHeight;
             if (top < 0) {
-                top = 0 + windowScrollTop;
+                top = windowScrollTop;
             }
         }
         else {
@@ -14828,16 +13526,22 @@ var DomHandler = /** @class */ (function () {
         return (typeof HTMLElement === "object" ? obj instanceof HTMLElement :
             obj && typeof obj === "object" && obj !== null && obj.nodeType === 1 && typeof obj.nodeName === "string");
     };
-    DomHandler.calculateScrollbarWidth = function () {
-        if (this.calculatedScrollbarWidth !== null)
-            return this.calculatedScrollbarWidth;
-        var scrollDiv = document.createElement("div");
-        scrollDiv.className = "ui-scrollbar-measure";
-        document.body.appendChild(scrollDiv);
-        var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-        document.body.removeChild(scrollDiv);
-        this.calculatedScrollbarWidth = scrollbarWidth;
-        return scrollbarWidth;
+    DomHandler.calculateScrollbarWidth = function (el) {
+        if (el) {
+            var style = getComputedStyle(el);
+            return (el.offsetWidth - el.clientWidth - parseFloat(style.borderLeftWidth) - parseFloat(style.borderRightWidth));
+        }
+        else {
+            if (this.calculatedScrollbarWidth !== null)
+                return this.calculatedScrollbarWidth;
+            var scrollDiv = document.createElement("div");
+            scrollDiv.className = "ui-scrollbar-measure";
+            document.body.appendChild(scrollDiv);
+            var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+            document.body.removeChild(scrollDiv);
+            this.calculatedScrollbarWidth = scrollbarWidth;
+            return scrollbarWidth;
+        }
     };
     DomHandler.calculateScrollbarHeight = function () {
         if (this.calculatedScrollbarHeight !== null)
@@ -15327,10 +14031,6 @@ var Dropdown = /** @class */ (function () {
         get: function () {
             return this._autoWidth;
         },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Dropdown.prototype, "utc", {
         set: function (_autoWidth) {
             this._autoWidth = _autoWidth;
             console.log("Setting autoWidth has no effect as automatic width calculation is removed for better perfomance.");
@@ -15338,6 +14038,19 @@ var Dropdown = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Dropdown.prototype, "disabled", {
+        get: function () {
+            return this._disabled;
+        },
+        set: function (_disabled) {
+            if (_disabled)
+                this.focused = false;
+            this._disabled = _disabled;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
     Dropdown.prototype.ngAfterContentInit = function () {
         var _this = this;
         this.templates.forEach(function (item) {
@@ -15986,10 +14699,6 @@ var Dropdown = /** @class */ (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", Boolean)
-    ], Dropdown.prototype, "disabled", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
     ], Dropdown.prototype, "readonly", void 0);
     __decorate([
         core_1.Input(),
@@ -16138,8 +14847,13 @@ var Dropdown = /** @class */ (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [Boolean])
     ], Dropdown.prototype, "autoWidth", null);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean),
+        __metadata("design:paramtypes", [Boolean])
+    ], Dropdown.prototype, "disabled", null);
     __decorate([
         core_1.Input(),
         __metadata("design:type", Array),
@@ -16464,15 +15178,15 @@ var DynamicDialogComponent = /** @class */ (function () {
     DynamicDialogComponent = __decorate([
         core_1.Component({
             selector: 'p-dynamicDialog',
-            template: "\n\t\t<div #mask class=\"ui-widget-overlay ui-dialog-mask ui-dialog-mask-scrollblocker\" *ngIf=\"visible\" (click)=\"onMaskClick()\"></div>\n\t\t<div [ngClass]=\"{'ui-dialog ui-dynamicdialog ui-widget ui-widget-content ui-corner-all ui-shadow':true, 'ui-dialog-rtl': config.rtl}\" [ngStyle]=\"config.style\" [class]=\"config.styleClass\"\n\t\t\t[@animation]=\"{value: 'visible', params: {transitionParams: config.transitionOptions || '400ms cubic-bezier(0.25, 0.8, 0.25, 1)'}}\" \n\t\t\t(@animation.start)=\"onAnimationStart($event)\" (@animation.done)=\"onAnimationEnd($event)\" role=\"dialog\" *ngIf=\"visible\"\n\t\t\t[style.width]=\"config.width\" [style.height]=\"config.height\">\n            <div class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\" *ngIf=\"config.showHeader === false ? false: true\">\n                <span class=\"ui-dialog-title\">{{config.header}}</span>\n                <a [ngClass]=\"'ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all'\" tabindex=\"0\" role=\"button\" (click)=\"close()\" (keydown.enter)=\"close()\" *ngIf=\"config.closable === false ? false : true\">\n                    <span class=\"pi pi-times\"></span>\n                </a>\n            </div>\n            <div class=\"ui-dialog-content ui-widget-content\" [ngStyle]=\"config.contentStyle\">\n\t\t\t\t<ng-template pDynamicDialogContent></ng-template>\n\t\t\t</div>\n\t\t\t<div class=\"ui-dialog-footer ui-widget-content\" *ngIf=\"config.footer\">\n\t\t\t\t{{config.footer}}\n            </div>\n\t\t</div>\n\t",
+            template: "\n\t\t<div #mask class=\"ui-widget-overlay ui-dialog-mask ui-dialog-mask-scrollblocker\" *ngIf=\"visible\" (click)=\"onMaskClick()\"></div>\n\t\t<div [ngClass]=\"{'ui-dialog ui-dynamicdialog ui-widget ui-widget-content ui-corner-all ui-shadow':true, 'ui-dialog-rtl': config.rtl}\" [ngStyle]=\"config.style\" [class]=\"config.styleClass\"\n\t\t\t[@animation]=\"{value: 'visible', params: {transitionParams: config.transitionOptions || '150ms cubic-bezier(0, 0, 0.2, 1)'}}\" \n\t\t\t(@animation.start)=\"onAnimationStart($event)\" (@animation.done)=\"onAnimationEnd($event)\" role=\"dialog\" *ngIf=\"visible\"\n\t\t\t[style.width]=\"config.width\" [style.height]=\"config.height\">\n            <div class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\" *ngIf=\"config.showHeader === false ? false: true\">\n                <span class=\"ui-dialog-title\">{{config.header}}</span>\n                <a [ngClass]=\"'ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all'\" tabindex=\"0\" role=\"button\" (click)=\"close()\" (keydown.enter)=\"close()\" *ngIf=\"config.closable === false ? false : true\">\n                    <span class=\"pi pi-times\"></span>\n                </a>\n            </div>\n            <div class=\"ui-dialog-content ui-widget-content\" [ngStyle]=\"config.contentStyle\">\n\t\t\t\t<ng-template pDynamicDialogContent></ng-template>\n\t\t\t</div>\n\t\t\t<div class=\"ui-dialog-footer ui-widget-content\" *ngIf=\"config.footer\">\n\t\t\t\t{{config.footer}}\n            </div>\n\t\t</div>\n\t",
             animations: [
                 animations_1.trigger('animation', [
                     animations_1.state('void', animations_1.style({
-                        transform: 'translate3d(-50%, -25%, 0) scale(0.9)',
+                        transform: 'translateX(-50%) translateY(-50%) scale(0.7)',
                         opacity: 0
                     })),
                     animations_1.state('visible', animations_1.style({
-                        transform: 'translateX(-50%) translateY(-50%)',
+                        transform: 'translateX(-50%) translateY(-50%) scale(1)',
                         opacity: 1
                     })),
                     animations_1.transition('* => *', animations_1.animate('{{transitionParams}}'))
@@ -17423,8 +16137,10 @@ var Galleria = /** @class */ (function () {
         },
         set: function (value) {
             this._images = value;
-            this.activeIndex = 0;
             this.imagesChanged = true;
+            if (this.initialized) {
+                this.activeIndex = 0;
+            }
         },
         enumerable: true,
         configurable: true
@@ -17643,6 +16359,7 @@ var GMap = /** @class */ (function () {
         this.zone = zone;
         this.onMapClick = new core_1.EventEmitter();
         this.onOverlayClick = new core_1.EventEmitter();
+        this.onOverlayDblClick = new core_1.EventEmitter();
         this.onOverlayDragStart = new core_1.EventEmitter();
         this.onOverlayDrag = new core_1.EventEmitter();
         this.onOverlayDragEnd = new core_1.EventEmitter();
@@ -17690,6 +16407,15 @@ var GMap = /** @class */ (function () {
         overlay.addListener('click', function (event) {
             _this.zone.run(function () {
                 _this.onOverlayClick.emit({
+                    originalEvent: event,
+                    'overlay': overlay,
+                    map: _this.map
+                });
+            });
+        });
+        overlay.addListener('dblclick', function (event) {
+            _this.zone.run(function () {
+                _this.onOverlayDblClick.emit({
                     originalEvent: event,
                     'overlay': overlay,
                     map: _this.map
@@ -17782,6 +16508,10 @@ var GMap = /** @class */ (function () {
         core_1.Output(),
         __metadata("design:type", core_1.EventEmitter)
     ], GMap.prototype, "onOverlayClick", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], GMap.prototype, "onOverlayDblClick", void 0);
     __decorate([
         core_1.Output(),
         __metadata("design:type", core_1.EventEmitter)
@@ -18494,7 +17224,7 @@ var InputMask = /** @class */ (function () {
         this.checkVal();
         this.updateFilledState();
         this.onBlur.emit(e);
-        if (this.inputViewChild.nativeElement.value != this.focusText) {
+        if (this.inputViewChild.nativeElement.value != this.focusText || this.inputViewChild.nativeElement.value != this.value) {
             this.updateModel(e);
             var event_1 = document.createEvent('HTMLEvents');
             event_1.initEvent('change', true, false);
@@ -18724,7 +17454,7 @@ var InputMask = /** @class */ (function () {
     ], InputMask.prototype, "autoClear", void 0);
     __decorate([
         core_1.Input(),
-        __metadata("design:type", String)
+        __metadata("design:type", Object)
     ], InputMask.prototype, "style", void 0);
     __decorate([
         core_1.Input(),
@@ -19125,7 +17855,6 @@ var InputTextarea = /** @class */ (function () {
         }
     };
     InputTextarea.prototype.resize = function (event) {
-        this.el.nativeElement.style.height = '';
         this.el.nativeElement.style.height = this.el.nativeElement.scrollHeight + 'px';
         if (parseFloat(this.el.nativeElement.style.height) >= parseFloat(this.el.nativeElement.style.maxHeight)) {
             this.el.nativeElement.style.overflowY = "scroll";
@@ -19660,6 +18389,7 @@ var Listbox = /** @class */ (function () {
         this.metaKeySelection = true;
         this.showToggleAll = true;
         this.onChange = new core_1.EventEmitter();
+        this.onClick = new core_1.EventEmitter();
         this.onDblClick = new core_1.EventEmitter();
         this.onModelChange = function () { };
         this.onModelTouched = function () { };
@@ -19724,6 +18454,10 @@ var Listbox = /** @class */ (function () {
         else {
             this.onOptionClickSingle(event, option);
         }
+        this.onClick.emit({
+            originalEvent: event,
+            value: this.value
+        });
         this.optionTouched = false;
     };
     Listbox.prototype.onOptionTouchEnd = function (event, option) {
@@ -20068,6 +18802,10 @@ var Listbox = /** @class */ (function () {
     __decorate([
         core_1.Output(),
         __metadata("design:type", core_1.EventEmitter)
+    ], Listbox.prototype, "onClick", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
     ], Listbox.prototype, "onDblClick", void 0);
     __decorate([
         core_1.ViewChild('headerchkbox'),
@@ -20313,7 +19051,7 @@ var MenuItemContent = /** @class */ (function () {
     MenuItemContent = __decorate([
         core_1.Component({
             selector: '[pMenuItemContent]',
-            template: "\n        <a *ngIf=\"!item.routerLink\" [href]=\"item.url||'#'\" class=\"ui-menuitem-link ui-corner-all\" [attr.data-automationid]=\"item.automationId\" [attr.target]=\"item.target\" [attr.title]=\"item.title\" [attr.id]=\"item.id\"\n            [ngClass]=\"{'ui-state-disabled':item.disabled}\" (click)=\"menu.itemClick($event, item)\">\n            <span class=\"ui-menuitem-icon\" *ngIf=\"item.icon\" [ngClass]=\"item.icon\"></span>\n            <span class=\"ui-menuitem-text\">{{item.label}}</span>\n        </a>\n        <a *ngIf=\"item.routerLink\" [routerLink]=\"item.routerLink\" [attr.data-automationid]=\"item.automationId\"  [queryParams]=\"item.queryParams\" [routerLinkActive]=\"'ui-state-active'\"\n            [routerLinkActiveOptions]=\"item.routerLinkActiveOptions||{exact:false}\" class=\"ui-menuitem-link ui-corner-all\" [attr.target]=\"item.target\" [attr.id]=\"item.id\"\n             [attr.title]=\"item.title\" [ngClass]=\"{'ui-state-disabled':item.disabled}\" (click)=\"menu.itemClick($event, item)\">\n            <span class=\"ui-menuitem-icon\" *ngIf=\"item.icon\" [ngClass]=\"item.icon\"></span>\n            <span class=\"ui-menuitem-text\">{{item.label}}</span>\n        </a>\n    "
+            template: "\n        <a *ngIf=\"!item.routerLink\" [attr.href]=\"item.url||null\" class=\"ui-menuitem-link ui-corner-all\" [attr.data-automationid]=\"item.automationId\" [attr.target]=\"item.target\" [attr.title]=\"item.title\" [attr.id]=\"item.id\"\n            [ngClass]=\"{'ui-state-disabled':item.disabled}\" (click)=\"menu.itemClick($event, item)\">\n            <span class=\"ui-menuitem-icon\" *ngIf=\"item.icon\" [ngClass]=\"item.icon\"></span>\n            <span class=\"ui-menuitem-text\">{{item.label}}</span>\n        </a>\n        <a *ngIf=\"item.routerLink\" [routerLink]=\"item.routerLink\" [attr.data-automationid]=\"item.automationId\"  [queryParams]=\"item.queryParams\" [routerLinkActive]=\"'ui-state-active'\"\n            [routerLinkActiveOptions]=\"item.routerLinkActiveOptions||{exact:false}\" class=\"ui-menuitem-link ui-corner-all\" [attr.target]=\"item.target\" [attr.id]=\"item.id\"\n             [attr.title]=\"item.title\" [ngClass]=\"{'ui-state-disabled':item.disabled}\" (click)=\"menu.itemClick($event, item)\">\n            <span class=\"ui-menuitem-icon\" *ngIf=\"item.icon\" [ngClass]=\"item.icon\"></span>\n            <span class=\"ui-menuitem-text\">{{item.label}}</span>\n        </a>\n    "
         }),
         __param(0, core_1.Inject(core_1.forwardRef(function () { return Menu; }))),
         __metadata("design:paramtypes", [Menu])
@@ -20580,7 +19318,7 @@ var MenubarSub = /** @class */ (function () {
             if (menuitem.disabled) {
                 return;
             }
-            this.activeItem = this.activeMenu ? (this.activeMenu.isEqualNode(item) && this.autoDisplay ? null : item) : item;
+            this.activeItem = this.activeMenu ? (this.activeMenu.isEqualNode(item) ? null : item) : item;
             var nextElement = item.children[0].nextElementSibling;
             if (nextElement) {
                 var sublist = nextElement.children[0];
@@ -20598,7 +19336,7 @@ var MenubarSub = /** @class */ (function () {
             }
             this.menuClick = true;
             this.menuHoverActive = this.activeMenu ? (!this.activeMenu.isEqualNode(item)) : true;
-            this.activeMenu = this.activeMenu ? (this.activeMenu.isEqualNode(item) && this.autoDisplay ? null : item) : item;
+            this.activeMenu = this.activeMenu ? (this.activeMenu.isEqualNode(item) ? null : item) : item;
             this.bindEventListener();
         }
     };
@@ -21510,6 +20248,9 @@ var MultiSelect = /** @class */ (function () {
                 if (pattern.test(this.selectedItemsLabel)) {
                     this.valuesAsString = this.selectedItemsLabel.replace(this.selectedItemsLabel.match(pattern)[0], this.value.length + '');
                 }
+                else {
+                    this.valuesAsString = this.selectedItemsLabel;
+                }
             }
         }
         else {
@@ -21761,6 +20502,10 @@ var MultiSelect = /** @class */ (function () {
         __metadata("design:type", Object)
     ], MultiSelect.prototype, "footerFacet", void 0);
     __decorate([
+        core_1.ContentChild(shared_1.Header),
+        __metadata("design:type", Object)
+    ], MultiSelect.prototype, "headerFacet", void 0);
+    __decorate([
         core_1.ContentChildren(shared_1.PrimeTemplate),
         __metadata("design:type", core_1.QueryList)
     ], MultiSelect.prototype, "templates", void 0);
@@ -21796,7 +20541,7 @@ var MultiSelect = /** @class */ (function () {
     MultiSelect = __decorate([
         core_1.Component({
             selector: 'p-multiSelect',
-            template: "\n        <div #container [ngClass]=\"{'ui-multiselect ui-widget ui-state-default ui-corner-all':true,'ui-multiselect-open':overlayVisible,'ui-state-focus':focus,'ui-state-disabled': disabled}\" [ngStyle]=\"style\" [class]=\"styleClass\"\n            (click)=\"onMouseclick($event,in)\">\n            <div class=\"ui-helper-hidden-accessible\">\n                <input #in type=\"text\" readonly=\"readonly\" [attr.id]=\"inputId\" [attr.name]=\"name\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\"\n                       [disabled]=\"disabled\" [attr.tabindex]=\"tabindex\" (keydown)=\"onKeydown($event)\">\n            </div>\n            <div class=\"ui-multiselect-label-container\" [title]=\"valuesAsString\">\n                <span class=\"ui-multiselect-label ui-corner-all\">\n                    <ng-container *ngIf=\"!selectedItemsTemplate\">{{valuesAsString}}</ng-container>\n                    <ng-container *ngTemplateOutlet=\"selectedItemsTemplate; context: {$implicit: value}\"></ng-container>\n                </span>\n            </div>\n            <div [ngClass]=\"{'ui-multiselect-trigger ui-state-default ui-corner-right':true}\">\n                <span class=\"ui-multiselect-trigger-icon ui-clickable\" [ngClass]=\"dropdownIcon\"></span>\n            </div>\n            <div *ngIf=\"overlayVisible\" [ngClass]=\"['ui-multiselect-panel ui-widget ui-widget-content ui-corner-all ui-shadow']\" [@overlayAnimation]=\"{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}\" (@overlayAnimation.start)=\"onOverlayAnimationStart($event)\"\n                [ngStyle]=\"panelStyle\" [class]=\"panelStyleClass\" (click)=\"panelClick=true\">\n                <div class=\"ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix\" [ngClass]=\"{'ui-multiselect-header-no-toggleall': !showToggleAll}\" *ngIf=\"showHeader\">\n                    <div class=\"ui-chkbox ui-widget\" *ngIf=\"showToggleAll && !selectionLimit\">\n                        <div class=\"ui-helper-hidden-accessible\">\n                            <input type=\"checkbox\" readonly=\"readonly\" [checked]=\"isAllChecked()\" (focus)=\"onHeaderCheckboxFocus()\" (blur)=\"onHeaderCheckboxBlur()\" (keydown.space)=\"toggleAll($event)\">\n                        </div>\n                        <div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\" [ngClass]=\"{'ui-state-active':isAllChecked(), 'ui-state-focus': headerCheckboxFocus}\" (click)=\"toggleAll($event)\">\n                            <span class=\"ui-chkbox-icon ui-clickable\" [ngClass]=\"{'pi pi-check':isAllChecked()}\"></span>\n                        </div>\n                    </div>\n                    <div class=\"ui-multiselect-filter-container\" *ngIf=\"filter\">\n                        <input #filterInput type=\"text\" role=\"textbox\" [value]=\"filterValue||''\" (input)=\"onFilter()\" class=\"ui-inputtext ui-widget ui-state-default ui-corner-all\" [attr.placeholder]=\"filterPlaceHolder\" [attr.aria-label]=\"ariaFilterLabel\">\n                        <span class=\"ui-multiselect-filter-icon pi pi-search\"></span>\n                    </div>\n                    <a class=\"ui-multiselect-close ui-corner-all\" tabindex=\"0\" (click)=\"close($event)\" (keydown.enter)=\"close($event)\">\n                        <span class=\"pi pi-times\"></span>\n                    </a>\n                    <ng-content select=\"p-header\"></ng-content>\n                </div>\n                <div class=\"ui-multiselect-items-wrapper\" [style.max-height]=\"virtualScroll ? 'auto' : (scrollHeight||'auto')\">\n                    <ul class=\"ui-multiselect-items ui-multiselect-list ui-widget-content ui-widget ui-corner-all ui-helper-reset\">\n                        <ng-container *ngIf=\"!virtualScroll; else virtualScrollList\">\n                            <ng-template ngFor let-option let-i=\"index\" [ngForOf]=\"options\">\n                                <p-multiSelectItem [option]=\"option\" [selected]=\"isSelected(option.value)\" (onClick)=\"onOptionClick($event)\" (onKeydown)=\"onOptionKeydown($event)\" \n                                        [maxSelectionLimitReached]=\"maxSelectionLimitReached\" [visible]=\"isItemVisible(option)\" [template]=\"itemTemplate\"></p-multiSelectItem>\n                            </ng-template>\n                        </ng-container>\n                        <ng-template #virtualScrollList>\n                            <cdk-virtual-scroll-viewport #viewport [ngStyle]=\"{'height': scrollHeight}\" [itemSize]=\"itemSize\" *ngIf=\"virtualScroll\">\n                                <ng-container *cdkVirtualFor=\"let option of visibleOptions; let i = index; let c = count; let f = first; let l = last; let e = even; let o = odd\">\n                                    <p-multiSelectItem [option]=\"option\" [selected]=\"isSelected(option.value)\" (onClick)=\"onOptionClick($event)\" (onKeydown)=\"onOptionKeydown($event)\" \n                                        [maxSelectionLimitReached]=\"maxSelectionLimitReached\" [visible]=\"isItemVisible(option)\" [template]=\"itemTemplate\" [itemSize]=\"itemSize\"></p-multiSelectItem>\n                                </ng-container>\n                            </cdk-virtual-scroll-viewport>\n                        </ng-template>\n                    </ul>\n                </div>\n                <div class=\"ui-multiselect-footer ui-widget-content\" *ngIf=\"footerFacet\">\n                    <ng-content select=\"p-footer\"></ng-content>\n                </div>\n            </div>\n        </div>\n    ",
+            template: "\n        <div #container [ngClass]=\"{'ui-multiselect ui-widget ui-state-default ui-corner-all':true,'ui-multiselect-open':overlayVisible,'ui-state-focus':focus,'ui-state-disabled': disabled}\" [ngStyle]=\"style\" [class]=\"styleClass\"\n            (click)=\"onMouseclick($event,in)\">\n            <div class=\"ui-helper-hidden-accessible\">\n                <input #in type=\"text\" readonly=\"readonly\" [attr.id]=\"inputId\" [attr.name]=\"name\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\"\n                       [disabled]=\"disabled\" [attr.tabindex]=\"tabindex\" (keydown)=\"onKeydown($event)\">\n            </div>\n            <div class=\"ui-multiselect-label-container\" [title]=\"valuesAsString\">\n                <span class=\"ui-multiselect-label ui-corner-all\">\n                    <ng-container *ngIf=\"!selectedItemsTemplate\">{{valuesAsString}}</ng-container>\n                    <ng-container *ngTemplateOutlet=\"selectedItemsTemplate; context: {$implicit: value}\"></ng-container>\n                </span>\n            </div>\n            <div [ngClass]=\"{'ui-multiselect-trigger ui-state-default ui-corner-right':true}\">\n                <span class=\"ui-multiselect-trigger-icon ui-clickable\" [ngClass]=\"dropdownIcon\"></span>\n            </div>\n            <div *ngIf=\"overlayVisible\" [ngClass]=\"['ui-multiselect-panel ui-widget ui-widget-content ui-corner-all ui-shadow']\" [@overlayAnimation]=\"{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}\" (@overlayAnimation.start)=\"onOverlayAnimationStart($event)\"\n                [ngStyle]=\"panelStyle\" [class]=\"panelStyleClass\" (click)=\"panelClick=true\">\n                <div class=\"ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix\" [ngClass]=\"{'ui-multiselect-header-no-toggleall': !showToggleAll}\" *ngIf=\"showHeader\">\n                <ng-content select=\"p-header\"></ng-content>  \n                <div class=\"ui-chkbox ui-widget\" *ngIf=\"showToggleAll && !selectionLimit\">\n                        <div class=\"ui-helper-hidden-accessible\">\n                            <input type=\"checkbox\" readonly=\"readonly\" [checked]=\"isAllChecked()\" (focus)=\"onHeaderCheckboxFocus()\" (blur)=\"onHeaderCheckboxBlur()\" (keydown.space)=\"toggleAll($event)\">\n                        </div>\n                        <div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\" [ngClass]=\"{'ui-state-active':isAllChecked(), 'ui-state-focus': headerCheckboxFocus}\" (click)=\"toggleAll($event)\">\n                            <span class=\"ui-chkbox-icon ui-clickable\" [ngClass]=\"{'pi pi-check':isAllChecked()}\"></span>\n                        </div>\n                    </div>\n                    <div class=\"ui-multiselect-filter-container\" *ngIf=\"filter\">\n                        <input #filterInput type=\"text\" role=\"textbox\" [value]=\"filterValue||''\" (input)=\"onFilter()\" class=\"ui-inputtext ui-widget ui-state-default ui-corner-all\" [attr.placeholder]=\"filterPlaceHolder\" [attr.aria-label]=\"ariaFilterLabel\">\n                        <span class=\"ui-multiselect-filter-icon pi pi-search\"></span>\n                    </div>\n                    <a class=\"ui-multiselect-close ui-corner-all\" tabindex=\"0\" (click)=\"close($event)\" (keydown.enter)=\"close($event)\">\n                        <span class=\"pi pi-times\"></span>\n                    </a>\n                </div>\n                <div class=\"ui-multiselect-items-wrapper\" [style.max-height]=\"virtualScroll ? 'auto' : (scrollHeight||'auto')\">\n                    <ul class=\"ui-multiselect-items ui-multiselect-list ui-widget-content ui-widget ui-corner-all ui-helper-reset\">\n                        <ng-container *ngIf=\"!virtualScroll; else virtualScrollList\">\n                            <ng-template ngFor let-option let-i=\"index\" [ngForOf]=\"options\">\n                                <p-multiSelectItem [option]=\"option\" [selected]=\"isSelected(option.value)\" (onClick)=\"onOptionClick($event)\" (onKeydown)=\"onOptionKeydown($event)\" \n                                        [maxSelectionLimitReached]=\"maxSelectionLimitReached\" [visible]=\"isItemVisible(option)\" [template]=\"itemTemplate\"></p-multiSelectItem>\n                            </ng-template>\n                        </ng-container>\n                        <ng-template #virtualScrollList>\n                            <cdk-virtual-scroll-viewport #viewport [ngStyle]=\"{'height': scrollHeight}\" [itemSize]=\"itemSize\" *ngIf=\"virtualScroll\">\n                                <ng-container *cdkVirtualFor=\"let option of visibleOptions; let i = index; let c = count; let f = first; let l = last; let e = even; let o = odd\">\n                                    <p-multiSelectItem [option]=\"option\" [selected]=\"isSelected(option.value)\" (onClick)=\"onOptionClick($event)\" (onKeydown)=\"onOptionKeydown($event)\" \n                                        [maxSelectionLimitReached]=\"maxSelectionLimitReached\" [visible]=\"isItemVisible(option)\" [template]=\"itemTemplate\" [itemSize]=\"itemSize\"></p-multiSelectItem>\n                                </ng-container>\n                            </cdk-virtual-scroll-viewport>\n                        </ng-template>\n                    </ul>\n                </div>\n                <div class=\"ui-multiselect-footer ui-widget-content\" *ngIf=\"footerFacet\">\n                    <ng-content select=\"p-footer\"></ng-content>\n                </div>\n            </div>\n        </div>\n    ",
             animations: [
                 animations_1.trigger('overlayAnimation', [
                     animations_1.state('void', animations_1.style({
@@ -21932,7 +20677,7 @@ var OrderList = /** @class */ (function () {
         var selected = (selectedIndex != -1);
         var metaSelection = this.itemTouched ? false : this.metaKeySelection;
         if (metaSelection) {
-            var metaKey = (event.metaKey || event.ctrlKey);
+            var metaKey = (event.metaKey || event.ctrlKey || event.shiftKey);
             if (selected && metaKey) {
                 this._selection = this._selection.filter(function (val, index) { return index !== selectedIndex; });
             }
@@ -22743,10 +21488,12 @@ var forms_1 = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular
 var dropdown_1 = __webpack_require__(/*! ../dropdown/dropdown */ "./node_modules/primeng/components/dropdown/dropdown.js");
 var shared_1 = __webpack_require__(/*! ../common/shared */ "./node_modules/primeng/components/common/shared.js");
 var Paginator = /** @class */ (function () {
-    function Paginator() {
+    function Paginator(cd) {
+        this.cd = cd;
         this.pageLinkSize = 5;
         this.onPageChange = new core_1.EventEmitter();
         this.alwaysShow = true;
+        this.currentPageReportTemplate = '{currentPage} of {totalPages}';
         this._totalRecords = 0;
         this._first = 0;
         this._rows = 0;
@@ -22762,6 +21509,7 @@ var Paginator = /** @class */ (function () {
             this._totalRecords = val;
             this.updatePageLinks();
             this.updatePaginatorState();
+            this.updateFirst();
         },
         enumerable: true,
         configurable: true
@@ -22847,6 +21595,13 @@ var Paginator = /** @class */ (function () {
             this.updatePaginatorState();
         }
     };
+    Paginator.prototype.updateFirst = function () {
+        var _this = this;
+        var page = this.getPage();
+        if (page > 0 && (this.first >= this.totalRecords)) {
+            Promise.resolve(null).then(function () { return _this.changePage(page - 1); });
+        }
+    };
     Paginator.prototype.getPage = function () {
         return Math.floor(this.first / this.rows);
     };
@@ -22880,11 +21635,19 @@ var Paginator = /** @class */ (function () {
     Paginator.prototype.updatePaginatorState = function () {
         this.paginatorState = {
             page: this.getPage(),
+            pageCount: this.getPageCount(),
             rows: this.rows,
             first: this.first,
             totalRecords: this.totalRecords
         };
     };
+    Object.defineProperty(Paginator.prototype, "currentPageReport", {
+        get: function () {
+            return this.currentPageReportTemplate.replace("{currentPage}", this.getPage().toString()).replace("{totalPages}", this.getPageCount().toString());
+        },
+        enumerable: true,
+        configurable: true
+    });
     __decorate([
         core_1.Input(),
         __metadata("design:type", Number)
@@ -22919,6 +21682,14 @@ var Paginator = /** @class */ (function () {
     ], Paginator.prototype, "dropdownAppendTo", void 0);
     __decorate([
         core_1.Input(),
+        __metadata("design:type", String)
+    ], Paginator.prototype, "currentPageReportTemplate", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], Paginator.prototype, "showCurrentPageReport", void 0);
+    __decorate([
+        core_1.Input(),
         __metadata("design:type", Number),
         __metadata("design:paramtypes", [Number])
     ], Paginator.prototype, "totalRecords", null);
@@ -22940,8 +21711,9 @@ var Paginator = /** @class */ (function () {
     Paginator = __decorate([
         core_1.Component({
             selector: 'p-paginator',
-            template: "\n        <div [class]=\"styleClass\" [ngStyle]=\"style\" [ngClass]=\"'ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix'\"\n            *ngIf=\"alwaysShow ? true : (pageLinks && pageLinks.length > 1)\">\n            <div class=\"ui-paginator-left-content\" *ngIf=\"templateLeft\">\n                <ng-container *ngTemplateOutlet=\"templateLeft; context: {$implicit: paginatorState}\"></ng-container>\n            </div>\n            <a [attr.tabindex]=\"isFirstPage() ? null : '0'\" class=\"ui-paginator-first ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToFirst($event)\" (keydown.enter)=\"changePageToFirst($event)\" [ngClass]=\"{'ui-state-disabled':isFirstPage()}\" [tabindex]=\"isFirstPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-step-backward\"></span>\n            </a>\n            <a tabindex=\"0\" [attr.tabindex]=\"isFirstPage() ? null : '0'\" class=\"ui-paginator-prev ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToPrev($event)\" (keydown.enter)=\"changePageToPrev($event)\" [ngClass]=\"{'ui-state-disabled':isFirstPage()}\" [tabindex]=\"isFirstPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-caret-left\"></span>\n            </a>\n            <span class=\"ui-paginator-pages\">\n                <a tabindex=\"0\" *ngFor=\"let pageLink of pageLinks\" class=\"ui-paginator-page ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"onPageLinkClick($event, pageLink - 1)\" (keydown.enter)=\"onPageLinkClick($event, pageLink - 1)\" [ngClass]=\"{'ui-state-active': (pageLink-1 == getPage())}\">{{pageLink}}</a>\n            </span>\n            <a [attr.tabindex]=\"isLastPage() ? null : '0'\" class=\"ui-paginator-next ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToNext($event)\" (keydown.enter)=\"changePageToNext($event)\" [ngClass]=\"{'ui-state-disabled':isLastPage()}\" [tabindex]=\"isLastPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-caret-right\"></span>\n            </a>\n            <a [attr.tabindex]=\"isLastPage() ? null : '0'\" class=\"ui-paginator-last ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToLast($event)\" (keydown.enter)=\"changePageToLast($event)\" [ngClass]=\"{'ui-state-disabled':isLastPage()}\" [tabindex]=\"isLastPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-step-forward\"></span>\n            </a>\n            <p-dropdown [options]=\"rowsPerPageItems\" [(ngModel)]=\"rows\" *ngIf=\"rowsPerPageOptions\" \n                (onChange)=\"onRppChange($event)\" [appendTo]=\"dropdownAppendTo\"></p-dropdown>\n            <div class=\"ui-paginator-right-content\" *ngIf=\"templateRight\">\n                <ng-container *ngTemplateOutlet=\"templateRight; context: {$implicit: paginatorState}\"></ng-container>\n            </div>\n        </div>\n    "
-        })
+            template: "\n        <div [class]=\"styleClass\" [ngStyle]=\"style\" [ngClass]=\"'ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix'\"\n            *ngIf=\"alwaysShow ? true : (pageLinks && pageLinks.length > 1)\">\n            <div class=\"ui-paginator-left-content\" *ngIf=\"templateLeft\">\n                <ng-container *ngTemplateOutlet=\"templateLeft; context: {$implicit: paginatorState}\"></ng-container>\n            </div>\n            <span class=\"ui-paginator-current\" *ngIf=\"showCurrentPageReport\">{{currentPageReport}}</span>\n            <a [attr.tabindex]=\"isFirstPage() ? null : '0'\" class=\"ui-paginator-first ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToFirst($event)\" (keydown.enter)=\"changePageToFirst($event)\" [ngClass]=\"{'ui-state-disabled':isFirstPage()}\" [tabindex]=\"isFirstPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-step-backward\"></span>\n            </a>\n            <a tabindex=\"0\" [attr.tabindex]=\"isFirstPage() ? null : '0'\" class=\"ui-paginator-prev ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToPrev($event)\" (keydown.enter)=\"changePageToPrev($event)\" [ngClass]=\"{'ui-state-disabled':isFirstPage()}\" [tabindex]=\"isFirstPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-caret-left\"></span>\n            </a>\n            <span class=\"ui-paginator-pages\">\n                <a tabindex=\"0\" *ngFor=\"let pageLink of pageLinks\" class=\"ui-paginator-page ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"onPageLinkClick($event, pageLink - 1)\" (keydown.enter)=\"onPageLinkClick($event, pageLink - 1)\" [ngClass]=\"{'ui-state-active': (pageLink-1 == getPage())}\">{{pageLink}}</a>\n            </span>\n            <a [attr.tabindex]=\"isLastPage() ? null : '0'\" class=\"ui-paginator-next ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToNext($event)\" (keydown.enter)=\"changePageToNext($event)\" [ngClass]=\"{'ui-state-disabled':isLastPage()}\" [tabindex]=\"isLastPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-caret-right\"></span>\n            </a>\n            <a [attr.tabindex]=\"isLastPage() ? null : '0'\" class=\"ui-paginator-last ui-paginator-element ui-state-default ui-corner-all\"\n                    (click)=\"changePageToLast($event)\" (keydown.enter)=\"changePageToLast($event)\" [ngClass]=\"{'ui-state-disabled':isLastPage()}\" [tabindex]=\"isLastPage() ? -1 : null\">\n                <span class=\"ui-paginator-icon pi pi-step-forward\"></span>\n            </a>\n            <p-dropdown [options]=\"rowsPerPageItems\" [(ngModel)]=\"rows\" *ngIf=\"rowsPerPageOptions\" \n                (onChange)=\"onRppChange($event)\" [appendTo]=\"dropdownAppendTo\"></p-dropdown>\n            <div class=\"ui-paginator-right-content\" *ngIf=\"templateRight\">\n                <ng-container *ngTemplateOutlet=\"templateRight; context: {$implicit: paginatorState}\"></ng-container>\n            </div>\n        </div>\n    "
+        }),
+        __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
     ], Paginator);
     return Paginator;
 }());
@@ -23173,7 +21945,8 @@ var animations_1 = __webpack_require__(/*! @angular/animations */ "./node_module
 var common_1 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var BasePanelMenuItem = /** @class */ (function () {
-    function BasePanelMenuItem() {
+    function BasePanelMenuItem(ref) {
+        this.ref = ref;
     }
     BasePanelMenuItem.prototype.handleClick = function (event, item) {
         if (item.disabled) {
@@ -23181,6 +21954,7 @@ var BasePanelMenuItem = /** @class */ (function () {
             return;
         }
         item.expanded = !item.expanded;
+        this.ref.detectChanges();
         if (!item.url) {
             event.preventDefault();
         }
@@ -23196,8 +21970,8 @@ var BasePanelMenuItem = /** @class */ (function () {
 exports.BasePanelMenuItem = BasePanelMenuItem;
 var PanelMenuSub = /** @class */ (function (_super) {
     __extends(PanelMenuSub, _super);
-    function PanelMenuSub() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function PanelMenuSub(ref) {
+        return _super.call(this, ref) || this;
     }
     __decorate([
         core_1.Input(),
@@ -23227,15 +22001,16 @@ var PanelMenuSub = /** @class */ (function (_super) {
                     animations_1.transition('hidden => visible', animations_1.animate('{{transitionParams}}'))
                 ])
             ]
-        })
+        }),
+        __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
     ], PanelMenuSub);
     return PanelMenuSub;
 }(BasePanelMenuItem));
 exports.PanelMenuSub = PanelMenuSub;
 var PanelMenu = /** @class */ (function (_super) {
     __extends(PanelMenu, _super);
-    function PanelMenu() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function PanelMenu(ref) {
+        var _this = _super.call(this, ref) || this;
         _this.multiple = true;
         _this.transitionOptions = '400ms cubic-bezier(0.86, 0, 0.07, 1)';
         return _this;
@@ -23299,7 +22074,8 @@ var PanelMenu = /** @class */ (function (_super) {
                     animations_1.transition('hidden => visible', animations_1.animate('{{transitionParams}}'))
                 ])
             ]
-        })
+        }),
+        __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
     ], PanelMenu);
     return PanelMenu;
 }(BasePanelMenuItem));
@@ -23646,7 +22422,7 @@ var PickList = /** @class */ (function () {
         var selected = (index != -1);
         var metaSelection = this.itemTouched ? false : this.metaKeySelection;
         if (metaSelection) {
-            var metaKey = (event.metaKey || event.ctrlKey);
+            var metaKey = (event.metaKey || event.ctrlKey || event.shiftKey);
             if (selected && metaKey) {
                 selectedItems.splice(index, 1);
             }
@@ -24411,6 +23187,8 @@ var RadioButton = /** @class */ (function () {
     function RadioButton(cd) {
         this.cd = cd;
         this.onClick = new core_1.EventEmitter();
+        this.onFocus = new core_1.EventEmitter();
+        this.onBlur = new core_1.EventEmitter();
         this.onModelChange = function () { };
         this.onModelTouched = function () { };
     }
@@ -24419,17 +23197,17 @@ var RadioButton = /** @class */ (function () {
         if (this.disabled) {
             return;
         }
-        this.select();
+        this.select(event);
         if (focus) {
             radioButton.focus();
         }
     };
-    RadioButton.prototype.select = function () {
+    RadioButton.prototype.select = function (event) {
         if (!this.disabled) {
             this.inputViewChild.nativeElement.checked = true;
             this.checked = true;
             this.onModelChange(this.value);
-            this.onClick.emit(null);
+            this.onClick.emit(event);
         }
     };
     RadioButton.prototype.writeValue = function (value) {
@@ -24448,15 +23226,17 @@ var RadioButton = /** @class */ (function () {
     RadioButton.prototype.setDisabledState = function (val) {
         this.disabled = val;
     };
-    RadioButton.prototype.onFocus = function (event) {
+    RadioButton.prototype.onInputFocus = function (event) {
         this.focused = true;
+        this.onFocus.emit(event);
     };
-    RadioButton.prototype.onBlur = function (event) {
+    RadioButton.prototype.onInputBlur = function (event) {
         this.focused = false;
         this.onModelTouched();
+        this.onBlur.emit(event);
     };
     RadioButton.prototype.onChange = function (event) {
-        this.select();
+        this.select(event);
     };
     __decorate([
         core_1.Input(),
@@ -24499,13 +23279,21 @@ var RadioButton = /** @class */ (function () {
         __metadata("design:type", core_1.EventEmitter)
     ], RadioButton.prototype, "onClick", void 0);
     __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], RadioButton.prototype, "onFocus", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], RadioButton.prototype, "onBlur", void 0);
+    __decorate([
         core_1.ViewChild('rb'),
         __metadata("design:type", core_1.ElementRef)
     ], RadioButton.prototype, "inputViewChild", void 0);
     RadioButton = __decorate([
         core_1.Component({
             selector: 'p-radioButton',
-            template: "\n        <div [ngStyle]=\"style\" [ngClass]=\"'ui-radiobutton ui-widget'\" [class]=\"styleClass\">\n            <div class=\"ui-helper-hidden-accessible\">\n                <input #rb type=\"radio\" [attr.id]=\"inputId\" [attr.name]=\"name\" [attr.value]=\"value\" [attr.tabindex]=\"tabindex\" \n                    [checked]=\"checked\" (change)=\"onChange($event)\" (focus)=\"onFocus($event)\" (blur)=\"onBlur($event)\" [disabled]=\"disabled\">\n            </div>\n            <div (click)=\"handleClick($event, rb, true)\"\n                [ngClass]=\"{'ui-radiobutton-box ui-widget ui-state-default':true,\n                'ui-state-active':rb.checked,'ui-state-disabled':disabled,'ui-state-focus':focused}\">\n                <span class=\"ui-radiobutton-icon ui-clickable\" [ngClass]=\"{'pi pi-circle-on':rb.checked}\"></span>\n            </div>\n        </div>\n        <label (click)=\"select()\" [class]=\"labelStyleClass\"\n            [ngClass]=\"{'ui-radiobutton-label':true, 'ui-label-active':rb.checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}\"\n            *ngIf=\"label\" [attr.for]=\"inputId\">{{label}}</label>\n    ",
+            template: "\n        <div [ngStyle]=\"style\" [ngClass]=\"'ui-radiobutton ui-widget'\" [class]=\"styleClass\">\n            <div class=\"ui-helper-hidden-accessible\">\n                <input #rb type=\"radio\" [attr.id]=\"inputId\" [attr.name]=\"name\" [attr.value]=\"value\" [attr.tabindex]=\"tabindex\" \n                    [checked]=\"checked\" (change)=\"onChange($event)\" (focus)=\"onInputFocus($event)\" (blur)=\"onInputBlur($event)\" [disabled]=\"disabled\">\n            </div>\n            <div (click)=\"handleClick($event, rb, true)\"\n                [ngClass]=\"{'ui-radiobutton-box ui-widget ui-state-default':true,\n                'ui-state-active':rb.checked,'ui-state-disabled':disabled,'ui-state-focus':focused}\">\n                <span class=\"ui-radiobutton-icon ui-clickable\" [ngClass]=\"{'pi pi-circle-on':rb.checked}\"></span>\n            </div>\n        </div>\n        <label (click)=\"select($event)\" [class]=\"labelStyleClass\"\n            [ngClass]=\"{'ui-radiobutton-label':true, 'ui-label-active':rb.checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}\"\n            *ngIf=\"label\" [attr.for]=\"inputId\">{{label}}</label>\n    ",
             providers: [exports.RADIO_VALUE_ACCESSOR]
         }),
         __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
@@ -26325,6 +25113,9 @@ var Slider = /** @class */ (function () {
         event.preventDefault();
     };
     Slider.prototype.onTouchStart = function (event, index) {
+        if (this.disabled) {
+            return;
+        }
         var touchobj = event.changedTouches[0];
         this.startHandleValue = (this.range) ? this.handleValues[index] : this.handleValue;
         this.dragging = true;
@@ -26340,6 +25131,9 @@ var Slider = /** @class */ (function () {
         event.preventDefault();
     };
     Slider.prototype.onTouchMove = function (event, index) {
+        if (this.disabled) {
+            return;
+        }
         var touchobj = event.changedTouches[0], handleValue = 0;
         if (this.orientation === 'horizontal') {
             handleValue = Math.floor(((parseInt(touchobj.clientX, 10) - this.startx) * 100) / (this.barWidth)) + this.startHandleValue;
@@ -26351,6 +25145,9 @@ var Slider = /** @class */ (function () {
         event.preventDefault();
     };
     Slider.prototype.onTouchEnd = function (event, index) {
+        if (this.disabled) {
+            return;
+        }
         this.dragging = false;
         if (this.range)
             this.onSlideEnd.emit({ originalEvent: event, values: this.values });
@@ -26685,7 +25482,6 @@ var Spinner = /** @class */ (function () {
         this.onFocus = new core_1.EventEmitter();
         this.onBlur = new core_1.EventEmitter();
         this.step = 1;
-        this.type = 'text';
         this.onModelChange = function () { };
         this.onModelTouched = function () { };
         this.keyPattern = /[0-9\+\-]/;
@@ -26693,27 +25489,37 @@ var Spinner = /** @class */ (function () {
     }
     Object.defineProperty(Spinner.prototype, "decimalSeparator", {
         set: function (value) {
-            console.warn("decimalSeparator property is removed Spinner as Spinner does not format the value anymore.");
+            console.warn("decimalSeparator property is removed as Spinner does not format the value anymore.");
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(Spinner.prototype, "thousandSeparator", {
         set: function (value) {
-            console.warn("thousandSeparator property is removed Spinner as Spinner does not format the value anymore.");
+            console.warn("thousandSeparator property is removed as Spinner does not format the value anymore.");
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(Spinner.prototype, "formatInput", {
         set: function (value) {
-            console.warn("formatInput property is removed Spinner as Spinner does not format the value anymore.");
+            console.warn("formatInput property is removed as Spinner does not format the value anymore.");
         },
         enumerable: true,
         configurable: true
     });
-    Spinner.prototype.ngOnInit = function () {
-        if (this.step % 1 !== 0) {
+    Object.defineProperty(Spinner.prototype, "type", {
+        set: function (value) {
+            console.warn("type property is removed as Spinner does not format the value anymore");
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Spinner.prototype.ngAfterViewInit = function () {
+        if (this.value && this.value.toString().indexOf('.') > 0) {
+            this.precision = this.value.toString().split(/[.]/)[1].length;
+        }
+        else if (this.step % 1 !== 0) {
             // If step is not an integer then extract the length of the decimal part
             this.precision = this.step.toString().split(/[,]|[.]/)[1].length;
         }
@@ -26804,12 +25610,11 @@ var Spinner = /** @class */ (function () {
         this.onChange.emit(event);
     };
     Spinner.prototype.onInput = function (event) {
-        this.value = event.target.value;
-        this.onModelChange(this.value);
-    };
-    Spinner.prototype.onInputBlur = function (event) {
         this.value = this.parseValue(event.target.value);
         this.onModelChange(this.value);
+        this.updateFilledState();
+    };
+    Spinner.prototype.onInputBlur = function (event) {
         this.focus = false;
         this.onModelTouched();
         this.onBlur.emit(event);
@@ -26917,10 +25722,6 @@ var Spinner = /** @class */ (function () {
     ], Spinner.prototype, "tabindex", void 0);
     __decorate([
         core_1.Input(),
-        __metadata("design:type", String)
-    ], Spinner.prototype, "type", void 0);
-    __decorate([
-        core_1.Input(),
         __metadata("design:type", Boolean)
     ], Spinner.prototype, "required", void 0);
     __decorate([
@@ -26954,10 +25755,15 @@ var Spinner = /** @class */ (function () {
         __metadata("design:type", Boolean),
         __metadata("design:paramtypes", [Boolean])
     ], Spinner.prototype, "formatInput", null);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], Spinner.prototype, "type", null);
     Spinner = __decorate([
         core_1.Component({
             selector: 'p-spinner',
-            template: "\n        <span class=\"ui-spinner ui-widget ui-corner-all\">\n            <input #inputfield [attr.type]=\"type\" [attr.id]=\"inputId\" [value]=\"value === 0 ? '0' : value||null\" [attr.name]=\"name\"\n            [attr.size]=\"size\" [attr.maxlength]=\"maxlength\" [attr.tabindex]=\"tabindex\" [attr.placeholder]=\"placeholder\" [disabled]=\"disabled\" [readonly]=\"readonly\" [attr.required]=\"required\"\n            (keydown)=\"onInputKeydown($event)\" (blur)=\"onInputBlur($event)\" (input)=\"onInput($event)\" (change)=\"onInputChange($event)\" (focus)=\"onInputFocus($event)\"\n            [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" [ngClass]=\"'ui-spinner-input ui-inputtext ui-widget ui-state-default ui-corner-all'\">\n            <button type=\"button\" [ngClass]=\"{'ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default':true,'ui-state-disabled':disabled}\" [disabled]=\"disabled||readonly\" [attr.tabindex]=\"tabindex\" [attr.readonly]=\"readonly\"\n                (mouseleave)=\"onUpButtonMouseleave($event)\" (mousedown)=\"onUpButtonMousedown($event)\" (mouseup)=\"onUpButtonMouseup($event)\">\n                <span class=\"ui-spinner-button-icon pi pi-caret-up ui-clickable\"></span>\n            </button>\n            <button type=\"button\" [ngClass]=\"{'ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default':true,'ui-state-disabled':disabled}\" [disabled]=\"disabled||readonly\" [attr.tabindex]=\"tabindex\" [attr.readonly]=\"readonly\"\n                (mouseleave)=\"onDownButtonMouseleave($event)\" (mousedown)=\"onDownButtonMousedown($event)\" (mouseup)=\"onDownButtonMouseup($event)\">\n                <span class=\"ui-spinner-button-icon pi pi-caret-down ui-clickable\"></span>\n            </button>\n        </span>\n    ",
+            template: "\n        <span class=\"ui-spinner ui-widget ui-corner-all\">\n            <input #inputfield type=\"text\" [attr.id]=\"inputId\" [value]=\"value === 0 ? '0' : value||null\" [attr.name]=\"name\"\n            [attr.size]=\"size\" [attr.maxlength]=\"maxlength\" [attr.tabindex]=\"tabindex\" [attr.placeholder]=\"placeholder\" [disabled]=\"disabled\" [readonly]=\"readonly\" [attr.required]=\"required\"\n            (keydown)=\"onInputKeydown($event)\" (blur)=\"onInputBlur($event)\" (input)=\"onInput($event)\" (change)=\"onInputChange($event)\" (focus)=\"onInputFocus($event)\"\n            [ngStyle]=\"inputStyle\" [class]=\"inputStyleClass\" [ngClass]=\"'ui-spinner-input ui-inputtext ui-widget ui-state-default ui-corner-all'\">\n            <button type=\"button\" [ngClass]=\"{'ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default':true,'ui-state-disabled':disabled}\" [disabled]=\"disabled||readonly\" [attr.tabindex]=\"tabindex\" [attr.readonly]=\"readonly\"\n                (mouseleave)=\"onUpButtonMouseleave($event)\" (mousedown)=\"onUpButtonMousedown($event)\" (mouseup)=\"onUpButtonMouseup($event)\">\n                <span class=\"ui-spinner-button-icon pi pi-caret-up ui-clickable\"></span>\n            </button>\n            <button type=\"button\" [ngClass]=\"{'ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default':true,'ui-state-disabled':disabled}\" [disabled]=\"disabled||readonly\" [attr.tabindex]=\"tabindex\" [attr.readonly]=\"readonly\"\n                (mouseleave)=\"onDownButtonMouseleave($event)\" (mousedown)=\"onDownButtonMousedown($event)\" (mouseup)=\"onDownButtonMouseup($event)\">\n                <span class=\"ui-spinner-button-icon pi pi-caret-down ui-clickable\"></span>\n            </button>\n        </span>\n    ",
             host: {
                 '[class.ui-inputwrapper-filled]': 'filled',
                 '[class.ui-inputwrapper-focus]': 'focus'
@@ -27991,8 +26797,9 @@ var common_1 = __webpack_require__(/*! @angular/common */ "./node_modules/@angul
 var domhandler_1 = __webpack_require__(/*! ../dom/domhandler */ "./node_modules/primeng/components/dom/domhandler.js");
 var router_1 = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var TieredMenuSub = /** @class */ (function () {
-    function TieredMenuSub(tieredMenu) {
+    function TieredMenuSub(tieredMenu, cf) {
         this.tieredMenu = tieredMenu;
+        this.cf = cf;
         this.autoZIndex = true;
         this.baseZIndex = 0;
         this.hideDelay = 250;
@@ -28021,6 +26828,7 @@ var TieredMenuSub = /** @class */ (function () {
         var _this = this;
         this.hideTimeout = setTimeout(function () {
             _this.activeItem = null;
+            _this.cf.markForCheck();
         }, this.hideDelay);
     };
     TieredMenuSub.prototype.itemClick = function (event, item) {
@@ -28070,7 +26878,7 @@ var TieredMenuSub = /** @class */ (function () {
             template: "\n        <ul [ngClass]=\"{'ui-widget-content ui-corner-all ui-shadow ui-submenu-list': !root}\" (click)=\"listClick($event)\">\n            <ng-template ngFor let-child [ngForOf]=\"(root ? item : item.items)\">\n                <li *ngIf=\"child.separator\" class=\"ui-menu-separator ui-widget-content\" [ngClass]=\"{'ui-helper-hidden': child.visible === false}\">\n                <li *ngIf=\"!child.separator\" #listItem [ngClass]=\"{'ui-menuitem ui-widget ui-corner-all':true,'ui-menuitem-active':listItem==activeItem,'ui-helper-hidden': child.visible === false}\"\n                    [class]=\"child.styleClass\" [ngStyle]=\"child.style\"\n                    (mouseenter)=\"onItemMouseEnter($event, listItem, child)\" (mouseleave)=\"onItemMouseLeave($event)\">\n                    <a *ngIf=\"!child.routerLink\" [attr.href]=\"child.url\" class=\"ui-menuitem-link ui-corner-all\" [attr.target]=\"child.target\" [attr.title]=\"child.title\" [attr.id]=\"child.id\"\n                        [ngClass]=\"{'ui-state-disabled':child.disabled}\" (click)=\"itemClick($event, child)\">\n                        <span class=\"ui-menuitem-icon\" *ngIf=\"child.icon\" [ngClass]=\"child.icon\"></span>\n                        <span class=\"ui-menuitem-text\">{{child.label}}</span>\n                        <span class=\"ui-submenu-icon pi pi-fw pi-caret-right\" *ngIf=\"child.items\"></span>\n                    </a>\n                    <a *ngIf=\"child.routerLink\" [routerLink]=\"child.routerLink\" [queryParams]=\"child.queryParams\" [routerLinkActive]=\"'ui-state-active'\" \n                        [routerLinkActiveOptions]=\"child.routerLinkActiveOptions||{exact:false}\"\n                        class=\"ui-menuitem-link ui-corner-all\" [attr.target]=\"child.target\" [attr.title]=\"child.title\" [attr.id]=\"child.id\"\n                        [ngClass]=\"{'ui-state-disabled':child.disabled}\" (click)=\"itemClick($event, child)\">\n                        \n                        <span class=\"ui-menuitem-icon\" *ngIf=\"child.icon\" [ngClass]=\"child.icon\"></span>\n                        <span class=\"ui-menuitem-text\">{{child.label}}</span>\n                        <span class=\"ui-submenu-icon pi pi-fw pi-caret-right\" *ngIf=\"child.items\"></span>\n                    </a>\n                    <p-tieredMenuSub class=\"ui-submenu\" [item]=\"child\" *ngIf=\"child.items\" [baseZIndex]=\"baseZIndex\" [autoZIndex]=\"autoZIndex\" [hideDelay]=\"hideDelay\"></p-tieredMenuSub>\n                </li>\n            </ng-template>\n        </ul>\n    "
         }),
         __param(0, core_1.Inject(core_1.forwardRef(function () { return TieredMenu; }))),
-        __metadata("design:paramtypes", [TieredMenu])
+        __metadata("design:paramtypes", [TieredMenu, core_1.ChangeDetectorRef])
     ], TieredMenuSub);
     return TieredMenuSub;
 }());
@@ -29133,7 +27941,7 @@ var UITreeNode = /** @class */ (function () {
         switch (event.which) {
             //down arrow
             case 40:
-                var listElement = nodeElement.children[0].children[1];
+                var listElement = (this.tree.droppableNodes) ? nodeElement.children[1].children[1] : nodeElement.children[0].children[1];
                 if (listElement) {
                     this.focusNode(listElement.children[0]);
                 }
@@ -29175,6 +27983,12 @@ var UITreeNode = /** @class */ (function () {
             case 37:
                 if (this.node.expanded) {
                     this.collapse(event);
+                }
+                else {
+                    var parentNodeElement = this.getParentNodeElement(nodeElement);
+                    if (parentNodeElement) {
+                        this.focusNode(parentNodeElement);
+                    }
                 }
                 event.preventDefault();
                 break;
@@ -29249,7 +28063,7 @@ var UITreeNode = /** @class */ (function () {
     UITreeNode = UITreeNode_1 = __decorate([
         core_1.Component({
             selector: 'p-treeNode',
-            template: "\n        <ng-template [ngIf]=\"node\">\n            <li *ngIf=\"tree.droppableNodes\" class=\"ui-treenode-droppoint\" [ngClass]=\"{'ui-treenode-droppoint-active ui-state-highlight':draghoverPrev}\"\n            (drop)=\"onDropPoint($event,-1)\" (dragover)=\"onDropPointDragOver($event)\" (dragenter)=\"onDropPointDragEnter($event,-1)\" (dragleave)=\"onDropPointDragLeave($event)\"></li>\n            <li *ngIf=\"!tree.horizontal\" [ngClass]=\"['ui-treenode',node.styleClass||'', isLeaf() ? 'ui-treenode-leaf': '']\">\n                <div class=\"ui-treenode-content\" role=\"treeitem\" (click)=\"onNodeClick($event)\" (contextmenu)=\"onNodeRightClick($event)\" (touchend)=\"onNodeTouchEnd()\"\n                    (drop)=\"onDropNode($event)\" (dragover)=\"onDropNodeDragOver($event)\" (dragenter)=\"onDropNodeDragEnter($event)\" (dragleave)=\"onDropNodeDragLeave($event)\"\n                    [draggable]=\"tree.draggableNodes\" (dragstart)=\"onDragStart($event)\" (dragend)=\"onDragStop($event)\" tabIndex=\"0\"\n                    [ngClass]=\"{'ui-treenode-selectable':tree.selectionMode && node.selectable !== false,'ui-treenode-dragover':draghoverNode, 'ui-treenode-content-selected':isSelected()}\" \n                    (keydown)=\"onKeyDown($event)\" [attr.aria-posinset]=\"this.index + 1\" [attr.aria-expanded]=\"this.node.expanded\" [attr.aria-selected]=\"isSelected()\">\n                    <span class=\"ui-tree-toggler pi pi-fw ui-unselectable-text\" [ngClass]=\"{'pi-caret-right':!node.expanded,'pi-caret-down':node.expanded}\"\n                            (click)=\"toggle($event)\"></span\n                    ><div class=\"ui-chkbox\" *ngIf=\"tree.selectionMode == 'checkbox'\"><div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\" [ngClass]=\"{'ui-state-disabled': node.selectable === false}\">\n                        <span class=\"ui-chkbox-icon ui-clickable pi\"\n                            [ngClass]=\"{'pi-check':isSelected(),'pi-minus':node.partialSelected}\"></span></div></div\n                    ><span [class]=\"getIcon()\" *ngIf=\"node.icon||node.expandedIcon||node.collapsedIcon\"></span\n                    ><span class=\"ui-treenode-label ui-corner-all\"\n                        [ngClass]=\"{'ui-state-highlight':isSelected()}\">\n                            <span *ngIf=\"!tree.getTemplateForNode(node)\">{{node.label}}</span>\n                            <span *ngIf=\"tree.getTemplateForNode(node)\">\n                                <ng-container *ngTemplateOutlet=\"tree.getTemplateForNode(node); context: {$implicit: node}\"></ng-container>\n                            </span>\n                    </span>\n                </div>\n                <ul class=\"ui-treenode-children\" style=\"display: none;\" *ngIf=\"node.children && node.expanded\" [style.display]=\"node.expanded ? 'block' : 'none'\" role=\"group\">\n                    <p-treeNode *ngFor=\"let childNode of node.children;let firstChild=first;let lastChild=last; let index=index; trackBy: tree.nodeTrackBy\" [node]=\"childNode\" [parentNode]=\"node\"\n                        [firstChild]=\"firstChild\" [lastChild]=\"lastChild\" [index]=\"index\"></p-treeNode>\n                </ul>\n            </li>\n            <li *ngIf=\"tree.droppableNodes&&lastChild\" class=\"ui-treenode-droppoint\" [ngClass]=\"{'ui-treenode-droppoint-active ui-state-highlight':draghoverNext}\"\n            (drop)=\"onDropPoint($event,1)\" (dragover)=\"onDropPointDragOver($event)\" (dragenter)=\"onDropPointDragEnter($event,1)\" (dragleave)=\"onDropPointDragLeave($event)\"></li>\n            <table *ngIf=\"tree.horizontal\" [class]=\"node.styleClass\">\n                <tbody>\n                    <tr>\n                        <td class=\"ui-treenode-connector\" *ngIf=\"!root\">\n                            <table class=\"ui-treenode-connector-table\">\n                                <tbody>\n                                    <tr>\n                                        <td [ngClass]=\"{'ui-treenode-connector-line':!firstChild}\"></td>\n                                    </tr>\n                                    <tr>\n                                        <td [ngClass]=\"{'ui-treenode-connector-line':!lastChild}\"></td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </td>\n                        <td class=\"ui-treenode\" [ngClass]=\"{'ui-treenode-collapsed':!node.expanded}\">\n                            <div class=\"ui-treenode-content ui-state-default ui-corner-all\"\n                                [ngClass]=\"{'ui-treenode-selectable':tree.selectionMode,'ui-state-highlight':isSelected()}\" (click)=\"onNodeClick($event)\" (contextmenu)=\"onNodeRightClick($event)\"\n                                (touchend)=\"onNodeTouchEnd()\">\n                                <span class=\"ui-tree-toggler pi pi-fw ui-unselectable-text\" [ngClass]=\"{'pi-plus':!node.expanded,'pi-minus':node.expanded}\" *ngIf=\"!isLeaf()\"\n                                        (click)=\"toggle($event)\"></span\n                                ><span [class]=\"getIcon()\" *ngIf=\"node.icon||node.expandedIcon||node.collapsedIcon\"></span\n                                ><span class=\"ui-treenode-label ui-corner-all\">\n                                        <span *ngIf=\"!tree.getTemplateForNode(node)\">{{node.label}}</span>\n                                        <span *ngIf=\"tree.getTemplateForNode(node)\">\n                                        <ng-container *ngTemplateOutlet=\"tree.getTemplateForNode(node); context: {$implicit: node}\"></ng-container>\n                                        </span>\n                                </span>\n                            </div>\n                        </td>\n                        <td class=\"ui-treenode-children-container\" *ngIf=\"node.children && node.expanded\" [style.display]=\"node.expanded ? 'table-cell' : 'none'\">\n                            <div class=\"ui-treenode-children\">\n                                <p-treeNode *ngFor=\"let childNode of node.children;let firstChild=first;let lastChild=last; trackBy: tree.nodeTrackBy\" [node]=\"childNode\"\n                                        [firstChild]=\"firstChild\" [lastChild]=\"lastChild\"></p-treeNode>\n                            </div>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </ng-template>\n    "
+            template: "\n        <ng-template [ngIf]=\"node\">\n            <li *ngIf=\"tree.droppableNodes\" class=\"ui-treenode-droppoint\" [ngClass]=\"{'ui-treenode-droppoint-active ui-state-highlight':draghoverPrev}\"\n            (drop)=\"onDropPoint($event,-1)\" (dragover)=\"onDropPointDragOver($event)\" (dragenter)=\"onDropPointDragEnter($event,-1)\" (dragleave)=\"onDropPointDragLeave($event)\"></li>\n            <li *ngIf=\"!tree.horizontal\" role=\"treeitem\" [ngClass]=\"['ui-treenode',node.styleClass||'', isLeaf() ? 'ui-treenode-leaf': '']\">\n                <div class=\"ui-treenode-content\" (click)=\"onNodeClick($event)\" (contextmenu)=\"onNodeRightClick($event)\" (touchend)=\"onNodeTouchEnd()\"\n                    (drop)=\"onDropNode($event)\" (dragover)=\"onDropNodeDragOver($event)\" (dragenter)=\"onDropNodeDragEnter($event)\" (dragleave)=\"onDropNodeDragLeave($event)\"\n                    [draggable]=\"tree.draggableNodes\" (dragstart)=\"onDragStart($event)\" (dragend)=\"onDragStop($event)\" tabIndex=\"0\"\n                    [ngClass]=\"{'ui-treenode-selectable':tree.selectionMode && node.selectable !== false,'ui-treenode-dragover':draghoverNode, 'ui-treenode-content-selected':isSelected()}\" \n                    (keydown)=\"onKeyDown($event)\" [attr.aria-posinset]=\"this.index + 1\" [attr.aria-expanded]=\"this.node.expanded\" [attr.aria-selected]=\"isSelected()\">\n                    <span class=\"ui-tree-toggler pi pi-fw ui-unselectable-text\" [ngClass]=\"{'pi-caret-right':!node.expanded,'pi-caret-down':node.expanded}\"\n                            (click)=\"toggle($event)\"></span\n                    ><div class=\"ui-chkbox\" *ngIf=\"tree.selectionMode == 'checkbox'\"><div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\" [ngClass]=\"{'ui-state-disabled': node.selectable === false}\">\n                        <span class=\"ui-chkbox-icon ui-clickable pi\"\n                            [ngClass]=\"{'pi-check':isSelected(),'pi-minus':node.partialSelected}\"></span></div></div\n                    ><span [class]=\"getIcon()\" *ngIf=\"node.icon||node.expandedIcon||node.collapsedIcon\"></span\n                    ><span class=\"ui-treenode-label ui-corner-all\"\n                        [ngClass]=\"{'ui-state-highlight':isSelected()}\">\n                            <span *ngIf=\"!tree.getTemplateForNode(node)\">{{node.label}}</span>\n                            <span *ngIf=\"tree.getTemplateForNode(node)\">\n                                <ng-container *ngTemplateOutlet=\"tree.getTemplateForNode(node); context: {$implicit: node}\"></ng-container>\n                            </span>\n                    </span>\n                </div>\n                <ul class=\"ui-treenode-children\" style=\"display: none;\" *ngIf=\"node.children && node.expanded\" [style.display]=\"node.expanded ? 'block' : 'none'\" role=\"group\">\n                    <p-treeNode *ngFor=\"let childNode of node.children;let firstChild=first;let lastChild=last; let index=index; trackBy: tree.nodeTrackBy\" [node]=\"childNode\" [parentNode]=\"node\"\n                        [firstChild]=\"firstChild\" [lastChild]=\"lastChild\" [index]=\"index\"></p-treeNode>\n                </ul>\n            </li>\n            <li *ngIf=\"tree.droppableNodes&&lastChild\" class=\"ui-treenode-droppoint\" [ngClass]=\"{'ui-treenode-droppoint-active ui-state-highlight':draghoverNext}\"\n            (drop)=\"onDropPoint($event,1)\" (dragover)=\"onDropPointDragOver($event)\" (dragenter)=\"onDropPointDragEnter($event,1)\" (dragleave)=\"onDropPointDragLeave($event)\"></li>\n            <table *ngIf=\"tree.horizontal\" [class]=\"node.styleClass\">\n                <tbody>\n                    <tr>\n                        <td class=\"ui-treenode-connector\" *ngIf=\"!root\">\n                            <table class=\"ui-treenode-connector-table\">\n                                <tbody>\n                                    <tr>\n                                        <td [ngClass]=\"{'ui-treenode-connector-line':!firstChild}\"></td>\n                                    </tr>\n                                    <tr>\n                                        <td [ngClass]=\"{'ui-treenode-connector-line':!lastChild}\"></td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </td>\n                        <td class=\"ui-treenode\" [ngClass]=\"{'ui-treenode-collapsed':!node.expanded}\">\n                            <div class=\"ui-treenode-content ui-state-default ui-corner-all\"\n                                [ngClass]=\"{'ui-treenode-selectable':tree.selectionMode,'ui-state-highlight':isSelected()}\" (click)=\"onNodeClick($event)\" (contextmenu)=\"onNodeRightClick($event)\"\n                                (touchend)=\"onNodeTouchEnd()\">\n                                <span class=\"ui-tree-toggler pi pi-fw ui-unselectable-text\" [ngClass]=\"{'pi-plus':!node.expanded,'pi-minus':node.expanded}\" *ngIf=\"!isLeaf()\"\n                                        (click)=\"toggle($event)\"></span\n                                ><span [class]=\"getIcon()\" *ngIf=\"node.icon||node.expandedIcon||node.collapsedIcon\"></span\n                                ><span class=\"ui-treenode-label ui-corner-all\">\n                                        <span *ngIf=\"!tree.getTemplateForNode(node)\">{{node.label}}</span>\n                                        <span *ngIf=\"tree.getTemplateForNode(node)\">\n                                        <ng-container *ngTemplateOutlet=\"tree.getTemplateForNode(node); context: {$implicit: node}\"></ng-container>\n                                        </span>\n                                </span>\n                            </div>\n                        </td>\n                        <td class=\"ui-treenode-children-container\" *ngIf=\"node.children && node.expanded\" [style.display]=\"node.expanded ? 'table-cell' : 'none'\">\n                            <div class=\"ui-treenode-children\">\n                                <p-treeNode *ngFor=\"let childNode of node.children;let firstChild=first;let lastChild=last; trackBy: tree.nodeTrackBy\" [node]=\"childNode\"\n                                        [firstChild]=\"firstChild\" [lastChild]=\"lastChild\"></p-treeNode>\n                            </div>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </ng-template>\n    "
         }),
         __param(0, core_1.Inject(core_1.forwardRef(function () { return Tree; }))),
         __metadata("design:paramtypes", [Tree])
@@ -29915,10 +28729,12 @@ var TreeTableService = /** @class */ (function () {
         this.selectionSource = new rxjs_1.Subject();
         this.contextMenuSource = new rxjs_1.Subject();
         this.uiUpdateSource = new rxjs_1.Subject();
+        this.totalRecordsSource = new rxjs_1.Subject();
         this.sortSource$ = this.sortSource.asObservable();
         this.selectionSource$ = this.selectionSource.asObservable();
         this.contextMenuSource$ = this.contextMenuSource.asObservable();
         this.uiUpdateSource$ = this.uiUpdateSource.asObservable();
+        this.totalRecordsSource$ = this.totalRecordsSource.asObservable();
     }
     TreeTableService.prototype.onSort = function (sortMeta) {
         this.sortSource.next(sortMeta);
@@ -29931,6 +28747,9 @@ var TreeTableService = /** @class */ (function () {
     };
     TreeTableService.prototype.onUIUpdate = function (value) {
         this.uiUpdateSource.next(value);
+    };
+    TreeTableService.prototype.onTotalRecordsChange = function (value) {
+        this.totalRecordsSource.next(value);
     };
     TreeTableService = __decorate([
         core_1.Injectable()
@@ -29945,7 +28764,6 @@ var TreeTable = /** @class */ (function () {
         this.tableService = tableService;
         this.lazy = false;
         this.first = 0;
-        this.totalRecords = 0;
         this.pageLinks = 5;
         this.alwaysShowPaginator = true;
         this.paginatorPosition = 'bottom';
@@ -29957,6 +28775,9 @@ var TreeTable = /** @class */ (function () {
         this.contextMenuSelectionMode = "separate";
         this.compareSelectionBy = 'deepEquals';
         this.loadingIcon = 'pi pi-spinner';
+        this.showLoader = true;
+        this.virtualScrollDelay = 150;
+        this.virtualRowHeight = 28;
         this.columnResizeMode = 'fit';
         this.rowTrackBy = function (index, item) { return item; };
         this.filters = {};
@@ -29979,6 +28800,7 @@ var TreeTable = /** @class */ (function () {
         this.onEditComplete = new core_1.EventEmitter();
         this.onEditCancel = new core_1.EventEmitter();
         this._value = [];
+        this._totalRecords = 0;
         this._sortOrder = 1;
         this.selectionKeys = {};
         this.filterConstraints = {
@@ -30119,6 +28941,9 @@ var TreeTable = /** @class */ (function () {
                 case 'body':
                     _this.bodyTemplate = item.template;
                     break;
+                case 'loadingbody':
+                    _this.loadingBodyTemplate = item.template;
+                    break;
                 case 'footer':
                     _this.footerTemplate = item.template;
                     break;
@@ -30166,6 +28991,9 @@ var TreeTable = /** @class */ (function () {
                     this.sortMultiple();
                 else if (this.hasFilter()) //sort already filters
                     this._filter();
+            }
+            if (this.virtualScroll && this.virtualScrollCallback) {
+                this.virtualScrollCallback();
             }
             this.updateSerializedValue();
             this.tableService.onUIUpdate(this.value);
@@ -30217,6 +29045,17 @@ var TreeTable = /** @class */ (function () {
             }
         }
     };
+    Object.defineProperty(TreeTable.prototype, "totalRecords", {
+        get: function () {
+            return this._totalRecords;
+        },
+        set: function (val) {
+            this._totalRecords = val;
+            this.tableService.onTotalRecordsChange(this._totalRecords);
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(TreeTable.prototype, "sortField", {
         get: function () {
             return this._sortField;
@@ -30483,13 +29322,26 @@ var TreeTable = /** @class */ (function () {
     TreeTable.prototype.createLazyLoadMetadata = function () {
         return {
             first: this.first,
-            rows: this.rows,
+            rows: this.virtualScroll ? this.rows * 2 : this.rows,
             sortField: this.sortField,
             sortOrder: this.sortOrder,
             filters: this.filters,
             globalFilter: this.filters && this.filters['global'] ? this.filters['global'].value : null,
             multiSortMeta: this.multiSortMeta
         };
+    };
+    TreeTable.prototype.handleVirtualScroll = function (event) {
+        var _this = this;
+        this.first = (event.page - 1) * this.rows;
+        this.virtualScrollCallback = event.callback;
+        this.zone.run(function () {
+            if (_this.virtualScrollTimer) {
+                clearTimeout(_this.virtualScrollTimer);
+            }
+            _this.virtualScrollTimer = setTimeout(function () {
+                _this.onLazyLoad.emit(_this.createLazyLoadMetadata());
+            }, _this.virtualScrollDelay);
+        });
     };
     TreeTable.prototype.isEmpty = function () {
         var data = this.filteredNodes || this.value;
@@ -31186,10 +30038,6 @@ var TreeTable = /** @class */ (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", Number)
-    ], TreeTable.prototype, "totalRecords", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
     ], TreeTable.prototype, "pageLinks", void 0);
     __decorate([
         core_1.Input(),
@@ -31270,11 +30118,27 @@ var TreeTable = /** @class */ (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", Boolean)
+    ], TreeTable.prototype, "showLoader", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
     ], TreeTable.prototype, "scrollable", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
     ], TreeTable.prototype, "scrollHeight", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], TreeTable.prototype, "virtualScroll", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Number)
+    ], TreeTable.prototype, "virtualScrollDelay", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Number)
+    ], TreeTable.prototype, "virtualRowHeight", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
@@ -31414,6 +30278,11 @@ var TreeTable = /** @class */ (function () {
     ], TreeTable.prototype, "value", null);
     __decorate([
         core_1.Input(),
+        __metadata("design:type", Number),
+        __metadata("design:paramtypes", [Number])
+    ], TreeTable.prototype, "totalRecords", null);
+    __decorate([
+        core_1.Input(),
         __metadata("design:type", String),
         __metadata("design:paramtypes", [String])
     ], TreeTable.prototype, "sortField", null);
@@ -31435,7 +30304,7 @@ var TreeTable = /** @class */ (function () {
     TreeTable = __decorate([
         core_1.Component({
             selector: 'p-treeTable',
-            template: "\n        <div #container [ngStyle]=\"style\" [class]=\"styleClass\"\n                [ngClass]=\"{'ui-treetable ui-widget': true, 'ui-treetable-auto-layout': autoLayout, 'ui-treetable-hoverable-rows': (rowHover||(selectionMode === 'single' || selectionMode === 'multiple')),\n                'ui-treetable-resizable': resizableColumns, 'ui-treetable-resizable-fit': (resizableColumns && columnResizeMode === 'fit')}\">\n            <div class=\"ui-treetable-loading ui-widget-overlay\" *ngIf=\"loading\"></div>\n            <div class=\"ui-treetable-loading-content\" *ngIf=\"loading\">\n                <i [class]=\"'ui-treetable-loading-icon pi-spin ' + loadingIcon\"></i>\n            </div>\n            <div *ngIf=\"captionTemplate\" class=\"ui-treetable-caption ui-widget-header\">\n                <ng-container *ngTemplateOutlet=\"captionTemplate\"></ng-container>\n            </div>\n            <p-paginator [rows]=\"rows\" [first]=\"first\" [totalRecords]=\"totalRecords\" [pageLinkSize]=\"pageLinks\" styleClass=\"ui-paginator-top\" [alwaysShow]=\"alwaysShowPaginator\"\n                (onPageChange)=\"onPageChange($event)\" [rowsPerPageOptions]=\"rowsPerPageOptions\" *ngIf=\"paginator && (paginatorPosition === 'top' || paginatorPosition =='both')\"\n                [templateLeft]=\"paginatorLeftTemplate\" [templateRight]=\"paginatorRightTemplate\" [dropdownAppendTo]=\"paginatorDropdownAppendTo\"></p-paginator>\n            \n            <div class=\"ui-treetable-wrapper\" *ngIf=\"!scrollable\">\n                <table #table class=\"ui-treetable-table\">\n                    <ng-container *ngTemplateOutlet=\"colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                    <thead class=\"ui-treetable-thead\">\n                        <ng-container *ngTemplateOutlet=\"headerTemplate; context: {$implicit: columns}\"></ng-container>\n                    </thead>\n                    <tfoot class=\"ui-treetable-tfoot\">\n                        <ng-container *ngTemplateOutlet=\"footerTemplate; context {$implicit: columns}\"></ng-container>\n                    </tfoot>\n                    <tbody class=\"ui-treetable-tbody\" [pTreeTableBody]=\"columns\" [pTreeTableBodyTemplate]=\"bodyTemplate\"></tbody>\n                </table>\n            </div>\n\n            <div class=\"ui-treetable-scrollable-wrapper\" *ngIf=\"scrollable\">\n               <div class=\"ui-treetable-scrollable-view ui-treetable-frozen-view\" *ngIf=\"frozenColumns||frozenBodyTemplate\" [ttScrollableView]=\"frozenColumns\" [frozen]=\"true\" [ngStyle]=\"{width: frozenWidth}\" [scrollHeight]=\"scrollHeight\"></div>\n               <div class=\"ui-treetable-scrollable-view\" [ttScrollableView]=\"columns\" [frozen]=\"false\" [scrollHeight]=\"scrollHeight\"></div>\n            </div>\n\n            <p-paginator [rows]=\"rows\" [first]=\"first\" [totalRecords]=\"totalRecords\" [pageLinkSize]=\"pageLinks\" styleClass=\"ui-paginator-bottom\" [alwaysShow]=\"alwaysShowPaginator\"\n                (onPageChange)=\"onPageChange($event)\" [rowsPerPageOptions]=\"rowsPerPageOptions\" *ngIf=\"paginator && (paginatorPosition === 'bottom' || paginatorPosition =='both')\"\n                [templateLeft]=\"paginatorLeftTemplate\" [templateRight]=\"paginatorRightTemplate\" [dropdownAppendTo]=\"paginatorDropdownAppendTo\"></p-paginator>\n            <div *ngIf=\"summaryTemplate\" class=\"ui-treetable-summary ui-widget-header\">\n                <ng-container *ngTemplateOutlet=\"summaryTemplate\"></ng-container>\n            </div>\n\n            <div #resizeHelper class=\"ui-column-resizer-helper ui-state-highlight\" style=\"display:none\" *ngIf=\"resizableColumns\"></div>\n\n            <span #reorderIndicatorUp class=\"pi pi-arrow-down ui-table-reorder-indicator-up\" *ngIf=\"reorderableColumns\"></span>\n            <span #reorderIndicatorDown class=\"pi pi-arrow-up ui-table-reorder-indicator-down\" *ngIf=\"reorderableColumns\"></span>\n        </div>\n    ",
+            template: "\n        <div #container [ngStyle]=\"style\" [class]=\"styleClass\"\n                [ngClass]=\"{'ui-treetable ui-widget': true, 'ui-treetable-auto-layout': autoLayout, 'ui-treetable-hoverable-rows': (rowHover||(selectionMode === 'single' || selectionMode === 'multiple')),\n                'ui-treetable-resizable': resizableColumns, 'ui-treetable-resizable-fit': (resizableColumns && columnResizeMode === 'fit')}\">\n            <div class=\"ui-treetable-loading ui-widget-overlay\" *ngIf=\"loading && showLoader\"></div>\n            <div class=\"ui-treetable-loading-content\" *ngIf=\"loading && showLoader\">\n                <i [class]=\"'ui-treetable-loading-icon pi-spin ' + loadingIcon\"></i>\n            </div>\n            <div *ngIf=\"captionTemplate\" class=\"ui-treetable-caption ui-widget-header\">\n                <ng-container *ngTemplateOutlet=\"captionTemplate\"></ng-container>\n            </div>\n            <p-paginator [rows]=\"rows\" [first]=\"first\" [totalRecords]=\"totalRecords\" [pageLinkSize]=\"pageLinks\" styleClass=\"ui-paginator-top\" [alwaysShow]=\"alwaysShowPaginator\"\n                (onPageChange)=\"onPageChange($event)\" [rowsPerPageOptions]=\"rowsPerPageOptions\" *ngIf=\"paginator && (paginatorPosition === 'top' || paginatorPosition =='both')\"\n                [templateLeft]=\"paginatorLeftTemplate\" [templateRight]=\"paginatorRightTemplate\" [dropdownAppendTo]=\"paginatorDropdownAppendTo\"></p-paginator>\n            \n            <div class=\"ui-treetable-wrapper\" *ngIf=\"!scrollable\">\n                <table #table class=\"ui-treetable-table\">\n                    <ng-container *ngTemplateOutlet=\"colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                    <thead class=\"ui-treetable-thead\">\n                        <ng-container *ngTemplateOutlet=\"headerTemplate; context: {$implicit: columns}\"></ng-container>\n                    </thead>\n                    <tfoot class=\"ui-treetable-tfoot\">\n                        <ng-container *ngTemplateOutlet=\"footerTemplate; context {$implicit: columns}\"></ng-container>\n                    </tfoot>\n                    <tbody class=\"ui-treetable-tbody\" [pTreeTableBody]=\"columns\" [pTreeTableBodyTemplate]=\"bodyTemplate\"></tbody>\n                </table>\n            </div>\n\n            <div class=\"ui-treetable-scrollable-wrapper\" *ngIf=\"scrollable\">\n               <div class=\"ui-treetable-scrollable-view ui-treetable-frozen-view\" *ngIf=\"frozenColumns||frozenBodyTemplate\" [ttScrollableView]=\"frozenColumns\" [frozen]=\"true\" [ngStyle]=\"{width: frozenWidth}\" [scrollHeight]=\"scrollHeight\"></div>\n               <div class=\"ui-treetable-scrollable-view\" [ttScrollableView]=\"columns\" [frozen]=\"false\" [scrollHeight]=\"scrollHeight\"></div>\n            </div>\n\n            <p-paginator [rows]=\"rows\" [first]=\"first\" [totalRecords]=\"totalRecords\" [pageLinkSize]=\"pageLinks\" styleClass=\"ui-paginator-bottom\" [alwaysShow]=\"alwaysShowPaginator\"\n                (onPageChange)=\"onPageChange($event)\" [rowsPerPageOptions]=\"rowsPerPageOptions\" *ngIf=\"paginator && (paginatorPosition === 'bottom' || paginatorPosition =='both')\"\n                [templateLeft]=\"paginatorLeftTemplate\" [templateRight]=\"paginatorRightTemplate\" [dropdownAppendTo]=\"paginatorDropdownAppendTo\"></p-paginator>\n            <div *ngIf=\"summaryTemplate\" class=\"ui-treetable-summary ui-widget-header\">\n                <ng-container *ngTemplateOutlet=\"summaryTemplate\"></ng-container>\n            </div>\n\n            <div #resizeHelper class=\"ui-column-resizer-helper ui-state-highlight\" style=\"display:none\" *ngIf=\"resizableColumns\"></div>\n\n            <span #reorderIndicatorUp class=\"pi pi-arrow-down ui-table-reorder-indicator-up\" *ngIf=\"reorderableColumns\"></span>\n            <span #reorderIndicatorDown class=\"pi pi-arrow-up ui-table-reorder-indicator-down\" *ngIf=\"reorderableColumns\"></span>\n        </div>\n    ",
             providers: [TreeTableService]
         }),
         __metadata("design:paramtypes", [core_1.ElementRef, core_1.NgZone, TreeTableService])
@@ -31471,13 +30340,28 @@ var TTScrollableView = /** @class */ (function () {
         this.tt = tt;
         this.el = el;
         this.zone = zone;
+        this.loadingArray = [];
         this.subscription = this.tt.tableService.uiUpdateSource$.subscribe(function () {
             _this.zone.runOutsideAngular(function () {
                 setTimeout(function () {
                     _this.alignScrollBar();
+                    _this.initialized = true;
+                    if (_this.scrollLoadingTableViewChild && _this.scrollLoadingTableViewChild.nativeElement) {
+                        _this.scrollLoadingTableViewChild.nativeElement.style.display = 'none';
+                    }
                 }, 50);
             });
         });
+        if (this.tt.virtualScroll) {
+            this.totalRecordsSubscription = this.tt.tableService.totalRecordsSource$.subscribe(function () {
+                _this.zone.runOutsideAngular(function () {
+                    setTimeout(function () {
+                        _this.setVirtualScrollerHeight();
+                    }, 50);
+                });
+            });
+        }
+        this.loadingArray = Array(this.tt.rows).fill(1);
         this.initialized = false;
     }
     Object.defineProperty(TTScrollableView.prototype, "scrollHeight", {
@@ -31517,6 +30401,12 @@ var TTScrollableView = /** @class */ (function () {
         else {
             this.scrollBodyViewChild.nativeElement.style.paddingBottom = domhandler_1.DomHandler.calculateScrollbarWidth() + 'px';
         }
+        if (this.tt.virtualScroll) {
+            this.setVirtualScrollerHeight();
+            if (this.scrollLoadingTableViewChild && this.scrollLoadingTableViewChild.nativeElement) {
+                this.scrollLoadingTableViewChild.nativeElement.style.display = 'table';
+            }
+        }
     };
     TTScrollableView.prototype.bindEvents = function () {
         var _this = this;
@@ -31552,6 +30442,7 @@ var TTScrollableView = /** @class */ (function () {
         this.scrollFooterViewChild.nativeElement.scrollLeft = 0;
     };
     TTScrollableView.prototype.onBodyScroll = function (event) {
+        var _this = this;
         if (this.scrollHeaderViewChild && this.scrollHeaderViewChild.nativeElement) {
             this.scrollHeaderBoxViewChild.nativeElement.style.marginLeft = -1 * this.scrollBodyViewChild.nativeElement.scrollLeft + 'px';
         }
@@ -31560,6 +30451,33 @@ var TTScrollableView = /** @class */ (function () {
         }
         if (this.frozenSiblingBody) {
             this.frozenSiblingBody.scrollTop = this.scrollBodyViewChild.nativeElement.scrollTop;
+        }
+        if (this.tt.virtualScroll) {
+            var viewport = domhandler_1.DomHandler.getOuterHeight(this.scrollBodyViewChild.nativeElement);
+            var tableHeight = domhandler_1.DomHandler.getOuterHeight(this.scrollTableViewChild.nativeElement);
+            var pageHeight_1 = this.tt.virtualRowHeight * this.tt.rows;
+            var virtualTableHeight = domhandler_1.DomHandler.getOuterHeight(this.virtualScrollerViewChild.nativeElement);
+            var pageCount = (virtualTableHeight / pageHeight_1) || 1;
+            var scrollBodyTop = this.scrollTableViewChild.nativeElement.style.top || '0';
+            if ((this.scrollBodyViewChild.nativeElement.scrollTop + viewport > parseFloat(scrollBodyTop) + tableHeight) || (this.scrollBodyViewChild.nativeElement.scrollTop < parseFloat(scrollBodyTop))) {
+                if (this.scrollLoadingTableViewChild && this.scrollLoadingTableViewChild.nativeElement) {
+                    this.scrollLoadingTableViewChild.nativeElement.style.display = 'table';
+                    this.scrollLoadingTableViewChild.nativeElement.style.top = this.scrollBodyViewChild.nativeElement.scrollTop + 'px';
+                }
+                var page_1 = Math.floor((this.scrollBodyViewChild.nativeElement.scrollTop * pageCount) / (this.scrollBodyViewChild.nativeElement.scrollHeight)) + 1;
+                this.tt.handleVirtualScroll({
+                    page: page_1,
+                    callback: function () {
+                        if (_this.scrollLoadingTableViewChild && _this.scrollLoadingTableViewChild.nativeElement) {
+                            _this.scrollLoadingTableViewChild.nativeElement.style.display = 'none';
+                        }
+                        _this.scrollTableViewChild.nativeElement.style.top = ((page_1 - 1) * pageHeight_1) + 'px';
+                        if (_this.frozenSiblingBody) {
+                            _this.frozenSiblingBody.children[0].style.top = _this.scrollTableViewChild.nativeElement.style.top;
+                        }
+                    }
+                });
+            }
         }
     };
     TTScrollableView.prototype.setScrollHeight = function () {
@@ -31594,6 +30512,11 @@ var TTScrollableView = /** @class */ (function () {
             }
         }
     };
+    TTScrollableView.prototype.setVirtualScrollerHeight = function () {
+        if (this.virtualScrollerViewChild.nativeElement) {
+            this.virtualScrollerViewChild.nativeElement.style.height = this.tt.totalRecords * this.tt.virtualRowHeight + 'px';
+        }
+    };
     TTScrollableView.prototype.hasVerticalOverflow = function () {
         return domhandler_1.DomHandler.getOuterHeight(this.scrollTableViewChild.nativeElement) > domhandler_1.DomHandler.getOuterHeight(this.scrollBodyViewChild.nativeElement);
     };
@@ -31612,6 +30535,9 @@ var TTScrollableView = /** @class */ (function () {
         this.frozenSiblingBody = null;
         if (this.subscription) {
             this.subscription.unsubscribe();
+        }
+        if (this.totalRecordsSubscription) {
+            this.totalRecordsSubscription.unsubscribe();
         }
         this.initialized = false;
     };
@@ -31640,6 +30566,10 @@ var TTScrollableView = /** @class */ (function () {
         __metadata("design:type", core_1.ElementRef)
     ], TTScrollableView.prototype, "scrollTableViewChild", void 0);
     __decorate([
+        core_1.ViewChild('loadingTable'),
+        __metadata("design:type", core_1.ElementRef)
+    ], TTScrollableView.prototype, "scrollLoadingTableViewChild", void 0);
+    __decorate([
         core_1.ViewChild('scrollFooter'),
         __metadata("design:type", core_1.ElementRef)
     ], TTScrollableView.prototype, "scrollFooterViewChild", void 0);
@@ -31648,6 +30578,10 @@ var TTScrollableView = /** @class */ (function () {
         __metadata("design:type", core_1.ElementRef)
     ], TTScrollableView.prototype, "scrollFooterBoxViewChild", void 0);
     __decorate([
+        core_1.ViewChild('virtualScroller'),
+        __metadata("design:type", core_1.ElementRef)
+    ], TTScrollableView.prototype, "virtualScrollerViewChild", void 0);
+    __decorate([
         core_1.Input(),
         __metadata("design:type", String),
         __metadata("design:paramtypes", [String])
@@ -31655,7 +30589,7 @@ var TTScrollableView = /** @class */ (function () {
     TTScrollableView = __decorate([
         core_1.Component({
             selector: '[ttScrollableView]',
-            template: "\n        <div #scrollHeader class=\"ui-treetable-scrollable-header ui-widget-header\">\n            <div #scrollHeaderBox class=\"ui-treetable-scrollable-header-box\">\n                <table class=\"ui-treetable-scrollable-header-table\">\n                    <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenColGroupTemplate||tt.colGroupTemplate : tt.colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                    <thead class=\"ui-treetable-thead\">\n                        <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenHeaderTemplate||tt.headerTemplate : tt.headerTemplate; context {$implicit: columns}\"></ng-container>\n                    </thead>\n                </table>\n            </div>\n        </div>\n        <div #scrollBody class=\"ui-treetable-scrollable-body\">\n            <table #scrollTable class=\"ui-treetable-scrollable-body-table\">\n                <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenColGroupTemplate||tt.colGroupTemplate : tt.colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                <tbody class=\"ui-treetable-tbody\" [pTreeTableBody]=\"columns\" [pTreeTableBodyTemplate]=\"frozen ? tt.frozenBodyTemplate||tt.bodyTemplate : tt.bodyTemplate\"></tbody>\n            </table>\n        </div>\n        <div #scrollFooter *ngIf=\"tt.footerTemplate\" class=\"ui-treetable-scrollable-footer ui-widget-header\">\n            <div #scrollFooterBox class=\"ui-treetable-scrollable-footer-box\">\n                <table class=\"ui-treetable-scrollable-footer-table\">\n                    <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenColGroupTemplate||tt.colGroupTemplate : tt.colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                    <tfoot class=\"ui-treetable-tfoot\">\n                        <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenFooterTemplate||tt.footerTemplate : tt.footerTemplate; context {$implicit: columns}\"></ng-container>\n                    </tfoot>\n                </table>\n            </div>\n        </div>\n    "
+            template: "\n        <div #scrollHeader class=\"ui-treetable-scrollable-header ui-widget-header\">\n            <div #scrollHeaderBox class=\"ui-treetable-scrollable-header-box\">\n                <table class=\"ui-treetable-scrollable-header-table\">\n                    <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenColGroupTemplate||tt.colGroupTemplate : tt.colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                    <thead class=\"ui-treetable-thead\">\n                        <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenHeaderTemplate||tt.headerTemplate : tt.headerTemplate; context {$implicit: columns}\"></ng-container>\n                    </thead>\n                </table>\n            </div>\n        </div>\n        <div #scrollBody class=\"ui-treetable-scrollable-body\">\n            <table #scrollTable [ngClass]=\"{'ui-treetable-scrollable-body-table': true, 'ui-treetable-virtual-table': tt.virtualScroll}\">\n                <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenColGroupTemplate||tt.colGroupTemplate : tt.colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                <tbody class=\"ui-treetable-tbody\" [pTreeTableBody]=\"columns\" [pTreeTableBodyTemplate]=\"frozen ? tt.frozenBodyTemplate||tt.bodyTemplate : tt.bodyTemplate\"></tbody>\n            </table>\n            <table #loadingTable *ngIf=\"tt.virtualScroll && tt.loadingBodyTemplate != null\" [ngClass]=\"{'ui-treetable-scrollable-body-table ui-treetable-loading-virtual-table': true, 'ui-treetable-virtual-table': tt.virtualScroll}\">\n                <tbody class=\"ui-treetable-tbody\">\n                    <ng-template ngFor [ngForOf]=\"loadingArray\">\n                        <ng-container *ngTemplateOutlet=\"tt.loadingBodyTemplate; context: {columns: columns}\"></ng-container>\n                    </ng-template>\n                </tbody>\n            </table>\n            <div #virtualScroller class=\"ui-treetable-virtual-scroller\" *ngIf=\"tt.virtualScroll\"></div>\n        </div>\n        <div #scrollFooter *ngIf=\"tt.footerTemplate\" class=\"ui-treetable-scrollable-footer ui-widget-header\">\n            <div #scrollFooterBox class=\"ui-treetable-scrollable-footer-box\">\n                <table class=\"ui-treetable-scrollable-footer-table\">\n                    <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenColGroupTemplate||tt.colGroupTemplate : tt.colGroupTemplate; context {$implicit: columns}\"></ng-container>\n                    <tfoot class=\"ui-treetable-tfoot\">\n                        <ng-container *ngTemplateOutlet=\"frozen ? tt.frozenFooterTemplate||tt.footerTemplate : tt.footerTemplate; context {$implicit: columns}\"></ng-container>\n                    </tfoot>\n                </table>\n            </div>\n        </div>\n    "
         }),
         __metadata("design:paramtypes", [TreeTable, core_1.ElementRef, core_1.NgZone])
     ], TTScrollableView);

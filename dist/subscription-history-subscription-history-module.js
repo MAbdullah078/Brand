@@ -18,7 +18,7 @@ module.exports = "<div class=\"row margin-0\">\r\n  <div class=\"col-lg-11 col-m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".history-header h2 {\n  font-size: 24px;\n  padding: 12px 12px;\n  font-weight: 700;\n  background: #000;\n  color: #fff; }\n\nth {\n  text-align: center; }\n\ntr {\n  font-size: 17px; }\n\ntable {\n  box-shadow: 0 0px 0px 0 black, 0 5px 15px 0 rgba(0, 0, 0, 0.19) !important;\n  margin-top: -17px; }\n\n.btn-rounded {\n  background: #000;\n  color: #fff;\n  text-align: center;\n  margin-top: 3%;\n  border-color: black;\n  font-size: 17px;\n  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important; }\n"
+module.exports = ".history-header h2{font-size:24px;padding:12px 12px;font-weight:700;background:#000;color:#fff}th{text-align:center}tr{font-size:17px}table{box-shadow:0 0px 0px 0 #000,0 5px 15px 0 rgba(0,0,0,0.19) !important;margin-top:-17px}.btn-rounded{background:#000;color:#fff;text-align:center;margin-top:3%;border-color:black;font-size:17px;box-shadow:0 3px 5px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0,0,0,0.19) !important}\n"
 
 /***/ }),
 
