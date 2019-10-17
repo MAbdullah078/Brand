@@ -20,6 +20,9 @@
     /*height: 165px;*/
     margin-top: 18px;
 }
+.fa-map-marker{
+    color:#82d0dc
+}
 .loaded-container{
     width: 100%;
     flex-direction: column;
@@ -59,7 +62,7 @@ input[type=checkbox]{
     font-size: 19px;
 }
 i{
-    color: white;
+    color: #000;
 }
 .item-content{
 
@@ -75,14 +78,13 @@ hr{
     margin: 0!important;
 }
 .list-item1{
-    margin-right: 20px;
     color: #000;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 12px;
 }
-.right-item{
+.left-item{
     color: #919fa9;
-    font-size: 14px;
+    font-size: 12px;
 }
 .btn-success{
     background: black;

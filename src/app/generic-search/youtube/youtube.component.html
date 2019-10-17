@@ -279,7 +279,7 @@
     
     </div>
 
-    <div class="profile-container" *ngFor="let item of influencers.results" >
+    <!-- <div class="profile-container" *ngFor="let item of influencers.results" >
         <div class="row main-div">
 
 
@@ -326,7 +326,6 @@
                         <li><span class="right-item"> <i class="fa fa-eye" ></i> Total Views:</span> <span class="list-item1">{{item['total_views'] | thousandSuff}}    </span></li>
                         <li>
                                 <span class="right-item"><i class="fa fa-bar-chart" ></i> Rank:
-                                    <!--</span> <span class="list-item1">{{item['rank']}}-->
                             </span>
                             <span *ngIf="item['rank']<5" class="right-item"><span class="label label-danger" style="background: #cc0000"><small>Poor</small> {{item['rank']}}%</span></span>
                             <span *ngIf="item['rank']>5 && item['rank']<10" class="right-item"><span class="label label-primary" style="background-color: #0095ff"><small>Normal</small> {{item['rank']}}%</span></span>
@@ -352,7 +351,66 @@
             </div>
         </div>
 
+    </div> -->
+    <div class="row influcener-div" *ngFor="let item of influencers.results" >
+        <div class="col-md-1 profile-checkbox" type="checkbox">
+                <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                <label for="table-check-{{item['id']}}"></label>
+            </div>
+    <div class="col-md-2 image-div ">
+                      <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  class="twitter-image"  >
+                      <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  class="twitter-image"> 
     </div>
+    <div class="col-md-4 description-divison">
+      <div>
+          <img src="../../assets/img/youtub.png">
+          {{item['name']}}
+    </div>
+    <label *ngIf="item['location']" class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> {{item['location']}}</label>
+    <label *ngIf="!item['location']" class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> N/A</label>
+  
+            <label class="item-content"
+            title="{{item['description']}}">{{item['description']}}</label>
+         <div class="row" >
+            <ul class="profile-url p-1 ">
+                <li><span class="right-item"><i class="fa fa-users" ></i> subscribers:</span> <span class="list-item1"><span class="label label-success">{{item['subscribers'] | thousandSuff}}</span>   </span> </li>
+                <li><span class="right-item"> <i class="fa fa-eye" ></i> Total Views:</span> <span class="list-item1">{{item['total_views'] | thousandSuff}}    </span></li>
+                       
+            </ul>
+            <ul class="profile-url p-1 ">
+                <li>
+                    <span class="right-item"><i class="fa fa-bar-chart" ></i> Rank:
+                </span>
+                <span *ngIf="item['rank']<5" class="right-item"><span class="label label-danger" style="background: #cc0000"><small>Poor</small> {{item['rank']}}%</span></span>
+                <span *ngIf="item['rank']>5 && item['rank']<10" class="right-item"><span class="label label-primary" style="background-color: #0095ff"><small>Normal</small> {{item['rank']}}%</span></span>
+                <span *ngIf="item['rank']>10" class="right-item"><span class="label label-success"><small>Perfect</small> {{item['rank']}}%</span></span>
+                <span *ngIf="!item['rank']" class="right-item"><span class="label label-success">N/A</span></span>
+
+            </li>
+            <li><span class="right-item"><i class="fa fa-calendar-o"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
+  
+            </ul>
+        </div>
+  
+    </div>
+    
+  
+  <div class="col-md-2 image-div">
+      <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  class="twitter-image"  >
+      <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  class="twitter-image"> 
+  </div>
+  
+  <div class="col-md-2 image-div">
+      <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  class="twitter-image"  >
+      <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  class="twitter-image"> 
+  </div>
+  <div class="col-md-1 followers-profile">
+  <h4 class="real-heading">{{item['tweets_count']}}</h4>
+  <h6>Subcriber</h6>
+  </div>
+  </div>
+  
+  
   </div>
 
 

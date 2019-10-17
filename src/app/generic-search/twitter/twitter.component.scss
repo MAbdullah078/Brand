@@ -59,12 +59,12 @@ input[type=checkbox]{
   font-size: 19px;
 }
 i{
-  color: white;
+  color: #919fa9;
 }
 .item-content{
-
-  color: #919fa9;
-  font-size: 14px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600!important;
 
 }
 .item-loc{
@@ -75,14 +75,22 @@ hr{
   margin: 0!important;
 }
 .list-item1{
-  margin-right: 20px;
   color: #000;
   font-weight: 700;
   font-size: 15px;
+  margin-left: 4px;
 }
-.right-item{
-  color: #919fa9;
-  font-size: 14px;
+.left-item{
+  color: #000000;
+  font-size: 12px;
+;
+}
+.profile-url li{
+margin-right: 5px;
+}
+.fa-map-marker{
+  margin-right: 8px;
+  color: #82d0dc;
 }
 .btn-success{
   background: black;

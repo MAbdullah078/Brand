@@ -208,8 +208,14 @@ mat-tab-group{
     justify-content: center;
 }
 .twitter-image2{
+  width: 90px;
+  height: 90px;
+  border-radius: 3px;
+}
+.twitter-image{
   width: 120px;
-  height:120px
+    height: 120px;
+    border-radius: 3px;
 }
 .image-div{
   display: flex;

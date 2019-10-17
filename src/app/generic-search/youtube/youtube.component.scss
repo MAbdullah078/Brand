@@ -7,6 +7,9 @@
   font-size: 17px;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
+.pagination {
+justify-content: center;
+}
 .profile-container{
   width: 100%;
   flex-direction: column;
@@ -75,10 +78,9 @@ hr{
   margin: 0!important;
 }
 .list-item1{
-  margin-right: 20px;
   color: #000;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 12px;
 }
 .right-item{
   color: #919fa9;

@@ -416,7 +416,7 @@
             </div>
         </div>
 
-        <div class="profile-container" *ngFor="let item of influencers.results" >
+        <!-- <div class="profile-container" *ngFor="let item of influencers.results" >
             <div class="row">
 
 
@@ -434,11 +434,11 @@
                         <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
                     </div>
                     <div class="row" style="padding-top: 8px">
-                        <!--<label class="item-content" style="overflow: hidden;-->
-                        <!--text-overflow: ellipsis;-->
-                        <!--display: -webkit-box;-->
-                        <!-- -webkit-box-orient: vertical;-->
-                        <!-- -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>-->
+                        <label class="item-content" style="overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
                     </div>
                     <div class="row" style="padding-top: 8px">
                         <div class="col-md-3 text-left">
@@ -469,8 +469,49 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> -->
+        <div class="row influcener-div" *ngFor="let item of influencers.results" >
+          <div class="col-md-1 profile-checkbox" type="checkbox">
+                  <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                  <label for="table-check-{{item['id']}}"></label>
+              </div>
+      <div class="col-md-2 image-div ">
+        <img [src]="item['image']"  class="twitter-image">
+      </div>
+      <div class="col-md-4 description-divison">
+          <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
+          <label class="item-loc" *ngIf="item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
+          <label class="item-loc" *ngIf="!item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> N/A</span></label>
+              <label class="item-content"
+              title="{{item['description']}}">{{item['description']}}</label>
+           <div class="row" >
+              <ul class="profile-url p-1 ">
+                <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
+                <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
+              </ul>
+              <ul class="profile-url p-1 ">
+                <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span></li>
+                <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Pins:</span> <span class="list-item1">{{item['pins']}}</span></li>
+
+              </ul>
+          </div>
+   
+      </div>
+      
+
+  <div class="col-md-2 image-div">
+      <img [src]="item['thumbnail_url']"  class="twitter-image2"> 
+</div>
+<div class="col-md-2 image-div">
+  <img [src]="item['thumbnail_url']"  class="twitter-image2">
+</div>
+<div class="col-md-1 followers-profile">
+  <h4 class="real-heading">{{item['subscribers']}}</h4>
+  <h6>Subcriber</h6>
+</div>
+</div>
+   
+      </div>
   <!--<div id="wrapper" style="text-align: center; " *ngIf="!loaded&& influencers_by_default.totalItems!=0">-->
     <!--<div id="yourdiv">-->
       <!--<nav>-->
@@ -537,7 +578,7 @@
             </div>
         </div>
 
-        <div class="profile-container" *ngFor="let item of influencers_by_default.results" >
+        <!-- <div class="profile-container" *ngFor="let item of influencers_by_default.results" >
             <div class="row">
 
 
@@ -555,11 +596,11 @@
                         <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
                     </div>
                     <div class="row" style="padding-top: 8px">
-                        <!--<label class="item-content" style="overflow: hidden;-->
-                        <!--text-overflow: ellipsis;-->
-                        <!--display: -webkit-box;-->
-                        <!-- -webkit-box-orient: vertical;-->
-                        <!-- -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>-->
+                        <label class="item-content" style="overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
                     </div>
                     <div class="row" style="padding-top: 8px">
                         <div class="col-md-3 text-left">
@@ -590,8 +631,50 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> -->
+        <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
+          <div class="col-md-1 profile-checkbox" type="checkbox">
+                  <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                  <label for="table-check-{{item['id']}}"></label>
+              </div>
+      <div class="col-md-2 image-div ">
+        <img [src]="item['image']"  class="twitter-image">
+      </div>
+      <div class="col-md-4 description-divison">
+          <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
+          <label class="item-loc" *ngIf="item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
+          <label class="item-loc" *ngIf="!item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> N/A</span></label>
+              <label class="item-content"
+              title="{{item['description']}}">{{item['description']}}</label>
+           <div class="row" >
+              <ul class="profile-url p-1 ">
+                <li class="subscribers-li"><span class="right-item"> Follower:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
+                <li class="subscribers-li2"><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
+              </ul>
+              <ul class="profile-url p-1 ">
+                <li class="rank-li1" ><span class="right-item"> Boards:</span> <span class="list-item1">{{item['boards']}}</span></li>
+                <li class="rank-li2"><span class="right-item"> Pins</span> <span class="list-item1">{{item['pins']}}</span></li>
+
+              </ul>
+          </div>
+   
+      </div>
+      
+
+  <div class="col-md-2 image-div">
+    <img [src]="item['image']" class="twitter-image2"> 
+</div>
+<div class="col-md-2 image-div">
+  <img [src]="item['image']"  class="twitter-image2">
+</div>
+<div class="col-md-1 followers-profile">
+  <h4 class="real-heading">{{item['subscribers']}}</h4>
+  <h6>Subcriber</h6>
+</div>
+</div>
+    
+    
+      </div>
 
     <!--<section class="box-typical" *ngIf="!loaded&& influencers_by_default.totalItems!=0">-->
 
