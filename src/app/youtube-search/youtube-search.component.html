@@ -199,7 +199,7 @@
                 <a (click)=cl class="closebtn">×</a>
             </div> -->
 
-         <div class="profile-container" *ngFor="let item of influencers_by_default.results" >
+         <!-- <div class="profile-container" *ngFor="let item of influencers_by_default.results" >
             <div class="row">
 
 
@@ -261,8 +261,8 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
+        </div>  -->
+        <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
                     <div class="col-md-1 profile-checkbox" type="checkbox">
                             <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                             <label for="table-check-{{item['id']}}"></label>
@@ -304,9 +304,8 @@
             <h4 class="real-heading">{{item['subscribers']}}</h4>
             <h6>Subcriber</h6>
         </div>
-    </div> -->
-        <!-- </div>
-    </div> -->
+    </div>
+
 
   <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
     <div class="box-typical box-typical-full-height" style="min-height: 119px;">
