@@ -495,14 +495,17 @@
                         <img [src]="item['image_url']"  class="twitter-image">
                     </div>
                     <div class="col-md-7 description-divison">
-                        <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
+                        <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
+                        <!-- <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>                         -->
+                        <label class="tbl-cell tbl-cell-name">Likes:{{item['likes']}}</label>
                         <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" *ngIf="item['category']['location']"> {{item['category']['location']}}</span></label>
-                            <label class="item-content"
-                         title="{{item['email']}}">{{item['email']}}</label>
+                            <label class="item-content" title="{{item['email']}}">Email: {{item['email']}}</label>
+                            <label class="item-content" title="{{item['web_link}">Link: {{item['web_link']}}</label>
+                            <!-- <label class="item-content" title="{{item['fb_page_link}">Page Link: {{item['fb_page_link']}}</label> -->
                          <div class="row" >
                             <ul class="profile-url p-1 ">
                                 <li> <span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span> </li>
-                                <li> <span class="right-item">  Phone:</span> <span class="list-item1">{{item['phone']}}   </span></li>
+                                <li> <span class="right-item">  Phone:</span> <span class="list-item1">{{item['phone']}}</span></li>
                             </ul>
                             <ul class="profile-url p-1 ">
                                 <li>   <span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i>

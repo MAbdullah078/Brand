@@ -159,7 +159,9 @@ this.get_default_FB_data(1);
         // this.http.post(Config.api+'ml/get_facebook_pages/accountant'  + '/?page=' + page,{})
         let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
 
-        this.http.post(Config.api+'/ml/get_facebook_pages/' + 'accountant' + '/?page=' + page + '', {},{headers: headers})
+        this.http.get(Config.api+'/ml/get_facebook_influencers_list/')
+        // this.http.post(Config.api+'/ml/get_facebook_pages/' + 'accountant' + '/?page=' + page + '', {},{headers: headers})
+
             .subscribe(res => {
                 // this.main_checkbox = false;
                 this.influencers_by_default_FB = res.json();
