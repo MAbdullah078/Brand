@@ -441,7 +441,7 @@
                             <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                             </div>
                             <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5S">
                             <div class="ml-4">
                                         <span class="right-item" *ngIf="item['web_link']" ><i class="fa fa-globe" ></i> Web:</span> <span class="list-item1">{{item['web_link']}}</span>
                                     </div>
@@ -460,10 +460,10 @@
                         <!-- <div class="col-md-3"  style="padding-top: 5px">
                             <span class="right-item"><i class="fa fa-barcode" style="font-size:16px;color:#0a4069"></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span>
                         </div> -->
-                        <div class="col-md-6"  *ngIf="item['phone']">
+                        <div class="col-md-4"  *ngIf="item['phone']">
                             <div>
                         <span class="right-item"> <i class="fas fa-phone-alt"></i>Phone:</span> <span class="list-item1">{{item['phone']}} </span>
-                        <span class="right-item ml-5"><i class="fas fa-chart-bar "></i> Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
+                       
                     </div>
                     <div>
                         <span class="right-item"><i class="fas fa-sliders-h"></i>
@@ -471,6 +471,9 @@
                              <span class="list-item1">{{item['ER']}}</span>
                              
                             </div>
+                        </div>
+                        <div class="col-md-3">
+                                <span class="right-item "><i class="fas fa-chart-bar "></i> Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
                         </div>
                     </div>
                         </div>
