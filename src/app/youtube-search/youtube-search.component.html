@@ -272,12 +272,17 @@
                 </div>
                 <div class="col-md-4 description-divison">
                     <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+                    <label class="tbl-cell tbl-cell-name">{{item['channel_link']}}</label>
                         <label class="item-content"
                         title="{{item['description']}}">{{item['description']}}</label>
                      <div class="row" >
                         <ul class="profile-url p-1 ">
                             <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li>
                             <li class="subscribers-li2"><span class="right-item">  Total Views:</span> <span class="list-item1">{{item['total_views']}}</span></li>
+                            <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
+                            <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Week:</span> <span class="list-item1">{{item['last_week_upload_videos']}}</span> </li>
+                            <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> </li>
+
                         </ul>
                         <ul class="profile-url p-1 ">
                             <li class="rank-li1"><span class="right-item"> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>

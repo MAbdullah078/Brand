@@ -9,11 +9,13 @@ import {InstagramSearchComponent} from "./instagram-search.component";
 import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {NgPipesModule} from 'ngx-pipes';
 import {PagerService} from "../_services/paginator.service";
+import {CustomPipeModule} from '../periscope-search/CustomPipe.module';
+
 import {RoundpipeModule} from "../home/roundpipe.module";
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule} from '@angular/material';
 @NgModule({
-    imports: [CommonModule,
+    imports: [CommonModule,CustomPipeModule,
       MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
       MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,
         RouterModule.forChild(InstagramSearchRoutes),SliderModule,

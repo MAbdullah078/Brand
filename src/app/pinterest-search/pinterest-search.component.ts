@@ -97,7 +97,6 @@ export class PinterestSearchComponent implements OnInit , AfterViewInit, OnDestr
             return;
         }
 
-        // this.http.get(Config.api+'/ml/get_pinterest_influencers_list/' +  '/?page=' + page )
         this.http.get(Config.api+'/ml/get_pinterest_influencers_list/')
             .subscribe(res => {
                 this.influencers_by_default = res.json();
