@@ -110,7 +110,9 @@ export class TwitterSearchComponent implements OnInit {
             return;
         }
 
-            this.http.get(Config.api + '/ml/get_twitter_influencers_list/' +  '?page=' + page )
+            this.http.get(Config.api + '/ml/get_twitter_influencers_list/' )
+            // this.http.get(Config.api + '/ml/get_twitter_influencers_list/' +  '?page=' + page )
+
                 .subscribe(res => {
                     this.main_checkbox = false;
                     this.influencers_by_defalut = res.json();

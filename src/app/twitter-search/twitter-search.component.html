@@ -675,12 +675,23 @@
                 </div>
                 <div class="col-md-4 description-divison">
                     <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
-                    <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1"> {{item['location']}}</span></label>
-                        <label class="item-content"
+                    <!-- For show in case of not found
+                    <label class="item-loc" *ngIf="item.location == null"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1"> {{item.location}} usman</span></label>
+                    <label class="item-loc" *ngIf="item.location != null"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1"> {{item.location}}</span></label> -->
+                    <label class="item-loc" > <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1"> {{item.location}} </span></label>
+
+                    <label class="item-content"
                      title="{{item['description']}}">{{item['description']}}</label>
+                     <h4>Profile Url:<label class="item-content" title="{{item['profile_url']}}" >{{item['profile_url']}}</label></h4>
+                     <h4>Website:<label class="item-content" title="{{item['website']}}">{{item['website']}}</label></h4>
+                     <h4>Email:<label class="item-content" title="{{item['email']}}" >{{item['email']}}</label></h4>
+                     <label class="item-content" title="{{item['joined_date']}}">{{item['joined_date']}}</label>
+
                      <div class="row" >
                         <ul class="profile-url">
-                            <li class="subscribers-li"><span class="right-item"> Follower:</span> <span class="list-item1">{{item['followers']}}</span> </li>
+                            <li class="subscribers-li"><span class="right-item" > Tweet Counts:</span> <span class="list-item1">{{item['tweets_count']}}</span> </li>
+
+                            <li class="subscribers-li"><span class="right-item" > Follower:</span> <span class="list-item1">{{item['followers']}}</span> </li>
                             <li class="subscribers-li2"><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}}</span></li>
                         </ul>
                         <ul class="profile-url">
@@ -754,7 +765,6 @@
                         <div class="row" style="padding-top: 8px">
                             <div class="col-md-3 text-left">
                                 <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
-
                             </div>
                             <div class="col-md-6 text-left">
 
