@@ -143,17 +143,55 @@ input[type=checkbox]{
 .tbl-cell{
   font-weight: 600;
   font-size: 16px;
+  margin: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.fa-map-marker-alt{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #a5a2a2;
+}
+.fa-phone-alt{
+  color:#4682b4;
+  margin: 3px;
+}
+.charbar{
+
+}
+.fa-chart-bar{
+  color:#c00
+} 
+.fa-barcode{
+  color: #4cdc6b;
+  margin: 3px;
+}
+.fa-sliders-h{
+  color: #ff6347;
+  margin: 3px;
 }
 i{
   color:#000;
 }
 .item-content{
 
-  color: #919fa9;
-  font-size: 14px;
-
+  color: #6a6794;
+  font-size: 23px;
+  font-weight: 700!important;
+  font-family: 'Merriweather', serif
 }
-
+.title-name{
+  display: flex;
+}
+.twitter-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.followers-division{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .add-to-list:hover{
   color:#fff
 }
@@ -164,7 +202,21 @@ i{
 }
 .item-loc{
   color: #919fa9;
-  font-size: 14px;
+  font-size: 11px;
+  margin: 3px;
+  font-weight: 600;;
+}
+.fa-facebook{
+  margin-top: 12px;
+  color: #36569b;
+  font-size: 23px;
+}
+.title-name img{
+  width: 40px
+}
+.fa-globe{
+  font-size: 16px;
+  color: #1691ef
 }
 hr{
   margin: 0!important;
@@ -173,7 +225,7 @@ hr{
   margin-left: 8px;
   color: #0a6aa1;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 12px;
 }
 .right-item{
   color: #919fa9;

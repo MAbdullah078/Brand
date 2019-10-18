@@ -12,7 +12,7 @@ export class Config {
     //     public static api: String = 'http://192.168.29.109:9000';
 
     public  static  Imageurlupload = 'https://storage.influexpai.com/test_hamza.php';
-
+// public static api: String = 'http://192.168.29.108:8000';
 
 }
 

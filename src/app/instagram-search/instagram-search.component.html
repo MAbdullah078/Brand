@@ -404,7 +404,7 @@
       </div>
     </div>
 
-    <!-- <div class="profile-container" *ngFor="let item of default_influencers.results" >
+     <div class="profile-container" *ngFor="let item of default_influencers.results" > 
       <div class="row">
 
 
@@ -452,8 +452,8 @@
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
               <li style="font-weight: bolder"> Videos Uploads | </li>
-              <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}} |  </span> </li>
-              <li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tomorrow :</span> <span class="list-item1">{{item['tomorrow_upload_videos']}} |   </span></li>
+              <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
+              <li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tomorrow :</span> <span class="list-item1">{{item['tomorrow_upload_videos']}}</span></li>
               <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Last Week: </span> <span class="list-item1">{{item['last_week_upload_videos']}}</span></li>
               <li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>
 
@@ -461,8 +461,8 @@
           </div>
         </div>
       </div>
-    </div> -->
-    <div class="row influcener-div"*ngFor="let item of default_influencers.results" >
+    </div>
+    <!-- <div class="row influcener-div"*ngFor="let item of default_influencers.results" >
       <div class="col-md-6">
       <div class="row">
               <div class="col-md-1 profile-checkbox" type="checkbox">
@@ -551,7 +551,7 @@
               <h5>Male</h5>
           </div>
   </div>
-  </div>
+  </div> -->
   </div>
 
   <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
