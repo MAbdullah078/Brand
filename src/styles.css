@@ -1,7 +1,7 @@
 @import "~node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
 body{
-  font-family: 'Roboto', sans-serif;
+ 
 }
 @media screen and (min-width: 1140px) and (max-width: 1520px) {
   .padding-zero-i{
@@ -133,7 +133,12 @@ display: none!important;
 .pw-solutions ul li .holder, .sidebar.custom {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
-
+.heading{
+  font-family: 'Raleway', sans-serif;
+}
+.paragraph{
+  font-family: 'Cabin', sans-serif;
+}
 .holder {
   min-height: 23pc;
 }
@@ -10080,13 +10085,6 @@ ul.tab-nav.tab-nav2 li:first-child {
     padding: 0;
     border-radius: 15px;
     background:#fff
-}
-.item-loc{
-  color: #919fa9;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  margin:0!important
 }
 .search-form{
   margin:0

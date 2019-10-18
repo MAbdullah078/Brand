@@ -403,88 +403,98 @@
             </div>
         </div>
 
-        <!-- <div class="profile-container" *ngFor="let item of influencers_by_default_FB.results" >
+         <div class="profile-container" *ngFor="let item of influencers_by_default_FB.results" >
             <div class="row">
 
 
-                <div class="col-md-2 profile-checkbox" type="checkbox">
+                <div class="col-md-1 profile-checkbox" type="checkbox">
                     <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                     <label for="table-check-{{item['id']}}"></label>
                 </div>
 
-<div class="col-md-2  like-row" style="flex: 0 0 auto;
-    width: 120px;">
+<div class="col-md-1 followers-division">
 
-    <div class="row" >
+    <!-- <div class="row" >
         <label style="color: #919fa9;  margin-top: 30%; font-size: 20px;padding-left: 23%; padding-bottom: 0%">Likes: </label>
     </div>
     <div class="row" style="padding-top: 2px; ">
         <label class="item-content" style="padding-left: 23%; font-size: 28px; font-weight: bolder ">{{item['likes']}}</label>
-    </div>
+    </div> -->
+    <img [src]="item['image_url']"  class="twitter-image">
 </div>
-                <div class="col-md-8">
-                    <div class="row">
+                <div class="col-md-1 followers-division">
+                    <!-- <div class="row">
                         <label class="tbl-cell tbl-cell-name">
                         <img src="../../assets/homepage/images/facebook_24.png">
                             {{item['title']}}
                         </label>
+                    </div> -->
+                    <div>
+                            <h6 class="m-0">Likes:</h6>
+                        <h3 class="item-content" >{{item['likes']}}</h3>
                     </div>
-
-                    <div class="row" style="padding-top: 8px; margin-top: 10px">
-                        <div class="col-md-2 text-left">
-                            <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> {{item['category']['location']}}</label>
-
+                </div>
+                        <div class="col-md-9">
+                            <div class="title-name">
+                                    <i class="fab fa-facebook"></i>
+                            <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
+                            <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
+                            </div>
+                            <div class="row">
+                        <div class="col-md-6">
+                            <div class="ml-4">
+                                        <span class="right-item" *ngIf="item['web_link']" ><i class="fa fa-globe" ></i> Web:</span> <span class="list-item1">{{item['web_link']}}</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <span class="right-item"><i class="fa fa-barcode" ></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span>
+                                    </div>
                         </div>
-                        <div class="col-md-6 text-left">
+                        <!-- <div class="col-md-2 ">
 
                             <label class="item-loc" (click)="getEmail(item)" data-target="#modalCompose" data-toggle="modal"> <i class="fa fa-envelope" style="font-size:16px;color:#c00; "></i> Email:  <a style="color: #0a6aa1; font-weight: bolder">{{item['email']}}</a></label>
                         </div>
-                        <div class="col-md-4 text-left">
+                        <div class="col-md-4">
 
                             <label class="item-loc"> <i class="fa fa-tags" style="font-size:16px;color:#c00; "></i> Category:  <a style="color: #0a6aa1; font-weight: bolder">{{item['category']['name']}}</a></label>
+                        </div> -->
+                        <!-- <div class="col-md-3"  style="padding-top: 5px">
+                            <span class="right-item"><i class="fa fa-barcode" style="font-size:16px;color:#0a4069"></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span>
+                        </div> -->
+                        <div class="col-md-6"  *ngIf="item['phone']">
+                            <div>
+                        <span class="right-item"> <i class="fas fa-phone-alt"></i>Phone:</span> <span class="list-item1">{{item['phone']}} </span>
+                        <span class="right-item ml-5"><i class="fas fa-chart-bar "></i> Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
+                    </div>
+                    <div>
+                        <span class="right-item"><i class="fas fa-sliders-h"></i>
+                            Engagement Rate:</span>
+                             <span class="list-item1">{{item['ER']}}</span>
+                             
+                            </div>
                         </div>
                     </div>
-                    <hr style="color: #555555">
-                    <div class="row" >
-                        <div class="col-md-4"  style="padding-top: 5px">
-                            <span class="right-item"><i class="fa fa-barcode" style="font-size:16px;color:#0a4069"></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span>
                         </div>
-                        <div class="col-md-4"  style="padding-top: 5px" *ngIf="item['phone']">
-
-                        <span class="right-item"> <i class="fa fa-phone" style="font-size:16px;color:#0a4069"></i> Phone:</span> <span class="list-item1">{{item['phone']}} |   </span>
-                        </div>
-                        <div class="col-md-4"  style="padding-top: 5px" *ngIf="!item['phone']">
+                        <!-- <div class="col-md-4"  style="padding-top: 5px" *ngIf="!item['phone']">
 
                         <span class="right-item"> <i class="fa fa-phone" style="font-size:16px;color:#0a4069"></i> Phone:</span> <span class="list-item1">N/A |   </span>
-                        </div>
-                        <div class="col-md-4"  style="padding-top: 5px">
-
                         <span class="right-item"><i class="fa fa-line-chart" style="font-size:16px;color:#0a4069"></i>
-                                Engagement Rate:</span>
-                                 <span class="list-item1">{{item['ER']}}</span>
+                            Engagement Rate:</span>
+                             <span class="list-item1">{{item['ER']}}</span>
+                        </div> -->
 
-                        </div>
-                        </div>
-
-                    <hr style="color: #555555">
-                    <div class="row" >
-                        <div class="col-md-8" *ngIf="item['web_link']">
-                            <span class="right-item" ><i class="fa fa-globe" style="font-size:16px;color:#0a4069"></i> Web:</span> <span class="list-item1">{{item['web_link']}} |  </span>
-                        </div>
-                        <div class="col-md-8" *ngIf="!item['web_link']">
-                            <span class="right-item" ><i class="fa fa-globe" style="font-size:16px;color:#0a4069"></i> Web:</span> <span class="list-item1">N/A |  </span>
-                        </div>
+                    <!-- <hr style="color: #555555"> -->
+                    <!-- <div class="row" >
                         <div class="col-md-4">
                             <span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}} |  </span>
 
                         </div>
 
-                    </div>
-                </div>
+                    </div> -->
+          
 
                 </div>
-            </div> -->
-            <div class="row influcener-div"*ngFor="let item of influencers_by_default_FB.results">
+            </div> 
+            <!-- <div class="row influcener-div"*ngFor="let item of influencers_by_default_FB.results">
                 <div class="col-md-6">
                 <div class="row">
                         <div class="col-md-1 profile-checkbox" type="checkbox">
@@ -496,12 +506,12 @@
                     </div>
                     <div class="col-md-7 description-divison">
                         <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
-                        <!-- <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>                         -->
+                            
                         <label class="tbl-cell tbl-cell-name">Likes:{{item['likes']}}</label>
                         <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" *ngIf="item['category']['location']"> {{item['category']['location']}}</span></label>
                             <label class="item-content" title="{{item['email']}}">Email: {{item['email']}}</label>
                             <label class="item-content" title="{{item['web_link}">Link: {{item['web_link']}}</label>
-                            <!-- <label class="item-content" title="{{item['fb_page_link}">Page Link: {{item['fb_page_link']}}</label> -->
+                           
                          <div class="row" >
                             <ul class="profile-url p-1 ">
                                 <li> <span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span> </li>
@@ -554,7 +564,7 @@
                         <h5>Male</h5>
                     </div>
             </div>
-            </div>
+            </div> -->
        
         </div>
     <div class="container-fluid" *ngIf="loaded && fbinfluencers.totalItems!=0">
