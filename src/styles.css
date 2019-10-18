@@ -191,7 +191,7 @@ mat-tab-group{
   border-radius: 5px;
 }
 .right-item{
-  color: #fff;
+  color: #000;
   font-size: 12px;
   margin-right: 3px;
 
@@ -208,9 +208,9 @@ mat-tab-group{
     justify-content: center;
 }
 .twitter-image2{
-  width: 90px;
-  height: 90px;
-  border-radius: 3px;
+width: 90px;
+    height: 90px;
+    border-radius: 3px;
 }
 .twitter-image{
   width: 120px;
