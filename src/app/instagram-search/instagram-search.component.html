@@ -475,11 +475,36 @@
           <div class="col-md-7 description-divison">
               <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
               <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" > {{item['account_link']}}</span></label>
+              <label class="item-loc">External Url <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" > {{item['external_url']}}</span></label>
                   <label class="item-content"
                   title="{{item['description']}}">{{item['description']}}</label>
                <div class="row" >
                   <ul class="profile-url p-1 ">
-                    <li><span class="right-item"> Follower:</span> <span class="list-item1">{{item['follower']}}</span> </li>
+                    <!-- <li><span class="right-item"> Follower:</span> <span class="list-item1">{{item['follower']}}</span> </li> -->
+                    <span *ngIf="item['follower']<1000" class="list-item1"> Follower:<span class="label label-danger">
+                      <!-- <small>Poor</small> -->
+                       {{item['follower'] | thousandSuff}}</span></span>
+              <span *ngIf="item['follower']>1000 && item['follower']<10000" class="list-item1"> Follower:<span class="label label-primary">
+                <!-- <small>Normal</small> -->
+                 {{item['follower'] | thousandSuff}}</span></span>
+              <span *ngIf="item['follower']>10000" class="list-item1"> Follower:<span class="label label-success">
+                <!-- <small>Perfect</small> -->
+                 {{item['follower'] | thousandSuff}}</span></span>
+              
+
+
+                 
+                    <li><span class="right-item"> Posts:</span> <span class="list-item1">{{item['posts']}}</span> </li>
+                    <!-- <span *ngIf="item['posts']<1000" class="list-item1"> Posts:<span class="label label-danger">
+                        <small>Poor</small>
+                         {{item['posts'] | thousandSuff}}</span></span>
+                <span *ngIf="item['posts']>1000 && item['posts']<10000" class="list-item1"> Posts:<span class="label label-primary">
+                  <small>Normal</small>
+                   {{item['follower'] | thousandSuff}}</span></span>
+                <span *ngIf="item['posts']>10000" class="list-item1"> Posts:<span class="label label-success">
+                  <small>Perfect</small>
+                   {{item['posts'] | thousandSuff}}</span></span> -->
+                    <li><span class="right-item"> Views per Videos:</span> <span class="list-item1">{{item['views_per_video']}}</span> </li>
                     <li><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}}</span></li>      </ul>
                   <ul class="profile-url p-1 ">
                     <li><span class="right-item"> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
@@ -604,7 +629,7 @@
           <hr style="color: #555555">
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
-              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']}} |  </span> </li>
+              <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']}} |  </span> </li> -->
               <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
               <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
               <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Username:</span> <span class="list-item1">{{item['username']}}</span></li>

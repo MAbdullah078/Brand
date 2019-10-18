@@ -480,15 +480,15 @@
       </div>
       <div class="col-md-4 description-divison">
           <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
-          <label class="item-loc" *ngIf="item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
-          <label class="item-loc" *ngIf="!item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> N/A</span></label>
+          <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
+          <!-- <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['country']}}</span></label> -->
               <label class="item-content"
               title="{{item['description']}}">{{item['description']}}</label>
            <div class="row" >
               <ul class="profile-url p-1 ">
-                <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
-                <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
-              </ul>
+                <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers']}}  </span> </li>
+                <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}}</span></li>
+              </ul> 
               <ul class="profile-url p-1 ">
                 <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span></li>
                 <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Pins:</span> <span class="list-item1">{{item['pins']}}</span></li>
@@ -642,14 +642,16 @@
       </div>
       <div class="col-md-4 description-divison">
           <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
-          <label class="item-loc" *ngIf="item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
-          <label class="item-loc" *ngIf="!item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> N/A</span></label>
-              <label class="item-content"
-              title="{{item['description']}}">{{item['description']}}</label>
+          <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}    {{item['country']}}</span></label>
+          <!-- <label class="item-loc" *ngIf="!item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> N/A</span></label> -->
+              <label class="item-content" title="{{item['description']}}">{{item['description']}}</label>
+              <label class="item-content" title="{{item['profile_linked']}}">Profile Link: {{item['profile_linked']}}</label>
+              <label class="item-content" title="{{item['profile_contact']}}">Contact:{{item['profile_contact']}}</label>
+
            <div class="row" >
               <ul class="profile-url p-1 ">
-                <li class="subscribers-li"><span class="right-item"> Follower:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
-                <li class="subscribers-li2"><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
+                <li class="subscribers-li"><span class="right-item"> Follower:</span> <span class="list-item1">{{item['followers']}}</span> </li>
+                <li class="subscribers-li2"><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}}</span></li>
               </ul>
               <ul class="profile-url p-1 ">
                 <li class="rank-li1" ><span class="right-item"> Boards:</span> <span class="list-item1">{{item['boards']}}</span></li>
