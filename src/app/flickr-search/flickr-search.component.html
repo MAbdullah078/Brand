@@ -456,21 +456,25 @@
     -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
           </div>
           <div class="row" style="padding-top: 8px">
-            <div class="col-md-3 text-left">
+            <!-- <div class="col-md-3 text-left">
               <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> Category: <span class="list-item1">Global</span> </label>
 
-            </div>
+            </div> -->
             <div class="col-md-9 text-left">
 
               <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_linked']}}</a></label>
+              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Email:  <a style="color: #0a6aa1; font-weight: bolder">{{item['email']}}</a></label>
+              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Website:  <a style="color: #0a6aa1; font-weight: bolder">{{item['website']}}</a></label>
             </div>
           </div>
           <hr style="color: #555555">
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
+                <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Home town:</span> <span class="list-item1">{{item['hometown']}} |  </span> </li>
               <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Followers:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
+              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Total Views:</span> <span class="list-item1">{{item['views_total']}} |  </span> </li>
               <li><span class="right-item"> <i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['profile_rank']}} |   </span></li>
-              <li><span class="right-item"><i class="fa fa-calendar" style="font-size:16px;color:#0a4069"></i> Joined Date:</span> <span class="list-item1">{{item['joined_date']}}</span></li>
+              <li><span class="right-item"><i class="fa fa-calendar" style="font-size:16px;color:#0a4069"></i> </span> <span class="list-item1">{{item['joined_date']}}</span></li>
               <!--<li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Broadcast :</span> <span class="list-item1">{{item['braodcasts']}} |  </span> </li>-->
 
             </ul>
@@ -537,10 +541,10 @@
     -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
           </div>
           <div class="row" style="padding-top: 8px">
-            <div class="col-md-3 text-left">
+            <!-- <div class="col-md-3 text-left">
               <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> Category: <span class="list-item1">Global</span> </label>
 
-            </div>
+            </div> -->
             <div class="col-md-9 text-left">
 
               <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_linked']}}</a></label>
@@ -549,6 +553,7 @@
           <hr style="color: #555555">
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
+                <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Home town:</span> <span class="list-item1">{{item['hometown']}} |  </span> </li>
               <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Followers:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
               <li><span class="right-item"> <i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['profile_rank']}} |   </span></li>
               <li><span class="right-item"><i class="fa fa-calendar" style="font-size:16px;color:#0a4069"></i> Joined Date:</span> <span class="list-item1">{{item['joined_date']}}</span></li>
