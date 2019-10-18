@@ -13,7 +13,6 @@ import {RoundpipeModule} from "../home/roundpipe.module";
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule
 } from '@angular/material';
-import { ShortNumberPipe } from '../pipes/short-number.pipe';
 
 @NgModule({
     imports: [CommonModule,MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
@@ -21,7 +20,7 @@ import { ShortNumberPipe } from '../pipes/short-number.pipe';
         RouterModule.forChild(TwitterSearchRoutes),
      SliderModule,ReactiveFormsModule,DataTableModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
     declarations: [TwitterSearchComponent],
-    providers:[PagerService,ShortNumberPipe]
+    providers:[PagerService]
 })
 
 export class TwitterSearchModule { }

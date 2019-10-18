@@ -55,7 +55,6 @@ import {PushNotificationsService} from 'angular2-notifications/dist';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { MyRfmComponent } from './my-rfm/my-rfm.component';
-// import { ShortNumberPipe } from './pipes/short-number.pipe';
 import {CustomPipePipe} from './periscope-search/CustomPipe.pipe';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
@@ -133,7 +132,6 @@ export function provideConfig() {
 
   },
     AuthGuard, PushNotificationsService,AuthService,
-    // ShortNumberPipe
    ],
   bootstrap: [AppComponent]
 })
