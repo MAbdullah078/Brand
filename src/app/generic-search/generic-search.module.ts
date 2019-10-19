@@ -9,7 +9,6 @@ import {RoundProgressModule} from 'angular-svg-round-progressbar';
 // import {InfluencersDatatableComponent} from "./influencers-datatable.component";
 // import {SearchRoutes} from "./search.routing";
 import {DialogModule} from 'primeng/primeng';
-// import {CustomPipeModule} from 'periscope-search/CustomPipe.module';
 // import {SearchComponent} from "./search.component";
 import {FormsModule} from "@angular/forms";
 // import {RoundpipeModule} from "./roundpipe.module";

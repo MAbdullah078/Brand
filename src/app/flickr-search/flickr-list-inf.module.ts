@@ -11,10 +11,11 @@ import {DataTableModule, OverlayPanelModule} from 'primeng/primeng';
 import {SliderModule} from 'primeng/primeng';
 import {DialogModule} from 'primeng/primeng';
 import {InlineEditorModule} from 'ng2-inline-editor';
+import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 
 @NgModule({
-    imports:[RouterModule.forChild(FlickrListInfRoutes),
+    imports:[RouterModule.forChild(FlickrListInfRoutes),CustomPipeModule,
         CommonModule, FormsModule, InlineEditorModule, DataTableModule, NgPipesModule, OverlayPanelModule, SliderModule, DialogModule],
     declarations:[FlickrListInfComponent],
     providers: [PagerService]

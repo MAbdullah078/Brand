@@ -13,12 +13,13 @@ import {RoundpipeModule} from "../home/roundpipe.module";
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule
 } from '@angular/material';
+import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 @NgModule({
     imports: [CommonModule,MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
       MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,
         RouterModule.forChild(TwitterSearchRoutes),
-     SliderModule,ReactiveFormsModule,DataTableModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
+     SliderModule,ReactiveFormsModule,DataTableModule,OverlayPanelModule,DialogModule,CustomPipeModule,FormsModule,RoundpipeModule,NgPipesModule],
     declarations: [TwitterSearchComponent],
     providers:[PagerService]
 })

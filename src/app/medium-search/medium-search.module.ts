@@ -12,9 +12,10 @@ import {PagerService} from "../_services/paginator.service";
 import {RoundpipeModule} from "../home/roundpipe.module";
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
   MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule} from '@angular/material';
+import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 @NgModule({
-    imports: [CommonModule,
+    imports: [CommonModule,CustomPipeModule,
       MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
       MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,
       RouterModule.forChild(MediumSearchRoutes),SliderModule,ReactiveFormsModule,

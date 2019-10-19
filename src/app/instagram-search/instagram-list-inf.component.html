@@ -372,7 +372,15 @@
           <hr style="color: #555555">
           <div class="row" >
             <ul style="display: flex; ">
-              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']}} |  </span> </li>
+              <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']}} |  </span> </li> -->
+              <li><span class="right-item"><i class="fa fa-users" ></i> Follower:</span>
+                <!--<span class="list-item1">{{item['follower']}}  </span>-->
+
+                <span *ngIf="item['follower']<1000" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['follower'] | thousandSuff}}</span></span>
+                <span *ngIf="item['follower']>1000 && item['follower']<10000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['follower'] | thousandSuff}}</span></span>
+                <span *ngIf="item['follower']>10000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['follower'] | thousandSuff}}</span></span>
+
+              </li>
               <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
               <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
               <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Username:</span> <span class="list-item1">{{item['username']}}</span></li>

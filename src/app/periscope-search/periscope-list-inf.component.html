@@ -144,8 +144,16 @@
           <hr style="color: #555555">
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
-              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Followers:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
-              <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
+              <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Followers:</span> <span class="list-item1">{{item['followers']}} |  </span> </li> -->
+
+              <li><span class="right-item"><i class="fa fa-users" ></i> Followers:</span>
+
+                <span *ngIf="item['followers']<100" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['followers']| thousandSuff}}</span></span>
+                <span *ngIf="item['followers']>100 && item['followers']<1000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['followers']| thousandSuff}}</span></span>
+                <span *ngIf="item['followers']>1000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['followers']| thousandSuff}}</span></span>
+
+              </li>
+              <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}} |   </span></li>
               <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['profile_rank']}}</span></li>
               <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Broadcast :</span> <span class="list-item1">{{item['braodcasts']}} |  </span> </li>
 
@@ -155,7 +163,17 @@
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
               <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
-              <li><span class="right-item"> <i class="fa fa-heart-o" style="font-size:16px;color:#0a4069"></i> Hearts :</span> <span class="list-item1">{{item['hearts']}} |   </span></li>
+              <!-- <li><span class="right-item"> <i class="fa fa-heart-o" style="font-size:16px;color:#0a4069"></i> Hearts :</span> <span class="list-item1">{{item['hearts']}} |   </span></li> -->
+              
+              <li><span class="right-item"> <i class="fa fa-heart-o" ></i> Hearts :</span>
+
+                <span *ngIf="item['hearts']<1000"  class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['hearts']}}</span></span>
+                <span *ngIf="item['hearts']>1000 && item['hearts']<5000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['hearts']}}</span></span>
+                <span *ngIf="item['hearts']>5000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['hearts'] | thousandSuff}}</span></span>
+
+
+              </li>
+              
               <li><span class="right-item"><i class="fa fa-twitter" style="font-size:16px;color:#0a4069"></i> Twitter: </span> <span class="list-item1">{{item['twitter_name']}}</span></li>
 
 

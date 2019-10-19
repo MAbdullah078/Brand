@@ -12,10 +12,11 @@ import {RoundpipeModule} from "../home/roundpipe.module";
 import {TwitterListComponent} from "./twitter-list.component";
 import {TwitterListRoutes} from "./twitter-list.routing";
 import {InlineEditorModule} from "ng2-inline-editor";
+import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(TwitterListRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
+    imports: [CommonModule,CustomPipeModule, RouterModule.forChild(TwitterListRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
     declarations: [TwitterListComponent],
     providers:[PagerService]
 })
