@@ -267,43 +267,65 @@
                             <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                             <label for="table-check-{{item['id']}}"></label>
                         </div>
-                <div class="col-md-2 image-div ">
+                <div class="col-md-1  description-divison">
                     <img [src]="item['thumbnail_url']"  class="twitter-image">
                 </div>
-                <div class="col-md-4 description-divison">
+                <div class="col-md-1 followers-profile">
+                        <h6 class="m-0">Subcriber:</h6>
+                        <h4 class="real-heading">{{item['subscribers']}}</h4>
+                    </div>
+                <div class="col-md-9 ">
+        
+                            <div class="d-flex">
+                                <i class="fab fa-youtube"></i>
+                                
                     <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-                    <label class="tbl-cell tbl-cell-name">{{item['channel_link']}}</label>
-                        <label class="item-content"
+                </div>
+                
+                  <div class="detail ml-4">
+                    <div>
+                        <label class="item-content2 "
                         title="{{item['description']}}">{{item['description']}}</label>
+                    </div>
+                             <div class=""> 
+                    <label class=" tbl-cell2"><i class="fas fa-globe"></i>{{item['channel_link']}}</label>
+                </div>
+                    </div>
+                   
                      <div class="row" >
-                        <ul class="profile-url p-1 ">
-                            <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li>
+                        <div class="col-md-5 p-2 ">
+                            <!-- <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li>
                             <li class="subscribers-li2"><span class="right-item">  Total Views:</span> <span class="list-item1">{{item['total_views']}}</span></li>
                             <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
                             <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Week:</span> <span class="list-item1">{{item['last_week_upload_videos']}}</span> </li>
                             <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> </li>
 
-                        </ul>
-                        <ul class="profile-url p-1 ">
+                        </ul> -->
+                        <!-- <ul class="profile-url p-1 ">
                             <li class="rank-li1"><span class="right-item"> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>
                             <li class="rank-li2"><span class="right-item"> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
 
-                        </ul>
+                        </ul> -->
+                        <div class="ml-4">
+                        <span class="right-item"><i class="fa fa-users" ></i>  subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span>
+                    </div>
+                    <div class="ml-4">
+                            <span class="right-item"> <i class="fa fa-eye" ></i> Total Views:</span> <span class="list-item1">{{item['total_views']}}</span>
+                    </div>
+                    </div>
+                    <div class="col-md-4 p-2">
+                        <div>
+                            <span class="right-item"><i class="fas fa-video"></i>Videos Uploaded Today:</span>  <span class="list-item1">{{item['today_upload_videos']}}</span>
+                        </div>
+                        <div>                            <span class="right-item"><i class="fas fa-file-video"></i> Last Week: </span> <span class="list-item1">{{item['last_week_upload_videos']}}</span>
+                        </div>
+
                     </div>
              
                 </div>
                 
         
-            <div class="col-md-2 image-div">
-                <img [src]="item['thumbnail_url']"  class="twitter-image2"> 
-        </div>
-        <div class="col-md-2 image-div">
-            <img [src]="item['thumbnail_url']"  class="twitter-image2">
-        </div>
-        <div class="col-md-1 followers-profile">
-            <h4 class="real-heading">{{item['subscribers']}}</h4>
-            <h6>Subcriber</h6>
-        </div>
+     
     </div>
 
 
@@ -412,6 +434,8 @@
             </div>
         </div> -->
     </div>
+
+
 
 
 </div>
