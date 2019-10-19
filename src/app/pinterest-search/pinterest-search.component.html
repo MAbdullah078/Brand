@@ -678,7 +678,7 @@
           <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}    {{item['country']}}</span></label>
           <!-- <label class="item-loc" *ngIf="!item['location']"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> N/A</span></label> -->
               <label class="item-content" title="{{item['description']}}">{{item['description']}}</label>
-              <label class="item-content" title="{{item['profile_linked']}}">Profile Link: {{item['profile_linked']}}</label>
+              <label class="item-content" title="{{item['profile_linked']}}" (click)="goToMedium(item['profile_linked'])">Profile Link: {{item['profile_linked']}}</label>
               <label class="item-content" title="{{item['profile_contact']}}">Contact:{{item['profile_contact']}}</label>
 
            <div class="row" >

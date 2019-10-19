@@ -456,7 +456,7 @@
             </div> -->
             <div class="col-md-9 text-left">
 
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_link']}}</a></label>
+              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; " (click)="goToMedium(item['profile_link'])"></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_link']}}</a></label>
             </div>
           </div>
           <hr style="color: #555555">
@@ -817,7 +817,7 @@
             </div> -->
             <div class="col-md-7 text-left">
 
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_link']}}</a></label>
+              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; " (onclick)="goToMedium(item['profile_link'])"></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_link']}}</a></label>
             </div>
           </div>
           <hr style="color: #555555">

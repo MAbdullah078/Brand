@@ -438,6 +438,7 @@
                             <div class="title-name">
                                     <i class="fab fa-facebook"></i>
                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
+                            <h5><label class="tbl-cell tbl-cell-name" (click)="goToMedium(item['fb_page_link'])">{{item['fb_page_link']}}</label></h5>
                             <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                             </div>
                             <div class="row">

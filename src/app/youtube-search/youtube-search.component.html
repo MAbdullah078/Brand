@@ -280,7 +280,7 @@
                                 <i class="fab fa-youtube"></i>
                                 
                     <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-                    <label class="tbl-cell tbl-cell-name">{{item['channel_link']}}</label>
+                    <label class="tbl-cell tbl-cell-name" (click)="goToMedium(item['channel_link'])">{{item['channel_link']}}</label>
                         <label class="item-content"
                         title="{{item['description']}}">{{item['description']}}</label>
                      <div class="row" >
