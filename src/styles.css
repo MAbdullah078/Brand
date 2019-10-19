@@ -1,7 +1,7 @@
 @import "~node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
 body{
-  font-family: 'Open Sans', sans-serif!important;
+ 
 }
 @media screen and (min-width: 1140px) and (max-width: 1520px) {
   .padding-zero-i{
@@ -194,6 +194,12 @@ mat-tab-group{
   background: #98e080;
   padding: 5px;
   border-radius: 5px;
+}
+.right-item{
+  color: #000;
+  font-size: 12px;
+  margin-right: 3px;
+
 }
 .list-item1{
   color: #fff;
@@ -10088,7 +10094,7 @@ ul.tab-nav.tab-nav2 li:first-child {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  min-height: 168px;
 }
 .progress-url{
   margin: 0;
