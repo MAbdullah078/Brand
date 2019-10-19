@@ -12,6 +12,7 @@ import {RoundpipeModule} from "../home/roundpipe.module";
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule} from '@angular/material';
 import {PreloaderModule} from "../components/preloader.module";
+import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 // import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
 @NgModule({
@@ -23,8 +24,8 @@ import {PreloaderModule} from "../components/preloader.module";
       DialogModule,
       ReactiveFormsModule,
       OverlayPanelModule,
-      MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
-      MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule ,       FormsModule,
+      MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,CustomPipeModule,
+      MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule ,FormsModule,
         RoundpipeModule,
         NgPipesModule,
     ],

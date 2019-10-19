@@ -16,10 +16,11 @@ import {RoundpipeModule} from "../home/roundpipe.module";
 import {YoutubeListInfComponent} from "./youtube-list-inf.component";
 import {YoutubeListInfRoutes} from "./youtube-list-inf.routing";
 import {InlineEditorModule} from "ng2-inline-editor";
+import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(YoutubeListInfRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
+    imports: [CommonModule,CustomPipeModule, RouterModule.forChild(YoutubeListInfRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
     declarations: [YoutubeListInfComponent],
     providers:[PagerService]
 })

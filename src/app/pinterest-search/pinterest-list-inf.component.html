@@ -309,10 +309,31 @@
                     <hr style="color: #555555">
                     <div class="row" >
                         <ul style="display: flex; padding-top: 5px">
-                            <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers']}} |  </span> </li>
+                            <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers']}} |  </span> </li> -->
+                            <li>
+                                    <span class="right-item"><i class="fa fa-users" ></i> Follower:</span>
+                                    <!--<span class="list-item1">{{item['followers']}}   </span>-->
+    
+                                    <span *ngIf="item['followers']<100" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['followers']| thousandSuff}}</span></span>
+                                    <span *ngIf="item['followers']>100 && item['followers']<1000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['followers']| thousandSuff}}</span></span>
+                                    <span *ngIf="item['followers']>1000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['followers']| thousandSuff}}</span></span>
+    
+                                </li>
+    
                             <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
                             <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span></li>
-                            <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Pins:</span> <span class="list-item1">{{item['pins']}}</span></li>
+                            <!-- <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Pins:</span> <span class="list-item1">{{item['pins']}}</span></li> -->
+
+                            <li><span class="right-item"><i class="fa fa-user" ></i> Pins:</span>
+                                <!--<span class="list-item1">{{item['pins']}}</span>-->
+
+                                <span *ngIf="item['pins']<100" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['pins']| thousandSuff}}</span></span>
+                                <span *ngIf="item['pins']>100 && item['pins']<1000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['pins']| thousandSuff}}</span></span>
+                                <span *ngIf="item['pins']>1000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['pins']| thousandSuff}}</span></span>
+
+
+
+                            </li>
 
                         </ul>
                     </div>
