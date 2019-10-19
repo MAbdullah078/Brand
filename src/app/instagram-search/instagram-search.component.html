@@ -430,20 +430,7 @@
           </div>
           <div class="row" style="padding-top: 8px">
             <div class="col-md-3 text-left">
-              <!-- <label class="item-loc"> <i class="fa fa-clipboard" style="font-size:16px;color:#c00"></i> Posts: <span class="list-item1"> {{item['posts']}}</span></label> -->
-              
-              <span *ngIf="item['posts']<100" class="list-item1"> Posts:
-                <!-- <span class="label label-danger"> -->
-                <!-- <small>Poor</small> -->
-                 {{item['posts'] | thousandSuff}}</span>
-        <span *ngIf="item['follower']>1000 && item['posts']<10000" class="list-item1"> Posts:
-          <!-- <span class="label label-primary"> -->
-          <!-- <small>Normal</small> -->
-           {{item['posts'] | thousandSuff}}</span>
-        <span *ngIf="item['posts']>10000" class="list-item1"> Posts:
-          <!-- <span class="label label-success"> -->
-          <!-- <small>Perfect</small> -->
-           {{item['posts'] | thousandSuff}}</span>
+              <label class="item-loc"> <i class="fa fa-clipboard" style="font-size:16px;color:#c00"></i> Posts: <span class="list-item1"> {{item['posts']}}</span></label>
 
             </div>
             <div class="col-md-9 text-left">
@@ -456,7 +443,7 @@
           <hr style="color: #555555">
           <div class="row" >
             <ul style="display: flex; padding-top: 5px">
-              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']| thousandSuff}} | </span> </li>
+              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']}} |  </span> </li>
               <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
               <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
               <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Username:</span> <span class="list-item1">{{item['username']}}</span></li>
@@ -509,18 +496,7 @@
 
 
                  
-                    <!-- <li><span class="right-item"> Posts:</span> <span class="list-item1">{{item['posts']}}</span> </li> -->
-
-
-                    <span *ngIf="item['posts']<1000" class="list-item1"> Posts:<span class="label label-danger">
-                      <!-- <small>Poor</small> -->
-                       {{item['posts'] | thousandSuff}}</span></span>
-              <span *ngIf="item['follower']>1000 && item['posts']<10000" class="list-item1"> Posts:<span class="label label-primary">
-                <!-- <small>Normal</small> -->
-                 {{item['posts'] | thousandSuff}}</span></span>
-              <span *ngIf="item['posts']>10000" class="list-item1"> Posts:<span class="label label-success">
-                <!-- <small>Perfect</small> -->
-                 {{item['posts'] | thousandSuff}}</span></span>
+                    <li><span class="right-item"> Posts:</span> <span class="list-item1">{{item['posts']}}</span> </li>
                     <!-- <span *ngIf="item['posts']<1000" class="list-item1"> Posts:<span class="label label-danger">
                         <small>Poor</small>
                          {{item['posts'] | thousandSuff}}</span></span>

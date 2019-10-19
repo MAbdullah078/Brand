@@ -13,7 +13,6 @@ import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorMod
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule} from '@angular/material';
 import {PreloaderModule} from "../components/preloader.module";
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 @NgModule({
     imports: [
@@ -21,7 +20,7 @@ import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
         RouterModule.forChild(FacebookSearchRoutes),
         PreloaderModule,
         DataTableModule,
-      MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,CustomPipeModule,
+      MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
       MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,
       ReactiveFormsModule,
       OverlayPanelModule,

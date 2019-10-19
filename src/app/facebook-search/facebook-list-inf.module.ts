@@ -10,13 +10,12 @@ import {DataTableModule, OverlayPanelModule} from 'primeng/primeng';
 import {SliderModule} from 'primeng/primeng';
 import {DialogModule} from 'primeng/primeng';
 import {InlineEditorModule} from 'ng2-inline-editor';
-import {CustomPipeModule} from '../periscope-search/CustomPipe.module';
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,} from '@angular/material';
 
 @NgModule({
     imports:[RouterModule.forChild(FacebookListInfRoutes),
-        CommonModule, FormsModule, InlineEditorModule, DataTableModule,CustomPipeModule,
+        CommonModule, FormsModule, InlineEditorModule, DataTableModule,
       MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
       MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,NgPipesModule, OverlayPanelModule, SliderModule, DialogModule],
     declarations:[FacebookListInfComponent],

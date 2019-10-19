@@ -277,24 +277,8 @@
                         title="{{item['description']}}">{{item['description']}}</label>
                      <div class="row" >
                         <ul class="profile-url p-1 ">
-                            <!-- <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li> -->
-
-                            <li><span class="right-item"><i class="fa fa-users" ></i> subscribers:</span>
-                                <span *ngIf="item['subscribers']<1000" class="right-item"><span class="label label-danger" style="background: #cc0000"> {{item['subscribers'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>1000 && item['subscribers']<50000" class="right-item"><span class="label label-primary" style="background: #0095ff"> {{item['subscribers'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>50000" class="right-item"><span class="label label-success"> {{item['subscribers'] | thousandSuff}}</span></span>
-
-                            </li>
-
-                            <!-- <li class="subscribers-li2"><span class="right-item">  Total Views:</span> <span class="list-item1">{{item['total_views']}}</span></li> -->
-
-                            <li><span class="right-item"><i class="fa fa-users" ></i> Total Views:</span>
-                                <span *ngIf="item['subscribers']<1000" class="right-item"><span class="label label-danger" style="background: #cc0000"> {{item['total_views'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>1000 && item['subscribers']<50000" class="right-item"><span class="label label-primary" style="background: #0095ff"> {{item['total_views'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>50000" class="right-item"><span class="label label-success"> {{item['total_views'] | thousandSuff}}</span></span>
-
-                            </li>
-
+                            <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li>
+                            <li class="subscribers-li2"><span class="right-item">  Total Views:</span> <span class="list-item1">{{item['total_views']}}</span></li>
                             <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
                             <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Week:</span> <span class="list-item1">{{item['last_week_upload_videos']}}</span> </li>
                             <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> </li>

@@ -13,9 +13,8 @@ import {PagerService} from "../_services/paginator.service";
 import {RoundpipeModule} from "../home/roundpipe.module";
 import {MatFormFieldModule,MatAutocompleteModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
     MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule} from '@angular/material';
-import { CustomPipeModule } from './CustomPipe.module';
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(PeriscopeSearchRoutes),SliderModule,CustomPipeModule,
+    imports: [CommonModule, RouterModule.forChild(PeriscopeSearchRoutes),SliderModule,
       MatFormFieldModule,MatAutocompleteModule,InlineEditorModule, MatCardModule, MatPaginatorModule, MatSortModule, MatTableModule,
       MatInputModule, MatRippleModule, MatSelectModule,MatTabsModule,
         ReactiveFormsModule,DataTableModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],

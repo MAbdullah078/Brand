@@ -11,14 +11,13 @@ import {RoundpipeModule} from "../home/roundpipe.module";
 import {MediumListInfComponent} from './medium-list-inf.component';
 import {InlineEditorModule} from "ng2-inline-editor";
 import {MediumListInfRoutes} from './medium-list-inf.routing';
-import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 @NgModule({
     imports: [CommonModule,
         RouterModule.forChild(MediumListInfRoutes),
         ReactiveFormsModule,
         SliderModule,
-        DataTableModule,CustomPipeModule,
+        DataTableModule,
         InlineEditorModule,
         OverlayPanelModule,
         DialogModule,FormsModule,

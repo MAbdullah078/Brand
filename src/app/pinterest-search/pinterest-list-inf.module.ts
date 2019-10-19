@@ -12,11 +12,10 @@ import {PinterestListInfComponent} from './pinterest-list-inf.component';
 import {InlineEditorModule} from "ng2-inline-editor";
 import {PintersetListInfRoutes} from './pinterest-list-inf.routing';
 import {PinterestSearchComponent} from './pinterest-search.component';
-import { CustomPipeModule } from '../periscope-search/CustomPipe.module';
 
 
 @NgModule({
-    imports: [CommonModule,CustomPipeModule, RouterModule.forChild(PintersetListInfRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
+    imports: [CommonModule, RouterModule.forChild(PintersetListInfRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
     declarations: [PinterestListInfComponent],
     providers:[PagerService]
 })
