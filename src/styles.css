@@ -201,12 +201,7 @@ mat-tab-group{
   margin-right: 3px;
 
 }
-.list-item1{
-  color: #fff;
-  font-weight: 700;
-  font-size: 12px;
 
-}
 .description-divison{
   display: flex;
     flex-direction: column;
@@ -10173,9 +10168,10 @@ width: 16%;
     border-radius: 3px;
 }
 .marker-icon{
-  font-size: 16px;
-    color: #a5e080!important;
-  margin: 5px;
+  font-size: 14px;
+  color: #a5e080!important;
+  margin-right: 8px;
+
 }
 
 

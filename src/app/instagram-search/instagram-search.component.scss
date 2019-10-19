@@ -75,6 +75,7 @@ input[type=checkbox]{
 .tbl-cell{
   font-weight: 600;
   font-size: 19px;
+  font-family: 'Open Sans', sans-serif;
 }
 i{
   color: #000;
@@ -86,17 +87,20 @@ i{
 
 }
 .item-loc{
-  color: #919fa9;
-  font-size: 14px;
+  color: #0a6aa1;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 hr{
   margin: 0!important;
 }
 .list-item1{
-  margin-right: 20px;
-  color: #000;
+
+  color: #0a6aa1;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 12px;
 }
 .right-item{
   color: #919fa9;
@@ -110,4 +114,52 @@ hr{
   margin-top: 3px;
   -webkit-box-shadow: 0 14px 26px -12px rgba(0, 0, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)!important;
   box-shadow: 0 14px 26px -12px rgba(0, 0, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)!important;
+}
+.followers-division{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.twitter-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.item-content{
+
+  color: #6a6794;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+.title-name img{
+  width: 40px
+}
+.fa-globe{
+  color:#1691ef;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.Follwers-div{
+  margin: 2px;
+  font-family: 'Merriweather', serif;
+  color: darkcyan;
+}
+.fa-instagram{
+  color: #a82f82;
+  margin: 7px;
+  font-size: 21px;
+}
+.fa-users{
+  color: #4169e1;
+}
+.fa-eye{
+  color: #a0522d;
+}
+.fa-random{
+  color: #fa8072;
+  margin: 2px;
+}
+.fa-user
+,.fa-chart-bar{
+ color: #ed143d;
 }

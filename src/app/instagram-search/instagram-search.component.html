@@ -404,180 +404,81 @@
       </div>
     </div>
 
-     <div class="profile-container" *ngFor="let item of default_influencers.results" > 
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="profile-container" *ngFor="let item of default_influencers.results" >
       <div class="row">
 
 
-        <div class="col-md-2 profile-checkbox" type="checkbox">
-          <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-          <label for="table-check-{{item['id']}}"></label>
-        </div>
-        <div class="col-md-2 text-center">
-          <img [src]="item['image_url']"  style="height: 100px;  width: 100px; margin-top: 15px; border-radius: 100%">
-        </div>
-
-
-        <div class="col-md-7" style="margin-left: 3%">
-          <div class="row">
-            <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+          <div class="col-md-1 profile-checkbox" type="checkbox">
+              <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+              <label for="table-check-{{item['id']}}"></label>
           </div>
-          <div class="row" style="padding-top: 8px">
-            <label class="item-content" style="overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
-          </div>
-          <div class="row" style="padding-top: 8px">
-            <div class="col-md-3 text-left">
-              <!-- <label class="item-loc"> <i class="fa fa-clipboard" style="font-size:16px;color:#c00"></i> Posts: <span class="list-item1"> {{item['posts']}}</span></label> -->
-              
-              <span *ngIf="item['posts']<100" class="list-item1"> Posts:
-                <!-- <span class="label label-danger"> -->
-                <!-- <small>Poor</small> -->
-                 {{item['posts'] | thousandSuff}}</span>
-        <span *ngIf="item['follower']>1000 && item['posts']<10000" class="list-item1"> Posts:
-          <!-- <span class="label label-primary"> -->
-          <!-- <small>Normal</small> -->
-           {{item['posts'] | thousandSuff}}</span>
-        <span *ngIf="item['posts']>10000" class="list-item1"> Posts:
-          <!-- <span class="label label-success"> -->
-          <!-- <small>Perfect</small> -->
-           {{item['posts'] | thousandSuff}}</span>
 
-            </div>
-            <div class="col-md-9 text-left">
+<div class="col-md-1 followers-division">
 
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile Url:  <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
-              <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>
-
-            </div>
-          </div>
-          <hr style="color: #555555">
-          <div class="row" >
-            <ul style="display: flex; padding-top: 5px">
-              <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['follower']| thousandSuff}} | </span> </li>
-              <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
-              <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
-              <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Username:</span> <span class="list-item1">{{item['username']}}</span></li>
-
-            </ul>
-          </div>
-          <hr style="color: #555555">
-          <!-- <div class="row" >
-            <ul style="display: flex; padding-top: 5px">
-              <li style="font-weight: bolder"> Videos Uploads | </li>
-              <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
-              <li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tomorrow :</span> <span class="list-item1">{{item['tomorrow_upload_videos']}}</span></li>
-              <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Last Week: </span> <span class="list-item1">{{item['last_week_upload_videos']}}</span></li>
-              <li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>
-
-            </ul>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="row influcener-div"*ngFor="let item of default_influencers.results" >
-      <div class="col-md-6">
-      <div class="row">
-              <div class="col-md-1 profile-checkbox" type="checkbox">
-                      <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                      <label for="table-check-{{item['id']}}"></label>
-                  </div>
-          <div class="col-md-4  ">
-            <img [src]="item['image_url']"   class="twitter-image">
-          </div>
-          <div class="col-md-7 description-divison">
-              <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-              <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" > {{item['account_link']}}</span></label>
-              <label class="item-loc">External Url <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1" > {{item['external_url']}}</span></label>
-                  <label class="item-content"
-                  title="{{item['description']}}">{{item['description']}}</label>
-               <div class="row" >
-                  <ul class="profile-url p-1 ">
-                     <!-- <li><span class="right-item"> Follower:</span> <span class="list-item1">{{item['follower']}}</span> </li> -->
-                    <span *ngIf="item['follower']<1000" class="list-item1"> Follower:<span class="label label-danger">
-                      <!-- <small>Poor</small> -->
-                       {{item['follower'] | thousandSuff}}</span></span>
-              <span *ngIf="item['follower']>1000 && item['follower']<10000" class="list-item1"> Follower:<span class="label label-primary">
-                <!-- <small>Normal</small> -->
-                 {{item['follower'] | thousandSuff}}</span></span>
-              <span *ngIf="item['follower']>10000" class="list-item1"> Follower:<span class="label label-success">
-                <!-- <small>Perfect</small> -->
-                 {{item['follower'] | thousandSuff}}</span></span>
-              
-
-
-                 
-                    <!-- <li><span class="right-item"> Posts:</span> <span class="list-item1">{{item['posts']}}</span> </li> -->
-
-
-                    <span *ngIf="item['posts']<1000" class="list-item1"> Posts:<span class="label label-danger">
-                      <!-- <small>Poor</small> -->
-                       {{item['posts'] | thousandSuff}}</span></span>
-              <span *ngIf="item['follower']>1000 && item['posts']<10000" class="list-item1"> Posts:<span class="label label-primary">
-                <!-- <small>Normal</small> -->
-                 {{item['posts'] | thousandSuff}}</span></span>
-              <span *ngIf="item['posts']>10000" class="list-item1"> Posts:<span class="label label-success">
-                <!-- <small>Perfect</small> -->
-                 {{item['posts'] | thousandSuff}}</span></span>
-                    <!-- <span *ngIf="item['posts']<1000" class="list-item1"> Posts:<span class="label label-danger">
-                        <small>Poor</small>
-                         {{item['posts'] | thousandSuff}}</span></span>
-                <span *ngIf="item['posts']>1000 && item['posts']<10000" class="list-item1"> Posts:<span class="label label-primary">
-                  <small>Normal</small>
-                   {{item['follower'] | thousandSuff}}</span></span>
-                <span *ngIf="item['posts']>10000" class="list-item1"> Posts:<span class="label label-success">
-                  <small>Perfect</small>
-                   {{item['posts'] | thousandSuff}}</span></span> -->
-                    <li><span class="right-item"> Views per Videos:</span> <span class="list-item1">{{item['views_per_video']}}</span> </li>
-                    <li><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}}</span></li>      </ul>
-                  <ul class="profile-url p-1 ">
-                    <li><span class="right-item"> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
-                    <li><span class="right-item"> Username:</span> <span class="list-item1">{{item['username']}}</span></li>
-
-                  </ul>
+<img [src]="item['image_url']"  class="twitter-image">
+</div>
+          <div class="col-md-1 followers-division">
+      
+              <div>
+                      <h6 class="m-1">Follower</h6>
+                  <h3 class="Follwers-div" >{{item['follower']| thousandSuff}}</h3>
               </div>
-       
           </div>
+                  <div class="col-md-9">
+                      <div class="title-name">
+                        <div class="d-flex">
+                            <i class="fab fa-instagram"></i>
+                      <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
+                      </div>
+                      <div class="ml-4">
+                      <label class="item-content"  title="{{item['description']}}">{{item['description']}}</label>
+                   <div>   
+              <label class="item-loc"><i class="fas fa-globe"></i>Profile Url:  <a>{{item['account_link']}}</a></label>
+              </div>
+              <div >
+              <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>
+            </div>
+              </div>
+                      </div>
+                      <div class="row">
+                  <div class="col-md-6">
+                      <div class="ml-4">
+                          <span class="right-item"><i class="fa fa-user" ></i> Username:</span> <span class="list-item1">{{item['username']}}</span>
+                              </div>
+                              <div class="ml-4">
+                                <span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                              </div>
+                  </div>
           
-      </div>
-  </div>
-      <div class="col-md-1 followers-profile">
-          <h4 class="real-heading">97%</h4>
-          <h5>Real</h5>
-      </div>
-      <div class="col-md-4">
-          <ul class="progress-url">
-                  <li>
-                      <span class="followers-percen">25-30</span>
-                      <div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 56%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>  <span class="followers-percen1">56%</span></li>
-                    <li>   <span  class="followers-percen">30-35</span><div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 29%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div><span  class="followers-percen1">29%</span></li>
-                    <li><span class="followers-percen" >35-40</span><div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 45%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div><span class="followers-percen1">45%</span></li>
-                    <li><span class="followers-percen">40-45</span><div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar" style="width:35%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div><span class="followers-percen1">35%</span></li>
-                    
-              </ul>
-
-  </div>
-  <div class="col-md-1 male-follwers">
-      <div>
-          <i class="fas fa-venus"></i><span>83%</span>
-          <h5>Female</h5>
-      </div>
-      <div>
-              <i class="fas fa-venus"></i><span>33%</span>
-              <h5>Male</h5>
+                  <div class="col-md-6"  >
+                      <div>
+                        <span class="right-item"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span>
+              
+              </div>
+              <div>
+             
+                  <span class="right-item"><i class="fas fa-random"></i>Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>   
+                      </div>
+                  </div>
+              </div>
+                  </div>
           </div>
-  </div>
-  </div>
+      </div> 
   </div>
 
   <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
