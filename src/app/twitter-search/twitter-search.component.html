@@ -776,7 +776,14 @@
                         <div class="row" >
                             <ul style="display: flex; padding-top: 5px">
                                 <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers'] | thousandSuff}} </span> </li>
-                                <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']  | thousandSuff}}    </span></li>
+                                <!-- <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']  | thousandSuff}}    </span></li> -->
+
+                                <li><span class="right-item"><i class="fa fa-users" ></i> Following:</span>
+                                    <span *ngIf="item['subscribers']<1000" class="right-item"><span class="label label-danger" style="background: #cc0000"> {{item['following'] | thousandSuff}}</span></span>
+                                    <span *ngIf="item['subscribers']>1000 && item['subscribers']<50000" class="right-item"><span class="label label-primary" style="background: #0095ff"> {{item['following'] | thousandSuff}}</span></span>
+                                    <span *ngIf="item['subscribers']>50000" class="right-item"><span class="label label-success"> {{item['following'] | thousandSuff}}</span></span>
+    
+                                </li>
                                 <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Likes:</span> <span class="list-item1">{{item['likes']}}</span></li>
                                 <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span></li>
 
