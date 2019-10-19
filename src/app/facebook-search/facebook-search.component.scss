@@ -174,10 +174,14 @@ i{
 }
 .item-content{
 
-  color: #6a6794;
-  font-size: 23px;
-  font-weight: 700!important;
-  font-family: 'Merriweather', serif
+ color: #6a6794;
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    line-height: 1;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .title-name{
   display: flex;

@@ -351,3 +351,31 @@ hr{
 mat-tab-header{
   background-color: black;
 }
+
+
+
+.followers-division{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.twitter-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.item-content{
+
+  color: #6a6794;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+.title-name img{
+  width: 40px
+}
+.list-item1{
+  color: #000;
+  font-weight: 700;
+  font-size: 12px;
+
+}
