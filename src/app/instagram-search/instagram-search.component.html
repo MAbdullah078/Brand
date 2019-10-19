@@ -45,7 +45,7 @@
           <div class="body">
             <div class="container">
                 <form (submit)="setPage(1)" class="m-0">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-6">
                             <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
                                         placeholder="Select Category" style="width:75%">
@@ -57,8 +57,8 @@
                                 <input matInput type="text"[(ngModel)]="name" placeholder="Serch by Title/Name" name="contact">
                             </mat-form-field>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div> -->
+                    <!-- <div class="row">
                         <div class="col-md-6">
                             <mat-form-field>
                                 <input matInput type="text" [(ngModel)]="following" placeholder="Serch by Subscribers" name="social">
@@ -69,8 +69,8 @@
                                 <input matInput type="text" [(ngModel)]="follower" placeholder="Serch by Total Views" name="seo">
                             </mat-form-field>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div> -->
+                    <!-- <div class="row">
                         <div class="col-md-6">
                             <mat-form-field>
                                 <input matInput type="text" [(ngModel)]="account_rank" placeholder="Serch by Rank" name="loc">
@@ -81,7 +81,7 @@
                                 <input matInput type="text" [(ngModel)]="post" placeholder="Serch by Today Upload Videos" name="er">
                             </mat-form-field>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                         <div class="col-md-2 offset-md-4 text-right">
@@ -436,6 +436,8 @@
             <div class="col-md-9 text-left">
 
               <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile Url:  <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
+              <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>
+
             </div>
           </div>
           <hr style="color: #555555">
@@ -449,7 +451,7 @@
             </ul>
           </div>
           <hr style="color: #555555">
-          <div class="row" >
+          <!-- <div class="row" >
             <ul style="display: flex; padding-top: 5px">
               <li style="font-weight: bolder"> Videos Uploads | </li>
               <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
@@ -458,11 +460,11 @@
               <li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>
 
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-    <!-- <div class="row influcener-div"*ngFor="let item of default_influencers.results" >
+    <div class="row influcener-div"*ngFor="let item of default_influencers.results" >
       <div class="col-md-6">
       <div class="row">
               <div class="col-md-1 profile-checkbox" type="checkbox">
@@ -480,7 +482,7 @@
                   title="{{item['description']}}">{{item['description']}}</label>
                <div class="row" >
                   <ul class="profile-url p-1 ">
-                    <!-- <li><span class="right-item"> Follower:</span> <span class="list-item1">{{item['follower']}}</span> </li> -->
+                     <!-- <li><span class="right-item"> Follower:</span> <span class="list-item1">{{item['follower']}}</span> </li> -->
                     <span *ngIf="item['follower']<1000" class="list-item1"> Follower:<span class="label label-danger">
                       <!-- <small>Poor</small> -->
                        {{item['follower'] | thousandSuff}}</span></span>
@@ -551,7 +553,7 @@
               <h5>Male</h5>
           </div>
   </div>
-  </div> -->
+  </div>
   </div>
 
   <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
@@ -610,11 +612,15 @@
             <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
           </div>
           <div class="row" style="padding-top: 8px">
-            <!--<label class="item-content" style="overflow: hidden;-->
-            <!--text-overflow: ellipsis;-->
-            <!--display: -webkit-box;-->
-            <!-- -webkit-box-orient: vertical;-->
-            <!-- -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>-->
+
+
+            <label class="item-content" style="overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
+
+
           </div>
           <div class="row" style="padding-top: 8px">
             <div class="col-md-3 text-left">
@@ -624,6 +630,9 @@
             <div class="col-md-9 text-left">
 
               <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile Url:  <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
+              
+              <label class="item-loc">External Url <i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>
+
             </div>
           </div>
           <hr style="color: #555555">
@@ -637,16 +646,16 @@
             </ul>
           </div>
           <hr style="color: #555555">
-          <div class="row" >
+          <!-- <div class="row" >
             <ul style="display: flex; padding-top: 5px">
-              <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
-              <!--<li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}} |  </span> </li>-->
-              <!--<li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tomorrow :</span> <span class="list-item1">{{item['tomorrow_upload_videos']}} |   </span></li>-->
-              <!--<li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Last Week: </span> <span class="list-item1">{{item['last_week_upload_videos']}}</span></li>-->
-              <!--<li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>-->
+              <li style="font-weight: bolder"> Videos Uploads | </li>
+              <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}} |  </span> </li>
+              <li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tomorrow :</span> <span class="list-item1">{{item['tomorrow_upload_videos']}} |   </span></li>
+              <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Last Week: </span> <span class="list-item1">{{item['last_week_upload_videos']}}</span></li>
+              <li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>
 
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

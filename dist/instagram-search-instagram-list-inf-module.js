@@ -308,6 +308,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _instagram_list_inf_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./instagram-list-inf.component */ "./src/app/instagram-search/instagram-list-inf.component.ts");
 /* harmony import */ var _instagram_list_inf_routing__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./instagram-list-inf.routing */ "./src/app/instagram-search/instagram-list-inf.routing.ts");
 /* harmony import */ var ng2_inline_editor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng2-inline-editor */ "./node_modules/ng2-inline-editor/ng2-inline-editor.es5.js");
+/* harmony import */ var _periscope_search_CustomPipe_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../periscope-search/CustomPipe.module */ "./src/app/periscope-search/CustomPipe.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -327,12 +328,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var InstagramListInfModule = /** @class */ (function () {
     function InstagramListInfModule() {
     }
     InstagramListInfModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(_instagram_list_inf_routing__WEBPACK_IMPORTED_MODULE_9__["InstagramListInfRoutes"]), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["SliderModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DataTableModule"], ng2_inline_editor__WEBPACK_IMPORTED_MODULE_10__["InlineEditorModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["OverlayPanelModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _home_roundpipe_module__WEBPACK_IMPORTED_MODULE_7__["RoundpipeModule"], ngx_pipes__WEBPACK_IMPORTED_MODULE_5__["NgPipesModule"]],
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(_instagram_list_inf_routing__WEBPACK_IMPORTED_MODULE_9__["InstagramListInfRoutes"]), _periscope_search_CustomPipe_module__WEBPACK_IMPORTED_MODULE_11__["CustomPipeModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["SliderModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DataTableModule"], ng2_inline_editor__WEBPACK_IMPORTED_MODULE_10__["InlineEditorModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["OverlayPanelModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _home_roundpipe_module__WEBPACK_IMPORTED_MODULE_7__["RoundpipeModule"], ngx_pipes__WEBPACK_IMPORTED_MODULE_5__["NgPipesModule"]],
             declarations: [_instagram_list_inf_component__WEBPACK_IMPORTED_MODULE_8__["InstagramListInfComponent"]],
             providers: [_services_paginator_service__WEBPACK_IMPORTED_MODULE_6__["PagerService"]]
         })
