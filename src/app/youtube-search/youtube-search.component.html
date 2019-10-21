@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="t_views" placeholder="Serch by Total Views" name="seo">
+                                            <input matInput type="text" [(ngModel)]="t_views" placeholder="Serch by  Views" name="seo">
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
     </div>
 
     <div class="SickyPage">
-  <div id="wrapper" *ngIf="loaded&& influencers.totalItems!=0">
+  <div id="wrapper" *ngIf="loaded&& influencers.Items!=0">
 
     <div class="row" style="margin-top: 2%">
         <div class="col-md-12 text-center">
@@ -140,22 +140,22 @@
           <li class="page-item" *ngFor="let page of pager.pages"
               [ngClass]="{active:pager.currentPage === page}"
               (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
-          <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+          <!--<li [ngClass]="{disabled:pager.currentPage === pager.Pages}">-->
           <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
           <!--</li>-->
-          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.Pages}">
             <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
               <span class="sr-only">Next</span>
             </a>
           </li>
-          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-            <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.Pages}">
+            <a class="page-link" (click)="setPage(pager.Pages)" aria-label="Next">
               Last
             </a>
           </li>
-          <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-          <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+          <!--<li [ngClass]="{disabled:pager.currentPage === pager.Pages}">-->
+          <!--<a (click)="setPage(pager.Pages)">Last</a>-->
           <!--</li>-->
         </ul>
       </nav>
@@ -242,7 +242,7 @@
                     <div class="row" >
                         <ul style="display: flex; padding-top: 5px">
                             <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> subscribers:</span> <span class="list-item1">{{item['subscribers']}} |  </span> </li>
-                            <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Total Views:</span> <span class="list-item1">{{item['total_views']}} |   </span></li>
+                            <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i>  Views:</span> <span class="list-item1">{{item['_views']}} |   </span></li>
                             <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>
                             <li><span class="right-item"><i class="fa fa-calendar-o" style="font-size:16px;color:#0a4069"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
 
@@ -270,68 +270,51 @@
                 <div class="col-md-1 image-div ">
                     <img [src]="item['thumbnail_url']"  class="twitter-image">
                 </div>
-                <!-- <div class="col-md-1 followers-profile">
+                <div class="col-md-1 followers-profile">
                         <h6 class="m-0">Subcriber:</h6>
-                        <h4 class="real-heading">{{item['subscribers']}}</h4>
-                    </div> -->
+                        <h4 class="Follwers-div">{{item['subscribers'] |thousandSuff}}</h4>
+                    </div>
                 <div class="col-md-9 ">
         
                             <div class="d-flex">
                                 <i class="fab fa-youtube"></i>
                                 
                     <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-                    <label class="tbl-cell tbl-cell-name" (click)="goToMedium(item['channel_link'])">{{item['channel_link']}}</label>
+                    <label class="item-loc"> <i class="fa fa-map-marker"></i> {{item['location']}}</label>
+                </div>
                         <label class="item-content"
                         title="{{item['description']}}">{{item['description']}}</label>
+                        <label class="item-loc " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>{{item['channel_link']}}</label>
                      <div class="row" >
-                        <ul class="profile-url p-1 ">
-                            <!-- <li class="subscribers-li"><span class="right-item"> subscribers:</span> <span class="list-item1">{{item['subscribers']}}</span> </li> -->
-
-                            <li><span class="right-item"><i class="fa fa-users" ></i> subscribers:</span>
-                                <span *ngIf="item['subscribers']<1000" class="right-item"><span class="label label-danger" style="background: #cc0000"> {{item['subscribers'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>1000 && item['subscribers']<50000" class="right-item"><span class="label label-primary" style="background: #0095ff"> {{item['subscribers'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>50000" class="right-item"><span class="label label-success"> {{item['subscribers'] | thousandSuff}}</span></span>
-
-                            </li>
-
-                            <!-- <li class="subscribers-li2"><span class="right-item">  Total Views:</span> <span class="list-item1">{{item['total_views']}}</span></li> -->
-
-                            <li><span class="right-item"><i class="fa fa-users" ></i> Total Views:</span>
-                                <span *ngIf="item['subscribers']<1000" class="right-item"><span class="label label-danger" style="background: #cc0000"> {{item['total_views'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>1000 && item['subscribers']<50000" class="right-item"><span class="label label-primary" style="background: #0095ff"> {{item['total_views'] | thousandSuff}}</span></span>
-                                <span *ngIf="item['subscribers']>50000" class="right-item"><span class="label label-success"> {{item['total_views'] | thousandSuff}}</span></span>
-
-                            </li>
-
-                            <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span> </li>
-                            <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Week:</span> <span class="list-item1">{{item['last_week_upload_videos']}}</span> </li>
-                            <li class="subscribers-li"><span class="right-item"> Total Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> </li>
-
-                        </ul>
-                        <!-- <ul class="profile-url p-1 ">
-                            <li class="rank-li1"><span class="right-item"> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>
-                            <li class="rank-li2"><span class="right-item"> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
-
-                        </ul>
+                        <div class="col-md-6 ">
+                  
+                            <div>
+                            <span class="right-item"><i class="fa fa-users" ></i>  Views:</span>
+                                <span class="right-item"> {{item['_views'] | thousandSuff}}</span>
+                                </div>
+                                <div>
+                    <span class="right-item"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
+                </div>
+                    
                     </div>
+                    <div class="col-md-6 ">
+                        <div>
+                            <span class="right-item"><i class="fa fa-upload"></i>  Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span>
+                              <span class="right-item ml-5"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
+                        </div>
+                      
+                        <div>
+                          <span class="right-item"><i class="fas fa-sign-in-alt"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span>
+                        </div>
+                         </div>
              
                 </div>
                 
-        
-            <div class="col-md-2 image-div">
-                <img [src]="item['thumbnail_url']"  class="twitter-image2"> 
-        </div>
-        <div class="col-md-2 image-div">
-            <img [src]="item['thumbnail_url']"  class="twitter-image2">
-        </div>
-        <div class="col-md-1 followers-profile">
-            <h4 class="real-heading">{{item['subscribers']}}</h4>
-            <h6>Subcriber</h6>
-        </div>
+      
     </div>
 
 
-  <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
+  <div class="container-fluid" *ngIf="loaded && influencers.Items==0">
     <div class="box-typical box-typical-full-height" style="min-height: 119px;">
       <div class="add-customers-screen tbl" style="height: 119px;">
         <div class="add-customers-screen-in">
@@ -342,7 +325,7 @@
           <p class="lead color-blue-grey-lighter">No search results are found<br> try another category.</p>
           <!--<a href="#" class="btn">Add customer</a>-->
         </div>
-      </div>
+  
     </div><!--.box-typical-->
   </div>
 
@@ -457,7 +440,7 @@
         </div>
     </div>
 
-    <div class="container-fluid" *ngIf="loaded&& influencers.totalItems!=0">
+    <div class="container-fluid" *ngIf="loaded&& influencers.Items!=0">
 
         <div class="row" id="myHeader">
             <div class="col-md-12 list-row">
@@ -525,7 +508,7 @@
                     <div class="row" >
                         <ul style="display: flex; padding-top: 5px">
                             <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> subscribers:</span> <span class="list-item1">{{item['subscribers']}} |  </span> </li>
-                            <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Total Views:</span> <span class="list-item1">{{item['total_views']}} |   </span></li>
+                            <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i>  Views:</span> <span class="list-item1">{{item['_views']}} |   </span></li>
                             <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span></li>
                             <li><span class="right-item"><i class="fa fa-calendar-o" style="font-size:16px;color:#0a4069"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
 
