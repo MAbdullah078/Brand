@@ -549,13 +549,13 @@
                         </li>
 
                         <li><span class="left-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']| thousandSuff}}    </span></li>
-                        <li><span class="left-item"><i class="fa fa-bar-chart" ></i> Likes:</span>
+                        <!-- <li><span class="left-item"><i class="fa fa-bar-chart" ></i> Likes:</span>
 
                             <span *ngIf="item['likes']<1000" class="list-item1"><span class="label label-danger"><small><small>Poor</small></small> {{item['likes']| thousandSuff}}</span></span>
                             <span *ngIf="item['likes']>1000 && item['likes']<5000" class="list-item1"><span class="label label-primary"><small>Normal </small>{{item['likes']| thousandSuff}}</span></span>
                             <span *ngIf="item['likes']>5000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['likes']| thousandSuff}}</span></span>
 
-                        </li>            
+                        </li>             -->
 
           </ul>
           <ul class="profile-url p-1 ">
@@ -584,8 +584,10 @@
     <img *ngIf="!item['image_url']" src="../../../assets/no-image-found.jpg" class="twitter-image2">
 </div>
 <div class="col-md-1 followers-profile">
-<h4 class="real-heading">{{item['tweets_count']}}</h4>
-<h6>Subcriber</h6>
+<h4 class="real-heading">{{item['tweets_count'] | thousandSuff}}</h4>
+<!-- <h6>Subcriber</h6> -->
+<h6>Tweets</h6>
+
 </div>
 </div>
   </div>

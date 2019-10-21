@@ -224,7 +224,7 @@ this.get_default_FB_data(1);
         // this.http.post(Config.api+'ml/get_facebook_pages/accountant'  + '/?page=' + page,{})
         let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
 
-        this.http.get(Config.api+'/ml/get_facebook_influencers_list/')
+        this.http.get(Config.api+'/ml/get_facebook_pages/')
         // this.http.post(Config.api+'/ml/get_facebook_pages/' +  + '/?page=' + page + '', {},{headers: headers})
         // this.http.post(Config.api+'/ml/get_facebook_pages/' + 'accountant' + '/?page=' + page + '', {},{headers: headers})
 

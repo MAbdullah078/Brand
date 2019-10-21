@@ -2586,7 +2586,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h4>My Request For Marketing (RFM)</h4>\n<div class=\"col-md-4\" *ngFor=\"let message of rfm; let i = index\">\n<h4>Title:{{message.title}}</h4>\n<h4>Category:{{message.category}}</h4>\n<h4>Description: {{message.description}}</h4>\n<h4>Questions: {{questions}}</h4>\n<h4>Answers: {{message?.answers}}</h4>\n<h4></h4>\n</div>"
+module.exports = "<h4>My Request For Marketing (RFM)</h4>\n<div class=\"col-md-4\" *ngFor=\"let message of rfm; let i = index\">\n<h4>Title:{{message.title}}</h4>\n<h4>Category:{{message.category}}</h4>\n<h4>Description: {{message.description}}</h4>\n<h4>Questions: {{message.faq}}</h4>\n<h4>Answers: {{message.faqAns}}</h4>\n<!-- <img src=\"{{message.picture}}\"> -->\n<!-- <img src=\"{{message.picture}}\"  alt=\"Notes\"> -->\n<img src=\"{{message.pictures}}\"  alt=\"\">\n\n</div>"
 
 /***/ }),
 
@@ -4712,7 +4712,7 @@ var Config = /** @class */ (function () {
     // public static api: String = 'http://ns519750.ip-158-69-23.net:7779';
     Config.api = 'https://apis.influexpai.com';
     // public static api: String = 'https://devapis.influexpai.com';
-    // public static api: String = 'http://192.168.29.166:8000';
+    //public static api: String = 'http://192.168.29.166:8000';
     // public static api: String = 'http://192.168.100.32:8000';
     //     public static api: String = 'http://192.168.29.109:9000';
     Config.Imageurlupload = 'https://storage.influexpai.com/test_hamza.php';

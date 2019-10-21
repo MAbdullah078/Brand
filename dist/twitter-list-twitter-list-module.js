@@ -1,5 +1,118 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["twitter-list-twitter-list-module"],{
 
+/***/ "./src/app/periscope-search/CustomPipe.module.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/periscope-search/CustomPipe.module.ts ***!
+  \*******************************************************/
+/*! exports provided: CustomPipeModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomPipeModule", function() { return CustomPipeModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _CustomPipe_pipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomPipe.pipe */ "./src/app/periscope-search/CustomPipe.pipe.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CustomPipeModule = /** @class */ (function () {
+    function CustomPipeModule() {
+    }
+    CustomPipeModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+            declarations: [_CustomPipe_pipe__WEBPACK_IMPORTED_MODULE_2__["CustomPipePipe"]],
+            exports: [_CustomPipe_pipe__WEBPACK_IMPORTED_MODULE_2__["CustomPipePipe"]]
+        })
+    ], CustomPipeModule);
+    return CustomPipeModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/periscope-search/CustomPipe.pipe.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/periscope-search/CustomPipe.pipe.ts ***!
+  \*****************************************************/
+/*! exports provided: CustomPipePipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomPipePipe", function() { return CustomPipePipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var CustomPipePipe = /** @class */ (function () {
+    function CustomPipePipe() {
+    }
+    // transform(input: any, args?: any): any {
+    //     var exp, rounded,
+    //         suffixes = ['k', 'M', 'G', 'T', 'P', 'E'];
+    //     if (Number.isNaN(input)) {
+    //         return null;
+    //     }
+    //     if (input < 1000) {
+    //         return input;
+    //     }
+    //     exp = Math.floor(Math.log(input) / Math.log(1000));
+    //     return (input / Math.pow(1000, exp)).toFixed(args) + suffixes[exp - 1];
+    // }
+    CustomPipePipe.prototype.transform = function (number, args) {
+        if (isNaN(number))
+            return null; // will only work value is a number
+        if (number === null)
+            return null;
+        if (number === 0)
+            return null;
+        var abs = Math.abs(number);
+        var rounder = Math.pow(10, 1);
+        var isNegative = number < 0; // will also work for Negetive numbers
+        var key = '';
+        var powers = [
+            { key: 'Q', value: Math.pow(10, 15) },
+            { key: 'T', value: Math.pow(10, 12) },
+            { key: 'B', value: Math.pow(10, 9) },
+            { key: 'M', value: Math.pow(10, 6) },
+            { key: 'K', value: 1000 }
+        ];
+        for (var i = 0; i < powers.length; i++) {
+            var reduced = abs / powers[i].value;
+            reduced = Math.round(reduced * rounder) / rounder;
+            if (reduced >= 1) {
+                abs = reduced;
+                key = powers[i].key;
+                break;
+            }
+        }
+        return (isNegative ? '-' : '') + abs + key;
+    };
+    CustomPipePipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'thousandSuff'
+        })
+    ], CustomPipePipe);
+    return CustomPipePipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/twitter-list/twitter-list.component.html":
 /*!**********************************************************!*\
   !*** ./src/app/twitter-list/twitter-list.component.html ***!
@@ -472,6 +585,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _twitter_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./twitter-list.component */ "./src/app/twitter-list/twitter-list.component.ts");
 /* harmony import */ var _twitter_list_routing__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./twitter-list.routing */ "./src/app/twitter-list/twitter-list.routing.ts");
 /* harmony import */ var ng2_inline_editor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng2-inline-editor */ "./node_modules/ng2-inline-editor/ng2-inline-editor.es5.js");
+/* harmony import */ var _periscope_search_CustomPipe_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../periscope-search/CustomPipe.module */ "./src/app/periscope-search/CustomPipe.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -491,12 +605,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var TwitterListModule = /** @class */ (function () {
     function TwitterListModule() {
     }
     TwitterListModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(_twitter_list_routing__WEBPACK_IMPORTED_MODULE_9__["TwitterListRoutes"]), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["SliderModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DataTableModule"], ng2_inline_editor__WEBPACK_IMPORTED_MODULE_10__["InlineEditorModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["OverlayPanelModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _home_roundpipe_module__WEBPACK_IMPORTED_MODULE_7__["RoundpipeModule"], ngx_pipes__WEBPACK_IMPORTED_MODULE_5__["NgPipesModule"]],
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _periscope_search_CustomPipe_module__WEBPACK_IMPORTED_MODULE_11__["CustomPipeModule"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(_twitter_list_routing__WEBPACK_IMPORTED_MODULE_9__["TwitterListRoutes"]), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["SliderModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DataTableModule"], ng2_inline_editor__WEBPACK_IMPORTED_MODULE_10__["InlineEditorModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["OverlayPanelModule"], primeng_primeng__WEBPACK_IMPORTED_MODULE_3__["DialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _home_roundpipe_module__WEBPACK_IMPORTED_MODULE_7__["RoundpipeModule"], ngx_pipes__WEBPACK_IMPORTED_MODULE_5__["NgPipesModule"]],
             declarations: [_twitter_list_component__WEBPACK_IMPORTED_MODULE_8__["TwitterListComponent"]],
             providers: [_services_paginator_service__WEBPACK_IMPORTED_MODULE_6__["PagerService"]]
         })

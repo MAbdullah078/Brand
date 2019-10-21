@@ -52,6 +52,9 @@ export class TwitterComponent implements OnInit {
 
     ngOnInit() {
 
+
+        window.scroll(0,0);
+        
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
       this.influencers = this.load_influencers;
       this.get_results= this.twitter_results;
