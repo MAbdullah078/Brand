@@ -438,13 +438,12 @@
                             <div class="title-name">
                                     <i class="fab fa-facebook"></i>
                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
-                            <h5><label class="tbl-cell tbl-cell-name" (click)="goToMedium(item['fb_page_link'])">{{item['fb_page_link']}}</label></h5>
                             <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                             </div>
                             <div class="row">
                         <div class="col-md-6">
                             <div class="ml-4">
-                                        <span class="right-item" *ngIf="item['web_link']" ><i class="fa fa-globe" ></i> Web:</span> <span class="list-item1">{{item['web_link']}}</span>
+                                    <span class="list-item1" (click)="goToMedium(item['fb_page_link'])"><i class="fas fa-globe"></i>{{['fb_page_link']}}</span>
                                     </div>
                                     <div class="ml-4">
                                         <span class="right-item"><i class="fa fa-barcode" ></i> Performance:</span> <span class="list-item1">{{item['PTAT']}}</span>

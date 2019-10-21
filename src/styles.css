@@ -202,7 +202,39 @@ mat-tab-group{
 
 }
 .fa-globe{
-  color: #1da5de!important
+  color: #1da5de!important;
+  margin:4px
+}
+.tbl-cell{
+  font-weight: 600;
+  font-size: 16px;
+  margin: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.fa-map-marker-alt {
+  margin-top: 13px;
+  font-size: 14px;
+  color: #b74545!important
+}
+.followers-division{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tbl-cell {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.fa-random {
+  color: #fa8072!important;
+  margin: 2px;
+}
+.fa-pinterest {
+  color:  #b72025;
+  font-size: 23px;
+  margin: 11px 0 0 -8px;
 }
 .fa-eye {
   color: #a0522d!important
@@ -220,6 +252,10 @@ mat-tab-group{
   font-family: 'Merriweather', serif;
     color: darkcyan;
     margin: 0;
+    text-align:center;
+}
+.detail-div{
+  font-family: 'Open Sans', sans-serif;
 }
 .description-divison{
   display: flex;
@@ -10184,6 +10220,9 @@ font-family: 'Open Sans', sans-serif;
   margin: 2px;
   font-family: 'Merriweather', serif;
   color: darkcyan;
+}
+.fa-sign-in-alt{
+  color: #008080;
 }
 .fa-venus{
   color:#82d0dc!important;

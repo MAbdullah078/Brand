@@ -80,10 +80,7 @@ mat-form-field{
 input[type=checkbox]{
   zoom: 1.5;
 }
-.tbl-cell{
-  font-weight: 600;
-  font-size: 12px;
-}
+
 i{
   color: #000;
 }
@@ -94,8 +91,17 @@ i{
 hr{
   margin: 0!important;
 }
+.fa-youtube{
+  color: #c00;
 
-
+  font-size: 23px;
+  margin: 11px 0 0 -8px;
+}
+.fa-map-marker-alt {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #b74545;
+}
 
 
 .btn-success{

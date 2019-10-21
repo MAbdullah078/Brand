@@ -146,11 +146,7 @@ input[type=checkbox]{
   margin: 8px;
   font-family: 'Open Sans', sans-serif;
 }
-.fa-map-marker-alt{
-  margin-top: 10px;
-  font-size: 15px;
-  color: #a5a2a2;
-}
+
 .fa-phone-alt{
   color:#4682b4;
   margin: 3px;
@@ -230,6 +226,7 @@ hr{
   color: #0a6aa1;
   font-weight: 700;
   font-size: 12px;
+  cursor: pointer;
 }
 .right-item{
   color: #919fa9;
