@@ -459,7 +459,10 @@
             </div> -->
             <div class="col-md-9 text-left">
 
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
+              <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder" href="{{item['account_link']}}">ada</a></label> -->
+              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder" (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
+
+              <!-- <a style="color:white" href="{{item['account_link']}}" target="_blank">Profile </a> -->
             </div>
           </div>
           <hr style="color: #555555">

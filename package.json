@@ -24,6 +24,7 @@
     "@angular/router": "^7.2.12",
     "@types/jquery": "^3.3.29",
     "angular-svg-round-progressbar": "^3.0.1",
+    "angular2-json2csv": "^1.1.2",
     "angular2-jwt": "^0.2.3",
     "angular2-notifications": "^0.7.7",
     "angular2-text-mask": "^9.0.0",

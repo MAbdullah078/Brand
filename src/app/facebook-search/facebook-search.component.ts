@@ -151,6 +151,71 @@ this.get_default_FB_data(1);
             }
 
     }
+
+
+    goToMedium(s:string){
+
+        let arr:any;
+        arr = s.indexOf('(@');
+        if(arr!=-1) {
+            // alert(s.slice(arr+1,-10))
+            // window.open('https://www.instagram.com/'+s.slice(arr+2,-10))
+            let url = s.slice(arr+2,-10);
+            Swal.fire({
+                title: 'You&#39;re Leaving This Site!',
+                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                // html: true,
+                confirmButtonColor: '#2ecc71',
+                // showCancelButton: true,
+
+            }).then(() => {
+
+                window.open(url);
+
+
+            }, (dismiss) => {
+                // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+                if (dismiss === 'cancel') {
+                    // localStorage.removeItem('selected_list_twitter');
+
+                    Swal.fire(
+                        'Cancelled',
+                        '',
+                        'success'
+                    )
+                }
+            });
+        }
+        else{
+            let url = s;
+            Swal.fire({
+                title: 'You&#39;re Leaving This Site!',
+                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                // html: true,
+                confirmButtonColor: '#2ecc71',
+                // showCancelButton: true,
+
+            }).then(() => {
+
+                window.open(url);
+
+
+            }, (dismiss) => {
+                // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+                if (dismiss === 'cancel') {
+                    // localStorage.removeItem('selected_list_twitter');
+
+                    Swal.fire(
+                        'Cancelled',
+                        '',
+                        'success'
+                    )
+                }
+            });
+        }
+
+
+    }
     get_default_FB_data(page: number){
 
         if (page < 1 || page > this.pager.totalPages) {
@@ -159,7 +224,7 @@ this.get_default_FB_data(1);
         // this.http.post(Config.api+'ml/get_facebook_pages/accountant'  + '/?page=' + page,{})
         let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
 
-        this.http.get(Config.api+'/ml/get_facebook_influencers_list/')
+        this.http.get(Config.api+'/ml/get_facebook_pages/')
         // this.http.post(Config.api+'/ml/get_facebook_pages/' +  + '/?page=' + page + '', {},{headers: headers})
         // this.http.post(Config.api+'/ml/get_facebook_pages/' + 'accountant' + '/?page=' + page + '', {},{headers: headers})
 
