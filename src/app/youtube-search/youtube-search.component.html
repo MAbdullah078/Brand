@@ -29,8 +29,6 @@
                                         </mat-option>
                                     </mat-autocomplete>
                                 </mat-form-field>
-
-
                             </div>
 
                         </div>
@@ -109,7 +107,7 @@
 
     <div class="row" *ngIf="!loaded" style="margin-top: 3%">
         <div class="col-md-12 text-left">
-            <h5 class="text-center" >Featured Youtube Influencers</h5>
+            <h4 class="text-center" >Featured Top Youtube Influencers</h4>
         </div>
 
     </div>
@@ -163,6 +161,154 @@
     </div>
   </div>
   </div>
+
+  <div class="container-fluid" *ngIf="loaded&& influencers.totalItems!=0">
+
+    <div class="row" style="margin-top: 1%">
+        <div class="col-md-5 ">
+            <nav>
+                <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
+
+                    <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+                    <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+                    <!--</li>-->
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                        <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+                            First
+                        </a>
+                    </li>
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                        <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item" *ngFor="let page of pager.pages"
+                        [ngClass]="{active:pager.currentPage === page}"
+                        (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
+                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                    <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+                    <!--</li>-->
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                        <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                        <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+                            Last
+                        </a>
+                    </li>
+                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                    <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+                    <!--</li>-->
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-4">
+            <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+        </div>
+
+
+        <div class="col-md-3 right-buttons">
+            <!--<button  class="btn btn-success">Select All</button>-->
+            <div id="ck-button">
+                <label>
+
+                    <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+                </label>
+            </div>
+
+            <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+
+        </div>
+
+    <div class="profile-container" *ngFor="let item of influencers.results" >
+        <div class="row main-div">
+
+
+
+            <div class="col-md-3 image-area">
+                <div class="p-checkbox" type="checkbox">
+                    <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                    <label for="table-check-{{item['id']}}"></label>
+                </div>
+                <div class="p-img">
+                    <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  >
+                    <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  >
+                </div>
+            </div>
+
+
+            <div class="col-md-9 detail-area">
+                <h3 class="">
+                    <img src="../../assets/img/youtub.png">
+                    {{item['name']}}</h3>
+                <p class="item-content" title="{{item['description']}}">{{item['description']}}</p>
+
+                <div class="row">
+                    <div class="col-md-3 text-left">
+                        <label *ngIf="item['location']" class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> {{item['location']}}</label>
+                        <label *ngIf="!item['location']" class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> N/A</label>
+
+                    </div>
+                    <div class="col-md-9 text-left" *ngIf="item['channel_link']" >
+
+                        <label class="item-loc"> <i class="fa fa-youtube-play" ></i>
+                            Channel Link:  <a (click)="goToLink(item['channel_link'])" style="color: #646464" >{{item['channel_link']}}</a>
+                        </label>
+                    </div>
+
+                </div>
+                <hr style="color: #555555">
+                <div class="item-loc" >
+                    <ul style="display: flex; justify-content: space-between">
+                        <li><span class="right-item"><i class="fa fa-users" ></i> subscribers:</span>
+                            <span *ngIf="item['subscribers']<1000" class="right-item"><span class="label label-danger" style="background: #cc0000"> {{item['subscribers'] | thousandSuff}}</span></span>
+                            <span *ngIf="item['subscribers']>1000 && item['subscribers']<50000" class="right-item"><span class="label label-primary" style="background: #0095ff"> {{item['subscribers'] | thousandSuff}}</span></span>
+                            <span *ngIf="item['subscribers']>50000" class="right-item"><span class="label label-success"> {{item['subscribers'] | thousandSuff}}</span></span>
+
+                        </li>
+                        <li><span class="right-item"> <i class="fa fa-eye" ></i> Total Views:</span> <span class="list-item1">{{item['total_views'] | thousandSuff}}    </span></li>
+                        <li>
+                            <span class="right-item"><i class="fa fa-bar-chart" ></i> Rank:
+                                <!--</span> <span class="list-item1">{{item['rank']}}-->
+                        </span>
+                            <span *ngIf="item['rank']<5" class="right-item"><span class="label label-danger" style="background: #cc0000"><small>Poor</small> {{item['rank']}}%</span></span>
+                            <span *ngIf="item['rank']>5 && item['rank']<10" class="right-item"><span class="label label-primary" style="background-color: #0095ff"><small>Normal </small>{{item['rank']}}%</span></span>
+                            <span *ngIf="item['rank']>10" class="right-item"><span class="label label-success"><small>Perfect</small> {{item['rank']}}%</span></span>
+                            <span *ngIf="!item['rank']" class="right-item"><span class="label label-success">N/A</span></span>
+                        </li>
+                        <li><span class="right-item"><i class="fa fa-calendar-o"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
+
+                    </ul>
+                </div>
+                <hr style="color: #555555">
+                <div class="item-loc" >
+                    <ul style="display: flex; justify-content: space-between">
+                        <li style="font-weight: bolder"> Videos Uploads | </li>
+                        <li><span class="right-item"><i class="fa fa-upload" style="padding-left: 5px"></i> Today :</span> <span class="list-item1">{{item['today_upload_videos']}}   </span> </li>
+                        <li><span class="right-item"> <i class="fa fa-file-video-o" ></i> Tomorrow :</span> <span class="list-item1">{{item['tomorrow_upload_videos']}}    </span></li>
+                        <li><span class="right-item"><i class="fa fa-newspaper-o" ></i> Last Week: </span> <span class="list-item1">{{item['last_week_upload_videos']}}</span></li>
+                        <li><span class="right-item"><i class="fa fa-random" ></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" *ngIf="loaded">
+
+</div>
+
+</div>
+
+
 
 
     <div class="row" *ngIf="inCurrentpage">
@@ -284,13 +430,13 @@
                 </div>
                         <label class="item-content ml-4"
                         title="{{item['description']}}">{{item['description']}}</label>
-                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>{{item['channel_link']}}</label>
+                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>Go to Youtube Channel</label>
                      <div class="row" >
                         <div class="col-md-6 ">
                             <div class="ml-4">
                             <div>
                             <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
-                                <span class="right-item"> {{item['_views'] | thousandSuff}}</span>
+                                <span class="right-item"> {{item['total_views'] | thousandSuff}}</span>
                                 </div>
                                 <div>
                     <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>

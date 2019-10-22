@@ -21,19 +21,19 @@ export class RfmComponent implements OnInit {
     Validators.required
 ]);
 
-  loginurl: string = "http://brand.influexpai.com/login";
-  infurl: string = "http://influencer.influexpai.com/authentication/signin";
-  loginsurl: string = 'https://brand.influexpai.com/register';
-  infsurl: string = "http://influencer.influexpai.com/authentication/signup";
-  influencersppurl: string = 'https://influencer.influexpai.com/authentication/signin';
-  brand_app_cat_url= 'https://brand.influexpai.com/dashboard';
-  brand_app_fb_url = 'https://brand.influexpai.com/facebook/search';
-  brand_app_insta_url = 'https://brand.influexpai.com/instagram/search';
-  brand_app_twi_url = 'https://brand.influexpai.com/twitter/search';
-  brand_app_blog_url = 'https://brand.influexpai.com/blogosphere/search';
-  brand_app_yt_url = 'https://brand.influexpai.com/youtube/search';
-  brand_app_ld_url = 'https://brand.influexpai.com/linkedin/search';
-  brand_app_pt_url = 'https://brand.influexpai.com/pinterest/search';
+  // loginurl: string = "http://brand.influexpai.com/login";
+  // infurl: string = "http://influencer.influexpai.com/authentication/signin";
+  // loginsurl: string = 'https://brand.influexpai.com/register';
+  // infsurl: string = "http://influencer.influexpai.com/authentication/signup";
+  // influencersppurl: string = 'https://influencer.influexpai.com/authentication/signin';
+  // brand_app_cat_url= 'https://brand.influexpai.com/dashboard';
+  // brand_app_fb_url = 'https://brand.influexpai.com/facebook/search';
+  // brand_app_insta_url = 'https://brand.influexpai.com/instagram/search';
+  // brand_app_twi_url = 'https://brand.influexpai.com/twitter/search';
+  // brand_app_blog_url = 'https://brand.influexpai.com/blogosphere/search';
+  // brand_app_yt_url = 'https://brand.influexpai.com/youtube/search';
+  // brand_app_ld_url = 'https://brand.influexpai.com/linkedin/search';
+  // brand_app_pt_url = 'https://brand.influexpai.com/pinterest/search';
     checkflag: any;
     pricing: number;
     name: any;
@@ -49,6 +49,10 @@ export class RfmComponent implements OnInit {
     file: any;
     questions: any;
     answers: any;
+    questions2: any;
+    answers2: any;
+    questions3: any;
+    answers3: any;
     offer_to_influencer: any;
     input: FormData;
     url: any = 'JPG, GIF, PNG';
@@ -77,26 +81,6 @@ export class RfmComponent implements OnInit {
   }
   model: any= {};
 
-
-  // openSA(){
-
-  // }
-
- 
-
-// fileToUpload: File = null;
-// handleFileInput(files: FileList) {
-//   this.fileToUpload = files.item(0);
-// }
-
-// uploadFileToActivity() {
-//   this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
-//     // do something, if upload success
-//     console.log('success')
-//     }, error => {
-//       console.log(error);
-//     });
-// }
 
 onChange(event: EventTarget) {
   this.pictures = new FormData();
@@ -173,7 +157,10 @@ onSubmit(){
     
   this.obj.post_Request(this.model.title, this.model.category, this.model.description,
     this.pictures, this.video, this.file, 
-     this.model.questions,this.model.answers, this.model.offer_to_influencer,this.model.url).subscribe(
+     this.model.question1,this.model.answer1,
+     this.model.question2,this.model.answer2, 
+     this.model.question3,this.model.answer3, 
+      this.model.offer_to_influencer,this.model.url).subscribe(
       data =>{
           console.log(data);
       },
@@ -182,15 +169,21 @@ onSubmit(){
       })
       console.log(this.model.title)
       console.log(this.pictures)
-      console.log(this.file)
-      console.log('video upload')
+      // console.log(this.file)
+      // console.log('video upload')
       console.log(this.model.category)
       console.log(this.model.description)
-      console.log(this.model.questions)
-      console.log(this.model.answers)
+      console.log(this.model.question1)
+      console.log(this.model.answer1)
+      console.log(this.model.question2)
+      console.log(this.model.answer2)
+      console.log(this.model.question3)
+      console.log(this.model.answer3)
       console.log(this.model.offer_to_influencer)
       console.log(this.model.url)
       
+
+      // this.upload();
       
 }
 
@@ -205,7 +198,7 @@ upload() {
         console.log(data);
         // alert(data);
         this.pictures = data;
-        this.onSubmit();
+        // this.onSubmit();
         // alert('ok')
       }
     });

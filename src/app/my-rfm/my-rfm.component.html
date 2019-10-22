@@ -3,10 +3,61 @@
 <h4>Title:{{message.title}}</h4>
 <h4>Category:{{message.category}}</h4>
 <h4>Description: {{message.description}}</h4>
-<h4>Questions: {{message.faq}}</h4>
-<h4>Answers: {{message.faqAns}}</h4>
-<!-- <img src="{{message.picture}}"> -->
-<!-- <img src="{{message.picture}}"  alt="Notes"> -->
-<img src="{{message.pictures}}"  alt="">
+<h4>Question#1: {{message.question1}}</h4>
+<h4>Answer#1: {{message.answer1}}</h4>
+<h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4>
+<h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4>
+<h4>Question#3: {{message.question3}}</h4>
+<h4>Answers#3: {{message.answer2}}</h4>
+<img src="{{message.picture}}">
+<!-- <img src="{{message.picture}}"  alt="Notes">
+<img src="{{message.pictures}}"  alt=""> -->
 
-</div>
+ </div>
+
+
+
+
+<!-- <section>
+    <div class="container ">
+    <h1 class="text-center">Brand RFM</h1>
+    </div> -->
+    <!-- <div class="container" >
+      <div class="col-md-4">
+    
+      </div>
+    </div> -->
+    <!-- <div *ngFor="let data of datashowcase ">
+        <p>{{data.city}}</p>
+        <p>{{data.email}}</p>
+      
+      </div> -->
+      <!-- <div class="container">
+          <div class="row">
+    
+         <div class="col-md-4" *ngFor="let message of rfm; let i = index">
+           <div class="rfm">
+           <img src="{{message.pictures}}" onerror="this.src='../../../assets/images/logos/Logo1.png'" alt="">
+           <div class="rfm-information">
+        <p><span>RFM  Title:</span>  {{message.title}}</p>
+        <p>Category:{{message.category}}</p>
+        <p>Description:   {{message.description}}</p>
+        <p>Url: {{message.Url}}</p>
+        <p>Questions: {{message.faq}}</p>
+        <p>Answers: {{message.faqAns}}</p>
+        <p>Status: {{message.status}}</p>
+        <p *ngIf ="message.status == p">Pending</p>
+        <p *ngIf ="message.status == A">Approved</p>
+        <p *ngIf ="message.status == R">Rejected</p>
+      </div> -->
+        <!-- <p *ngIf="{{show_image.show_image}} === P">Pending</p> -->
+        <!-- <p *ngIf="messgae.status == N">Not Approved </p>
+        <p *ngIf="messgae.status == A">Approved </p> -->
+      <!-- </div>
+      </div>
+      </div>
+    
+      </div>
+    </section> -->
+    
+    

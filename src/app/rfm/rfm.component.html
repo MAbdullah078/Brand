@@ -28,15 +28,29 @@
               </mat-form-field>
               <h4>Any Questions?</h4>
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="Question"  name="questions" [(ngModel)]="model.questions" #Questions="ngModel" #questions 
+                <input matInput placeholder="Question"  name="question1" [(ngModel)]="model.question1" #Question1="ngModel" #question 
                 required>
               </mat-form-field>
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="Answer"  name="answers" [(ngModel)]="model.answers" #Answers="ngModel" #answers 
+                <input matInput placeholder="Answer"  name="answer1" [(ngModel)]="model.answer1" #Answer1="ngModel" #answer
                 required>
               </mat-form-field>
+
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="Any Offer"  name="offer_to_influencer" [(ngModel)]="model.offer_to_influencer" #Offer_to_influencer="ngModel" #offer_to_influencer 
+                <input matInput placeholder="Question #2 (Optional)"  name="question2" [(ngModel)]="model.question2" #Question2="ngModel" #question2 >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Answer #2 (Optional)"  name="answer2" [(ngModel)]="model.answer2" #Answer2="ngModel" #answer2 >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Question #3 (Optional)"  name="question3" [(ngModel)]="model.question3" #Question3="ngModel" #question3 >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Answer #3 (Optional)"  name="answer3" [(ngModel)]="model.answer3" #Answer3="ngModel" #answer3>
+              </mat-form-field>
+              <h4>Any Offer?</h4>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Offer"  name="offer_to_influencer" [(ngModel)]="model.offer_to_influencer" #Offer_to_influencer="ngModel" #offer_to_influencer 
                 required>
               </mat-form-field>
 
@@ -48,13 +62,13 @@
                       <!-- <img [src]="url" class="image-box" > -->
                       <br class="clearfix" />
                       </div>
-
+<!-- 
                       <div class="col-sm-12" style="margin-bottom: 30px;">
                           <h4>Upload File</h4>
 
-                            <!-- <input id="file" type='file' (change)="onChange2($event)" (change)="readUrl($event)" name="file" [(ngModel)]="model.file" accept="file/*" multiple> -->
+                            <input id="file" type='file' (change)="onChange2($event)" (change)="readUrl($event)" name="file" [(ngModel)]="model.file" accept="file/*" multiple>
                             
-                            <!-- <input type='file' (change)="onSelectFile($event)"> -->
+                            <input type='file' (change)="onSelectFile($event)">
                             <input (change)="onChange2($event)" #data type="file" accept="application/pdf" required>
                             <img [src]="url" class="image-box" >
                             <br class="clearfix" />
@@ -64,9 +78,9 @@
                             <div class="col-sm-12" style="margin-bottom: 30px;">
                                 <h4>Upload Video</h4>
                                   <input id="video" type='file' (change)="onChange3($event)" (change)="readUrl($event)" name="video" [(ngModel)]="model.video" accept="video/mp4" multiple>
-                                  <!-- <img [src]="url" class="image-box" > -->
+                                  <img [src]="url" class="image-box" >
                                   <br class="clearfix" />
-                                  </div>
+                                  </div> -->
 
                 <button type="submit" (click)="upload()" class="btn btn-primary pull-right"><i class="fa fa-paper-plane" aria-hidden="true"></i>Publish RFM</button>
               </div>
