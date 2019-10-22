@@ -79,28 +79,22 @@ input[type=checkbox]{
 i{
     color: #000;
 }
-.item-content{
-
-    color: #919fa9;
-    font-size: 14px;
-
-}
-.item-loc{
-    color: #919fa9;
-    font-size: 14px;
-}
-hr{
-    margin: 0!important;
-}
-.list-item1{
-    margin-right: 20px;
-    color: #000;
-    font-weight: 700;
-    font-size: 15px;
+.fa-user-alt{
+    color: indigo;
+    margin-right: 4px;
 }
 .right-item{
     color: #919fa9;
     font-size: 14px;
+}
+.fa-home{
+    color: #008080;
+    margin-right: 2px;
+}
+.fa-flickr{
+    color: #ff0084;
+    font-size: 23px;
+    margin: 11px 0 0 -8px;
 }
 .btn-success{
     background: black;

@@ -99,8 +99,8 @@
     </div>
 
     <div class="row" *ngIf="!loaded" style="margin-top: 2%">
-        <div class="col-md-12 text-left">
-            <h4 style="font-weight: bolder">Featured Periscope Influencers</h4>
+        <div class="col-md-12 text-center">
+            <h4 class="m-0">Featured Periscope Influencers</h4>
         </div>
 
     </div>
@@ -425,93 +425,101 @@
       </div>
     </div>
 
-    <div class="profile-container" *ngFor="let item of default_influencers.results" >
-      <div class="row">
+ 
 
 
-        <div class="col-md-2 profile-checkbox" type="checkbox">
-          <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-          <label for="table-check-{{item['id']}}"></label>
-        </div>
-        <div class="col-md-2 text-center">
-          <img [src]="item['image_url']"  style="height: 100px;  width: 100px; margin-top: 15px; border-radius: 100%">
-        </div>
 
 
-        <div class="col-md-7" style="margin-left: 3%">
-          <div class="row">
-            <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
-          </div>
-          <div class="row" style="padding-top: 8px">
-            <label class="item-content" style="overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
-          </div>
-          <div class="row" style="padding-top: 8px">
-            <!-- <div class="col-md-3 text-left">
-              <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> Category: <span class="list-item1">Global</span> </label>
 
-            </div> -->
-            <div class="col-md-9 text-left">
 
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; " (click)="goToMedium(item['profile_link'])"></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_link']}}</a></label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="profile-container"  *ngFor="let item of default_influencers.results" >
+        <div class="row">
+    
+    
+            <div class="col-md-1 profile-checkbox" type="checkbox">
+                <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                <label for="table-check-{{item['id']}}"></label>
             </div>
-          </div>
-          <hr style="color: #555555">
-          <div class="row" >
-            <ul style="display: flex; padding-top: 5px">
-              <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Followers:</span> <span class="list-item1">{{item['followers']}} |  </span> </li> -->
-
-              <li><span class="right-item"><i class="fa fa-users" ></i> Followers:</span>
-
-                <span *ngIf="item['followers']<1000" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['followers']| thousandSuff}}</span></span>
-                <span *ngIf="item['followers']>100 && item['followers']<1000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['followers']| thousandSuff}}</span></span>
-                <span *ngIf="item['followers']>1000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['followers']| thousandSuff}}</span></span>
-
-              </li>
-
-              <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
-              <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['profile_rank']}}</span></li>
-              <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Broadcast :</span> <span class="list-item1">{{item['braodcasts']}} |  </span> </li>
-
-            </ul>
-          </div>
-          <hr style="color: #555555">
-          <div class="row" >
-            <ul style="display: flex; padding-top: 5px">
-              <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
-              <!-- <li><span class="right-item"> <i class="fa fa-heart-o" style="font-size:16px;color:#0a4069"></i> Hearts :</span> <span class="list-item1">{{item['hearts']}} |   </span></li> -->
-
-              <li><span class="right-item"> <i class="fa fa-heart-o" ></i> Hearts :</span>
-
-                <span *ngIf="item['hearts']<1000"  class="list-item1">
-                  <!-- <span class="label label-danger"> -->
-                  <!-- <small>Poor</small> -->
-                   {{item['hearts']}}</span>
-                  <!-- </span> -->
-                <span *ngIf="item['hearts']>1000 && item['hearts']<5000" class="list-item1">
-                  <!-- <span class="label label-primary"> -->
-                  <!-- <small>Normal</small>  -->
-                  {{item['hearts']}}</span>
-                <!-- </span> -->
-                <span *ngIf="item['hearts']>5000" class="list-item1">
-                  <!-- <span class="label label-success"> -->
-                  <!-- <small>Perfect</small> -->
-                   {{item['hearts'] | thousandSuff}}</span>
-                  <!-- </span> -->
-
-
-              </li>
-              <li><span class="right-item"><i class="fa fa-twitter" style="font-size:16px;color:#0a4069"></i> Twitter: </span> <span class="list-item1">{{item['twitter_name']}}</span></li>
-
-
-            </ul>
-          </div>
-        </div>
-      </div>
+    
+    <div class="col-md-1 followers-division">
+    
+    
+        <img [src]="item['image_url']"  class="twitter-image">
     </div>
+            <div class="col-md-1 followers-division">
+                <div>
+                        <h6 class="m-0">Likes:</h6>
+                    <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+                </div>
+            </div>
+                    <div class="col-md-9">
+                        <div class="title-name">
+                          <div class="d-flex">
+                              <i class="fab fa-periscope periscope-icon"></i>
+                        <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
+                      </div>
+                  
+                        </div>
+                        <div>
+                        <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
+                        <div>
+                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i> periscope <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_name']}}
+                          </a></label>
+                      </div>
+                      </div>
+                      
+                          
+
+                        <div class="row">
+                    <div class="col-md-6">
+                        <div class="ml-4">
+                          <div>
+                              <span class="right-item"><i class="fa fa-users" ></i> Followers<span class="list-item1">
+
+                              {{item['followers']| thousandSuff}}</span></span>
+                          </div>
+                          <div>
+                            <span class="right-item"><i class="fas fa-eye"></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                          </div>
+                               
+                    </div>
+            
+         
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <span class="right-item"><i class="fa fa-upload" ></i> Broadcast :<span class="list-item1">{{item['braodcasts']}}</span></span>
+                        
+                      
+            </div>
+            <div>
+                <span class="right-item">
+                    <i class="fas fa-heart"></i> Hearts <span class="list-item1">
+                     {{item['hearts'] | thousandSuff}}</span></span>  
+                     
+                    </div>
+                </div>
+              </div>
+            </div>
+                    </div>
+    
+            </div>
   </div>
   <!--<section class="box-typical" *ngIf="loaded&& influencers.totalItems!=0">-->
 

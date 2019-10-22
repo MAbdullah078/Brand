@@ -143,32 +143,18 @@ input[type=checkbox]{
     font-weight: 600;
     font-size: 19px;
 }
+.periscope-icon{
+    color: #00a4c3;
+    font-size: 23px;
+    margin: 11px 0 0 -8px;
+}
+.fa-periscope{
+    color: #00a4c3; 
+}
 i{
     color: #000
 }
-.item-content{
 
-    color: #919fa9;
-    font-size: 14px;
-
-}
-.item-loc{
-    color: #919fa9;
-    font-size: 14px;
-}
-hr{
-    margin: 0!important;
-}
-.list-item1{
-    margin-right: 20px;
-    color: #000;
-    font-weight: 700;
-    font-size: 15px;
-}
-.right-item{
-    color: #919fa9;
-    font-size: 14px;
-}
 .btn-success{
     background: black;
     border-radius: 50px;
