@@ -203,7 +203,7 @@ mat-tab-group{
 }
 .fa-globe{
   color: #1da5de!important;
-  margin:4px
+  margin-right:3px
 }
 .tbl-cell{
   font-weight: 600;
@@ -242,8 +242,11 @@ mat-tab-group{
 .fa-upload{
   color: #ff6347!important
 }
-.fa-users{
+.fa-users,
+.fa-user-alt{
   color: #5f9ea0!important
+} .fa-heart{
+  color:#c00
 }
 .fa-user{
   color: #663399!important
@@ -262,10 +265,10 @@ mat-tab-group{
     flex-direction: column;
     justify-content: center;
 }
-.twitter-image2{
-width: 90px;
-    height: 90px;
-    border-radius: 3px;
+.twitter-image{
+width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .image-div{
@@ -10209,7 +10212,11 @@ margin: 0;
 font-family: 'Open Sans', sans-serif;
 } 
 .fa-chart-bar {
-  color: #ed143d!important
+  color: #ed143d!important;
+  margin-right: 3px;
+}
+.fa-accusoft{
+  color: #ee82ee!important
 }
 .list-item1 {
   color: #0a6aa1;

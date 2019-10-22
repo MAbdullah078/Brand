@@ -10,6 +10,11 @@
     color: white;
     font-weight: bolder;
 }
+.fa-medium{
+    color: #00c967;
+    font-size: 23px;
+    margin: 11px 0 0 -8px;
+}
 
 mat-placeholder{
     margin: 7%!important;
@@ -140,35 +145,21 @@ mat-form-field{
 input[type=checkbox]{
     zoom: 1.5;
 }
-.tbl-cell{
-    font-weight: 600;
-    font-size: 19px;
-}
+
 i{
     color: #000;
 }
-.item-content{
-
-    color: #919fa9;
-    font-size: 14px;
-
+.fa-user-alt{
+    color: #40e0d0;
+    margin-right: 3px;
 }
-.item-loc{
-    color: #919fa9;
-    font-size: 14px;
+.fa-twitter{
+    color: #1da5de;
 }
-hr{
-    margin: 0!important;
-}
-.list-item1{
-    margin-right: 20px;
-    color: #000;
-    font-weight: 700;
-    font-size: 15px;
-}
-.right-item{
-    color: #919fa9;
-    font-size: 14px;
+.fa-periscope{
+    font-size: 23px;
+    margin: 11px 0 0 -8px;
+    color: #00a4c3;
 }
 .btn-success{
     background: black;

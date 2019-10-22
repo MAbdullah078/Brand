@@ -200,12 +200,6 @@ i{
   border: none;
   box-shadow: none;
 }
-.item-loc{
-  color: #919fa9;
-  font-size: 11px;
-  margin: 3px;
-  font-weight: 600;;
-}
 .fa-facebook{
   margin-top: 12px;
   color: #36569b;
@@ -222,11 +216,15 @@ hr{
   margin: 0!important;
 }
 .list-item1{
-  margin-left: 8px;
   color: #0a6aa1;
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
+}
+.fa-facebook-square{
+  color: #36569b;
+    margin: 5px;
+    font-size: 15px;
 }
 .right-item{
   color: #919fa9;

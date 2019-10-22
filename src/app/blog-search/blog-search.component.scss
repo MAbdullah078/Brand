@@ -79,35 +79,26 @@ mat-form-field{
 input[type=checkbox]{
   zoom: 1.5;
 }
-.tbl-cell{
-  font-weight: 600;
-  font-size: 19px;
-}
+
 i{
   color: #000;
 }
-.item-content{
-
-  color: #919fa9;
-  font-size: 14px;
-
+.fa-blogger-b{
+  color: #ea6732;
+    font-size: 23px;
+    margin: 11px 0 0 -8px
 }
-.item-loc{
-  color: #919fa9;
-  font-size: 14px;
+.fa-link{
+  margin-right: 3px;
+    color: #000080;
 }
-hr{
-  margin: 0!important;
+.fa-blogger{
+  color: #ea6732;
+  margin-right: 3px;
 }
-.list-item1{
-  margin-right: 20px;
-  color: #000;
-  font-weight: 700;
-  font-size: 15px;
-}
-.right-item{
-  color: #919fa9;
-  font-size: 14px;
+.fa-hackerrank{
+  color: cornflowerblue;
+  margin-right: 3px;
 }
 .btn-success{
   background: black;
