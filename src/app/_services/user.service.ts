@@ -41,7 +41,7 @@ export class UserService {
     }
 
 
-    post_Request(title, category, description ,pictures, video, file, questions,answers,offer_to_influencer,url) {
+    post_Request(title, category, description ,pictures, video, file, question1,answer1,question2,answer2, question3,answer3,offer_to_influencer,url) {
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
       let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
        // return this.loaderHttp.post('https://apis.influexpai.com/bap/',
@@ -53,8 +53,12 @@ export class UserService {
           'pictures' :[pictures],
           'video' :[video],
           'file' :[file],
-          'questions' :[questions],
-          'answers': [answers],
+          'question1' :question1,
+          'answer1': answer1,
+          'question2' :question2 || 'null',
+          'answer2': answer2 || 'null',
+          'question3' :question3  || 'null',
+          'answer3': answer3  || 'null',
           'offer_to_influencer' :offer_to_influencer,
           'urlofproduct': url,
          },

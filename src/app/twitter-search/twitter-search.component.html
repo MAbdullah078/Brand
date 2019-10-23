@@ -117,8 +117,9 @@
 
 
 
-        <div class="row " style="margin-top: 2%"  *ngIf="loaded">
-            <div class="col-md-12 text-center">
+    <div class="container-fluid" *ngIf="loaded && influencers.totalItems!=0">
+        <div class="row" id="myHeader" style="margin-top: 1%">
+            <div class="col-md-5 text-left">
                 <nav>
                     <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
 
@@ -160,7 +161,114 @@
                     </ul>
                 </nav>
             </div>
+            <div class="col-md-4">
+                <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+
+            </div>
+            <div class="col-md-3 right-buttons">
+                <!--<button  class="btn btn-success">Select All</button>-->
+                <div id="ck-button">
+                    <label>
+
+                        <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+                    </label>
+                </div>
+
+                <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+
+            </div>
+
         </div>
+
+        <div class="profile-container" *ngFor="let item of influencers.results" >
+            <div class="row main-div">
+
+
+
+                <div class="col-md-3 image-area">
+
+                    <div class="p-checkbox" type="checkbox">
+                        <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                        <label for="table-check-{{item['id']}}"></label>
+                    </div>
+                    <div class="p-img">
+                        <img *ngIf="item['image_url']" [src]="item['image_url']">
+                        <img *ngIf="!item['image_url']" src="../../assets/no-image-found.jpg">
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-md-9 detail-area" >
+
+                    <h3 class="">
+                        <img src="../../assets/img/twitter.png">
+                        {{item['user_name']}}
+                    </h3>
+                    <div class="row">
+                        <!--<label class="item-content" style="overflow: hidden;-->
+                        <!--text-overflow: ellipsis;-->
+                        <!--display: -webkit-box;-->
+                        <!-- -webkit-box-orient: vertical;-->
+                        <!-- -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>-->
+                    </div>
+                    <div class="row" >
+                        <div class="col-md-3 text-left">
+                            <label class="item-loc"> <i class="fa fa-map-marker" ></i>  <span class="list-item1"> {{item['location']}}</span></label>
+
+                        </div>
+                        <div class="col-md-6 text-left">
+
+                            <label class="item-loc"> <i class="fa fa-location-arrow" ></i> Profile Url:  <a (click)="goTwitterProfile(item['profile_url'])">{{item['profile_url']}}</a></label>
+                        </div>
+                        <div class="col-md-3 text-left">
+
+                            <label class="item-loc"> <i class="fa fa-random" ></i> Tweets:  <a >{{item['tweets_count']}}</a></label>
+                        </div>
+                    </div>
+                    <hr style="color: #555555">
+                    <div class="item-loc" >
+                        <ul style="display: flex; justify-content: space-between">
+                            <li>
+                                <span class="right-item"><i class="fa fa-users" ></i> Follower:</span>
+                                <span *ngIf="item['followers']<1000" class="list-item1"><span class="label label-danger">{{item['followers']| thousandSuff}}</span></span>
+                                <span *ngIf="item['followers']>1000 && item['followers']<5000" class="list-item1"><span class="label label-primary"> {{item['followers']| thousandSuff}}</span></span>
+                                <span *ngIf="item['followers']>5000" class="list-item1"><span class="label label-success">{{item['followers']| thousandSuff}}</span></span>
+
+                            </li>
+
+                            <li><span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']| thousandSuff}}    </span></li>
+                            <li><span class="right-item"><i class="fa fa-bar-chart" ></i> Likes:</span>
+
+                                <!--<span class="list-item1">{{item['likes']}}</span>-->
+
+                                <span *ngIf="item['likes']<1000" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['likes']| thousandSuff}}</span></span>
+                                <span *ngIf="item['likes']>1000 && item['likes']<5000" class="list-item1"><span class="label label-primary">Normal {{item['likes']| thousandSuff}}</span></span>
+                                <span *ngIf="item['likes']>5000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['likes']| thousandSuff}}</span></span>
+
+                            </li>
+                            <li><span class="right-item"><i class="fa fa-user"></i> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span></li>
+
+                        </ul>
+                    </div>
+                    <hr style="color: #555555">
+                    <div class="item-loc" >
+                        <ul style="display: flex;  justify-content: space-between">
+                            <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
+                            <!--<li><span class="right-item"> <i class="fa fa-file-video-o" ></i> Tweets :</span> <span class="list-item1">{{item['tweets_count']}}    </span></li>-->
+                            <li><span class="right-item"><i class="fa fa-upload"></i> Joined Date :</span> <span class="list-item1">{{item['joined_date']}}   </span> </li>
+                            <li *ngIf="item['website']"><span class="right-item"><i class="fa fa-newspaper-o" ></i>  Web: </span> <span class="list-item1">{{item['website']}}</span></li>
+                            <li *ngIf="!item['website']"><span class="right-item"><i class="fa fa-newspaper-o" ></i>  Web: </span> <span class="list-item1">N/A</span></li>
+                            <!--<li><span class="right-item"><i class="fa fa-random" ></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>-->
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
