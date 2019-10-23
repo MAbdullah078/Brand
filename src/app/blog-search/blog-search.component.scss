@@ -32,19 +32,7 @@ mat-form-field{
   /*-webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;*/
   /*box-shadow: 0 0px 0px 0 rgba(0,0,0,.5),0 0px 2px 0 rgba(0,0,0,.19)!important;*/
 }
-.profile-container{
-  width: 100%;
-  flex-direction: column;
-  position: relative;
-  border-radius: 5px;
-  background-color: #fff;
-  /*box-shadow: 0 3px 4px 0 #bdbdc3;*/
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-  max-width: 1200px;
-  display: inline-block;
-  /*height: 165px;*/
-  margin-top: 18px;
-}
+
 .loaded-container{
   width: 100%;
   flex-direction: column;
@@ -88,18 +76,12 @@ i{
     font-size: 23px;
     margin: 11px 0 0 -8px
 }
-.fa-link{
-  margin-right: 3px;
-    color: #000080;
-}
+
 .fa-blogger{
   color: #ea6732;
   margin-right: 3px;
 }
-.fa-hackerrank{
-  color: cornflowerblue;
-  margin-right: 3px;
-}
+
 .btn-success{
   background: black;
   border-radius: 50px;

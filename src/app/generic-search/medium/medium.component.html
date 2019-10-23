@@ -253,87 +253,109 @@
 <div class="container-fluid" >
 
   <div class="row" id="myHeader">
-    <div class="col-md-6">
+    <div class="col-md-12 row p-4">
       <div class="col-md-3">
         <div id="ck-button">
           <label>
 
-            <input type="checkbox"  (change)="checkAllperi($event.target.checked)" ><span>Select All</span>
+            <input type="checkbox" class="checkbox"  (change)="checkAllperi($event.target.checked)" ><span>Select All</span>
           </label>
         </div>
       </div>
-      <div class="col-md-9 text-left">
-        <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+      <div class="col-md-6 text-right">
+        <h5 >Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+  
+      </div>
+      <div class="col-md-3 text-left">
+        <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
 
       </div>
     </div>
-    <div class="col-md-6 text-right">
-      <h5 style="margin: 10px; color: gray; ">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
-
-    </div>
+    
   </div>
 
-  <div class="profile-container" *ngFor="let item of influencers.results" >
-    <div class="row main-div">
 
-      <div class="col-md-3 image-area">
 
-        <div class="p-checkbox" type="checkbox">
-          <input type="checkbox" style="display: flex" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-          <label for="table-check-{{item['id']}}"></label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="profile-container" *ngFor="let item of influencers.results"   >
+    <div class="row">
+
+
+        <div class="col-md-1 profile-checkbox" type="checkbox">
+            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+            <label for="table-check-{{item['id']}}"></label>
         </div>
 
-        <div class="p-img">
-          <img [src]="item['image_url']">
+<div class="col-md-1 followers-division">
+
+
+    <img [src]="item['image_url']"  class="twitter-image">
+</div>
+        <div class="col-md-1 followers-division">
+            <div>
+                    <h6 class="m-0">Likes:</h6>
+                <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+            </div>
         </div>
-      </div>
+                <div class="col-md-9">
+                    <div class="title-name">
+                      <div class="d-flex">
+            <img class="social-icon2" src="../../assets/img/medium.png">
+                    <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+                  </div>
+                    <label *ngIf="item.description.length>0" class="item-content ml-4"  title="{{item['description']}}">{{item['description']}}</label>
+                    </div>
+                    <div>
+                    <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
+                    <div>
+                    <label class="item-loc ml-4"><i class="fab fa-twitter" ></i> Twitter:  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
+                      </a></label>
+                  </div>
+                  </div>
+                  
+                      
 
-
-      <div class="col-md-9 detail-area" >
-
-        <h3 class="">
-          <img src="../../assets/header-images/medium.png">
-          {{item['name']}}</h3>
-
-        <div class="">
-          <p class="item-content" title="{{item['description']}}">{{item['description']}}</p>
+                    <div class="row">
+                <div class="col-md-6">
+                    <div class="ml-4">
+                      <div>
+                        <span class="right-item"><i class="fa fa-users" ></i> Followers:</span> <span class="list-item1">{{item['followers'] | thousandSuff }}</span>
+                      </div>
+                      <div>
+                        <span class="right-item"><i class="fas fa-eye"></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                      </div>
+                           
+                </div>
+        
+     
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <span class="right-item"><i class="fas fa-chart-bar"></i>Rank</span> <span class="list-item1">{{item['account_rank']}}</span> 
+                  
         </div>
-        <div class="row">
-          <div class="col-md-3 text-left">
-            <label class="item-loc"> <i class="fa fa-map-marker"></i> Category: <span class="list-item1">Global</span> </label>
-
+        <div>
+             <span class="right-item"><i class="fab fa-accusoft"></i> Rank:</span> <span class="list-item1">{{item['total_claps']  | thousandSuff}}</span>
+                 
+                </div>
+            </div>
           </div>
-          <div class="col-md-9 text-left">
-
-            <label class="item-loc"> <i class="fa fa-location-arrow" ></i> Profile: <a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
-          </div>
         </div>
-        <hr style="color: #555555">
-        <div class="item-loc" >
-          <ul style="display: flex; justify-content: space-between">
-            <li><span class="right-item"><i class="fa fa-users" ></i> Followers:</span> <span class="list-item1"><span class="label label-success">{{item['followers']| thousandSuff}}</span>  </span> </li>
-            <li><span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}  </span></li>
-            <li><span class="right-item"><i class="fa fa-bar-chart"
-            ></i> Claps:</span> <span class="list-item1"><span class="label label-success">{{item['total_claps']| thousandSuff}}</span></span></li>
-            <!--<li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Broadcast :</span> <span class="list-item1">{{item['braodcasts']}} | </span> </li>-->
+                </div>
 
-          </ul>
         </div>
-        <hr style="color: #555555">
-        <div class="item-loc" >
-          <ul style="display: flex; justify-content: space-between">
-            <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
-            <li><span class="right-item"> <i class="fa fa-sticky-note-o"
-            ></i> Posts :</span> <span class="list-item1">{{item['posts']}}  </span></li>
-            <li *ngIf="item['twitter_profile']"><span class="right-item"><i class="fa fa-twitter" ></i> Twitter: </span> <span class="list-item1">{{item['twitter_profile']}}</span></li>
-            <li *ngIf="!item['twitter_profile']"><span class="right-item"><i class="fa fa-twitter" ></i> Twitter: </span> <span class="list-item1">N/A</span></li>
-
-
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div class="row" style="margin-top: 1%">

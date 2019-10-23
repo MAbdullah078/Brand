@@ -262,6 +262,9 @@
                 </div>
             </div>
         </div>  -->
+
+
+        
         <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
                     <div class="col-md-1 profile-checkbox" type="checkbox">
                             <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">

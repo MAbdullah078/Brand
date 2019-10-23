@@ -102,7 +102,7 @@ display: none!important;
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  background-color:#82D0DC;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
   color: rgb(255, 255, 255);
   width: 60px;
   height: 60px;
@@ -248,6 +248,19 @@ mat-tab-group{
 } .fa-heart{
   color:#c00
 }
+.profile-container{
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  background-color: #fff;
+  /*box-shadow: 0 3px 4px 0 #bdbdc3;*/
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  max-width: 1200px;
+  display: inline-block;
+  /*height: 165px;*/
+  margin-top: 10px;
+}
 .fa-user{
   color: #663399!important
 }
@@ -270,11 +283,33 @@ width: 60px;
     height: 60px;
     border-radius: 50%;
 }
-
+.social-icon2{
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+}
+.fa-twitter {
+  color: #1da5de!important;
+}
+.fa-sign-in-alt{
+  color: #ed143d!important;
+}
 .image-div{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.fa-phone-alt{
+  color: #9400d3
+}
+.fa-hackerrank{
+  color: #6495ed!important;
+  margin-right: 3px;
+}
+.periscope-icon{
+  color: #00a4c3;
+  font-size: 23px;
+  margin: 11px 0 0 -8px;
 }
 .search-button{
   background: #82d0dc;
@@ -10228,9 +10263,7 @@ font-family: 'Open Sans', sans-serif;
   font-family: 'Merriweather', serif;
   color: darkcyan;
 }
-.fa-sign-in-alt{
-  color: #008080;
-}
+
 .fa-venus{
   color:#82d0dc!important;
   margin: 3px;
@@ -31502,9 +31535,9 @@ body:not(.no-transition) #wrapper {
   text-align: center;
 }
 .btn-primary {
-    color: #fff;
-    background-color: #82d0dc;
-    border-color: #81cfdb;
+  background: -webkit-gradient(linear,left top,right top,color-stop(0,#a91f73),to(#ff4270));
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+  border: none;
     }
 
 .slider1text {
@@ -31662,9 +31695,16 @@ nav.navbar.navbar-default.navbar-fixed-top {
 .blog-wrapper {
   margin-top: 80px;
 }
-
+.fa-link {
+  margin-right: 3px;
+  color: #000080!important
+}
 .blog-box h4 {
   margin: 10px 0;
+}
+.fa-blogger{
+  color: #ea6732;
+  margin-right: 3px;
 }
 
 .blog-wrapper .blog-box {

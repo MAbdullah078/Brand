@@ -608,7 +608,7 @@
                         <label for="table-check-{{item['id']}}"></label>
                       </div>
                       <div class="col-md-1 followers-division">
-                        <img [src]="item['image_url']" >
+                        <img [src]="item['image_url']" class="twitter-image" >
                       </div>
               
               
@@ -619,8 +619,8 @@
                         </div>
                         <div class="col-md-9">
                                 <div class="d-flex">
-                                        <i class="fab fa-twitter"></i>
-                                  <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+                                        <img  class="social-icon2" src="../../assets/img/twitter.png">
+                                  <label class="tbl-cell tbl-cell-name">{{item['twitter_name']}}</label>
                                   </div>
                             <div class="ml-4">
                           <label class="item-content"  title="{{item['description']}}">{{item['description']}}</label>

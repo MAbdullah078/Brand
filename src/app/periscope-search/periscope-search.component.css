@@ -92,19 +92,6 @@ mat-form-field{
     font-size: 17px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
-.profile-container{
-    width: 100%;
-    flex-direction: column;
-    position: relative;
-    border-radius: 5px;
-    background-color: #fff;
-    /*box-shadow: 0 3px 4px 0 #bdbdc3;*/
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-    max-width: 1200px;
-    display: inline-block;
-    /*height: 165px;*/
-    margin-top: 18px;
-}
 .loaded-container{
     width: 100%;
     flex-direction: column;
@@ -142,11 +129,6 @@ input[type=checkbox]{
 .tbl-cell{
     font-weight: 600;
     font-size: 19px;
-}
-.periscope-icon{
-    color: #00a4c3;
-    font-size: 23px;
-    margin: 11px 0 0 -8px;
 }
 .fa-periscope{
     color: #00a4c3; 

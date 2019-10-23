@@ -259,7 +259,7 @@
 
     <div class="row" id="myHeader">
       <div class="col-md-12 row p-3">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div id="ck-button">
             <label>
 
@@ -267,14 +267,15 @@
             </label>
           </div>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-4 text-center">
+          <h5>Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+  
+        </div>
+        <div class="col-md-4 text-right">
           <button  class="btn btn-primary " (click)="add_create_list()"> Add to list</button>
 
         </div>
-        <div class="col-md-3 text-center">
-          <h5 style="margin: 10px; color: gray; ">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
-  
-        </div>
+       
       </div>
     
     </div>
@@ -352,66 +353,71 @@
         </div>
 
     </div> -->
-    <div class="row influcener-div" *ngFor="let item of influencers.results" >
-        <div class="col-md-1 profile-checkbox" type="checkbox">
-                <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                <label for="table-check-{{item['id']}}"></label>
-            </div>
-    <div class="col-md-2 image-div ">
-                      <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  class="twitter-image"  >
-                      <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  class="twitter-image"> 
-    </div>
-    <div class="col-md-4 description-divison">
-      <div>
-          <img src="../../assets/img/youtub.png">
-          {{item['name']}}
-    </div>
-    <label *ngIf="item['location']" class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> {{item['location']}}</label>
-    <label *ngIf="!item['location']" class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> N/A</label>
-  
-            <label class="item-content"
-            title="{{item['description']}}">{{item['description']}}</label>
-         <div class="row" >
-            <ul class="profile-url p-1 ">
-                <li><span class="right-item"><i class="fa fa-users" ></i> subscribers:</span> <span class="list-item1"><span class="label label-success">{{item['subscribers'] | thousandSuff}}</span>   </span> </li>
-                <li><span class="right-item"> <i class="fa fa-eye" ></i> Total Views:</span> <span class="list-item1">{{item['total_views'] | thousandSuff}}    </span></li>
-                       
-            </ul>
-            <ul class="profile-url p-1 ">
-                <li>
-                    <span class="right-item"><i class="fa fa-bar-chart" ></i> Rank:
-                </span>
-                <span *ngIf="item['rank']<5" class="right-item"><span class="label label-danger" style="background: #cc0000"><small>Poor</small> {{item['rank']}}%</span></span>
-                <span *ngIf="item['rank']>5 && item['rank']<10" class="right-item"><span class="label label-primary" style="background-color: #0095ff"><small>Normal</small> {{item['rank']}}%</span></span>
-                <span *ngIf="item['rank']>10" class="right-item"><span class="label label-success"><small>Perfect</small> {{item['rank']}}%</span></span>
-                <span *ngIf="!item['rank']" class="right-item"><span class="label label-success">N/A</span></span>
 
-            </li>
-            <li><span class="right-item"><i class="fa fa-calendar-o"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span></li>
   
-            </ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row influcener-div" *ngFor="let item of influencers.results" >
+    <div class="col-md-1 profile-checkbox" type="checkbox">
+            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+            <label for="table-check-{{item['id']}}"></label>
         </div>
-  
+<div class="col-md-1 image-div ">
+    <img [src]="item['thumbnail_url']"  class="twitter-image">
+</div>
+<div class="col-md-1 followers-profile">
+        <h6 class="m-0">Subcriber:</h6>
+        <h4 class="Follwers-div">{{item['subscribers'] |thousandSuff}}</h4>
     </div>
-    
-  
-  <div class="col-md-2 image-div">
-      <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  class="twitter-image"  >
-      <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  class="twitter-image"> 
-  </div>
-  
-  <div class="col-md-2 image-div">
-      <img *ngIf="item['thumbnail_url']" [src]="item['thumbnail_url']"  class="twitter-image"  >
-      <img *ngIf="!item['thumbnail_url']" src="../../assets/no-image-found.jpg"  class="twitter-image"> 
-  </div>
-  <div class="col-md-1 followers-profile">
-  <h4 class="real-heading">{{item['tweets_count']}}</h4>
-  <!-- <h6>Subcriber</h6>
-  <h4 class="real-heading">{{item['subscribers'] | thousandSuff}}</h4> -->
-  </div>
-  </div>
-  
-  
+<div class="col-md-9 ">
+
+            <div class="d-flex">
+                <i class="fab fa-youtube"></i>
+                
+    <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+    <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
+</div>
+        <label class="item-content ml-4"
+        title="{{item['description']}}">{{item['description']}}</label>
+        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>{{item['channel_link']}}</label>
+     <div class="row" >
+        <div class="col-md-6 ">
+            <div class="ml-4">
+            <div>
+            <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
+                <span class="right-item"> {{item['_views'] | thousandSuff}}</span>
+                </div>
+                <div>
+    <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
+</div>
+</div>
+    </div>
+    <div class="col-md-6 ">
+        <div>
+            <span class="right-item"><i class="fa fa-upload"></i>  Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span>
+              <span class="right-item ml-5"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
+        </div>
+      
+        <div>
+          <span class="right-item"><i class="fas fa-sign-in-alt"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span>
+        </div>
+         </div>
+
+</div>
+
+
+</div>
+
   </div>
 
 
