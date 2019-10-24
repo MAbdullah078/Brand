@@ -259,8 +259,8 @@
                             <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
                             <!--<li><span class="right-item"> <i class="fa fa-file-video-o" ></i> Tweets :</span> <span class="list-item1">{{item['tweets_count']}}    </span></li>-->
                             <li><span class="right-item"><i class="fa fa-upload"></i> Joined Date :</span> <span class="list-item1">{{item['joined_date']}}   </span> </li>
-                            <li *ngIf="item['website']"><span class="right-item"><i class="fa fa-newspaper-o" ></i>  Web: </span> <span class="list-item1">{{item['website']}}</span></li>
-                            <li *ngIf="!item['website']"><span class="right-item"><i class="fa fa-newspaper-o" ></i>  Web: </span> <span class="list-item1">N/A</span></li>
+                            <li *ngIf="item['website']"><span class="right-item"><i class="fa fa-newspaper-o" ></i>  Web Link: </span> <span class="list-item1">{{item['website']}}</span></li>
+                            <li *ngIf="!item['website']"><span class="right-item"><i class="fa fa-newspaper-o" ></i>  Web Link: </span> <span class="list-item1">N/A</span></li>
                             <!--<li><span class="right-item"><i class="fa fa-random" ></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>-->
 
                         </ul>
@@ -734,8 +734,8 @@
                           <label class="item-content"  title="{{item['description']}}">{{item['description']}}</label>
                         </div>
                         <div class="ml-4">
-                        <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                        <span class="right-item"><i class="fas fa-globe"></i> Web: </span> <span class="list-item1">{{item['website']}}</span>
+                        <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile Link:  <a style="color: #0a6aa1; font-weight: bolder">{{item['profile_url']}}</a></label>
+                        <span class="right-item"><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1">{{item['website']}}</span>
                         </div>
                          <div class="row">
                           <div class="col-md-4">
@@ -772,6 +772,8 @@
                             <div class="col-md-4">
                                     <div>
                                             <span class="right-item"><i class="fa fa-user" ></i> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
+                                            <span class="right-item"><i class="fa fa-user" ></i> Email:</span> <span class="list-item1">{{item['email']}}</span>
+
                                         </div>
                                         <div>
                                                 <!-- <span class="right-item"><i class="fa fa-random" ></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> -->
