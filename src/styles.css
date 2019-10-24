@@ -232,9 +232,11 @@ mat-tab-group{
   margin: 2px;
 }
 .fa-pinterest {
-  color:  #b72025;
+  color:  #b72025!important;
   font-size: 23px;
-  margin: 11px 0 0 -8px;
+}
+.fa-facebook{
+  color: #36569b!important
 }
 .fa-eye {
   color: #a0522d!important
