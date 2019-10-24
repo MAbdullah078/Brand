@@ -83,15 +83,15 @@ form input[type=text] {
     color: #c00 !important;
 }
 .footer-copyright {
-    background: #fafafa;
-    padding: 22px;
+    background: #273c61;
+    padding: 14px;
     width: 100%;
     display: block;
     height: auto;
 }
 
 .footer-copyright a {
-    color: #928787;   
+    color: #fff;   
     padding: 0 5px;
 }
 #footerwrap{
@@ -102,7 +102,7 @@ form input[type=text] {
 p.copyright-text {
     margin: 0;
     font-size: 14px;
-    color: #928787  !important;
+    color: #fff  !important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
     font-weight: 500!important;
 }
@@ -228,7 +228,7 @@ button#btn-chat {
 
 .footer-upper {
     padding: 10px 50px;
-    background: #fafafa;
+    background:#e2edff;
     min-height: 402px;
     float: left;
 }
