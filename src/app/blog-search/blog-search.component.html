@@ -106,8 +106,8 @@
 
     </div>
     <div class="row"*ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-left">
-            <h4 style="font-weight: bolder">Featured Blogosphere</h4>
+        <div class="col-md-12 text-center">
+            <h4 class="m-0">Featured Blogosphere</h4>
         </div>
 
     </div>
@@ -586,45 +586,77 @@
             </div>
         </div>
 
-        <div class="profile-container" *ngFor="let item of blogs.results" >
+      
+
+
+
+
+
+
+        <div class="profile-container"  *ngFor="let item of blogs.results">
             <div class="row">
-
-
-                <div class="col-md-2 profile-checkbox" type="checkbox">
+        
+        
+                <div class="col-md-1 profile-checkbox" type="checkbox">
                     <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                     <label for="table-check-{{item['id']}}"></label>
                 </div>
-
-                <div class="col-md-9" style="margin-left: 3%">
-                    <div class="row">
-                        <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
-                    </div>
-                    <div class="row" style="padding-top: 8px">
-                        <label class="item-content">{{item['description']}}</label>
-                    </div>
-                    <div class="row" style="padding-top: 8px">
-                        <div class="col-md-3 text-left">
-                            <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> {{item['location']}}</label>
-
-                        </div>
-                        <div class="col-md-9 text-left">
-
-                            <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Contact:  <a style="color: #0a6aa1; font-weight: bolder">{{item['main_url']}}</a></label>
-                        </div>
-                    </div>
-                    <hr style="color: #555555">
-                    <div class="row" >
-                        <ul style="display: flex; padding-top: 5px">
-                            <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Alexa:</span> <span class="list-item1">{{item['seoData']['ALEXA']}} |  </span> </li>
-                            <li><span class="right-item"> <i class="fa fa-link" style="font-size:16px;color:#0a4069"></i> Moz Rank:</span> <span class="list-item1">{{item['moz_rank']}} |   </span></li>
-                            <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i> Blogs:</span> <span class="list-item1">{{item['blogs']}}</span></li>
-                            <li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Wowtr:</span> <span class="list-item1">{{item['seoData']['WOWTR']}}</span></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="col-md-1 followers-division">
+        
+        
+            
         </div>
+                
+                            
+                    
+                          <div class="col-md-10">
+                            <div class="title-name">
+                              <div class="d-flex">
+                                    <i class="fab fa-blogger-b"></i>
+                            <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
+                            <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
+                          </div>
+                      
+                            </div>
+                            <div>
+                                    <label class="item-content ml-4">{{item['description']}}</label>
+                            <div>
+                                    <label class="item-loc ml-4"> <i class="fas fa-phone-alt"></i> Contact:  <a >{{item['main_url']}}</a></label>
+                          </div>
+                          </div>
+                          
+                              
+    
+                            <div class="row">
+                        <div class="col-md-6">
+                            <div class="ml-4">
+                              <div>
+                                    <span class="right-item"><i class="fab fa-hackerrank"></i>Alexa:</span> <span class="list-item1">{{item['seoData']['ALEXA']}}</span>
+                              </div>
+                              <div>
+                                    <span class="right-item"> <i class="fa fa-link" ></i> Moz Rank:</span> <span class="list-item1">{{item['moz_rank']}}</span>
+                              </div>
+                                   
+                        </div>
+                
+             
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                                <span class="right-item"><i class="fab fa-blogger"></i> Blogs:</span> <span class="list-item1">{{item['blogs']}}</span>
+                            
+                          
+                </div>
+                <div>
+                        <span class="right-item"><i class="fa fa-random" ></i> Wowtr:</span> <span class="list-item1">{{item['seoData']['WOWTR']}}</span>
+                    </div>
+                  </div>
+                </div>
+                        </div>
+        
+                </div>
+</div>
     </div>
     <!--<section class="box-typical" *ngIf="!loaded">-->
 

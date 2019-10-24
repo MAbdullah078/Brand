@@ -108,51 +108,7 @@
   </div>
 
 
-  <div class="row" *ngIf="loaded" style="margin-top: 2%">
-    <div class="col-md-12 text-center">
-      <nav>
-        <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
 
-          <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
-          <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
-          <!--</li>-->
-          <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-            <a class="page-link" (click)="setPage(1)" aria-label="Previous">
-              First
-            </a>
-          </li>
-          <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-            <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Previous</span>
-            </a>
-          </li>
-
-          <li class="page-item" *ngFor="let page of pager.pages"
-              [ngClass]="{active:pager.currentPage === page}"
-              (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
-          <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-          <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
-          <!--</li>-->
-          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-            <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
-            </a>
-          </li>
-          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-            <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
-              Last
-            </a>
-          </li>
-          <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-          <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
-          <!--</li>-->
-        </ul>
-      </nav>
-    </div>
-
-  </div>
 
 
   <!--<section class="box-typical" *ngIf="!loaded ">-->
@@ -518,10 +474,9 @@
   </div>
   <div class="container-fluid" *ngIf="loaded&& influencers.totalItems!=0">
 
-    <div class="row" id="myHeader">
-      <div class="col-md-12 list-row">
-        <div class="row">
-          <div class="col-md-12">
+    <div class="row p-3 mt-2" id="myHeader">
+        
+          <div class="col-md-2">
             <!--<button  class="btn btn-success">Select All</button>-->
             <div id="ck-button">
               <label>
@@ -529,87 +484,189 @@
                 <input type="checkbox" class="checkbox"  (change)="checkAllperi($event.target.checked)" ><span>Select All</span>
               </label>
             </div>
-
-            <button  class="btn btn-lg add-to-list pull-right" (click)="add_create_list()"> Add to list</button>
-
           </div>
-        </div>
-      </div>
+
+      
+              <div class="col-md-8 text-center"  *ngIf="loaded">
+                <nav>
+                  <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
+          
+                    <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+                    <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+                    <!--</li>-->
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                      <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+                        First
+                      </a>
+                    </li>
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                      <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+          
+                    <li class="page-item" *ngFor="let page of pager.pages"
+                        [ngClass]="{active:pager.currentPage === page}"
+                        (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
+                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                    <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+                    <!--</li>-->
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                      <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                      <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+                        Last
+                      </a>
+                    </li>
+                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                    <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+                    <!--</li>-->
+                  </ul>
+                </nav>
+              </div>
+          
+       
+
+
+
+
+
+
+          <div class="col-md-2">
+            <button  class="btn btn-lg add-to-list pull-right" (click)="add_create_list()"> Add to list</button>
+          </div>
+          
+   
+   
     </div>
 
-    <div class="profile-container" *ngFor="let item of influencers.results" >
+
+
+
+
+
+
+
+
+
+
+    <div class="profile-container"  *ngFor="let item of influencers.results">
       <div class="row">
-
-
-        <div class="col-md-2 profile-checkbox" type="checkbox">
-          <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-          <label for="table-check-{{item['id']}}"></label>
-        </div>
-        <div class="col-md-2 text-center">
-          <img [src]="item['image_url']"  style="height: 100px;  width: 100px; margin-top: 15px; border-radius: 100%">
-        </div>
-
-
-        <div class="col-md-7" style="margin-left: 3%">
-          <div class="row">
-            <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+  
+  
+          <div class="col-md-1 profile-checkbox" type="checkbox">
+              <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+              <label for="table-check-{{item['id']}}"></label>
           </div>
-          <div class="row" style="padding-top: 8px">
-            <label class="item-content" style="overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>
+  
+  <div class="col-md-1 followers-division">
+  
+  
+      <img [src]="item['image_url']"  class="twitter-image">
+  </div>
+          <div class="col-md-1 followers-division">
+              <div>
+                      <h6 class="m-0">Likes:</h6>
+                  <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+              </div>
           </div>
-          <div class="row" style="padding-top: 8px">
-            <!-- <div class="col-md-4 text-left">
-              <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i> Category: <span class="list-item1">{{selected_category}}</span> </label>
+                  <div class="col-md-9">
+                      <div class="title-name">
+                        <div class="d-flex">
+              <img class="social-icon2" src="../../assets/img/medium.png">
+                      <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
+                    </div>
+                      <label *ngIf="item.description.length>0" class="item-content ml-4"  title="{{item['description']}}">{{item['description']}}</label>
+                      </div>
+                      <div>
+                      <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
+                      <div>
+                      <label class="item-loc ml-4"><i class="fab fa-twitter" ></i> Twitter:  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
+                        </a></label>
+                    </div>
+                    </div>
+                    
+                        
 
-            </div> -->
-            <div class="col-md-8 text-left">
-
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
+                      <div class="row">
+                  <div class="col-md-6">
+                      <div class="ml-4">
+                        <div>
+                          <span class="right-item"><i class="fa fa-users" ></i> Followers:</span> <span class="list-item1">{{item['followers'] | thousandSuff }}</span>
+                        </div>
+                        <div>
+                          <span class="right-item"><i class="fas fa-eye"></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                        </div>
+                             
+                  </div>
+          
+       
+              </div>
+              <div class="col-md-6">
+                  <div>
+                      <span class="right-item"><i class="fas fa-chart-bar"></i>Rank</span> <span class="list-item1">{{item['account_rank']}}</span> 
+                    
+          </div>
+          <div>
+               <span class="right-item"><i class="fab fa-accusoft"></i> Rank:</span> <span class="list-item1">{{item['total_claps']  | thousandSuff}}</span>
+                   
+                  </div>
+              </div>
             </div>
           </div>
-          <hr style="color: #555555">
-          <div class="row" >
-            <ul style="display: flex; padding-top: 5px">
-              <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Followers:</span> <span class="list-item1">{{item['followers']}} |  </span> </li> -->
-
-              <li><span class="right-item"><i class="fa fa-users" ></i> Followers:</span>
-                <!--<span class="list-item1">{{item['followers']}}</span>-->
-
-                <span *ngIf="item['followers']<500" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['followers'] | thousandSuff}}</span></span>
-                <span *ngIf="item['followers']>500 && item['followers']<5000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['followers'] | thousandSuff}}</span></span>
-                <span *ngIf="item['followers']>5000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['followers'] | thousandSuff}}</span></span>
-            </li>
-              <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}} |   </span></li>
-              <li><span class="right-item"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}} |   </span></li>
-              <!-- <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Claps:</span> <span class="list-item1">{{item['total_claps']}}</span></li> -->
-
-              <li><span class="right-item"><i class="fa fa-bar-chart" ></i> Claps:</span>
-
-                <span *ngIf="item['total_claps']<100" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['total_claps'] | thousandSuff}}</span></span>
-                <span *ngIf="item['total_claps']>100 && item['total_claps']<500" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['total_claps'] | thousandSuff}}</span></span>
-                <span *ngIf="item['total_claps']>500" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['total_claps']| thousandSuff}}</span></span>
-            </li>
-
-            </ul>
+                  </div>
+  
           </div>
-          <hr style="color: #555555">
-          <div class="row" >
-            <ul style="display: flex; padding-top: 5px">
-              <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
-              <li><span class="right-item"> <i class="fa fa-sticky-note-o" style="font-size:16px;color:#0a4069"></i> Posts :</span> <span class="list-item1">{{item['posts']}} |   </span></li>
-              <li *ngIf="item['twitter_profile']"><span class="right-item"><i class="fa fa-twitter" style="font-size:16px;color:#0a4069"></i> Twitter: </span> <span class="list-item1">{{item['twitter_profile']}}</span></li>
-              <li *ngIf="!item['twitter_profile']"><span class="right-item"><i class="fa fa-twitter" style="font-size:16px;color:#0a4069"></i> Twitter: </span> <span class="list-item1">N/A</span></li>
 
 
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+
+          <div class="col-md-12 mt-2 p-3 text-center"  *ngIf="loaded">
+              <nav>
+                <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
+        
+                  <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+                  <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+                  <!--</li>-->
+                  <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+                      First
+                    </a>
+                  </li>
+                  <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+        
+                  <li class="page-item" *ngFor="let page of pager.pages"
+                      [ngClass]="{active:pager.currentPage === page}"
+                      (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
+                  <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                  <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+                  <!--</li>-->
+                  <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                  <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+                      Last
+                    </a>
+                  </li>
+                  <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                  <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+                  <!--</li>-->
+                </ul>
+              </nav>
+            </div>
   </div>
   <!--<section class="box-typical" *ngIf="loaded&& influencers.totalItems!=0">-->
 

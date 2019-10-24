@@ -103,59 +103,16 @@
     </div>
 
     <div class="row" *ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-left">
-            <h4 style="font-weight: bolder">Featured Pinterest Influencers</h4>
-        </div>
-
-    </div>
-
-
-
-
-    <div class="row " style="margin-top: 2%"  *ngIf="loaded">
         <div class="col-md-12 text-center">
-            <nav>
-                <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
-
-                    <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
-                    <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
-                    <!--</li>-->
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a class="page-link" (click)="setPage(1)" aria-label="Previous">
-                            First
-                        </a>
-                    </li>
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-
-                    <li class="page-item" *ngFor="let page of pager.pages"
-                        [ngClass]="{active:pager.currentPage === page}"
-                        (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
-                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-                    <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
-                    <!--</li>-->
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
-                            Last
-                        </a>
-                    </li>
-                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-                    <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
-                    <!--</li>-->
-                </ul>
-            </nav>
+            <h4 class="m-0">Featured Pinterest Influencers</h4>
         </div>
+
     </div>
+
+
+
+
+   
 
 
   <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
@@ -397,23 +354,66 @@
   <!--</section>-->
     <div class="container-fluid" *ngIf="loaded&& influencers.totalItems!=0">
 
-        <div class="row" id="myHeader">
-            <div class="col-md-12 list-row">
-                <div class="row">
-                    <div class="col-md-6">
-                        <!--<button  class="btn btn-success">Select All</button>-->
+        <div class="row p-3 mt-2" id="myHeader">
+                    <div class="col-md-2">
+                  
                         <div id="ck-button">
                             <label>
 
-                                <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+                                <input type="checkbox" class="checkbox" (change)="cheakall($event.target.checked)" ><span>Select All</span>
                             </label>
                         </div>
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <nav>
+                                <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
+                
+                                    <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+                                    <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+                                    <!--</li>-->
+                                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                                        <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+                                            First
+                                        </a>
+                                    </li>
+                                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                                        <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                
+                                    <li class="page-item" *ngFor="let page of pager.pages"
+                                        [ngClass]="{active:pager.currentPage === page}"
+                                        (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
+                                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                                    <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+                                    <!--</li>-->
+                                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                                        <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                                        <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+                                            Last
+                                        </a>
+                                    </li>
+                                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                                    <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </nav>
+                        </div> 
 
-                        <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
-
-                    </div>
-                </div>
-            </div>
+                        <div class="col-md-2">
+                        <button  class="btn add-to-list" (click)="add_create_list()"> Add to list</button>
+                      </div>
+                    
+                   
+                
+        
         </div>
 
         <!-- <div class="profile-container" *ngFor="let item of influencers.results" >
@@ -470,79 +470,136 @@
                 </div>
             </div>
         </div> -->
-        <div class="row influcener-div" *ngFor="let item of influencers.results" >
-          <div class="col-md-1 profile-checkbox" type="checkbox">
-                  <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                  <label for="table-check-{{item['id']}}"></label>
-              </div>
-      <div class="col-md-2 image-div ">
-        <img [src]="item['image']"  class="twitter-image">
+
+
+
+
+<div class="profile-container"  *ngFor="let item of influencers.results">
+  <div class="row">
+
+
+      <div class="col-md-1 profile-checkbox" type="checkbox">
+          <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+          <label for="table-check-{{item['id']}}"></label>
       </div>
-      <div class="col-md-4 description-divison">
-          <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
-          <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['location']}}</span></label>
-          <!-- <label class="item-loc"> <i class="fa fa-map-marker" style="font-size:16px;color:#c00"></i>  <span class="list-item1"> {{item['country']}}</span></label> -->
-              <label class="item-content"
-              title="{{item['description']}}">{{item['description']}}</label>
-           <div class="row" >
-              <ul class="profile-url p-1 ">
-                <!-- <li><span class="right-item"><i class="fa fa-users" style="font-size:16px;color:#0a4069"></i> Follower:</span> <span class="list-item1">{{item['followers']}}  </span> </li> -->
 
-                <li>
-                    <span class="right-item"><i class="fa fa-users" ></i> Follower:</span>
-                    <!--<span class="list-item1">{{item['followers']}}   </span>-->
+<div class="col-md-1 followers-division">
 
-                    <span *ngIf="item['followers']<100" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['followers']| thousandSuff}}</span></span>
-                    <span *ngIf="item['followers']>100 && item['followers']<1000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['followers']| thousandSuff}}</span></span>
-                    <span *ngIf="item['followers']>1000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['followers']| thousandSuff}}</span></span>
+  <img [src]="item['image']"   class="twitter-image">
+</div>
+      <div class="col-md-1 followers-division">
+  
+          <div>
+         
+                  <h6 class="m-1 detail-div">Followers</h6>
+              <h3 class="Follwers-div" >{{item['followers']| thousandSuff}}</h3>
+          </div>
+      </div>
+              <div class="col-md-9">
+                  <div class="title-name">
+                    <div class="d-flex">
+                       <img class="social-icon2" src="../../assets/img/pintrest.png">
+                           <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
+                        <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['country']}}</label>
+                      </div>
+                  <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
+                  </div>
+                  <div class="ml-4">
+                  <label *ngIf="item.contact" class="item-content"  title="{{item['contact_about']}}">{{item['contact_about']}}</label>
+               <div>   
+                  <label class="item-loc" title="{{item['profile_linked']}}" (click)="goToMedium(item['profile_linked'])"><i  class="fas fa-globe"></i>Profile Link: {{item['profile_linked']}}</label>
+          </div>
+          <div >
+              <label class="item-loc" title="{{item['profile_contact']}}">Contact:{{item['profile_contact']}}</label>
+        </div>
+          </div>
+                 
+                  <div class="row">
+              <div class="col-md-6">
+                  <div class="ml-4">
+                  
+                          </div>
+                          <div class="ml-4">
+                            <span class="right-item ml-1"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                            <div>
+                            <span class="right-item ml-1"><i class="fas fa-clipboard-check"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span>
+                          </div>
+                          </div>
+              </div>
+      
+              <div class="col-md-6"  >
+                  <span class="right-item">
 
-                </li>
-                <li><span class="right-item ml-1"> <i class="fa fa-eye" style="font-size:16px;color:#0a4069"></i> Following:</span> <span class="list-item1">{{item['following']}}</span></li>
-              </ul> 
-              <ul class="profile-url p-1 ">
-                <li><span class="right-item ml-1"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span></li>
-                <!-- <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Pins:</span> <span class="list-item1">{{item['pins']}}</span></li> -->
-
-                <li><span class="right-item"><i class="fa fa-user" ></i> Pins:</span>
-                  <!--<span class="list-item1">{{item['pins']}}</span>-->
-
-                  <span *ngIf="item['pins']<100" class="list-item1">
-                    <span class="label label-danger">
+                  <span  class="list-item1">
+               
+                        <i class="fa fa-user" ></i> Pins:</span>
+                
                       <!-- <small>Poor</small> -->
-                       {{item['pins']| thousandSuff}}</span>
+                       {{item['pins']| thousandSuff}}
                       </span>
-                  <span *ngIf="item['pins']>100 && item['pins']<1000" class="list-item1">
-                    <span class="label label-primary">
-                      <!-- <small>Normal</small>  -->
-                      {{item['pins']| thousandSuff}}</span>
-                    </span>
-                  <span *ngIf="item['pins']>1000" class="list-item1">
-                    <span class="label label-success">
-                      <!-- <small>Perfect</small> -->
-                       {{item['pins']| thousandSuff}}</span>
-                      </span>
+                  <div>
+                     
+          
+          </div>
+          <div>
+         
+              <span class="right-item"><i class="fas fa-random"></i>profile Ranks:</span> <span class="list-item1">{{item['profile_rank']}}</span>   
+                  </div>
+              </div>
+          </div>
+              </div>
+      </div>
+  </div>
+  <div class="col-md-12 p-2 mt-1 text-center">
+      <nav>
+          <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
 
-
-
+              <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+              <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+              <!--</li>-->
+              <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                  <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+                      First
+                  </a>
+              </li>
+              <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                  <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                  </a>
               </li>
 
-              </ul>
-          </div>
-   
-      </div>
-      
+              <li class="page-item" *ngFor="let page of pager.pages"
+                  [ngClass]="{active:pager.currentPage === page}"
+                  (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
+              <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+              <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+              <!--</li>-->
+              <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                  <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </li>
+              <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                  <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+                      Last
+                  </a>
+              </li>
+              <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+              <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+              <!--</li>-->
+          </ul>
+      </nav>
+  </div> 
 
-  <div class="col-md-2 image-div">
-      <img [src]="item['image']"  class="twitter-image2"> 
-</div>
-<div class="col-md-2 image-div">
-  <img [src]="item['image']"  class="twitter-image2">
-</div>
-<!-- <div class="col-md-1 followers-profile">
-  <h4 class="real-heading">{{item['subscribers']}}</h4>
-  <h6>Subcriber</h6>
-</div> -->
-</div>
+
+
+
+
+
+
+
    
       </div>
   <!--<div id="wrapper" style="text-align: center; " *ngIf="!loaded&& influencers_by_default.totalItems!=0">-->
@@ -594,20 +651,18 @@
 
         <div class="row" id="myHeader">
             <div class="col-md-12 list-row">
-                <div class="row">
-                    <div class="col-md-12">
+            
                         <!--<button  class="btn btn-success">Select All</button>-->
                         <div id="ck-button">
                             <label>
 
-                                <input type="checkbox" class="checkbox"   (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                                <input type="checkbox" class="checkbox" class="checkbox"   (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
                             </label>
-                        </div>
-
-                        <button  class="btn btn-lg add-to-list pull-right" (click)="add_create_list()"> Add to list</button>
-
-                    </div>
-                </div>
+                          </div>
+                        <button  class="btn  add-to-list " (click)="add_create_list()"> Add to list</button>
+                      
+                   
+               
             </div>
         </div>
 

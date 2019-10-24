@@ -10511,8 +10511,7 @@ a.label-light-grey:hover {
 }
 
 .page-item.active .page-link {
-    border-color: #000 !important;
-    background-color: #000 !important
+    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%)
 }
 
 .pager li>a {
