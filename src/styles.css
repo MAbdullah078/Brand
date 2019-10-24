@@ -316,7 +316,7 @@ width: 60px;
   color:#fff
 }
 .add-to-list{
-  background: #82d0dc;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
   color: #fff;
   float: right;
   margin-right: 10px;
@@ -10165,10 +10165,11 @@ ul.tab-nav.tab-nav2 li:first-child {
 
 .influcener-div{
   box-shadow: 0 0 12px #ccc;
-    margin: 14px;
+    margin: 6px;
     padding: 0;
     border-radius: 15px;
-    background:#fff
+    background:#fff;
+    width:100%;
 }
 .search-form{
   margin:0
@@ -31621,7 +31622,21 @@ body:not(.no-transition) #wrapper {
 ul.terms-list {
   padding: 0 15px;
 }
-
+.page-link{
+  color: #c00 !important;
+  z-index: 0 !important;
+  border: none;
+  border-radius: 49px !important;
+  padding: 6px 12px!important;
+  margin: 0 5px;
+  position: relative;
+  display: block;
+   line-height: 1.25!important;
+  font-size: 16px!important;
+}
+.pagination{
+  display:inline-block;
+}
 .wrapper-play-btn {
   background: gray;
   padding: 10px 0;
