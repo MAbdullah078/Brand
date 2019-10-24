@@ -219,7 +219,6 @@
 <div class="container-fluid" >
 
   <div class="row" id="myHeader">
-    <div class="col-md-6">
       <div class="col-md-3">
         <div id="ck-button">
           <label>
@@ -228,15 +227,16 @@
           </label>
         </div>
       </div>
-      <div class="col-md-9 text-left">
-        <button  class="btn btn-success" (click)="add_create_list()"> Add to list</button>
+      <div class="col-md-6 text-center">
+          <h5 >Displaying {{influencers.serializer.length}} of {{influencers.totalItems}} Results</h5>
+    
+        </div>
+      <div class="col-md-3 text-left">
+        <button  class="btn add-to-list" (click)="add_create_list()"> Add to list</button>
 
       </div>
-    </div>
-    <div class="col-md-6 text-right">
-      <h5 style="margin: 10px; color: gray; ">Displaying {{influencers.serializer.length}} of {{influencers.totalItems}} Results</h5>
+ 
 
-    </div>
   </div>
 
 
