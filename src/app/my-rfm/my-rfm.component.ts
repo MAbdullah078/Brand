@@ -32,6 +32,13 @@ rid;
   }
 
 
+  deletemyrfm(id){
+    this.app_Service.deleterfm(id).subscribe(rfm =>{
+      console.log('delete')
+      alert('deleted')
+    })
+  }
+
 mycreatedrfm(){
   this.app_Service.myrfm().subscribe(rfm => {
     console.log(rfm)

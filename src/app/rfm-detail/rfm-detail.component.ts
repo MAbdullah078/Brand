@@ -24,13 +24,15 @@ constructor(private app_Service: UserService,private route: ActivatedRoute, priv
       "title":[''],
       "cat":[''],
       "des":[''],
-      "stat":[''],
       "question1":[''],
       "answer1":[''],
       "question2":[''],
       "answer2":[''],
       "question3":[''],
       "answer3":[''],
+      "offer": [''],
+      "url": [''],
+      "stat":['']
     });
   
    
@@ -40,9 +42,43 @@ constructor(private app_Service: UserService,private route: ActivatedRoute, priv
   )
   alert(this.Catid)
   this.mycreatedrfm(this.Catid)
+
+
+  console.log(this.mycreatedrfm)
   }
 
 
+updaterfm(title ,url,cat,des,
+    
+  question1,answer1,
+  question2,answer2,
+  question3,answer3,
+  offer,stat){
+    console.log(title ,url,cat,des,
+    
+      question1,answer1,
+      question2,answer2,
+      question3,answer3,
+      offer)
+  this.app_Service.editrfm(this.Catid, title ,url,cat,des,
+    
+    question1,answer1,
+    question2,answer2,
+    question3,answer3,
+    offer).subscribe(data=> {
+
+  })
+  // this.app_Service.editrfm(this.Catid,
+  //   this.users.controls.title.value,
+  // this.users.controls.cat.value,
+  // this.users.controls.value.des,
+  // this.users.controls.value.question1,
+  // this.users.controls.value.answer1,this.users.controls.value.question2,this.users.controls.value.answer2,
+  // this.users.value.question3,this.users.value.answer3,this.users.value.offer_to_influencer,
+  // this.users.value.urlofproduct,this.users.value.stat).subscribe(data=> {
+
+  // })
+}
  
   mycreatedrfm(id){
     this.app_Service.showmyrfm(this.Catid).subscribe(rfm => {
@@ -55,5 +91,4 @@ constructor(private app_Service: UserService,private route: ActivatedRoute, priv
       this.showrfm = rfm
     });
   }
-
 }

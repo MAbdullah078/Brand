@@ -52,7 +52,41 @@ export class UserService {
       
     }
 
+editrfm(id,ti,url,ca,des,q1,a1,q2,a2,q3,a3,offer){
+//title ,url,cat,des,
+    
+// question1,answer1,
+// question2,answer2,
+// question3,answer3,
+// offer
+  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+   // return this.loaderHttp.post('https://apis.influexpai.com/bap/',
+      return this.http.put(Config.api+'/bap/?id=' + id,
+  {
+      'title':ti,
+      'category' :[ca],
+      'description': des,
+      // 'pictures' :[pictures],
+      // 'video' :[video],
+      // 'file' :[file],
+      'question1' :q1,
+      'answer1': a1,
+      'question2' :q2,
+      'answer2': a2,
+      'question3' :q3,
+      'answer3': a3,
+      'offer_to_influencer' :offer,
+      'urlofproduct': url,
+     },
+     {headers: headers}).map((response: Response) => {
+      if(response.status==202){
+          Swal.fire('Updated', 'success')
 
+      }
+      console.log(response)
+  });
+}
 
 
     getUserData() {
@@ -67,7 +101,14 @@ let username =  this.currentUser.username;
   }
 
 
+  deleterfm(id){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    return this.http.delete(Config.api+'/bap/'+id,{headers: headers}).pipe(tap((response: Response) => {
+      return response.json();
+    }))
 
+  }
 
 
     post_Request(title, category, description ,pictures, video, file, question1,answer1,question2,answer2, question3,answer3,offer_to_influencer,url) {
