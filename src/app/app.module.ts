@@ -56,6 +56,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { MyRfmComponent } from './my-rfm/my-rfm.component';
 import {CustomPipePipe} from './periscope-search/CustomPipe.pipe';
+import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -101,8 +102,10 @@ export function provideConfig() {
     TermsAndConditionsComponent,
     TermsComponent,
     WhatIsInfluexpaiComponent,
-    MyRfmComponent,
+    RfmDetailComponent,
     RfmComponent,
+    RfmDetailComponent,
+    // RfmDetailComponent,
     
     // GenericSearchComponent
   ],

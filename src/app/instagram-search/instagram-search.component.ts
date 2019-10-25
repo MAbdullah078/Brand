@@ -108,6 +108,102 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
         this.router.navigate(['instagram/list/', e])
 
     }
+
+
+
+    goToMedium(s:string){
+
+        let arr:any;
+        arr = s.indexOf('(@');
+        if(arr!=-1) {
+            // alert(s.slice(arr+1,-10))
+            // window.open('https://www.instagram.com/'+s.slice(arr+2,-10))
+            let url = s.slice(arr+2,-10);
+            Swal.fire({
+                title: 'You&#39;re Leaving This Site!',
+                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                // html: true,
+                confirmButtonColor: '#2ecc71',
+                showCancelButton: true,
+
+            }).then(() => {
+
+                window.open(url);
+
+
+            }, (dismiss) => {
+                // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+                if (dismiss === 'cancel') {
+                    // localStorage.removeItem('selected_list_twitter');
+
+                    Swal.fire(
+                        'Cancelled',
+                        '',
+                        'success'
+                    )
+                }
+            });
+        }
+        else{
+            let url = s;
+            Swal.fire({
+                title: 'You&#39;re Leaving This Site!',
+                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                // html: true,
+                confirmButtonColor: '#2ecc71',
+                showCancelButton: true,
+
+            }).then(() => {
+
+                window.open(url);
+
+
+            }, (dismiss) => {
+                // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+                if (dismiss === 'cancel') {
+                    // localStorage.removeItem('selected_list_twitter');
+
+                    Swal.fire(
+                        'Cancelled',
+                        '',
+                        'success'
+                    )
+                }
+            });
+        }
+
+
+    }
+
+    goToLink(url) {
+        //let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
+        Swal.fire({
+            title: 'You&#39;re Leaving This Site!',
+            text: 'This is a link to an external site. Click OK to continue to the content.',
+            // html: true,
+            confirmButtonColor: '#2ecc71',
+            // showCancelButton: true,
+
+        }).then(() => {
+
+            window.open(url);
+
+
+        }, (dismiss) => {
+            // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+            if (dismiss === 'cancel') {
+                // localStorage.removeItem('selected_list_twitter');
+
+                Swal.fire(
+                    'Cancelled',
+                    '',
+                    'success'
+                )
+            }
+        });
+    }
+
+
     goToInstagram(s:string){
 
         let arr:any;
@@ -118,7 +214,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
             let url = 'https://www.instagram.com/'+s.slice(arr+2,-10);
             Swal.fire({
                 title: 'You&#39;re Leaving This Site!',
-                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                text: 'This is a link to an external site. Click OK to continue to the content .',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
                 showCancelButton: true,

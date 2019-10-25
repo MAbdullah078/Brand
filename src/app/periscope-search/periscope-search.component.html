@@ -422,12 +422,12 @@
     
         <img [src]="item['image_url']"  class="twitter-image">
     </div>
-            <div class="col-md-1 followers-division">
+            <!-- <div class="col-md-1 followers-division">
                 <div>
                         <h6 class="m-0">Likes:</h6>
                     <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
                 </div>
-            </div>
+            </div> -->
                     <div class="col-md-9">
                         <div class="title-name">
                           <div class="d-flex">
@@ -437,9 +437,9 @@
                   
                         </div>
                         <div>
-                        <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
+                        <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile Link:  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
                         <div>
-                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i> periscope <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_name']}}
+                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i> Twitter Link: <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_name']}}
                           </a></label>
                       </div>
                       </div>
@@ -450,7 +450,7 @@
                     <div class="col-md-6">
                         <div class="ml-4">
                           <div>
-                              <span class="right-item"><i class="fa fa-users" ></i> Followers<span class="list-item1">
+                              <span class="right-item"><i class="fa fa-users" ></i> Followers:<span class="list-item1">
 
                               {{item['followers']| thousandSuff}}</span></span>
                           </div>

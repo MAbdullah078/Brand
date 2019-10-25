@@ -4,6 +4,8 @@ import {AuthGuard} from './_guards';
 import {RegisterComponent} from './register/register.component';
 import {GetpaymentComponent} from './get-payment/getpayment.component';
 import {ConfirmPasswordComponent} from './confirm-password/confirm-password.component';
+// import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
+
 import {
     BlogComponent,
     ContactComponent,
@@ -21,6 +23,7 @@ import {PricingComponent} from './pricing/pricing.component';
 import {PricingstepsComponent} from './pricingsteps/pricingsteps.component';
 import {MyRfmComponent} from './my-rfm/my-rfm.component';
 import {RfmComponent} from './rfm/rfm.component';
+import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 
 export const AppRoutes: Routes = [
 
@@ -121,6 +124,7 @@ export const AppRoutes: Routes = [
     // <li><a href="https://www.influexpai.com/pricing"><i class="fa fa-chevron-right"></i> Pricing</a> </li>
     { path: 'pricing', component: PricingComponent },
     {path: 'my-rfm', component: MyRfmComponent},
+    {path: 'rfm-detail', component:RfmDetailComponent},
     {path: 'rfm', component: RfmComponent},
     { path: 'reset-password',  loadChildren: './reset-password/reset-password.module#ResetPasswordModule' },
     { path: 'page-not-found', loadChildren: './error400/error400.module#Error400Module' },
