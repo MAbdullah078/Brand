@@ -94,8 +94,9 @@ color: #79CDCD;
   cursor: pointer;
 }
 .crete-list-button{
-  background: #82d0dc;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
   color: #fff;
+  border-radius: 50px;
   margin: 17px !important;
 }
 .crete-list-button:hover{
