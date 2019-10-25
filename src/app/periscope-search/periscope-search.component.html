@@ -434,10 +434,10 @@
                               <i class="fab fa-periscope periscope-icon"></i>
                         <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
                       </div>
-                  
+                      <label *ngIf="item.description.length>0" class="item-content ml-4"> {{item['description']}}</label>
                         </div>
                         <div>
-                        <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
+                        <label class="item-loc ml-4"> <i class="fab fa-periscope "></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
                         <div>
                         <label class="item-loc ml-4"><i class="fab fa-periscope "></i> periscope <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_name']}}
                           </a></label>

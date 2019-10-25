@@ -118,17 +118,17 @@
 
   <div class="container-fluid" *ngIf="loaded&& influencers.totalItems!=0">
 
-    <div class="row" style="margin-top: 1%">
+    <div class="row p-2 mt-3" style="margin-top: 1%">
         <div class="col-md-2 ">
                 <div id="ck-button">
                         <label>
         
-                            <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
+                            <input type="checkbox" class="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
                         </label>
                     </div>
         
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8  ">
             
             <nav class="text-center">
                     <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
@@ -281,6 +281,7 @@
                     <!--</li>-->
                 </ul>
             </nav>
+    </div>
     </div>
 
 <div class="container-fluid" *ngIf="loaded">

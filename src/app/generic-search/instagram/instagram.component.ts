@@ -16,6 +16,7 @@ import { FormControl } from "@angular/forms";
   templateUrl: './instagram.component.html',
   styleUrls: ['./instagram.component.scss']
 })
+
 export class InstagramComponent implements OnInit , AfterViewInit{
     myControl: FormControl = new FormControl();
 
@@ -438,6 +439,7 @@ export class InstagramComponent implements OnInit , AfterViewInit{
             .subscribe(res => {
                 this.main_checkbox = false;
                 this.influencers = res.json();
+                console.log()
                 this.pager = this.pagerService.getPager(this.influencers['totalItems'], page,10);
                 this.loaded = true;
 

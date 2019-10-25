@@ -106,7 +106,7 @@
     </div>
 
   </div>
-  <div class="row"  style="margin-top: 1%">
+  <div class="row"  >
    
 
   </div>
@@ -406,9 +406,9 @@
                       <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
                       </div>
                       <div class="ml-4">
-                      <label class="item-content"  title="{{item['description']}}">{{item['description']}}</label>
+                      <label class="item-content" *ngIf="item.description.length>0"  title="{{item['description']}}">{{item['description']}}</label>
                    <div>   
-              <label class="item-loc"><i class="fas fa-globe"></i>Profile Url:  <a>{{item['account_link']}}</a></label>
+              <label class="item-loc"><i class="fab fa-instagram"></i>Profile Url:  <a>{{item['account_link']}}</a></label>
               </div>
               <div >
               <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>
@@ -432,7 +432,7 @@
               </div>
               <div>
              
-                  <span class="right-item"><i class="fas fa-random"></i>Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>   
+                  <span class="right-item"><i class="fas fa-random"></i>posts</span> <span class="list-item1">{{item['posts']}}</span>   
                       </div>
                   </div>
               </div>
@@ -587,7 +587,7 @@
               </div>
               <div>
              
-                  <span class="right-item"><i class="fas fa-random"></i>Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>   
+                  <span class="right-item"><i class="fas fa-random"></i>Posts</span> <span class="list-item1">{{item['posts']}}</span>   
                       </div>
                   </div>
               </div>
