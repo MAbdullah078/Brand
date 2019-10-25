@@ -9,13 +9,9 @@
 <h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4>
 <h4>Question#3: {{message.question3}}</h4>
 <h4>Answers#3: {{message.answer2}}</h4>
-<!-- <img src="{{message.picture}}"> -->
-<img src="{{message.picture}}"  alt="Notes">
-<!-- <img src="{{message.pictures}}"  alt=""> -->
-<button  > 
-<a routerLink="/rfm-detail"   [queryParams]="{ rid:  message.id}">View detail </a>
- </button>
-<!-- <button (click)="get()" >View detail</button> -->
+<img src="{{message.picture}}">
+<!-- <img src="{{message.picture}}"  alt="Notes">
+<img src="{{message.pictures}}"  alt=""> -->
 
  </div>
 
@@ -25,13 +21,18 @@
 <!-- <section>
     <div class="container ">
     <h1 class="text-center">Brand RFM</h1>
-    </div> 
-    <div class="container" >
+    </div> -->
+    <!-- <div class="container" >
       <div class="col-md-4">
     
       </div>
-    </div>
-      <div class="container">
+    </div> -->
+    <!-- <div *ngFor="let data of datashowcase ">
+        <p>{{data.city}}</p>
+        <p>{{data.email}}</p>
+      
+      </div> -->
+      <!-- <div class="container">
           <div class="row">
     
          <div class="col-md-4" *ngFor="let message of rfm; let i = index">
@@ -42,20 +43,17 @@
         <p>Category:{{message.category}}</p>
         <p>Description:   {{message.description}}</p>
         <p>Url: {{message.Url}}</p>
-        <p>Question#1: {{message.question1}}</p>
-        <p>Answer#1: {{message.answer1}}</p>
-        <p *ngIf="message.question2!='null'">Question#2: {{message.question2}}</p>
-        <p *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</p>
-        <p>Question#3: {{message.question3}}</p>
-        <p>Answers#3: {{message.answer2}}</p>
+        <p>Questions: {{message.faq}}</p>
+        <p>Answers: {{message.faqAns}}</p>
         <p>Status: {{message.status}}</p>
-
-      </div>
-
-
-        <button><a routerLink="/rfm-detail"   [queryParams]="{ rid:  message.id}">View detail </a> </button>
-        <button (click)="get()" >View detail</button>
-      </div>
+        <p *ngIf ="message.status == p">Pending</p>
+        <p *ngIf ="message.status == A">Approved</p>
+        <p *ngIf ="message.status == R">Rejected</p>
+      </div> -->
+        <!-- <p *ngIf="{{show_image.show_image}} === P">Pending</p> -->
+        <!-- <p *ngIf="messgae.status == N">Not Approved </p>
+        <p *ngIf="messgae.status == A">Approved </p> -->
+      <!-- </div>
       </div>
       </div>
     

@@ -11,7 +11,6 @@ export class MyRfmComponent implements OnInit {
   myrfm: any;
   rfm: any;
   showrfm: any;
-  id: any;
 
   constructor(private app_Service: UserService) { }
 
@@ -20,16 +19,7 @@ export class MyRfmComponent implements OnInit {
     this.mycreatedrfm()
   }
 
-rid;
-  get(id){
-    this.app_Service.myrfm().subscribe(rfm => {
-      console.log(rfm)
-      this.rfm = rfm.results;
-    this.id=rfm.results['0']['id']
-   
-    });
-     
-  }
+
 
 
 mycreatedrfm(){

@@ -40,35 +40,6 @@ export class UserService {
       
     }
 
-    showmyrfm(id){
-      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
-      headers.append('Content-Type', 'application/json');
-      // let username = localStorage.getItem('username');
-      alert(id)
-      return this.http.get(Config.api+'/bap/?id='+id,{headers: headers}).map((response: Response) => {
-        return response.json();
-      })
-      
-    }
-
-
-
-
-    getUserData() {
-      // let currentUser= localStorage.getItem('currentUser');
-      // let username = localStorage.getItem('username');
-      // let username = localStorage.getItem('currentUser');
-      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-if ( this.currentUser != null ){
-let username =  this.currentUser.username;
-      return this.http.get(Config.api + '/influencer_profile_get_edit/' + username).map((response: Response) => response.json());
-    }
-  }
-
-
-
-
 
     post_Request(title, category, description ,pictures, video, file, question1,answer1,question2,answer2, question3,answer3,offer_to_influencer,url) {
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
