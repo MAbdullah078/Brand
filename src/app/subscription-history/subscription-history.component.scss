@@ -1,9 +1,13 @@
 .history-header h2 {
-    font-size: 24px;
+    font-size: 22px;
+    text-align: center;
     padding: 12px 12px;
     font-weight: 700;
-    background: #000;
+    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
     color: #fff;
+    border-radius: 5px;
+    margin-top: 31px;
+    margin-bottom: 24px;
 }
 th{
     text-align: center;

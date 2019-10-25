@@ -418,12 +418,12 @@
     
         <img [src]="item['image_url']"  class="twitter-image">
     </div>
-            <!-- <div class="col-md-1 followers-division">
+            <div class="col-md-1 followers-division">
                 <div>
                         <h6 class="m-0">Likes:</h6>
                     <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
                 </div>
-            </div> -->
+            </div>
                     <div class="col-md-9">
                         <div class="title-name">
                           <div class="d-flex">
@@ -433,9 +433,9 @@
                         <label *ngIf="item.description.length>0" class="item-content ml-4"  title="{{item['description']}}">{{item['description']}}</label>
                         </div>
                         <div>
-                        <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile Link:  <a  (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
+                        <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
                         <div>
-                        <label class="item-loc ml-4"><i class="fab fa-twitter" ></i> Twitter Link:  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
+                        <label class="item-loc ml-4"><i class="fab fa-twitter" ></i> Twitter:  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
                           </a></label>
                       </div>
                       </div>
@@ -462,7 +462,7 @@
                       
             </div>
             <div>
-                 <span class="right-item"><i class="fab fa-accusoft"></i> Claps:</span> <span class="list-item1">{{item['total_claps']  | thousandSuff}}</span>
+                 <span class="right-item"><i class="fab fa-accusoft"></i> Claps</span> <span class="list-item1">{{item['total_claps']  | thousandSuff}}</span>
                      
                     </div>
                 </div>
@@ -588,7 +588,7 @@
                       <div>
                       <label class="item-loc ml-4"><i class="fab fa-twitter" ></i> Twitter:  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
                         </a></label>
-                    </div>
+                      </div>
                     </div>
                     
                         
@@ -613,7 +613,7 @@
                     
           </div>
           <div>
-               <span class="right-item"><i class="fab fa-accusoft"></i> Rank:</span> <span class="list-item1">{{item['total_claps']  | thousandSuff}}</span>
+               <span class="right-item"><i class="fab fa-accusoft"></i> Claps:</span> <span class="list-item1">{{item['total_claps']  | thousandSuff}}</span>
                    
                   </div>
               </div>

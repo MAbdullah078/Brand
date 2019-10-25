@@ -11,7 +11,7 @@
 }
 .login-form-1-header{
     position: relative;
-    background: #cc0000;
+    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
     color: #ffffff;
     font-size: 26px;
     font-weight: 600;
@@ -25,18 +25,15 @@
 }
 .login-form-1-header h3{
     margin: 0px;
+    color:#fff
 }
 .change-form-btn{
     width: 100%;
-    background:#000;
+    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
     border: none;
     color: #ffffff;
     padding: 14px;
     font-weight: 600;
-    border-radius: 36px;
-    font-size: 22px;
-    margin-top: 10px;
-}
-.change-form-btn:hover{
-    background: #cc0000;
+    border-radius: 50px;
+    font-size: 17px;
 }

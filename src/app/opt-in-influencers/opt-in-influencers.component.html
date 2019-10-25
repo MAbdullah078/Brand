@@ -72,16 +72,22 @@
             <p-header class="box-typical-header">
               <div class="fixed-table-toolbar">
                 <div class="bars pull-left">
-                  <div id="toolbar">
-                    <div class="bootstrap-table-header">Search results</div>
-                    <button class="btn btn-primary1" (click)="add_create_list()">
+                  <div class="row" id="toolbar">
+                   <div class="col-md-2 p-4 ">                    <button class="btn btn-primary" (click)="add_create_list()">
                       <!--<i class="font-icon font-icon-close-2"></i> -->
                       Add to list
                     </button>
-                    <button class="btn btn-primary1" (click)="clear_list()">
+                  </div>
+                  <div class="col-md-8 p-4 text-center">
+                    <div class="bootstrap-table-header">Search results</div>
+                  </div>
+                  <div class="col-md-2 p-4 ">
+                    <button class="btn btn-primary" (click)="clear_list()">
+
                       <!--<i class="font-icon font-icon-close-2"></i> -->
                       Clear selected
                     </button>
+                  </div>
                   </div>
                 </div>
                 <div class="columns columns-right btn-group pull-right">
