@@ -104,7 +104,7 @@ let username =  this.currentUser.username;
   deleterfm(id){
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
-    return this.http.delete(Config.api+'/bap/'+id,{headers: headers}).pipe(tap((response: Response) => {
+    return this.http.delete(Config.api+'/bap/?id=' + id,{headers: headers}).pipe(tap((response: Response) => {
       return response.json();
     }))
 
