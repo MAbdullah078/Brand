@@ -40,6 +40,76 @@ export class UserService {
       
     }
 
+    showmyrfm(id){
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+      headers.append('Content-Type', 'application/json');
+      // let username = localStorage.getItem('username');
+      alert(id)
+      return this.http.get(Config.api+'/bap/?id='+id,{headers: headers}).map((response: Response) => {
+        return response.json();
+      })
+      
+    }
+
+editrfm(id,ti,url,ca,des,q1,a1,q2,a2,q3,a3,offer){
+//title ,url,cat,des,
+    
+// question1,answer1,
+// question2,answer2,
+// question3,answer3,
+// offer
+  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+   // return this.loaderHttp.post('https://apis.influexpai.com/bap/',
+      return this.http.put(Config.api+'/bap/?id=' + id,
+  {
+      'title':ti,
+      'category' :[ca],
+      'description': des,
+      // 'pictures' :[pictures],
+      // 'video' :[video],
+      // 'file' :[file],
+      'question1' :q1,
+      'answer1': a1,
+      'question2' :q2,
+      'answer2': a2,
+      'question3' :q3,
+      'answer3': a3,
+      'offer_to_influencer' :offer,
+      'urlofproduct': url,
+     },
+     {headers: headers}).map((response: Response) => {
+      if(response.status==202){
+          Swal.fire('Updated', 'success')
+
+      }
+      console.log(response)
+  });
+}
+
+
+    getUserData() {
+      // let currentUser= localStorage.getItem('currentUser');
+      // let username = localStorage.getItem('username');
+      // let username = localStorage.getItem('currentUser');
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+if ( this.currentUser != null ){
+let username =  this.currentUser.username;
+      return this.http.get(Config.api + '/influencer_profile_get_edit/' + username).map((response: Response) => response.json());
+    }
+  }
+
+
+  deleterfm(id){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    return this.http.delete(Config.api+'/bap/?id=' + id,{headers: headers}).pipe(tap((response: Response) => {
+      return response.json();
+    }))
+
+  }
+
 
     post_Request(title, category, description ,pictures, video, file, question1,answer1,question2,answer2, question3,answer3,offer_to_influencer,url) {
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
