@@ -45,8 +45,7 @@ import {
   MatInputModule,
   MatOptionModule,
   MatRippleModule,
-  MatSelectModule,
-
+  MatSelectModule,MatStepperModule,
   MatTableModule
 } from '@angular/material';
 import {ConfirmPasswordComponent} from './confirm-password/confirm-password.component';
@@ -120,7 +119,7 @@ export function provideConfig() {
     RecapchaModule,
     MatSlideToggleModule,
     TextMaskModule,
-    MatCardModule, MatSelectModule, MatOptionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatTableModule,
+    MatCardModule, MatSelectModule, MatOptionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatTableModule,MatStepperModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes),
     HttpClientModule,JwSocialButtonsModule

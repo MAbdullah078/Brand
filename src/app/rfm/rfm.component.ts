@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {UserService} from '../_services';
 import {Router} from '@angular/router';
-import {FormControl, NgForm, Validators, FormGroup} from '@angular/forms';
+import {FormControl, NgForm, Validators, FormGroup, FormBuilder} from '@angular/forms';
+import Swal from "sweetalert2";
 import swal from 'sweetalert2';
 import { Config } from '../../config';
 import { Http,Response } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
+import { FileValidatorDirective } from './FileValidator.directive';
+import {MatStepper} from '@angular/material';
 
 declare var $:any;
 
@@ -17,28 +20,11 @@ declare var $:any;
 })
 export class RfmComponent implements OnInit {
   
-  rfmFormControl = new FormControl('', [
-    Validators.required
-]);
-
-  // loginurl: string = "http://brand.influexpai.com/login";
-  // infurl: string = "http://influencer.influexpai.com/authentication/signin";
-  // loginsurl: string = 'https://brand.influexpai.com/register';
-  // infsurl: string = "http://influencer.influexpai.com/authentication/signup";
-  // influencersppurl: string = 'https://influencer.influexpai.com/authentication/signin';
-  // brand_app_cat_url= 'https://brand.influexpai.com/dashboard';
-  // brand_app_fb_url = 'https://brand.influexpai.com/facebook/search';
-  // brand_app_insta_url = 'https://brand.influexpai.com/instagram/search';
-  // brand_app_twi_url = 'https://brand.influexpai.com/twitter/search';
-  // brand_app_blog_url = 'https://brand.influexpai.com/blogosphere/search';
-  // brand_app_yt_url = 'https://brand.influexpai.com/youtube/search';
-  // brand_app_ld_url = 'https://brand.influexpai.com/linkedin/search';
-  // brand_app_pt_url = 'https://brand.influexpai.com/pinterest/search';
-    checkflag: any;
-    pricing: number;
-    name: any;
-    email: any;
-    phone: any;
+//   rfmFormControl = new FormControl('', [
+//     Validators.required
+// ]);
+@ViewChild('stepper') stepper: MatStepper;
+StepNo = '1';
     wesites: any;
     services: any;
     title: any;
@@ -60,6 +46,11 @@ export class RfmComponent implements OnInit {
   sanitizer: any;
   base64textString: string;
   fileToUpload: File;
+  firstFormGroup: any;
+  secondFormGroup: FormGroup;
+  thirdFromGroup: FormGroup;
+  fourthFromGroup: FormGroup;
+  stFpage: FormGroup;
   // updataform: FormGroup
   // // check($event) { }
   // onchangefile($event) {
@@ -68,16 +59,39 @@ export class RfmComponent implements OnInit {
 
 
 
-  constructor(private router:Router, private obj: UserService, private fileUploadService : UserService,
+  constructor(private router:Router, private obj: UserService, private _formBuilder: FormBuilder,private fileUploadService : UserService,
     private https: HttpClient,
     private newService : UserService, private http: Http) { }
 
   ngOnInit() {
-    // const header = $('#header');
-    // $(window).on("scroll", function() {
-    //   $(window).scrollTop() >= 170 ? header.addClass("fixed") : header.removeClass("fixed");
-    // });
+
     window.scroll(0,0);
+
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+      thirdCtrl: ['', Validators.required]
+    });
+
+    this.thirdFromGroup = this._formBuilder.group({
+      fourthCtrl: ['', Validators.required],
+    });
+
+    this.fourthFromGroup = this._formBuilder.group({
+      fifthCtrl: ['', Validators.required],
+      sixthCtrl: ['', Validators.required],
+      seventhCtrl: ['', Validators.required],
+    });
+
+
+    this.stFpage= new FormGroup({
+      // add_images: new FormControl("", [FileValidatorDirective.validate]),
+      file: new FormControl("", [FileValidatorDirective.validate])
+
+    });
   }
   model: any= {};
 
@@ -138,31 +152,20 @@ readUrl(event: any) {
 }
 
 
-  // onSelectFile(event) {
-  //   if (event.target.files && event.target.files[0]) {
-  //     var reader = new FileReader();
-
-  //     reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-  //     reader.onload = (e) => { // called once readAsDataURL is completed
-  //       this.url = e.target.result;
-  //     }
-  //   }
-  // }
-
-
-
-
-onSubmit(){
+onSubmit(f: NgForm,offer_to_influencer){
     
   this.obj.post_Request(this.model.title, this.model.category, this.model.description,
     this.pictures, this.video, this.file, 
      this.model.question1,this.model.answer1,
      this.model.question2,this.model.answer2, 
      this.model.question3,this.model.answer3, 
-      this.model.offer_to_influencer,this.model.url).subscribe(
+      offer_to_influencer,this.model.url).subscribe(
       data =>{
           console.log(data);
+          swal.fire('RFM successfully Created', '', 'success');
+
+          this.router.navigate(['/my-rfm'])
+
       },
       error1 => {
           swal.fire('Your Data is invalid', 'or we have some server error ', 'error')
@@ -187,6 +190,34 @@ onSubmit(){
       
 }
 
+
+// createShowCase(f: NgForm){
+//   // console.log('images is',this.imageName);
+//       //  this.imageAddress= this.apiURL+ this.imageName;
+//     this.obj.post_Request(
+//       // this.imageAddress,
+//       this.model.title, this.model.category, this.model.description,
+//     this.pictures, this.video, this.file, 
+//      this.model.question1,this.model.answer1,
+//      this.model.question2,this.model.answer2, 
+//      this.model.question3,this.model.answer3, 
+//       this.model.offer_to_influencer,this.model.url
+//     ).subscribe(
+
+//       data => {
+
+//         swal.fire('RFM successfully Created', '', 'success');
+
+//           this.router.navigate(['/my-rfm'])
+
+//       },
+//       error => {
+
+//         // console.log('Error isss', error);
+//         swal.fire('RFM Create error', '', 'error')
+
+//       });
+//   }
 
 upload() {
   this.https.post(
