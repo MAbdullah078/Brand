@@ -52,7 +52,7 @@ export class UserService {
       
     }
 
-editrfm(id,ti,url,ca,des,q1,a1,q2,a2,q3,a3,offer){
+editrfm(id,ti,url,ca,des,pic,q1,a1,q2,a2,q3,a3,offer){
 //title ,url,cat,des,
     
 // question1,answer1,
@@ -67,7 +67,7 @@ editrfm(id,ti,url,ca,des,q1,a1,q2,a2,q3,a3,offer){
       'title':ti,
       'category' :[ca],
       'description': des,
-      // 'pictures' :[pictures],
+      'pictures' :[pic],
       // 'video' :[video],
       // 'file' :[file],
       'question1' :q1,

@@ -28,6 +28,7 @@ StepNo = '1';
     wesites: any;
     services: any;
     title: any;
+    fileList: any=[];
     category: any;
     description: any;
     pictures: any;
@@ -190,6 +191,14 @@ onSubmit(f: NgForm,offer_to_influencer){
       
 }
 
+
+FuncCheckNumberOfImages() {
+  if (this.fileList.length >= 5) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 // createShowCase(f: NgForm){
 //   // console.log('images is',this.imageName);
