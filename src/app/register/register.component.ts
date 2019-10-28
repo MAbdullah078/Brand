@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
     password;
     isSubmit: boolean= false;
     loading: boolean= false;
-    password2;
+    password2;hide;
     userFormControl = new FormControl('', [
         Validators.required
     ]);

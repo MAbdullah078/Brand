@@ -228,42 +228,6 @@
                 </ng-template>
                 <ng-template let-col let-car="rowData" pTemplate="body">
                   <div class="col-lg-1"></div>
-
-                  <!--<div class="chart" style=" width: 175px;">-->
-                    <!--<div class="bar bar-{{car['infscore']['score'] | round}} cyan">-->
-                      <!--<div class="face top">-->
-                        <!--<div class="growing-bar"></div>-->
-                      <!--</div>-->
-                      <!--<div class="face side-0">-->
-                        <!--<div class="growing-bar"></div>-->
-                      <!--</div>-->
-                      <!--<div class="face floor">-->
-                        <!--<div class="growing-bar"></div>-->
-                      <!--</div>-->
-                      <!--<div class="face side-a"></div>-->
-                      <!--<div class="face side-b"></div>-->
-                      <!--<div class="face side-1">-->
-                        <!--<div class="growing-bar"></div>-->
-                      <!--</div>-->
-                    <!--</div>-->
-                  <!--</div>-->
-
-                  <round-progress [current]="car['infscore']['score'] | round"
-                                  [max]="max"
-                                  [color]="'#ca260f'"
-                                  [background]="'#eaeaea'"
-                                  [radius]="100"
-                                  [stroke]="20"
-                                  [semicircle]="false"
-                                  [rounded]="false"
-                                  [clockwise]="true"
-                                  [responsive]="false"
-                                  [duration]="800"
-                                  [animation]="'easeInOutQuart'"
-                                  [animationDelay]="5"
-                                  style="margin: auto; max-width:100px; max-height: 100px;"   >
-
-                  </round-progress>
                   <div style="position: relative; bottom: 70px;font-size:22px;">  {{car['infscore']['score'] | round}} %</div>
 
 

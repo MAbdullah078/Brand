@@ -6,13 +6,15 @@
   </div>
   </div>
   <div class="stepper-style">
-  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <!-- <mat-horizontal-stepper [linear]="isLinear" #stepper> -->
+      <mat-horizontal-stepper  #stepper>
+
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Add Images</ng-template>
   
           <div class="form-group photos-resume text-center" style="margin-top: 50px;">
-            <div style="" class="col-md-4 uploaded-pic">
+            <div class="col-md-4 uploaded-pic">
               <div class="new" >
               </div>
               <!-- <span (click)="removeItem(ind)" class="make-gig-uploaded-img">
@@ -135,7 +137,7 @@
     <input matInput placeholder="Question" [(ngModel)]="model.question1" name="question1" formControlName="fifthCtrl">
     </mat-form-field>
     <mat-form-field style="width: 100%;    margin-top: 10px;">
-        <input matInput placeholder="Answer" [(ngModel)]="model.answer1" name="answer1" formControlName="fifthCtrl">   
+        <input matInput placeholder="Answer" [(ngModel)]="model.answer1" name="answer1" formControlName="fifthCtrl2">   
         </mat-form-field>
     </div>
   
@@ -152,7 +154,7 @@
     <input matInput placeholder="Question 2" [(ngModel)]="model.question2" name="question2" formControlName="sixthCtrl">
     </mat-form-field>
     <mat-form-field style="width: 100%">
-        <input matInput placeholder="Answer 2" [(ngModel)]="model.answer2" name="answer2" formControlName="sixthCtrl">  
+        <input matInput placeholder="Answer 2" [(ngModel)]="model.answer2" name="answer2" formControlName="sixthCtrl2">  
         </mat-form-field>
     </div>
   
@@ -165,10 +167,10 @@
     </div>
     <div class="col-lg-9">
     <mat-form-field style="width: 100%">
-    <input matInput placeholder="Question 3(Optional)" [(ngModel)]="model.question3" name="question3" formControlName="seventhCtrl">
+    <input matInput placeholder="Question 3(Optional)" [(ngModel)]="model.question3" name="question3" formControlName="seventhCtrl2">
     </mat-form-field>
     <mat-form-field style="width: 100%">
-        <input matInput placeholder="Answer 3(Optional)" [(ngModel)]="model.question3" name="question3" formControlName="seventhCtrl">
+        <input matInput placeholder="Answer 3(Optional)" [(ngModel)]="model.answer3" name="answer3" formControlName="seventhCtrl2">
         </mat-form-field>
     </div>
   

@@ -84,7 +84,10 @@ StepNo = '1';
     this.fourthFromGroup = this._formBuilder.group({
       fifthCtrl: ['', Validators.required],
       sixthCtrl: ['', Validators.required],
-      seventhCtrl: ['', Validators.required],
+      fifthCtrl2: ['', Validators.required],
+      sixthCtrl2: ['', Validators.required],
+      seventhCtrl: [],
+      seventhCtrl2: [],
     });
 
 
@@ -104,7 +107,7 @@ onChange(event: EventTarget) {
   this.pictures.append('fileToUpload', target.files[0]);
   // console.log(this.pictures);
   console.log('Name is :',  this.pictures)
-  alert(this.pictures);
+  // alert(this.pictures);
 }
 
 
@@ -136,7 +139,7 @@ onChange3(event: EventTarget) {
   this.file.append('fileToUpload', target.files[0]);
   // console.log(this.pictures);
   console.log('Name is :',  this.video)
-  alert(this.video);
+  // alert(this.video);
 }
 
 readUrl(event: any) {

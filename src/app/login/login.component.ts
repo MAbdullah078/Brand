@@ -12,7 +12,10 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'angular5-social-login';
 import {  Headers, RequestOptions,  } from '@angular/http';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angular5-social-login';
-import { JwtHelper } from 'angular2-jwt';
+// import { JwtHelper } from 'angular2-jwt';
+import {JwtHelperService} from '@auth0/angular-jwt'
+// import { JwtHelper } from 'angular2-jwt';
+
 @Component({
     moduleId: module.id.toString(),
     templateUrl: 'login.component.html',
@@ -26,7 +29,7 @@ export class LoginComponent implements OnInit {
     username;
     pic;
     returnUrl: string;
-    jwtHelper: JwtHelper = new JwtHelper();
+    JwtHelperService: JwtHelperService = new JwtHelperService();
     influencers;
     class1= 'fa fa-eye';
     class2= 'fa fa-eye-splash';
@@ -78,8 +81,8 @@ export class LoginComponent implements OnInit {
   
         createUser.subscribe(data => {
             let user = { 
-             user_id: this.jwtHelper.decodeToken(data['token']).user_id,
-             username: this.jwtHelper.decodeToken(data['token']).username, 
+             user_id: this.JwtHelperService.decodeToken(data['token']).user_id,
+             username: this.JwtHelperService.decodeToken(data['token']).username, 
              token: data['token'] };
             if (user && user.token) {
               localStorage.setItem('loged_in', '1');

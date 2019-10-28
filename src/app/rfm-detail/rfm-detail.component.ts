@@ -50,19 +50,23 @@ window.scroll(0,0)
   }
 
 
-updaterfm(title ,url,cat,des,pic,
+updaterfm(title ,url,cat,des,
+  // pic,
     
   question1,answer1,
   question2,answer2,
   question3,answer3,
-  offer,stat){
+  offer
+  // ,stat
+  ){
     console.log(title ,url,cat,des,
     
       question1,answer1,
       question2,answer2,
       question3,answer3,
       offer)
-  this.app_Service.editrfm(this.Catid, title ,url,cat,des,pic,
+  this.app_Service.editrfm(this.Catid, title ,url,cat,des,
+    // pic,
     
     question1,answer1,
     question2,answer2,

@@ -250,7 +250,7 @@ export class UserdashboardTemplateComponent implements OnInit {
             confirmButtonText: 'Create',
             cancelButtonText: 'Cancel'
         }).then((result) => {
-        alert(result.value);
+        // //alert(result.value);
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
 
@@ -350,7 +350,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/ml/create_add_ilist_twitter/', JSON.stringify({
                     name: result.value,
                     list: {},
@@ -713,7 +713,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_in/', JSON.stringify({
                     name: result.value,
                     list: {},
@@ -890,7 +890,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_fb/', JSON.stringify({
                     name: result.value,
                     list: {},
@@ -1204,7 +1204,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_dd/', JSON.stringify({
                     // name: result,
                     name: result.value,
@@ -1555,7 +1555,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_pt/', JSON.stringify({
                     name: result.value,
                     list: {},
@@ -1799,7 +1799,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_periscope/', JSON.stringify({
                     name: result.value,
                     list: {},
@@ -1880,7 +1880,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_md/', JSON.stringify({
                     name: result.value,
                     list: {},
@@ -1961,7 +1961,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-            alert(result.value)
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_fl/', JSON.stringify({
                     name: result.value,
                     list: {},
