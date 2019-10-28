@@ -95,7 +95,7 @@ export class PeriscopeSearchComponent implements OnInit {
 
     goToMedium(s:string){
 
-        alert('hi')
+        // alert('hi')
         let arr:any;
         arr = s.indexOf('(@');
         if(arr!=-1) {

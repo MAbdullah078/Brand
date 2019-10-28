@@ -213,7 +213,7 @@
                 </div>
                 <div class="ml-4">
                 <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                <span class="right-item"><i class="fas fa-globe"></i> Web: </span> <span class="list-item1">{{item['website']}}</span>
+                <span class="right-item" ><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
                 </div>
                  <div class="row">
                   <div class="col-md-4">
@@ -816,7 +816,7 @@
                         </div>
                         <div class="ml-4">
                         <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                        <span class="right-item"><i class="fas fa-globe"></i> Web: </span> <span class="list-item1">{{item['website']}}</span>
+                        <span class="right-item"><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
                         </div>
                          <div class="row">
                           <div class="col-md-4">
@@ -985,7 +985,7 @@
                                 <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
                                 <!--<li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tweets :</span> <span class="list-item1">{{item['tweets_count']}} |   </span></li>-->
                                 <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Joined Date :</span> <span class="list-item1">{{item['joined_date']}} |  </span> </li>
-                                <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i>  Web: </span> <span class="list-item1">{{item['website']}}</span></li>
+                                <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i>  Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span></li>
                                 <!--<li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>-->
 
                             </ul>

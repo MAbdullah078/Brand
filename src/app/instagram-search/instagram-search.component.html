@@ -408,7 +408,7 @@
                       <div class="ml-4">
                       <label class="item-content" *ngIf="item.description.length>0"  title="{{item['description']}}">{{item['description']}}</label>
                    <div>   
-              <label class="item-loc"><i class="fab fa-instagram"></i>Profile Url:  <a>{{item['account_link']}}</a></label>
+              <label class="item-loc"><i class="fab fa-instagram" (click)="goToMedium(item['account_link'])"></i>Profile Url:  <a>{{item['account_link']}}</a></label>
               </div>
               <div >
               <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>

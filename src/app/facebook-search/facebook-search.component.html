@@ -250,13 +250,13 @@
                                 <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
                                 <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                                 </div>
-                                <label class="item-loc ml-4" (click)="goToMedium(item['web_link'])"><i class="fas fa-globe"></i>{{['web_link']}}</label>
+                                <label class="item-loc ml-4" (click)="goToMedium(item['web_link'])"><i class="fas fa-globe"></i>Web Link: {{item['web_link']}}</label>
                             
                                 <div class="row">
                             <div class="col-md-6">
                                 <div class="ml-4">
                                         <!-- <span class="list-item1" ><i class="fas fa-globe" (click)="goToMedium(item['fb_page_link'])"></i>{{['fb_page_link']}}</span> -->
-                                        <span class="list-item1" (click)="goToMedium(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>See FB Profile</span>
+                                        <span class="list-item1" (click)="goToMedium(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>FB Profile Link:{{item[fb_page_link]}}</span>
                                        
     
                                         </div>
@@ -573,13 +573,13 @@
                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
                             <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                             </div>
-                            <span class="item-loc ml-4" (click)="goToMedium(item['web_link'])"><i class="fas fa-globe"></i>{{['web_link']}}</span>
+                            <span class="item-loc ml-4" (click)="goToMedium(item['web_link'])"><i class="fas fa-globe"></i>Web Link: {{item['web_link']}}</span>
                         
                             <div class="row">
                         <div class="col-md-6">
                             <div class="ml-4">
                                     <!-- <span class="list-item1" ><i class="fas fa-globe" (click)="goToMedium(item['fb_page_link'])"></i>{{['fb_page_link']}}</span> -->
-                                    <span class="list-item1" (click)="goToMedium(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>See FB Profile</span>
+                                    <span class="list-item1" (click)="goToMedium(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>FB Profile Link: {{item['fb_page_link']}}</span>
                                  
 
                                     </div>
