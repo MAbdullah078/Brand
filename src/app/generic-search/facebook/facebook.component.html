@@ -92,7 +92,7 @@
               <hr style="color: #555555">
               <div class="row item-loc" >
                   <div class="col-md-8" *ngIf="item['web_link']">
-                      <span class="right-item" ><i class="fa fa-globe" ></i> Web:</span> <span class="list-item1">{{item['web_link']}} </span>
+                      <span class="right-item"  ><i class="fa fa-globe" ></i> Web:</span> <span class="list-item1" (click)="goToLink(item['web_link'])">{{item['web_link']}} </span>
                   </div>
                   <div class="col-md-8" *ngIf="!item['web_link']">
                       <span class="right-item" ><i class="fa fa-globe" ></i> Web:</span> <span class="list-item1">N/A </span>
@@ -109,7 +109,7 @@
               <div class="item-loc" >
                   <ul style="display: flex; justify-content: space-between">
                       <li>
-                          <span class="right-item" ><i class="fa fa-facebook-f" ></i> Page:</span> <span class="list-item1">{{item['fb_page_link']}} </span>
+                          <span class="right-item"  ><i class="fa fa-facebook-f" ></i> Page:</span> <span class="list-item1" (click)="goToLink(item['fb_page_link'])">{{item['fb_page_link']}} </span>
                       </li>
 
                   </ul>

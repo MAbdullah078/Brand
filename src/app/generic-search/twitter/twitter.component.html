@@ -150,10 +150,10 @@
       <div class="ml-4">
       <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
       <div>
-      <span class="right-item"><i class="fab fa-facebook-square"></i> profile url </span> <span class="list-item1">{{item['profile_url']}}</span>
+      <span class="right-item"><i class="fab fa-facebook-square"></i> profile Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['profile_url'])">{{item['profile_url']}}</span>
     </div>
     <div>
-      <span class="right-item"><i class="fas fa-globe"></i> Web: </span> <span class="list-item1">{{item['website']}}</span>
+      <span class="right-item"><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile2(item['website'])">{{item['website']}}</span>
     </div>
       </div>
        <div class="row">

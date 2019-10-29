@@ -121,7 +121,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
                 text: 'This is a link to an external site. Click OK to continue to the content',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
-                showCancelButton: true,
+                // showCancelButton: true,
 
             }).then(() => {
 
@@ -149,7 +149,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
                 text: 'This is a link to an external site. Click OK to continue to the content',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
-                showCancelButton: true,
+                // showCancelButton: true,
 
             }).then(() => {
 
@@ -183,7 +183,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
             let url = s.slice(arr+2,-10);
             Swal.fire({
                 title: 'You&#39;re Leaving This Site!',
-                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                text: 'This is a link to an external site. Click OK to continue to the content',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
                 // showCancelButton: true,
@@ -210,7 +210,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
             let url = s;
             Swal.fire({
                 title: 'You&#39;re Leaving This Site!',
-                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                text: 'This is a link to an external site. Click OK to continue to the content',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
                 // showCancelButton: true,

@@ -255,6 +255,34 @@ export class TwitterComponent implements OnInit {
         }
     }
 
+    goTwitterProfile2(url) {
+        // let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
+        swal.fire({
+            title: 'You&#39;re Leaving This Site!',
+            text: 'This is a link to an external site. Click OK to continue to the content',
+            // html: true,
+            confirmButtonColor: '#2ecc71',
+            showCancelButton: true,
+
+        }).then(() => {
+
+            window.open(url);
+
+
+        }, (dismiss) => {
+            // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+            if (dismiss === 'cancel') {
+                // localStorage.removeItem('selected_list_twitter');
+
+                swal.fire(
+                    'Cancelled',
+                    '',
+                    'success'
+                )
+            }
+        });
+    }
+
     goTwitterProfile(influencer) {
         let url =  influencer;
         swal.fire({

@@ -58,6 +58,7 @@ export class FacebookSearchComponent implements OnInit {
         body;
         subject;
         password;
+        // navsearch;
     subjectFormControl = new FormControl('', [
         Validators.required,
     ]);
@@ -246,10 +247,10 @@ this.get_default_FB_data(1);
         //let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
         Swal.fire({
             title: 'You&#39;re Leaving This Site!',
-            text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+            text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
-            showCancelButton: true,
+            // showCancelButton: true,
 
         }).then(() => {
 

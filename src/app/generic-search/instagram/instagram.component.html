@@ -269,10 +269,10 @@
                       <div class="ml-4">
                       <label  class="item-content"  title="{{item['description']}}">{{item['description']}}</label>
                    <div>   
-              <label class="item-loc"><i class="fab fa-instagram"></i>Profile Url:  <a>{{item['account_link']}}</a></label>
+              <label class="item-loc"><i class="fab fa-instagram"></i>Profile Link:  <a (click)="goToInstagram(item['account_link'])">{{item['account_link']}}</a></label>
               </div>
               <div >
-              <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" > {{item['external_url']}}</span></label>
+              <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External Link:<span class="list-item1" (click)="goToInstagram(item['external_url'])"> {{item['external_url']}}</span></label>
             </div>
               </div>
                       </div>

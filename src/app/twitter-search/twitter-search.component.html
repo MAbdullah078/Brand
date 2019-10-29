@@ -213,8 +213,9 @@
                 </div>
                 <div class="ml-4">
                 <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                <span class="right-item" ><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
-                </div>
+                <span class="right-item" ><i class="fas fa-globe"></i> Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
+                <span class="right-item" ><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>    
+            </div>
                  <div class="row">
                   <div class="col-md-4">
                         <div class="ml-4">
@@ -431,6 +432,7 @@
                         </div>
                         <div class="ml-4">
                         <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
+                        <span class="right-item" ><i class="fas fa-globe"></i> Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
                         <span class="right-item"><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
                         </div>
                          <div class="row">
