@@ -3,13 +3,13 @@
 
 <!-- <app-loader></app-loader> -->
 <div class="flexy signin-signup signupwa">
-    <form class="form-content"  (ngSubmit)="!userFormControl.hasError('required')
+    <form class="form-content Register"  (ngSubmit)="!userFormControl.hasError('required')
     && !firstnameFormControl.hasError('required')
       && !lastnameFormControl.hasError('required')
        && !passwordFormControl.hasError('required')">
         <div class="heading">
           <img class="w-50" src="../../assets/img/Logo.png" alt="image">
-            <span class="d-block">Sign Up To Your Account</span>
+            <span class="d-block">Sign Up To Your Account?</span>
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -145,8 +145,8 @@
                       AI and ALL other related Technology Platforms are subject to the <a class="anchor" href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">Terms of Use</a> and <a class="anchor" href="https://www.influexpai.com/privacy_policy">Privacy Policy</a>.
                   </mat-slide-toggle>
 <div class="col-md-12 text-center mt-5">
-                  <button type="submit" class="btn btn-primary mr-2"  (click)="freeSignup()">Start Trail</button>
-                  <button type="submit" class="btn btn-primary" (click)="paidSignup()">Paid Sign up</button>
+                  <button type="submit" class="btn btn-primary Register-btn mr-2"  (click)="freeSignup()">Start Trail</button>
+                  <button type="submit" class="btn btn-primary Register-btn" (click)="paidSignup()">Paid Sign up</button>
                
                   <p class="signup-auth text-center">Already have account. <a class="anchor" [routerLink]="['/login']">Sign In</a></p>
                 

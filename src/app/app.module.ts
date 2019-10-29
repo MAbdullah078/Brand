@@ -29,6 +29,7 @@ import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { SocialLoginModule, AuthService } from 'angular5-social-login';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {RfmComponent} from './rfm/rfm.component';
+import { CountdownModule } from 'ngx-countdown';
 import {
   BlogComponent,
   HowItWorksComponent,
@@ -46,7 +47,6 @@ import {
   MatOptionModule,
   MatRippleModule,
   MatSelectModule,
-
   MatTableModule
 } from '@angular/material';
 import {ConfirmPasswordComponent} from './confirm-password/confirm-password.component';
@@ -78,7 +78,6 @@ export function provideConfig() {
 @NgModule({
   declarations: [
     AppComponent,
-    
     HeaderComponent,
     PricingComponent,
     PricingstepsComponent,
@@ -120,6 +119,7 @@ export function provideConfig() {
     RecapchaModule,
     MatSlideToggleModule,
     TextMaskModule,
+
     MatCardModule, MatSelectModule, MatOptionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatTableModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes),

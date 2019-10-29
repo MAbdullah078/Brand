@@ -5,6 +5,7 @@ import {HttpService} from '../services/http-service';
 import 'rxjs/add/operator/map';
 import {Config} from '../../config';
 
+
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
@@ -39,7 +40,7 @@ export class PricingComponent implements OnInit {
     this.isModal = false;
   }
 
-
+ 
 
   pricingpackage(value) {
     this.isModal = true;

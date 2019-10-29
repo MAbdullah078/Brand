@@ -109,3 +109,9 @@
   .anchor:hover{
     color: #c00;
   }
+  .d-block{
+    font-size: 20px;
+  }
+  .Register-btn{
+    padding: 6px 20px;
+  }

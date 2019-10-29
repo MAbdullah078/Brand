@@ -83,8 +83,7 @@ section{
     background-color: #f9f9f9!important;
 }
 mat-form-field{
-    width: 75%;
-    line-height: 0.95;
+    width: 100%;
 }
 .col-md-6{
     margin-top: 0!important;

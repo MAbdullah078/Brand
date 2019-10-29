@@ -67,6 +67,7 @@ form input[type=text] {
     font-weight: 600;
     height: auto!important;
     width: 100%;
+    border-radius: 50px!important;
 }
 
 .subscribe-btn {
@@ -78,6 +79,7 @@ form input[type=text] {
     background: transparent !important;
     border-radius: 0 50px 50px 0;
     padding-right: 0;
+    box-shadow: none;
 }
 .subscribe-btn i{
     color: #c00 !important;

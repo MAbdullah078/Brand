@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-md-6 text-center p-auto">
 
-                                <mat-form-field class="example-full-width " style="width:60%">
+                                <mat-form-field class="example-full-width " style="width:100%">
                                     <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
                                     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getYTChannels($event)">
                                         <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
@@ -43,11 +43,11 @@
                     </ng-template>
                     <div class="body">
                         <div class="container">
-                            <form (submit)="setPage(1)" class="m-0">
+                            <form (submit)="setPage(1)"  class="m-0 search-form">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                                    placeholder="Select Category" style="width:75%">
+                                        <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                                                    placeholder="Select Category" style="width:100%">
                                             <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                                         </mat-select>
                                     </div>
@@ -57,7 +57,7 @@
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="subscribers" placeholder="Serch by Subscribers" name="social">
@@ -69,7 +69,7 @@
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="rank" placeholder="Serch by Rank" name="loc">
@@ -82,14 +82,14 @@
                                     </div>
                                 </div>
 
-                                <div class="row" >
+                                <div class="row Advanced-search" >
                                     <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="tomorrow_upload_video" placeholder="Serch by Tommorow Upload Videos" name="er">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-12  text-center">
-                                        <button type="submit"  class="btn btn-priamry search-button" >
+                                        <button type="submit"  class="btn btn-primary" >
                                             Search <i class="fa fa-sliders"></i>
                                         </button>
                                     </div>
@@ -106,8 +106,8 @@
     </div>
 
     <div class="row" *ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-left">
-            <h4 class="text-center" >Featured Top Youtube Influencers</h4>
+        <div class="col-md-12 text-center">
+            <h4 class="m-0" >Featured Top Youtube Influencers</h4>
         </div>
 
     </div>
@@ -208,7 +208,7 @@
         <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
         <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
     </div>
-            <label class="item-content ml-4"
+            <label class="item-content ml-4" 
             title="{{item['description']}}">{{item['description']}}</label>
             <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>Go to Youtube Channel</label>
          <div class="row" >
@@ -216,7 +216,7 @@
                 <div class="ml-4">
                 <div>
                 <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
-                    <span class="right-item"> {{item['total_views'] | thousandSuff}}</span>
+                    <span class="right-item1"> {{item['total_views'] | thousandSuff}}</span>
                     </div>
                     <div>
         <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
@@ -413,7 +413,7 @@
                     <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
                     <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
                 </div>
-                        <label class="item-content ml-4"
+                        <label class="item-content ml-4" 
                         title="{{item['description']}}">{{item['description']}}</label>
                         <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>Go to Youtube Channel</label>
                      <div class="row" >
@@ -421,7 +421,7 @@
                             <div class="ml-4">
                             <div>
                             <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
-                                <span class="right-item"> {{item['total_views'] | thousandSuff}}</span>
+                                <span class="right-item1"> {{item['total_views'] | thousandSuff}}</span>
                                 </div>
                                 <div>
                     <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>

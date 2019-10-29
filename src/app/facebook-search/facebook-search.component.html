@@ -46,38 +46,38 @@
                                 <form (submit)="setPage(1)" class="search-form">
                                 <div class="row">
                                     <div class="col-md-6">
-                                            <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                                       placeholder="Select Category" style="width:75%">
+                                            <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                                                       placeholder="Select Category" style="width:100%">
                                                 <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                                             </mat-select>
                                     </div>
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text"[(ngModel)]="title" placeholder="Serch by Title/Name" name="contact">
+                                            <input matInput type="text"[(ngModel)]="title" placeholder="search by Title/Name" name="contact">
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="likes" placeholder="Serch by Likes" name="social">
+                                            <input matInput type="text" [(ngModel)]="likes" placeholder="search by Likes" name="social">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="perfomance" placeholder="Serch by Perfomance" name="seo">
+                                            <input matInput type="text" [(ngModel)]="perfomance" placeholder="search by Perfomance" name="seo">
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="location" placeholder="Serch by Location" name="loc">
+                                            <input matInput type="text" [(ngModel)]="location" placeholder="search by Location" name="loc">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="ER" placeholder="Serch by Engagement Range" name="er">
+                                            <input matInput type="text" [(ngModel)]="ER" placeholder="search by Engagement Range" name="er">
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
                         </div> -->
                         <div>
                                 <h6 class="m-0">Likes:</h6>
-                            <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+                            <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                         </div>
                     </div>
                             <div class="col-md-9">
@@ -564,7 +564,7 @@
                     </div> -->
                     <div>
                             <h6 class="m-0">Likes:</h6>
-                        <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+                        <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                     </div>
                 </div>
                         <div class="col-md-9">

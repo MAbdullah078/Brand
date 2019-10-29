@@ -142,9 +142,16 @@ display: none!important;
 .holder {
   min-height: 23pc;
 }
+.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon {
+  cursor: pointer;
+}
 .mat-slide-toggle-content {
   color: #000;
-  font-size: 11px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.Register .mat-slide-toggle-content {
+  font-size: 10px;
 }
 .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
   background-color: #878787;
@@ -203,7 +210,9 @@ mat-tab-group{
 }
 .fa-globe{
   color: #1da5de!important;
-  margin-right:3px
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
 }
 .tbl-cell{
   font-weight: 600;
@@ -220,6 +229,7 @@ mat-tab-group{
   display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items:center;
 }
 .tbl-cell {
   font-weight: 600;
@@ -229,26 +239,46 @@ mat-tab-group{
 }
 .fa-random {
   color: #fa8072!important;
-  margin: 2px;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-pinterest {
   color:  #b72025!important;
-  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-facebook{
-  color: #36569b!important
+  color: #36569b!important;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-eye {
-  color: #a0522d!important
+  color: #a0522d!important;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-upload{
-  color: #ff6347!important
+  color: #ff6347!important;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-users,
 .fa-user-alt{
-  color: #5f9ea0!important
-} .fa-heart{
-  color:#c00!important
+  color: #5f9ea0!important;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+}
+ .fa-heart{
+  color:#c00!important;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .profile-container{
   width: 100%;
@@ -267,10 +297,9 @@ mat-tab-group{
   color: #663399!important
 }
 .Follwers-div{
-  font-family: 'Merriweather', serif;
     color: darkcyan;
     margin: 0;
-    text-align:center;
+    font-size:14px
 }
 .detail-div{
   font-family: 'Open Sans', sans-serif;
@@ -302,7 +331,10 @@ width: 60px;
   align-items: center;
 }
 .fa-phone-alt{
-  color: #9400d3
+  color: #4682b4;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-hackerrank{
   color: #6495ed!important;
@@ -322,6 +354,7 @@ width: 60px;
   color: #fff;
   float: right;
   border-radius: 50px;
+  box-shadow: 0 5px 5px #ccc;
   margin-right: 10px;
 }
 #ck-button{
@@ -8664,14 +8697,22 @@ body:not(.device-touch) .button.button-full strong {
   color: #000!important;
  }
  .mat-form-field-appearance-legacy .mat-form-field-label{
-   top:22px;
+   top:34px;
    overflow:unset;
    margin:0
  }
-
-.process-steps li:first-child:before,
-.process-steps li:last-child:after {
-  display: none;
+.form-content .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.98125em) scale(.75) perspective(100px) translateZ(.001px);
+}
+.form-content .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label {
+  -webkit-transform: translateY(-1.78125em) scale(.75) perspective(100px) translateZ(.00101px);
+}
+.form-content .mat-form-field.mat-form-field-invalid .mat-form-field-label,
+.mat-form-field-appearance-legacy .mat-form-field-label.mat-slide-toggle-content {
+  font-weight: 700;
+}
+.search-form .mat-select{
+  border-bottom: 1px solid #ccc;
 }
 
 .style-msg,
@@ -8682,7 +8723,9 @@ body:not(.device-touch) .button.button-full strong {
   border-left: 4px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
-
+.search-form  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+  transform: translateY(-29px) scale(.75) perspective(100px) translateZ(.001px);
+}
 .style-msg2 {
   border-left: 4px solid rgba(0, 0, 0, 0.2);
 }
@@ -10252,7 +10295,9 @@ font-family: 'Open Sans', sans-serif;
 } 
 .fa-chart-bar {
   color: #ed143d!important;
-  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
 }
 .fa-accusoft{
   color: #ee82ee!important
@@ -10264,7 +10309,6 @@ font-family: 'Open Sans', sans-serif;
 }
 .Follwers-div{
   margin: 2px;
-  font-family: 'Merriweather', serif;
   color: darkcyan;
 }
 
@@ -11025,13 +11069,11 @@ body:not(.device-touch) .team-overlay {
 }
 
 .pricing-box {
-  position: relative;
-  border-radius: 3px;
-  margin: 10px;
-  text-align: center;
-  background-color: #fff;
   border: 1px solid #dedede;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  min-height: 458px;
+  position: relative;
 }
 
 /* .pricing-title {
@@ -11108,12 +11150,9 @@ body:not(.device-touch) .team-overlay {
 }
 
 .pricing-features ul {
-  margin: 0;
-  padding: 0px 15px;
-  list-style: none;
-  min-height: 140px;
-  text-align: left;
-  min-height: 196px;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .pricing-action {
@@ -26476,14 +26515,7 @@ body:not(.device-touch) .team-overlay {
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 
-.pricing-features li {
-  font-size: 16px;
-  margin: 0;
-  line-height: 28px;
-  font-weight: 600;
-  color: #000;
-}
-
+.pricing-box 
 .pricing-action {
   padding: 15px 30px;
 }
@@ -30772,7 +30804,9 @@ body:not(.no-transition) #wrapper {
 .mat-form-field-empty.mat-form-field-placeholder {
   font-weight: bold;
 }
-
+.search-form .mat-form-field-appearance-legacy .mat-form-field-label{
+  top: 31px;
+}
 .sh-signup-form-fix .mat-input-underline {
   bottom: 18px;
 }
@@ -31544,9 +31578,17 @@ body:not(.no-transition) #wrapper {
   background: -webkit-gradient(linear,left top,right top,color-stop(0,#a91f73),to(#ff4270));
   background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
   border: none;
+  padding: 6px 20px;
+  box-shadow: 0 5px 5px #ccc;
   border-radius:50px;
     }
-
+.btn-primary:hover{
+box-shadow:none;
+outline:0
+}
+.Advanced-search{
+  margin-top: -15px;
+}
 .slider1text {
   position: absolute;
   max-width: 100%;

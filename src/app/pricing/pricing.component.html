@@ -61,44 +61,39 @@
   </div>
   <br>
   <!-- <preloader-full></preloader-full> -->
-  <div class="container-fluid clearfix">
-    <div id="section-pricing" class="page-section nopadding">
-      <br/>
-      <div class="pricing-tenure-switcher center" data-container="#pricing-switch">
-        <span class="pts-left" *ngIf="!isright">Monthly</span>
-  
-  
-          <span class="pts-left" *ngIf="isright">Monthly</span>
-        <div class="pts-switcher">
-          <div class="switch">
-            <!--<input [(ngModel)]="isright" id="switch-toggle-pricing-tenure" class="switch-toggle switch-toggle-round" type="checkbox">-->
-              <mat-slide-toggle [(ngModel)]="isright" id="switch-toggle-pricing-tenure" class="switch-toggle switch-toggle-round"></mat-slide-toggle>
-  
-              <label for="switch-toggle-pricing-tenure"></label>
-          </div>
+  <section class="pricing2-section">
+  <div class="container clearfix">
+    <div id="section-pricing" class="page-section ">
+
+      <div id="pricing-switch" class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center ">
+            <h2  class="color-red"> Flash Sale - 80% Off only for a limited time.</h2>
+            <h2  class="color-red">Take advantage of this incredible offer NOW </h2>
+            <!-- <countdown class="mainpagee1 counter p-0 main-page-timer" [text]="text"  units=" Days | Hours | Minutes | Seconds"
+       [end]="'2019-10-30 00:00:00'"> </countdown> -->
         </div>
-        <span class="pts-right" *ngIf="!isright">Yearly</span>
-          <span class="pts-right" *ngIf="isright" style="color: black; font-weight: bolder; font-size: 17px">Yearly</span>
-      </div>
-      <div id="pricing-switch" class="pricing bottommargin-lg row">
-          <div class="col-md-2 col-sm-6"></div>
-        <div class="col-md-4 col-sm-6" *ngIf="!isright">
-          <div class="pricing-box">
-              <!-- <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured ">
+            <div class="pricing-box">
+              <div class="pricing2-button">
+              <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
               (click)="pricingpackage('free')"
-              class="button button-large button-rounded capitalize ls0" style="border-radius: 23px;">
+              class="btn btn-primary" >
               Register Now
-            </button> -->
+            </button>
+          </div>
+            <span _ngcontent-qqp-c19="" class="plan-name text-center"> Free Plan </span>
+            <img _ngcontent-qqp-c19="" src="https://storage.rfpgurus.com/final/Free_updated.png">
+            
             <!-- <div class="pricing-title">
               <h3>Flex</h3>
             </div> -->
-            <div class="pricing-price starter">
+            <!-- <div class="pricing-price starter">
                 <div class="pricing-title">
                     <h3>Flex</h3>
                   </div>
               <div class="pts-switch-content-left"><span class="price-unit1">$&nbsp;</span><span class="price">34.99</span><span class="price-unit">&nbsp;Monthly</span>
               </div>
-            </div>
+            </div> -->
             <!--<div class="pricing-price">-->
             <!--FREE<span class="price-tenure">Limited Access</span>-->
             <!--</div>-->
@@ -115,13 +110,66 @@
                 <li><i class="fa fa-check"></i><span class="paddings-strong"> Email Support</span></li>
                 <!-- <li><i class="fa fa-check"></i> 100,000 emails</li> -->
               </ul>
-              <!-- <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
+              <div class="pricing2-button">
+              <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
                       (click)="pricingpackage('free')"
-                      class="button button-large button-rounded capitalize ls0" style="border-radius: 23px;">
+                      class="btn btn-primary" >
                       Register Now
-              </button> -->
-              <button type="button" data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
-              (click)="pricingpackage('free')" class="btn btn-primary btn-lg Register">Register Now</button>
+              </button>
+            </div>
+              <!-- <button type="button" data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
+              (click)="pricingpackage('free')" class="btn btn-primary btn-lg Register">Register Now</button> -->
+            </div>
+           
+          </div>
+
+          </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured " *ngIf="!isright">
+          <div class="pricing-box">
+            <div class="pricing2-button">
+              <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
+              (click)="pricingpackage('free')"
+              class="btn btn-primary" >
+              Register Now
+            </button>
+          </div>
+          <span _ngcontent-qqp-c19="" class="plan-name text-center"> Monthly Plan </span>
+          <img _ngcontent-qqp-c19="" width="100%" src="../../assets/img/Pricing Influ (1).png">
+            <!-- <div class="pricing-title">
+              <h3>Flex</h3>
+            </div> -->
+            <!-- <div class="pricing-price starter">
+                <div class="pricing-title">
+                    <h3>Flex</h3>
+                  </div>
+              <div class="pts-switch-content-left"><span class="price-unit1">$&nbsp;</span><span class="price">34.99</span><span class="price-unit">&nbsp;Monthly</span>
+              </div>
+            </div> -->
+            <!--<div class="pricing-price">-->
+            <!--FREE<span class="price-tenure">Limited Access</span>-->
+            <!--</div>-->
+            <div class="pricing-features">
+              <ul>
+                <!-- <li><i class="fa fa-check"></i> <strong>5,000</strong> Searches</li>
+                <li><i class="fa fa-check"></i> Store up to 500 Contacts</li>
+                <li><i class="fa fa-check"></i> Send up to 100 emails</li> -->
+                <li><i class="fa fa-check"></i><span class="paddings-strong">  Unlimited Searches</span></li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> Store up to 2000 Contacts</span></li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> Send up to 1,000,000 emails</span></li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> 1 Seat</span></li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> 1 Month License</span></li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> Email Support</span></li>
+                <!-- <li><i class="fa fa-check"></i> 100,000 emails</li> -->
+              </ul>
+              <div class="pricing2-button">
+              <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
+                      (click)="pricingpackage('free')"
+                      class="btn btn-primary" >
+                      Register Now
+              </button>
+            </div>
+              <!-- <button type="button" data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
+              (click)="pricingpackage('free')" class="btn btn-primary btn-lg Register">Register Now</button> -->
             </div>
            
           </div>
@@ -129,16 +177,17 @@
         
         <!--pro pack yearly start-->
         <!---->
-        <div class="col-md-4 col-sm-6" *ngIf="isright">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured " *ngIf="isright">
           <div class="pricing-box">
-              <!-- <button data-toggle="modal" data-target="#myModal"
+            <div class="pricing2-button">
+              <button data-toggle="modal" data-target="#myModal"
               data-pricing-plan="Professional Yearly Plan"
               (click)="pricingpackage(propacky.value)"
-              class="button button-large button-rounded capitalize ls0"
-              style="border-radius: 23px;"> Register Now
-            </button> -->
-            
-            <div class="pricing-price professional-3">
+              class="btn btn-primary"
+    > Register Now
+            </button>
+          </div>
+            <!-- <div class="pricing-price professional-3">
                 <div class="pricing-title">
                     <h3>Flex</h3>
                   </div>
@@ -147,7 +196,7 @@
                 
                 <span class="price-unit1">$&nbsp;</span><span class="price">299.99</span><span class="price-unit">&nbsp;Yearly</span>
               </div>
-            </div>
+            </div> -->
             <div class="pricing-features">
               <input type="hidden" value="pro monthly" #propackm>
               <input type="hidden" value="pro yearly" #propacky>
@@ -178,17 +227,20 @@
         <!--pro pack yearly end-->
         <!--pro pack monthly start-->
         <!---->
-        <div class="col-md-4 col-sm-6" *ngIf="!isright">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured"  *ngIf="!isright">
           <div class="pricing-box" *ngIf="!isright">
-              <!-- <button data-toggle="modal" data-target="#myModal"
+            <div class="pricing2-button">
+              <button data-toggle="modal" data-target="#myModal"
                         data-pricing-plan="Professional Monthly Plan"
                         (click)="pricingpackage(propackm.value)"
-                        class="button button-large button-rounded capitalize ls0"
-                        style="border-radius: 23px;">Register Now
-                </button> -->
-           
+                        class="btn btn-primary"
+                      >Register Now
+                </button>
+              </div>
+              <span _ngcontent-qqp-c19="" class="plan-name text-center"> Yearly Plan </span>
+              <img _ngcontent-qqp-c19="" width="100%" src="../../assets/img/Pricing Influ (2).png">
             <div class="">
-              <div class=" pricing-price professional-2">
+              <!-- <div class=" pricing-price professional-2">
                   <div class="pricing-title">
                       <h3>Pro</h3>
                     </div>
@@ -198,10 +250,10 @@
               </div>
               
   
-              </div>
+              </div> -->
               <div class="pricing-features">
-                <input type="hidden" value="pro monthly" #propackm>
-                <input type="hidden" value="pro yearly" #propacky>
+                <!-- <input type="hidden" value="pro monthly" #propackm>
+                <input type="hidden" value="pro yearly" #propacky> -->
                 <ul>
                         <li><i class="fa fa-check"></i> <span class="paddings-strong"> Unlimited</span> Searches</li>
                         <li><i class="fa fa-check"></i><span class="paddings-strong"> Store up to 8000  Contacts</span></li>
@@ -216,16 +268,18 @@
                   <li><i class="fa fa-check"></i> <strong>1 Month</strong> License</li>
                   <li><i class="fa fa-check"></i> Email Support</li> -->
                 </ul>
-                <!-- <button data-toggle="modal" data-target="#myModal"
+                <div class="pricing2-button">
+                <button data-toggle="modal" data-target="#myModal"
                         data-pricing-plan="Professional Monthly Plan"
                         (click)="pricingpackage(propackm.value)"
-                        class="button button-large button-rounded capitalize ls0"
-                        style="border-radius: 23px;">Register Now
-                </button> -->
-                <button type="button" data-toggle="modal" data-target="#myModal"
+                        class="btn btn-primary"
+                     >Register Now
+                </button>
+              </div>
+                <!-- <button type="button" data-toggle="modal" data-target="#myModal"
                 data-pricing-plan="Professional Monthly Plan"
                 (click)="pricingpackage(propackm.value)"
-                 class="btn btn-primary btn-lg Register">Register Now</button>
+                 class="btn btn-primary btn-lg Register">Register Now</button> -->
               </div>
               
             </div>
@@ -281,7 +335,7 @@
       <!--Business pack yearly end-->
     </div>
   </div>
-  
+</section>
   
   <!-- Table Section-->
   <!-- <app-footer></app-footer> -->

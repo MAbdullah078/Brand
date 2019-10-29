@@ -47,6 +47,7 @@
           </ng-template>
           <div class="body">
             <div class="container">
+              <form class="search-form">
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field >
@@ -59,7 +60,7 @@
                   </mat-form-field>
                 </div>
               </div>
-              <div class="row">
+              <div class="row Advanced-search">
                 <div class="col-md-6">
                   <mat-form-field>
                     <input matInput type="text" placeholder="Serch by Followers" name="social">
@@ -71,7 +72,7 @@
                   </mat-form-field>
                 </div>
               </div>
-              <div class="row">
+              <div class="row Advanced-search">
                 <div class="col-md-6">
                   <mat-form-field>
                     <input matInput type="text" placeholder="Search by Tweets" name="title">
@@ -92,6 +93,7 @@
                 </div>
 
               </div>
+            </form>
             </div>
           </div>
 
@@ -420,8 +422,8 @@
     </div>
             <div class="col-md-1 followers-division">
                 <div>
-                        <h6 class="m-0">Likes:</h6>
-                    <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+                        <h6 class="m-0">Followers:</h6>
+                    <h3 class="Follwers-div" >{{item['followers']| thousandSuff}}</h3>
                 </div>
             </div>
                     <div class="col-md-9">

@@ -13,7 +13,7 @@
                <br> <a (click)="googlelogin()"> <img src="../../assets/img/icon-Google.png"> </a>
             </li>
           </ul>
-            <mat-form-field class="w-100 mb-3">
+            <mat-form-field class="w-100">
               <input matInput type="text" placeholder="Username"  tabindex=1 [formControl]="userFormControl" [(ngModel)]="model.username" required>
               <span class="pointer" *ngIf="model.username"  matSuffix md-list-icon aria-label="Clear" (click)="model.username=''">
                               <i class="fa fa-close"></i>
@@ -54,8 +54,8 @@
                               </div>
               </div>
               <div class="col-md-12 text-center mt-3">
-                  <button type="submit" class="btn btn-primary">Sign In</button>
-                  <label class="signup-label"> Don’t have an account?
+                  <button type="submit" class="btn btn-primary sign-in-button">Sign In</button>
+                  <label class="signup-label">No Account Yet? 
                     <a  routerlink="/register" href="/register"><b>Sign Up</b></a></label>
                     <div class="text-center privacy">
                       <a href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">

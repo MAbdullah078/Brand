@@ -46,7 +46,7 @@
           </ng-template>
           <div class="body">
             <div class="container">
-              <form (submit)="setPage(1)" class="m-0">
+              <form (submit)="setPage(1)" class="search-form m-0">
                 <div class="row">
                   <div class="col-md-6">
                     <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -60,7 +60,7 @@
                     </mat-form-field>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row Advanced-search">
                   <div class="col-md-6">
                     <mat-form-field>
                       <input matInput type="text" [(ngModel)]="likes" placeholder="Serch by Likes" name="social">
@@ -72,7 +72,7 @@
                     </mat-form-field>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row Advanced-search">
                   <div class="col-md-6">
                     <mat-form-field>
                       <input matInput type="text" [(ngModel)]="location" placeholder="Serch by Location" name="loc">
@@ -85,7 +85,7 @@
                   </div>
                 </div>
 
-                <div class="row" >
+                <div class="row Advanced-search" >
                   <div class="col-md-12 text-center">
                     <button type="submit"  class="btn btn-primary search-button" >
                       Search <i class="fa fa-sliders"></i>
@@ -495,8 +495,8 @@
     </div>
             <div class="col-md-1 followers-division">
                 <div>
-                        <h6 class="m-0">Likes:</h6>
-                    <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+                        <h6 class="m-0">Followers:</h6>
+                    <h3 class="Follwers-div" >{{item['followers']| thousandSuff}}</h3>
                 </div>
             </div>
                     <div class="col-md-9">
