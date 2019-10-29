@@ -1,96 +1,205 @@
-<div class="form-section">
-  <div class="container">
-      <form class="contact-us-form"  name="form" role="form"  #f="ngForm"   novalidate (ngSubmit)=" f.form.valid && onSubmit()">
-
-    <div class="col-md-6">
-
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Title"  name="title" [(ngModel)]="model.title" #Title="ngModel" #title
-            required>
-          </mat-form-field>
-
-
-          <!-- <mat-form-field> <input matInput type="text" placeholder="School" formControlName="school_attended"
-            [(ngModel)]="modal.school_attended" name="school_attended" required> </mat-form-field> -->
-
-
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Url"  name="url" [(ngModel)]="model.url" #url="ngModel" #url 
-            required>
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-              <input matInput placeholder="Search Keywords"   name="category" [(ngModel)]="model.category" #Category="ngModel" #category
-              required>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Description"  name="description" [(ngModel)]="model.description" #Description="ngModel" #description 
-                required>
-              </mat-form-field>
-              <h4>Any Questions?</h4>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Question"  name="question1" [(ngModel)]="model.question1" #Question1="ngModel" #question 
-                required>
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Answer"  name="answer1" [(ngModel)]="model.answer1" #Answer1="ngModel" #answer
-                required>
-              </mat-form-field>
-
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Question #2 (Optional)"  name="question2" [(ngModel)]="model.question2" #Question2="ngModel" #question2 >
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Answer #2 (Optional)"  name="answer2" [(ngModel)]="model.answer2" #Answer2="ngModel" #answer2 >
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Question #3 (Optional)"  name="question3" [(ngModel)]="model.question3" #Question3="ngModel" #question3 >
-              </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Answer #3 (Optional)"  name="answer3" [(ngModel)]="model.answer3" #Answer3="ngModel" #answer3>
-              </mat-form-field>
-              <h4>Any Offer?</h4>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Offer"  name="offer_to_influencer" [(ngModel)]="model.offer_to_influencer" #Offer_to_influencer="ngModel" #offer_to_influencer 
-                required>
-              </mat-form-field>
-
-
-              <div>
-                  <div class="col-sm-12" style="margin-bottom: 30px;">
-                    <h4>Upload Picture</h4>
-                      <input id="img" type='file' (change)="onChange($event)" (change)="readUrl($event)" name="pictures" [(ngModel)]="model.pictures" accept="image/*" multiple>
-                      <!-- <img [src]="url" class="image-box" > -->
-                      <br class="clearfix" />
-                      </div>
-<!-- 
-                      <div class="col-sm-12" style="margin-bottom: 30px;">
-                          <h4>Upload File</h4>
-
-                            <input id="file" type='file' (change)="onChange2($event)" (change)="readUrl($event)" name="file" [(ngModel)]="model.file" accept="file/*" multiple>
-                            
-                            <input type='file' (change)="onSelectFile($event)">
-                            <input (change)="onChange2($event)" #data type="file" accept="application/pdf" required>
-                            <img [src]="url" class="image-box" >
-                            <br class="clearfix" />
-                            </div>
-
-
-                            <div class="col-sm-12" style="margin-bottom: 30px;">
-                                <h4>Upload Video</h4>
-                                  <input id="video" type='file' (change)="onChange3($event)" (change)="readUrl($event)" name="video" [(ngModel)]="model.video" accept="video/mp4" multiple>
-                                  <img [src]="url" class="image-box" >
-                                  <br class="clearfix" />
-                                  </div> -->
-
-                <button type="submit" (click)="upload()" class="btn btn-primary pull-right"><i class="fa fa-paper-plane" aria-hidden="true"></i>Publish RFM</button>
-              </div>
-    </div>
-                    </form>
-                   
-                      <!-- <div class="form-group margin">
-                        <button class="btn btn-fill" style="width:100%; border-radius:50px;font-size:24px !important;" type="submit"(click)="upload()">Add Now</button>
-                      </div> -->
-  </div>
+<!-- <app-loader></app-loader> -->
+<div class="container text-center">
+    <div class="row text-center ">
+      <h2 class="stepper-heading">Create RFM</h2>
   
+  </div>
+  </div>
+  <div class="stepper-style">
+  <!-- <mat-horizontal-stepper [linear]="isLinear" #stepper> -->
+      <mat-horizontal-stepper  #stepper>
 
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Add Images</ng-template>
+  
+          <div class="form-group photos-resume text-center" style="margin-top: 50px;">
+            <div class="col-md-4 uploaded-pic">
+              <div class="new" >
+              </div>
+              <!-- <span (click)="removeItem(ind)" class="make-gig-uploaded-img">
+                              <i class="fa fa-close cancel-icon" height="20" width="20"></i>
+              </span> -->
+            </div>
+            <label class="upload-image left add-img">
+              Add Images
+              <input class="file" style="display: none" (change)="  onChange($event)" (change)="readUrl($event)" [(ngModel)]="model.pictures" name="pictures"
+                     type="file" data-preview-file-type="text" formControlName="firstCtrl" required id="file1"
+                     accept=".jpg, .jpeg, .png"  name="file"  multiple  />
+                     <!-- <input id="img" type='file' (change)="onChange($event)" (change)="readUrl($event)" name="pictures" [(ngModel)]="model.pictures"  formControlName="firstCtrl" accept="image/*" multiple> -->
+        
+            </label>
+            <br>
+            <button mat-raised-button  matStepperNext class="next-btn" (click)="upload()">
+              Next
+            </button>
+          </div>
+      </form>
+    </mat-step>
+  
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup" class="create-showcase">
+  
+        <ng-template matStepLabel>Overview</ng-template>
+        <div class="whole sh-signup-form-fix">
+  
+  
+        <div class="row">
+        <div class="col-lg-3" id="margin">
+        <label>Select Category</label>
+        </div>
+        <div class="col-lg-9">
+          <mat-form-field style="width: 100%;" class="catagery mt-4">
+        <!-- <mat-select placeholder="{{'Please Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
+        <mat-option *ngFor="let option of options "  [value]="option.id" >{{ option.name }}</mat-option> -->
+        <input matInput placeholder="Please category the Title of your RFM" [(ngModel)]="model.category" name="category" formControlName="secondCtrl" required  />
+        <!-- </mat-select> -->
+          </mat-form-field>
+        </div>
+  
+        </div>
+  
+        <div class="row">
+        <div class="col-lg-3" id="margin">
+        <label >RFM Title</label>
+        </div>
+        <div class="col-lg-9">
+        <mat-form-field style="width: 100%;margin-top: 10px;">
+        <input matInput placeholder="Please Write the Title of your RFM" [(ngModel)]="model.title" name="title" formControlName="secondCtrl" required  />
+  
+        </mat-form-field>
+        </div>
+  
+        </div>
+  
+        <div class="row">
+        <div class="col-lg-3">
+        <label >Profile Link</label>
+        </div>
+        <div class="col-lg-9">
+        <mat-form-field style="width: 100%" >
+        <input matInput placeholder="Paste here the best social media profile" [(ngModel)]="model.url" name="url" formControlName="thirdCtrl" required>
+  
+        </mat-form-field>
+        </div>
+  
+        </div>
+  
+  
+          <button mat-raised-button matStepperPrevious class="back-button">Back</button>
+          <button mat-raised-button matStepperNext class="next-btn">
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+  
+    <mat-step [stepControl]="thirdFromGroup">
+    <form [formGroup]="thirdFromGroup" class="create-showcase">
+    <ng-template matStepLabel>Description</ng-template>
+    <div class="row sh-signup-form-fix">
+    <div class="col-lg-3" id="margin">
+    <label >Write Description</label>
+    </div>
+    <div class="col-lg-9">
+    <mat-form-field class="margin-top-10 width100">
+    <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="description" formControlName="fourthCtrl" style="line-height:8.75px"></textarea>
+    </mat-form-field>
+    </div>
+  
+    <div class="col-lg-3" id="margin">
+      <label >Offer</label>
+      </div>
+      <div class="col-lg-9">
+      <mat-form-field class="margin-top-10 width100">
+      <textarea matInput placeholder="Write Offer" name="offer_to_influencer" formControlName="fourthCtrl"  #offer_to_influencer  style="line-height:8.75px"></textarea>
+      </mat-form-field>
+      </div>
+  
+    </div>
+    <div>
+    <button mat-raised-button matStepperNext class="next-btn">Next</button>
+    <button mat-raised-button matStepperPrevious style="margin-right: 15px" class="back-button">Back</button>
+    </div>
+    </form>
+    </mat-step>
+  
+  
+    <mat-step [stepControl]="fourthFromGroup">
+    <form [formGroup]="fourthFromGroup"  class="create-showcase">
+    <ng-template matStepLabel>Frequently Asked Questions(FAQs)</ng-template>
+    <div class="row">
+    <div class="col-lg-3" id="margin">
+    <label >FAQ #1</label>
+    </div>
+    <div class="col-lg-9">
+    <mat-form-field style="width: 100%;    margin-top: 10px;">
+    <input matInput placeholder="Question" [(ngModel)]="model.question1" name="question1" formControlName="fifthCtrl">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;    margin-top: 10px;">
+        <input matInput placeholder="Answer" [(ngModel)]="model.answer1" name="answer1" formControlName="fifthCtrl2">   
+        </mat-form-field>
+    </div>
+  
+    </div>
+  
+  
+  
+    <div class="row">
+    <div class="col-lg-3" id="margin">
+    <label >FAQ #2</label>
+    </div>
+    <div class="col-lg-9">
+    <mat-form-field style="width: 100%">
+    <input matInput placeholder="Question 2" [(ngModel)]="model.question2" name="question2" formControlName="sixthCtrl">
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+        <input matInput placeholder="Answer 2" [(ngModel)]="model.answer2" name="answer2" formControlName="sixthCtrl2">  
+        </mat-form-field>
+    </div>
+  
+    </div>
+  
+  
+    <div class="row">
+    <div class="col-lg-3" id="margin">
+    <label >FAQ #3 (Optional)</label>
+    </div>
+    <div class="col-lg-9">
+    <mat-form-field style="width: 100%">
+    <input matInput placeholder="Question 3(Optional)" [(ngModel)]="model.question3" name="question3" formControlName="seventhCtrl2">
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+        <input matInput placeholder="Answer 3(Optional)" [(ngModel)]="model.answer3" name="answer3" formControlName="seventhCtrl2">
+        </mat-form-field>
+    </div>
+  
+    </div>
+  
+    <div>
+    <button mat-raised-button matStepperNext class="next-btn">Next</button>
+    <button mat-raised-button matStepperPrevious class="back-button" style="margin-right: 15px">Back</button>
+    </div>
+    </form>
+    </mat-step>
+  
+    <mat-step>
+    <form #f (ngSubmit)="onSubmit(f,offer_to_influencer.value)">
+  
+      <ng-template matStepLabel>Publish</ng-template>
+      <div class="row">
+      <div class="col-lg-12 text-center" id="margin">
+      <h6> Thanks for creating your RFM. Click to publsih your RFM,</h6>
+      <br>
+      <h6>"Your RFM will be shown after reviewed by admin.</h6>
+      </div>
+  
+      </div>
+      <div>
+        <button mat-raised-button class="back-button" type="submit" >Publish</button>
+        <button mat-raised-button matStepperPrevious class="back-button">Back</button>
+      </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
   </div>

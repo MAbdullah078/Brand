@@ -218,7 +218,9 @@
                             <div class="col-sm-10">
                                 <mat-form-field class="temp">
 
-                                    <input type="email" [(ngModel)]="subject" [formControl]="subjectFormControl" matInput  name="subject" placeholder="Subject">
+                                    <!-- <input type="email" [formControl]="subjectFormControl" matInput  name="subject" placeholder="Subject"> -->
+                                    <!-- <input type="email" [(ngModel)]="subject" [formControl]="subjectFormControl" matInput  name="subject" placeholder="Subject"> -->
+                                     <input type="email" [(ngModel)]="subject" matInput  name="subject" placeholder="Subject">
                                     <mat-error *ngIf="subjectFormControl.hasError('required')">
                                         Subject is <strong>required</strong>
                                     </mat-error>
@@ -228,8 +230,10 @@
                         </div>
                         <div class="form-group" >
                             <label class="col-sm-12" for="inputBody"><span class="glyphicon glyphicon-list"></span> Message</label>
-                            <div class="col-sm-12"><textarea class="form-control" [formControl]="messageFormControl"  name="body" [(ngModel)]="body" id="inputBody" rows="8"></textarea>
-                                <small *ngIf="messageFormControl.hasError('required')">
+                            <!-- <div class="col-sm-12"><textarea class="form-control" [formControl]="messageFormControl"  name="body" id="inputBody" rows="8"></textarea> -->
+                                <!-- <div class="col-sm-12"><textarea class="form-control" [formControl]="messageFormControl"  name="body" [(ngModel)]="body" id="inputBody" rows="8"></textarea> -->
+                                 <div class="col-sm-12"><textarea class="form-control"  name="body" [(ngModel)]="body" id="inputBody" rows="8"></textarea>
+                                    <small *ngIf="messageFormControl.hasError('required')">
                                     Please write <strong>message</strong> here.
                                 </small>
                             </div>

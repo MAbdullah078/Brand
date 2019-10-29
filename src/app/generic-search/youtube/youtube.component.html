@@ -389,13 +389,13 @@
 </div>
         <label class="item-content ml-4"
         title="{{item['description']}}">{{item['description']}}</label>
-        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube link"></i>{{item['channel_link']}}</label>
+        <label class="item-loc ml-4 " (click)="goToLink(item['channel_link'])"><i class="fab fa-youtube link"></i>{{item['channel_link']}}</label>
      <div class="row" >
         <div class="col-md-6 ">
             <div class="ml-4">
             <div>
             <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
-                <span class="right-item"> {{item['_views'] | thousandSuff}}</span>
+                <span class="right-item"> {{item['total_views'] | thousandSuff}}</span>
                 </div>
                 <div>
     <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>

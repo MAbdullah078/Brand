@@ -438,9 +438,9 @@
                       <label *ngIf="item.description.length>0" class="item-content ml-4"> {{item['description']}}</label>
                         </div>
                         <div>
-                        <label class="item-loc ml-4"> <i class="fab fa-periscope "></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
+                        <label class="item-loc ml-4"> <i class="fab fa-periscope "></i>Profile url:  <a  (click)="goTwitterProfile(item['profile_link'])">{{item['profile_link']}}</a></label>
                         <div>
-                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i> periscope <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_name']}}
+                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i> Twitter name: <a> {{item['twitter_name']}}
                           </a></label>
                       </div>
                       </div>
@@ -831,9 +831,9 @@
                 
                       </div>
                       <div>
-                      <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url  <a  (click)="goToMedium(item['account_link'])">{{item['profile_link']}}</a></label>
+                      <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url:  <a  (click)="goTwitterProfile(item['profile_link'])">{{item['profile_link']}}</a></label>
                       <div>
-                      <label class="item-loc ml-4"><i class="fab fa-periscope "></i> periscope <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_name']}}
+                      <label class="item-loc ml-4"><i class="fab fa-periscope "></i> Twitter Name: <a> {{item['twitter_name']}}
                         </a></label>
                     </div>
                     </div>

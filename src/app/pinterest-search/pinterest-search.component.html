@@ -510,7 +510,7 @@
                   <label class="item-loc" title="{{item['profile_linked']}}" (click)="goToMedium(item['profile_linked'])"><i class="fab fa-pinterest"></i>Profile Link: {{item['profile_linked']}}</label>
           </div>
           <div >
-              <label class="item-loc" title="{{item['profile_contact']}}">Contact:{{item['profile_contact']}}</label>
+              <label class="item-loc" title="{{item['profile_contact']}}" (click)="goTwitterProfile(item['profile_contact'])">Web Link:{{item['profile_contact']}}</label>
         </div>
           </div>
                  
@@ -771,7 +771,7 @@
                     <label class="item-loc" title="{{item['profile_linked']}}" (click)="goToMedium(item['profile_linked'])"><i class="fab fa-pinterest"></i>Profile Link: {{item['profile_linked']}}</label>
             </div>
             <div >
-                <label class="item-loc" title="{{item['profile_contact']}}"><i class="fas fa-phone-alt"></i>Contact:{{item['profile_contact']}}</label>
+                <label class="item-loc" title="{{item['profile_contact']}}" (click)="goTwitterProfile(item['profile_contact'])"><i class="fas fa-phone-alt"></i>Web Link:{{item['profile_contact']}}</label>
           </div>
             </div>
                    

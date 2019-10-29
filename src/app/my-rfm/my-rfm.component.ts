@@ -26,6 +26,7 @@ export class MyRfmComponent implements OnInit {
     this.app_Service.deleterfm(id).subscribe(rfm =>{
       console.log('delete')
       alert('deleted')
+      this.mycreatedrfm()
     })
   }
 

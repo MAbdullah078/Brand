@@ -29,7 +29,7 @@ export class YoutubeSearchComponent implements OnInit {
     influencers_by_default: any = [];
     query;
 
-
+    slice;
     loaded = false;
     inf_name:any = [];
     inf_channel_link:any = [];
@@ -109,7 +109,7 @@ export class YoutubeSearchComponent implements OnInit {
             let url = s.slice(arr+2,-10);
             Swal.fire({
                 title: 'You&#39;re Leaving This Site!',
-                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                text: 'This is a link to an external site. Click OK to continue to the content',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
                 // showCancelButton: true,
@@ -136,7 +136,7 @@ export class YoutubeSearchComponent implements OnInit {
             let url = s;
             Swal.fire({
                 title: 'You&#39;re Leaving This Site!',
-                text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+                text: 'This is a link to an external site. Click OK to continue to the content',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
                 // showCancelButton: true,

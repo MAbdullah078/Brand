@@ -46,7 +46,7 @@ import {
   MatInputModule,
   MatOptionModule,
   MatRippleModule,
-  MatSelectModule,
+  MatSelectModule,MatStepperModule,
   MatTableModule
 } from '@angular/material';
 import {ConfirmPasswordComponent} from './confirm-password/confirm-password.component';
@@ -56,6 +56,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { MyRfmComponent } from './my-rfm/my-rfm.component';
 import {CustomPipePipe} from './periscope-search/CustomPipe.pipe';
+import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
+import { FileValidatorDirective } from './rfm/FileValidator.directive';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -102,6 +104,8 @@ export function provideConfig() {
     WhatIsInfluexpaiComponent,
     MyRfmComponent,
     RfmComponent,
+    RfmDetailComponent,
+    FileValidatorDirective
     
     // GenericSearchComponent
   ],
@@ -119,8 +123,7 @@ export function provideConfig() {
     RecapchaModule,
     MatSlideToggleModule,
     TextMaskModule,
-
-    MatCardModule, MatSelectModule, MatOptionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatTableModule,
+    MatCardModule, MatSelectModule, MatOptionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatTableModule,MatStepperModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes),
     HttpClientModule,JwSocialButtonsModule

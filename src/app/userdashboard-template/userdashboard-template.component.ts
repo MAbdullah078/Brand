@@ -112,6 +112,8 @@ export class UserdashboardTemplateComponent implements OnInit {
     constructor(private http: HttpService, private router: Router) {}
 
     ngOnInit() {
+
+        window.scroll(0,0)
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
         this.get_lists(this.selected_choice);
@@ -248,12 +250,12 @@ export class UserdashboardTemplateComponent implements OnInit {
             confirmButtonText: 'Create',
             cancelButtonText: 'Cancel'
         }).then((result) => {
-
+        // //alert(result.value);
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
 
             this.http.post(Config.api + '/create_add_ilist/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -265,6 +267,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -346,9 +350,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/ml/create_add_ilist_twitter/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -360,6 +364,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -596,7 +602,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             this.http.post(Config.api + '/create_add_ilist_yt/', JSON.stringify({
                     // name: result,
-                    name: result,
+                    name: result.value,
                     // list: {},
                     username: this.currentUser.username
                 }),
@@ -608,6 +614,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -705,9 +713,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_in/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -719,6 +727,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -880,9 +890,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_fb/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -894,6 +904,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -1192,10 +1204,10 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_dd/', JSON.stringify({
                     // name: result,
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -1207,6 +1219,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -1541,9 +1555,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_pt/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -1555,6 +1569,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -1783,9 +1799,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_periscope/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -1864,9 +1880,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_md/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -1878,6 +1894,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         // result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(
@@ -1943,9 +1961,9 @@ export class UserdashboardTemplateComponent implements OnInit {
 
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
             headers.append('Content-Type', 'application/json');
-
+            //alert(result.value)
             this.http.post(Config.api + '/create_add_ilist_fl/', JSON.stringify({
-                    name: result,
+                    name: result.value,
                     list: {},
                     username: this.currentUser.username
                 }),
@@ -1957,6 +1975,8 @@ export class UserdashboardTemplateComponent implements OnInit {
                         result.value(),
                         'success'
                     )
+                    console.log('Result is..................', result.value);
+
                 },
                 // error => {
                 //     Swal.fire(

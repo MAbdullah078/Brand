@@ -23,7 +23,7 @@ export class TwitterSearchComponent implements OnInit {
     myControl: FormControl = new FormControl();
     // search:string;
     column = {};
-    max=100;
+    max=100;token;
     inflist: any = {};
     main_checkbox;
     influencers = {totalItems:0};
@@ -360,11 +360,11 @@ export class TwitterSearchComponent implements OnInit {
         }
     }
 
-    goTwitterProfile(influencer) {
-        let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
+    goTwitterProfile(url) {
+        // let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
         Swal.fire({
             title: 'You&#39;re Leaving This Site!',
-            text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+            text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
             showCancelButton: true,
@@ -391,7 +391,7 @@ export class TwitterSearchComponent implements OnInit {
         let url = 'https://twitter.com/' + influencer.twitter_name;
         Swal.fire({
             title: 'You&#39;re Leaving This Site!',
-            text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+            text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
             showCancelButton: true,
