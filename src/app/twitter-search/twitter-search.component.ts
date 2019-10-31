@@ -376,7 +376,7 @@ export class TwitterSearchComponent implements OnInit {
             text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
-            showCancelButton: true,
+            // showCancelButton: true,
 
         }).then(() => {
 
@@ -403,7 +403,7 @@ export class TwitterSearchComponent implements OnInit {
             text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
-            showCancelButton: true,
+            // showCancelButton: true,
 
         }).then(() => {
 
