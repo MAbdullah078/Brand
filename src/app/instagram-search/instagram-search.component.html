@@ -57,11 +57,11 @@
           </ng-template>
           <div class="body">
             <div class="container">
-                <form (submit)="setPage(1)" class="m-0">
+                <form (submit)="setPage(1)" class="m-0 social-forms">
                     <div class="row">
                         <div class="col-md-6">
-                            <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                        placeholder="Select Category" style="width:75%">
+                            <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                                        placeholder="Select Category" style="width:100%">
                                 <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                             </mat-select>
                         </div>
@@ -71,7 +71,7 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row Advanced-search">
                         <div class="col-md-6">
                             <mat-form-field>
                                 <input matInput type="text" [(ngModel)]="following" placeholder="Serch by Subscribers" name="social">
@@ -83,7 +83,7 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row Advanced-search">
                         <div class="col-md-6">
                             <mat-form-field>
                                 <input matInput type="text" [(ngModel)]="account_rank" placeholder="Serch by Rank" name="loc">
@@ -113,50 +113,61 @@
     </div>
   </div>
 
-  <div class="row" *ngIf="!loaded" style="margin-top: 2%">
-    <div class="col-md-12 center">
-      <h4 class="m-0">Featured Instagram Influencers</h4>
-    </div>
 
-  </div>
-  <div class="row"  >
-   
-
-  </div>
+ 
 
 
   <div class="container-fluid" *ngIf="!loaded">
 
-    <div class="row" id="myHeader">
-      <div class="col-md-12 list-row">
-          
+
+
+    <div class="row mt-3" id="myHeader">
+        <div class="col-md-2">
             <!--<button  class="btn btn-success">Select All</button>-->
             <div id="ck-button">
-              <label>
+                <label>
 
-                <input type="checkbox" class="checkbox"  (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
-              </label>
+                    <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                </label>
             </div>
-        
-         
-        
-            <button  class="btn  add-to-list pull-right"  (click)="add_create_list()"> Add to list</button>
-         
-         
-          <div class="col-md-12">
-              <!-- <h5 >Displaying {{fbinfluencers.results.length}} of {{fbinfluencers.totalItems}} Results</h5> -->
-          </div>
-   
-      </div>
-    </div>
+            </div>
+            <div class="col-md-8 text-center">
+                
+<div  *ngIf="!loaded" >
+    <h4 class="m-0" >Featured Instagram Influencers</h4>
+
+
+</div>
+            </div>
+            <div class="col-md-2">
+            <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
+        </div>
+
+
+</div> 
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="profile-container" *ngFor="let item of default_influencers.results" >
-      <div class="row">
+      <div class="row p-0 m-0 p-2">
 
 
           <div class="col-md-1 profile-checkbox" type="checkbox">
-              <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-              <label for="table-check-{{item['id']}}"></label>
+              <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                  <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                </div>
           </div>
 
 <div class="col-md-1 followers-division">
@@ -180,7 +191,7 @@
                       <div class="ml-4">
                       <label class="item-content" *ngIf="item.description.length>0"  title="{{item['description']}}">{{item['description']}}</label>
                    <div>   
-              <label class="item-loc"><i class="fab fa-instagram" ></i>Profile Link:  <a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
+              <label class="item-loc"><i class="fab fa-instagram" ></i>Profile Link:<a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
               </div>
               <!-- <div>
               <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" (click)="goToMedium(item['external_url'])"> {{item['external_url']}}</span></label>
@@ -190,16 +201,16 @@
                       <div class="row">
                   <div class="col-md-6">
                       <div class="ml-4">
-                          <span class="right-item"><i class="fa fa-user" ></i> Username:</span> <span class="list-item1">{{item['username']}}</span>
+                          <span class="right-item"><i class="fa fa-user" ></i>Username:</span> <span class="list-item1">{{item['username']}}</span>
                               </div>
                               <div class="ml-4">
-                                <span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                                <span class="right-item"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following']}}</span>
                               </div>
                   </div>
           
                   <div class="col-md-6"  >
                       <div>
-                        <span class="right-item"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span>
+                        <span class="right-item"><i class="fas fa-chart-bar"></i>Rank:</span> <span class="list-item1">{{item['account_rank']}}</span>
               
               </div>
               <div>
@@ -306,12 +317,14 @@
 
  
     <div class="profile-container" *ngFor="let item of influencers.results" >
-      <div class="row">
+      <div class="row m-0 p-0 p-2">
 
 
           <div class="col-md-1 profile-checkbox" type="checkbox">
-              <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-              <label for="table-check-{{item['id']}}"></label>
+              <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                  <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                </div>
           </div>
 
 <div class="col-md-1 followers-division">
@@ -345,16 +358,16 @@
                       <div class="row">
                   <div class="col-md-6">
                       <div class="ml-4">
-                          <span class="right-item"><i class="fa fa-user" ></i> Username:</span> <span class="list-item1">{{item['name']}}</span>
+                          <span class="right-item"><i class="fa fa-user" ></i>Username:</span> <span class="list-item1">{{item['name']}}</span>
                               </div>
                               <div class="ml-4">
-                                <span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                                <span class="right-item"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following']}}</span>
                               </div>
                   </div>
           
                   <div class="col-md-6"  >
                       <div>
-                        <span class="right-item"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span>
+                        <span class="right-item"><i class="fas fa-chart-bar"></i>Rank:</span> <span class="list-item1">{{item['account_rank']}}</span>
               
               </div>
               <div>

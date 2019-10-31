@@ -57,7 +57,7 @@
                     </ng-template>
                     <div class="body">
                         <div class="container">
-                            <form (submit)="setPage(1)"  class="m-0 search-form">
+                            <form (submit)="setPage(1)"  class="m-0 social-forms">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -119,12 +119,6 @@
         </div>
     </div>
 
-    <div class="row" *ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-center">
-            <h4 class="m-0" >Featured Top Youtube Influencers</h4>
-        </div>
-
-    </div>
 
     <div class="SickyPage">
 
@@ -202,10 +196,12 @@
 
 
 
-    <div class="row influcener-div"  *ngFor="let item of influencers.results" >
+    <div class="row  influcener-div"  *ngFor="let item of influencers.results" >
         <div class="col-md-1 profile-checkbox" type="checkbox">
-                <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                <label for="table-check-{{item['id']}}"></label>
+                <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                        <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                      </div>
             </div>
     <div class="col-md-1 image-div ">
         <img [src]="item['thumbnail_url']"  class="twitter-image">
@@ -224,13 +220,13 @@
     </div>
             <label class="item-content ml-4" 
             title="{{item['description']}}">{{item['description']}}</label>
-            <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>Youtube Channel Link: {{item['channel_link']}}</label>
+            <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube"></i>Youtube Link: {{item['channel_link']}}</label>
          <div class="row" >
             <div class="col-md-6 ">
                 <div class="ml-4">
                 <div>
-                <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
-                    <span class="right-item1"> {{item['total_views'] | thousandSuff}}</span>
+                <span class="list-item1 "><i class="fa fa-users" ></i>Views:</span>
+                    <span class="list-item1"> {{item['total_views'] | thousandSuff}}</span>
                     </div>
                     <div>
         <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
@@ -319,10 +315,8 @@
 
     <div class="container-fluid" *ngIf="!loaded">
 
-        <div class="row" id="myHeader">
-            <div class="col-md-12 list-row">
-                <div class="row">
-                    <div class="col-md-12">
+        <div class="row mt-3" id="myHeader">
+                    <div class="col-md-2">
                         <!--<button  class="btn btn-success">Select All</button>-->
                         <div id="ck-button">
                             <label>
@@ -330,11 +324,20 @@
                                 <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
                             </label>
                         </div>
-
+                        </div>
+                        <div class="col-md-8 text-center">
+                            
+    <div  *ngIf="!loaded" >
+                <h4 class="m-0" >Featured Top Youtube Influencers</h4>
+       
+    
+        </div>
+                        </div>
+                        <div class="col-md-2">
                         <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
-
                     </div>
-                </div>
+        
+            
             </div>
         </div>
         <!-- <div class="cross-button">
@@ -409,8 +412,10 @@
         
         <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
                     <div class="col-md-1 profile-checkbox" type="checkbox">
-                            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                            <label for="table-check-{{item['id']}}"></label>
+                            <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                                    <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                                  </div>
                         </div>
                 <div class="col-md-1 image-div ">
                     <img [src]="item['thumbnail_url']"  class="twitter-image">
@@ -429,27 +434,27 @@
                 </div>
                         <label class="item-content ml-4" 
                         title="{{item['description']}}">{{item['description']}}</label>
-                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fas fa-globe"></i>Youtube Channel Link: {{item['channel_link']}}</label>
+                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube link"></i>Youtube Channel Link: {{item['channel_link']}}</label>
                      <div class="row" >
                         <div class="col-md-6 ">
-                            <div class="ml-4">
+                            <div class="ml-3">
                             <div>
-                            <span class="right-item ml-1"><i class="fa fa-users" ></i>  Views:</span>
-                                <span class="right-item1"> {{item['total_views'] | thousandSuff}}</span>
+                            <span class="right-item "><i class="fa fa-users" ></i>  Views:</span>
+                                <span class="list-item1"> {{item['total_views'] | thousandSuff}}</span>
                                 </div>
                                 <div>
-                    <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
+                    <span class="right-item "><i  class="fa fa-upload"></i>Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
                 </div>
             </div>
                     </div>
                     <div class="col-md-6 ">
                         <div>
-                            <span class="right-item"><i class="fa fa-upload"></i>  Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span>
-                              <span class="right-item ml-5"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
+                            <span class="right-item"><i class="fa fa-upload"></i>Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span>
+                              <span class="right-item ml-5"><i class="fas fa-chart-bar"></i>Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
                         </div>
                       
                         <div>
-                          <span class="right-item"><i class="fas fa-sign-in-alt"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span>
+                          <span class="right-item"><i class="fas fa-sign-in-alt"></i>Joined Year:</span> <span class="list-item1">{{item['date']}}</span>
                         </div>
                          </div>
              
@@ -505,12 +510,14 @@
 
   
   <div class="profile-container"  *ngFor="let item of influencers_by_default.results" >
-    <div class="row">
+    <div class="row p-0 m-0">
 
 
         <div class="col-md-1 profile-checkbox" type="checkbox">
-            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-            <label for="table-check-{{item['id']}}"></label>
+                <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                        <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                      </div>
         </div>
 
 <div class="col-md-1 followers-division">
@@ -553,7 +560,7 @@
                 <div class="col-md-6"  *ngIf="item['phone']">
                     <div>
                 <span class="right-item"> <i class="fas fa-phone-alt"></i>Phone:</span> <span class="list-item1">{{item['phone']}} </span>
-                <span class="right-item ml-5"><i class="fas fa-chart-bar "></i> Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
+                <span class="right-item ml-5"><i class="fas fa-chart-bar "></i>Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
             </div>
             <div>
                 <span class="right-item"><i class="fas fa-sliders-h"></i>
