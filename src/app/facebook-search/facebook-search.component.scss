@@ -57,8 +57,7 @@
 
 }
 mat-tab-group{
-  -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  box-shadow: 0 0 5px #ccc!important;
   border-radius: 8px;
   padding: 8px;
   color: #000;
@@ -194,13 +193,7 @@ i{
 .title-name img{
   width: 40px
 }
-.fa-globe{
-  font-size: 16px;
-  color: #1691ef
-}
-hr{
-  margin: 0!important;
-}
+
 .list-item1{
   color: #0a6aa1;
   font-weight: 700;

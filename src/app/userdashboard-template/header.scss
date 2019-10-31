@@ -87,6 +87,15 @@ body {
 #inline{
   padding-right: 2px;
 }
+.absolute-drp{
+  position: absolute!important;
+  top: 0!important;
+  right: 100%!important;
+  display: none!important;
+}
+.rfmdd:hover .absolute-drp{
+  display: block!important;
+}
 @media(max-width: 1367px) and  (min-width: 1344px){
 
         .navbar{
@@ -163,7 +172,7 @@ body {
   color: #000;
   background: none;
   border: transparent;
-  padding-top: 10px;
+  padding-top: 2px;
 }
 .dropdown-images{
   width: 15px;
@@ -177,7 +186,7 @@ body {
   border: none;
   cursor: pointer;
   background: transparent;
-  padding-top: 10px;
+  padding-top: 3px;
 }
 
 .dropdown {
@@ -191,7 +200,7 @@ body {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     right: -45px;
-    top: 39px;
+    top: 30px;
     text-align: left;
     background-color: #fff;
     min-width: 206px;

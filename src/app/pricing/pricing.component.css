@@ -11,10 +11,10 @@
 
 .pricing2-section {
   background-image: linear-gradient(to right top,#fff,#fbfafb,#f6f6f6,#f2f1f2,#eeeded);
-  margin-top: 42px;
+  padding: 50px 0;
 }
 .color-red{
-  color:#c00
+  color:#f63e70!important0
 }
 .pricing-table2 {
   padding: 10px;

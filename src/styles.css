@@ -1,7 +1,7 @@
 @import "~node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
 body{
- 
+  font-family: 'Roboto', sans-serif!important;
 }
 @media screen and (min-width: 1140px) and (max-width: 1520px) {
   .padding-zero-i{
@@ -331,7 +331,7 @@ width: 60px;
   align-items: center;
 }
 .fa-phone-alt{
-  color: #4682b4;
+  color: #4682b4!important;
   width: 20px;
   height: 20px;
   font-size: 15px;
@@ -355,7 +355,7 @@ width: 60px;
   float: right;
   border-radius: 50px;
   box-shadow: 0 5px 5px #ccc;
-  margin-right: 10px;
+  margin-top: -4px;
 }
 #ck-button{
   background: #566cad;
@@ -8701,6 +8701,14 @@ body:not(.device-touch) .button.button-full strong {
    overflow:unset;
    margin:0
  }
+ .social-forms  .mat-form-field-appearance-legacy .mat-form-field-label{
+  top:26px;
+  overflow:unset;
+  margin:0
+}
+.social-forms .mat-select {
+  border-bottom: 1px solid #ccc;
+}
 .form-content .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
   transform: translateY(-1.98125em) scale(.75) perspective(100px) translateZ(.001px);
 }
@@ -10291,7 +10299,7 @@ color: #0a6aa1;
 font-weight: 700;
 font-size: 12px;
 margin: 0;
-font-family: 'Open Sans', sans-serif;
+
 } 
 .fa-chart-bar {
   color: #ed143d!important;
@@ -11074,6 +11082,7 @@ body:not(.device-touch) .team-overlay {
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   min-height: 458px;
   position: relative;
+  max-width: 350px;
 }
 
 /* .pricing-title {
@@ -11152,7 +11161,7 @@ body:not(.device-touch) .team-overlay {
 .pricing-features ul {
   background: #fff;
   margin-bottom: 0;
-  padding: 0;
+  padding: 9px;
 }
 
 .pricing-action {
