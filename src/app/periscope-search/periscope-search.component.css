@@ -65,10 +65,7 @@ mat-placeholder{
 .modal-content{
     width: 115%!important;
 }
-mat-tab-group{
-    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-}
+
 section{
     -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
@@ -105,33 +102,16 @@ mat-form-field{
     /*display: inline-block;*/
     margin-top: 18px;
 }
-.profile-checkbox {
-    display: flex;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: 65px;
-    /* height: 100%; */
-    /* padding-left: 12px; */
-    padding-right: 12px;
-    border-right: 1px solid #ebecf3;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    /* background-color: #fff; */
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    cursor: pointer;
-}
+
 input[type=checkbox]{
     zoom: 1.5;
 }
-.tbl-cell{
-    font-weight: 600;
-    font-size: 19px;
-}
+
 .fa-periscope{
-    color: #00a4c3; 
+    color: #00a4c3;
+    width: 20px;
+    height: 20px;
+    font-size: 15px; 
 }
 i{
     color: #000

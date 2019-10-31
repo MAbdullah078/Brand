@@ -16637,9 +16637,7 @@ body.sidebar-hidden .page-content {
     color: #c00 !important;
 }
 .mat-select-placeholder{
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
+font-weight: 500;
 }
 /*Start Twitter Catagories*/
 .faq-page-header-search .find{

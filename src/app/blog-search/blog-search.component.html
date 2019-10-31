@@ -57,10 +57,10 @@
                         </ng-template>
                         <div class="body">
                             <div class="container">
-                                <form (submit)="setPage(1)" class=" search-form m-0">
+                                <form (submit)="setPage(1)" class=" social-forms m-0">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatNameblog($event)"
+                                            <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatNameblog($event)"
                                                         placeholder="Select Category" style="width:100%">
                                                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                                     {{ option }}
@@ -105,12 +105,7 @@
         </div>
 
     </div>
-    <div class="row"*ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-center">
-            <h4 class="m-0">Featured Blogosphere</h4>
-        </div>
-
-    </div>
+   
 <div class="SickyPage" *ngIf="loaded&& blogs.totalItems!=0">
         <div class="row" >
             <div class="container-fluid ">
@@ -596,19 +591,16 @@
 
 
         <div class="profile-container"  *ngFor="let item of blogs.results">
-            <div class="row">
+            <div class="row m-0 p-0 p-2">
         
         
-                <div class="col-md-1 profile-checkbox" type="checkbox">
-                    <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                    <label for="table-check-{{item['id']}}"></label>
+                <div class="col-md-2 profile-checkbox" type="checkbox">
+                        <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                                <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                              </div>
                 </div>
         
-        <div class="col-md-1 followers-division">
-        
-        
-            
-        </div>
                 
                             
                     
@@ -624,7 +616,7 @@
                             <div>
                                     <label class="item-content ml-4">{{item['description']}}</label>
                             <div>
-                                    <label class="item-loc ml-4"> <i class="fas fa-phone-alt"></i> Blog Link:  <a (click)="gotoblog(item['main_url'])">{{item['main_url']}}</a></label>
+                                    <label class="item-loc ml-4"> <i class="fas fa-phone-alt"></i>Blog Link:  <a (click)="gotoblog(item['main_url'])">{{item['main_url']}}</a></label>
                           </div>
                           </div>
                           
@@ -646,7 +638,7 @@
                     </div>
                     <div class="col-md-6">
                         <div>
-                                <span class="right-item"><i class="fab fa-blogger"></i> Blogs:</span> <span class="list-item1">{{item['blogs']}}</span>
+                                <span class="right-item"><i class="fab fa-blogger"></i>Blogs:</span> <span class="list-item1">{{item['blogs']}}</span>
                             
                           
                 </div>
@@ -1011,43 +1003,45 @@
     <!--</section>-->
     <div class="container-fluid" *ngIf="!loaded">
 
-        <div class="row" id="myHeader">
-            <div class="col-md-12 list-row">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!--<button  class="btn btn-success">Select All</button>-->
-                        <div id="ck-button">
-                            <label>
 
-                                <input type="checkbox" class="checkbox"  (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
-                            </label>
-                        </div>
-
-                        <button  class="btn  add-to-list pull-right" (click)="add_create_list()"> Add to list</button>
-
+        <div class="row mt-3" id="myHeader">
+                <div class="col-md-2">
+                    <!--<button  class="btn btn-success">Select All</button>-->
+                    <div id="ck-button">
+                        <label>
+        
+                            <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                        </label>
                     </div>
-                </div>
-            </div>
+                    </div>
+                    <div class="col-md-8 text-center">
+                        
+        <div  *ngIf="!loaded" >
+            <h4 class="m-0" >Featured Blogosphere</h4>
+        
+        
         </div>
-
-      
+                    </div>
+                    <div class="col-md-2">
+                    <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
+                </div>
+        
+        
+        </div>
 
 
 
         <div class="profile-container"  *ngFor="let item of results" >
-                <div class="row">
+                <div class="row m-0 p-0 p-2">
             
             
-                    <div class="col-md-1 profile-checkbox" type="checkbox">
-                        <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                        <label for="table-check-{{item['id']}}"></label>
+                    <div class="col-md-2 profile-checkbox" type="checkbox">
+                            <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                                    <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                                  </div>
                     </div>
             
-            <div class="col-md-1 followers-division">
-            
-            
-                
-            </div>
                     
                                 
                         
@@ -1063,7 +1057,7 @@
                                 <div>
                                         <label class="item-content ml-4">{{item['description']}}</label>
                                 <div>
-                                        <label class="item-loc ml-4"> <i class="fas fa-globe"></i> Contact:  <a >{{item['main_url']}}</a></label>
+                                        <label class="item-loc ml-4"> <i class="fab fa-blogger-b link"></i>Blog link  <a >{{item['main_url']}}</a></label>
                               </div>
                               </div>
                               
@@ -1076,7 +1070,7 @@
                                         <span class="right-item"><i class="fab fa-hackerrank"></i>Alexa:</span> <span class="list-item1">{{item['seoData']['ALEXA']}}</span>
                                   </div>
                                   <div>
-                                        <span class="right-item"> <i class="fa fa-link" ></i> Moz Rank:</span> <span class="list-item1">{{item['moz_rank']}}</span>
+                                        <span class="right-item"> <i class="fa fa-link" ></i>Moz Rank:</span> <span class="list-item1">{{item['moz_rank']}}</span>
                                   </div>
                                        
                             </div>
@@ -1085,12 +1079,12 @@
                         </div>
                         <div class="col-md-6">
                             <div>
-                                    <span class="right-item"><i class="fab fa-blogger"></i> Blogs:</span> <span class="list-item1">{{item['blogs']}}</span>
+                                    <span class="right-item"><i class="fab fa-blogger"></i>Blogs:</span> <span class="list-item1">{{item['blogs']}}</span>
                                 
                               
                     </div>
                     <div>
-                            <span class="right-item"><i class="fa fa-random" ></i> Wowtr:</span> <span class="list-item1">{{item['seoData']['WOWTR']}}</span>
+                            <span class="right-item"><i class="fa fa-random" ></i>Wowtr:</span> <span class="list-item1">{{item['seoData']['WOWTR']}}</span>
                         </div>
                       </div>
                     </div>

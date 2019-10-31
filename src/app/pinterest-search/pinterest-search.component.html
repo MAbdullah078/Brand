@@ -45,7 +45,7 @@
                     </ng-template>
                     <div class="body">
                         <div class="container">
-                            <form (submit)="setPage(1)" class=" search-form m-0">
+                            <form (submit)="setPage(1)" class=" social-forms m-0">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -59,7 +59,7 @@
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row search-form">
+                                <div class="row Advanced-search ">
                                     <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="follower" placeholder="Serch by Followers" name="social">
@@ -71,7 +71,7 @@
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row search-form">
+                                <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="Pins" placeholder="Serch by Pins" name="loc">
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row search-form">
+                                <div class="row Advanced-search">
                                     <div class="col-md-12  text-center">
                                         <button type="submit"  class="btn btn-primary" >
                                             Search <i class="fa fa-sliders"></i>
@@ -102,12 +102,7 @@
         </div>
     </div>
 
-    <div class="row" *ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-center">
-            <h4 class="m-0">Featured Pinterest Influencers</h4>
-        </div>
 
-    </div>
 
 
 
@@ -475,12 +470,14 @@
 
 
 <div class="profile-container"  *ngFor="let item of influencers.results">
-  <div class="row">
+  <div class="row m-0 p-0 p-2">
 
 
       <div class="col-md-1 profile-checkbox" type="checkbox">
-          <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-          <label for="table-check-{{item['id']}}"></label>
+          <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+              <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+            </div>
       </div>
 
 <div class="col-md-1 followers-division">
@@ -520,9 +517,9 @@
                   
                           </div>
                           <div class="ml-4">
-                            <span class="right-item ml-1"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                            <span class="right-item ml-1"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following']}}</span>
                             <div>
-                            <span class="right-item ml-1"><i class="fas fa-clipboard-check"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span>
+                            <span class="right-item ml-1"><i class="fas fa-clipboard-check"></i>Boards:</span> <span class="list-item1">{{item['boards']}}</span>
                           </div>
                           </div>
               </div>
@@ -532,7 +529,7 @@
 
                   <span  class="list-item1">
                
-                        <i class="fa fa-user" ></i> Pins:</span>
+                        <i class="fa fa-user" ></i>Pins:</span>
                 
                       <!-- <small>Poor</small> -->
                        {{item['pins']| thousandSuff}}
@@ -649,22 +646,30 @@
   <!--</div>-->
     <div class="container-fluid" *ngIf="!loaded">
 
-        <div class="row" id="myHeader">
-            <div class="col-md-12 list-row">
-            
-                        <!--<button  class="btn btn-success">Select All</button>-->
-                        <div id="ck-button">
-                            <label>
-
-                                <input type="checkbox" class="checkbox" class="checkbox"   (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
-                            </label>
-                          </div>
-                        <button  class="btn  add-to-list " (click)="add_create_list()"> Add to list</button>
-                      
-                   
-               
+        <div class="row mt-3" id="myHeader">
+            <div class="col-md-2">
+                <!--<button  class="btn btn-success">Select All</button>-->
+                <div id="ck-button">
+                    <label>
+    
+                        <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                    </label>
+                </div>
+                </div>
+                <div class="col-md-8 text-center">
+                    
+    <div  *ngIf="!loaded" >
+        <h4 class="m-0" >Featured Pinterest Influencers</h4>
+    
+    
+    </div>
+                </div>
+                <div class="col-md-2">
+                <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
             </div>
-        </div>
+    
+    
+    </div>
 
         <!-- <div class="profile-container" *ngFor="let item of influencers_by_default.results" >
             <div class="row">
@@ -736,12 +741,14 @@
 
 
 <div class="profile-container"  *ngFor="let item of influencers_by_default.results">
-    <div class="row">
+    <div class="row m-0 p-0 p-2">
 
 
         <div class="col-md-1 profile-checkbox" type="checkbox">
-            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-            <label for="table-check-{{item['id']}}"></label>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+              </div>
         </div>
 
 <div class="col-md-1 followers-division">
@@ -783,7 +790,7 @@
                             <div class="ml-4">
                               <span class="right-item ml-1"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
                               <div>
-                              <span class="right-item ml-1"><i class="fas fa-clipboard-check"></i> Boards:</span> <span class="list-item1">{{item['boards']}}</span>
+                              <span class="right-item ml-1"><i class="fas fa-clipboard-check"></i>Boards:</span> <span class="list-item1">{{item['boards']}}</span>
                             </div>
                             </div>
                 </div>

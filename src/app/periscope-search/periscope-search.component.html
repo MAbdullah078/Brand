@@ -45,7 +45,7 @@
                     </ng-template>
                     <div class="body">
                         <div class="container">
-                          <form class="search-form">                            <div class="row">
+                          <form class="social-forms m-0">                            <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field >
                                         <input matInput type="text" placeholder="Search by Username"  tabindex=1 required>
@@ -99,12 +99,7 @@
         </div>
     </div>
 
-    <div class="row" *ngIf="!loaded" style="margin-top: 2%">
-        <div class="col-md-12 text-center">
-            <h4 class="m-0">Featured Periscope Influencers</h4>
-        </div>
 
-    </div>
 
 
  
@@ -363,30 +358,33 @@
   <!--</section>-->
   <div class="container-fluid" *ngIf="!loaded">
 
-    <div class="row" id="myHeader">
-      <div class="col-md-12 list-row">
-        <div class="row">
-          <div class="col-md-12">
-            <!--<button  class="btn btn-success">Select All</button>-->
-            <div id="ck-button">
-              <label>
-
-                <input type="checkbox" class="checkbox"  (change)="checkAllperid($event.target.checked)" ><span>Select All</span>
-              </label>
-            </div>
-
-            <button  class="btn add-to-list pull-right" (click)="add_create_list()"> Add to list</button>
-
-          </div>
-
-
-
-        
-        </div>
-      </div>
-    </div>
+   
 
  
+    <div class="row mt-3" id="myHeader">
+        <div class="col-md-2">
+            <!--<button  class="btn btn-success">Select All</button>-->
+            <div id="ck-button">
+                <label>
+
+                    <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                </label>
+            </div>
+            </div>
+            <div class="col-md-8 text-center">
+                
+<div  *ngIf="!loaded" >
+    <h4 class="m-0" >Featured Periscope Influencers</h4>
+
+
+</div>
+            </div>
+            <div class="col-md-2">
+            <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
+        </div>
+
+
+</div>
 
 
 
@@ -410,12 +408,14 @@
 
 
     <div class="profile-container"  *ngFor="let item of default_influencers.results" >
-        <div class="row">
+        <div class="row m-0 p-0 ">
     
     
             <div class="col-md-1 profile-checkbox" type="checkbox">
-                <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                <label for="table-check-{{item['id']}}"></label>
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                    <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                  </div>
             </div>
     
     <div class="col-md-1 followers-division">
@@ -440,7 +440,7 @@
                         <div>
                         <label class="item-loc ml-4"> <i class="fab fa-periscope "></i>Profile url:  <a  (click)="goTwitterProfile(item['profile_link'])">{{item['profile_link']}}</a></label>
                         <div>
-                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i> Twitter name: <a> {{item['twitter_name']}}
+                        <label class="item-loc ml-4"><i class="fab fa-periscope "></i>Twitter name: <a> {{item['twitter_name']}}
                           </a></label>
                       </div>
                       </div>
@@ -451,12 +451,12 @@
                     <div class="col-md-6">
                         <div class="ml-4">
                           <div>
-                              <span class="right-item"><i class="fa fa-users" ></i> Followers<span class="list-item1">
+                              <span class="right-item"><i class="fa fa-users" ></i>Followers<span class="list-item1">
 
                               {{item['followers']| thousandSuff}}</span></span>
                           </div>
                           <div>
-                            <span class="right-item"><i class="fas fa-eye"></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                            <span class="right-item"><i class="fas fa-eye"></i>Following:</span> <span class="list-item1">{{item['following']}}</span>
                           </div>
                                
                     </div>
@@ -465,13 +465,13 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <span class="right-item"><i class="fa fa-upload" ></i> Broadcast :<span class="list-item1">{{item['braodcasts']}}</span></span>
+                        <span class="right-item"><i class="fa fa-upload" ></i>Broadcast :<span class="list-item1">{{item['braodcasts']}}</span></span>
                         
                       
             </div>
             <div>
                 <span class="right-item">
-                    <i class="fas fa-heart"></i> Hearts <span class="list-item1">
+                    <i class="fas fa-heart"></i>Hearts <span class="list-item1">
                      {{item['hearts'] | thousandSuff}}</span></span>  
                      
                     </div>
@@ -807,8 +807,10 @@
   
   
           <div class="col-md-1 profile-checkbox" type="checkbox">
-              <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-              <label for="table-check-{{item['id']}}"></label>
+              <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                  <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                </div>
           </div>
   
   <div class="col-md-1 followers-division">
@@ -833,7 +835,7 @@
                       <div>
                       <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>Profile url:  <a  (click)="goTwitterProfile(item['profile_link'])">{{item['profile_link']}}</a></label>
                       <div>
-                      <label class="item-loc ml-4"><i class="fab fa-periscope "></i> Twitter Name: <a> {{item['twitter_name']}}
+                      <label class="item-loc ml-4"><i class="fab fa-periscope "></i>Periscope Name: <a> {{item['twitter_name']}}
                         </a></label>
                     </div>
                     </div>
@@ -844,12 +846,12 @@
                   <div class="col-md-6">
                       <div class="ml-4">
                         <div>
-                            <span class="right-item"><i class="fa fa-users" ></i> Followers<span class="list-item1">
+                            <span class="right-item"><i class="fa fa-users" ></i>Followers<span class="list-item1">
 
                             {{item['followers']| thousandSuff}}</span></span>
                         </div>
                         <div>
-                          <span class="right-item"><i class="fas fa-eye"></i> Following:</span> <span class="list-item1">{{item['following']}}</span>
+                          <span class="right-item"><i class="fas fa-eye"></i>Following:</span> <span class="list-item1">{{item['following']}}</span>
                         </div>
                              
                   </div>
@@ -858,13 +860,13 @@
               </div>
               <div class="col-md-6">
                   <div>
-                      <span class="right-item"><i class="fa fa-upload" ></i> Broadcast :<span class="list-item1">{{item['braodcasts']}}</span></span>
+                      <span class="right-item"><i class="fa fa-upload" ></i>Broadcast :<span class="list-item1">{{item['braodcasts']}}</span></span>
                       
                     
           </div>
           <div>
               <span class="right-item">
-                  <i class="fas fa-heart"></i> Hearts <span class="list-item1">
+                  <i class="fas fa-heart"></i>Hearts <span class="list-item1">
                    {{item['hearts'] | thousandSuff}}</span></span>  
                    
                   </div>

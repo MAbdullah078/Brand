@@ -46,7 +46,7 @@
                     </ng-template>
                     <div class="body">
                         <div class="container">
-                            <form (submit)="setPage(1)" class=" search-form m-0">
+                            <form (submit)="setPage(1)" class=" social-forms  m-0">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
@@ -107,12 +107,6 @@
         </div>
     </div>
 
-    <div class="row" *ngIf="!loaded" style="margin-top: 3%">
-        <div class="col-md-12 text-center">
-            <h4 class="m-0">Featured Twitter Influencers</h4>
-        </div>
-
-    </div>
 
 
 
@@ -186,12 +180,14 @@
 
 
         <div class="profile-container"  *ngFor="let item of influencers.results">
-            <div class="row">
+            <div class="row m-0 p-0 p-2">
       
       
               <div class="col-md-1 profile-checkbox" type="checkbox">
-                <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                <label for="table-check-{{item['id']}}"></label>
+                    <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                            <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                          </div>
               </div>
               <div class="col-md-1 followers-division">
                 <img [src]="item['image_url']" class="twitter-image" >
@@ -213,18 +209,20 @@
                 </div>
                 <div class="ml-4">
                 <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                <span class="right-item" ><i class="fas fa-globe"></i> Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
-                <span class="right-item" ><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>    
+                <span class="right-item" ><i class="fab fa-twitter"></i>Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
+                <div>
+                <span class="right-item" ><i class="fas fa-globe"></i>Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+            </div>    
             </div>
                  <div class="row">
                   <div class="col-md-4">
                         <div class="ml-4">
 
                             <div>
-                    <span class="right-item"><i class="fa fa-users" ></i> Follower:</span> <span class="list-item1">{{item['followers']| thousandSuff}}</span> 
+                    <span class="right-item"><i class="fa fa-users" ></i>Follower:</span> <span class="list-item1">{{item['followers']| thousandSuff}}</span> 
                 </div>
                 <div>
-                <span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}}</span>
+                <span class="right-item"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}}</span>
             </div>
 
           
@@ -236,10 +234,10 @@
                 </div>
                 <div class="col-md-4" >
                 <div>
-                        <span class="right-item"> <i class="fab fa-twitter" ></i> Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
+                        <span class="right-item"> <i class="fab fa-twitter" ></i>Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
                     </div>
                     <div>
-                        <span class="right-item"><i class="fa fa-upload" ></i> Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
+                        <span class="right-item"><i class="fa fa-upload" ></i>Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                     </div>
 
 
@@ -250,7 +248,7 @@
                     </div>
                     <div class="col-md-4">
                             <div>
-                                    <span class="right-item"><i class="fa fa-user" ></i> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
+                                    <span class="right-item"><i class="fa fa-user" ></i>Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
                                 </div>
                                 <div>
                                         <!-- <span class="right-item"><i class="fa fa-random" ></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> -->
@@ -380,37 +378,40 @@
 
         <div class="container-fluid" *ngIf="!loaded && influencers_by_defalut.totalItems!=0">
 
-            <div class="row" id="myHeader">
-                <div class="col-md-12 list-row">
-                    <div class="row">
-                        <div class="col-md-12">
+                <div class="row mt-3" id="myHeader">
+                        <div class="col-md-2">
                             <!--<button  class="btn btn-success">Select All</button>-->
                             <div id="ck-button">
                                 <label>
-
-                                    <input type="checkbox" class="checkbox"  (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                
+                                    <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
                                 </label>
                             </div>
-                            <!-- <div id="ck-button">
-                                    <label>
-        
-                                        <input type="checkbox"  (change)="cheakall($event.target.checked)" ><span>Select All</span>
-                                    </label>
-                                </div> -->
-                            <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
-
-                        </div>
-                    </div>
+                            </div>
+                            <div class="col-md-8 text-center">
+                                
+                <div  *ngIf="!loaded" >
+                    <h4 class="m-0" >Featured Twitter Influencers</h4>
+                
+                
                 </div>
-            </div>
+                            </div>
+                            <div class="col-md-2">
+                            <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
+                        </div>
+                
+                
+                </div>
 
                 <div class="profile-container" *ngFor="let item of influencers_by_defalut.results" >
-                    <div class="row">
+                    <div class="row m-0 p-0 p-2">
               
               
                       <div class="col-md-1 profile-checkbox" type="checkbox">
-                        <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                        <label for="table-check-{{item['id']}}"></label>
+                            <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                                    <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                                  </div>
                       </div>
                       <div class="col-md-1 followers-division">
                         <img [src]="item['image_url']" class="twitter-image" >
@@ -432,18 +433,20 @@
                         </div>
                         <div class="ml-4">
                         <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                        <span class="right-item" ><i class="fas fa-globe"></i> Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
-                        <span class="right-item"><i class="fas fa-globe"></i> Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+                        <span class="right-item" ><i class="fab fa-twitter"></i>Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
+                        <div>
+                        <span class="right-item"><i class="fas fa-globe"></i>Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+                    </div>
                         </div>
                          <div class="row">
                           <div class="col-md-4">
                                 <div class="ml-4">
     
                                     <div>
-                            <span class="right-item"><i class="fa fa-users" ></i> Follower:</span> <span class="list-item1">{{item['followers']| thousandSuff}}</span> 
+                            <span class="right-item"><i class="fa fa-users" ></i>Follower:</span> <span class="list-item1">{{item['followers']| thousandSuff}}</span> 
                         </div>
                         <div>
-                        <span class="right-item"> <i class="fa fa-eye" ></i> Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}}</span>
+                        <span class="right-item"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}}</span>
                     </div>
 
                   
@@ -455,10 +458,10 @@
                         </div>
                         <div class="col-md-4" >
                         <div>
-                                <span class="right-item"> <i class="fab fa-twitter" ></i> Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
+                                <span class="right-item"> <i class="fab fa-twitter" ></i>Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
                             </div>
                             <div>
-                                <span class="right-item"><i class="fa fa-upload" ></i> Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
+                                <span class="right-item"><i class="fa fa-upload" ></i>Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                             </div>
     
     
@@ -469,7 +472,7 @@
                             </div>
                             <div class="col-md-4">
                                     <div>
-                                            <span class="right-item"><i class="fa fa-user" ></i> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
+                                            <span class="right-item"><i class="fa fa-user" ></i>Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
                                         </div>
                                         <div>
                                                 <!-- <span class="right-item"><i class="fa fa-random" ></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> -->
@@ -550,8 +553,10 @@
                         <img [src]="item['image_url']"  style="height: 100px;  width: 100px; margin-top: 15px; border-radius: 100%">
                     </div>
                     <div class="col-md-2 profile-checkbox" type="checkbox">
-                            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                            <label for="table-check-{{item['id']}}"></label>
+                            <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+                                    <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
+                                  </div>
                         </div>
 
                     <div class="col-md-8" style="margin-left: 3%">
