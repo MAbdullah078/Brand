@@ -32,7 +32,7 @@ export class FacebookSearchComponent implements OnInit {
     title;
     location;
     model: any={};
-    ER;
+    ER;value;option;
     likes;
     perfomance;
     locationArray:any=[];
@@ -275,12 +275,13 @@ this.get_default_FB_data(1);
         return this.options.filter(option =>
             option.toLowerCase().indexOf(val.toLowerCase()) === 0);
     }
+    cat
+    getFbData(){
 
-    getFbData(e){
-        this.selected_category= e['option']['value'];
+    //   alert ( this.cat)
+        this.selected_category= this.cat;
         this.pager= {};
         this.setPage(1);
-
     }
 
 

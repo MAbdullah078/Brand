@@ -133,10 +133,19 @@ export class BlogosphereSearchComponent implements OnInit, AfterViewInit {
 
     }
 
-    getTWInfluencers(e) {
+    // getTWInfluencers(e) {
 
-        this.setPage(1);
-    }
+    //     this.setPage(1);
+    // }
+
+    cat;
+    getTWInfluencers(){
+
+        //   alert ( this.cat)
+            this.selected_category= this.cat;
+            this.pager= {};
+            this.setPage(1);
+        }
 
     cheakall(e) {
 

@@ -20,17 +20,30 @@
               </div>
               <div class="col-md-6 text-center p-auto">
 
-                <mat-form-field class="example-full-width">
+                <!-- <mat-form-field class="example-full-width">
                   <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
                   <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getYTChannels($event)">
                     <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
                       {{ option }}
                     </mat-option>
                   </mat-autocomplete>
+                </mat-form-field> -->
+
+                <mat-form-field>
+                  <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
+                    <mat-select placeholder="Select Category" [(ngModel)]="cat">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-select>
                 </mat-form-field>
 
-
               </div>
+              <div class="col-md-12 text-center">
+                <button type="submit"  class="btn btn-primary" (click)="getYTChannels()">
+                    Search <i class="fa fa-sliders"></i>
+                </button>
+            </div>
             </div>
 
           </div>
@@ -137,21 +150,6 @@
       </div>
     </div>
 
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="profile-container" *ngFor="let item of default_influencers.results" >
       <div class="row">
 
@@ -184,9 +182,9 @@
                    <div>   
               <label class="item-loc"><i class="fab fa-instagram" ></i>Profile Link:  <a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
               </div>
-              <div>
+              <!-- <div>
               <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" (click)="goToMedium(item['external_url'])"> {{item['external_url']}}</span></label>
-            </div>
+            </div> -->
               </div>
                       </div>
                       <div class="row">
@@ -339,9 +337,9 @@
                    <div>   
               <label class="item-loc"><i class="fas fa-globe"></i>Profile Link:  <a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
               </div>
-              <div >
+              <!-- <div >
               <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" (click)="goToMedium(item['external_url'])" > {{item['external_url']}}</span></label>
-            </div>
+            </div> -->
               </div>
                       </div>
                       <div class="row">
