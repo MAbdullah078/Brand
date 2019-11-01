@@ -74,34 +74,49 @@
                                 <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="subscribers" placeholder="Serch by Subscribers" name="social">
+                                            <input matInput type="text" [(ngModel)]="minsubscribers" placeholder="Minimum Subscribers" name="social">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
+                                            <mat-form-field>
+                                                <input matInput type="text" [(ngModel)]="maxsubscribers" placeholder="Maximum Subscribers" name="social2">
+                                            </mat-form-field>
+                                        </div>
+                                    <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="t_views" placeholder="Serch by  Views" name="seo">
+                                            <input matInput type="text" [(ngModel)]="minviews" placeholder="Minimum Views" name="seo">
                                         </mat-form-field>
                                     </div>
+                                    <div class="col-md-6">
+                                            <mat-form-field>
+                                                <input matInput type="text" [(ngModel)]="maxviews" placeholder="Maximum Views" name="seo2">
+                                            </mat-form-field>
+                                        </div>
                                 </div>
                                 <div class="row Advanced-search">
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="rank" placeholder="Serch by Rank" name="loc">
+                                            <input matInput type="text" [(ngModel)]="minrank" placeholder="Minimum Rank" name="loc">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
+                                            <mat-form-field>
+                                                <input matInput type="text" [(ngModel)]="maxrank" placeholder="Maximum Rank" name="loc2">
+                                            </mat-form-field>
+                                        </div>
+                                    <!-- <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="today_upload_video" placeholder="Serch by Today Upload Videos" name="er">
                                         </mat-form-field>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="row Advanced-search" >
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="tomorrow_upload_video" placeholder="Serch by Tommorow Upload Videos" name="er">
                                         </mat-form-field>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-12  text-center">
                                         <button type="submit"  class="btn btn-primary" >
                                             Search <i class="fa fa-sliders"></i>
