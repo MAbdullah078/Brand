@@ -32,9 +32,9 @@ export class FacebookSearchComponent implements OnInit {
     title;
     location;
     model: any={};
-    ER;value;option;
-    likes;
-    perfomance;
+    ER;value;option;minER;maxER;
+    likes;minlikes;maxlikes;
+    perfomance;minperfomance;maxperfomance;
     locationArray:any=[];
     max= 10;
     location_value: string = "";
@@ -285,6 +285,10 @@ this.get_default_FB_data(1);
     }
 
 
+
+
+
+
     setPage(page: number) {
         if (page < 1 || page > this.pager.totalPages) {
             return;
@@ -295,9 +299,15 @@ this.get_default_FB_data(1);
         this.http.post(Config.api+'/ml/get_facebook_pages/' + this.selected_category + '/?page=' + page + '', {
             title: this.title,
             location: this.location,
-            like:this.likes,
-            performance:this.perfomance,
-            ER:this.ER
+            // like:this.likes,
+            likemin:this.minlikes,
+            likemax:this.maxlikes,
+            // performance:this.perfomance,
+            performancemin:this.minperfomance,
+            performancemax:this.maxperfomance,
+            // ER:this.ER
+            ERmin:this.minER,
+            ERmax:this.maxER
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;
@@ -319,7 +329,7 @@ this.get_default_FB_data(1);
         this.http.post(Config.api+'/ml/get_facebook_pages/' + this.selected_category + '/?page=' + page + '', {
             title: this.title,
             location: this.location,
-            like:this.title,
+            like:this.likes,
             performance:this.perfomance,
             ER:this.ER
         },{headers:headers})
