@@ -10256,8 +10256,9 @@ ul.tab-nav.tab-nav2 li:first-child {
   box-shadow: 0 0 12px #ccc;
     margin: 6px;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 15px;
     background:#fff;
+    width:100%;
 }
 .search-form{
   margin:0
@@ -11113,7 +11114,7 @@ body:not(.device-touch) .team-overlay {
   margin-top: 20px;
 }
 .mat-select-placeholder{
-  font-size: 14px;
+  font-size: 16px;
 }
 
   .mat-option.mat-active {
@@ -31956,10 +31957,10 @@ body {
   width: calc(100% - 250px);
 }
 .sidebar-forms .mat-form-field-appearance-legacy .mat-form-field-label {
-  font-size: 12px;
+  font-size: 14px;
 }
 .sidebar-forms  [placeholder], input[placeholder] {
-  font-size: 12px;
+  font-size: 14px;
 }
 .sidebar-forms .mat-form-field-appearance-legacy .mat-form-field-label {
   top: 27px;
