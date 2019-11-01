@@ -27,8 +27,8 @@ export class FlickrSearchComponent implements OnInit {
     myControl: FormControl = new FormControl();
     main_checkbox;
     fbinfluencers;
-    likes;minlikes;maxlikes;minfollowers;maxfollowers;
-    perfomance;minviews;maxviews;minrank;maxrank;
+    likes;
+    perfomance;
     locationArray:any=[];
     max= 100;
     location_value: string = "";
@@ -124,16 +124,8 @@ export class FlickrSearchComponent implements OnInit {
             title: this.title,
             location: this.location,
             like:this.likes,
-            // minlike:this.minlikes,
-            // maxlike:this.maxlikes,
-            followersmin:this.minfollowers,
-            followersmax:this.maxfollowers,
             performance:this.perfomance,
-            ER:this.ER,
-            viewsmin:this.minviews,
-            viewsmax:this.maxviews,
-            profile_rankmin:this.minrank,
-            profile_rankmax:this.maxrank
+            ER:this.ER
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;

@@ -41,10 +41,10 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
 
     filteredOptions: Observable<string[]>;
      name: any;
-     following: any;minfollowing;maxfollowing
-     follower: any;minfollower;maxfollower;
-     account_rank: any;minaccount_rank;maxaccount_rank;
-     post: any;minpost;maxpost;
+     following: any;
+     follower: any;
+     account_rank: any;
+     post: any;
     constructor(private http: HttpService, private router: Router,private route:ActivatedRoute, private pagerService: PagerService ) {
 
     }
@@ -572,18 +572,10 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
         // this.http.get(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         this.http.post(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {
             name: this.name,
-            // following: this.following,
-            followingmin:this.minfollowing,
-            followingmax:this.maxfollowing,
-            // follower:this.follower,
-            followermin:this.minfollower,
-            followermax:this.maxfollower,
-            // account_rank:this.account_rank,
-            account_rankmin:this.minaccount_rank,
-            account_rankmax:this.maxaccount_rank,
-            // posts:this.post,
-            postsmin:this.minpost,
-            postsmax:this.maxpost
+            following: this.following,
+            follower:this.follower,
+            account_rank:this.account_rank,
+            posts:this.post,
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;

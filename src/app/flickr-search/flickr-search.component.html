@@ -75,36 +75,16 @@
                     </div>
                   </div>
                   <div class="row Advanced-search">
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                       <mat-form-field>
                         <input matInput type="text" [(ngModel)]="likes" placeholder="Serch by Likes" name="social">
                       </mat-form-field>
-                    </div> -->
+                    </div>
                     <div class="col-md-6">
-                        <mat-form-field>
-                          <input matInput type="text" [(ngModel)]="minfollowers" placeholder="Minimum Followers" name="social">
-                        </mat-form-field>
-                      </div>
-                      <div class="col-md-6">
-                          <mat-form-field>
-                            <input matInput type="text" [(ngModel)]="maxfollowers" placeholder="Maximum Followers" name="social2">
-                          </mat-form-field>
-                        </div>
-                    <!-- <div class="col-md-6">
                       <mat-form-field>
                         <input matInput type="text" [(ngModel)]="perfomance" placeholder="Serch by Perfomance" name="seo">
                       </mat-form-field>
-                    </div> -->
-                    <div class="col-md-6">
-                        <mat-form-field>
-                          <input matInput type="text" [(ngModel)]="minviews" placeholder="Minimum Views" name="seo">
-                        </mat-form-field>
-                      </div>
-                      <div class="col-md-6">
-                          <mat-form-field>
-                            <input matInput type="text" [(ngModel)]="maxviews" placeholder="Maximum Views" name="seo2">
-                          </mat-form-field>
-                        </div>
+                    </div>
                   </div>
                   <div class="row Advanced-search">
                     <div class="col-md-6">
@@ -113,15 +93,9 @@
                       </mat-form-field>
                     </div>
                     <div class="col-md-6">
-                      <!-- <mat-form-field>
-                        <input matInput type="text" [(ngModel)]="ER" placeholder="Serch by Engagement Range" name="er">
-                      </mat-form-field> -->
                       <mat-form-field>
-                          <input matInput type="text" [(ngModel)]="minrank" placeholder="Minimum Rank" name="rank">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input matInput type="text" [(ngModel)]="maxrank" placeholder="Maximum Rank" name="rank2">
-                          </mat-form-field>
+                        <input matInput type="text" [(ngModel)]="ER" placeholder="Serch by Engagement Range" name="er">
+                      </mat-form-field>
                     </div>
                   </div>
   
@@ -166,8 +140,54 @@
     <div>
       <div class="container-fluid" *ngIf="loaded && fbinfluencers.totalItems!=0">
   
+        <div class="row" style="margin-top: 1%">
     
-        
+          <div class="col-md-5">
+            <nav >
+              <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
+    
+                <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+                <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+                <!--</li>-->
+                <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                  <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+                    First
+                  </a>
+                </li>
+                <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+                  <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+    
+                <li class="page-item" *ngFor="let page of pager.pages"
+                    [ngClass]="{active:pager.currentPage === page}"
+                    (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
+                <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+                <!--</li>-->
+                <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                  <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+                <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                  <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+                    Last
+                  </a>
+                </li>
+                <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+                <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+                <!--</li>-->
+              </ul>
+            </nav>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 center-showing">
+            <h5 style="margin: 10px">Displaying {{fbinfluencers.results.length}} of {{fbinfluencers.totalItems}} Results</h5>
+          </div>
               <!-- <div class="col-md-3">
                 <button class="btn btn-success">Select All</button>
                 <div id="ck-button">
@@ -521,7 +541,7 @@
                               <span class="right-item"><i class="fa fa-users" ></i> Followers:</span> <span class="list-item1">{{item['followers'] | thousandSuff}}</span>
                             </div>
                             <div>
-                              <span class="right-item"><i class="fas fa-eye"></i> Total Views:</span> <span class="list-item1">{{item['views_total'] | thousandSuff}}</span>
+                              <span class="right-item"><i class="fas fa-eye"></i> Total Views:</span> <span class="list-item1">{{item['views_total']}}</span>
                             </div>
                                  
                       </div>
@@ -609,9 +629,6 @@
               <div class="col-md-2">
               <button  class="btn add-to-list " (click)="add_create_list()"> Add to list</button>
             </div>
-            <div class="col-md-12 text-center">
-                <h5 class="m-0">Displaying {{fbinfluencers.results.length}} of {{fbinfluencers.totalItems}} Results</h5>
-              </div>
            
           
         
@@ -632,8 +649,8 @@
     </div>
             <div class="col-md-1 followers-division">
                 <div>
-                        <h6 class="m-0">Followers:</h6>
-                    <h3 class="item-content" >{{item['followers']}}</h3>
+                        <h6 class="m-0">Likes:</h6>
+                    <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
                 </div>
             </div>
                     <div class="col-md-9">
@@ -658,7 +675,7 @@
                             <span class="right-item"><i class="fa fa-users" ></i> Followers:</span> <span class="list-item1">{{item['followers'] | thousandSuff}}</span>
                           </div>
                           <div>
-                            <span class="right-item"><i class="fas fa-eye"></i> Total Views:</span> <span class="list-item1">{{item['views_total'] | thousandSuff}}</span>
+                            <span class="right-item"><i class="fas fa-eye"></i> Total Views:</span> <span class="list-item1">{{item['views_total']}}</span>
                           </div>
                                
                     </div>
