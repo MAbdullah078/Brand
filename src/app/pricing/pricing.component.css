@@ -67,3 +67,17 @@
   color: #fff !important;
   background: #82d0dc;
 }
+
+.mainpagee  .measurements {
+  padding: 5px 10px!important;
+  width: 23%;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 69px;
+  display: inline-block;
+  background: #000;
+}
+
+
+/*  */
