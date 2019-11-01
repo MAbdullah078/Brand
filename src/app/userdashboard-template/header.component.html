@@ -47,7 +47,7 @@
                             data-target=".example-modal-lg" data-toggle="modal" href="#search" id="icon-type-to-search">
                         <button class="top-search-btn" id="serbtn"> <img src="../../assets/img/search.png"> </button> </a>
                         <a>
-                    <div class="dropdown"> <button class="dropbtn"> <i
+                    <div class="dropdown" *ngIf="check_login()"> <button class="dropbtn"> <i
                             class="fa fa-user-circle"></i> My InfluExpAI <span
                             class="fa fa-angle-down"></span></button>
                         <div class="dropdown-content"> <a [routerLink]="['/my-profile']"> 
@@ -65,7 +65,7 @@
                                 <a [routerLink]="['/my-rfm']"> <i class="fas fa-sign-out-alt"></i>My RFM</a> 
                                 <a [routerLink]="['/rfm']"> <i class="fas fa-sign-out-alt"></i>Create RFM</a> 
                                 <a [routerLink]="['/update-password']"> <i class="fa fa-key"></i>Change Password</a> 
-                                <a [routerLink]="['/login']"> <i class="fas fa-sign-out-alt"></i>Logout</a>
+                                <a [routerLink]="['/login']" (click)="logout()"> <i class="fas fa-sign-out-alt"></i>Logout</a>
                                  </div>
                     </div>
                 </a>
