@@ -144,6 +144,7 @@ let username =  this.currentUser.username;
 }
 
 
+
     getUserTweets(username: string) {
         return this.http.get(Config.api+'/gettweets/' + username+'/', this.jwt()).pipe(tap((response: Response) => {
           return response.json();

@@ -75,14 +75,28 @@
                                 </div>
                                 <div class="row Advanced-search">
                                     <div class="col-md-6">
+                                            <!-- <mat-form-field>
+                                                    <input matInput type="text" [(ngModel)]="likes" placeholder="search by Likes" name="social">
+                                                </mat-form-field> -->
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="likes" placeholder="search by Likes" name="social">
+                                            <input matInput type="text" [(ngModel)]="minlikes" placeholder="Minimum Likes" name="social">
                                         </mat-form-field>
+
+                                        <mat-form-field>
+                                                <input matInput type="text" [(ngModel)]="maxlikes" placeholder="Maximun Likes" name="social2">
+    
+                                            </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
-                                        <mat-form-field>
+                                        <!-- <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="perfomance" placeholder="search by Perfomance" name="seo">
-                                        </mat-form-field>
+                                        </mat-form-field> -->
+                                        <mat-form-field>
+                                                <input matInput type="text" [(ngModel)]="minperfomance" placeholder="Minimum Perfomance" name="seo">
+                                            </mat-form-field>
+                                            <mat-form-field>
+                                                    <input matInput type="text" [(ngModel)]="maxperfomance" placeholder="Maximum Perfomance" name="seo2">
+                                                </mat-form-field>
                                     </div>
                                 </div>
                                 <div class="row Advanced-search">
@@ -92,9 +106,15 @@
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
-                                        <mat-form-field>
+                                        <!-- <mat-form-field>
                                             <input matInput type="text" [(ngModel)]="ER" placeholder="search by Engagement Range" name="er">
-                                        </mat-form-field>
+                                        </mat-form-field> -->
+                                        <mat-form-field>
+                                                <input matInput type="text" [(ngModel)]="minER" placeholder="Minimum Engagement Range" name="er">
+                                            </mat-form-field>
+                                            <mat-form-field>
+                                                    <input matInput type="text" [(ngModel)]="maxER" placeholder="Maximum Engagement Range" name="er2">
+                                                </mat-form-field>
                                     </div>
                                 </div>
 
