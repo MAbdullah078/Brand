@@ -11108,11 +11108,14 @@ body:not(.device-touch) .team-overlay {
   margin-top: 20px;
 }
 
+  .mat-option.mat-active {
+background:#000;
+    color: rgba(255, 255, 255, 0.87);
+}
 .pricing-box {
   border: 1px solid #dedede;
   background-color: #fff;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-  min-height: 458px;
   position: relative;
   max-width: 350px;
 }
@@ -11194,6 +11197,7 @@ body:not(.device-touch) .team-overlay {
   background: #fff;
   margin-bottom: 0;
   padding: 9px;
+  min-height: 200px;
 }
 
 .pricing-action {

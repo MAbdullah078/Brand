@@ -1,4 +1,4 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Component, OnInit, AfterViewInit, PLATFORM_ID, Inject} from '@angular/core';
 import {OnDestroy} from '@angular/core';
 import {Router} from '@angular/router';
 import {Headers, Response} from '@angular/http';
@@ -8,6 +8,7 @@ import {Config} from '../../config';
 import {DataService} from '../_services';
 import {AuthenticationService} from '../_services';
 import swal from 'sweetalert2';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -32,11 +33,23 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     currentUserLoaded: boolean = false;
      profile_image: any;
 
-    constructor(private router: Router, private obj:AuthenticationService, private _pushNotifications: PushNotificationsService, private http: HttpService, private data: DataService) {
+    constructor(private router: Router, private obj:AuthenticationService, private _pushNotifications: PushNotificationsService, private http: HttpService, private data: DataService,  @Inject(PLATFORM_ID) private platformId: Object) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        // alert(this.currentUser);
         this.notificationpage = 1;
     }
 
+
+  check_login() {
+    if (isPlatformBrowser(this.platformId)) {
+      if (localStorage.getItem('currentUser')) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  }
     logout() {
         localStorage.clear();
         localStorage.removeItem('currentUser');
