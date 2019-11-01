@@ -194,12 +194,23 @@ export class YoutubeSearchComponent implements OnInit {
         this.router.navigate(['youtube/list/', e])
 
     }
-    getYTChannels(e) {
-        // alert('called')
-        this.selected_category = e['option']['value'];
-        this.pager = {};
-        this.setPage(1);
-    }
+    // getYTChannels(e) {
+    //     // alert('called')
+    //     this.selected_category = e['option']['value'];
+    //     this.pager = {};
+    //     this.setPage(1);
+    // }
+    
+        cat;
+    getYTChannels(){
+
+        //   alert ( this.cat)
+            this.selected_category= this.cat;
+            this.pager= {};
+            this.setPage(1);
+        }
+
+
     filterCategory(val: string): string[] {
         return this.options.filter(option =>
             option.toLowerCase().indexOf(val.toLowerCase()) === 0);

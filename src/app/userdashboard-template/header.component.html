@@ -53,23 +53,17 @@
                         <div class="dropdown-content"> <a [routerLink]="['/my-profile']"> 
                             <i class="fa fa-user-circle"></i>My Profile</a>
                              <a [routerLink]="['/subscription-history']"> <i class="fa fa-history"></i>Subscription</a>
-                             <a [routerLink]="['/subscription-history']"> <i class="fas fa-globe"></i>Web Campaign</a>
-                             <a [routerLink]="['/subscription-history']"> <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
-                             <a [routerLink]="['/subscription-history']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
-                             <a [routerLink]="['/subscription-history']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
-                             <a [routerLink]="['/subscription-history']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
-                             <a [routerLink]="['/subscription-history']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
-                             <a [routerLink]="['/subscription-history']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
-                             <a [routerLink]="['/subscription-history']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
-                             <a [routerLink]="['/subscription-history']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
-                                <a [routerLink]="['/my-rfm']" class="dropdown-submenu position-relative rfmdd"> <i class="fas fa-sign-out-alt"></i>RFM
-                                <div class="dropdown-content absolute-drp">
-                                        <a [routerLink]="['/my-rfm']"> <i class="fas fa-sign-out-alt"></i>My RFM</a> 
-                                        <a [routerLink]="['/rfm']"> <i class="fas fa-sign-out-alt"></i>Create RFM</a> 
-                                      
-                                </div>
-                             
-                                </a>
+                             <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
+                             <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
+                             <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
+                             <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
+                             <a [routerLink]="['/twitter/search']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
+                             <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
+                             <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
+                             <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
+                             <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
+                                <a [routerLink]="['/my-rfm']"> <i class="fas fa-sign-out-alt"></i>My RFM</a> 
+                                <a [routerLink]="['/rfm']"> <i class="fas fa-sign-out-alt"></i>Create RFM</a> 
                                 <a [routerLink]="['/update-password']"> <i class="fa fa-key"></i>Change Password</a> 
                                 <a [routerLink]="['/login']"> <i class="fas fa-sign-out-alt"></i>Logout</a>
                                  </div>

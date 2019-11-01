@@ -96,12 +96,22 @@ export class FlickrSearchComponent implements OnInit {
         return this.options.filter(option =>
             option.toLowerCase().indexOf(val.toLowerCase()) === 0);
     }
-    getFlickrData(e){
-        this.selected_category= e['option']['value'];
-        this.pager= {};
-        this.setPage(1);
+    // getFlickrData(e){
+    //     this.selected_category= e['option']['value'];
+    //     this.pager= {};
+    //     this.setPage(1);
 
-    }
+    // }
+
+
+    cat;
+    getFlickrData(){
+
+        //   alert ( this.cat)
+            this.selected_category= this.cat;
+            this.pager= {};
+            this.setPage(1);
+        }
 
     setPage(page: number) {
         if (page < 1 || page > this.pager.totalPages) {

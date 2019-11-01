@@ -145,16 +145,25 @@ export class TwitterSearchComponent implements OnInit {
         this.selected_category= e.value;
     }
 
-    getTWInfluencers(e) {
-        this.pager = {};
-        this.interest_value = "";
-        this.loc = "";
-        this.name_value = "";
+    // getTWInfluencers(e) {
+    //     this.pager = {};
+    //     this.interest_value = "";
+    //     this.loc = "";
+    //     this.name_value = "";
 
-        // this.search = "all";
-        this.column = {};
-        this.setPage(1, true);
-    }
+    //     // this.search = "all";
+    //     this.column = {};
+    //     this.setPage(1, true);
+    // }
+
+    cat;
+    getTWInfluencers(){
+
+        //   alert ( this.cat)
+            this.selected_category= this.cat;
+            this.pager= {};
+            this.setPage(1);
+        }
 
     fillinterests(data) {
 
@@ -367,7 +376,7 @@ export class TwitterSearchComponent implements OnInit {
             text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
-            showCancelButton: true,
+            // showCancelButton: true,
 
         }).then(() => {
 
@@ -394,7 +403,7 @@ export class TwitterSearchComponent implements OnInit {
             text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
-            showCancelButton: true,
+            // showCancelButton: true,
 
         }).then(() => {
 

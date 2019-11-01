@@ -271,11 +271,23 @@ export class PeriscopeSearchComponent implements OnInit {
 
 
     }
-    getperipages(e) {
-        this.selected_category = e['option']['value'];
-        this.pager = {};
-        this.setPage(1);
-    }
+    // getperipages(e) {
+    //     this.selected_category = e['option']['value'];
+    //     this.pager = {};
+    //     this.setPage(1);
+    // }
+
+
+    cat;
+    getperipages(){
+
+        //   alert ( this.cat)
+            this.selected_category= this.cat;
+            this.pager= {};
+            this.setPage(1);
+        }
+
+
     filterCategory(val: string): string[] {
         return this.options.filter(option =>
             option.toLowerCase().indexOf(val.toLowerCase()) === 0);

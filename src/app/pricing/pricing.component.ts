@@ -17,7 +17,7 @@ export class PricingComponent implements OnInit {
   emailchk = false;
   loading = false;
   exists = false;
-  model;
+  model;text;
   isModal = false;
   isright = false;
   constructor(private router: Router, private http: Http, private preloadersvc: HttpService) {

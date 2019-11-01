@@ -21,18 +21,31 @@
                             </div>
                             <div class="col-md-6 text-center p-auto">
 
-                                <mat-form-field class="example-full-width">
+                                <!-- <mat-form-field class="example-full-width">
                                     <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
                                     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getYTChannels($event)">
                                         <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
                                             {{ option }}
                                         </mat-option>
                                     </mat-autocomplete>
+                                </mat-form-field> -->
+
+                                <mat-form-field>
+                                  <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
+                                    <mat-select placeholder="Select Category" [(ngModel)]="cat">
+                                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                      {{option}}
+                                    </mat-option>
+                                  </mat-select>
                                 </mat-form-field>
 
 
                             </div>
-
+                            <div class="col-md-12 text-center">
+                              <button type="submit"  class="btn btn-primary" (click)="getYTChannels()">
+                                  Search <i class="fa fa-sliders"></i>
+                              </button>
+                          </div>
                         </div>
                     </div>
                 </mat-tab>
@@ -507,7 +520,7 @@
                   <label class="item-loc" title="{{item['profile_linked']}}" (click)="goToMedium(item['profile_linked'])"><i class="fab fa-pinterest"></i>Profile Link: {{item['profile_linked']}}</label>
           </div>
           <div >
-              <label class="item-loc" title="{{item['profile_contact']}}" (click)="goTwitterProfile(item['profile_contact'])">Web Link:{{item['profile_contact']}}</label>
+              <!-- <label class="item-loc" title="{{item['profile_contact']}}" (click)="goTwitterProfile(item['profile_contact'])">Web Link:{{item['profile_contact']}}</label> -->
         </div>
           </div>
                  
@@ -778,7 +791,7 @@
                     <label class="item-loc" title="{{item['profile_linked']}}" (click)="goToMedium(item['profile_linked'])"><i class="fab fa-pinterest"></i>Profile Link: {{item['profile_linked']}}</label>
             </div>
             <div >
-                <label class="item-loc" title="{{item['profile_contact']}}" (click)="goTwitterProfile(item['profile_contact'])"><i class="fas fa-phone-alt"></i>Web Link:{{item['profile_contact']}}</label>
+                <!-- <label class="item-loc" title="{{item['profile_contact']}}" (click)="goTwitterProfile(item['profile_contact'])"><i class="fas fa-phone-alt"></i>Web Link:{{item['profile_contact']}}</label> -->
           </div>
             </div>
                    

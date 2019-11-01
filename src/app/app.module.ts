@@ -29,7 +29,8 @@ import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { SocialLoginModule, AuthService } from 'angular5-social-login';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {RfmComponent} from './rfm/rfm.component';
-import { CountdownModule } from 'ngx-countdown';
+import { CountdownTimerModule } from 'ngx-countdown-timer';
+import { CountdownModule } from "ng2-countdown-timer"
 import {
   BlogComponent,
   HowItWorksComponent,
@@ -119,7 +120,7 @@ export function provideConfig() {
     HttpModule,
     SocialLoginModule,
     FormsModule,
-    MatIconModule,
+    MatIconModule,CountdownModule,CountdownTimerModule,
     RecapchaModule,
     MatSlideToggleModule,
     TextMaskModule,
