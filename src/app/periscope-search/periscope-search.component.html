@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </mat-tab>
-                <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
+                <!-- <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
                     <ng-template mat-tab-label style="background: white">
                           <span class="nav-link-in">
 										<i class="fa fa-fire"></i>
@@ -67,8 +67,11 @@
                                 <div class="col-md-6">
                                     <mat-form-field>
                                         <input matInput type="text" placeholder="Serch by Email" name="contact">
-                                    </mat-form-field>
-                                </div>
+                                    </mat-form-field>                                
+                                <mat-form-field >
+                                    <input matInput type="text" placeholder="Search by Twittername"  tabindex=1 required>
+                                </mat-form-field>
+                              </div>
                             </div>
                             <div class="row Advanced-search">
                                 <div class="col-md-6">
@@ -107,12 +110,106 @@
                         </div>
                     </div>
 
+                </mat-tab> -->
+                <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
+                    <ng-template mat-tab-label style="background: white">
+                          <span class="nav-link-in">
+										<i class="fa fa-fire"></i>
+                                    Advanced Search
+									</span>
+                    </ng-template>
+                    <div class="body">
+                        <div class="container">
+                            <form (submit)="setPage(1)" class=" social-forms m-0">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                                                    placeholder="Select Category" style="width:100%">
+                                            <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
+                                        </mat-select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mat-form-field>
+                                            <input matInput type="text"[(ngModel)]="p_name" placeholder="Search by Profilename" name="contact">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text"[(ngModel)]="t_name" placeholder="Search by Twitterame" name="contact2">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row Advanced-search ">
+                                    <div class="col-md-6">
+                                        <mat-label>Search by Followers</mat-label>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="minfollower" placeholder="Minimum Followers" name="social">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxfollower" placeholder="Maximum Followers" name="social2">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mat-label>Search by Followings</mat-label>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Minimum Following" name="seo">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Maximum Following" name="seo2">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row Advanced-search">
+                                    <div class="col-md-6">
+                                        <mat-label>Search by Pins</mat-label>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="minhearts" placeholder="Minimum Hearts" name="loc">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxhearts" placeholder="Maximum Hearts" name="loc2">
+                                        </mat-form-field>
+                                    </div>
+                                    <!-- <div class="col-md-6">
+                                        <mat-label>Search by Boards</mat-label>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="minboards" placeholder="Minimum Boards" name="er">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxboards" placeholder="Maximum  Boards" name="er2">
+                                        </mat-form-field>
+                                    </div> -->
+                                </div>
+
+                                <div class="row Advanced-search">
+                                    <div class="col-md-12  text-center">
+                                        <button type="submit"  class="btn btn-primary" >
+                                            Search <i class="fa fa-sliders"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
                 </mat-tab>
-            </mat-tab-group>
+              </mat-tab-group>
         </div>
     </div>
 
-
+    <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
+        <div class="box-typical box-typical-full-height" style="min-height: 119px;">
+          <div class="add-customers-screen tbl" style="height: 119px;">
+            <div class="add-customers-screen-in">
+              <div class="add-customers-screen-user">
+                <i class="font-icon font-icon-user"></i>
+              </div>
+              <h2>OOPS!</h2>
+              <p class="lead color-blue-grey-lighter">No search results are found<br> try another category.</p>
+              <!--<a href="#" class="btn">Add customer</a>-->
+            </div>
+          </div>
+        </div><!--.box-typical-->
+      </div>
 
 
  
@@ -833,8 +930,8 @@
   </div>
           <div class="col-md-1 followers-division">
               <div>
-                      <h6 class="m-0">Likes:</h6>
-                  <h3 class="item-content" >{{item['likes']| thousandSuff}}</h3>
+                      <h6 class="m-0">Followers:</h6>
+                  <h3 class="item-content" >{{item['followers']| thousandSuff}}</h3>
               </div>
           </div>
                   <div class="col-md-9">

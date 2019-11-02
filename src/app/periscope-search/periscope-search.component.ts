@@ -38,9 +38,10 @@ export class PeriscopeSearchComponent implements OnInit {
 
     filteredOptions: Observable<string[]>;
     name: any;
-    following: any;
-    follower: any;
+    following: any;minfollowing:any;maxfollowing:any;
+    follower: any;minfollower:any; maxfollower: any;
     account_rank: any;
+    minhearts: any; maxhearts: any;p_name;t_name;
     post: any;
     constructor(private http: HttpService, private router: Router,private route:ActivatedRoute, private pagerService: PagerService ) {
 
@@ -51,7 +52,7 @@ export class PeriscopeSearchComponent implements OnInit {
         document.getElementById("mySidenav").style.width = "250px";
     }
     ngOnInit() {
-
+        window.scroll(0,0)
         
         this.currentUser =JSON.parse(localStorage.getItem('currentUser'));
         this.currentlist= JSON.parse(localStorage.getItem('selected_list_peri'));
@@ -98,7 +99,7 @@ export class PeriscopeSearchComponent implements OnInit {
             text: 'This is a link to an external site. Click OK to continue to the content',
             // html: true,
             confirmButtonColor: '#2ecc71',
-            showCancelButton: true,
+            // showCancelButton: true,
 
         }).then(() => {
 
@@ -605,11 +606,18 @@ export class PeriscopeSearchComponent implements OnInit {
         headers.append('Content-Type', 'application/json');
         // this.http.get(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         this.http.post(Config.api+'/ml/get_periscope_pages/' + this.selected_category + '/?page=' + page + '', {
-            name: this.name,
-            following: this.following,
-            follower:this.follower,
-            account_rank:this.account_rank,
-            posts:this.post,
+            profile_name: this.p_name,
+            twitter_name:this.t_name,
+            // following: this.following,
+            heartsmin:this.minhearts,
+            heartsmax:this.maxhearts,
+            followingmin:this.minfollowing,
+            followingmax:this.maxfollowing,
+            followersmin:this.minfollower,
+            followersmax:this.maxfollower,
+            // follower:this.follower,
+            // account_rank:this.account_rank,
+            // posts:this.post,
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;

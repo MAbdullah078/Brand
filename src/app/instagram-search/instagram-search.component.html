@@ -17,25 +17,39 @@
             </div>
 
                 <div class="col-md-12">
+                  <mat-label>Search by Following</mat-label>
                     <mat-form-field>
-                        <input matInput type="text" [(ngModel)]="following" placeholder="Serch by Subscribers" name="social">
+                        <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Minimum Following" name="social">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Maximum Following" name="social2">
                     </mat-form-field>
                 </div>
                 <div class="col-md-12">
+                    <mat-label>Search by Followers</mat-label>
                     <mat-form-field>
-                        <input matInput type="text" [(ngModel)]="follower" placeholder="Serch by Total Views" name="seo">
+                        <input matInput type="text" [(ngModel)]="minfollower" placeholder="Minimum Followers" name="seo">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" [(ngModel)]="maxfollower" placeholder="Maximum Followers" name="seo2">
                     </mat-form-field>
                 </div>
-          
-
-                <div class="col-md-12">
+                   <div class="col-md-12">
+                      <mat-label>Search by Rank</mat-label>
                     <mat-form-field>
-                        <input matInput type="text" [(ngModel)]="account_rank" placeholder="Serch by Rank" name="loc">
+                        <input matInput type="text" [(ngModel)]="minaccount_rank" placeholder="Minimum Rank" name="loc">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" [(ngModel)]="maxaccount_rank" placeholder="Maximum Rank" name="loc2">
                     </mat-form-field>
                 </div>
                 <div class="col-md-12">
+                    <mat-label>Search by Posts</mat-label>
                     <mat-form-field>
-                        <input matInput type="text" [(ngModel)]="post" placeholder="Serch by Today Upload Videos" name="er">
+                        <input matInput type="text" [(ngModel)]="minpost" placeholder="Minimum Posts" name="er">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" [(ngModel)]="maxpost" placeholder="Maximum Posts" name="er2">
                     </mat-form-field>
                 </div>
       

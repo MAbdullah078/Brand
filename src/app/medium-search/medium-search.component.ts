@@ -52,6 +52,7 @@ export class MediumSearchComponent implements OnInit {
         document.getElementById("mySidenav").style.width = "250px";
     }
     ngOnInit() {
+        window.scroll(0,0)
         this.currentUser =JSON.parse(localStorage.getItem('currentUser'));
         this.currentlist= JSON.parse(localStorage.getItem('selected_list_med'));
         this.route.queryParams.subscribe(params =>{

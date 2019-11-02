@@ -76,6 +76,7 @@ export class FacebookSearchComponent implements OnInit {
         document.getElementById("mySidenav").style.width = "250px";
     }
     ngOnInit() {
+        window.scroll(0,0)
 
             this.password= localStorage.getItem('currentPassword');
 

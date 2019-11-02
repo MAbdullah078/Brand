@@ -54,6 +54,7 @@ export class FlickrSearchComponent implements OnInit {
     }
 
   ngOnInit() {
+      window.scroll(0,0)
 
           this.get_default_Flickr_Users(1);
 

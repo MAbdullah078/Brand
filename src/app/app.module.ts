@@ -82,7 +82,7 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     HeaderComponent,
-    // PricingComponent,
+    PricingComponent,
     PricingstepsComponent,
     SideMenuComponent,
     AgenciesComponent,

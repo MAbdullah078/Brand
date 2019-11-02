@@ -68,31 +68,47 @@
                                     </div>
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text"[(ngModel)]="p_name" placeholder="Serch by Profile/Name" name="contact">
+                                            <input matInput type="text"[(ngModel)]="p_name" placeholder="Search by Profile/Name" name="contact">
                                         </mat-form-field>
                                     </div>
                                 </div>
                                 <div class="row Advanced-search ">
                                     <div class="col-md-6">
+                                        <mat-label>Search by Followers</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="follower" placeholder="Serch by Followers" name="social">
+                                            <input matInput type="text" [(ngModel)]="minfollower" placeholder="Minimum Followers" name="social">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxfollower" placeholder="Maximum Followers" name="social2">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
+                                        <mat-label>Search by Followings</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="following" placeholder="Serch by Followings" name="seo">
+                                            <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Minimum Following" name="seo">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Maximum Following" name="seo2">
                                         </mat-form-field>
                                     </div>
                                 </div>
                                 <div class="row Advanced-search">
                                     <div class="col-md-6">
+                                        <mat-label>Search by Pins</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="Pins" placeholder="Serch by Pins" name="loc">
+                                            <input matInput type="text" [(ngModel)]="minPins" placeholder="Minimum Pins" name="loc">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxPins" placeholder="Maximum Pins" name="loc2">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
+                                        <mat-label>Search by Boards</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="boards" placeholder="Serch by Boards" name="er">
+                                            <input matInput type="text" [(ngModel)]="minboards" placeholder="Minimum Boards" name="er">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput type="text" [(ngModel)]="maxboards" placeholder="Maximum  Boards" name="er2">
                                         </mat-form-field>
                                     </div>
                                 </div>
