@@ -249,12 +249,7 @@
                 <div>
                 <span class="right-item"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}}</span>
             </div>
-
-          
-      
-                
-          
-            </div>
+        </div>
       
                 </div>
                 <div class="col-md-4" >
@@ -264,13 +259,7 @@
                     <div>
                         <span class="right-item"><i class="fa fa-upload" ></i>Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                     </div>
-
-
-                     
-          
-          
-                      
-                    </div>
+                </div>
                     <div class="col-md-4">
                             <div>
                                     <span class="right-item"><i class="fa fa-user" ></i>Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
@@ -282,48 +271,8 @@
             </div>
             </div>
    
-          </div> 
-<!-- <div class="row influcener-div" *ngFor="let item of influencers_by_defalut.results">
-            <div class="col-md-1 profile-checkbox" type="checkbox">
-                    <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                    <label for="table-check-{{item['id']}}"></label>
-                </div>
-        <div class="col-md-2 image-div  ">
-            <img [src]="item['image_url']"  class="twitter-image">
+          </div>
         </div>
-        <div class="col-md-4 description-divison">
-            <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
-            <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1"> {{item['location']}}</span></label>
-                <label class="item-content"
-             title="{{item['description']}}">{{item['description']}}</label>
-             <div class="row" >
-                <ul class="profile-url">
-                    <li class="subscribers-li"><span class="right-item"> Follower:</span> <span class="list-item1">{{item['followers']}}</span> </li>
-                    <li class="subscribers-li2"><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}}</span></li>
-                </ul>
-                <ul class="profile-url">
-                    <li class="rank-li1"><span class="right-item"> Likes:</span> <span class="list-item1">{{item['likes']}}</span></li>
-                    <li  class="rank-li2"><span class="right-item"> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span></li>
-
-                </ul>
-            </div>
-     
-        </div>
-        <div class="col-md-2 image-div  ">
-            <img [src]="item['image_url']"  class="twitter-image2">
-        </div>
-        <div class="col-md-2 image-div  ">
-            <img [src]="item['image_url']"  class="twitter-image2">
-        </div>
- 
-<div class="col-md-1 followers-profile">
-    <h4 class="real-heading">{{item['likes']}}</h4>
-    <h6>Real</h6>
-</div>
-</div> -->
-
-
-</div>
 
 
 <div class="col-md-12 p-2 mt-1 ">
@@ -368,16 +317,8 @@
             </ul>
         </nav>
     </div>
-
-
-
-
-
-    </div>
-
-
-
-    <div class="container-fluid">
+</div>
+<div class="container-fluid">
         <!--<p-slider [(ngModel)]="val" [min]="0" [max]="100"></p-slider>-->
 
 
@@ -473,12 +414,7 @@
                         <div>
                         <span class="right-item"> <i class="fa fa-eye" ></i>Following:</span> <span class="list-item1">{{item['following'] | thousandSuff}}</span>
                     </div>
-
-                  
-              
-                        
-                  
-                    </div>
+                </div>
               
                         </div>
                         <div class="col-md-4" >
@@ -488,13 +424,7 @@
                             <div>
                                 <span class="right-item"><i class="fa fa-upload" ></i>Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                             </div>
-    
-    
-                             
-                  
-                  
-                              
-                            </div>
+                        </div>
                             <div class="col-md-4">
                                     <div>
                                             <span class="right-item"><i class="fa fa-user" ></i>Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span>
@@ -507,47 +437,7 @@
                     </div>
            
                   </div> 
-        <!-- <div class="row influcener-div" *ngFor="let item of influencers_by_defalut.results">
-                    <div class="col-md-1 profile-checkbox" type="checkbox">
-                            <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                            <label for="table-check-{{item['id']}}"></label>
-                        </div>
-                <div class="col-md-2 image-div  ">
-                    <img [src]="item['image_url']"  class="twitter-image">
                 </div>
-                <div class="col-md-4 description-divison">
-                    <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
-                    <label class="item-loc"> <i class="fa fa-map-marker marker-icon" ></i>  <span class="list-item1"> {{item['location']}}</span></label>
-                        <label class="item-content"
-                     title="{{item['description']}}">{{item['description']}}</label>
-                     <div class="row" >
-                        <ul class="profile-url">
-                            <li class="subscribers-li"><span class="right-item"> Follower:</span> <span class="list-item1">{{item['followers']}}</span> </li>
-                            <li class="subscribers-li2"><span class="right-item">  Following:</span> <span class="list-item1">{{item['following']}}</span></li>
-                        </ul>
-                        <ul class="profile-url">
-                            <li class="rank-li1"><span class="right-item"> Likes:</span> <span class="list-item1">{{item['likes']}}</span></li>
-                            <li  class="rank-li2"><span class="right-item"> Twitter name:</span> <span class="list-item1">{{item['twitter_name']}}</span></li>
-
-                        </ul>
-                    </div>
-             
-                </div>
-                <div class="col-md-2 image-div  ">
-                    <img [src]="item['image_url']"  class="twitter-image2">
-                </div>
-                <div class="col-md-2 image-div  ">
-                    <img [src]="item['image_url']"  class="twitter-image2">
-                </div>
-         
-        <div class="col-md-1 followers-profile">
-            <h4 class="real-heading">{{item['likes']}}</h4>
-            <h6>Real</h6>
-        </div>
-        </div> -->
-        
-        
-        </div>
         <div class="container-fluid" *ngIf="loaded && influencers.totalItems!=0">
 
             <div class="row" id="myHeader">
@@ -589,11 +479,6 @@
                             <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
                         </div>
                         <div class="row" style="padding-top: 8px">
-                            <!--<label class="item-content" style="overflow: hidden;-->
-                            <!--text-overflow: ellipsis;-->
-                            <!--display: -webkit-box;-->
-                            <!-- -webkit-box-orient: vertical;-->
-                            <!-- -webkit-line-clamp: 2;" title="{{item['description']}}">{{item['description']}}</label>-->
                         </div>
                         <div class="row" style="padding-top: 8px">
                             <div class="col-md-3 text-left">

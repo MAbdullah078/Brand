@@ -576,11 +576,11 @@ export class MediumSearchComponent implements OnInit {
         headers.append('Content-Type', 'application/json');
         this.http.get(Config.api+'/ml/get_medium_users/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         // this.http.get(Config.api+'/ml/get_medium_users/' + this.selected_category + '/?page=' + page + '', {
-        //     name: this.name,
-        //     following: this.following,
-        //     follower:this.follower,
-        //     account_rank:this.account_rank,
-        //     posts:this.post,
+            // name: this.name,
+            // following: this.following,
+            // follower:this.follower,
+            // account_rank:this.account_rank,
+            // posts:this.post,
         // },
         //     {headers:headers})
             .subscribe(res => {
