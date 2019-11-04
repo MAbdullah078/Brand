@@ -11,7 +11,7 @@ export class PaymentmethodsService {
   constructor(private http: HttpClient,private _https : Http) {  }
   get_card_infos() {
     
-    return this.http.get('https://apis.com/payment/cardinfo/')
+    return this.http.get('https://apis.influexpai.com/payment/cardinfo/')
    
 }
 getcounty(){
@@ -30,7 +30,7 @@ zipcode(zip) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    return this._https.get('https://apis.com/payment/sigle_card_get/' + id, { headers: headers }).map((response: Response) => response.json());
+    return this._https.get('https://apis.influexpai.com/payment/sigle_card_get/' + id, { headers: headers }).map((response: Response) => response.json());
   }
   updateCard(id, nickname, auotpay,address, zipcode, state, city , country) {
     let headers = new Headers();
@@ -132,7 +132,7 @@ zipcode(zip) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    return this._https.delete('https://apis.com/payment/cardinfodelete/' + id,{headers: headers });
+    return this._https.delete('https://apis.influexpai.com/payment/cardinfodelete/' + id,{headers: headers });
   }
   Atm_card_exist(card) {
     return this.http.post('https://apis.com/payment/cardnoexist/',
