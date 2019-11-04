@@ -644,7 +644,7 @@ body {
   width: 8px;
   height: 8px;
   border: solid 1px #fff;
-  background: #fa424a;
+  background: #e20074;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
@@ -736,7 +736,7 @@ body {
   margin: 0 0 6px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: #fa424a;
+  background: #e20074;
   position: relative;
   top: 2px;
 }

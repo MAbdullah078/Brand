@@ -229,7 +229,7 @@
   background-color: #fda311;
 }
 .widget-tabs-nav.colored .nav-link.red {
-  background-color: #fa424a;
+  background-color: #e20074;
 }
 .widget-tabs-nav.colored .nav-link.red:hover,
 .widget-tabs-nav.colored .nav-link.red.active {
@@ -371,7 +371,7 @@
   padding: 16px 10px 15px;
 }
 .widget-simple-sm-fill.red {
-  background-color: #fa424a;
+  background-color: #e20074;
 }
 .widget-simple-sm-fill.green {
   background-color: #46c35f;
@@ -1022,7 +1022,7 @@
   border: solid 4px #adb7be;
 }
 .chart-legend .circle.red {
-  border-color: #fa424a;
+  border-color: #e20074;
 }
 .chart-legend .circle.blue {
   border-color: #00a8ff;
@@ -1067,7 +1067,7 @@
 }
 .chart-legend-tbl .dot.red,
 .chart-legend-list .dot.red {
-  background-color: #fa424a;
+  background-color: #e20074;
 }
 .chart-legend-tbl .dot.blue,
 .chart-legend-list .dot.blue {
