@@ -11,15 +11,15 @@ export class PaymentmethodsService {
   constructor(private http: HttpClient,private _https : Http) {  }
   get_card_infos() {
     
-    return this.http.get('https://apis.rfpgurus.com/payment/cardinfo/')
+    return this.http.get('https://apis.com/payment/cardinfo/')
    
 }
 getcounty(){
-  return this.http.get('https://apis.rfpgurus.com/all_countries/')
+  return this.http.get('https://apis.com/all_countries/')
 }
 zipcode(zip) {
    
-  return this.http.get('https://apis.rfpgurus.com/zipcode/' + zip + '/').map((response: Response) => response.json());
+  return this.http.get('https://apis.com/zipcode/' + zip + '/').map((response: Response) => response.json());
 }
   // let headers = new Headers();
   //       headers.append('Content-Type', 'application/json');
@@ -30,13 +30,13 @@ zipcode(zip) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    return this._https.get('https://apis.rfpgurus.com/payment/sigle_card_get/' + id, { headers: headers }).map((response: Response) => response.json());
+    return this._https.get('https://apis.com/payment/sigle_card_get/' + id, { headers: headers }).map((response: Response) => response.json());
   }
   updateCard(id, nickname, auotpay,address, zipcode, state, city , country) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    return this._https.put( 'https://apis.rfpgurus.com/payment/sigle_card_get/' + id, {
+    return this._https.put( 'https://apis.com/payment/sigle_card_get/' + id, {
 
       "nickname": nickname,
       "autopay": auotpay,
@@ -59,7 +59,7 @@ zipcode(zip) {
     let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-      return this._https.post('https://apis.rfpgurus.com/payment/cardInfo_web/',
+      return this._https.post('https://apis.com/payment/cardInfo_web/',
       JSON.stringify({
         "name": name,
         "street_address": address,
@@ -132,10 +132,10 @@ zipcode(zip) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    return this._https.delete('https://apis.rfpgurus.com/payment/cardinfodelete/' + id,{headers: headers });
+    return this._https.delete('https://apis.com/payment/cardinfodelete/' + id,{headers: headers });
   }
   Atm_card_exist(card) {
-    return this.http.post('https://apis.rfpgurus.com/payment/cardnoexist/',
+    return this.http.post('https://apis.com/payment/cardnoexist/',
       JSON.stringify({
         'number': card
         
