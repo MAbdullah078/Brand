@@ -17,6 +17,9 @@ export class PricingService {
     authenticate_service(uid) {
         return this.http.get('https://apis.rfpgurus.com/activate/' + uid);
     }
+    gettimer(){
+        return this._https.get('https://apis.rfpgurus.com/super/timer_for_sale/')
+      }
 pricingimage(){
     return this.http.get('https://apis.rfpgurus.com/super/pricing_images/');
 }

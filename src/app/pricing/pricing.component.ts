@@ -193,13 +193,13 @@ export class PricingComponent implements OnInit {
 
   }
   totaltime;
-  // timer(){
-  //   this._home.gettimer().subscribe( data => {
-  //     this.totaltime = data.json();
-  //     // alert(this.totaltime);
-  //     console.log(this.totaltime);
-  //   })
-  // }
+  timer(){
+    this._serv.gettimer().subscribe( data => {
+      this.totaltime = data.json();
+      // alert(this.totaltime);
+      console.log(this.totaltime);
+    })
+  }
   monthly;
   year;
   priceimages;
