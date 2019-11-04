@@ -30,7 +30,57 @@
 }
 .modal-footer{
   display: block;
-    padding: 10px;
-    border: none;
-    text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 5px;
 }
+.pricing-box img{
+  width: 100%;
+}
+.pricing-features li i{
+  color: #01b301;
+}
+.pricing-features li {
+  color: #000;
+  padding: 5px 15px;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 16px;
+  margin: 0;
+}
+.main-page-timer .countdown .measurements {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fff;
+  margin: 0 3px;
+  border-radius: 3px;
+}
+.main-page-timer .countdown .measurements p {
+  color: #000;
+  padding: 3px 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+.main-page-timer .countdown .measurements p:first-child {
+  color: #fff !important;
+  background: #82d0dc;
+}
+
+.mainpagee  .measurements {
+  padding: 5px 10px!important;
+  width: 23%;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 69px;
+  display: inline-block;
+  background: #000;
+}
+
+
+/*  */
+

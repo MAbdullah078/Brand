@@ -58,6 +58,8 @@ export class BlogosphereSearchComponent implements OnInit, AfterViewInit {
         document.getElementById("mySidenav").style.width = "250px";
     }
     ngOnInit() {
+
+        window.scroll(0,0)
         this.route.queryParams.subscribe(params=>{
             this.qparamschecker=params['name'];
             if(this.qparamschecker==='blog'){

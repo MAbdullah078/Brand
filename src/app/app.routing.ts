@@ -108,7 +108,7 @@ export const AppRoutes: Routes = [
     //     { path: 'messenger', loadChildren: './messenger/messenger.module#MessengerModule' },
     //     { path: 'settings', loadChildren: './settings/settings.module#SettingsModule'},
         {path:  'my-profile',loadChildren:'./profile/profile.module#ProfileModule'},
-        { path: 'pricingsub',  component:PricingComponent },
+        // { path: 'pricingsub',  component:PricingComponent },
     { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
 
         {path:  'update-password',loadChildren:'./update-pass/update-pass.module#UpdatePassModule'}

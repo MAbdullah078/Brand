@@ -63,6 +63,7 @@ export class YoutubeSearchComponent implements OnInit {
     }
 
     ngOnInit() {
+        window.scroll(0,0)
 
         this.route.queryParams.subscribe(params => {
             this.qparamschecker = params['name'] || '0';

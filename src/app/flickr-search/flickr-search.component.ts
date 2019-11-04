@@ -27,8 +27,10 @@ export class FlickrSearchComponent implements OnInit {
     myControl: FormControl = new FormControl();
     main_checkbox;
     fbinfluencers;
-    likes;
-    perfomance;
+
+    likes;minlikes;maxlikes;minfollowers;maxfollowers;
+    perfomance;minviews;maxviews;minrank;maxrank;
+    
     locationArray:any=[];
     max= 100;
     location_value: string = "";
@@ -54,6 +56,7 @@ export class FlickrSearchComponent implements OnInit {
     }
 
   ngOnInit() {
+      window.scroll(0,0)
 
           this.get_default_Flickr_Users(1);
 
@@ -121,11 +124,15 @@ export class FlickrSearchComponent implements OnInit {
         this.loaded = false;
         headers.append('Content-Type', 'application/json');
         this.http.post(Config.api+'/ml/get_flickr_users/' + this.selected_category + '/?page=' + page + '', {
-            title: this.title,
-            location: this.location,
-            like:this.likes,
+            profile_name:this.title,
+            followersmin:this.minfollowers,
+            followersmax:this.maxfollowers,
             performance:this.perfomance,
-            ER:this.ER
+            // ER:this.ER,
+            viewsmin:this.minviews,
+            viewsmax:this.maxviews,
+            profile_rankmin:this.minrank,
+            profile_rankmax:this.maxrank
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;
@@ -158,33 +165,7 @@ export class FlickrSearchComponent implements OnInit {
         }
 
     }
-    // goToLink(url) {
-    //     //let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
-    //     Swal.fire({
-    //         title: 'You&#39;re Leaving This Site!',
-    //         text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
-    //         // html: true,
-    //         confirmButtonColor: '#2ecc71',
-    //         showCancelButton: true,
 
-    //     }).then(() => {
-
-    //         window.open(url);
-
-
-    //     }, (dismiss) => {
-    //         // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
-    //         if (dismiss === 'cancel') {
-    //             // localStorage.removeItem('selected_list_twitter');
-
-    //             Swal.fire(
-    //                 'Cancelled',
-    //                 '',
-    //                 'success'
-    //             )
-    //         }
-    //     });
-    // }
 
     goToLink(url) {
         //let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
