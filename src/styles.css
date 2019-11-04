@@ -1238,7 +1238,6 @@ span.middot {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: #F9F9F9;
   overflow: hidden;
   display:flex;
 }
@@ -8728,7 +8727,6 @@ body:not(.device-touch) .button.button-full strong {
   color: #000!important;
  }
  .mat-form-field-appearance-legacy .mat-form-field-label{
-   top:34px;
    overflow:unset;
    margin:0
  }
@@ -30846,6 +30844,27 @@ body:not(.no-transition) #wrapper {
 }
 
 /* Coutomized form */
+.sh-signup-form-fix .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 12px;
+}
+.sh-signup-form-fix .mat-form-field-infix {
+  border-top: 0 solid transparent;
+  padding: 6px 0;
+  margin-top: 2px;
+}
+.Saved-card-sel-list .mat-form-field-appearance-legacy .mat-form-field-label {
+  top: 22px !important;
+  line-height: 24px!important;
+}
+.sh-signup-form-fix .mat-form-field-appearance-legacy .mat-form-field-label {
+  font-size: 16px;
+  top: 1.58125em;
+  font-weight: 700;
+}
+.paymet-form .mat-form-field-appearance-legacy .mat-form-field-label {
+  top: 14px !important;
+}
+
 .sh-signup-form-fix .mat-input-infix {
   border-top: 0 solid transparent;
 }
@@ -31983,4 +32002,10 @@ body {
   font-weight: 700;
   line-height: 30px;
   padding: 5px;
+}
+.pricing2-section .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #ffffff;
+}
+.pricing2-section mat-select{
+  width: 100% !important;
 }

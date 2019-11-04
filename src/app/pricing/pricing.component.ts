@@ -16,9 +16,6 @@ import { Http , Headers } from '@angular/http';
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricingsteps.component.scss',
-  // '../../local-style/payment.css',
-  // '../../local-style/single-pricing.css',
-  // '../../local-style/cradet-card-box.css'
 ],
   providers: [PricingService]
 })
