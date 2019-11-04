@@ -1,7 +1,61 @@
+<section class="d-flex">
+<div class="facebook-sidebar">
+        <form (submit)="setPage(1)"  class="m-0 sidebar-forms">
+                <div class="row m-0">
+                    <div class="col-md-12">
+                        <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                                    placeholder="Select Category" style="width:100%!important">
+                            <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
+                        </mat-select>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput type="text"[(ngModel)]="name" placeholder="Search by Title/Name" name="contact">
+                        </mat-form-field>
+                    </div>
+                </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="subscribers" placeholder="Search by Subscribers" name="social">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="t_views" placeholder="Search by  Views" name="seo">
+                        </mat-form-field>
+                    </div>
+                
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="rank" placeholder="Search by Rank" name="loc">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="today_upload_video" placeholder="Search by Today Upload Videos" name="er">
+                        </mat-form-field>
+                    </div>
+                
+
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput type="text" [(ngModel)]="tomorrow_upload_video" placeholder="Search by Tommorow Upload Videos" name="er">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12  text-center">
+                        <button type="submit"  class="btn btn-primary" >
+                            Search <i class="fa fa-sliders"></i>
+                        </button>
+                    </div>
+
+                
+            </form>
+</div>
+<div class="facebook-content p-3">
 <div class="page-content" style="padding-right:15px;">
 
-    <div class="row">
-        <div class="container-fluid ">
+    <div class="row m-0">
+        <div class="col-md-12 ">
             <mat-tab-group>
 
 
@@ -67,56 +121,41 @@
                                     </div>
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text"[(ngModel)]="name" placeholder="Serch by Title/Name" name="contact">
+                                            <input matInput type="text"[(ngModel)]="name" placeholder="Search by Title/Name" name="contact">
                                         </mat-form-field>
                                     </div>
                                 </div>
-                                <div class="row Advanced-search">
+                                <div class="row Advanced-Search">
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minsubscribers" placeholder="Minimum Subscribers" name="social">
+                                            <input matInput type="text" [(ngModel)]="subscribers" placeholder="Search by Subscribers" name="social">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
-                                            <mat-form-field>
-                                                <input matInput type="text" [(ngModel)]="maxsubscribers" placeholder="Maximum Subscribers" name="social2">
-                                            </mat-form-field>
-                                        </div>
-                                    <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minviews" placeholder="Minimum Views" name="seo">
+                                            <input matInput type="text" [(ngModel)]="t_views" placeholder="Search by  Views" name="seo">
                                         </mat-form-field>
                                     </div>
-                                    <div class="col-md-6">
-                                            <mat-form-field>
-                                                <input matInput type="text" [(ngModel)]="maxviews" placeholder="Maximum Views" name="seo2">
-                                            </mat-form-field>
-                                        </div>
                                 </div>
-                                <div class="row Advanced-search">
+                                <div class="row Advanced-Search">
                                     <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minrank" placeholder="Minimum Rank" name="loc">
+                                            <input matInput type="text" [(ngModel)]="rank" placeholder="Search by Rank" name="loc">
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-6">
-                                            <mat-form-field>
-                                                <input matInput type="text" [(ngModel)]="maxrank" placeholder="Maximum Rank" name="loc2">
-                                            </mat-form-field>
-                                        </div>
-                                    <!-- <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="today_upload_video" placeholder="Serch by Today Upload Videos" name="er">
+                                            <input matInput type="text" [(ngModel)]="today_upload_video" placeholder="Search by Today Upload Videos" name="er">
                                         </mat-form-field>
-                                    </div> -->
+                                    </div>
                                 </div>
 
-                                <div class="row Advanced-search" >
-                                    <!-- <div class="col-md-6">
+                                <div class="row Advanced-Search" >
+                                    <div class="col-md-6">
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="tomorrow_upload_video" placeholder="Serch by Tommorow Upload Videos" name="er">
+                                            <input matInput type="text" [(ngModel)]="tomorrow_upload_video" placeholder="Search by Tommorow Upload Videos" name="er">
                                         </mat-form-field>
-                                    </div> -->
+                                    </div>
                                     <div class="col-md-12  text-center">
                                         <button type="submit"  class="btn btn-primary" >
                                             Search <i class="fa fa-sliders"></i>
@@ -211,102 +250,8 @@
 
 
 
-    <div class="row m-0  influcener-div"  *ngFor="let item of influencers.results" >
-        <div class="col-md-1 profile-checkbox" type="checkbox">
-                <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                        <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
-                      </div>
-            </div>
-    <div class="col-md-1 image-div ">
-        <img [src]="item['thumbnail_url']"  class="twitter-image">
-    </div>
-    <div class="col-md-1 followers-profile">
-            <h6 class="m-0">Subscribers:</h6>
-            <h4 class="Follwers-div">{{item['subscribers'] |thousandSuff}}</h4>
-        </div>
-    <div class="col-md-9 ">
 
-                <div class="d-flex">
-                    <i class="fab fa-youtube"></i>
-                    
-        <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-        <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
-    </div>
-            <label class="item-content ml-4" 
-            title="{{item['description']}}">{{item['description']}}</label>
-            <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube"></i>Youtube Link: {{item['channel_link']}}</label>
-         <div class="row" >
-            <div class="col-md-6 ">
-                <div class="ml-4">
-                <div>
-                <span class="list-item1 "><i class="fa fa-users" ></i>Views:</span>
-                    <span class="list-item1"> {{item['total_views'] | thousandSuff}}</span>
-                    </div>
-                    <div>
-        <span class="right-item ml-1"><i  class="fa fa-upload"></i>  Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
-    </div>
-</div>
-        </div>
-        <div class="col-md-6 ">
-            <div>
-                <span class="right-item"><i class="fa fa-upload"></i>  Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span>
-                  <span class="right-item ml-5"><i class="fas fa-chart-bar"></i> Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
-            </div>
-          
-            <div>
-              <span class="right-item"><i class="fas fa-sign-in-alt"></i> Joined Year:</span> <span class="list-item1">{{item['date']}}</span>
-            </div>
-             </div>
- 
-    </div>
-    
 
-</div>
-</div>
-<div class="col-md-12">
-            
-        <nav class="text-center">
-                <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
-
-                    <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
-                    <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
-                    <!--</li>-->
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a class="page-link" (click)="setPage(1)" aria-label="Previous">
-                            First
-                        </a>
-                    </li>
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-
-                    <li class="page-item" *ngFor="let page of pager.pages"
-                        [ngClass]="{active:pager.currentPage === page}"
-                        (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
-                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-                    <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
-                    <!--</li>-->
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
-                            Last
-                        </a>
-                    </li>
-                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-                    <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
-                    <!--</li>-->
-                </ul>
-            </nav>
-    </div>
     </div>
 
 <div class="container-fluid" *ngIf="loaded">
@@ -330,7 +275,7 @@
 
     <div class="container-fluid" *ngIf="!loaded">
 
-        <div class="row mt-3" id="myHeader">
+        <div class="row m-0" id="myHeader">
                     <div class="col-md-2">
                         <!--<button  class="btn btn-success">Select All</button>-->
                         <div id="ck-button">
@@ -487,7 +432,7 @@
             <i class="font-icon font-icon-user"></i>
           </div>
           <h2>OOPS!</h2>
-          <p class="lead color-blue-grey-lighter">No search results are found<br> try another category.</p>
+          <p class="lead color-blue-grey-lighter">No Search results are found<br> try another category.</p>
           <!--<a href="#" class="btn">Add customer</a>-->
         </div>
   
@@ -699,9 +644,8 @@
 
 
 </div>
-<<<<<<< HEAD
 </div>
-<div class="col-md-12  ">
+<div class="col-md-12 ">
             
         <nav class="text-center">
                 <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
@@ -744,6 +688,3 @@
                 </ul>
             </nav>
     </div>
-=======
-</div>
->>>>>>> parent of a4cbad1... asdcasdc
