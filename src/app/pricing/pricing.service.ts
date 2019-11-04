@@ -13,7 +13,9 @@ export class PricingService {
         // return this.http.get('https://apis.rfpgurus.com/payment/cardinfo/');
         return this.http.get('https://devapis.rfpgurus.com/payment/cardinfo/', { })
     }
-
+    getcounty(){
+        return this.http.get('https://apis.rfpgurus.com/all_countries/')
+      }
     authenticate_service(uid) {
         return this.http.get('https://apis.rfpgurus.com/activate/' + uid);
     }
@@ -37,7 +39,83 @@ pricingimage(){
             }), { headers: headers }).map((data: Response) => data.json());
         
     }
-
+    zipcode(zip) {
+   
+        return this.http.get('https://apis.rfpgurus.com/zipcode/' + zip + '/').map((response: Response) => response.json());
+      }
+    addCard( name, address, zip, city, state, country, cardno, ccv, expiryDate, var_type_atm, setautopay, nickname) {
+        let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
+          return this._https.post('https://apis.rfpgurus.com/payment/cardInfo_web/',
+          JSON.stringify({
+            "name": name,
+            "street_address": address,
+            "zipcode": zip,
+            "city": city,
+            "state": state,
+            "country": country,
+            "number": cardno,
+            "cvc": ccv,
+            "expDate": expiryDate,
+            "card_type": var_type_atm,
+            "autopay": setautopay,
+            "nickname": nickname
+          }),{headers:headers}).map(response => response.json())
+          // .map((res: Response) => {
+          //   if (res) {
+          //     if (res.status === 201 || res.status === 200 || res.status === 302 ) {
+          //       const responce_data = res.json();
+          //       return responce_data;
+          //     }
+          //   }
+          // })
+          // .catch((error: any) => {
+          //   if (error.status === 302) {
+          //     swal({
+          //       type: 'error',
+          //       title: error.message,
+          //       showConfirmButton: false,
+          //       timer: 1500, width: '512px',
+          //     })
+          //     return Observable.throw(new Error(error.status));
+          //   } else if (error.status === 405) {
+          //     swal({
+          //       type: 'error',
+          //       title: error.message,
+          //       showConfirmButton: false,
+          //       timer: 1500, width: '512px',
+          //     })
+          //     return Observable.throw(new Error(error.status));
+          //   }
+          //   else if (error.status === 406) {
+          //     swal({
+          //       type: 'error',
+          //       title: error.message,
+          //       showConfirmButton: false,
+          //       timer: 1500, width: '512px',
+          //     })
+          //     return Observable.throw(new Error(error.status));
+          //   } else if (error.status === 403) {
+          //     swal({
+          //       type: 'error',
+          //       title: error.message,
+          //       showConfirmButton: false,
+          //       timer: 1500, width: '512px',
+          //     })
+          //     return Observable.throw(new Error(error.status));
+          //   }
+          //   else if (error.status === 400) {
+          //     swal({
+          //       type: 'error',
+          //       title: 'Bad Request',
+          //       showConfirmButton: false,
+          //       timer: 1500, width: '512px',
+          //     })
+          //     return Observable.throw(new Error(error.status));
+          //   }
+          // });
+      }
     package_free_trial(isright, cardNumber, expirationdate, cardcod, var_get_id, cardtype, holdername, pkg_type, pkg_dur) {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');     
