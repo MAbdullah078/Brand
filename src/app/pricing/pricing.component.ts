@@ -132,7 +132,7 @@ export class PricingComponent implements OnInit {
     this.getcardid(this.id);
     window.scroll(0, 0);
     this.images();
-    // this.timer();
+    this.timer();
     // --------------- SEO Service ---------------
     // setting the page title 
     // this.seoService.setTitle('Pricing');
@@ -193,13 +193,13 @@ export class PricingComponent implements OnInit {
 
   }
   totaltime;
-  // timer(){
-  //   this._home.gettimer().subscribe( data => {
-  //     this.totaltime = data.json();
-  //     // alert(this.totaltime);
-  //     console.log(this.totaltime);
-  //   })
-  // }
+  timer(){
+    this._serv.gettimer().subscribe( data => {
+      this.totaltime = data.json();
+      // alert(this.totaltime);
+      console.log(this.totaltime);
+    })
+  }
   monthly;
   year;
   priceimages;
@@ -292,7 +292,7 @@ export class PricingComponent implements OnInit {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    this._http.post( 'https://apis.rfpgurus.com/payment/promocode_verify/', {
+    this._http.post( 'https://apis.com/payment/promocode_verify/', {
       "code": this.model.promo_code,
       "type" : "V"
     },{ headers: headers }).subscribe(data=>{

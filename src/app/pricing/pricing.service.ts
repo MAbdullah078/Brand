@@ -11,13 +11,13 @@ export class PricingService {
 
     get_card_info() {
         // return this.http.get('https://apis.rfpgurus.com/payment/cardinfo/');
-        return this.http.get('https://devapis.rfpgurus.com/payment/cardinfo/', { })
+        return this.http.get('https://devapis.com/payment/cardinfo/', { })
     }
     getcounty(){
         return this.http.get('https://apis.rfpgurus.com/all_countries/')
       }
     authenticate_service(uid) {
-        return this.http.get('https://apis.rfpgurus.com/activate/' + uid);
+        return this.http.get('https://apis.com/activate/' + uid);
     }
     gettimer(){
         return this._https.get('https://apis.rfpgurus.com/super/timer_for_sale/')
@@ -30,7 +30,7 @@ pricingimage(){
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');     
         headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-        return this._https.post("https://apis.rfpgurus.com/package/",
+        return this._https.post("https://apis.com/package/",
             JSON.stringify({
                 "id": cardNumber,
                 "pricepackage": pkg_type,
@@ -47,7 +47,7 @@ pricingimage(){
         let headers = new Headers();
             headers.append('Content-Type', 'application/json');
             headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-          return this._https.post('https://apis.rfpgurus.com/payment/cardInfo_web/',
+          return this._https.post('https://apis.com/payment/cardInfo_web/',
           JSON.stringify({
             "name": name,
             "street_address": address,
@@ -120,7 +120,7 @@ pricingimage(){
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');     
         headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-        return this._https.post("https://apis.rfpgurus.com/free_Trail/",
+        return this._https.post("https://apis.com/free_Trail/",
             JSON.stringify({
                 "package_detail": pkg_type,
                 "card_info": cardNumber,
@@ -138,7 +138,7 @@ pricingimage(){
     }
 
     updateCard(var_status, id, name, cardno, ccv, expiryDate, address, zip, city, state, country, set_auto_pay) {
-        return this.http.put('https://apis.rfpgurus.com/payment/cardinfo/',
+        return this.http.put('https://apis.com/payment/cardinfo/',
             JSON.stringify({
                 // "cardNumber": cardno,
                 "default": var_status,
