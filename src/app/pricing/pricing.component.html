@@ -19,54 +19,52 @@
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 premium wow animated bounceInUp"
       data-wow-delay="0.6s" *ngIf="Yplan">
       <div class="pricing-box">
-        <div class="pricing2-button" *ngIf="!planSelected">
-          <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
-            title="Subscribe Package">Register
-            Now</a>
-          <ng-template #pkg4>
-            <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
-          </ng-template>
-        </div>
-      <div >
+          <div class="pricing2-button" *ngIf="!planSelected">
+            <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
+              title="Subscribe Package">Register Now
+            </a>
+            <ng-template #pkg3>
+              <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
+            </ng-template>
+          </div>
           <span class="plan-name text-center">
-              Yearly Plan
-            </span>
-            <!-- <p class="plan-price">
-              <sup class="currency">$</sup>
-              <strong>299.99</strong>
-            </p> -->
-            <img width="100%" src="../../assets/img/Pricing Influ (2).png">
-            <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
-              <li>
-                <i class="fa fa-check"></i> Unlimited Searches
-              </li>
-              <li>
-                <i class="fa fa-check"></i> Store upto 8000 Contacts
-              </li>
-              <li>
-                <i class="fa fa-check"></i> Send Upto 1,000,000 Emails
-              </li>
-              <li>
-                <i class="fa fa-check"></i> 3 seats
-              </li>
-              <li>
-                <i class="fa fa-check"></i> 1 year License
-              </li>
-              <li>
-                <i class="fa fa-check"></i> Email Support
-              </li>
-            </ul>
-            
-      </div>
-        <div class="pricing2-button" *ngIf="!planSelected">
-          <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
-            title="Subscribe Package">Register
-            Now</a>
-          <ng-template #pkg4>
-            <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
-          </ng-template>
+            Free Plan
+          </span>
+          <!-- <p class="plan-price bg-black">
+            <sup class="currency">$</sup>
+            <strong>0.00</strong>
+          </p> -->
+          <img src="{{priceimages}}">
+          <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
+            <li>
+              <i class="fa fa-check"></i>
+              50 Searches
+            </li>
+            <li>
+              <i class="fa fa-check"></i> Store up to 100 Contacts
+            </li>
+            <li>
+              <i class="fa fa-check"></i> Send up to 5 emails
+            </li>
+            <li>
+              <i class="fa fa-check"></i> 1 Seat
+            </li>
+            <li>
+              <i class="fa fa-check"></i> 7 Day Risk Free Trial
+            </li>
+            <li>
+              <i class="fa fa-check"></i> Email Support
+            </li>
+          </ul>
+          <div class="pricing2-button" *ngIf="!planSelected">
+            <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
+              title="Subscribe Package">Register
+              Now</a>
+            <ng-template #pkg3>
+              <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
+            </ng-template>
+          </div>
         </div>
-      </div>
     </div>
 
 
@@ -126,53 +124,59 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured " data-wow-delay="0.5s" *ngIf="Fplan">
+        
+
+
+
         <div class="pricing-box">
-          <div class="pricing2-button" *ngIf="!planSelected">
-            <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
-              title="Subscribe Package">Register Now
-            </a>
-            <ng-template #pkg3>
-              <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
-            </ng-template>
+            <div class="pricing2-button" *ngIf="!planSelected">
+              <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
+                title="Subscribe Package">Register
+                Now</a>
+              <ng-template #pkg4>
+                <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+              </ng-template>
+            </div>
+          <div >
+              <span class="plan-name text-center">
+                  Yearly Plan
+                </span>
+                <!-- <p class="plan-price">
+                  <sup class="currency">$</sup>
+                  <strong>299.99</strong>
+                </p> -->
+                <img width="100%" src="../../assets/img/Pricing Influ (2).png">
+                <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
+                  <li>
+                    <i class="fa fa-check"></i> Unlimited Searches
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> Store upto 8000 Contacts
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> Send Upto 1,000,000 Emails
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> 3 seats
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> 1 year License
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> Email Support
+                  </li>
+                </ul>
+                
           </div>
-          <span class="plan-name text-center">
-            Free Plan
-          </span>
-          <!-- <p class="plan-price bg-black">
-            <sup class="currency">$</sup>
-            <strong>0.00</strong>
-          </p> -->
-          <img src="{{priceimages}}">
-          <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
-            <li>
-              <i class="fa fa-check"></i>
-              50 Searches
-            </li>
-            <li>
-              <i class="fa fa-check"></i> Store up to 100 Contacts
-            </li>
-            <li>
-              <i class="fa fa-check"></i> Send up to 5 emails
-            </li>
-            <li>
-              <i class="fa fa-check"></i> 1 Seat
-            </li>
-            <li>
-              <i class="fa fa-check"></i> 7 Day Risk Free Trial
-            </li>
-            <li>
-              <i class="fa fa-check"></i> Email Support
-            </li>
-          </ul>
-          <div class="pricing2-button" *ngIf="!planSelected">
-            <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
-              title="Subscribe Package">Register
-              Now</a>
-            <ng-template #pkg3>
-              <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
-            </ng-template>
+            <div class="pricing2-button" *ngIf="!planSelected">
+              <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
+                title="Subscribe Package">Register
+                Now</a>
+              <ng-template #pkg4>
+                <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+              </ng-template>
+            </div>
           </div>
-        </div>
       </div>
       <div *ngIf="pkgsub" class="sh-signup-form-fix col-lg-8 col-md-8 col-sm-8 col-xs-12" data-wow-delay=".5s">
         <div class="  sh-payment">
