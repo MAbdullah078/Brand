@@ -32009,3 +32009,6 @@ body {
 .pricing2-section mat-select{
   width: 100% !important;
 }
+.signin-signup .mat-form-field-appearance-legacy .mat-form-field-label {
+  top: 2.18125em;
+}
