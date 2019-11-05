@@ -56,7 +56,7 @@
 
     <div class="row m-0">
         <div class="col-md-12 ">
-            <mat-tab-group>
+            <!-- <mat-tab-group>
 
 
                 <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -75,16 +75,7 @@
                             </div>
                             <div class="col-md-6 text-center p-auto">
 
-                                <!-- <mat-form-field class="example-full-width " style="width:100%">
-                                    <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-                                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getYTChannels($event)">
-                                        <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
-                                            {{ option }}
-                                        </mat-option>
-                                    </mat-autocomplete>
-                                </mat-form-field> -->
                                 <mat-form-field>
-                                    <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
                                       <mat-select placeholder="Select Category" [(ngModel)]="cat">
                                         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                         {{option}}
@@ -169,7 +160,7 @@
                     </div>
 
                 </mat-tab>
-            </mat-tab-group>
+            </mat-tab-group> -->
         </div>
     </div>
 

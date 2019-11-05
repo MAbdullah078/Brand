@@ -54,7 +54,7 @@
 
     <div class="row m-0">
         <div class="col-md-12 ">
-            <mat-tab-group>
+            <!-- <mat-tab-group>
 
 
                 <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -72,18 +72,7 @@
                                 <h6 class="influencer-hading" > Periscope Influencers</h6>
                             </div>
                             <div class="col-md-6 text-center p-auto">
-
-                                <!-- <mat-form-field class="example-full-width">
-                                    <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-                                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getperipages($event)">
-                                        <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
-                                            {{ option }}
-                                        </mat-option>
-                                    </mat-autocomplete>
-                                </mat-form-field> -->
-
                                 <mat-form-field>
-                                  <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
                                     <mat-select placeholder="Select Category" [(ngModel)]="cat">
                                       <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                       {{option}}
@@ -101,65 +90,6 @@
                         </div>
                     </div>
                 </mat-tab>
-                <!-- <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
-                    <ng-template mat-tab-label style="background: white">
-                          <span class="nav-link-in">
-										<i class="fa fa-fire"></i>
-                                    Advanced Search
-									</span>
-                    </ng-template>
-                    <div class="body">
-                        <div class="container">
-                          <form class="social-forms m-0">                            <div class="row">
-                                <div class="col-md-6">
-                                    <mat-form-field >
-                                        <input matInput type="text" placeholder="Search by Username"  tabindex=1 required>
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field>
-                                        <input matInput type="text" placeholder="Search by Email" name="contact">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="row Advanced-search">
-                                <div class="col-md-6">
-                                    <mat-form-field>
-                                        <input matInput type="text" placeholder="Search by Followers" name="social">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field>
-                                        <input matInput type="text" placeholder="Search by Followings" name="seo">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="row Advanced-search">
-                                <div class="col-md-6">
-                                    <mat-form-field>
-                                        <input matInput type="text" placeholder="Search by Tweets" name="title">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field>
-                                        <input matInput type="text" placeholder="Search by Likes" name="title">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-
-                            <div class="row " >
-                                <div class="col-md-12 text-center">
-                                    <button type="button"  class="btn btn-primary search-button" >
-                                        Search <i class="fa fa-sliders"></i>
-                                    </button>
-                                </div>
-
-                            </div>
-                          </form>
-                        </div>
-                    </div>
-
-                </mat-tab> -->
                 <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
                     <ng-template mat-tab-label style="background: white">
                           <span class="nav-link-in">
@@ -216,15 +146,7 @@
                                             <input matInput type="text" [(ngModel)]="maxhearts" placeholder="Maximum Hearts" name="loc2">
                                         </mat-form-field>
                                     </div>
-                                    <!-- <div class="col-md-6">
-                                        <mat-label>Search by Boards</mat-label>
-                                        <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minboards" placeholder="Minimum Boards" name="er">
-                                        </mat-form-field>
-                                        <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="maxboards" placeholder="Maximum  Boards" name="er2">
-                                        </mat-form-field>
-                                    </div> -->
+
                                 </div>
 
                                 <div class="row Advanced-search">
@@ -241,7 +163,7 @@
                     </div>
 
                 </mat-tab>
-              </mat-tab-group>
+              </mat-tab-group> -->
         </div>
     </div>
 
