@@ -41,10 +41,10 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
 
     filteredOptions: Observable<string[]>;
      name: any;
-     following: any;minfollowing;maxfollowing
-     follower: any;minfollower;maxfollower;
-     account_rank: any;minaccount_rank;maxaccount_rank;
-     post: any;minpost;maxpost;
+     following: any;minfollowing: any; maxfollowing: any;
+     follower: any;minfollower: any; maxfollower: any;
+     account_rank: any;minaccount_rank: any; maxaccount_rank;
+     post: any;minpost: any; maxpost: any;
     constructor(private http: HttpService, private router: Router,private route:ActivatedRoute, private pagerService: PagerService ) {
 
     }
@@ -54,6 +54,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
         document.getElementById("mySidenav").style.width = "250px";
     }
     ngOnInit() {
+        window.scroll(0,0)
         this.currentUser =JSON.parse(localStorage.getItem('currentUser'));
         this.currentlist= JSON.parse(localStorage.getItem('selected_list_in'));
         this.route.queryParams.subscribe(params =>{
@@ -572,18 +573,18 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
         // this.http.get(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         this.http.post(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {
             name: this.name,
-            // following: this.following,
-            followingmin:this.minfollowing,
-            followingmax:this.maxfollowing,
-            // follower:this.follower,
+            following: this.following,
+            followingmin: this.minfollowing,
+            followingmax: this.maxfollowing,
+            follower:this.follower,
             followermin:this.minfollower,
             followermax:this.maxfollower,
-            // account_rank:this.account_rank,
+            account_rank:this.account_rank,
             account_rankmin:this.minaccount_rank,
             account_rankmax:this.maxaccount_rank,
-            // posts:this.post,
+            posts:this.post,
             postsmin:this.minpost,
-            postsmax:this.maxpost
+            postsmax:this.maxpost,
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;

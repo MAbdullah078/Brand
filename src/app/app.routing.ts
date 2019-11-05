@@ -22,7 +22,8 @@ import {PricingstepsComponent} from './pricingsteps/pricingsteps.component';
 import {MyRfmComponent} from './my-rfm/my-rfm.component';
 import {RfmComponent} from './rfm/rfm.component';
 import {RfmDetailComponent} from './rfm-detail/rfm-detail.component'
-
+import {PaymentmethodsComponent } from './paymentmethods/paymentmethods.component';
+import { from } from 'rxjs';
 export const AppRoutes: Routes = [
 
     {
@@ -44,6 +45,7 @@ export const AppRoutes: Routes = [
         path: 'Terms-and-Conditions',
         component: TermsAndConditionsComponent
     },
+    { path: 'paymentmethod' , component : PaymentmethodsComponent},
     {
         path: 'terms',
         component: TermsComponent
@@ -109,7 +111,7 @@ export const AppRoutes: Routes = [
     //     { path: 'settings', loadChildren: './settings/settings.module#SettingsModule'},
         {path:  'my-profile',loadChildren:'./profile/profile.module#ProfileModule'},
         { path: 'pricingsub',  component:PricingComponent },
-    { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
+    // { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
 
         {path:  'update-password',loadChildren:'./update-pass/update-pass.module#UpdatePassModule'}
         //

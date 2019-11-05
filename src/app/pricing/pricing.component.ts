@@ -16,9 +16,6 @@ import { Http , Headers } from '@angular/http';
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricingsteps.component.scss',
-  // '../../local-style/payment.css',
-  // '../../local-style/single-pricing.css',
-  // '../../local-style/cradet-card-box.css'
 ],
   providers: [PricingService]
 })
@@ -125,14 +122,14 @@ export class PricingComponent implements OnInit {
     this.CardCodeForm2=false
    }
   ngOnInit() {
-    // this._serv2.getcounty().subscribe( data =>{
-    //   this.allcountry = data['countries'];
-    //   console.log(this.allcountry);
-    // })
+    this._serv.getcounty().subscribe( data =>{
+      this.allcountry = data['countries'];
+      console.log(this.allcountry);
+    })
     this.getcardid(this.id);
     window.scroll(0, 0);
     this.images();
-    // this.timer();
+    this.timer();
     // --------------- SEO Service ---------------
     // setting the page title 
     // this.seoService.setTitle('Pricing');
@@ -193,13 +190,13 @@ export class PricingComponent implements OnInit {
 
   }
   totaltime;
-  // timer(){
-  //   this._home.gettimer().subscribe( data => {
-  //     this.totaltime = data.json();
-  //     // alert(this.totaltime);
-  //     console.log(this.totaltime);
-  //   })
-  // }
+  timer(){
+    this._serv.gettimer().subscribe( data => {
+      this.totaltime = data.json();
+      // alert(this.totaltime);
+      console.log(this.totaltime);
+    })
+  }
   monthly;
   year;
   priceimages;
@@ -245,28 +242,28 @@ export class PricingComponent implements OnInit {
     this.setautopay = val.checked
   }
   invalid;
-  // zipcodeCheck(zipcode1) {
+  zipcodeCheck(zipcode1) {
    
-  //   if (zipcode1.length > 4) {
+    if (zipcode1.length > 4) {
     
-  //     this.endRequest = this._serv2.zipcode(zipcode1).subscribe(
-  //       data => {
-  //         this.model.city = data['city'];
-  //         this.model.state = data['state'];
-  //         this.model.country = data['country'];
-  //         this.readonly=true;
-  //       },
+      this.endRequest = this._serv.zipcode(zipcode1).subscribe(
+        data => {
+          this.model.city = data['city'];
+          this.model.state = data['state'];
+          this.model.country = data['country'];
+          this.readonly=true;
+        },
         
-  //       error => {
-  //         error.status== 400
-  //         this.invalid=error.status;
-  //         delete  this.model.city;
-  //         delete  this.model.state;
-  //         delete this.model.country;
+        error => {
+          error.status== 400
+          this.invalid=error.status;
+          delete  this.model.city;
+          delete  this.model.state;
+          delete this.model.country;
 
-  //       });
-  //   }
-  // }
+        });
+    }
+  }
   expirydate;
   chek(val) {
     // this.expirydate=val.toString().slice(3,7);
@@ -292,7 +289,7 @@ export class PricingComponent implements OnInit {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    this._http.post( 'https://apis.rfpgurus.com/payment/promocode_verify/', {
+    this._http.post( 'https://apis.com/payment/promocode_verify/', {
       "code": this.model.promo_code,
       "type" : "V"
     },{ headers: headers }).subscribe(data=>{
@@ -433,413 +430,402 @@ export class PricingComponent implements OnInit {
       this.isInvalid2 = false;
     }
   }
-  // proceed(f: NgForm) {
-  //   this.local = localStorage.getItem('currentUser');
-  //   let pars = JSON.parse(this.local);
-  //   this.uname = pars.username
-  //   this.date = this.model.expirationdate;
-  //   // if(this.model.holdername != null && this.model.address != null && this.model.zipcode != null && this.model.city != null && this.model.state != null && this.model.country != null && this.model.cardNumber != null && this.model.cardcod && this.date != null && this.model.cardtype != null &&  this.model.nickname != null ){
-  //     // if(this.form.controls.Holdername.valid && this.form.controls.Address.valid && this.form.controls.zipcode.valid && this.form.controls.city.valid && this.form.controls.state.valid && this.form.controls.country.valid && this.form.controls.CardNumberForm.valid && this.form.controls.CardCodeForm.valid && this.form.controls.CardtypeForm.valid && this.form.controls.nickname.valid){
-  //       if (this.isfreetrial == true) {
-          
-  //         if (this.isright == true) {
-  //               if(this.model.holdername != null && this.model.address != null && this.model.zipcode != null  && this.model.cardNumber != null && this.model.cardcod && this.date != null && this.model.cardtype != null &&  this.model.nickname != null ){
-  //     if(this.form.controls.Holdername.valid && this.form.controls.Address.valid && this.form.controls.zipcode.valid && this.form.controls.city.valid && this.form.controls.state.valid && this.form.controls.country.valid && this.form.controls.CardNumberForm.valid || this.form.controls.CardNumberForm2.valid && this.form.controls.CardCodeForm.valid || this.form.controls.CardCodeForm2.valid && this.form.controls.CardtypeForm.valid && this.form.controls.nickname.valid){
-  //       if(this.isInvalid==false && this.isInvalid2==false){
-  //         this._http6.addCard(this.model.holdername, this.model.address, this.model.zipcode, this.model.city, this.model.state, this.model.country, this.model.cardNumber.split('-').join(''), this.model.cardcod, this.date.split('/').join(''), this.model.cardtype, this.setautopay, this.model.nickname).subscribe(Data => {
+  proceed(f: NgForm) {
+    this.local = localStorage.getItem('currentUser');
+    let pars = JSON.parse(this.local);
+    this.uname = pars.username
+    this.date = this.model.expirationdate;
+    // if(this.model.holdername != null && this.model.address != null && this.model.zipcode != null && this.model.city != null && this.model.state != null && this.model.country != null && this.model.cardNumber != null && this.model.cardcod && this.date != null && this.model.cardtype != null &&  this.model.nickname != null ){
+      // if(this.form.controls.Holdername.valid && this.form.controls.Address.valid && this.form.controls.zipcode.valid && this.form.controls.city.valid && this.form.controls.state.valid && this.form.controls.country.valid && this.form.controls.CardNumberForm.valid && this.form.controls.CardCodeForm.valid && this.form.controls.CardtypeForm.valid && this.form.controls.nickname.valid){
+        if (this.isfreetrial == true) {
+          if (this.isright == true) {
+                if(this.model.holdername != null && this.model.address != null && this.model.zipcode != null  && this.model.cardNumber != null && this.model.cardcod && this.date != null && this.model.cardtype != null &&  this.model.nickname != null ){
+      if(this.form.controls.Holdername.valid && this.form.controls.Address.valid && this.form.controls.zipcode.valid && this.form.controls.city.valid && this.form.controls.state.valid && this.form.controls.country.valid && this.form.controls.CardNumberForm.valid || this.form.controls.CardNumberForm2.valid && this.form.controls.CardCodeForm.valid || this.form.controls.CardCodeForm2.valid && this.form.controls.CardtypeForm.valid && this.form.controls.nickname.valid){
+        if(this.isInvalid==false && this.isInvalid2==false){
+          this._serv.addCard(this.model.holdername, this.model.address, this.model.zipcode, this.model.city, this.model.state, this.model.country, this.model.cardNumber.split('-').join(''), this.model.cardcod, this.date.split('/').join(''), this.model.cardtype, this.setautopay, this.model.nickname).subscribe(Data => {
     
-  //           this.model.defaultcard = Data.id
-  //           if (Data.id) {
-  //             this._serv.package_free_trial(this.isright, this.model.defaultcard, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'])
-  //               .subscribe(data => {
-  //                 swal.fire(
-  //                   'Your payment is posted successfully.',
-  //                   '',
-  //                   'success'
-  //                 )
-  //                 this._nav.navigate(['purchase-history'])
-  //                 if (localStorage.getItem('member')) {
-  //                   let url = localStorage.getItem('member')
-  //                   let last = url.length
-  //                   let ur = url.slice(0, 13)
-  //                   let state = url.slice(0, 5)
-  //                   let category = url.slice(0, 8)
-  //                   let agency = url.slice(0, 6)
+            this.model.defaultcard = Data.id
+            if (Data.id) {
+              this._serv.package_free_trial(this.isright, this.model.defaultcard, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'])
+                .subscribe(data => {
+                  swal.fire(
+                    'Your payment is posted successfully.',
+                    '',
+                    'success'
+                  )
+                  this._nav.navigate(['purchase-history'])
+                  if (localStorage.getItem('member')) {
+                    let url = localStorage.getItem('member')
+                    let last = url.length
+                    let ur = url.slice(0, 13)
+                    let state = url.slice(0, 5)
+                    let category = url.slice(0, 8)
+                    let agency = url.slice(0, 6)
   
-  //                   if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
-  //                   else if (state == 'state') {
-  //                     this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
-  //                   }
-  //                   else if (category == 'category') {
-  //                     this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
-  //                   }
-  //                   else if (agency == 'agency') {
+                    if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
+                    else if (state == 'state') {
+                      this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
+                    }
+                    else if (category == 'category') {
+                      this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
+                    }
+                    else if (agency == 'agency') {
   
-  //                     this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
-  //                   }
-  //                   else {
-  //                     this._nav.navigate([url]);
-  //                   }
-  //                 } else {
-  //                   this._nav.navigate(['/']);
-  //                 }
+                      this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
+                    }
+                    else {
+                      this._nav.navigate([url]);
+                    }
+                  } else {
+                    this._nav.navigate(['/']);
+                  }
                 
-  //                 f.resetForm()
-  //                 this._nav.navigate(['purchase-history'])
-  //               },
+                  f.resetForm()
+                  this._nav.navigate(['purchase-history'])
+                },
               
-  //                 error => {
-  //                   if (error.status == 500 || error.status == 406) {
-  //                     swal.fire(
-  //                       'Oops',
-  //                       'Something went wrong',
-  //                       'error'
-  //                     )
-  //                   }
-  //                   else if (error.status == 404) {
-  //                     swal.fire(
-  //                       'You have already subscribed for free trial',
-  //                       '',
-  //                       'error'
-  //                     )
-  //                   }
-  //                   else if (error.status == 403) {
-  //                     swal.fire(
-  //                       'You have already subscribed',
-  //                       '',
-  //                       'error'
-  //                     )
-  //                   }
-  //                   else if (error.status == 400) {
-  //                     swal.fire(
-  //                       'Sorry',
-  //                       'Select payment card and subscription plan first',
-  //                       'error'
-  //                     )
-  //                   }
-  //                 });
-  //           }
-  //           else {
-  //             swal.fire(
-  //               'Oops',
-  //               'Something went wrong Please Try Again',
-  //               'error'
-  //             )
-  //           }
-  //         },
-  //         error => {
-  //           if (error.status === 406) {
-  //             swal.fire({
-  //               type: 'error',
-  //               title: 'Card Number already exist',
-  //               showConfirmButton: false,
-  //               timer: 1500, width: '512px',
-  //             })
-  //           }
-  //           else if(error.status === 405){
-  //             swal.fire({
-  //               type: 'error',
-  //               title: 'Card details are not valid',
-  //               showConfirmButton: false,
-  //               timer: 1500, width: '512px',
-  //             })
-  //           }
-  //         })
-  //       }
-  //       else {
-  //         swal.fire({
-  //           type: 'error',
-  //           title: 'Invalid details',
-  //           showConfirmButton: false,
-  //           timer: 1500, width: '512px',
-  //         })
-  //       }     
-  //     }
-  //     else {
-  //       swal.fire({
-  //         type: 'error',
-  //         title: 'Invalid details',
-  //         showConfirmButton: false,
-  //         timer: 1500, width: '512px',
-  //       })
-  //     }
-  //     }
+                  error => {
+                    if (error.status == 500) {
+                      swal.fire(
+                        'Oops',
+                        'Internal server error',
+                        'error'
+                      )
+                    }
+                    else if (error.status == 404) {
+                      swal.fire(
+                        'You have already subscribed for free trial',
+                        '',
+                        'error'
+                      )
+                    }
+                    else if (error.status == 403) {
+                      swal.fire(
+                        'You have already subscribed',
+                        '',
+                        'error'
+                      )
+                    }
+                    else if (error.status == 400) {
+                      swal.fire(
+                        'Sorry',
+                        'Select payment card and subscription plan first',
+                        'error'
+                      )
+                    }
+                  });
+            }
+            else {
+              swal.fire(
+                'Oops',
+                'Something went wrong Please Try Again',
+                'error'
+              )
+            }
+          },
+          error => {
+            if (error.status === 406) {
+              swal.fire({
+                type: 'error',
+                title: 'Card Number already exist',
+                showConfirmButton: false,
+                timer: 1500, width: '512px',
+              })
+            }
+            else if(error.status === 405){
+              swal.fire({
+                type: 'error',
+                title: 'Card details are not valid',
+                showConfirmButton: false,
+                timer: 1500, width: '512px',
+              })
+            }
+          })
+        }
+        else {
+          swal.fire({
+            type: 'error',
+            title: 'Invalid details',
+            showConfirmButton: false,
+            timer: 1500, width: '512px',
+          })
+        }     
+      }
+      else {
+        swal.fire({
+          type: 'error',
+          title: 'Invalid details',
+          showConfirmButton: false,
+          timer: 1500, width: '512px',
+        })
+      }
+      }
      
-  //   else {
-  //     swal.fire({
-  //       type: 'error',
-  //       title: ' Please fill in all the fields ',
-  //       showConfirmButton: false,
-  //       timer: 1500, width: '512px',
-  //     })
-  //   }
-  //           // f.resetForm()
-  //         } else if (this.isright == false) {
-  //           this._serv.package_free_trial(this.isright, this.eachcardid, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'])
-  //             .subscribe(data => {
-  //               swal.fire(
-  //                 'Your payment has been transferred',
-  //                 '',
-  //                 'success'
-  //               )
-  //               if (localStorage.getItem('member')) {
-  //                 let url = localStorage.getItem('member')
-  //                 let last = url.length
-  //                 let ur = url.slice(0, 13)
-  //                 let state = url.slice(0, 5)
-  //                 let category = url.slice(0, 8)
-  //                 let agency = url.slice(0, 6)
+    else {
+      swal.fire({
+        type: 'error',
+        title: ' Please fill in all the fields ',
+        showConfirmButton: false,
+        timer: 1500, width: '512px',
+      })
+    }
+            // f.resetForm()
+          } else if (this.isright == false) {
+            this._serv.package_free_trial(this.isright, this.eachcardid, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'])
+              .subscribe(data => {
+                swal.fire(
+                  'Your payment has been transferred',
+                  '',
+                  'success'
+                )
+                if (localStorage.getItem('member')) {
+                  let url = localStorage.getItem('member')
+                  let last = url.length
+                  let ur = url.slice(0, 13)
+                  let state = url.slice(0, 5)
+                  let category = url.slice(0, 8)
+                  let agency = url.slice(0, 6)
     
-  //                 if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
-  //                 else if (state == 'state') {
-  //                   this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
-  //                 }
-  //                 else if (category == 'category') {
-  //                   this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
-  //                 }
-  //                 else if (agency == 'agency') {
+                  if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
+                  else if (state == 'state') {
+                    this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
+                  }
+                  else if (category == 'category') {
+                    this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
+                  }
+                  else if (agency == 'agency') {
     
-  //                   this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
-  //                 }
-  //                 else {
-  //                   this._nav.navigate([url]);
-  //                 }
-  //               } else {
-  //                 this._nav.navigate(['/']);
-  //               }
-  //               f.resetForm()
-  //               this._nav.navigate(['purchase-history'])
-  //             },
-  //               error => {
-  //                 if (error.status == 500 || error.status == 406) {
-  //                   swal.fire(
-  //                     'Oops',
-  //                     'Something went wrong',
-  //                     'error'
-  //                   )
-  //                 }
-  //                 else if (error.status == 404) {
-  //                   swal.fire(
-  //                     'You have already subscribed for free trial',
-  //                     '',
-  //                     'error'
-  //                   )
-  //                 }
-  //                 else if (error.status == 403) {
-  //                   swal.fire(
-  //                     'You have already subscribed',
-  //                     '',
-  //                     'error'
-  //                   )
-  //                 }
-  //                 else if (error.status == 200) {
-  //                   swal.fire(
-  //                     'Your payment has been transferred',
-  //                     '',
-  //                     'success'
-  //                   )
-  //                 }
-  //                 else if (error.status == 400) {
-  //                   swal.fire(
-  //                     'Sorry',
-  //                     'Select payment card and subscription plan first',
-  //                     'error'
-  //                   )
-  //                 }
-  //               });
-  //         }
-  //       } else {
-  //         if (this.isright == true) {
-  //           if(this.model.holdername != null && this.model.address != null && this.model.zipcode != null && this.model.cardNumber != null && this.model.cardcod && this.date != null && this.model.cardtype != null &&  this.model.nickname != null ){
-  //             if(this.form.controls.Holdername.valid && this.form.controls.Address.valid && this.form.controls.zipcode.valid && this.form.controls.city.valid && this.form.controls.state.valid && this.form.controls.country.valid && this.form.controls.CardNumberForm.valid || this.form.controls.CardNumberForm2.valid && this.form.controls.CardCodeForm.valid || this.form.controls.CardCodeForm2.valid && this.form.controls.CardtypeForm.valid && this.form.controls.nickname.valid){
-  //               if(this.isInvalid == false && this.isInvalid2==false){
-  //                 this._http6.addCard( this.model.holdername, this.model.address, this.model.zipcode, this.model.city, this.model.state, this.model.country, this.model.cardNumber.split('-').join(''), this.model.cardcod, this.date.split('/').join(''), this.model.cardtype, this.setautopay, this.model.nickname).subscribe(Data => {
+                    this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
+                  }
+                  else {
+                    this._nav.navigate([url]);
+                  }
+                } else {
+                  this._nav.navigate(['/']);
+                }
+                f.resetForm()
+                this._nav.navigate(['purchase-history'])
+              },
+                error => {
+                  if (error.status == 500) {
+                    swal.fire(
+                      'Oops',
+                      'Internal server error',
+                      'error'
+                    )
+                  }
+                  else if (error.status == 404) {
+                    swal.fire(
+                      'You have already subscribed for free trial',
+                      '',
+                      'error'
+                    )
+                  }
+                  else if (error.status == 403) {
+                    swal.fire(
+                      'You have already subscribed',
+                      '',
+                      'error'
+                    )
+                  }
+                  else if (error.status == 200) {
+                    swal.fire(
+                      'Your payment has been transferred',
+                      '',
+                      'success'
+                    )
+                  }
+                  else if (error.status == 400) {
+                    swal.fire(
+                      'Sorry',
+                      'Select payment card and subscription plan first',
+                      'error'
+                    )
+                  }
+                });
+          }
+        } else {
+          if (this.isright == true) {
+            if(this.model.holdername != null && this.model.address != null && this.model.zipcode != null && this.model.cardNumber != null && this.model.cardcod && this.date != null && this.model.cardtype != null &&  this.model.nickname != null ){
+              if(this.form.controls.Holdername.valid && this.form.controls.Address.valid && this.form.controls.zipcode.valid && this.form.controls.city.valid && this.form.controls.state.valid && this.form.controls.country.valid && this.form.controls.CardNumberForm.valid || this.form.controls.CardNumberForm2.valid && this.form.controls.CardCodeForm.valid || this.form.controls.CardCodeForm2.valid && this.form.controls.CardtypeForm.valid && this.form.controls.nickname.valid){
+                if(this.isInvalid == false && this.isInvalid2==false){
+                  this._serv.addCard( this.model.holdername, this.model.address, this.model.zipcode, this.model.city, this.model.state, this.model.country, this.model.cardNumber.split('-').join(''), this.model.cardcod, this.date.split('/').join(''), this.model.cardtype, this.setautopay, this.model.nickname).subscribe(Data => {
     
-  //                   this.model.defaultcard = Data.id
-  //                   if (Data.id) {
-  //                     this._serv.package_free(this.isright, this.model.defaultcard, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'], this.promocode).subscribe(
-  //                       data => {
-                          
-  //                         swal.fire(
-  //                           'Your payment has been transferred',
-  //                           '',
-  //                           'success'
-  //                         )
-  //                         if (localStorage.getItem('member')) {
-  //                           let url = localStorage.getItem('member')
-  //                           let last = url.length
-  //                           let ur = url.slice(0, 13)
-  //                           let state = url.slice(0, 5)
-  //                           let category = url.slice(0, 8)
-  //                           let agency = url.slice(0, 6)
+                    this.model.defaultcard = Data.id
+                    if (Data.id) {
+                      this._serv.package_free(this.isright, this.model.defaultcard, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'], this.promocode).subscribe(
+                        data => {
+                          swal.fire(
+                            'Your payment has been transferred',
+                            '',
+                            'success'
+                          )
+                          if (localStorage.getItem('member')) {
+                            let url = localStorage.getItem('member')
+                            let last = url.length
+                            let ur = url.slice(0, 13)
+                            let state = url.slice(0, 5)
+                            let category = url.slice(0, 8)
+                            let agency = url.slice(0, 6)
           
-  //                           if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
-  //                           else if (state == 'state') {
-  //                             this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
-  //                           }
-  //                           else if (category == 'category') {
-  //                             this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
-  //                           }
-  //                           else if (agency == 'agency') {
+                            if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
+                            else if (state == 'state') {
+                              this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
+                            }
+                            else if (category == 'category') {
+                              this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
+                            }
+                            else if (agency == 'agency') {
           
-  //                             this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
-  //                           }
-  //                           else {
-  //                             this._nav.navigate([url]);
-  //                           }
-  //                         } else {
-  //                           this._nav.navigate(['/']);
-  //                         }
-  //                         f.resetForm()
-  //                         this._nav.navigate(['purchase-history'])
-  //                       },
-  //                       error => {
-  //                         if (error.status == 403) {
-  //                           swal.fire(
-  //                             'You have already subscribed',
-  //                             '',
-  //                             'error'
-  //                           )
-  //                         }
-  //                         // swal(
-  //                         //   'Oops',
-  //                         //   'Something went wrong',
-  //                         //   'error'
-  //                         // )
-  //                       });
-  //                   }
-  //                   //  else {
-  //                   //   swal(
-  //                   //     'Oops',
-  //                   //     'Something went wrong Please Try Again.',
-  //                   //     'error'
-  //                   //   )
-  //                   // }
-  //                 },
-  //                 error => {
-  //                   if (error.status === 406) {
-  //                     swal.fire({
-  //                       type: 'error',
-  //                       title: 'Card Number already exist',
-  //                       showConfirmButton: false,
-  //                       timer: 1500, width: '512px',
-  //                     })
-  //                   }
-  //                   else if(error.status === 405){
-  //                     swal.fire({
-  //                       type: 'error',
-  //                       title: 'Card details are not valid',
-  //                       showConfirmButton: false,
-  //                       timer: 1500, width: '512px',
-  //                     })
-  //                   }
-                    
-  //                 })
-  //               }
-  //               else {
-  //                 swal.fire({
-  //                   type: 'error',
-  //                   title: 'Invalid detail',
-  //                   showConfirmButton: false,
-  //                   timer: 1500, width: '512px',
-  //                 })
-  //               }
-  //         }
-  //           else {
-  //             swal.fire({
-  //               type: 'error',
-  //               title: 'Invalid detail',
-  //               showConfirmButton: false,
-  //               timer: 1500, width: '512px',
-  //             })
-  //           }
-  //         }
+                              this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
+                            }
+                            else {
+                              this._nav.navigate([url]);
+                            }
+                          } else {
+                            this._nav.navigate(['/']);
+                          }
+                          f.resetForm()
+                          this._nav.navigate(['purchase-history'])
+                        },
+                        error => {
+                          if (error.status == 403) {
+                            swal.fire(
+                              'You have already subscribed',
+                              '',
+                              'error'
+                            )
+                          }
+                          // swal(
+                          //   'Oops',
+                          //   'Something went wrong',
+                          //   'error'
+                          // )
+                        });
+                    }
+                    //  else {
+                    //   swal(
+                    //     'Oops',
+                    //     'Something went wrong Please Try Again.',
+                    //     'error'
+                    //   )
+                    // }
+                  },
+                  error => {
+                    if (error.status === 406) {
+                      swal.fire({
+                        type: 'error',
+                        title: 'Card Number already exist',
+                        showConfirmButton: false,
+                        timer: 1500, width: '512px',
+                      })
+                    }
+                    else if(error.status === 405){
+                      swal.fire({
+                        type: 'error',
+                        title: 'Card details are not valid',
+                        showConfirmButton: false,
+                        timer: 1500, width: '512px',
+                      })
+                    }
+                  })
+                }
+                else {
+                  swal.fire({
+                    type: 'error',
+                    title: 'Invalid detail',
+                    showConfirmButton: false,
+                    timer: 1500, width: '512px',
+                  })
+                }
+          }
+            else {
+              swal.fire({
+                type: 'error',
+                title: 'Invalid detail',
+                showConfirmButton: false,
+                timer: 1500, width: '512px',
+              })
+            }
+          }
            
-  //         else {
-  //           swal.fire({
-  //             type: 'error',
-  //             title: ' Please fill in all the fields ',
-  //             showConfirmButton: false,
-  //             timer: 1500, width: '512px',
-  //           })
-  //         }
-  //         } else if (this.isright == false) {
-  //           this._serv.package_free(this.isright, this.eachcardid, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'], this.promocode).subscribe(
-  //             data => {
-              
-  //               swal.fire(
-  //                 'Your payment has been transferred',
-  //                 '',
-  //                 'success'
-  //               )
-  //               if (localStorage.getItem('member')) {
-  //                 let url = localStorage.getItem('member')
-  //                 let last = url.length
-  //                 let ur = url.slice(0, 13)
-  //                 let state = url.slice(0, 5)
-  //                 let category = url.slice(0, 8)
-  //                 let agency = url.slice(0, 6)
+          else {
+            swal.fire({
+              type: 'error',
+              title: ' Please fill in all the fields ',
+              showConfirmButton: false,
+              timer: 1500, width: '512px',
+            })
+          }
+          } else if (this.isright == false) {
+            this._serv.package_free(this.isright, this.eachcardid, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'],  this.promocode).subscribe(
+              data => {
+                swal.fire(
+                  'Your payment has been transferred',
+                  '',
+                  'success'
+                )
+                if (localStorage.getItem('member')) {
+                  let url = localStorage.getItem('member')
+                  let last = url.length
+                  let ur = url.slice(0, 13)
+                  let state = url.slice(0, 5)
+                  let category = url.slice(0, 8)
+                  let agency = url.slice(0, 6)
     
-  //                 if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
-  //                 else if (state == 'state') {
-  //                   this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
-  //                 }
-  //                 else if (category == 'category') {
-  //                   this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
-  //                 }
-  //                 else if (agency == 'agency') {
+                  if (ur == 'searched-data') { this._nav.navigate([ur], { queryParams: { keyword: url.slice(13, last) } }); }
+                  else if (state == 'state') {
+                    this._nav.navigate([state], { queryParams: { state: url.slice(5, last) } });
+                  }
+                  else if (category == 'category') {
+                    this._nav.navigate([category], { queryParams: { cat: url.slice(8, last) } });
+                  }
+                  else if (agency == 'agency') {
     
-  //                   this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
-  //                 }
-  //                 else {
-  //                   this._nav.navigate([url]);
-  //                 }
-  //               } else {
-  //                 this._nav.navigate(['/']);
-  //               }
-  //               f.resetForm()
-  //               this._nav.navigate(['purchase-history'])
-  //             },
+                    this._nav.navigate([agency], { queryParams: { agency: url.slice(6, last) } });
+                  }
+                  else {
+                    this._nav.navigate([url]);
+                  }
+                } else {
+                  this._nav.navigate(['/']);
+                }
+                f.resetForm()
+                this._nav.navigate(['purchase-history'])
+              },
     
-  //             error => {
-  //               if (error.status == 500 ) {
-  //                 swal.fire(
-  //                   'Oops',
-  //                   'Something went wrong',
-  //                   'error'
-  //                 )
-  //               }
-  //               else if (error.status == 404) {
-  //                 swal.fire(
-  //                   'You have already subscribed for free trial',
-  //                   '',
-  //                   'error'
-  //                 )
-  //               }
-  //               else if (error.status == 406 ) {
-  //                 swal.fire(
-  //                   'Oops',
-  //                   'Something went wrong',
-  //                   'error'
-  //                 )
-  //               }
-  //               else if (error.status == 400) {
-  //                 swal.fire(
-  //                   'Sorry',
-  //                   'Select payment card and subscription plan first',
-  //                   'error'
-  //                 )
-  //               }
-  //               else if(error.status==403){
-  //                 swal.fire(
-  //                   'Sorry',
-  //                   'You have already subscribed',
-  //                   'info'
-  //                 )
-  //               }
-  //             });
-  //         }
-  //     }
+              error => {
+                if (error.status == 500) {
+                  swal.fire(
+                    'Oops',
+                    'Internal server error',
+                    'error'
+                  )
+                }
+                else if (error.status == 404) {
+                  swal.fire(
+                    'You have already subscribed for free trial',
+                    '',
+                    'error'
+                  )
+                }
+                else if (error.status == 400) {
+                  swal.fire(
+                    'Sorry',
+                    'Select payment card and subscription plan first',
+                    'error'
+                  )
+                }
+                else if(error.status==403){
+                  swal.fire(
+                    'Sorry',
+                    'You have already subscribed',
+                    'info'
+                  )
+                }
+              });
+          }
+      }
       
       // }
       // else {
@@ -860,8 +846,8 @@ export class PricingComponent implements OnInit {
     //     timer: 1500, width: '512px',
     //   })
     // }
-// f.resetForm()
-//   }
+f.resetForm()
+  }
   ngOnDestroy() {
     $('#exampleModalCenter').modal('hide');
   }

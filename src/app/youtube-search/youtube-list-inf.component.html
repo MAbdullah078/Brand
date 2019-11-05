@@ -13,20 +13,7 @@
   </ul>
 
 </p-overlayPanel>
-<!--<p-overlayPanel #seo>-->
-<!--&lt;!&ndash;<p class="ali">&ndash;&gt;-->
-<!--&lt;!&ndash;Contact ali<br>&ndash;&gt;-->
-<!--&lt;!&ndash;Email: ali.raza@brainplow.com<br>&ndash;&gt;-->
-<!--&lt;!&ndash;phone: +3364224022&ndash;&gt;-->
-<!--&lt;!&ndash;<br>alifafafaf&ndash;&gt;-->
-<!--&lt;!&ndash;</p>&ndash;&gt;-->
-<!--<ul *ngFor="let row of seodata">-->
-<!--<li>{{row}}</li>-->
-<!--&lt;!&ndash;<li>Tea</li>&ndash;&gt;-->
-<!--&lt;!&ndash;<li>Milk</li>&ndash;&gt;-->
-<!--</ul>-->
 
-<!--</p-overlayPanel>-->
 
 <div class="page-content">
 
@@ -90,267 +77,7 @@
       </nav>
     </div>
   </div>
-  <!--<section class="box-typical" *ngIf="loaded&& blogs.totalItems!=0">-->
-
-    <!--<div class="box-typical-body">-->
-      <!--<div class="table-responsive">-->
-        <!--<div class="bootstrap-table">-->
-          <!--<p-dataTable #dt exportFilename="Influencers" [value]="blogs.results"-->
-                       <!--[globalFilter]="gb" class="table table-striped table-hover">-->
-
-            <!--<p-header class="box-typical-header">-->
-              <!--<div class="fixed-table-toolbar">-->
-                <!--<div class="bars pull-left">-->
-                  <!--<div id="toolbar">-->
-
-                    <!--&lt;!&ndash;<button  style="width:70%;font-size: x-large;font-weight: bold;" class="btn btn-rounded">Login</button>&ndash;&gt;-->
-
-                    <!--<inline-editor [disabled]="loading" class="bootstrap-table-header" type="text" [(ngModel)]="list_name" min="1"-->
-                                   <!--max="30" [fnErrorLength]="myHandleError" (onSave)="saveEditable($event)" name="editableText1" size="30"></inline-editor>-->
-                    <!--<img *ngIf="loading"-->
-                         <!--src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA-->
-                        <!--GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ-->
-                        <!--CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd-->
-                        <!--Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W-->
-                        <!--EYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhm-->
-                        <!--KtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZf-->
-                        <!--hYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI-->
-                        <!--nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEA-->
-                        <!--AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC-->
-                        <!--gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW-->
-                        <!--zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq-->
-                        <!--lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>-->
-                    <!--<button  class="btn btn-primary" (click)="update_delete_list()">-->
-                      <!--&lt;!&ndash;<i class="font-icon font-icon-close-2"></i> &ndash;&gt;-->
-                      <!--Delete selected-->
-                    <!--</button>-->
-                    <!--<button  class="btn btn-primary" (click)="clear_list()">-->
-                      <!--&lt;!&ndash;<i class="font-icon font-icon-close-2"></i> &ndash;&gt;-->
-                      <!--Clear selected-->
-                    <!--</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-                <!--<div class="columns columns-right btn-group pull-right">-->
-
-                  <!--<div class="export btn-group">-->
-
-                    <!--<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"-->
-                            <!--type="button" aria-expanded="false"><i-->
-                            <!--class="font-icon font-icon-download"></i> <span class="caret"></span>-->
-                    <!--</button>-->
-                    <!--<ul class="dropdown-menu" role="menu" style="min-width: fit-content;left: auto">-->
-                      <!--<li data-type="json"><a [href]="downloadJsonHref" download="JSON">JSON</a></li>-->
-                      <!--&lt;!&ndash;<li data-type="xml"><a href="javascript:void(0)">XML</a></li>&ndash;&gt;-->
-                      <!--<li data-type="csv"><a (click)="convert_to_csv()" >CSV</a></li>-->
-                      <!--&lt;!&ndash;<li data-type="txt"><a href="javascript:void(0)">TXT</a></li>&ndash;&gt;-->
-                      <!--&lt;!&ndash;<li data-type="sql"><a href="javascript:void(0)">SQL</a></li>&ndash;&gt;-->
-                      <!--&lt;!&ndash;<li data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>&ndash;&gt;-->
-                    <!--</ul>-->
-                  <!--</div>-->
-                <!--</div>-->
-
-              <!--</div>-->
-            <!--</p-header>-->
-            <!--&lt;!&ndash;<p-column >&ndash;&gt;-->
-            <!--&lt;!&ndash;<ng-template  let-col let-car="rowData" let-ri="rowIndex" pTemplate="body">&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<div class="mail-box-item-photo">&ndash;&gt;-->
-            <!--&lt;!&ndash;<img *ngIf="car['data']['main_image']" src="{{car['data']['main_image']}}" style="width: 62px;height: 62px" alt="" data-toggle="tooltip" data-placement="bottom">&ndash;&gt;-->
-
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</ng-template>&ndash;&gt;-->
-            <!--&lt;!&ndash;</p-column>&ndash;&gt;-->
-
-            <!--<p-column>-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div class="table-check">-->
-                  <!--<div class="checkbox checkbox-only">-->
-                    <!--<input type="checkbox"  id="table-check-head" name="main_checkbox" [(ngModel)]="main_checkbox" (change)="cheakall($event.target.checked)">-->
-                    <!--<label for="table-check-head"></label>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</ng-template>-->
-              <!--<ng-template pTemplate="body" let-col let-car="rowData">-->
-
-                <!--<div class="table-check">-->
-                  <!--<div class="checkbox checkbox-only">-->
-                    <!--<input type="checkbox"  name="{{car['id']}}" [(ngModel)]="inflist[car['id']]" (change)="chec()" id="table-check-{{car['id']}}">-->
-                    <!--<label for="table-check-{{car['id']}}"></label>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</ng-template>-->
-            <!--</p-column>-->
-            <!--<p-column >-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div style="text-align: center; " class="th-inner">Name</div>-->
-                <!--<div class="fht-cell"></div>-->
-              <!--</ng-template>-->
-              <!--<ng-template pTemplate="body" let-col let-car="rowData" style="text-align: center">-->
-
-
-                <!--<a (click)="goToLink(car['channel_link'])"-->
-                   <!--title="{{car['name']}}">-->
-                  <!--&lt;!&ndash;{{// car['name']}}&ndash;&gt;-->
-                  <!--<div class="mail-box-item selected-line red" style="max-width: 250px">-->
-                    <!--<div class="mail-box-item-header">-->
-
-                      <!--<div class="mail-box-item-photo">-->
-                        <!--<img *ngIf="car['thumbnail_url']"-->
-                             <!--src="{{car['thumbnail_url']}}"-->
-                             <!--style="width: 32px;height: 32px" alt="" data-toggle="tooltip"-->
-                             <!--data-placement="bottom">-->
-
-                      <!--</div>-->
-                      <!--<div class="tbl mail-box-item-head-tbl">-->
-                        <!--<div class="tbl-row">-->
-                          <!--<div class="tbl-cell">-->
-                            <!--<div class="tbl mail-box-item-user-tbl">-->
-                              <!--<div class="tbl-row">-->
-                                <!--<div class="tbl-cell tbl-cell-name"-->
-                                     <!--[innerHTML]="car['name']"></div>-->
-                                <!--&lt;!&ndash;<div class="tbl-cell tbl-cell-new"><span class="label label-pill label-danger">11</span></div>&ndash;&gt;-->
-                              <!--</div>-->
-                            <!--</div>-->
-
-                          <!--</div>-->
-                          <!--&lt;!&ndash;<div class="tbl-cell tbl-cell-date" title="Type of website"><strong>{{car['data']['site_type']&ndash;&gt;-->
-                          <!--&lt;!&ndash;| uppercase}}</strong></div>&ndash;&gt;-->
-                        <!--</div>-->
-                      <!--</div>-->
-
-                    <!--</div>-->
-                    <!--<div class="mail-box-item-content">-->
-                      <!--&lt;!&ndash;<div *ngIf="!car['highlightText']" class="txt" title="{{car['data']['title_full']}}" [innerHTML]="car['data']['title_full']"></div>&ndash;&gt;-->
-                      <!--<div *ngIf="car['description']" class="txt"-->
-                           <!--title="{{car['description']}}"-->
-                           <!--style="white-space: normal;max-height: 75px;text-overflow: ellipsis"-->
-                           <!--[innerHTML]="car['description']"></div>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                <!--</a>-->
-              <!--</ng-template>-->
-            <!--</p-column>-->
-            <!--<p-column>-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div style="text-align: center; " class="th-inner">Location/Contact</div>-->
-                <!--<div class="fht-cell"></div>-->
-              <!--</ng-template>-->
-              <!--<ng-template let-col let-car="rowData" pTemplate="body">-->
-                <!--<div class="col-item col-contact tooltips">-->
-                  <!--<ul>-->
-                    <!--<li *ngIf="car['location']">-->
-                      <!--<div>-->
-                        <!--<i class="fa fa-map-marker"></i>&lt;!&ndash;ko text:AlexaCountry&ndash;&gt;-->
-                        <!--{{car['location']}}&lt;!&ndash;/ko&ndash;&gt;-->
-                      <!--</div>-->
-                    <!--</li>-->
-                    <!--<li *ngIf="car['contact']">-->
-                      <!--<div>-->
-                        <!--<i class="font-icon-mail"></i>&lt;!&ndash;ko text:AlexaCountry&ndash;&gt;-->
-                        <!--{{car['contact'].replace('mailto:','')}}&lt;!&ndash;/ko&ndash;&gt;-->
-                      <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-
-                    <!--</li>-->
-
-                  <!--</ul>-->
-
-                <!--</div>-->
-
-
-              <!--</ng-template>-->
-            <!--</p-column>-->
-            <!--<p-column>-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div style="text-align: center; " class="th-inner">Subscribers</div>-->
-                <!--<div class="fht-cell"></div>-->
-              <!--</ng-template>-->
-              <!--<ng-template let-col let-car="rowData" pTemplate="body">-->
-                <!--{{car['subscribers']| number}}-->
-  <!--</p-column>-->
-  <!--</ng-template>-->
-            <!--<p-column>-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div style="text-align: center; " class="th-inner">Views</div>-->
-                <!--<div class="fht-cell"></div>-->
-              <!--</ng-template>-->
-              <!--<ng-template let-col let-car="rowData" pTemplate="body">-->
-                <!--{{car['total_views']| number}}-->
-              <!--</ng-template>-->
-            <!--</p-column>-->
-
-
-            <!--<p-column>-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div style="text-align: center; " class="th-inner">Video uploads</div>-->
-                <!--<div class="fht-cell"></div>-->
-              <!--</ng-template>-->
-              <!--<ng-template let-col let-car="rowData" pTemplate="body">-->
-                <!--&lt;!&ndash;Last Month&ndash;&gt;-->
-                <!--<ul class="list-group-item" style="text-align: right;">-->
-                  <!--<li>-->
-                    <!--<strong style="text-align: left;">Last Month</strong>: {{car['last_month_upload_videos']| number}}-->
-                  <!--</li>-->
-                  <!--<li>-->
-                    <!--<strong style="text-align: left;">Last week</strong>: {{car['last_week_upload_videos']| number}}-->
-                  <!--</li>-->
-                <!--</ul>-->
-
-                <!--&lt;!&ndash;<ul class="list-group-item" style="text-align: right;">&ndash;&gt;-->
-                <!--&lt;!&ndash;&ndash;&gt;-->
-                <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-
-                <!--&lt;!&ndash;<ul class="list-group-item" style="text-align: right;">&ndash;&gt;-->
-                <!--&lt;!&ndash;<li>&ndash;&gt;-->
-                <!--&lt;!&ndash;{{car['today_upload_videos'] +0+car['tomorrow_upload_videos']|number}}&ndash;&gt;-->
-                <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-
-              <!--</ng-template>-->
-            <!--</p-column>-->
-
-
-
-
-
-            <!--<p-column>-->
-              <!--<ng-template pTemplate="header">-->
-                <!--<div style="text-align: center; " class="th-inner">Rank</div>-->
-                <!--<div class="fht-cell"></div>-->
-              <!--</ng-template>-->
-              <!--<ng-template let-col let-car="rowData" pTemplate="body">-->
-
-                <!--<div class="chart" style=" width: 200px;">-->
-                  <!--<div class="bar bar-{{car['rank']| round}} red">-->
-                    <!--<div class="face top">-->
-                      <!--<div class="growing-bar"></div>-->
-                    <!--</div>-->
-                    <!--<div class="face side-0">-->
-                      <!--<div class="growing-bar"></div>-->
-                    <!--</div>-->
-                    <!--<div class="face floor">-->
-                      <!--<div class="growing-bar"></div>-->
-                    <!--</div>-->
-                    <!--<div class="face side-a"></div>-->
-                    <!--<div class="face side-b"></div>-->
-                    <!--<div class="face side-1">-->
-                      <!--<div class="growing-bar"></div>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                <!--</div>-->
-
-
-
-
-              <!--</ng-template>-->
-            <!--</p-column>-->
-
-          <!--</p-dataTable>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</section>-->
+  
   <div class="container-fluid" *ngIf="loaded&& blogs.totalItems!=0">
 
     <div class="row" id="myHeader">
@@ -497,12 +224,6 @@
 
       <tbody>
       <tr>
-        <!--<td title="Blog Rank"><strong>Blog rank</strong></td>-->
-        <!--<td title="Blog Rank">{{seodata.data.blogrank}}</td>-->
-        <!--<td title="Linked By"><strong>Linked By</strong></td>-->
-        <!--<td title="Linked By">{{seodata.data.linkedby}}</td>-->
-        <!--<td title="Posts per week"><strong>Posts per week</strong></td>-->
-        <!--<td title="Posts per week">{{seodata.data.postsperweek}}</td>-->
         <td title="Worth Of Web Traffic Rank"><strong>WOWTR</strong></td>
         <td title="Worth Of Web Traffic Rank">{{seodata.seoData.WOWTR}}</td>
       </tr>
@@ -526,16 +247,6 @@
         <td title="Estimated pageviews per day"><strong>EPVISD</strong></td>
         <td title="Estimated pageviews per day">{{seodata.seoData.EPVISD}}</td>
       </tr>
-      <!--<tr>-->
-      <!--<td title="Estimated visits per day"><strong>EVISD</strong></td>-->
-      <!--<td title="Estimated visits per day">{{car['data.EVISD}}</td>-->
-      <!--<td title="Estimated visits per month"><strong>EVISM</strong></td>-->
-      <!--<td title="Estimated visits per month">{{car['data.EVISM}}</td>-->
-      <!--<td title="Estimated visits per year"><strong>EVISY</strong></td>-->
-      <!--<td title="Estimated visits per year">{{car['data.EVISY}}</td>-->
-      <!--<td title="Estimated pageviews per day"><strong>EPVISD</strong></td>-->
-      <!--<td title="Estimated pageviews per day">{{car['data.EVIS}}</td>-->
-      <!--</tr>-->
       <tr>
         <td title="Estimated pageviews per month"><strong>EPVISM</strong></td>
         <td title="Estimated pageviews per month">{{seodata.seoData.EPVISM}}</td>
@@ -546,14 +257,6 @@
         <td title="Worth Of Web Traffic Score"><strong>WOWTS</strong></td>
         <td title="Worth Of Web Traffic Score">{{seodata.seoData.WOWTS}}</td>
       </tr>
-      <!--<tr>-->
-      <!--<td><strong>Estimated worth of web</strong></td>-->
-      <!--<td>50</td>-->
-      <!--<td><strong>Estimated revenue per day</strong></td>-->
-      <!--<td>20</td>-->
-      <!--<td><strong>Estimated revenue per month</strong></td>-->
-      <!--<td>20</td>-->
-      <!--</tr>-->
 
     </table>
   </p-dialog>

@@ -466,7 +466,7 @@ p.line-with-icon a:hover {
   color: #00a8ff;
 }
 .range-settings .range-setting-actions button.del:hover {
-  color: #fa424a;
+  color: #e20074;
 }
 @media (max-width: 1199px) {
   .range-settings {

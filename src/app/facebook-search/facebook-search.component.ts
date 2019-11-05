@@ -76,6 +76,7 @@ export class FacebookSearchComponent implements OnInit {
         document.getElementById("mySidenav").style.width = "250px";
     }
     ngOnInit() {
+        window.scroll(0,0)
 
             this.password= localStorage.getItem('currentPassword');
 
@@ -299,13 +300,10 @@ this.get_default_FB_data(1);
         this.http.post(Config.api+'/ml/get_facebook_pages/' + this.selected_category + '/?page=' + page + '', {
             title: this.title,
             location: this.location,
-            // like:this.likes,
             likemin:this.minlikes,
             likemax:this.maxlikes,
-            // performance:this.perfomance,
             performancemin:this.minperfomance,
             performancemax:this.maxperfomance,
-            // ER:this.ER
             ERmin:this.minER,
             ERmax:this.maxER
         },{headers:headers})
@@ -316,8 +314,6 @@ this.get_default_FB_data(1);
                 this.loaded = true;
 
             });
-
-
     }
     filterFBPage(page: number) {
         if (page < 1 || page > this.pager.totalPages) {

@@ -1955,7 +1955,7 @@ label {
   display: block;
 }
 label.error {
-  color: #fa424a;
+  color: #e20074;
 }
 .form-label {
   display: block;
@@ -1978,8 +1978,8 @@ label.error {
 }
 .form-control.form-control-error {
   background-color: #fff6f6;
-  border-color: #fa424a;
-  color: #fa424a !important;
+  border-color: #e20074;
+  color: #e20074 !important;
 }
 .form-control:disabled {
   background-color: #eceff4;
@@ -1997,7 +1997,7 @@ label.error {
   background-position-y: 49%;
 }
 .form-control.form-control-danger {
-  border-color: #fa424a;
+  border-color: #e20074;
   background-position-y: 49%;
 }
 .form-control.form-control-warning {
@@ -2013,7 +2013,7 @@ label.error {
   background-color: #edf9ee;
 }
 .form-control.form-control-red-fill {
-  border-color: #fa424a;
+  border-color: #e20074;
   background-color: #feecec;
 }
 .form-control.form-control-purple-fill {
@@ -2051,11 +2051,11 @@ textarea.form-control {
 }
 .form-group-error *:not(a),
 .error *:not(a) {
-  color: #fa424a;
+  color: #e20074;
 }
 .form-group-error .form-control,
 .error .form-control {
-  border-color: #fa424a;
+  border-color: #e20074;
 }
 .form-group-error .form-control-wrapper .form-control,
 .error .form-control-wrapper .form-control {
@@ -2178,9 +2178,9 @@ textarea.form-control {
 }
 .form-error-text-block {
   background-color: #fff6f6;
-  border: dashed 1px #fa424a;
+  border: dashed 1px #e20074;
   padding: 12px 14px 3px;
-  color: #fa424a;
+  color: #e20074;
   margin: 0 0 1rem;
   font-size: 1rem;
 }
@@ -2196,7 +2196,7 @@ textarea.form-control {
   height: 5px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: #fa424a;
+  background: #e20074;
   position: absolute;
   left: 0;
   top: .5em;
@@ -2206,7 +2206,7 @@ textarea.form-control {
   color: #46c35f;
 }
 .has-danger .form-label {
-  color: #fa424a;
+  color: #e20074;
 }
 .has-warning .form-label {
   color: #f29824;
@@ -2700,7 +2700,7 @@ textarea.form-control {
   color: #f29824;
 }
 .checkbox-bird.red input:checked + label:before {
-  color: #fa424a;
+  color: #e20074;
 }
 .checkbox-detailed {
   display: inline-block;

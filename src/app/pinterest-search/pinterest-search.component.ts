@@ -33,10 +33,10 @@ export class PinterestSearchComponent implements OnInit , AfterViewInit, OnDestr
     user_list = {};
     inf_list: string='Pinterest List';
     p_name;
-    follower;
-    following;
-    Pins;
-    boards;
+    follower;minfollower;maxfollower;
+    following;minfollowing;maxfollowing;
+    Pins;minPins;maxPins;
+    boards;minboards;maxboards;
     pdfArray: any=[];
     main_checkbox;
     currentUser;
@@ -56,6 +56,7 @@ export class PinterestSearchComponent implements OnInit , AfterViewInit, OnDestr
 
     }
     ngOnInit() {
+        window.scroll(0,0)
         this.currentList= JSON.parse(localStorage.getItem('selected_list_pt'));
        this.route.queryParams.subscribe(data=>{
            this.qparamschecekr= data['name'];
@@ -640,9 +641,17 @@ export class PinterestSearchComponent implements OnInit , AfterViewInit, OnDestr
         this.http.post(Config.api+'/ml/get_pinterest_users/' + this.selected_category + '/?page=' + page + '', {
             p_name: this.p_name,
             followers:this.follower,
+            followersmin:this.minfollower,
+            followersmax:this.maxfollower,
             following: this.following,
+            followingmin:this.minfollowing,
+            followingmax:this.maxfollowing,
             Pins:this.Pins,
+            Pinsmin:this.minPins,
+            Pinsmax:this.maxPins,
             boards:this.boards,
+            boardsmin:this.minboards,
+            boardsmax:this.maxboards
         },{headers:headers})
 
             .subscribe(res => {

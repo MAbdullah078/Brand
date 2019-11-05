@@ -2078,7 +2078,7 @@ video {
   position: absolute;
   top: -4px;
   right: -4px;
-  background: #fa424a;
+  background: #e20074;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   border: solid 1px #fff;
@@ -2108,7 +2108,7 @@ video {
   background-color: #9fc4e2;
 }
 .side-menu-list .tag-color.red {
-  background-color: #fa424a;
+  background-color: #e20074;
 }
 .side-menu-list .tag-color.pink {
   background-color: #e84f9a;
@@ -2293,12 +2293,12 @@ video {
 .side-menu-list > li.red .font-icon,
 .side-menu-list > li.red .glyphicon,
 .side-menu-list > li.red .fa {
-  color: #fa424a;
+  color: #e20074;
 }
 .side-menu-list > li.red.opened a,
 .side-menu-list > li.red.opened > span,
 .side-menu-list > li.red .with-sub > span {
-  border-left-color: #fa424a;
+  border-left-color: #e20074;
 }
 .side-menu-list > li.aquamarine .font-icon,
 .side-menu-list > li.aquamarine .glyphicon,

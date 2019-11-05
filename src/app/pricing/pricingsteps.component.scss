@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    min-height: 100%;
-    font-family: 'Open sans', sans-serif;
-}
-
-body {
-    background: linear-gradient(50deg, #f3c680, hsla(179, 54%, 76%, 1));
-}
 
 .mat-horizontal-content-container {
     padding: 0px !important;
@@ -166,7 +157,7 @@ Credit Card
 .credit-card-box {
     perspective: 1000;
     width: 400px;
-    height: 280px;
+    height: 220px;
     position: absolute;
     top: -112px;
     left: 50%;
@@ -476,9 +467,11 @@ label {
 }
 
 .center-div {
-    margin: 100px auto 0;
-    float: none;
-    padding: 0 7px
+  margin: 100px auto 0;
+  float: none;
+  padding: 0 7px;
+  background: #fff;
+  border-radius: 5px;
 }
 
 .payment-table {
@@ -507,7 +500,7 @@ label {
 .credit-card-box {
     perspective: 1000;
     width: 400px;
-    height: 280px;
+    height: 220px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -831,7 +824,9 @@ svg:not(:root) {
     position: relative;
     padding: 10px;
     margin: 20px 0 0;
-    background: #f4f4f7
+    background: #f4f4f7;
+    display: flex;
+    align-items: center;
 }
 
 .pricing-tenure-switcher .pts-left,
@@ -931,9 +926,9 @@ input.switch-toggle-round+label:after {
 .contact_form .row{
   margin: 0;
 }
-// .panel-body.margin-top-145 >div {
-//     min-height: 52px;
-// }
+.panel-body.margin-top-145  {
+  margin-top: 120px;
+}
 
 .font-16 {
     font-size: 16px;
@@ -956,15 +951,62 @@ mat-option {
 }
 .list-pricing i{
   color: #01b301;
+  margin-right: 10px;
 }
 #pricing-switch{
-  padding: 20px 0 !important;
-  margin-top: 100px;
+  padding: 20px !important;
+  background-color: #fff;
 }
 .width-half{
     width: 200px !important;
-    float: left;
 }
 .mainpagee{
   margin: 10px 0;
+}
+.pricing2-section{
+  padding: 50px 0;
+  h2{
+    margin-bottom: 0;
+  }
+  .pricing-box{
+    img{
+      width: 100%;
+    }
+  }
+  .list-pricing{
+    padding: 20px;
+    margin-bottom: 0;
+    li{
+      padding-bottom: 5px;
+    }
+  }
+  .main_heading{
+    margin-bottom:20px;
+  }
+  .single-pricing-2.top{
+    padding:20px 0;
+  }
+  .credit-card-box{
+    label{
+      color: #000 !important;
+    }
+  }
+}
+mat-form-field{
+  width: 100%;
+}
+.w-50{
+  width: 50% !important;
+}
+.pricing_btn.first {
+  margin: 10px;
+  color: #fff;
+  border: none;
+  background: green !important;
+  border-radius: 50px;
+  padding: 5px 20px !important;
+  box-shadow: 0 5px 5px #ccc;
+}
+.pricing_btn.first:hover {
+  box-shadow: none !important;
 }

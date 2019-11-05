@@ -33,7 +33,7 @@ export class YoutubeSearchComponent implements OnInit {
     loaded = false;
     inf_name:any = [];
     inf_channel_link:any = [];
-    inf_subscribers:any = [];minsubscribers;maxsubscribers;minviews;maxviews;
+    inf_subscribers:any = [];
     inf_total_views:any = [];
     inf_thismonthviews:any = [];
     inf_date:any = [];
@@ -53,7 +53,7 @@ export class YoutubeSearchComponent implements OnInit {
     name: any;
      subscribers: any;
      today_upload_video: any;
-     t_views: any;minrank;maxrank;
+     t_views: any;
      rank: any;
      tomorrow_upload_video: any;
 
@@ -63,6 +63,7 @@ export class YoutubeSearchComponent implements OnInit {
     }
 
     ngOnInit() {
+        window.scroll(0,0)
 
         this.route.queryParams.subscribe(params => {
             this.qparamschecker = params['name'] || '0';
@@ -562,17 +563,11 @@ export class YoutubeSearchComponent implements OnInit {
         // this.http.post(Config.api+'/ml/get_youtube_channels/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         this.http.post(Config.api+'/ml/get_youtube_channels/' + this.selected_category + '/?page=' + page + '', {
             name: this.name,
-            // subscribers: this.subscribers,
-            subscribersmin:this.minsubscribers,
-            subscribersmax:this.maxsubscribers,
-            // total_views:this.t_views,
-            // rank:this.rank,
-            rankmin:this.minrank,
-            rankmax:this.maxrank,
-            total_viewsmin:this.minviews,
-            total_viewsmax:this.maxviews
-            // today_upload_videos:this.today_upload_video,
-            // tomorrow_upload_videos:this.tomorrow_upload_video
+            subscribers: this.subscribers,
+            total_views:this.t_views,
+            rank:this.rank,
+            today_upload_videos:this.today_upload_video,
+            tomorrow_upload_videos:this.tomorrow_upload_video
         },{headers:headers})
 
             .subscribe(res => {

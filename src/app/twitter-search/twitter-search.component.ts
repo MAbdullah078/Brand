@@ -54,9 +54,9 @@ export class TwitterSearchComponent implements OnInit {
      user_name: any;
     tw_name;
     location;
-    following;
-    followers;
-    likes;
+    following;minfollowing;maxfollowing
+    followers;minfollowers;maxfollowers;
+    likes;minlikes;maxlikes;
 
 
 
@@ -81,6 +81,7 @@ export class TwitterSearchComponent implements OnInit {
         document.getElementById("hover-div").style.right = "-50%";
     }
     ngOnInit() {
+        window.scroll(0,0)
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.currentlist= JSON.parse(localStorage.getItem('selected_list_twitter'));
         this.route.queryParams.subscribe(data=>{
@@ -221,8 +222,14 @@ export class TwitterSearchComponent implements OnInit {
                 twitter_name: this.tw_name,
                 location:this.location,
                 following:this.following,
+                followingmin:this.minfollowing,
+                followingmax:this.maxfollowing,
                 followers:this.followers,
-                likes:this.likes
+                followersmin:this.minfollowers,
+                followersmax:this.maxfollowers,
+                likes:this.likes,
+                likesmin:this.minlikes,
+                likesmax:this.maxlikes
             },{headers:headers})
 
                 .subscribe(res => {

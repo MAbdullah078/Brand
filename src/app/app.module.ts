@@ -12,6 +12,8 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HeaderComponent} from "./userdashboard-template/header.component";
 import {SideMenuComponent} from "./userdashboard-template/side-menu.component";
 import { AppComponent } from './app.component';
+import { PaymentmethodsComponent } from './paymentmethods/paymentmethods.component';
+import { PaymentmethodsService} from './paymentmethods/paymentmethods.service'
 import { TextMaskModule } from 'angular2-text-mask';
 import {PreloaderModule} from "./components/preloader.module";
 import {GetpaymentComponent} from './get-payment/getpayment.component';
@@ -59,6 +61,7 @@ import { MyRfmComponent } from './my-rfm/my-rfm.component';
 import {CustomPipePipe} from './periscope-search/CustomPipe.pipe';
 import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 import { FileValidatorDirective } from './rfm/FileValidator.directive';
+import { from } from 'rxjs';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -95,6 +98,7 @@ export function provideConfig() {
     AlertComponent,
     DashboardLayoutComponent,
     FooterComponent,
+    PaymentmethodsComponent,
     BlogComponent,
     InfluencersComponent,
     HowItWorksComponent,
@@ -135,7 +139,8 @@ export function provideConfig() {
     useFactory: provideConfig
 
   },
-    AuthGuard, PushNotificationsService,AuthService,
+
+    AuthGuard, PushNotificationsService,AuthService, PaymentmethodsService
    ],
   bootstrap: [AppComponent]
 })
