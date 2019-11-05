@@ -53,7 +53,7 @@
     <div >
         <div class="row" *ngIf="!loaded">
             <div class="container-fluid ">
-                <mat-tab-group >
+                <!-- <mat-tab-group >
 
 
                     <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -71,20 +71,9 @@
                                     <h6 class="influencer-hading"> Blogosphere Influencers</h6>
                                 </div>
                                 <div class="col-md-6 text-center p-auto">
-
-                                    <!-- <mat-form-field class="example-full-width">
-                                        <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput
-                                               [formControl]="myControl" (keypress)="getTWInfluencersPress($event)" [(ngModel)]="selected_category"
-                                               name="selected_category_" [matAutocomplete]="auto">
-                                        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getTWInfluencers($event)">
-                                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                                                {{ option }}
-                                            </mat-option>
-                                        </mat-autocomplete>
-                                    </mat-form-field> -->
+>
 
                                     <mat-form-field>
-                                        <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
                                           <mat-select placeholder="Select Category" [(ngModel)]="cat">
                                             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                             {{option}}
@@ -153,7 +142,7 @@
                         </div>
 
                     </mat-tab>
-                </mat-tab-group>
+                </mat-tab-group> -->
             </div>
         </div>
 

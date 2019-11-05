@@ -14,44 +14,30 @@
               <input matInput type="text"[(ngModel)]="title" placeholder="Serch by Title/Name" name="contact">
             </mat-form-field>
           </div>
-          <!-- <div class="col-md-6">
-            <mat-form-field>
-              <input matInput type="text" [(ngModel)]="likes" placeholder="Serch by Likes" name="social">
-            </mat-form-field>
-          </div> -->
           <div class="col-md-12 row">
               <div class="col-md-12 text-center"><h5 class="m-0"><i class="fas fa-users"></i> Following</h5></div>
           <div class="col-md-6">
               <mat-form-field>
-                <!-- <input matInput type="text" [(ngModel)]="minfollowers" placeholder="Minimum Followers" name="social"> -->
 
                 <input matInput placeholder="Mimimum " type="number"  [(ngModel)]="minfollowers" name="social" class="example-right-align">
               </mat-form-field>
             </div>
             <div class="col-md-6">
                 <mat-form-field>
-                  <!-- <input matInput type="text" [(ngModel)]="maxfollowers" placeholder="Maximum Followers" name="social2"> -->
                  
                   <input matInput placeholder="Maximum " type="number"  [(ngModel)]="maxfollowers" name="social2" class="example-right-align">
                 </mat-form-field>
               </div>
             </div>
-          <!-- <div class="col-md-6">
-            <mat-form-field>
-              <input matInput type="text" [(ngModel)]="perfomance" placeholder="Serch by Perfomance" name="seo">
-            </mat-form-field>
-          </div> -->
           <div class="col-md-12 row">
               <div class="col-md-12 text-center"><h5 class="m-0"><i class="fas fa-eye"></i> Views</h5></div>
           <div class="col-md-6">
               <mat-form-field>
-                <!-- <input matInput type="text" [(ngModel)]="minviews" placeholder="Minimum Views" name="seo"> -->
                 <input matInput placeholder="Minimum " type="number"  [(ngModel)]="minviews" name="seo" class="example-right-align">
               </mat-form-field>
             </div>
             <div class="col-md-6">
                 <mat-form-field>
-                  <!-- <input matInput type="text" [(ngModel)]="maxviews" placeholder="Maximum Views" name="seo2"> -->
                   <input matInput placeholder="Maximum " type="number"  [(ngModel)]="maxviews" name="seo2" class="example-right-align">
                 </mat-form-field>
               </div>
@@ -66,11 +52,8 @@
           <div class="col-md-12 row">
               <div class="col-md-12 text-center"><h5 class="m-0"><i class="fas fa-chart-bar"></i> Rank</h5></div>
           <div class="col-md-6">
-            <!-- <mat-form-field>
-              <input matInput type="text" [(ngModel)]="ER" placeholder="Serch by Engagement Range" name="er">
-            </mat-form-field> -->
+
             <mat-form-field>
-                <!-- <input matInput type="text" [(ngModel)]="minrank" placeholder="Minimum Rank" name="rank"> -->
                 <input matInput placeholder="Minimum " type="number"  [(ngModel)]="minrank" name="rank" class="example-right-align">
               </mat-form-field>
           </div>
@@ -96,7 +79,7 @@
 
     <div class="row m-0">
       <div class="col-md-12 ">
-        <mat-tab-group>
+        <!-- <mat-tab-group>
   
   
           <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -115,20 +98,7 @@
                 </div>
   
                 <div class="col-md-6 text-center p-auto">
-  
-                  <!-- <mat-form-field class="example-full-width " style="width:60%">
-                    <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getFlickrData($event)">
-                      <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
-                        {{ option }}
-                      </mat-option>
-                    </mat-autocomplete>
-                  </mat-form-field> -->
-  
-  
-  
                   <mat-form-field>
-                    <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
                       <mat-select placeholder="Select Category" [(ngModel)]="cat">
                         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                         {{option}}
@@ -212,7 +182,7 @@
             </div>
   
           </mat-tab>
-        </mat-tab-group>
+        </mat-tab-group> -->
       </div>
     </div>
 

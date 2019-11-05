@@ -52,7 +52,7 @@
 
                             <div class="row m-0">
                                 <div class="col-sm-12 ">
-                                    <mat-tab-group >
+                                    <!-- <mat-tab-group >
                     
                     
                                         <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -71,16 +71,9 @@
                     
                                                     <div class="col-md-6 text-center p-auto"  >
                     
-                                                        <!-- <mat-form-field class="example-full-width select category " >
-                                                            <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-                                                            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getFbData($event)">
-                                                                <mat-option *ngFor="let option of filteredOptions | async"  [value]="option">
-                                                                    {{ option }}
-                                                                </mat-option>
-                                                            </mat-autocomplete> -->
+
                     
                                                         <mat-form-field>
-                                                                <!-- <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl"> -->
                                                                   <mat-select placeholder="Select Category" [(ngModel)]="cat">
                                                                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                                                     {{option}}
@@ -88,8 +81,6 @@
                                                                 </mat-select>
                                                               </mat-form-field>
                     
-                    
-                                                        <!-- </mat-form-field> -->
                                                     </div>
                                                     <div class="col-md-12 text-center">
                                                             <button type="submit"  class="btn btn-primary" (click)="getFbData()">
@@ -162,7 +153,7 @@
                                             </div>
                     
                                         </mat-tab>
-                                    </mat-tab-group>
+                                    </mat-tab-group> -->
                                 </div>
                                 <div class="col-sm-12" *ngIf="loaded && fbinfluencers.totalItems===0">
                                         <div class="box-typical box-typical-full-height" style="min-height: 115px">

@@ -5,14 +5,12 @@
 <h4><a href="{{message.urlofproduct}}">Url: {{message.urlofproduct}}</a></h4>
 <h4>Description: {{message.description}}</h4>
 <h4>Offer: {{message.offer_to_influencer}}</h4>
-<h4>Question#1: {{message.question1}}</h4>
-<h4>Answer#1: {{message.answer1}}</h4>
-<h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4>
-<h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4>
-<h4 *ngIf="message.question3!='null'">Question#3: {{message.question3}}</h4>
-<h4 *ngIf="message.question3!='null'">Answers#3: {{message.answer3}}</h4>
-<!-- <img src="{{message.picture}}"> -->
-<!-- <img src="{{message.picture}}"  alt="Notes"> -->
+<!-- <h4>Question#1: {{message.question1}}</h4> -->
+<!-- <h4>Answer#1: {{message.answer1}}</h4> -->
+<!-- <h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4> -->
+<!-- <h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4> -->
+<!-- <h4 *ngIf="message.question3!='null'">Question#3: {{message.question3}}</h4> -->
+<!-- <h4 *ngIf="message.question3!='null'">Answers#3: {{message.answer3}}</h4> -->
 <img src="{{message.pictures}}"  alt="Notes">
 <button  > 
 <a routerLink="/rfm-detail" [queryParams]="{ rid:  message.id}">View detail </a>
