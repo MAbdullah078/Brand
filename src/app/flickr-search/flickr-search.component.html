@@ -1,7 +1,101 @@
+
+<section class="d-flex">
+<div class="facebook-sidebar">
+    <form (submit)="setPage(1)" class="sidebar-forms  m-0">
+        <div class="row">
+          <div class="col-md-12">
+            <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                        placeholder="Select Category" style="width: 100%!important;">
+              <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
+            </mat-select>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput type="text"[(ngModel)]="title" placeholder="Serch by Title/Name" name="contact">
+            </mat-form-field>
+          </div>
+          <!-- <div class="col-md-6">
+            <mat-form-field>
+              <input matInput type="text" [(ngModel)]="likes" placeholder="Serch by Likes" name="social">
+            </mat-form-field>
+          </div> -->
+          <div class="col-md-12 row">
+              <div class="col-md-12 text-center"><h5 class="m-0"><i class="fas fa-users"></i> Following</h5></div>
+          <div class="col-md-6">
+              <mat-form-field>
+                <!-- <input matInput type="text" [(ngModel)]="minfollowers" placeholder="Minimum Followers" name="social"> -->
+
+                <input matInput placeholder="Mimimum " type="number"  [(ngModel)]="minfollowers" name="social" class="example-right-align">
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field>
+                  <!-- <input matInput type="text" [(ngModel)]="maxfollowers" placeholder="Maximum Followers" name="social2"> -->
+                 
+                  <input matInput placeholder="Maximum " type="number"  [(ngModel)]="maxfollowers" name="social2" class="example-right-align">
+                </mat-form-field>
+              </div>
+            </div>
+          <!-- <div class="col-md-6">
+            <mat-form-field>
+              <input matInput type="text" [(ngModel)]="perfomance" placeholder="Serch by Perfomance" name="seo">
+            </mat-form-field>
+          </div> -->
+          <div class="col-md-12 row">
+              <div class="col-md-12 text-center"><h5 class="m-0"><i class="fas fa-eye"></i> Views</h5></div>
+          <div class="col-md-6">
+              <mat-form-field>
+                <!-- <input matInput type="text" [(ngModel)]="minviews" placeholder="Minimum Views" name="seo"> -->
+                <input matInput placeholder="Minimum " type="number"  [(ngModel)]="minviews" name="seo" class="example-right-align">
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field>
+                  <!-- <input matInput type="text" [(ngModel)]="maxviews" placeholder="Maximum Views" name="seo2"> -->
+                  <input matInput placeholder="Maximum " type="number"  [(ngModel)]="maxviews" name="seo2" class="example-right-align">
+                </mat-form-field>
+              </div>
+            </div>
+    
+
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput type="text" [(ngModel)]="location" placeholder="Serch by Location" name="loc">
+            </mat-form-field>
+          </div>
+          <div class="col-md-12 row">
+              <div class="col-md-12 text-center"><h5 class="m-0"><i class="fas fa-chart-bar"></i> Rank</h5></div>
+          <div class="col-md-6">
+            <!-- <mat-form-field>
+              <input matInput type="text" [(ngModel)]="ER" placeholder="Serch by Engagement Range" name="er">
+            </mat-form-field> -->
+            <mat-form-field>
+                <!-- <input matInput type="text" [(ngModel)]="minrank" placeholder="Minimum Rank" name="rank"> -->
+                <input matInput placeholder="Minimum " type="number"  [(ngModel)]="minrank" name="rank" class="example-right-align">
+              </mat-form-field>
+          </div>
+              <div class="col-md-6">
+              <mat-form-field>
+                  <input matInput type="text" [(ngModel)]="maxrank" placeholder="Maximum" name="rank2">
+                </mat-form-field>
+              </div>
+            </div>
+          <div class="col-md-12 text-center">
+            <button type="submit"  class="btn btn-primary search-button" >
+              Search <i class="fa fa-sliders"></i>
+            </button>
+          </div>
+
+     
+      </div>
+      </form>
+
+</div>
+<div class="facebook-content">
 <div class="page-content">
 
-    <div class="row">
-      <div class="container-fluid ">
+    <div class="row m-0">
+      <div class="col-md-12 ">
         <mat-tab-group>
   
   
@@ -486,4 +580,226 @@
                 </nav>
               </div>
     </div>
+  
+    <!--<section class="box-typical" *ngIf="loaded && fbinfluencers.totalItems!=0">-->
+      <!--<div class="box-typical-body">-->
+        <!--<div class="table-responsive">-->
+          <!--<div class="bootstrap-table">-->
+            <!--<p-dataTable exportFilename="Influencers" [value]="fbinfluencers.results"  class="table table-striped table-hover">-->
+  
+              <!--<p-header class="box-typical-header">-->
+                <!--<div class="fixed-table-toolbar">-->
+                  <!--<div class="bars pull-left">-->
+                    <!--<div id="toolbar">-->
+                      <!--<div class="bootstrap-table-header">Search results</div>-->
+                      <!--<button  class="btn btn-primary1" (click)="add_create_list()">-->
+                        <!--&lt;!&ndash;<i class="font-icon font-icon-close-2"></i> &ndash;&gt;-->
+                        <!--Add to list-->
+                      <!--</button>-->
+                      <!--<button  class="btn btn-primary1" (click)="uncheckAll()">-->
+                        <!--&lt;!&ndash;<i class="font-icon font-icon-close-2"></i> &ndash;&gt;-->
+                        <!--Clear selected-->
+                      <!--</button>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="columns columns-right btn-group pull-right">-->
+  
+                    <!--<div class="export btn-group">-->
+                      <!--<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"-->
+                              <!--type="button" aria-expanded="false"><i-->
+                              <!--class="font-icon font-icon-download"></i> <span class="caret"></span>-->
+                      <!--</button>-->
+                      <!--<ul class="dropdown-menu" role="menu" style="min-width: fit-content;left: auto">-->
+                        <!--<li data-type="json"><a href="javascript:void(0)">JSON</a></li>-->
+                        <!--<li data-type="xml"><a href="javascript:void(0)">XML</a></li>-->
+                        <!--<li data-type="csv"><a href="javascript:void(0)">CSV</a></li>-->
+                        <!--<li data-type="txt"><a href="javascript:void(0)">TXT</a></li>-->
+                        <!--<li data-type="sql"><a href="javascript:void(0)">SQL</a></li>-->
+                        <!--<li data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>-->
+                      <!--</ul>-->
+                    <!--</div>-->
+                  <!--</div>-->
+  
+  
+                <!--</div>-->
+              <!--</p-header>-->
+              <!--<p-column>-->
+                <!--<ng-template pTemplate="header">-->
+                  <!--<div class="table-check">-->
+                    <!--<div class="checkbox checkbox-only">-->
+                      <!--<input type="checkbox" id="table-check-head" [(ngModel)]="main_checkbox"  (click)="checkedAll($event.target.checked)">-->
+                      <!--<label for="table-check-head"></label>-->
+  
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</ng-template>-->
+                <!--<ng-template pTemplate="body" let-car="rowData">-->
+                  <!--<div class="checkbox checkbox-only">-->
+                    <!--<input type="checkbox" name="{{car['id']}}" [(ngModel)]="inflist[car['id']]" id="table-check-{{car['id']}}">-->
+                    <!--<label for="table-check-{{car['id']}}"></label>-->
+                  <!--</div>-->
+                <!--</ng-template>-->
+              <!--</p-column>-->
+  
+              <!--<p-column>-->
+                <!--<ng-template pTemplate="header">-->
+                  <!--<div class="th-inner" style="text-align: center">-->
+                    <!--<label style="" >Title</label>-->
+                  <!--</div>-->
+                  <!--<div class="fht-cell"></div>-->
+                <!--</ng-template>-->
+                <!--<ng-template pTemplate="body" let-col let-car="rowData">-->
+                  <!--<div class="mail-box-item selected-line red" (click)="goToLink(car['profile_linked'])" style=" max-width: 250px; cursor: pointer">-->
+  
+                    <!--<div class="mail-box-item-header">-->
+  
+                      <!--<div class="mail-box-item-photo">-->
+                        <!--<img *ngIf="car['image_link']"-->
+                             <!--src="{{car['image_link']}}"-->
+                             <!--style="width: 32px;height: 32px" alt="" data-toggle="tooltip"-->
+                             <!--data-placement="bottom">-->
+  
+                      <!--</div>-->
+                      <!--<div class="tbl mail-box-item-head-tbl">-->
+                        <!--<div class="tbl-row">-->
+                          <!--<div class="tbl-cell">-->
+                            <!--<div class="tbl mail-box-item-user-tbl">-->
+                              <!--<div class="tbl-row">-->
+                                <!--<div class="tbl-cell tbl-cell-name"-->
+                                     <!--[innerHTML]="car['profile_name']"></div>-->
+                                <!--&lt;!&ndash;<div class="tbl-cell tbl-cell-new"><span class="label label-pill label-danger">11</span></div>&ndash;&gt;-->
+                              <!--</div>-->
+                            <!--</div>-->
+  
+                          <!--</div>-->
+                          <!--&lt;!&ndash;<div class="tbl-cell tbl-cell-date" title="Type of website"><strong>{{car['data']['site_type']&ndash;&gt;-->
+                          <!--&lt;!&ndash;| uppercase}}</strong></div>&ndash;&gt;-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+  
+                  <!--</div>-->
+  
+                <!--</ng-template>-->
+              <!--</p-column>-->
+              <!--&lt;!&ndash;<p-column>&ndash;&gt;-->
+              <!--&lt;!&ndash;<ng-template pTemplate="header">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="th-inner" style="text-align: center">&ndash;&gt;-->
+              <!--&lt;!&ndash;Category&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="fht-cell"></div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</ng-template>&ndash;&gt;-->
+              <!--&lt;!&ndash;<ng-template pTemplate="body" let-col let-car="rowData">&ndash;&gt;-->
+              <!--&lt;!&ndash;{{car['category']['name']}}&ndash;&gt;-->
+              <!--&lt;!&ndash;</ng-template>&ndash;&gt;-->
+              <!--&lt;!&ndash;</p-column>&ndash;&gt;-->
+              <!--<p-column>-->
+                <!--<ng-template pTemplate="header">-->
+                  <!--<div class="th-inner" style="text-align: center">-->
+                    <!--<label style="" >Followers</label>-->
+                  <!--</div>-->
+                  <!--<div class="fht-cell"></div>-->
+                <!--</ng-template>-->
+                <!--<ng-template pTemplate="body" let-col let-car="rowData">-->
+                  <!--{{car['followers']}}-->
+                <!--</ng-template>-->
+              <!--</p-column>-->
+              <!--<p-column>-->
+                <!--<ng-template pTemplate="header">-->
+                  <!--<div class="th-inner" style="text-align: center">-->
+                    <!--<label style="" >Joined Flickr</label>-->
+                  <!--</div>-->
+                  <!--<div class="fht-cell"></div>-->
+                <!--</ng-template>-->
+                <!--<ng-template pTemplate="body" let-col let-car="rowData">-->
+                  <!--{{car['joined_date'] }}-->
+                <!--</ng-template>-->
+              <!--</p-column>-->
+              <!--<p-column>-->
+                <!--<ng-template pTemplate="header">-->
+                  <!--<div class="th-inner" style="text-align: center">-->
+                    <!--<label style="" >Profile</label>-->
+                  <!--</div>-->
+                  <!--<div class="fht-cell"></div>-->
+                <!--</ng-template>-->
+                <!--<ng-template pTemplate="body" let-car="rowData">-->
+                  <!--{{car['profile_linked']}}                        </ng-template>-->
+              <!--</p-column>-->
+              <!--<p-column>-->
+                <!--<ng-template pTemplate="header">-->
+                  <!--<div class="th-inner" style="text-align: center">-->
+                    <!--<label style="" >Rank</label>-->
+                  <!--</div>-->
+                  <!--<div class="fht-cell"></div>-->
+                <!--</ng-template>-->
+                <!--<div class="th-inner" style="text-align: left">Perfomance-->
+                  <!--<div class="export btn-group" style="float: right; background-color: black">-->
+                    <!--<button class="btn btn-default dropdown-toggle"  style=" background-color: black" data-toggle="dropdown"-->
+                            <!--type="button" aria-expanded="false"><i-->
+                            <!--class="font-icon font-icon-download"></i> <span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="dropdown-menu" role="menu" style="min-width: 100%;-->
+      <!--font-size: 14px;-->
+      <!--text-align: -webkit-center;left: auto">-->
+                      <!--<li data-type="json"><a (click)="JSPDF()" id="clickMe">PDF</a></li>-->
+                      <!--<li data-type="xml"><a href="javascript:void(0)">XML</a></li>-->
+                      <!--<li data-type="csv"><a  (click)="convert_to_csv()">CSV</a></li>-->
+                      <!--<li data-type="txt"><a href="javascript:void(0)">TXT</a></li>-->
+                      <!--<li data-type="sql"><a href="javascript:void(0)">SQL</a></li>-->
+                      <!--<li data-type="excel"><a href="javascript:void(0)">MS-Excel</a></li>-->
+                    <!--</ul>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<ng-template pTemplate="body" let-car="rowData" >-->
+                  <!--<round-progress [current]="car['profile_rank']"-->
+                                  <!--[max]="max"-->
+                                  <!--[color]="'#ca260f'"-->
+                                  <!--[background]="'#eaeaea'"-->
+                                  <!--[radius]="100"-->
+                                  <!--[stroke]="20"-->
+                                  <!--[semicircle]="false"-->
+                                  <!--[rounded]="false"-->
+                                  <!--[clockwise]="true"-->
+                                  <!--[responsive]="false"-->
+                                  <!--[duration]="800"-->
+                                  <!--[animation]="'easeInOutQuart'"-->
+                                  <!--[animationDelay]="5"-->
+                                  <!--style="margin: auto; max-width:70px; max-height: 46px; overflow: unset"   >-->
+  
+                  <!--</round-progress>-->
+                  <!--<div style="position: relative; bottom: 22px;font-size:16px; font-weight: bold">{{car['profile_rank']}}</div>-->
+  
+  
+  
+                  <!--&lt;!&ndash;<div class="chart chart-table">&ndash;&gt;-->
+                  <!--&lt;!&ndash;&lt;!&ndash;{{(row.ER.replace('%',''))|round}}&ndash;&gt;&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="bar bar-{{(car['ER'].replace('%',''))|round}} navy">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="face top">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="growing-bar"></div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="face side-0">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="growing-bar"></div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="face floor">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="growing-bar"></div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="face side-a">&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="face side-b">&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="face side-1">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="growing-bar">&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</ng-template>-->
+              <!--</p-column>-->
+  
+            <!--</p-dataTable>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</section>-->
   </div>
+</div>

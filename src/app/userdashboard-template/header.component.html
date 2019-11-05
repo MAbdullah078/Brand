@@ -63,8 +63,13 @@
                              <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
                              <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
                              <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
-                                <a [routerLink]="['/my-rfm']"> <i class="fas fa-sign-out-alt"></i>My RFM</a> 
-                                <a [routerLink]="['/rfm']"> <i class="fas fa-sign-out-alt"></i>Create RFM</a> 
+                          
+                                    <a class="rfm-anchor" [routerLink]="['/my-rfm']"> <i class="fas fa-bookmark"></i>RFM
+                                        <div class="dropdown-content rfm-dropdown">
+                                                <a [routerLink]="['/my-rfm']"> <i class="fas fa-book-reader"></i>My RFM</a> 
+                                                <a [routerLink]="['/rfm']"> <i class="fas fa-plus"></i>Create RFM</a> 
+                                         </div>
+                                        </a>
                                 <a [routerLink]="['/update-password']"> <i class="fa fa-key"></i>Change Password</a> 
                                 <a [routerLink]="['/login']" (click)="logout()"> <i class="fas fa-sign-out-alt"></i>Logout</a>
                                  </div>

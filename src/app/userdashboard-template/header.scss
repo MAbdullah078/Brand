@@ -97,6 +97,18 @@ body {
 .rfmdd:hover .absolute-drp{
   display: block!important;
 }
+.fa-user-circle{
+  color: #ff6347
+}
+.fa-history{
+  color: #fb1893;
+}
+.fa-key{
+  color:#4cdc6b;
+}
+.fa-sign-out-alt{
+  color:#c00;
+}
 @media(max-width: 1367px) and  (min-width: 1344px){
 
         .navbar{
@@ -201,7 +213,7 @@ body {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     right: -45px;
-    top: 30px;
+    top: 26px;
     text-align: left;
     background-color: #fff;
     min-width: 206px;
@@ -221,15 +233,34 @@ body {
   margin: 10px;
 }
 .dropdown-content a i{
-  color: #616161;
   width: 20px;
 }
 
 .dropdown-content a:hover {
   color: #c00 !important;
 }
-.dropdown-content a:hover i{
-  color: #c00 !important;
-}
+// .dropdown-content a:hover i{
+//   color: #c00 !important;
+// }
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #fff;}
+.rfm-anchor{
+  position: relative;
+}
+.rfm-dropdown{
+  right: 100%;
+  top: 0;
+  display: none!important;
+}
+.rfm-anchor:hover .rfm-dropdown{
+  display: block!important
+}
+.fa-bookmark{
+  color: #e0e00b;
+}
+.fa-book-reader{
+  color: #9acd32;
+}
+.fa-plus{
+  color: #7a00f5;
+}

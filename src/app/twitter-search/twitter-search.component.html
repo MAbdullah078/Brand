@@ -1,3 +1,61 @@
+
+
+<section class="d-flex">
+<div class="facebook-sidebar">
+    <form (submit)="setPage(1)" class=" sidebar-forms  m-0">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                            placeholder="Select Category" style="width:100%!important">
+                    <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
+                </mat-select>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text"[(ngModel)]="user_name" placeholder="Search by Title/Name" name="contact">
+                </mat-form-field>
+            </div>
+        
+
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="tw_name" placeholder="Search by Twitter name" name="social">
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="location" placeholder="Search by Location" name="seo">
+                </mat-form-field>
+            </div>
+       
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="followers" placeholder="Search by Followers" name="loc">
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="following" placeholder="Search by following" name="er">
+                </mat-form-field>
+   
+</div>
+
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="likes" placeholder="Search by Likes" name="er">
+                </mat-form-field>
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="submit"  class="btn btn-primary" >
+                    Search <i class="fa fa-sliders"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    
+</div>
+<div class="facebook-content">
 <div class="page-content" style="padding-right:15px;">
 
     <div class="row">
@@ -89,7 +147,7 @@
                                     <div class="col-md-6">
                                         <mat-label>Search by Followers</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minfollowers" placeholder="Minimum Followers" name="flr">
+                                            <input matInput type="text" [(ngModel)]="followers" placeholder="Search by Followers" name="loc">
                                         </mat-form-field>
                                         <mat-form-field>
                                                 <input matInput type="text" [(ngModel)]="maxfollowers" placeholder="Maximum Followers" name="flr2">
@@ -98,7 +156,7 @@
                                     <div class="col-md-6">
                                             <mat-label>Search by Following</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Minimum Following" name="fl">
+                                            <input matInput type="text" [(ngModel)]="following" placeholder="Search by Followers" name="er">
                                         </mat-form-field>
                                         <mat-form-field>
                                                 <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Maximum Following" name="fl2">
@@ -110,7 +168,7 @@
                                     <div class="col-md-6">
                                             <mat-label>Search by Likes</mat-label>
                                         <mat-form-field>
-                                            <input matInput type="text" [(ngModel)]="minlikes" placeholder="Minimum Likes" name="like">
+                                            <input matInput type="text" [(ngModel)]="likes" placeholder="Search by Likes" name="er">
                                         </mat-form-field>
                                         <mat-form-field>
                                                 <input matInput type="text" [(ngModel)]="maxlikes" placeholder="Maximum by Likes" name="like2">
@@ -595,4 +653,6 @@
 </div>
 
 </div>
+
 <!-- <app-footer></app-footer> -->
+</div>
