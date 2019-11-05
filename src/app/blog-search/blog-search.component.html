@@ -1,4 +1,45 @@
+<section class="d-flex">
+<div class="facebook-sidebar">
+    <form (submit)="setPage(1)" class=" sidebar-forms m-0">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatNameblog($event)"
+                            placeholder="Select Category" style="width:100%!important">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{ option }}
+                    </mat-option>                                            </mat-select>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text"[(ngModel)]="title" placeholder="Search by Title/Name" name="contact">
+                </mat-form-field>
+            </div>
+       
 
+
+
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="moz" placeholder="Search by Moz Rank" name="er">
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="seo" placeholder="Search by Alexa Rank" name="er">
+                </mat-form-field>
+            </div>
+        
+
+            <div class="col-md-12  text-center">
+                <button type="submit"  class="btn btn-primary search-button" >
+                    Search <i class="fa fa-sliders"></i>
+                </button>
+            </div>
+        
+    </div>
+    </form>
+</div>
+<div class="facebook-content">
 <p-overlayPanel #op>
 
     <ul *ngFor="let row of blogdata">
@@ -80,7 +121,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <mat-form-field>
-                                                <input matInput type="text"[(ngModel)]="title" placeholder="Serch by Title/Name" name="contact">
+                                                <input matInput type="text"[(ngModel)]="title" placeholder="Search by Title/Name" name="contact">
                                             </mat-form-field>
                                         </div>
                                     </div>
@@ -94,7 +135,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <mat-form-field>
-                                                <input matInput type="text" [(ngModel)]="seo" placeholder="Serch by Alexa Rank" name="er">
+                                                <input matInput type="text" [(ngModel)]="seo" placeholder="Search by Alexa Rank" name="er">
                                             </mat-form-field>
                                         </div>
                                     </div>
@@ -177,7 +218,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <mat-form-field>
-                                                <input matInput type="text"[(ngModel)]="title" placeholder="Serch by Title/Name" name="contact">
+                                                <input matInput type="text"[(ngModel)]="title" placeholder="Search by Title/Name" name="contact">
                                             </mat-form-field>
                                         </div>
                                     </div>
@@ -191,7 +232,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <mat-form-field>
-                                                <input matInput type="text" [(ngModel)]="seo" placeholder="Serch by Alexa Rank" name="er">
+                                                <input matInput type="text" [(ngModel)]="seo" placeholder="Search by Alexa Rank" name="er">
                                             </mat-form-field>
                                         </div>
                                     </div>
@@ -1219,4 +1260,5 @@
             </div>
         </div>
     </div><!--.box-typical-->
+</div>
 </div>

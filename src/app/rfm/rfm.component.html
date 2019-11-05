@@ -1,16 +1,17 @@
 <!-- <app-loader></app-loader> -->
-<div class="container text-center">
-    <div class="row text-center ">
-      <h2 class="stepper-heading">Create RFM</h2>
-  
+<div class="container upper-heading">
+    <div class="row ">
+      <div class="col-md-12 text-center">
+      <h2 >Create RFM</h2>
+    </div>
   </div>
   </div>
-  <div class="stepper-style">
+  <div class="container stepper-style">
   <!-- <mat-horizontal-stepper [linear]="isLinear" #stepper> -->
-      <mat-horizontal-stepper  #stepper>
+      <mat-horizontal-stepper class="stepper"  #stepper>
 
     <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" >
         <ng-template matStepLabel>Add Images</ng-template>
   
           <div class="form-group photos-resume text-center" style="margin-top: 50px;">
@@ -27,29 +28,31 @@
                      type="file" data-preview-file-type="text" formControlName="firstCtrl" required id="file1"
                      accept=".jpg, .jpeg, .png"  name="file"  multiple  />
                      <!-- <input id="img" type='file' (change)="onChange($event)" (change)="readUrl($event)" name="pictures" [(ngModel)]="model.pictures"  formControlName="firstCtrl" accept="image/*" multiple> -->
-        
+                     <img src="../../assets/img/addimage_512.png">
             </label>
-            <br>
-            <button mat-raised-button  matStepperNext class="next-btn" (click)="upload()">
+          
+            
+        
+          </div>
+          <button mat-raised-button  matStepperNext class="next-btn " (click)="upload()">
               Next
             </button>
-          </div>
       </form>
     </mat-step>
   
     <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup" class="create-showcase">
+      <form [formGroup]="secondFormGroup" class="social-forms">
   
         <ng-template matStepLabel>Overview</ng-template>
         <div class="whole sh-signup-form-fix">
   
   
         <div class="row">
-        <div class="col-lg-3" id="margin">
-        <label>Select Category</label>
+        <div class="col-lg-3 rfm-label">
+        <label class="m-0">Select Category</label>
         </div>
         <div class="col-lg-9">
-          <mat-form-field style="width: 100%;" class="catagery mt-4">
+          <mat-form-field class="w-100"  >
         <!-- <mat-select placeholder="{{'Please Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
         <mat-option *ngFor="let option of options "  [value]="option.id" >{{ option.name }}</mat-option> -->
         <input matInput placeholder="Please category the Title of your RFM" [(ngModel)]="model.category" name="category" formControlName="secondCtrl" required  />
@@ -60,11 +63,11 @@
         </div>
   
         <div class="row">
-        <div class="col-lg-3" id="margin">
-        <label >RFM Title</label>
+        <div class="col-lg-3 rfm-label">
+        <label class="m-0" >RFM Title</label>
         </div>
         <div class="col-lg-9">
-        <mat-form-field style="width: 100%;margin-top: 10px;">
+        <mat-form-field class="w-100" >
         <input matInput placeholder="Please Write the Title of your RFM" [(ngModel)]="model.title" name="title" formControlName="secondCtrl" required  />
   
         </mat-form-field>
@@ -73,11 +76,11 @@
         </div>
   
         <div class="row">
-        <div class="col-lg-3">
-        <label >Profile Link</label>
+        <div class="col-lg-3 rfm-label">
+        <label class="m-0" >Profile Link</label>
         </div>
         <div class="col-lg-9">
-        <mat-form-field style="width: 100%" >
+        <mat-form-field class="w-100" >
         <input matInput placeholder="Paste here the best social media profile" [(ngModel)]="model.url" name="url" formControlName="thirdCtrl" required>
   
         </mat-form-field>
@@ -95,24 +98,24 @@
     </mat-step>
   
     <mat-step [stepControl]="thirdFromGroup">
-    <form [formGroup]="thirdFromGroup" class="create-showcase">
+    <form [formGroup]="thirdFromGroup" class="social-forms">
     <ng-template matStepLabel>Description</ng-template>
     <div class="row sh-signup-form-fix">
-    <div class="col-lg-3" id="margin">
-    <label >Write Description</label>
+    <div class="col-lg-3  rfm-label">
+    <label class="m-0" >Write Description</label>
     </div>
     <div class="col-lg-9">
-    <mat-form-field class="margin-top-10 width100">
-    <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="description" formControlName="fourthCtrl" style="line-height:8.75px"></textarea>
+    <mat-form-field class="w-100">
+    <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="description" formControlName="fourthCtrl"></textarea>
     </mat-form-field>
     </div>
   
-    <div class="col-lg-3" id="margin">
-      <label >Offer</label>
+    <div class="col-lg-3  rfm-label">
+      <label class="m-0" >Offer</label>
       </div>
       <div class="col-lg-9">
-      <mat-form-field class="margin-top-10 width100">
-      <textarea matInput placeholder="Write Offer" name="offer_to_influencer" formControlName="fourthCtrl"  #offer_to_influencer  style="line-height:8.75px"></textarea>
+      <mat-form-field class="w-100">
+      <textarea matInput placeholder="Write Offer" name="offer_to_influencer" formControlName="fourthCtrl"  #offer_to_influencer></textarea>
       </mat-form-field>
       </div>
   
@@ -126,17 +129,17 @@
   
   
     <mat-step [stepControl]="fourthFromGroup">
-    <form [formGroup]="fourthFromGroup"  class="create-showcase">
+    <form [formGroup]="fourthFromGroup"  class="social-forms">
     <ng-template matStepLabel>Frequently Asked Questions(FAQs)</ng-template>
     <div class="row">
-    <div class="col-lg-3" id="margin">
-    <label >FAQ #1</label>
+    <div class="col-lg-3  rfm-label">
+    <label class="m-0" >FAQ #1</label>
     </div>
     <div class="col-lg-9">
-    <mat-form-field style="width: 100%;    margin-top: 10px;">
+    <mat-form-field class="w-100" >
     <input matInput placeholder="Question" [(ngModel)]="model.question1" name="question1" formControlName="fifthCtrl">
     </mat-form-field>
-    <mat-form-field style="width: 100%;    margin-top: 10px;">
+    <mat-form-field class="w-100" >
         <input matInput placeholder="Answer" [(ngModel)]="model.answer1" name="answer1" formControlName="fifthCtrl2">   
         </mat-form-field>
     </div>
@@ -146,14 +149,14 @@
   
   
     <div class="row">
-    <div class="col-lg-3" id="margin">
-    <label >FAQ #2</label>
+    <div class="col-lg-3  rfm-label" >
+    <label class="m-0" >FAQ #2</label>
     </div>
     <div class="col-lg-9">
-    <mat-form-field style="width: 100%">
+    <mat-form-field class="w-100">
     <input matInput placeholder="Question 2" [(ngModel)]="model.question2" name="question2" formControlName="sixthCtrl">
     </mat-form-field>
-    <mat-form-field style="width: 100%">
+    <mat-form-field class="w-100">
         <input matInput placeholder="Answer 2" [(ngModel)]="model.answer2" name="answer2" formControlName="sixthCtrl2">  
         </mat-form-field>
     </div>
@@ -162,8 +165,8 @@
   
   
     <div class="row">
-    <div class="col-lg-3" id="margin">
-    <label >FAQ #3 (Optional)</label>
+    <div class="col-lg-3  rfm-label">
+    <label class="m-0">FAQ #3 (Optional)</label>
     </div>
     <div class="col-lg-9">
     <mat-form-field style="width: 100%">
@@ -178,7 +181,7 @@
   
     <div>
     <button mat-raised-button matStepperNext class="next-btn">Next</button>
-    <button mat-raised-button matStepperPrevious class="back-button" style="margin-right: 15px">Back</button>
+    <button mat-raised-button matStepperPrevious class="back-button">Back</button>
     </div>
     </form>
     </mat-step>
@@ -189,14 +192,14 @@
       <ng-template matStepLabel>Publish</ng-template>
       <div class="row">
       <div class="col-lg-12 text-center" id="margin">
-      <h6> Thanks for creating your RFM. Click to publsih your RFM,</h6>
-      <br>
-      <h6>"Your RFM will be shown after reviewed by admin.</h6>
+      <h5> Thanks for creating your RFM. Click to publsih your RFM,</h5>
+  
+      <h5>"Your RFM will be shown after reviewed by admin.</h5>
       </div>
   
       </div>
       <div>
-        <button mat-raised-button class="back-button" type="submit" >Publish</button>
+        <button mat-raised-button class="back-button float-right" type="submit" >Publish</button>
         <button mat-raised-button matStepperPrevious class="back-button">Back</button>
       </div>
       </form>
