@@ -1,44 +1,42 @@
 
 <section class="d-flex">
 <div class="facebook-sidebar">
-    <form class="sidebar-forms m-0">
+    <!-- <form (submit)="setPage(1)" class="sidebar-forms m-0">
         <div class="row">
+            <div class="col-md-12">
+                <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                            placeholder="Select Category" style="widows: 100% !important;">
+                    <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
+                </mat-select>
+            </div>
           <div class="col-md-12">
             <mat-form-field  class="mt-5">
-              <input matInput type="text" placeholder="Search by Username"  tabindex=1 required>
+              <input matInput type="text" [(ngModel)]="t_name" placeholder="Search by Twitter Profile" name="title">
             </mat-form-field>
-          </div>
-          <div class="col-md-12">
-            <mat-form-field>
-              <input matInput type="text" placeholder="Search by Email" name="contact">
-            </mat-form-field>
-          </div>
-    
+          </div> 
 
           <div class="col-md-12">
+            <mat-label>Search by Followers</mat-label>
             <mat-form-field>
-              <input matInput type="text" placeholder="Search by Followers" name="social">
+              <input matInput type="text" [(ngModel)]="minfollowers" placeholder="Search by Followers" name="social">
             </mat-form-field>
           </div>
           <div class="col-md-12">
-            <mat-form-field>
-              <input matInput type="text" placeholder="Search by Followings" name="seo">
-            </mat-form-field>
-          </div>
-
+              <mat-form-field>
+                <input matInput type="text" [(ngModel)]="maxfollowers" placeholder="Search by Followers" name="social2">
+              </mat-form-field>
+            </div>
           <div class="col-md-12">
+              <mat-label>Search by Followings</mat-label>
             <mat-form-field>
-              <input matInput type="text" placeholder="Search by Tweets" name="title">
+              <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Search by Followings" name="seo">
             </mat-form-field>
           </div>
           <div class="col-md-12">
-            <mat-form-field>
-              <input matInput type="text" placeholder="Search by Likes" name="title">
-            </mat-form-field>
-          </div>
-       
-
-   
+              <mat-form-field>
+                <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Search by Followings" name="seo2">
+              </mat-form-field>
+            </div>
           <div class="col-md-12 text-center">
             <button type="button"  class="btn btn-primary search-button" >
               Search <i class="fa fa-sliders"></i>
@@ -47,7 +45,70 @@
 
       
       </div>
-      </form>
+      </form> -->
+
+
+
+
+<form (submit)="setPage(1)" class=" social-forms m-0">
+    <div class="row">
+        <div class="col-md-6">
+            <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                        placeholder="Select Category" style="width:100%">
+                <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
+            </mat-select>
+        </div>
+        <div class="col-md-6">
+            <!-- <mat-form-field>
+                <input matInput type="text"[(ngModel)]="p_name" placeholder="Search by Profilename" name="contact">
+            </mat-form-field> -->
+            <mat-form-field>
+                <input matInput type="text"[(ngModel)]="t_name" placeholder="Search by Twitterame" name="contact2">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row Advanced-search ">
+        <div class="col-md-6">
+            <mat-label>Search by Followers</mat-label>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="minfollowers" placeholder="Minimum Followers" name="social">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="maxfollowers" placeholder="Maximum Followers" name="social2">
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-label>Search by Followings</mat-label>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Minimum Following" name="seo">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Maximum Following" name="seo2">
+            </mat-form-field>
+        </div>
+    </div>
+    <!-- <div class="row Advanced-search">
+        <div class="col-md-6">
+            <mat-label>Search by Pins</mat-label>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="minhearts" placeholder="Minimum Hearts" name="loc">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="maxhearts" placeholder="Maximum Hearts" name="loc2">
+            </mat-form-field>
+        </div>
+
+    </div> -->
+
+    <div class="row Advanced-search">
+        <div class="col-md-12  text-center">
+            <button type="submit"  class="btn btn-primary" >
+                Search <i class="fa fa-sliders"></i>
+            </button>
+        </div>
+
+    </div>
+</form>
 </div>
 <div class="facebook-content">
 <div class="page-content">
