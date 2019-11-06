@@ -26,7 +26,7 @@
                                     <div class="col-md-6">
                                         <div class="row">
                                             <div class="col-md-8 col-sm-6 pull-right">
-                                                <mat-select class="mat-list" style="width:80%; float: right" (change)="sort_lists_twitter()" name="selected_choice"
+                                                <mat-select class="select-mat-list" style="width:80%; float: right" (change)="sort_lists_twitter()" name="selected_choice"
                                                            [(ngModel)]="selected_choice_twitter"
                                                            placeholder="Sort By">
                                                     <mat-option *ngFor="let choice of choices_twitter" [value]="choice.code">{{ choice.name }}
@@ -215,7 +215,7 @@
                                             <h6>  Total Influencers: <b>{{li.influencers_count}}</b></h6>
                                             <button style="margin-bottom: 5%" type="button" class="btn btn-primary" (click)="select_add_influencers_dd(li.id, li.name) ">
                                                 Add Influencers
-                                            </button>
+                                            </button>f
                                         </div>
 
                                     </div>
