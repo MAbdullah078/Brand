@@ -45,7 +45,7 @@ export class UserService {
       let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
       headers.append('Content-Type', 'application/json');
       // let username = localStorage.getItem('username');
-      // alert(id)
+      alert(id)
       return this.http.get(Config.api+'/bap/?id='+id,{headers: headers}).map((response: Response) => {
         return response.json();
       })
