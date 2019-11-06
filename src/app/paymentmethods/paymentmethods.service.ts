@@ -15,11 +15,11 @@ export class PaymentmethodsService {
    
 }
 getcounty(){
-  return this.http.get('https://apis.com/all_countries/')
+  return this.http.get('https://apis.rfpgurus.com/all_countries/')
 }
 zipcode(zip) {
    
-  return this.http.get('https://apis.com/zipcode/' + zip + '/').map((response: Response) => response.json());
+  return this.http.get('https://apis.rfpgurus.com/zipcode/' + zip + '/').map((response: Response) => response.json());
 }
   // let headers = new Headers();
   //       headers.append('Content-Type', 'application/json');
@@ -36,7 +36,7 @@ zipcode(zip) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-    return this._https.put( 'https://apis.com/payment/sigle_card_get/' + id, {
+    return this._https.put( 'https://apis.influexpai.com/payment/sigle_card_get/' + id, {
 
       "nickname": nickname,
       "autopay": auotpay,
@@ -59,7 +59,7 @@ zipcode(zip) {
     let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-      return this._https.post('https://apis.com/payment/cardInfo_web/',
+      return this._https.post('https://apis.influexpai.com/payment/cardinfo/',
       JSON.stringify({
         "name": name,
         "street_address": address,
