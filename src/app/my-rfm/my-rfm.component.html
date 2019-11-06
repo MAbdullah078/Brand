@@ -1,37 +1,34 @@
 <section id="myrfm">
-  <h2>My Request For Marketing (RFM)</h2>
+  <h2 class="text-center">My Request For Marketing (RFM)</h2>
 
-  <div class="d-flex flex-row">
+  <div class="d-flex flex-row flex-wrap justify-content-center">
     <div class="rfm-wrap" *ngFor="let message of rfm; let i = index">
-        <img src="{{message.pictures}}"  alt="Notes">
-
-      <h4>Title:{{message.title}}</h4>
-      <p>Category:{{message.category}}</p>
-      <p>Url: <a href="{{message.urlofproduct}}"> {{message.urlofproduct}}</a></p>
-      <p>Description: {{message.description}}</p>
-      <p>Offer: {{message.offer_to_influencer}}</p>
-      <!-- <h4>Question#1: {{message.question1}}</h4> -->
-      <!-- <h4>Answer#1: {{message.answer1}}</h4> -->
-      <!-- <h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4> -->
-      <!-- <h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4> -->
-      <!-- <h4 *ngIf="message.question3!='null'">Question#3: {{message.question3}}</h4> -->
-      <!-- <h4 *ngIf="message.question3!='null'">Answers#3: {{message.answer3}}</h4> -->
+      <div class="rfm_img">
+          <img src="{{message.pictures}}" alt="Notes">
+      </div>
       
-      <button  > 
-      <a routerLink="/rfm-detail" [queryParams]="{ rid:  message.id}">View detail </a>
-       </button>
-      
-       <button  > 
-        <a (click)="deletemyrfm(message.id)" >Delete</a>
-         </button>
-      <!-- <button (click)="get()" >View detail</button> -->
-      
-       </div>
+      <div class="p-2">
+          <h4 class="m-0"><b>Title : </b> {{message.title}}</h4>
+          <p class="m-0"><b>Category :</b> {{message.category}}</p>
+          <p class="m-0"><b>Offer :</b> {{message.offer_to_influencer}}</p>
+          <p class="m-0"><b>Url :</b> <a href="{{message.urlofproduct}}"> {{message.urlofproduct}}</a></p>
+          <div class="box">
+              <p class="m-0"><b>Description : </b>
+                <span class="font-12">{{message.description}} </span></p>
+          </div>
+         
+          <!-- <h4>Question#1: {{message.question1}}</h4> -->
+          <!-- <h4>Answer#1: {{message.answer1}}</h4> -->
+          <!-- <h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4> -->
+          <!-- <h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4> -->
+          <!-- <h4 *ngIf="message.question3!='null'">Question#3: {{message.question3}}</h4> -->
+          <!-- <h4 *ngIf="message.question3!='null'">Answers#3: {{message.answer3}}</h4> -->
+         <div class="text-center">
+            <a class="btn btn-primary m-2" routerLink="/rfm-detail" [queryParams]="{ rid:  message.id}">View detail </a>
+            <a class="btn btn-primary m-2 btn-117" (click)="deletemyrfm(message.id)">Delete</a>
+            <!-- <button (click)="get()" >View detail</button> -->
+         </div>
+      </div>
+    </div>
   </div>
-
 </section>
-
-
-
-
-    
