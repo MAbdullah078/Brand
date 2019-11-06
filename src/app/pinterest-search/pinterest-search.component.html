@@ -14,51 +14,68 @@
             </mat-form-field>
         </div>
 
-        <div class="col-md-12">
-            <mat-label>Search by Followers</mat-label>
+        <div class="col-md-12 row">
+            <!-- <mat-label>Search by Followers</mat-label> -->
+            <div class="col-md-12"><h5 class="m-0"><i class="fa fa-users"></i> Followers</h5></div>
+            <div class="col-md-6">
             <mat-form-field>
-                <input matInput type="text" [(ngModel)]="minfollower" placeholder="Min Followers" name="social">
+                <input matInput type="number" [(ngModel)]="minfollower" placeholder="Min Followers" name="social"
+                class="example-right-align">
             </mat-form-field>
         </div>
-        <div class="col-md-12">
+    
+        <div class="col-md-6">
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="maxfollower" placeholder="Max Followers" name="social2">
+                    <input matInput type="number" [(ngModel)]="maxfollower" placeholder="Max Followers" name="social2" class="example-right-align">
                 </mat-form-field>
             </div>
-        <div class="col-md-12">
-                <mat-label>Search by Followings</mat-label>
+        </div>
+        <div class="col-md-12 row">
+                <!-- <mat-label>Search by Followings</mat-label> -->
+                <div class="col-md-12"><h5 class="m-0"><i class="fa fa-eye"></i> Following</h5></div>
+                <div class="col-md-6">
             <mat-form-field>
-                <input matInput type="text" [(ngModel)]="minfollowing" placeholder="Min Followings" name="seo">
+                <input matInput type="number" [(ngModel)]="minfollowing" placeholder="Min Followings" name="seo" class="example-right-align">
             </mat-form-field>
         </div>
-        <div class="col-md-12">
+     
+        <div class="col-md-6">
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="maxfollowing" placeholder="Max Followings" name="seo2">
+                    <input matInput type="number" [(ngModel)]="maxfollowing" placeholder="Max Followings" name="seo2" class="example-right-align">
                 </mat-form-field>
             </div>
+        </div>
 
 
-        <div class="col-md-12">
-                <mat-label>Search by Pins</mat-label>
-            <mat-form-field>
-                <input matInput type="text" [(ngModel)]="minPins" placeholder="Min Pins" name="loc">
+        <div class="col-md-12 row">
+                <!-- <mat-label>Search by Pins</mat-label> -->
+                <div class="col-md-12"><h5 class="m-0"><i class="fa fa-user"></i> Pins</h5></div>
+                <div class="col-md-6">            <mat-form-field>
+                <input matInput type="number" [(ngModel)]="minPins" placeholder="Min Pins" name="loc" class="example-right-align">
             </mat-form-field>
         </div>
-        <div class="col-md-12">
+
+      
+        <div class="col-md-6">
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="maxPins" placeholder="Max Pins" name="loc2">
+                    <input matInput type="number" [(ngModel)]="maxPins" placeholder="Max Pins" name="loc2" class="example-right-align">
                 </mat-form-field>
             </div>
-        <div class="col-md-12">
-                <mat-label>Search by Boards</mat-label>
+        </div>
+        <div class="col-md-12 row">
+                <!-- <mat-label>Search by Boards</mat-label> -->
+                <div class="col-md-12"><h5 class="m-0"><i class="fas fa-clipboard-check"></i> Boards</h5></div>
+                <div class="col-md-6">
             <mat-form-field>
-                <input matInput type="text" [(ngModel)]="minboards" placeholder="Min Boards" name="er">
+                <input matInput type="number" [(ngModel)]="minboards" placeholder="Min Boards" name="er" class="example-right-align">
             </mat-form-field>
         </div>
-        <div class="col-md-12">
+ 
+        <div class="col-md-6">
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="maxboards" placeholder="Max Boards" name="er2">
+                    <input matInput type="number" [(ngModel)]="maxboards" placeholder="Max Boards" name="er2" class="example-right-align">
                 </mat-form-field>
+            </div>
             </div>
  
         <div class="col-md-12  text-center">
