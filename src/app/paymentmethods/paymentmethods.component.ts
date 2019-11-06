@@ -275,6 +275,7 @@ export class PaymentmethodsComponent implements OnInit, OnDestroy {
       event.preventDefault();
     }
   }
+  
   deleteSingleCard(id) {
     swal.fire({
       title: 'Are you sure you want to delete this card? <br> You will not be able to revert this',
@@ -512,7 +513,7 @@ export class PaymentmethodsComponent implements OnInit, OnDestroy {
   getCards() {
      this.serv.get_card_infos().subscribe(Data => {
       // this.endRequest = this.pricingServ.get_card_info().subscribe(Data => {
-      this.res = Data;
+      this.res = Data.json();
       console.log(this.res);
       this.message = Data['message'];
     },

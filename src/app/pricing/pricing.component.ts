@@ -11,7 +11,7 @@ import { FormGroup, Validators, FormControl,FormBuilder, NgForm } from '@angular
 // import { HomeService } from '../../common/home/home.service';
 declare var $: any;
 import { Http , Headers } from '@angular/http';
-
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
@@ -114,7 +114,7 @@ export class PricingComponent implements OnInit {
     this.pkg_detail['dur'] = dur
     this.pkgsub = true;
   }
-  constructor(private _http: Http, private formBuilder: FormBuilder, private _nav: Router, private _serv: PricingService) {
+  constructor(private _http: Http, private formBuilder: FormBuilder, private _nav: Router, private _serv: PricingService, private datePipe: DatePipe) {
   
     this.CardNumberForm=true;
     this.CardNumberForm2=false;
@@ -242,6 +242,81 @@ export class PricingComponent implements OnInit {
     this.setautopay = val.checked
   }
   invalid;
+  trial;
+  local;
+  uname;
+  record;
+  pkgList;
+  result;
+  userdetail;
+  nofound;
+  mainFunction() {
+      if (localStorage.getItem('currentUser')) {
+          this.local = localStorage.getItem('currentUser');
+          let pars = JSON.parse(this.local);
+          this.uname = pars.username
+          this._serv.usersubscribe(this.uname).subscribe(
+              data => {
+                  if (data['Response'] == "Subscribe user") {
+                      this._serv.purchaseHistory().subscribe(
+                          data => {
+                           
+                              this.record = data;
+                              this.pkgList = data['pkg_fk'];
+                              this.result = true;
+
+                              var date = new Date();
+                              this.userdetail = data['reg_fk'];
+                              var currentDate = this.datePipe.transform(date, "yyyy-MM-dd").toString()
+                          },
+                          error => {
+                              this.nofound = true;
+                          })
+
+                  } else if (data['Response'] == "Trial Subscription user") {
+                      this._serv.trialHistory().subscribe(
+                          data => {
+                              // this.nofound=false;
+                              this.trial = data;
+                          }, error => {
+
+
+                              this.nofound = true;
+
+                          })
+                  } else {
+                      this.nofound = true;
+                      // alert(this.nofound)
+                  }
+              },
+              error => {
+                  this.nofound = true;
+                  // alert(this.nofound)
+              });
+      }
+
+  }
+  deactive() {
+      this._serv.deactivetrial().subscribe(
+          data => {
+              if (data['message'] == 'Your trail subscription is deactivated') {
+                  swal.fire(
+                      'Your Trail Subscription is deactivated',
+                      '',
+                      'success'
+                  )
+                  let url = '/';
+                  this._nav.navigate([url]);
+              }
+              else {
+                  swal.fire(
+                      'You are not activated for free trail',
+                      '',
+                      'error'
+                  )
+              }
+          })
+  }
   zipcodeCheck(zipcode1) {
    
     if (zipcode1.length > 4) {
@@ -404,8 +479,7 @@ export class PricingComponent implements OnInit {
     }
   }
 
-  local;
-  uname;
+  
   date;
   default: boolean = false;
   public Cardnumber;
