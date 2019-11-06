@@ -190,4 +190,16 @@ let username =  this.currentUser.username;
             return new RequestOptions({ headers: headers });
         }
     }
+
+    gmail(){
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+      headers.append('Content-Type', 'application/json');
+      // let username = localStorage.getItem('username');
+      return this.http.get(Config.api+'/email/gmailAuthenticate/',{headers: headers}).map((response: Response) => {
+        return response.json();
+      })
+      
+    }
+
 }

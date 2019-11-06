@@ -63,6 +63,7 @@ import {CustomPipePipe} from './periscope-search/CustomPipe.pipe';
 import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 import { FileValidatorDirective } from './rfm/FileValidator.directive';
 import { from } from 'rxjs';
+import { GmailComponent } from './gmail/gmail.component';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -111,7 +112,9 @@ export function provideConfig() {
     MyRfmComponent,
     RfmComponent,
     RfmDetailComponent,
-    FileValidatorDirective
+    GmailComponent,
+    FileValidatorDirective,
+    GmailComponent
     
     // GenericSearchComponent
   ],

@@ -1,72 +1,34 @@
-<h4>My Request For Marketing (RFM)</h4>
-<div class="col-md-4" *ngFor="let message of rfm; let i = index">
-<h4>Title:{{message.title}}</h4>
-<h4>Category:{{message.category}}</h4>
-<h4><a href="{{message.urlofproduct}}">Url: {{message.urlofproduct}}</a></h4>
-<h4>Description: {{message.description}}</h4>
-<h4>Offer: {{message.offer_to_influencer}}</h4>
-<!-- <h4>Question#1: {{message.question1}}</h4> -->
-<!-- <h4>Answer#1: {{message.answer1}}</h4> -->
-<!-- <h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4> -->
-<!-- <h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4> -->
-<!-- <h4 *ngIf="message.question3!='null'">Question#3: {{message.question3}}</h4> -->
-<!-- <h4 *ngIf="message.question3!='null'">Answers#3: {{message.answer3}}</h4> -->
-<img src="{{message.pictures}}"  alt="Notes">
-<button  > 
-<a routerLink="/rfm-detail" [queryParams]="{ rid:  message.id}">View detail </a>
- </button>
+<section id="myrfm">
+  <h2 class="text-center">My Request For Marketing (RFM)</h2>
 
- <button  > 
-  <a (click)="deletemyrfm(message.id)" >Delete</a>
-   </button>
-<!-- <button (click)="get()" >View detail</button> -->
-
- </div>
-
-
-
-
-<!-- <section>
-    <div class="container ">
-    <h1 class="text-center">Brand RFM</h1>
-    </div> -->
-    <!-- <div class="container" >
-      <div class="col-md-4">
-    
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="rfm-wrap" *ngFor="let message of rfm; let i = index">
+      <div class="rfm_img">
+          <img src="{{message.pictures}}" alt="Notes">
       </div>
-    </div> -->
-    <!-- <div *ngFor="let data of datashowcase ">
-        <p>{{data.city}}</p>
-        <p>{{data.email}}</p>
       
-      </div> -->
-      <!-- <div class="container">
-          <div class="row">
-    
-         <div class="col-md-4" *ngFor="let message of rfm; let i = index">
-           <div class="rfm">
-           <img src="{{message.pictures}}" onerror="this.src='../../../assets/images/logos/Logo1.png'" alt="">
-           <div class="rfm-information">
-        <p><span>RFM  Title:</span>  {{message.title}}</p>
-        <p>Category:{{message.category}}</p>
-        <p>Description:   {{message.description}}</p>
-        <p>Url: {{message.Url}}</p>
-        <p>Questions: {{message.faq}}</p>
-        <p>Answers: {{message.faqAns}}</p>
-        <p>Status: {{message.status}}</p>
-        <p *ngIf ="message.status == p">Pending</p>
-        <p *ngIf ="message.status == A">Approved</p>
-        <p *ngIf ="message.status == R">Rejected</p>
-      </div> -->
-        <!-- <p *ngIf="{{show_image.show_image}} === P">Pending</p> -->
-        <!-- <p *ngIf="messgae.status == N">Not Approved </p>
-        <p *ngIf="messgae.status == A">Approved </p> -->
-      <!-- </div>
+      <div class="p-2">
+          <h4 class="m-0"><b>Title : </b> {{message.title}}</h4>
+          <p class="m-0"><b>Category :</b> {{message.category}}</p>
+          <p class="m-0"><b>Offer :</b> {{message.offer_to_influencer}}</p>
+          <p class="m-0"><b>Url :</b> <a href="{{message.urlofproduct}}"> {{message.urlofproduct}}</a></p>
+          <div class="box">
+              <p class="m-0"><b>Description : </b>
+                <span class="font-12">{{message.description}} </span></p>
+          </div>
+         
+          <!-- <h4>Question#1: {{message.question1}}</h4> -->
+          <!-- <h4>Answer#1: {{message.answer1}}</h4> -->
+          <!-- <h4 *ngIf="message.question2!='null'">Question#2: {{message.question2}}</h4> -->
+          <!-- <h4 *ngIf="message.answer2!='null'">Answer#2: {{message.answer2}}</h4> -->
+          <!-- <h4 *ngIf="message.question3!='null'">Question#3: {{message.question3}}</h4> -->
+          <!-- <h4 *ngIf="message.question3!='null'">Answers#3: {{message.answer3}}</h4> -->
+         <div class="text-center">
+            <a class="btn btn-primary m-2" routerLink="/rfm-detail" [queryParams]="{ rid:  message.id}">View detail </a>
+            <a class="btn btn-primary m-2 btn-117" (click)="deletemyrfm(message.id)">Delete</a>
+            <!-- <button (click)="get()" >View detail</button> -->
+         </div>
       </div>
-      </div>
-    
-      </div>
-    </section> -->
-    <!-- <app-footer></app-footer> -->
-    
-    
+    </div>
+  </div>
+</section>
