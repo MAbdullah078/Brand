@@ -21,10 +21,19 @@
     }
     
     .box p {
-      display: -webkit-box;
+      display            : block;
+      display            : -webkit-box;
+      -webkit-box-orient : vertical;
+      position           : relative;
+    
+      line-height        : 1.2;
+      overflow           : hidden;
+      text-overflow      : ellipsis;
+      padding            : 0 !important;
+    }
+    .line-clamp-3 {
       -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;  
-      overflow: hidden;
+      height: calc(1em * 1.2 * 3);
     }
   }
   .font-12{
