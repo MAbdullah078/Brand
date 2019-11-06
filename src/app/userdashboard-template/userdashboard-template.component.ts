@@ -1999,6 +1999,4 @@ export class UserdashboardTemplateComponent implements OnInit {
         })
     }
 
-
-
 }

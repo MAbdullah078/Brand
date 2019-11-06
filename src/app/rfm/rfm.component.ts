@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {UserService} from '../_services';
 import {Router} from '@angular/router';
 import {FormControl, NgForm, Validators, FormGroup, FormBuilder} from '@angular/forms';
-import Swal from "sweetalert2";
 import swal from 'sweetalert2';
 import { Config } from '../../config';
 import { Http,Response } from '@angular/http';
@@ -107,7 +106,7 @@ onChange(event: EventTarget) {
   this.pictures.append('fileToUpload', target.files[0]);
   // console.log(this.pictures);
   console.log('Name is :',  this.pictures)
-  // alert(this.pictures);
+  // //alert(this.pictures);
 }
 
 
@@ -123,7 +122,7 @@ onChange2(event: EventTarget) {
   const eventObj: MSInputMethodContext = <MSInputMethodContext>event;
   const target: HTMLInputElement = <HTMLInputElement>eventObj.target;
   this.input.append('fileToUpload', target.files[0]);
-  // alert(this.input)
+  // //alert(this.input)
 }
 _handleReaderLoaded(readerEvt) {
   console.log('base64');
@@ -139,7 +138,7 @@ onChange3(event: EventTarget) {
   this.file.append('fileToUpload', target.files[0]);
   // console.log(this.pictures);
   console.log('Name is :',  this.video)
-  // alert(this.video);
+  // //alert(this.video);
 }
 
 readUrl(event: any) {
@@ -239,10 +238,10 @@ upload() {
       }
       else {     
         console.log(data);
-        // alert(data);
+        // //alert(data);
         this.pictures = data;
         // this.onSubmit();
-        // alert('ok')
+        // //alert('ok')
       }
     });
 }
