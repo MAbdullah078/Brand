@@ -16604,9 +16604,9 @@ body.sidebar-hidden .page-content {
     margin: 0 auto;
     width: 100%;
 }
-.btn-fill:hover{
+/* .btn-fill:hover{
     background: #cc0000;
-}
+} */
 /*End sign in page*/
 
 
@@ -16942,7 +16942,7 @@ font-weight: 400;
 
 mat-select{
     width: 90%!important;
-    padding-top: 11px!important;
+    padding-top: 0px!important;
 }
 mat-option{
     font-size: 16px;
