@@ -488,7 +488,7 @@ export class PaymentmethodsComponent implements OnInit, OnDestroy {
     }
 
   }
-  res;
+
   pay;
   Eachcard(id) {
     this.serv.singleCard(id).subscribe(data => {
@@ -508,10 +508,12 @@ export class PaymentmethodsComponent implements OnInit, OnDestroy {
     })
   }
   message;
+  res;
   getCards() {
-    this.endRequest = this.serv.get_card_infos().subscribe(Data => {
+     this.serv.get_card_infos().subscribe(Data => {
       // this.endRequest = this.pricingServ.get_card_info().subscribe(Data => {
       this.res = Data;
+      console.log(this.res);
       this.message = Data['message'];
     },
       error => {
