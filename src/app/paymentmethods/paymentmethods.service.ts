@@ -10,8 +10,11 @@ import { Http, Headers, Response } from '@angular/http';
 export class PaymentmethodsService {
   constructor(private http: HttpClient,private _https : Http) {  }
   get_card_infos() {
-    
-    return this.http.get('https://apis.influexpai.com/payment/cardinfo/')
+    alert(JSON.parse(localStorage.getItem('currentUser')).token)
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
+    return this._https.get('https://apis.influexpai.com/payment/cardinfo/', {headers:headers})
    
 }
 getcounty(){

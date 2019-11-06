@@ -5691,14 +5691,12 @@ pre.code {
     margin: 2rem 0
 }
 .social-forms
-[placeholder],
-input[placeholder] {
+[placeholder] {
     color: #000;
     font-size: 16px;
     font-weight: 600;
 }
-[placeholder],
-input[placeholder] {
+[placeholder] {
     color: #000;
     font-size: 16px;
     font-weight: 600;

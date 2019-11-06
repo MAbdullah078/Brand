@@ -24,10 +24,7 @@
                                                                                            src="../../assets/header-images/Twitter@1x-.png">  </a> <a
                         [routerLink]="['/blogosphere/search']" routerlinkactive="active"> <img alt=""
                                                                                                src="../../assets/header-images/Blog@1x-.png">  </a> 
-                                                                                               <!-- <a
-                        [routerLink]="['/linkedin/search']" routerlinkactive="active"> <img alt=""
-                                                                                            src="../../assets/header-images/LinkedIn@1x-.png"> <span>LinkedIn</span>
-                                                                                         </a> -->
+                                                                                               
                     <a [routerLink]="['/pinterest/search']" routerlinkactive="active">
                         <img alt=""  src="../../assets/header-images/Pin@1x-.png"> 
                     </a>
@@ -41,9 +38,26 @@
                         <img alt=""  src="../../assets/header-images/flickr_32.png" height="25">
                     </a>
 
-                   
-                        <a
-                            class="font-additional color-main text-uppercase hover-focus-color"
+
+
+
+                    <!-- <div class="dropdown"> <button class="dropbtn"> <i
+                        class="fa fa-user-circle"></i> Web Campaign <span
+                        class="fa fa-angle-down"></span></button>
+                    <div class="dropdown-content">
+                         <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a>
+                         <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
+                         <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
+                         <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
+                         <a [routerLink]="['/twitter/search']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
+                         <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
+                         <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
+                         <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
+                         <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
+                             </div>
+                </div> -->
+                 
+                        <a class="font-additional color-main text-uppercase hover-focus-color"
                             data-target=".example-modal-lg" data-toggle="modal" href="#search" id="icon-type-to-search">
                         <button class="top-search-btn" id="serbtn"> <img src="../../assets/img/search.png"> </button> </a>
                         <a>
@@ -54,7 +68,7 @@
                             <i class="fa fa-user-circle"></i>My Profile</a>
                              <a [routerLink]="['/pricingsub']"> <i class="fa fa-history"></i>Subscription</a>
                              <a [routerLink]="['/paymentmethod']"> <i class="fa fa-history"></i>Payment Method</a>
-                             <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
+                             <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a>
                              <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
                              <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
                              <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
@@ -76,9 +90,6 @@
                     </div>
                 </a>
                 </div>
-
-
-
 
             </div>
 

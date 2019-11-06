@@ -42,7 +42,7 @@ window.scroll(0,0)
 .subscribe(params => {   
   this.Catid = params['rid'] || '0';}
   )
-  alert(this.Catid)
+  // alert(this.Catid)
   this.mycreatedrfm(this.Catid)
 
 
