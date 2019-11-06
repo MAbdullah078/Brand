@@ -116,7 +116,8 @@ export class UserdashboardTemplateComponent implements OnInit {
         window.scroll(0,0)
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-        this.get_lists(this.selected_choice);
+        // this.get_lists(this.selected_choice);
+        this.getTwLists(this.selected_choice);
     }
 
     // // Start Dashboard Web all API's Implements by Amjad
@@ -1717,11 +1718,11 @@ export class UserdashboardTemplateComponent implements OnInit {
             });
     }
     selectedIndexChange(e) {
-        // if (e === 0) 
-        // {
+        // if (e === 0) {
         //     this.get_lists('-id')
         // }
-          if (e === 0) {
+        //  else 
+         if (e === 0) {
             this.loadTwitterLists('-id');
         } else if (e === 1) {
             this.get_lists_dd('-id');
@@ -1731,7 +1732,7 @@ export class UserdashboardTemplateComponent implements OnInit {
 
         } else if (e === 3) {
             this.get_lists_in('-id');
-        } else if (e === 4 ) {
+        } else if (e === 4) {
             this.get_list_fb('-id');
         }
         // else if(e===6){
