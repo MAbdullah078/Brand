@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import {AlertComponent} from './_directives';
 import {DashboardLayoutComponent} from "./dashboard-layout/dashboard-layout.component";
+import { DatePipe } from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {SlimLoadingBarModule} from "ng2-slim-loading-bar";
 import {AppRoutes} from './app.routing';
@@ -62,6 +63,7 @@ import {CustomPipePipe} from './periscope-search/CustomPipe.pipe';
 import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 import { FileValidatorDirective } from './rfm/FileValidator.directive';
 import { from } from 'rxjs';
+import { GmailComponent } from './gmail/gmail.component';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -110,7 +112,9 @@ export function provideConfig() {
     MyRfmComponent,
     RfmComponent,
     RfmDetailComponent,
-    FileValidatorDirective
+    GmailComponent,
+    FileValidatorDirective,
+    GmailComponent
     
     // GenericSearchComponent
   ],
@@ -140,7 +144,10 @@ export function provideConfig() {
 
   },
 
-    AuthGuard, PushNotificationsService,AuthService, PaymentmethodsService
+    AuthGuard, PushNotificationsService,AuthService, PaymentmethodsService,
+    DatePipe
+
+
    ],
   bootstrap: [AppComponent]
 })

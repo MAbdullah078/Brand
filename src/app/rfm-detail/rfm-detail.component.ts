@@ -88,7 +88,7 @@ updaterfm(title ,url,cat,des,
  
   mycreatedrfm(id){
     this.app_Service.showmyrfm(this.Catid).subscribe(rfm => {
-      console.log(rfm)
+      // console.log(rfm)
       this.rfm = rfm.msg;
       for(let abc of this.rfm){
         console.log(abc)

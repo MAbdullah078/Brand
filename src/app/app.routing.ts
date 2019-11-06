@@ -4,6 +4,8 @@ import {AuthGuard} from './_guards';
 import {RegisterComponent} from './register/register.component';
 import {GetpaymentComponent} from './get-payment/getpayment.component';
 import {ConfirmPasswordComponent} from './confirm-password/confirm-password.component';
+import { GmailComponent } from './gmail/gmail.component';
+
 import {
     BlogComponent,
     ContactComponent,
@@ -118,6 +120,7 @@ export const AppRoutes: Routes = [
     ], canActivate: [AuthGuard] },
 
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
+    {path: 'gmail', component: GmailComponent},
     { path: 'register', component: RegisterComponent },
     {path: 'contactus', component: ContactComponent},
     { path: 'payment', component: GetpaymentComponent },

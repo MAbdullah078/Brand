@@ -5,7 +5,7 @@ import { UserService } from '../_services/user.service';
 @Component({
   selector: 'app-my-rfm',
   templateUrl: './my-rfm.component.html',
-  styleUrls: ['./my-rfm.component.css']
+  styleUrls: ['./my-rfm.component.scss']
 })
 export class MyRfmComponent implements OnInit {
   myrfm: any;

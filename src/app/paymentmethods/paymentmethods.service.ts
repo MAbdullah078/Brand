@@ -10,7 +10,7 @@ import { Http, Headers, Response } from '@angular/http';
 export class PaymentmethodsService {
   constructor(private http: HttpClient,private _https : Http) {  }
   get_card_infos() {
-    alert(JSON.parse(localStorage.getItem('currentUser')).token)
+    // alert(JSON.parse(localStorage.getItem('currentUser')).token)
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
