@@ -608,16 +608,13 @@ export class PeriscopeSearchComponent implements OnInit {
         this.http.post(Config.api+'/ml/get_periscope_pages/' + this.selected_category + '/?page=' + page + '', {
             profile_name: this.p_name,
             twitter_name:this.t_name,
-            // following: this.following,
             heartsmin:this.minhearts,
             heartsmax:this.maxhearts,
             followingmin:this.minfollowing,
             followingmax:this.maxfollowing,
             followersmin:this.minfollower,
             followersmax:this.maxfollower,
-            // follower:this.follower,
-            // account_rank:this.account_rank,
-            // posts:this.post,
+
         },{headers:headers})
             .subscribe(res => {
                 this.main_checkbox = false;

@@ -56,6 +56,12 @@ export class YoutubeSearchComponent implements OnInit {
      t_views: any;
      rank: any;
      tomorrow_upload_video: any;
+    minsubscribers: any;
+    maxsubscribers: any;
+    minrank: any;
+    maxrank: any;
+    minviews: any;
+    maxviews: any;
 
     constructor(private http: HttpService,
                  private route: ActivatedRoute, private pagerService: PagerService, private router: Router) {
@@ -563,11 +569,16 @@ export class YoutubeSearchComponent implements OnInit {
         // this.http.post(Config.api+'/ml/get_youtube_channels/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         this.http.post(Config.api+'/ml/get_youtube_channels/' + this.selected_category + '/?page=' + page + '', {
             name: this.name,
-            subscribers: this.subscribers,
-            total_views:this.t_views,
-            rank:this.rank,
-            today_upload_videos:this.today_upload_video,
-            tomorrow_upload_videos:this.tomorrow_upload_video
+            // subscribers: this.subscribers,
+            subscribersmin:this.minsubscribers,
+            subscribersmax:this.maxsubscribers,
+            // total_views:this.t_views,
+            // rank:this.rank,
+            rankmin:this.minrank,
+            rankmax:this.maxrank,
+            total_viewsmin:this.minviews,
+            total_viewsmax:this.maxviews
+
         },{headers:headers})
 
             .subscribe(res => {

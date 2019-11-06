@@ -19,52 +19,54 @@
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 premium wow animated bounceInUp"
       data-wow-delay="0.6s" *ngIf="Yplan">
       <div class="pricing-box">
-          <div class="pricing2-button" *ngIf="!planSelected">
-            <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
-              title="Subscribe Package">Register Now
-            </a>
-            <ng-template #pkg3>
-              <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
-            </ng-template>
-          </div>
-          <span class="plan-name text-center">
-            Free Plan
-          </span>
-          <!-- <p class="plan-price bg-black">
-            <sup class="currency">$</sup>
-            <strong>0.00</strong>
-          </p> -->
-          <img src="{{priceimages}}">
-          <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
-            <li>
-              <i class="fa fa-check"></i>
-              50 Searches
-            </li>
-            <li>
-              <i class="fa fa-check"></i> Store up to 100 Contacts
-            </li>
-            <li>
-              <i class="fa fa-check"></i> Send up to 5 emails
-            </li>
-            <li>
-              <i class="fa fa-check"></i> 1 Seat
-            </li>
-            <li>
-              <i class="fa fa-check"></i> 7 Day Risk Free Trial
-            </li>
-            <li>
-              <i class="fa fa-check"></i> Email Support
-            </li>
-          </ul>
-          <div class="pricing2-button" *ngIf="!planSelected">
-            <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
-              title="Subscribe Package">Register
-              Now</a>
-            <ng-template #pkg3>
-              <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
-            </ng-template>
-          </div>
+        <div class="pricing2-button" *ngIf="!planSelected">
+          <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
+            title="Subscribe Package">Register
+            Now</a>
+          <ng-template #pkg4>
+            <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+          </ng-template>
         </div>
+      <div >
+          <span class="plan-name text-center">
+              Yearly Plan
+            </span>
+            <!-- <p class="plan-price">
+              <sup class="currency">$</sup>
+              <strong>299.99</strong>
+            </p> -->
+            <img width="100%" src="../../assets/img/Pricing Influ (2).png">
+            <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
+              <li>
+                <i class="fa fa-check"></i> Unlimited Searches
+              </li>
+              <li>
+                <i class="fa fa-check"></i> Store upto 8000 Contacts
+              </li>
+              <li>
+                <i class="fa fa-check"></i> Send Upto 1,000,000 Emails
+              </li>
+              <li>
+                <i class="fa fa-check"></i> 3 seats
+              </li>
+              <li>
+                <i class="fa fa-check"></i> 1 year License
+              </li>
+              <li>
+                <i class="fa fa-check"></i> Email Support
+              </li>
+            </ul>
+            
+      </div>
+        <div class="pricing2-button" *ngIf="!planSelected">
+          <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
+            title="Subscribe Package">Register
+            Now</a>
+          <ng-template #pkg4>
+            <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+          </ng-template>
+        </div>
+      </div>
     </div>
 
 
@@ -128,60 +130,66 @@
 
 
 
-        <div class="pricing-box">
+       
+
+
+
+
+
+
+
+          <div class="pricing-box">
             <div class="pricing2-button" *ngIf="!planSelected">
-              <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
-                title="Subscribe Package">Register
-                Now</a>
-              <ng-template #pkg4>
-                <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+              <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
+                title="Subscribe Package">Register Now
+              </a>
+              <ng-template #pkg3>
+                <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
               </ng-template>
             </div>
-          <div >
-              <span class="plan-name text-center">
-                  Yearly Plan
-                </span>
-                <!-- <p class="plan-price">
-                  <sup class="currency">$</sup>
-                  <strong>299.99</strong>
-                </p> -->
-                <img width="100%" src="../../assets/img/Pricing Influ (2).png">
-                <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
-                  <li>
-                    <i class="fa fa-check"></i> Unlimited Searches
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Store upto 8000 Contacts
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Send Upto 1,000,000 Emails
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> 3 seats
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> 1 year License
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Email Support
-                  </li>
-                </ul>
-                
-          </div>
+            <span class="plan-name text-center">
+              Free Plan
+            </span>
+            <!-- <p class="plan-price bg-black">
+              <sup class="currency">$</sup>
+              <strong>0.00</strong>
+            </p> -->
+            <img src="{{priceimages}}">
+            <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0">
+              <li>
+                <i class="fa fa-check"></i>
+                50 Searches
+              </li>
+              <li>
+                <i class="fa fa-check"></i> Store up to 100 Contacts
+              </li>
+              <li>
+                <i class="fa fa-check"></i> Send up to 5 emails
+              </li>
+              <li>
+                <i class="fa fa-check"></i> 1 Seat
+              </li>
+              <li>
+                <i class="fa fa-check"></i> 7 Day Risk Free Trial
+              </li>
+              <li>
+                <i class="fa fa-check"></i> Email Support
+              </li>
+            </ul>
             <div class="pricing2-button" *ngIf="!planSelected">
-              <a *ngIf="check_login(); else pkg4" routerLink='/signup' class="btn btn-primary"
+              <a *ngIf="check_login(); else pkg3" routerLink='/signup' class="btn btn-primary"
                 title="Subscribe Package">Register
                 Now</a>
-              <ng-template #pkg4>
-                <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+              <ng-template #pkg3>
+                <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
               </ng-template>
             </div>
           </div>
       </div>
-      <div *ngIf="pkgsub" class="sh-signup-form-fix col-lg-8 col-md-8 col-sm-8 col-xs-12" data-wow-delay=".5s">
+      <div *ngIf="pkgsub" class=" col-lg-8 col-md-8 col-sm-8 col-xs-12" data-wow-delay=".5s">
         <div class="  sh-payment">
           <div class="checkout-select-box row">
-            <h2 *ngIf="isfreetrial" class="pricing_heading" style="text-align:center">Join InfluExpAI for a 7-day risk-free trial period
+            <h2 *ngIf="isfreetrial" class="pricing_heading" style="text-align:center">Join influence  for a 7-day risk-free trail period
             </h2>
           
             <div id="section-pricing" class="text-center col-sm-12 padding-zero">
@@ -269,13 +277,13 @@
                           </div>
                         </div>
                       </div>
-                      <form #f="ngForm" id="videoform" class="edit-profile floting-label row sh-signup-form-fix paymet-form" name="videoform" [formGroup]="form"
+                      <form #f="ngForm" id="videoform" class=" social-forms row " name="videoform" [formGroup]="form"
                         method="post">
                         <div class="col-lg-12 center-div col-md-12">
                           <div class="contact_form">
                             <div class="panel-body margin-top-145 padding-bottom-">
-                              <div class="w-100">
-                                <mat-form-field class="width-half padding-zero mat-size">
+                              <div class="col-md-4 d-flex">
+                                <mat-form-field class=" mat-size col-md-12">
                                   <mat-select placeholder="Card Type " [(ngModel)]="model.cardtype" #val formControlName="CardtypeForm"
                                     (valueChange)="ShowButton(val.value)"  (selectionChange)="onSelectionChanged($event)" required>
                                     <mat-option class="font-16" *ngFor="let card_get_datat of card_opeation" [value]="card_get_datat.value">
@@ -459,10 +467,10 @@
                                   </mat-error>
                                 </mat-form-field>
                               </div>
-                              <div class="col-sm-12 col-xs-12 enroll-chckbox mg-top-10px">
-                                <mat-slide-toggle  (change)="changed($event)"  formControlName="setautopay" [(ngModel)]="setautopay" checked="true">
+                              <div class="col-sm-12 col-xs-12 enroll-chckbox mg-top-10px d-flex">
+                                <mat-slide-toggle class="ml-3"  (change)="changed($event)"  formControlName="setautopay" [(ngModel)]="setautopay" checked="true">
                                 </mat-slide-toggle>
-                                <p>Enroll in Autopay - Set this card as recurring payment
+                                <p class="m-0 ml-2">Enroll in Autopay - Set this card as recurring payment
                                   method</p>
                               </div>
                             </div>

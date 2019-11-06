@@ -315,30 +315,30 @@ this.get_default_FB_data(1);
 
             });
     }
-    filterFBPage(page: number) {
-        if (page < 1 || page > this.pager.totalPages) {
-            return;
-        }
-        let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
-        this.loaded = false;
-        headers.append('Content-Type', 'application/json');
-        this.http.post(Config.api+'/ml/get_facebook_pages/' + this.selected_category + '/?page=' + page + '', {
-            title: this.title,
-            location: this.location,
-            like:this.likes,
-            performance:this.perfomance,
-            ER:this.ER
-        },{headers:headers})
-            .subscribe(res => {
-                this.main_checkbox = false;
-                this.fbinfluencers = res.json();
-                this.pager = this.pagerService.getPager(this.fbinfluencers['totalItems'], page,10);
-                this.loaded = true;
+    // filterFBPage(page: number) {
+    //     if (page < 1 || page > this.pager.totalPages) {
+    //         return;
+    //     }
+    //     let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    //     this.loaded = false;
+    //     headers.append('Content-Type', 'application/json');
+    //     this.http.post(Config.api+'/ml/get_facebook_pages/' + this.selected_category + '/?page=' + page + '', {
+    //         title: this.title,
+    //         location: this.location,
+    //         like:this.likes,
+    //         performance:this.perfomance,
+    //         ER:this.ER
+    //     },{headers:headers})
+    //         .subscribe(res => {
+    //             this.main_checkbox = false;
+    //             this.fbinfluencers = res.json();
+    //             this.pager = this.pagerService.getPager(this.fbinfluencers['totalItems'], page,10);
+    //             this.loaded = true;
 
-            });
+    //         });
 
 
-    }
+    // }
 
 
 

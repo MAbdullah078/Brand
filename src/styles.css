@@ -8749,9 +8749,9 @@ body:not(.device-touch) .button.button-full strong {
   overflow:unset;
   margin:0
 }
-.social-forms .mat-select {
+/* .social-forms .mat-select {
   border-bottom: 1px solid #ccc;
-}
+} */
 .form-content .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
   transform: translateY(-1.98125em) scale(.75) perspective(100px) translateZ(.001px);
 }
@@ -11133,7 +11133,7 @@ background:#000;
   background-color: #fff;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   position: relative;
-  max-width: 350px;
+  max-width: 340px;
   margin-bottom: 13px;
 }
 
