@@ -126,7 +126,6 @@ export class PricingComponent implements OnInit {
       this.allcountry = data['countries'];
       console.log(this.allcountry);
     })
-    this.mainFunction();
     this.getcardid(this.id);
     window.scroll(0, 0);
     this.images();
