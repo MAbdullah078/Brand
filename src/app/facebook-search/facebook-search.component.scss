@@ -30,6 +30,7 @@
   line-height: 50px;
   z-index: 1;
 }
+
 .card-header{
   width: 82%;
   height: 50px;
@@ -125,7 +126,7 @@ input[type=checkbox]{
   font-weight: 600;
   font-size: 16px;
   margin: 8px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto,sans-serif;
 }
 
 
@@ -231,7 +232,12 @@ i{
   font-weight: bolder;
 
 }
-
+.facebook-influencer{
+  font-size: 14px;
+  font-weight: 600;
+  color: #406bc5;
+  margin-left: 3px;
+}
 
 
 
