@@ -14,6 +14,7 @@ import {HeaderComponent} from "./userdashboard-template/header.component";
 import {SideMenuComponent} from "./userdashboard-template/side-menu.component";
 import { AppComponent } from './app.component';
 import { PaymentmethodsComponent } from './paymentmethods/paymentmethods.component';
+import {SidebarComponent} from './sidebar/sidebar.component'
 import { PaymentmethodsService} from './paymentmethods/paymentmethods.service'
 import { TextMaskModule } from 'angular2-text-mask';
 import {PreloaderModule} from "./components/preloader.module";
@@ -33,7 +34,8 @@ import { SocialLoginModule, AuthService } from 'angular5-social-login';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {RfmComponent} from './rfm/rfm.component';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
-import { CountdownModule } from "ng2-countdown-timer"
+import { CountdownModule } from "ng2-countdown-timer";
+import { ProfileComponent} from './profile/profile.component';
 import {
   BlogComponent,
   HowItWorksComponent,
@@ -92,6 +94,7 @@ export function provideConfig() {
     SideMenuComponent,
     AgenciesComponent,
     BrandComponent,
+    SidebarComponent,
     ContactComponent,
     MyRfmComponent,
     GetpaymentComponent,
@@ -102,6 +105,7 @@ export function provideConfig() {
     FooterComponent,
     PaymentmethodsComponent,
     BlogComponent,
+    ProfileComponent,
     InfluencersComponent,
     HowItWorksComponent,
     PrivacyAndPolicyComponent,

@@ -5,7 +5,7 @@ import {RegisterComponent} from './register/register.component';
 import {GetpaymentComponent} from './get-payment/getpayment.component';
 import {ConfirmPasswordComponent} from './confirm-password/confirm-password.component';
 import { GmailComponent } from './gmail/gmail.component';
-
+import { ProfileComponent} from './profile/profile.component';
 import {
     BlogComponent,
     ContactComponent,
@@ -31,6 +31,7 @@ export const AppRoutes: Routes = [
     {
         path : 'agencies', component: AgenciesComponent
     },
+    { path : 'my-profile', component: ProfileComponent},
     {
         path: 'contact',
         component: ContactComponent
@@ -111,7 +112,8 @@ export const AppRoutes: Routes = [
         { path: 'optin/search', loadChildren: './opt-in-influencers/opt-in-influencers.module#OptInInfluencersModule' },
     //     { path: 'messenger', loadChildren: './messenger/messenger.module#MessengerModule' },
     //     { path: 'settings', loadChildren: './settings/settings.module#SettingsModule'},
-        {path:  'my-profile',loadChildren:'./profile/profile.module#ProfileModule'},
+        // {path:  'my-profile',loadChildren:'./profile/profile.module#ProfileModule'},
+
         { path: 'pricingsub',  component:PricingComponent },
     // { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
 
