@@ -52,14 +52,14 @@ body {
   outline: none;
 }
 #search input{
-  width: 90%;
+  width: 94%;
   border-radius: 0px;
   color: #fff;
   font-size: 44px;
   text-align: center;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #fff;
+  // border-bottom: 1px solid #fff;
 }
 .nav-Bar span{
   font-weight: 600;
@@ -73,8 +73,8 @@ body {
 }
 #search .close {
   position: absolute;
-  top: -42px;
-  right: 126px;
+      top: -97px;
+    right: 50px;
   color: #fff;
   /* background-color: #428bca; */
   /* border-color: #357ebd; */
@@ -108,6 +108,15 @@ body {
 }
 .fa-sign-out-alt{
   color:#c00;
+}
+#myform{
+  background: #fff;
+  border-radius: 50px;
+  padding: 11px;
+}
+.fa-microphone{
+  color: #000;
+  font-size: 51px;
 }
 @media(max-width: 1367px) and  (min-width: 1344px){
 

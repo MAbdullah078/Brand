@@ -145,6 +145,16 @@ export class FlickrSearchComponent implements OnInit {
 
 
     }
+    clearsearch(){
+        this.selected_category=null;
+        this.title=null;
+        this.minfollowers=null;
+        this.maxfollowers=null;
+        this.minviews=null;
+        this.maxviews=null;
+        this.minrank=null;
+        this.maxrank=null;
+    }
     checkedAll(e){
 
         for(let i of this.fbinfluencers['results'])

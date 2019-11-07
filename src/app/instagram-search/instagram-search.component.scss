@@ -42,7 +42,7 @@ input[type=checkbox]{
 .tbl-cell{
   font-weight: 600;
   font-size: 19px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto,sans-serif;
 }
 i{
   color: #000;
@@ -58,7 +58,7 @@ i{
   font-weight: 700;
   font-size: 12px;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto,sans-serif;
 }
 hr{
   margin: 0!important;
@@ -92,7 +92,7 @@ hr{
 
   color: #6a6794;
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto,sans-serif;
 }
 
 .fa-globe{
@@ -100,11 +100,7 @@ hr{
   font-size: 16px;
   margin-right: 5px;
 }
-.Follwers-div{
-  margin: 2px;
-  font-family: 'Merriweather', serif;
-  color: darkcyan;
-}
+
 .fa-instagram{
   color: #a82f82;
 width: 20px;
@@ -136,4 +132,11 @@ font-size: 15px;
  width: 20px;
 height:20px;
 font-size: 15px;
+}
+.facebook-influencer{
+  font-size: 14px;
+font-weight: 600;
+color: #d77f48;
+margin-left: 3px;
+
 }

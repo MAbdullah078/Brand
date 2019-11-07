@@ -3,10 +3,15 @@
 <section class="d-flex">
 <div class="facebook-sidebar">
     <form (submit)="setPage(1)" class=" sidebar-forms  m-0">
-        <div class="row">
+        <div class="row m-0">
+                <div class="col-md-12 ">
+                        <div class="mt-4 heading-div"><img src="../../assets/header-images/Twitter@1x-.png "><span class="facebook-influencer">
+                            Twitter Influencers</span></div>
+                    </div>
             <div class="col-md-12">
-                <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                            placeholder="Select Category" style="width:100%!important">
+                
+                <mat-select class="mt-3 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                            placeholder="Search By Catagory" style="width:100%!important">
                     <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                 </mat-select>
             </div>
@@ -29,13 +34,15 @@
             </div>
        
             <div class="col-md-12 row">
-                <!-- <mat-label>Search by Followers</mat-label> -->
                 <div class="col-md-12"><h5 class="m-0"><i class="fa fa-users"></i> Followers</h5></div>
-                <div class="col-md-6">
+                <div class="col-md-5 pr-0">
                 <mat-form-field>
                     <input matInput type="number" [(ngModel)]="minfollowers" placeholder="Min " name="loc" class="example-right-align" >
                
                 </mat-form-field>
+            </div>
+            <div class="col-md-1 followers-profile p-0">
+                <span>-</span>
             </div>
           
             <div class="col-md-6">
@@ -47,13 +54,15 @@
             <div class="col-md-12 row">
                     <!-- <mat-label>Search by Following</mat-label> -->
                     <div class="col-md-12"><h5 class="m-0"><i class="fa fa-eye"></i> Following</h5></div>
-                    <div class="col-md-6">
+                    <div class="col-md-5 pr-0">
                 <mat-form-field>
                     <input matInput type="number" [(ngModel)]="minfollowing" placeholder="Min " name="fl" class="example-right-align">
                 </mat-form-field>
             </div>
-         
-                <div class="col-md-6">
+            <div class="col-md-1 followers-profile p-0">
+                    <span>-</span>
+                </div>
+                <div class="col-md-6 pl-0">
                         <mat-form-field>
                             <input matInput type="number" [(ngModel)]="maxfollowing" placeholder="Max " name="fl2" class="example-right-align">
                         </mat-form-field>
@@ -63,22 +72,31 @@
             <div class="col-md-12 row">
                     <!-- <mat-label>Search by Likes</mat-label> -->
                     <div class="col-md-12"><h5 class="m-0"><i class="fas fa-heart"></i> Likes</h5></div>
-                    <div class="col-md-6">                <mat-form-field>
+                    <div class="col-md-5 pr-0">                <mat-form-field>
                     <input matInput type="number" [(ngModel)]="minlikes" placeholder="Min " name="er" class="example-right-align">
                 </mat-form-field>
             </div>
 
-            
-            <div class="col-md-6">
+            <div class="col-md-1 followers-profile p-0">
+                    <span>-</span>
+                </div>
+            <div class="col-md-6 pl-0">
                     <mat-form-field>
                         <input matInput type="number" [(ngModel)]="maxlikes" placeholder="Max " name="er2" class="example-right-align">
                     </mat-form-field>
                 </div>
             </div>
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 row text-center ">
+            <div class="col-md-6">
                 <button type="submit"  class="btn btn-primary" >
-                    Search <i class="fa fa-sliders"></i>
+                    Search 
                 </button>
+            </div>
+            <div class="col-md-6 ">
+                    <button type="submit"  class="btn btn-primary" >
+                        Clear 
+                    </button>
+                </div>
             </div>
         </div>
     </form>
@@ -110,7 +128,7 @@
                             <div class="col-md-6 text-center p-auto">
 
                                 <mat-form-field>
-                                      <mat-select placeholder="Select Category" [(ngModel)]="cat">
+                                      <mat-select placeholder="Search By Catagory" [(ngModel)]="cat">
                                         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                         {{option}}
                                       </mat-option>
@@ -139,7 +157,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                                    placeholder="Select Category" style="width:100%">
+                                                    placeholder="Search By Catagory" style="width:100%">
                                             <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                                         </mat-select>
                                     </div>
@@ -296,11 +314,11 @@
       
       
           
-                <div class="col-md-1 followers-division">
+                <div class="col-md-2 followers-division">
                         <h6 class="m-1">Likes:</h6>
                         <h3 class="Follwers-div" >{{item['likes'] | thousandSuff}}</h3>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-8">
                         <div class="d-flex">
                                 <img  class="social-icon2" src="../../assets/img/twitter.png">
                           <label class="tbl-cell tbl-cell-name">{{item['twitter_name']}}</label>
@@ -310,9 +328,9 @@
                 </div>
                 <div class="ml-4">
                 <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                <span class="right-item" ><i class="fab fa-twitter"></i>Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
+                <span class="right-item" ><i class="fab fa-twitter"></i></span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
                 <div>
-                <span class="right-item" ><i class="fas fa-globe"></i>Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+                <span class="right-item" ><i class="fas fa-globe"></i> </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
             </div>    
             </div>
                  <div class="row">
@@ -333,7 +351,7 @@
                         <span class="right-item"> <i class="fab fa-twitter" ></i>Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
                     </div>
                     <div>
-                        <span class="right-item"><i class="fa fa-upload" ></i>Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
+                        <span class="right-item"><i class="fa fa-upload" ></i>Date Joined :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                     </div>
                 </div>
                     <div class="col-md-4">
@@ -420,8 +438,8 @@
 
         <div class="container-fluid" *ngIf="!loaded && influencers_by_defalut.totalItems!=0">
 
-                <div class="row mt-3" id="myHeader">
-                        <div class="col-md-2">
+                <div class="row m-0 pl-0 pr-0 pt-2 pb-2" id="myHeader">
+                        <div class="col-md-2 p-0">
                             <!--<button  class="btn btn-success">Select All</button>-->
                             <div id="ck-button">
                                 <label>
@@ -433,12 +451,12 @@
                             <div class="col-md-8 text-center">
                                 
                 <div  *ngIf="!loaded" >
-                    <h4 class="m-0" >Featured Twitter Influencers</h4>
+                    <h3 class="m-0" >Featured Twitter Influencers</h3>
                 
                 
                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 p-0">
                             <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
                         </div>
                 
@@ -461,11 +479,11 @@
               
               
                   
-                        <div class="col-md-1 followers-division">
+                        <div class="col-md-2 followers-division">
                                 <h6 class="m-1">Likes:</h6>
                                 <h3 class="Follwers-div" >{{item['likes'] | thousandSuff}}</h3>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                                 <div class="d-flex">
                                         <img  class="social-icon2" src="../../assets/img/twitter.png">
                                   <label class="tbl-cell tbl-cell-name">{{item['twitter_name']}}</label>
@@ -475,9 +493,9 @@
                         </div>
                         <div class="ml-4">
                         <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
-                        <span class="right-item" ><i class="fab fa-twitter"></i>Profile Link: </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
+                        <span class="right-item" ><i class="fab fa-twitter"></i> </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
                         <div>
-                        <span class="right-item"><i class="fas fa-globe"></i>Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+                        <span class="right-item"><i class="fas fa-globe"></i> </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
                     </div>
                         </div>
                          <div class="row">
@@ -498,7 +516,7 @@
                                 <span class="right-item"> <i class="fab fa-twitter" ></i>Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
                             </div>
                             <div>
-                                <span class="right-item"><i class="fa fa-upload" ></i>Joined Date :</span> <span class="list-item1">{{item['joined_date']}}</span> 
+                                <span class="right-item"><i class="fa fa-upload" ></i>Date Joined :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                             </div>
                         </div>
                             <div class="col-md-4">
@@ -592,7 +610,7 @@
                             <ul style="display: flex; padding-top: 5px">
                                 <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
                                 <!--<li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tweets :</span> <span class="list-item1">{{item['tweets_count']}} |   </span></li>-->
-                                <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Joined Date :</span> <span class="list-item1">{{item['joined_date']}} |  </span> </li>
+                                <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Date Joined :</span> <span class="list-item1">{{item['joined_date']}} |  </span> </li>
                                 <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i>  Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span></li>
                                 <!--<li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>-->
 

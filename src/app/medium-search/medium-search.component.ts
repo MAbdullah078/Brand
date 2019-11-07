@@ -590,6 +590,14 @@ export class MediumSearchComponent implements OnInit {
 
 
     }
+    clearsearch(){
+        this.selected_category=null;
+        this.t_name=null;
+        this.minfollowers=null;
+        this.maxfollowers=null;
+        this.minfollowing=null;
+        this.maxfollowing=null;
+    }
 
 
 

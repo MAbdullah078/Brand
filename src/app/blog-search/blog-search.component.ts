@@ -24,7 +24,8 @@ export class BlogosphereSearchComponent implements OnInit, AfterViewInit {
     totalItems;ALEXA;
     sub;
     title;
-    moz;
+    moz;minmoz;maxmoz
+    minalexa;maxalexa;
     seo;
     feature_data;
     searchQuery;
@@ -511,8 +512,11 @@ export class BlogosphereSearchComponent implements OnInit, AfterViewInit {
 
         this.http.post(Config.api+'/blog/dd/' + this.selected_category + '/?page=' + page + '', {
             title: this.title,
-            moz_rank: this.moz,
-            seoData:this.seo,
+            moz_rankmax:this.minmoz,
+            moz_rankmin:this.maxmoz,
+            alexamin:this.minalexa,
+            alexamax:this.maxalexa
+
         }).subscribe(res => {
                 this.main_checkbox = false;
                 this.blogs = res.json();
@@ -524,6 +528,15 @@ export class BlogosphereSearchComponent implements OnInit, AfterViewInit {
 
             });
 
+
+    }
+    clearsearch(){
+        this.selected_category=null;
+        this.title=null;
+        this.minmoz=null;
+        this.maxmoz=null;
+        this.minalexa=null;
+        this.maxalexa=null;
 
     }
 

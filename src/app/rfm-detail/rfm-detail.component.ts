@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./rfm-detail.component.scss']
 })
 export class RfmDetailComponent implements OnInit {
-  rfm: any;
+  rfm: any;image;
   showrfm: any;
   sub: any;
   Catid:any=[];
