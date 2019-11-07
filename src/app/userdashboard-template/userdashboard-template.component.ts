@@ -116,180 +116,181 @@ export class UserdashboardTemplateComponent implements OnInit {
         window.scroll(0,0)
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-        this.get_lists(this.selected_choice);
+        // this.get_lists(this.selected_choice);
+        this.getTwLists(this.selected_choice);
     }
 
-    // Start Dashboard Web all API's Implements by Amjad
+    // // Start Dashboard Web all API's Implements by Amjad
 
-            //Function that add influencers in web lists.
-    select_add_influencers(id: number, name: string, dashboard) {
+    //         //Function that add influencers in web lists.
+    // select_add_influencers(id: number, name: string, dashboard) {
 
-        localStorage.setItem('selected_list', JSON.stringify({id: id, name: name}));
-        // this.router.navigate(['multi/search'],{queryParams: {name: 'web'}})
-        this.router.navigate(['multi/search']);
+    //     localStorage.setItem('selected_list', JSON.stringify({id: id, name: name}));
+    //     // this.router.navigate(['multi/search'],{queryParams: {name: 'web'}})
+    //     this.router.navigate(['multi/search']);
 
-    }
-            // Function that fo to current web lists where you can edit the list.
-    go_to_list(e: number, name: string, dashboard) {
-        this.router.navigate(['blogs/list/', e])
+    // }
+    //         // Function that fo to current web lists where you can edit the list.
+    // go_to_list(e: number, name: string, dashboard) {
+    //     this.router.navigate(['blogs/list/', e])
 
-    }
-            //Send Email to Influencer's
-    email_list(e: number, name: string, dashboard) {
-        // localStorage.setItem('navigated_list',JSON.stringify({id:e,name:name}));
-        // if (dashboard === 1) {
-        //
-        // } else if (dashboard === 2) {
-        //     this.router.navigate(['email/settings/', e])
-        //
-        // } else if (dashboard === 6) {
-        this.router.navigate(['email/settings/', e])
-        //
-        // }
-    }
-        //Delete any Web list by clicking pencil Icons
-    delete_list(id: number) {
+    // }
+    //         //Send Email to Influencer's
+    // email_list(e: number, name: string, dashboard) {
+    //     // localStorage.setItem('navigated_list',JSON.stringify({id:e,name:name}));
+    //     // if (dashboard === 1) {
+    //     //
+    //     // } else if (dashboard === 2) {
+    //     //     this.router.navigate(['email/settings/', e])
+    //     //
+    //     // } else if (dashboard === 6) {
+    //     this.router.navigate(['email/settings/', e])
+    //     //
+    //     // }
+    // }
+    //     //Delete any Web list by clicking pencil Icons
+    // delete_list(id: number) {
 
-        let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
-        headers.append('Content-Type', 'application/json');
-        let myhttp = this.http;
-        Swal.fire({
-            // title: 'Are you sure?',
-            title: 'Deleted',
-            // text: 'You will not be able to recover this list!',
-            text: 'List has been deleted successfully',
-            // type: 'warning',
-            // showCancelButton: true,
-            // confirmButtonText: 'Yes, delete it!',
-            // cancelButtonText: 'No, keep it'
-        }).then(() => {
+    //     let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
+    //     headers.append('Content-Type', 'application/json');
+    //     let myhttp = this.http;
+    //     Swal.fire({
+    //         // title: 'Are you sure?',
+    //         title: 'Deleted',
+    //         // text: 'You will not be able to recover this list!',
+    //         text: 'List has been deleted successfully',
+    //         // type: 'warning',
+    //         // showCancelButton: true,
+    //         // confirmButtonText: 'Yes, delete it!',
+    //         // cancelButtonText: 'No, keep it'
+    //     }).then(() => {
 
-            myhttp.delete(Config.api + '/delete_ilist/' + id,
-                {headers: headers}).map((response: Response) => response.json()).subscribe(
-                data => {
-                    this.get_lists(this.selected_choice);
+    //         myhttp.delete(Config.api + '/delete_ilist/' + id,
+    //             {headers: headers}).map((response: Response) => response.json()).subscribe(
+    //             data => {
+    //                 this.get_lists(this.selected_choice);
 
-                    // Swal.fire(
-                    //     'List Deleted!',
-                    //     '',
-                    //     'success'
-                    // )
+    //                 // Swal.fire(
+    //                 //     'List Deleted!',
+    //                 //     '',
+    //                 //     'success'
+    //                 // )
 
-                },
-                error => {
-                    // alert('error')
-                    Swal.fire(
-                        'Try again after some time!',
-                        // error.toString(),
-                        'error'
-                    )
-                });
-        }, function (dismiss) {
-            // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
-            if (dismiss === 'cancel') {
-                Swal.fire(
-                    'Cancelled',
-                    'Your list is not deleted :)',
-                    'error'
-                )
-            }
-        })
+    //             },
+    //             error => {
+    //                 // alert('error')
+    //                 Swal.fire(
+    //                     'Try again after some time!',
+    //                     // error.toString(),
+    //                     'error'
+    //                 )
+    //             });
+    //     }, function (dismiss) {
+    //         // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+    //         if (dismiss === 'cancel') {
+    //             Swal.fire(
+    //                 'Cancelled',
+    //                 'Your list is not deleted :)',
+    //                 'error'
+    //             )
+    //         }
+    //     })
 
 
-    }
+    // }
 
     //Sort Lists of web
-    sort_lists() {
-        this.get_lists(this.selected_choice);
-    }
+    // sort_lists() {
+    //     this.get_lists(this.selected_choice);
+    // }
        // Create New Lists of Web
-    create_empty_list() {
+    // create_empty_list() {
 
-        Swal.fire({
-            title: 'Enter the name of list',
-            text: 'New list will be created',
-            type: 'question',
-            input: 'text',
-            preConfirm: (result) => {
-                return new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        if (result === '') {
-                            reject('List name cannot be empty')
-                        } else if (result.length > 30) {
-                            reject('Length of list name cannot be greater than 30')
-                        }
-                        else {
-                            let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
-                            headers.append('Content-Type', 'application/json');
+    //     Swal.fire({
+    //         title: 'Enter the name of list',
+    //         text: 'New list will be created',
+    //         type: 'question',
+    //         input: 'text',
+    //         preConfirm: (result) => {
+    //             return new Promise((resolve, reject) => {
+    //                 setTimeout(() => {
+    //                     if (result === '') {
+    //                         reject('List name cannot be empty')
+    //                     } else if (result.length > 30) {
+    //                         reject('Length of list name cannot be greater than 30')
+    //                     }
+    //                     else {
+    //                         let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
+    //                         headers.append('Content-Type', 'application/json');
 
-                            this.http.post(Config.api + '/check_ilist/', JSON.stringify({
-                                    name: result,
-                                    username: this.currentUser.username
-                                }),
-                                {headers: headers}).map((response: Response) => response.json()).subscribe(
-                                data => {
-                                    resolve()
+    //                         this.http.post(Config.api + '/check_ilist/', JSON.stringify({
+    //                                 name: result,
+    //                                 username: this.currentUser.username
+    //                             }),
+    //                             {headers: headers}).map((response: Response) => response.json()).subscribe(
+    //                             data => {
+    //                                 resolve()
 
-                                },
-                                error => {
-                                    if(error.status===406){
-                                        Swal.fire("List Already Exist")
-                                    }
-                                    // reject('List named "' + result + '" already exists')
+    //                             },
+    //                             error => {
+    //                                 if(error.status===406){
+    //                                     Swal.fire("List Already Exist")
+    //                                 }
+    //                                 // reject('List named "' + result + '" already exists')
 
-                                });
-                        }
-                    }, )
-                }
+    //                             });
+    //                     }
+    //                 }, )
+    //             }
 
 
 
-                )
-            },
-            showCancelButton: true,
-            confirmButtonText: 'Create',
-            cancelButtonText: 'Cancel'
-        }).then((result) => {
-        // //alert(result.value);
-            let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
-            headers.append('Content-Type', 'application/json');
+    //             )
+    //         },
+    //         showCancelButton: true,
+    //         confirmButtonText: 'Create',
+    //         cancelButtonText: 'Cancel'
+    //     }).then((result) => {
+    //     // //alert(result.value);
+    //         let headers = new Headers({'Authorization': 'JWT ' + this.currentUser['token']});
+    //         headers.append('Content-Type', 'application/json');
 
-            this.http.post(Config.api + '/create_add_ilist/', JSON.stringify({
-                    name: result.value,
-                    list: {},
-                    username: this.currentUser.username
-                }),
-                {headers: headers}).map((response: Response) => response.json()).subscribe(
-                data => {
-                    this.get_lists(this.selected_choice);
-                    Swal.fire(
-                        'List created!',
-                        result.value(),
-                        'success'
-                    )
-                    console.log('Result is..................', result.value);
+    //         this.http.post(Config.api + '/create_add_ilist/', JSON.stringify({
+    //                 name: result.value,
+    //                 list: {},
+    //                 username: this.currentUser.username
+    //             }),
+    //             {headers: headers}).map((response: Response) => response.json()).subscribe(
+    //             data => {
+    //                 this.get_lists(this.selected_choice);
+    //                 Swal.fire(
+    //                     'List created!',
+    //                     result.value(),
+    //                     'success'
+    //                 )
+    //                 console.log('Result is..................', result.value);
 
-                },
-                // error => {
-                //     Swal.fire(
-                //         'Try again after some time!',
-                //         error.toString(),
-                //         'error'
-                //     )
-                // }
-                );
+    //             },
+    //             // error => {
+    //             //     Swal.fire(
+    //             //         'Try again after some time!',
+    //             //         error.toString(),
+    //             //         'error'
+    //             //     )
+    //             // }
+    //             );
 
-        }, function (dismiss) {
-            // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
-            if (dismiss === 'cancel') {
-                Swal.fire(
-                    'Cancelled',
-                    'No list created :)',
-                    'success'
-                )
-            }
-        })
-    }
+    //     }, function (dismiss) {
+    //         // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+    //         if (dismiss === 'cancel') {
+    //             Swal.fire(
+    //                 'Cancelled',
+    //                 'No list created :)',
+    //                 'success'
+    //             )
+    //         }
+    //     })
+    // }
 
                         //Start Twitter all API's Implements by Amjad
 
@@ -1717,35 +1718,37 @@ export class UserdashboardTemplateComponent implements OnInit {
             });
     }
     selectedIndexChange(e) {
-        if (e === 0) {
-            this.get_lists('-id')
-        } else if (e === 1) {
+        // if (e === 0) {
+        //     this.get_lists('-id')
+        // }
+        //  else 
+         if (e === 0) {
             this.loadTwitterLists('-id');
-        } else if (e === 2) {
+        } else if (e === 1) {
             this.get_lists_dd('-id');
 
-        } else if (e === 3) {
+        } else if (e === 2) {
             this.get_lists_yt('-id');
 
-        } else if (e === 4) {
+        } else if (e === 3) {
             this.get_lists_in('-id');
-        } else if (e === 5 ) {
+        } else if (e === 4) {
             this.get_list_fb('-id');
         }
         // else if(e===6){
         //     this.get_list_lnkd('-id');
         // }
-        else if(e===6){
+        else if(e===5){
             this.get_list_pinterest('-id');
         }
-        else if(e===7){
+        else if(e===6){
             this.get_list_peri('-id');
         }
 
-        else if(e===8){
+        else if(e===7){
             this.get_list_med('-id');
         }
-        else if(e===9){
+        else if(e===8){
             this.get_list_flkr('-id');
         }
     }
