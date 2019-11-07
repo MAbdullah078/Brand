@@ -41,16 +41,16 @@ pricingimage(){
     return this.http.get('https://apis.rfpgurus.com/super/pricing_images/');
 }
     // this.isright,this.model.cardNumber, this.model.expirationdate,this.model.cardcod,this.var_get_id,this.data.course_id,this.model.cardtype,this.model.holdername,this.pkg_detail['type'],this.pkg_detail['dur']
-    package_free(isright, cardNumber, expirationdate, cardcod, var_get_id, cardtype, holdername, pkg_type, pkg_dur, promocode) {
+    package_free(isright, cardNumber, expirationdate, cardcod, var_get_id, cardtype, holdername, pkg_type, pkg_dur,) {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');     
         headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-        return this._https.post("https://apis.com/package/",
+        return this._https.post("https://apis.influexpai.com/payment/subscription_activation/",
             JSON.stringify({
                 "id": cardNumber,
                 "pricepackage": pkg_type,
                 "duration": pkg_dur,
-                "code" : promocode
+                
             }), { headers: headers }).map((data: Response) => data.json());
         
     }
@@ -62,7 +62,7 @@ pricingimage(){
         let headers = new Headers();
             headers.append('Content-Type', 'application/json');
             headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-          return this._https.post('https://apis.com/payment/cardInfo_web/',
+          return this._https.post('https://apis.influexpai.com/payment/cardinfo/',
           JSON.stringify({
             "name": name,
             "street_address": address,
@@ -135,7 +135,7 @@ pricingimage(){
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');     
         headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
-        return this._https.post("https://apis.com/free_Trail/",
+        return this._https.post("https://apis.influexpai.com/payment/free_Trail/",
             JSON.stringify({
                 "package_detail": pkg_type,
                 "card_info": cardNumber,
