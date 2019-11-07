@@ -728,7 +728,7 @@ export class PricingComponent implements OnInit {
     
                     this.model.defaultcard = Data.id
                     if (Data.id) {
-                      this._serv.package_free(this.isright, this.model.defaultcard, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'], this.promocode).subscribe(
+                      this._serv.package_free(this.isright, this.model.defaultcard, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur']).subscribe(
                         data => {
                           swal.fire(
                             'Your payment has been transferred',
@@ -833,7 +833,7 @@ export class PricingComponent implements OnInit {
             })
           }
           } else if (this.isright == false) {
-            this._serv.package_free(this.isright, this.eachcardid, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur'],  this.promocode).subscribe(
+            this._serv.package_free(this.isright, this.eachcardid, this.model.expirationdate, this.model.cardcod, this.var_get_id, this.model.cardtype, this.model.holdername, this.pkg_detail['type'], this.pkg_detail['dur']).subscribe(
               data => {
                 swal.fire(
                   'Your payment has been transferred',

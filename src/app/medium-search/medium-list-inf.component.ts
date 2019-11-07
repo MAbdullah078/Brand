@@ -112,7 +112,7 @@ export class MediumListInfComponent implements OnInit{
             title: this.listName,
             type: 'question',
             text: 'Selected Influencers will be deleted',
-            showCancelButton: true,
+            //showCancelButton: true,
             confirmButtonText: 'Update',
             preConfirm: function () {
                 return new Promise(function (resolve, reject) {

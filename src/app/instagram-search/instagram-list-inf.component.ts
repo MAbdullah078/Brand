@@ -106,7 +106,7 @@ export class InstagramListInfComponent implements OnInit, AfterViewInit, OnDestr
             title: this.list_name,
             text: 'Selected influencers in this list will be deleted!',
             type: 'question',
-            showCancelButton: true,
+            //showCancelButton: true,
             confirmButtonText: 'Update',
             preConfirm: function () {
                 return new Promise(function (resolve, reject) {
@@ -259,7 +259,7 @@ export class InstagramListInfComponent implements OnInit, AfterViewInit, OnDestr
                 text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
-                showCancelButton: true,
+                //showCancelButton: true,
 
             }).then(() => {
 
@@ -287,7 +287,7 @@ export class InstagramListInfComponent implements OnInit, AfterViewInit, OnDestr
                 text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
                 // html: true,
                 confirmButtonColor: '#2ecc71',
-                showCancelButton: true,
+                //showCancelButton: true,
 
             }).then(() => {
 

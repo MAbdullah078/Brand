@@ -573,16 +573,13 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
         // this.http.get(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {headers:headers}, 'full')
         this.http.post(Config.api+'/ml/get_instagram_users/' + this.selected_category + '/?page=' + page + '', {
             name: this.name,
-            following: this.following,
             followingmin: this.minfollowing,
             followingmax: this.maxfollowing,
-            follower:this.follower,
             followermin:this.minfollower,
             followermax:this.maxfollower,
             account_rank:this.account_rank,
             account_rankmin:this.minaccount_rank,
             account_rankmax:this.maxaccount_rank,
-            posts:this.post,
             postsmin:this.minpost,
             postsmax:this.maxpost,
         },{headers:headers})
@@ -595,6 +592,19 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
             });
 
 
+    }
+
+    clearsearch(){
+        this.selected_category=null;
+        this.minaccount_rank=null;
+        this.maxaccount_rank=null;
+        this.minfollowing=null;
+        this.maxfollowing=null;
+        this.minpost=null;
+        this.maxpost=null;
+        this.minfollower=null;
+        this.maxfollower=null;
+        this.name=null;
     }
     setPageQuery(page: number, query:string) {
         if (page < 1 || page > this.pager.totalPages) {

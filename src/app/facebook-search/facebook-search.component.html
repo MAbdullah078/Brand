@@ -10,7 +10,7 @@
                                 </div>
                                     <div class="col-md-12">
                                             <mat-select class="mt-3 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                                       placeholder="Select Category" style="width:100%!important">
+                                                       placeholder="Search By Catagory" style="width:100%!important">
                                                 <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                                             </mat-select>
                                     </div>
@@ -249,14 +249,15 @@
                                                         <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
                                                         <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                                                         </div>
-                                                        <label class="item-loc ml-4" (click)="goToLink(item['web_link'])"><i class="fas fa-globe"></i>Web Link: {{item['web_link']}}</label>
-                                                    
+                                                        <!-- <label class="item-loc ml-4" (click)="goToLink(item['web_link'])"><i class="fas fa-globe"></i>Web Link: {{item['web_link']}}</label> -->
+                                                        <label class="item-loc ml-4" (click)="goToLink(item['web_link'])"><i class="fas fa-globe"></i>{{item['web_link']}}</label>
+
                                                         <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="ml-4">
                                                                 <!-- <span class="list-item1" ><i class="fas fa-globe" (click)="goToLink(item['fb_page_link'])"></i>{{['fb_page_link']}}</span> -->
-                                                                <span class="list-item1" (click)="goToLink(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>FB Profile Link: {{item['fb_page_link']}}</span>
-                                                               
+                                                                <span class="list-item1" (click)="goToLink(item['fb_page_link'])"><i class="fab fa-facebook-square"></i> {{item['fb_page_link']}}</span>
+                                                                <!-- <span class="list-item1" (click)="goToLink(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>FB Profile Link: {{item['fb_page_link']}}</span> -->
                             
                                                                 </div>
                                                                 <div class="ml-4">
@@ -276,7 +277,7 @@
                                                     </div> -->
                                                     <div class="col-md-6">
                                                         <div>
-                                                    <span class="right-item"> <i class="fas fa-phone-alt"></i>Phone:</span> <span class="list-item1">{{item['phone']}} </span>
+                                                    <span class="right-item"> <i class="fas fa-phone-alt"></i></span> <span class="list-item1">{{item['phone']}} </span>
                                                     <span class="right-item ml-5"><i class="fas fa-chart-bar "></i> Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
                                                 </div>
                                                 <div>
@@ -319,6 +320,8 @@
                                               
                                             </div>
                                         </div>
+
+                                        <!-- Top Influencers in this div section -->
                                 
                                          <div class="profile-container" *ngFor="let item of influencers_by_default_FB.results" >
                                             <div class="row p-0 m-0">
@@ -355,13 +358,13 @@
                                                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
                                                             <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                                                             </div>
-                                                            <span class="item-loc ml-4" (click)="goToLink(item['web_link'])"><i class="fas fa-globe"></i>Web Link: {{item['web_link']}}</span>
+                                                            <span class="item-loc ml-4" (click)="goToLink(item['web_link'])"><i class="fas fa-globe"></i>{{item['web_link']}}</span>
                                                         
                                                             <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="ml-4">
                                                                     <!-- <span class="list-item1" ><i class="fas fa-globe" (click)="goToLink(item['fb_page_link'])"></i>{{['fb_page_link']}}</span> -->
-                                                                    <span class="list-item1" (click)="goToLink(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>Profile {{item['fb_page_link']}}</span>
+                                                                    <span class="list-item1" (click)="goToLink(item['fb_page_link'])"><i class="fab fa-facebook-square"></i>{{item['fb_page_link']}}</span>
                                                                  
                                 
                                                                     </div>
@@ -371,7 +374,7 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div>
-                                                        <span class="right-item"> <i class="fas fa-phone-alt"></i>Phone:</span> <span class="list-item1">{{item['phone']}} </span>
+                                                        <span class="right-item"> <i class="fas fa-phone-alt"></i></span> <span class="list-item1">{{item['phone']}} </span>
                                                         <span class="right-item ml-5"><i class="fas fa-chart-bar "></i>Like Ranks:</span> <span class="list-item1">{{item['LikeRank']}}</span>
                                                     </div>
                                                     <div>

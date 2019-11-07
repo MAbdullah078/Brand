@@ -265,6 +265,18 @@ export class TwitterSearchComponent implements OnInit {
 
 
     }
+    clearsearch(){
+        this.selected_category=null;
+        this.user_name=null;
+        this.tw_name=null;
+        this.location=null;
+        this.minfollowers=null;
+        this.maxfollowers=null;
+        this.minfollowing=null;
+        this.maxfollowing=null;
+        this.minlikes=null;
+        this.maxlikes=null;
+    }
 
     custom_filter(v) {
         console.clear();
