@@ -5,8 +5,11 @@
 
                     <form (submit)="setPage(1)" class=" m-0 sidebar-forms">
                             <div class="row m-0">
+                                <div class="col-md-12 p-0">
+                                    <div class="mt-4 heading-div"><img src="../../assets/header-images/Fb@1x-.png"><span class="facebook-influencer">Facebook Influencers</span></div>
+                                </div>
                                     <div class="col-md-12">
-                                            <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
+                                            <mat-select class="mt-3 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
                                                        placeholder="Select Category" style="width:100%!important">
                                                 <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                                             </mat-select>
@@ -26,14 +29,16 @@
                                  
                                     <!-- <mat-label>Search by Likes:</mat-label> -->
                                     <div class="col-md-12"><h5 class="m-0"><i class="fa fa-heart"></i> Likes</h5></div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5 pr-0">
                                     <mat-form-field>
                                         <!-- <input matInput type="text" [(ngModel)]="minlikes" placeholder="Min Likes" name="social"> -->
                                         <input matInput placeholder="Min" type="number"  name="social" [(ngModel)]="minlikes" class="example-right-align" >
                                     </mat-form-field>
                                 </div>
-                                
-                                <div class="col-md-6">
+                                <div class="col-md-1 p-0 followers-division">                                <span >-</span>
+                                </div>
+
+                                <div class="col-md-6 pl-0">
                                     <mat-form-field>
                                         <!-- <input matInput type="text" [(ngModel)]="maxlikes" placeholder="Max Likes" name="social2"> -->
                                         <input matInput placeholder="Max" type="number"  name="social2" [(ngModel)]="maxlikes" class="example-right-align" >
@@ -42,7 +47,7 @@
                             </div>
                                 <div class="col-md-12 row">
                                         <div class="col-md-12"><h5 class="m-0"><i class="fa fa-barcode"></i> Perfomance</h5></div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-5 pr-0">
                                     <mat-form-field>
                                         <!-- <input matInput type="text" [(ngModel)]="minperfomance" placeholder="Min Perfomance" name="seo"> -->
 
@@ -51,10 +56,11 @@
                                     </mat-form-field>
                                 </div>
                                
+                                <div class="col-md-1 p-0 followers-division">                                <span >-</span>
+                                </div>
 
 
-
-                                <div class="col-md-6">
+                                <div class="col-md-6 pl-0">
                                     <mat-form-field>
                                         <!-- <input matInput type="text" [(ngModel)]="maxperfomance" placeholder="Max Perfomance" name="seo2"> -->
                                         <input matInput placeholder="Max" type="number"  name="seo2" [(ngModel)]="maxperfomance" class="example-right-align" >
@@ -66,7 +72,7 @@
                                 <div class="col-md-12 row">
                                         <div class="col-md-12"><h5 class="m-0"><i class="fas fa-sliders-h"></i> Engagement Rate</h5></div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-5 pr-0">
                                     <mat-form-field>
                                         <!-- <input matInput type="text" [(ngModel)]="minER" placeholder="Min Engagement Range" name="er"> -->
 
@@ -75,8 +81,9 @@
                                         <input matInput placeholder="Min" type="number"  name="er" [(ngModel)]="minER" class="example-right-align" >
                                     </mat-form-field>
                                 </div>
-                                
-                                <div class="col-md-6">
+                                <div class="col-md-1 p-0 followers-division">                                <span >-</span>
+                                </div>
+                                <div class="col-md-6 pl-0">
                                     <mat-form-field>
                                         <!-- <input matInput type="text" [(ngModel)]="maxER" placeholder="Max Engagement Range" name="er2"> -->
 
@@ -85,10 +92,17 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-                                <div class="col-md-12 text-center">
+                                <div class="col-md-12 row text-center">
+                                    <div class="col-md-6">
                                     <button type="submit"  class="btn btn-primary" >
-                                        Search <i class="fa fa-sliders"></i>
+                                        Search 
                                     </button>
+                                </div>
+                                <div class="col-md-6">
+                                        <button type="submit"  class="btn btn-primary" >
+                                                Clear 
+                                            </button>
+                                </div>
                                 </div>
                             </div>
                         
@@ -99,110 +113,7 @@
                     <div class="page-content">
 
                             <div class="row m-0">
-                                <div class="col-sm-12 ">
-                                    <!-- <mat-tab-group >
-                    
-                    
-                                        <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
-                                            <ng-template mat-tab-label style="background: black">
-                                              <span class="nav-link-in">
-                                        <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                                        Category Search
-                                                        </span>
-                                            </ng-template>
-                                            <div class="body">
-                    
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <h6 class="influencer-hading" > Facebook Influencers</h6>
-                                                    </div>
-                    
-                                                    <div class="col-md-6 text-center p-auto"  >
-                    
-
-                    
-                                                        <mat-form-field>
-                                                                  <mat-select placeholder="Select Category" [(ngModel)]="cat">
-                                                                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                                                                    {{option}}
-                                                                  </mat-option>
-                                                                </mat-select>
-                                                              </mat-form-field>
-                    
-                                                    </div>
-                                                    <div class="col-md-12 text-center">
-                                                            <button type="submit"  class="btn btn-primary" (click)="getFbData()">
-                                                                Search <i class="fa fa-sliders"></i>
-                                                            </button>
-                                                        </div>
-                                                </div>
-                    
-                                            </div>
-                                        </mat-tab>
-                                        <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
-                                            <ng-template mat-tab-label style="background: white">
-                                              <span class="nav-link-in">
-                                                            <i class="fa fa-fire"></i>
-                                                        Advanced Search
-                                                        </span>
-                                            </ng-template>
-                                            <div class="body">
-                                                <div class="container">
-                                                    <form (submit)="setPage(1)" class=" m-0 social-forms">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                                <mat-select class="mt-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                                                           placeholder="Select Category" style="width:100%">
-                                                                    <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
-                                                                </mat-select>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <mat-form-field>
-                                                                <input matInput type="text"[(ngModel)]="title" placeholder="Search by Title/Name" name="contact">
-                                                            </mat-form-field>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row Advanced-Search">
-                                                        <div class="col-md-6">
-                                                            <mat-form-field>
-                                                                <input matInput type="text" [(ngModel)]="likes" placeholder="Search by Likes" name="social">
-                                                            </mat-form-field>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <mat-form-field>
-                                                                <input matInput type="text" [(ngModel)]="perfomance" placeholder="Search by Perfomance" name="seo">
-                                                            </mat-form-field>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row Advanced-Search">
-                                                        <div class="col-md-6">
-                                                            <mat-form-field>
-                                                                <input matInput type="text" [(ngModel)]="location" placeholder="Search by Location" name="loc">
-                                                            </mat-form-field>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <mat-form-field>
-                                                                <input matInput type="text" [(ngModel)]="ER" placeholder="Search by Engagement Range" name="er">
-                                                            </mat-form-field>
-                                                        </div>
-                                                    </div>
-                    
-                                                    <div class="row" >
-                                                        <div class="col-md-12 text-center">
-                                                            <button type="submit"  class="btn btn-primary" >
-                                                                Search <i class="fa fa-sliders"></i>
-                                                            </button>
-                                                        </div>
-                    
-                                                    </div>
-                                                    </form>
-                                                </div>
-                    
-                                            </div>
-                    
-                                        </mat-tab>
-                                    </mat-tab-group> -->
-                                </div>
+                                
                                 <div class="col-sm-12" *ngIf="loaded && fbinfluencers.totalItems===0">
                                         <div class="box-typical box-typical-full-height" style="min-height: 115px">
                                           <div class="add-customers-screen tbl" style="height: 119px">
@@ -216,8 +127,8 @@
                                           </div>
                                         </div>
                              </div>
-                             <div class="container-fluid" *ngIf="loaded && fbinfluencers.totalItems!=0">
-                                    <div class="row p-2" id="myHeader" style="margin-top: 1%">
+                             <div class="col-sm-12" *ngIf="loaded && fbinfluencers.totalItems!=0">
+                                    <div class="row p-2 m-0" id="myHeader" style="margin-top: 1%">
                                         <div class="col-md-2">
                         
                                                 <div id="ck-button">
@@ -320,7 +231,7 @@
                                 </div> -->
                                 <img [src]="item['image_url']"  class="twitter-image">
                             </div>
-                                            <div class="col-md-1 followers-division">
+                                            <div class="col-md-2 followers-division">
                                                 <!-- <div class="row">
                                                     <label class="tbl-cell tbl-cell-name">
                                                     <img src="../../assets/homepage/images/facebook_24.png">
@@ -332,7 +243,7 @@
                                                     <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                                                 </div>
                                             </div>
-                                                    <div class="col-md-9">
+                                                    <div class="col-md-8">
                                                         <div class="title-name">
                                                                 <i class="fab fa-facebook"></i>
                                                         <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
@@ -381,11 +292,11 @@
                             
                                             </div>
                                 </div>
-                                <div class="container-fluid" *ngIf="!loaded">
+                                <div class="col-sm-12" *ngIf="!loaded">
 
                                         <div class="row m-0" id="myHeader">
-                                            <div class="col-md-12 mt-3">
-                                                <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="row pl-0 pr-0 pt-2 pb-2">
                                                   <div class="col-md-2 p-0">
                                                         <div id="ck-button">
                                                             <label>
@@ -397,11 +308,11 @@
                                                       <div class="col-md-8">
                                                             <div  *ngIf="!loaded">
                                                                     <div class="col-md-12 text-left">
-                                                                        <h4 class="text-center m-0">Featured Top Facebook Influencers</h4>
+                                                                        <h3 class="text-center m-0">Featured Top Facebook Influencers</h3>
                                                                     </div>
                                                       </div>
                                                       </div>
-                                                      <div class="col-md-2">
+                                                      <div class="col-md-2 p-0">
                                                         <button  class="btn  add-to-list" (click)="add_create_list()"> Add to list</button>
                                                     </div>
                                                     
@@ -426,19 +337,19 @@
                             
                                     <img [src]="item['image_url']"  class="twitter-image">
                                 </div>
-                                                <div class="col-md-1 followers-division">
+                                                <div class="col-md-2 followers-division">
                                                     <!-- <div class="row">
                                                         <label class="Featured Top Facebook Influencers-cell tbl-cell-name">
                                                         <img src="../../assets/homepage/images/facebook_24.png">
                                                             {{item['title']}}
                                                         </label>
                                                     </div> -->
-                                                    <div>
+                                                   
                                                             <h6 class="m-0">Likes:</h6>
                                                         <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
-                                                    </div>
+                                                    
                                                 </div>
-                                                        <div class="col-md-9 p-2">
+                                                        <div class="col-md-8 p-2">
                                                             <div class="title-name">
                                                            <img  class="social-icon2"  src="../../assets/img/facebook.png">
                                                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
@@ -477,7 +388,7 @@
                                             </div> 
                                         
                                         </div>
-                                    <div class="container-fluid" *ngIf="loaded && fbinfluencers.totalItems!=0">
+                                    <div class="col-sm-12" *ngIf="loaded && fbinfluencers.totalItems!=0">
                                 
                                         <div class="row m-0" id="myHeader">
                                             <div class="col-md-12 list-row">

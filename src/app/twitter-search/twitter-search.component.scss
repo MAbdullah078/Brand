@@ -248,13 +248,6 @@ i{
   align-items: center;
   margin:0!important
 }
-.followers-profile{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 168px;
-}
 .progress-url{
   margin: 0;
   list-style: none;
@@ -338,7 +331,7 @@ mat-tab-header{
 
   color: #6a6794;
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto,sans-serif;
 }
 .title-name img{
   width: 40px
@@ -347,4 +340,11 @@ mat-tab-header{
   color: #0a6aa1;
   font-weight: 700;
   font-size: 11px;
+}
+.facebook-influencer{
+  font-size: 14px;
+font-weight: 600;
+color: #1da5de;
+margin-left: 3px;
+
 }

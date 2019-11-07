@@ -95,9 +95,10 @@
             </div>
 
             <div id="search">
-                <div class="searsh-box">
+                <div class="searsh-box container">
                     <button type="button" class="close">×</button>
-                    <form #myform> <input #searchvalue1 type="search" value="" placeholder="Search to influence with Roar!">
+                    <form #myform id="myform"> <input #searchvalue1 type="search" value="" placeholder="Search to influence with Roar!"  >
+                        <i class="fa fa-microphone" id="box"></i>
                         <button type="submit" class="close"  style=" position: absolute; display:  none"
                         (click)="find1(searchvalue1.value)">Search</button>
                     </form>
