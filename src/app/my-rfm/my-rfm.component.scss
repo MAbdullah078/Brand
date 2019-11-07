@@ -16,16 +16,38 @@
       }
     }
     .box {
-      height: 72px;
+      height: 72px; 
       overflow: hidden;
     }
+    .text {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 18px;
+      @supports (-webkit-line-clamp: 2) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    // .box p {
+    //   display            : block;
+    //   display            : -webkit-box;
+    //   -webkit-box-orient : vertical;
+    //   position           : relative;
     
-    .box p {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;  
-      overflow: hidden;
-    }
+    //   line-height        : 1.2;
+    //   overflow           : hidden;
+    //   text-overflow      : ellipsis;
+    //   padding            : 0 !important;
+    // }
+    // .line-clamp-3 {
+    //   -webkit-line-clamp: 3;
+    //   height: calc(1em * 1.2 * 3);
+    // }
   }
   .font-12{
     font-size: 12px;

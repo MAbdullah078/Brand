@@ -14030,7 +14030,9 @@ body:not(.device-touch) .tagcloud a {
 .table .danger {
   color: #a94442;
 }
-
+.btn:focus{
+  outline: none;
+}
 .btn-link,
 .pagination > li > a,
 .pagination > li > a:focus,

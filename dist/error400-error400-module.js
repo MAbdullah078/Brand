@@ -18,7 +18,7 @@ module.exports = "body,html{height:100%}body{display:flex;align-items:center;jus
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page-error-box\">\r\n  <div class=\"error-code\">404</div>\r\n  <div class=\"error-title\">Page not found</div>\r\n  <a [routerLink]=\"['/dashboard']\" class=\"btn btn-rounded\">Main page</a>\r\n</div>"
+module.exports = "<div class=\"page-error-box\">\n  <div class=\"error-code\">404</div>\n  <div class=\"error-title\">Page not found</div>\n  <a [routerLink]=\"['/dashboard']\" class=\"btn btn-rounded\">Main page</a>\n</div>"
 
 /***/ }),
 
