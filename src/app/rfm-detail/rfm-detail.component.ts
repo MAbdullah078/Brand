@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-rfm-detail',
   templateUrl: './rfm-detail.component.html',
-  styleUrls: ['./rfm-detail.component.css']
+  styleUrls: ['./rfm-detail.component.scss']
 })
 export class RfmDetailComponent implements OnInit {
   rfm: any;

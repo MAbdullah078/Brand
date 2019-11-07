@@ -32,7 +32,7 @@ export class PricingService {
       return this._https.get('https://apis.influexpai.com/payment/deactivate_trail/', {headers:headers}).map((response: Response) => response.json());
     }
     trialHistory() {
-      return this.http.get('https://apis.influexpai.com/payment/trail_history/');
+      return this.http.get('https://apis.rfpgurus.com/trail_history/');
     }
     gettimer(){
         return this._https.get('https://apis.rfpgurus.com/super/timer_for_sale/')

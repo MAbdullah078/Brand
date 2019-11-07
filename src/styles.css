@@ -14030,7 +14030,9 @@ body:not(.device-touch) .tagcloud a {
 .table .danger {
   color: #a94442;
 }
-
+.btn:focus{
+  outline: none;
+}
 .btn-link,
 .pagination > li > a,
 .pagination > li > a:focus,
@@ -31662,8 +31664,8 @@ body:not(.no-transition) #wrapper {
 .btn-primary {
   font-size: 16px!important;
     font-weight: 400!important;
-  background: -webkit-gradient(linear,left top,right top,color-stop(0,#a91f73),to(#ff4270));
-  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+
+  background: #000;
   border: none;
   padding: 6px 20px;
   box-shadow: 0 5px 5px #ccc;
