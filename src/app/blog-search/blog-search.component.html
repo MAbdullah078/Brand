@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatNameblog($event)"
-                            placeholder="Select Category" style="width:100%!important">
+                            placeholder="Search by Category" style="width:100%!important">
                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                         {{ option }}
                     </mat-option>                                            </mat-select>
@@ -14,20 +14,29 @@
                     <input matInput type="text"[(ngModel)]="title" placeholder="Search by Title/Name" name="contact">
                 </mat-form-field>
             </div>
-       
-
-
-
+                  
             <div class="col-md-12">
+                <mat-label>Search by Moz Rank</mat-label>
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="moz" placeholder="Search by Moz Rank" name="er">
+                    <input matInput type="text" [(ngModel)]="minmoz" placeholder="Min" name="er">
                 </mat-form-field>
             </div>
             <div class="col-md-12">
                 <mat-form-field>
-                    <input matInput type="text" [(ngModel)]="seo" placeholder="Search by Alexa Rank" name="er">
+                    <input matInput type="text" [(ngModel)]="maxmoz" placeholder="Max" name="er2">
                 </mat-form-field>
             </div>
+            <div class="col-md-12">
+                    <mat-label>Search by Alexa Rank</mat-label>
+                    <mat-form-field>
+                        <input matInput type="text" [(ngModel)]="minalexa" placeholder="Min" name="loc">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                    <mat-form-field>
+                        <input matInput type="text" [(ngModel)]="maxalexa" placeholder="Max" name="loc2">
+                    </mat-form-field>
+                </div>
         
 
             <div class="col-md-12  text-center">
@@ -658,7 +667,7 @@
                             <div>
                                     <label class="item-content ml-4">{{item['description']}}</label>
                             <div>
-                                    <label class="item-loc ml-4"> <i class="fas fa-phone-alt"></i>Blog Link:  <a (click)="gotoblog(item['main_url'])">{{item['main_url']}}</a></label>
+                                    <label class="item-loc ml-4"> <i class="fas fa-phone-alt"></i>  <a (click)="gotoblog(item['main_url'])">{{item['main_url']}}</a></label>
                           </div>
                           </div>
                           
@@ -1099,7 +1108,7 @@
                                 <div>
                                         <label class="item-content ml-4">{{item['description']}}</label>
                                 <div>
-                                        <label class="item-loc ml-4"> <i class="fab fa-blogger-b link"></i>Blog link  <a >{{item['main_url']}}</a></label>
+                                        <label class="item-loc ml-4"> <i class="fab fa-blogger-b link"></i>  <a >{{item['main_url']}}</a></label>
                               </div>
                               </div>
                               

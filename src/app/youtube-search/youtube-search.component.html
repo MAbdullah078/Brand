@@ -4,7 +4,7 @@
                 <div class="row m-0">
                     <div class="col-md-12">
                         <mat-select class="mt-5 mb-3"  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                    placeholder="Select Category" style="width:100%!important">
+                                    placeholder="Search by Category" style="width:100%!important">
                             <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                         </mat-select>
                     </div>
@@ -188,6 +188,19 @@
             </mat-tab-group> -->
         </div>
     </div>
+    <div class="col-sm-12" *ngIf="loaded && fbinfluencers.totalItems===0">
+            <div class="box-typical box-typical-full-height" style="min-height: 115px">
+              <div class="add-customers-screen tbl" style="height: 119px">
+                <div class="box-typical-full-height">
+                  <div class="add-customers-screen-user">
+                    <i class="font-icon font-icon-user"></i>
+                  </div>
+                  <h2>OOPS!</h2>
+                  <p class="lead color-blue-grey-lighter">No Search results are found<br> try another category.</p>
+                </div>
+              </div>
+            </div>
+ </div>
 
 
     <div class="SickyPage">
@@ -340,7 +353,7 @@
                 </div>
                         <label class="item-content ml-4" 
                         title="{{item['description']}}">{{item['description']}}</label>
-                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube link"></i>Youtube Channel Link: {{item['channel_link']}}</label>
+                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube link"></i> {{item['channel_link']}}</label>
                      <div class="row" >
                         <div class="col-md-6 ">
                             <div class="ml-3">
@@ -349,18 +362,19 @@
                                 <span class="list-item1"> {{item['total_views'] | thousandSuff}}</span>
                                 </div>
                                 <div>
-                    <span class="right-item "><i  class="fa fa-upload"></i>Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span>
+                    <!-- <span class="right-item "><i  class="fa fa-upload"></i>Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span> -->
                 </div>
             </div>
                     </div>
                     <div class="col-md-6 ">
                         <div>
-                            <span class="right-item"><i class="fa fa-upload"></i>Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span>
+                                <span class="right-item"><i class="fas fa-sign-in-alt"></i>Year Joined:</span> <span class="list-item1">{{item['date']}}</span>
+                            <!-- <span class="right-item"><i class="fa fa-upload"></i>Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> -->
                               <span class="right-item ml-5"><i class="fas fa-chart-bar"></i>Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
                         </div>
                       
                         <div>
-                          <span class="right-item"><i class="fas fa-sign-in-alt"></i>Joined Year:</span> <span class="list-item1">{{item['date']}}</span>
+                          <!-- <span class="right-item"><i class="fas fa-sign-in-alt"></i>Year Joined:</span> <span class="list-item1">{{item['date']}}</span> -->
                         </div>
                          </div>
              
