@@ -9,7 +9,8 @@ import { MatInputModule, MatFormFieldModule, MatSelectModule, MatSlideToggleModu
 import { TextMaskModule } from 'angular2-text-mask';
 // import { PaymentmethodsService } from '../../profile/paymentmethods/paymentmethods.service';
 import {CountdownModule} from "ng2-countdown-timer";
-
+import {SidebarComponent} from './../sidebar/sidebar.component';
+import { from } from 'rxjs';
 const routes: Routes = [
   {
     path: '', component: PricingComponent
@@ -30,7 +31,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PricingComponent],
+  declarations: [PricingComponent,SidebarComponent],
   providers: [PricingService]
 })
 export class PricingModule { }
