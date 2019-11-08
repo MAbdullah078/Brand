@@ -150,7 +150,7 @@ export class LoginComponent implements OnInit {
                 // }
                 // else{
                     // if(data['Response'] !== 'Account is not activated'){
-                        this.router.navigate([this.returnUrl]);
+                        this.router.navigate(['/instagram/search']);
                         localStorage.setItem('currentPassword', this.model.password);
                         swal.fire({
                             type: 'success',

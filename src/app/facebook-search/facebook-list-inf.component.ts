@@ -139,7 +139,7 @@ export class FacebookListInfComponent implements OnInit{
             title: this.list_name,
             text: 'Selected influencers in this list will be deleted!',
             type: 'question',
-            showCancelButton: true,
+            //showCancelButton: true,
             confirmButtonText: 'Update',
             preConfirm: function () {
                 return new Promise(function (resolve, reject) {

@@ -315,6 +315,17 @@ this.get_default_FB_data(1);
 
             });
     }
+    clearsearch(){
+        this.selected_category=null;
+        this.title=null;
+        this.location=null;
+        this.minlikes=null;
+        this.maxlikes=null;
+        this.minperfomance=null;
+        this.maxperfomance=null;
+        this.minER=null;
+        this.maxER=null;
+    }
     // filterFBPage(page: number) {
     //     if (page < 1 || page > this.pager.totalPages) {
     //         return;

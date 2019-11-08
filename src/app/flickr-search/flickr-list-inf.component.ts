@@ -82,7 +82,7 @@ export class FlickrListInfComponent implements OnInit {
             title: this.list_name,
             type: 'question',
             text: 'Selected Influencers will be deleted',
-            showCancelButton: true,
+            //showCancelButton: true,
             confirmButtonText: 'Update',
             preConfirm: function () {
                 return new Promise(function (resolve, reject) {

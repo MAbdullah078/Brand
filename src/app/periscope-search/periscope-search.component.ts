@@ -627,5 +627,17 @@ export class PeriscopeSearchComponent implements OnInit {
 
     }
 
+    clearsearch(){
+        this.selected_category=null;
+        this.p_name=null;
+        this.t_name=null;
+        this.minhearts=null;
+        this.maxhearts=null;
+        this.minfollowing=null;
+        this.maxfollowing=null;
+        this.minfollower=null;
+        this.maxfollower=null;
+    }
+
 
 }

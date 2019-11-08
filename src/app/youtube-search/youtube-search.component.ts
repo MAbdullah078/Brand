@@ -595,6 +595,17 @@ export class YoutubeSearchComponent implements OnInit {
 
 
     }
+
+    clearsearch(){
+        this.selected_category=null;
+        this.name=null;
+        this.minsubscribers=null;
+        this.maxsubscribers=null;
+        this.minrank=null;
+        this.maxrank=null;
+        this.minviews=null;
+        this.maxviews=null;
+    }
     setPageQuery(page: number, query:string) {
         if (page < 1 || page > this.pager.totalPages) {
             return;

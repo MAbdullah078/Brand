@@ -662,6 +662,19 @@ export class PinterestSearchComponent implements OnInit , AfterViewInit, OnDestr
 
             });
     }
+
+    clearsearch(){
+        this.selected_category=null;
+        this.p_name=null;
+        this.minfollower=null;
+        this.maxfollower=null;
+        this.minfollowing=null;
+        this.maxfollowing=null;
+        this.minPins=null;
+        this.maxPins=null;
+        this.minboards=null;
+        this.maxboards=null;
+    }
     setPageQuery(page: number, query:string) {
         if (page < 1 || page > this.pager.totalPages) {
             return;

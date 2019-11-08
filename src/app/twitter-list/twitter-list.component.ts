@@ -4,7 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Config} from '../../config';
 import {PagerService} from '../_services/paginator.service';
 import {Headers, Response, Http} from '@angular/http';
-import Swal from 'sweetalert2';
+import swal from 'sweetalert2';
 
 @Component({
     selector: 'app-twitter-list',
@@ -28,6 +28,7 @@ export class TwitterListComponent implements OnInit {
     interests;
     searchQuery;
     list_name;
+     currentUser: any;
 
     constructor(private http: HttpService, private httpNoPreloader: Http, private route: ActivatedRoute, private router: Router, private pagerService: PagerService) {
 
@@ -35,10 +36,8 @@ export class TwitterListComponent implements OnInit {
 
     ngOnInit() {
 
-
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.setPage(1);
-
-
     }
 
     saveEditable(t) {
@@ -83,11 +82,11 @@ export class TwitterListComponent implements OnInit {
             }
         }
 
-        Swal.fire({
+        swal.fire({
             title: this.list_name,
             text: 'Selected influencers will be deleted!',
             type: 'question',
-            showCancelButton: true,
+            ////showCancelButton: true,
             confirmButtonText: 'Update',
             preConfirm: function () {
                 return new Promise(function (resolve, reject) {
@@ -124,7 +123,7 @@ export class TwitterListComponent implements OnInit {
 
                     }
                     this.main_checkbox = false;
-                    Swal.fire(
+                    swal.fire(
                         'List updated!',
                         '',
                         'success'
@@ -132,7 +131,7 @@ export class TwitterListComponent implements OnInit {
                 },
                 error => {
                     // alert('error')
-                    Swal.fire(
+                    swal.fire(
                         'Try again after some time!',
                         error.toString(),
                         'error'
@@ -143,7 +142,7 @@ export class TwitterListComponent implements OnInit {
 
         }, (dismiss) => {
             if (dismiss === 'cancel') {
-                Swal.fire('Cancelled', '', 'success')
+                swal.fire('Cancelled', '', 'success')
             }
             // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
 
@@ -169,8 +168,12 @@ export class TwitterListComponent implements OnInit {
         this.loaded = false;
         this.sub = this.route.params.subscribe(params => {
             if (Number(params['query'])) {
-                this.http.get(Config.api + '/ml/get_list_inf_twitter/' + params['query'] + '/?page='+page, {headers: headers}
-                    , 'full')
+                // this.http.get(Config.api + '/ml/get_list_inf_twitter/' + params['query'] + '/?page='+page, {headers: headers}
+                //     , 'full')
+                this.http.post(Config.api+'/ml/get_list_inf_twitter' + '/?page=' + page + '', {
+                    pk:+ params['query'],
+                    username: this.currentUser['username'],
+                },{headers: headers})
                     .subscribe(res => {
                             this.main_checkbox = false;
                             this.influencers = res.json();
@@ -190,33 +193,33 @@ export class TwitterListComponent implements OnInit {
 
     }
 
-    // goTwitterProfile(influencer) {
-    //     let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
-    //     Swal({
-    //         title: 'You&#39;re Leaving This Site!',
-    //         text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
-    //         // html: true,
-    //         confirmButtonColor: '#2ecc71',
-    //         showCancelButton: true,
-    //
-    //     }).then(() => {
-    //
-    //         window.open(url);
-    //
-    //
-    //     }, (dismiss) => {
-    //         // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
-    //         if (dismiss === 'cancel') {
-    //             // localStorage.removeItem('selected_list_twitter');
-    //
-    //             Swal(
-    //                 'Cancelled',
-    //                 '',
-    //                 'success'
-    //             )
-    //         }
-    //     });
-    // }
+    goTwitterProfile(influencer) {
+        let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
+        swal.fire({
+            title: 'You&#39;re Leaving This Site!',
+            text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
+            // html: true,
+            confirmButtonColor: '#2ecc71',
+            ////showCancelButton: true,
+
+        }).then(() => {
+
+            window.open(url);
+
+
+        }, (dismiss) => {
+            // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+            if (dismiss === 'cancel') {
+                // localStorage.removeItem('selected_list_twitter');
+
+                swal.fire(
+                    'Cancelled',
+                    '',
+                    'success'
+                )
+            }
+        });
+    }
 
     chec() {
         console.clear();
@@ -247,7 +250,7 @@ export class TwitterListComponent implements OnInit {
             }
         }
         if (current_list) {
-            Swal.fire(
+            swal.fire(
                 {
                     title: 'Add influencers to the list"' + current_list.name + '" or cancel and add to other list?',
                     // text: "List",
@@ -269,7 +272,7 @@ export class TwitterListComponent implements OnInit {
                     },
                     // input: "text",
                     showCloseButton: true,
-                    showCancelButton: true,
+                    ////showCancelButton: true,
                     confirmButtonText: 'Add to list"' + current_list.name + '"',
 
                 }
@@ -293,8 +296,8 @@ export class TwitterListComponent implements OnInit {
 
                         }
                         this.main_checkbox = false;
-                        // console.log({name: result.value, list: list, username: currentUser.username});
-                        Swal.fire(
+                        // console.log({name: result, list: list, username: currentUser.username});
+                        swal.fire(
                             'List updated!',
                             current_list.name,
                             'success'
@@ -302,7 +305,7 @@ export class TwitterListComponent implements OnInit {
                     },
                     error => {
                         // alert('error')
-                        Swal.fire(
+                        swal.fire(
                             'Try again after some time!',
                             error.toString(),
                             'error'
@@ -315,7 +318,7 @@ export class TwitterListComponent implements OnInit {
                 if (dismiss === 'cancel') {
                     localStorage.removeItem('selected_list_twitter');
 
-                    Swal.fire(
+                    swal.fire(
                         'Cancelled',
                         'No influencers added :)',
                         'success'
@@ -326,13 +329,13 @@ export class TwitterListComponent implements OnInit {
         }
         else {
             // let currentUser =JSON.parse(localStorage.getItem('currentUser'));
-            Swal.fire({
+            swal.fire({
                 title: "Create new or add existing list of influencers?",
                 // text: "List",
                 type: "question",
                 // input: "text",
                 showCloseButton: true,
-                showCancelButton: true,
+                ////showCancelButton: true,
                 confirmButtonText: 'Create new list',
                 cancelButtonText: 'Add to existing list',
 
@@ -357,7 +360,7 @@ export class TwitterListComponent implements OnInit {
                 // inputPlaceholder: "Write something"
             }).then(() => {
 
-                Swal.fire({
+                swal.fire({
                     title: 'Enter the name of list',
                     text: 'New list will be created',
                     type: 'question',
@@ -375,7 +378,7 @@ export class TwitterListComponent implements OnInit {
                                     headers.append('Content-Type', 'application/json');
 
                                     mysvc.post(Config.api + '' + '/check_ilist_twitter/', JSON.stringify({
-                                            name: result.value,
+                                            name: result,
                                             username: currentUser.username
                                         }),
                                         {headers: headers}).map((response: Response) => response.json()).subscribe(
@@ -391,7 +394,7 @@ export class TwitterListComponent implements OnInit {
                             }, 2)
                         })
                     },
-                    showCancelButton: true,
+                    ////showCancelButton: true,
                     confirmButtonText: 'Create',
                     cancelButtonText: 'Cancel'
                 }).then((result) => {
@@ -401,26 +404,27 @@ export class TwitterListComponent implements OnInit {
                     headers.append('Content-Type', 'application/json');
 
                     mysvc.post(Config.api + '/ml' + '/create_add_ilist_twitter/', JSON.stringify({
-                            name: result.value,
+                            name: result,
                             list: list,
                             username: currentUser.username
                         }),
                         {headers: headers}).map((response: Response) => response.json()).subscribe(
                         data => {
+                            console.log({name: result, list: list, username: currentUser.username});
                             for (let i in this.inflist) {
                                 // this.inflist[i['id']] = e;
                                 this.inflist[i] = false;
 
                             }
                             this.main_checkbox = false;
-                            Swal.fire(
+                            swal.fire(
                                 'List created and influencers added!',
-                                result.value(),
+                                // result,
                                 'success'
                             )
                         },
                         error => {
-                            Swal.fire(
+                            swal.fire(
                                 'Try again after some time!',
                                 error.toString(),
                                 'error'
@@ -430,7 +434,7 @@ export class TwitterListComponent implements OnInit {
                 }, (dismiss) => {
                     // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
                     if (dismiss === 'cancel') {
-                        Swal.fire(
+                        swal.fire(
                             'Cancelled',
                             'No list created :)',
                             'success'
@@ -442,10 +446,10 @@ export class TwitterListComponent implements OnInit {
                 // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
                 if (dismiss === 'cancel') {
                     if (ilist) {
-                        Swal.fire({
+                        swal.fire({
                             input: 'select',
                             confirmButtonText: 'Add',
-                            showCancelButton: true,
+                            ////showCancelButton: true,
                             confirmButtonColor: '#00a8ff',
                             cancelButtonColor: '#00a8ff',
                             inputOptions: user_list,
@@ -462,14 +466,14 @@ export class TwitterListComponent implements OnInit {
                                 }),
                                 {headers: headers}).map((response: Response) => response.json()).subscribe(
                                 data => {
-                                    console.log({name: result.value, list: list, username: currentUser.username});
+                                    console.log({name: result, list: list, username: currentUser.username});
                                     for (let i in this.inflist) {
                                         // this.inflist[i['id']] = e;
                                         this.inflist[i] = false;
 
                                     }
                                     this.main_checkbox = false;
-                                    Swal.fire(
+                                    swal.fire(
                                         'List updated!',
                                         '',
                                         'success'
@@ -477,7 +481,7 @@ export class TwitterListComponent implements OnInit {
                                 },
                                 error => {
                                     // alert('error')
-                                    Swal.fire(
+                                    swal.fire(
                                         'Try again after some time!',
                                         error.toString(),
                                         'error'
@@ -487,7 +491,7 @@ export class TwitterListComponent implements OnInit {
                         }, (dismiss) => {
                             // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
                             if (dismiss === 'cancel') {
-                                Swal.fire(
+                                swal.fire(
                                     'Cancelled',
                                     'No list Updated :)',
                                     'success'
@@ -495,7 +499,7 @@ export class TwitterListComponent implements OnInit {
                             }
                         })
                     } else {
-                        Swal.fire(
+                        swal.fire(
                             'No Influencers selected',
                             '',
                             'warning'
@@ -515,6 +519,7 @@ export class TwitterListComponent implements OnInit {
     }
 
     cheakall(e) {
+        // console.log(e)
 
         for (let i of this.influencers['results']) {
             this.inflist[i['id']] = e;
