@@ -23,7 +23,7 @@
                             <div class="col-md-6 text-center p-auto">
 
                                 <mat-form-field class="example-full-width">
-                                    <input type="text" class="form-control" placeholder="Select Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                                    <input type="text" class="form-control" placeholder="Search By Catagory" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
                                     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="getYTChannels($event)">
                                         <mat-option *ngFor="let option of filteredOptions | async"   [value]="option">
                                             {{ option }}
@@ -49,7 +49,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <mat-select  name="selected_choice"  [(ngModel)]="selected_category" (change)="getCatName($event)"
-                                                    placeholder="Select Category" style="width:75%">
+                                                    placeholder="Search By Catagory" style="width:75%">
                                             <mat-option *ngFor="let choice of options" [value]="choice">{{ choice }}</mat-option>
                                         </mat-select>
                                     </div>
