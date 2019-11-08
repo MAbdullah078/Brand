@@ -7,6 +7,9 @@ import {PagerService} from "../_services/paginator.service";
 import {Config} from "../../config";
 // import { PagerService } from '../_services/paginator.service';
 import swal from 'sweetalert2';
+import { UserService } from '../_services/user.service';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 // import { Config } from 'src/config';
 @Component({
   selector: 'app-generic-search',
@@ -33,11 +36,10 @@ export class GenericSearchComponent implements OnInit, OnDestroy {
     private tempArr: any;
     private responseArr: any;
      p_query: string;
-  constructor(private http: HttpService, private httpNoPreloader: Http,private route:ActivatedRoute, private pagerService: PagerService ) { }
+    baseUrl: string;
+  constructor(private app_Service: UserService,private http: HttpService, private httpNoPreloader: Http,private route:ActivatedRoute, private pagerService: PagerService ) { }
 
   ngOnInit() {
-
-
           this.sub = this.route.params.subscribe(params => {
           this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
           this.searchResults={};
@@ -65,6 +67,14 @@ export class GenericSearchComponent implements OnInit, OnDestroy {
       });
 
   }
+
+
+
+//   onchange(query){
+//       this.app_Service.generalsearch(query).subscribe(data=>{
+
+//       })
+//   }
   goToLink(url) {
       //let url = 'https://twitter.com/' + influencer.screen_name.replace("('", '').replace("',)", '');
       swal.fire({
@@ -72,7 +82,7 @@ export class GenericSearchComponent implements OnInit, OnDestroy {
           text: 'This is a link to an external site. Click OK to continue to the content (' + url + ').',
           // html: true,
           confirmButtonColor: '#2ecc71',
-          showCancelButton: true,
+          //showCancelButton: true,
 
       }).then(() => {
 

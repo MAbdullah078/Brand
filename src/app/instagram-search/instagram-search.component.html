@@ -79,12 +79,11 @@
                   </mat-form-field>
               </div>
             </div>
-           <div class="col-md-12 row">
+           <!-- <div class="col-md-12 row">
               <div class="col-md-12"><h5 class="m-0"><i class="fas fa-random"></i> Posts</h5></div>
             <div class="col-md-5 pr-0">
                 <mat-form-field>
-                    <!-- <input matInput type="text" [(ngModel)]="minpost" placeholder="Minimum Posts" name="er"> -->
-                    <input matInput placeholder="Min " type="number"  [(ngModel)]="minpost" name="er" class="example-right-align">
+                <input matInput placeholder="Min " type="number"  [(ngModel)]="minpost" name="er" class="example-right-align">
                 </mat-form-field>
                 <div class="col-md-1 p-0 followers-profile">
                     <span>-</span>
@@ -92,32 +91,52 @@
               </div>
                 <div class="col-md-6 pl-0">
                     <mat-form-field>
-                        <!-- <input matInput type="text" [(ngModel)]="maxpost" placeholder="Maximum Posts" name="er2"> -->
-
-                        <input matInput placeholder="Max " type="number"  [(ngModel)]="maxpost" name="er2" class="example-right-align">
+                      <input matInput placeholder="Max " type="number"  [(ngModel)]="maxpost" name="er2" class="example-right-align">
                     </mat-form-field>
                 </div>
               
-            </div>
-          
-      
+            </div> -->
+
             <div class="col-md-12 row">
-            <div class="col-md-6  text-center">
-                <button type="submit"  class="btn btn-primary" >
-                    Clear <i class="fa fa-sliders"></i>
-                </button>
+                <div class="col-md-12 "><h5 class="m-0"><i class="fas fa-random"></i> Posts</h5></div>
+              <div class="col-md-5 pr-0">
+                <mat-form-field>
+                  <input matInput placeholder="Min " type="number"  [(ngModel)]="minpost" name="er" class="example-right-align">
+                </mat-form-field>
+              </div>
+              <div class="col-md-1 p-0 followers-profile">
+                  <span>-</span>
+                </div>
+              <div class="col-md-6 pl-0">
+                  <mat-form-field>
+                    <input matInput placeholder="Max" type="number"  [(ngModel)]="maxpost" name="er2" class="example-right-align">
+                  </mat-form-field>
+              </div>
             </div>
-            <div class="col-md-6  text-center">
-                <button type="submit"  class="btn btn-primary" >
-                    Clear <i class="fa fa-sliders"></i>
-                </button>
-            </div>
+          <div class="col-md-12 row text-center">
+              <div class="col-md-6">
+              <button type="submit"  class="btn btn-primary" >
+                  Search 
+              </button>
+          </div>
+          <!-- <div class="col-md-6">
+                  <button type="submit" class="btn btn-primary" (click)="clearsearch()" >
+                          Clear 
+                      </button>
+          </div> -->
           </div>
 
 
       
       </div>
     </form>
+    <div class="col-md-12 row text-center">
+        <div class="col-md-6">
+                <button type="submit"  class="btn btn-primary" (click)="clearsearch()" >
+                        Clear Search 
+                    </button>
+        </div>
+    </div>
 </div>
 
 <div class="facebook-content">
@@ -176,10 +195,10 @@
                     <div class="ml-4">
                       <label class="item-content" *ngIf="item.description.length>0"
                         title="{{item['description']}}">{{item['description']}}</label>
-                      <div>
+                      <!-- <div>
                         <label class="item-loc"><i class="fab fa-instagram"></i>Profile Link:<a
                             (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
-                      </div>
+                      </div> -->
                       <!-- <div>
                             <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" (click)="goToMedium(item['external_url'])"> {{item['external_url']}}</span></label>
                           </div> -->
@@ -188,7 +207,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="ml-4">
-                      <label class="item-content" *ngIf="item.description.length>0"  title="{{item['description']}}">{{item['description']}}</label>
+                      <!-- <label class="item-content" *ngIf="item.description.length>0"  title="{{item['description']}}">{{item['description']}}</label> -->
                    <div>   
               <!-- <label class="item-loc"><i class="fab fa-instagram" ></i>Profile Link:<a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label> -->
               <label class="item-loc"><i class="fab fa-instagram" ></i><a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>  

@@ -6,6 +6,7 @@ import {Http} from '@angular/http';
 import { User } from '../_models';
 import {tap} from 'rxjs/operators';
 import Swal from 'sweetalert2';
+import { query } from '@angular/core/src/render3';
 
 @Injectable({
   providedIn: 'root'
@@ -201,5 +202,20 @@ let username =  this.currentUser.username;
       })
       
     }
+
+    getAllresult(obj) {
+      return this.http.get(Config.api+'/ml/ses/?query='+obj).pipe(tap((response: Response) => {
+        return response.json();
+      }))
+  }
+
+
+    // https://apis.influexpai.com/ml/ses/?query=b
+
+    // generalsearch(query) {
+    //   const headers = new Headers();
+    //   headers.append('Content-Type', 'application/json');
+    //   return this.http.get(Config.api + '/ml/ses/?query=' + query , { headers: headers }).map((response: Response) => response.json());
+    // }
 
 }
