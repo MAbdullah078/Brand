@@ -16,7 +16,9 @@ export class UserService {
     rejectRFM(id: any) {
         throw new Error("Method not implemented.");
     }
-    constructor(private http: Http) { }
+    constructor(private http: Http) {
+      JSON.parse(localStorage.getItem('currentUser'))
+     }
 
     getAll() {
         return this.http.get(Config.api+'/users/', this.jwt()).pipe(tap((response: Response) => {
@@ -193,12 +195,12 @@ let username =  this.currentUser.username;
     }
 
     gmail(){
+      alert(JSON.parse(localStorage.getItem('currentUser')).token);
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-      let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+      let headers = new Headers({'Authorization': 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token});
       headers.append('Content-Type', 'application/json');
       // let username = localStorage.getItem('username');
-      return this.http.get(Config.api+'/email/gmailAuthenticate/',{headers: headers}).map((response: Response) => {
-        return response.json();
+      return this.http.get('http://192.168.29.166:8000/email/gmailAuthenticate/',{headers: headers}).map((response: Response) => { response.json();
       })
       
     }

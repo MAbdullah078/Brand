@@ -9,6 +9,7 @@ import { DatePipe } from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {SlimLoadingBarModule} from "ng2-slim-loading-bar";
 import {AppRoutes} from './app.routing';
+
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HeaderComponent} from "./userdashboard-template/header.component";
 import {SideMenuComponent} from "./userdashboard-template/side-menu.component";
