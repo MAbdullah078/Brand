@@ -10,7 +10,7 @@ import {SidebarComponent} from './../sidebar/sidebar.component';
 
 @NgModule({
     imports: [CommonModule,MatCardModule, MatFormFieldModule, RouterModule.forChild(ProfileRoutes),FormsModule],
-    declarations: [ProfileComponent , SidebarComponent],
+    declarations: [ProfileComponent ],
     providers:[PagerService], 
     schemas:[
         CUSTOM_ELEMENTS_SCHEMA
