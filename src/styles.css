@@ -320,9 +320,9 @@ mat-tab-group{
     justify-content: center;
 }
 .twitter-image{
-  width: 100px!important;
-  height: 100px!important;
-  border-radius: 50%
+width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 .social-icon2{
   width: 30px;

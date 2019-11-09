@@ -14,7 +14,6 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HeaderComponent} from "./userdashboard-template/header.component";
 import {SideMenuComponent} from "./userdashboard-template/side-menu.component";
 import { AppComponent } from './app.component';
-import { UpdatePassComponent} from './update-pass/update-pass.component';
 import { PaymentmethodsComponent } from './paymentmethods/paymentmethods.component';
 import {SidebarComponent} from './sidebar/sidebar.component'
 import { PaymentmethodsService} from './paymentmethods/paymentmethods.service'
@@ -31,7 +30,6 @@ import {PricingComponent} from './pricing/pricing.component';
 import { InfluencersComponent } from './influencers/influencers.component';
 import {AgenciesComponent} from './Agencies/Agencies.component';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular5-social-login';
-import { GoogleaccountService} from './googleaccount/googleaccount.service';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { SocialLoginModule, AuthService } from 'angular5-social-login';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
@@ -69,7 +67,6 @@ import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 import { FileValidatorDirective } from './rfm/FileValidator.directive';
 import { from } from 'rxjs';
 import { GmailComponent } from './gmail/gmail.component';
-import { GoogleaccountComponent } from './googleaccount/googleaccount.component';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -109,7 +106,6 @@ export function provideConfig() {
     FooterComponent,
     PaymentmethodsComponent,
     BlogComponent,
-    UpdatePassComponent,
     ProfileComponent,
     InfluencersComponent,
     HowItWorksComponent,
@@ -123,8 +119,7 @@ export function provideConfig() {
     RfmDetailComponent,
     GmailComponent,
     FileValidatorDirective,
-    GmailComponent,
-    GoogleaccountComponent
+    GmailComponent
     
     // GenericSearchComponent
   ],
@@ -155,7 +150,7 @@ export function provideConfig() {
   },
 
     AuthGuard, PushNotificationsService,AuthService, PaymentmethodsService,
-    DatePipe, GoogleaccountService
+    DatePipe
 
 
    ],

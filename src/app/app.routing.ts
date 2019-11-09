@@ -16,8 +16,6 @@ import {
     PrivacyComponent,
     WhatIsInfluexpaiComponent
 } from './contact/contact.component';
-import { UpdatePassComponent} from './update-pass/update-pass.component';
-import { GoogleaccountComponent } from './googleaccount/googleaccount.component';
 import {BrandComponent} from './brand/brand.component';
 import {InfluencersComponent} from './influencers/influencers.component';
 import {AgenciesComponent} from './Agencies/Agencies.component';
@@ -42,7 +40,6 @@ export const AppRoutes: Routes = [
         path: 'what-is-InfluExpAI',
         component: WhatIsInfluexpaiComponent
     },
-    { path: 'googleaccount/:code' , component : GoogleaccountComponent},
     {
         path: 'How-It-Works',
         component: HowItWorksComponent
@@ -120,8 +117,7 @@ export const AppRoutes: Routes = [
         { path: 'pricingsub',  component:PricingComponent },
     // { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
 
-        // {path:  'update-password',loadChildren:'./update-pass/update-pass.module#UpdatePassModule'},
-        { path: 'update-password' , component : UpdatePassComponent}
+        {path:  'update-password',loadChildren:'./update-pass/update-pass.module#UpdatePassModule'}
         //
     ], canActivate: [AuthGuard] },
 

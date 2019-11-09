@@ -203,14 +203,14 @@
                         <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
                     </div>
                 </div>
-                <div class="col-md-2 image-div ">
+                <div class="col-md-1 image-div ">
                     <img [src]="item['thumbnail_url']" class="twitter-image">
                 </div>
                 <div class="col-md-2 followers-profile">
                     <h6 class="m-0">Subscribers</h6>
                     <h4 class="Follwers-div">{{item['subscribers'] |thousandSuff}}</h4>
                 </div>
-                <div class="col-md-7 ">
+                <div class="col-md-8 ">
             
                     <div class="d-flex">
                         <i class="fab fa-youtube"></i>
@@ -278,7 +278,7 @@
                                 </div>
                             </div>
             
-                            <div class="col-md-2 followers-division">
+                            <div class="col-md-1 followers-division">
             
             
                                 <img [src]="item['image_url']" class="twitter-image">
@@ -289,7 +289,7 @@
                                 <h3 class="item-content">{{item['likes']| thousandSuff}}</h3>
             
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-8">
                                 <div class="title-name">
                                     <i class="fab fa-facebook"></i>
                                     <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
@@ -362,6 +362,11 @@
 
         </div>
     </div>
+
+    <div class="container-fluid" *ngIf="!loaded">
+
+
+        </div>
        
 </div>
 </section>
