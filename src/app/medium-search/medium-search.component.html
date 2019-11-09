@@ -197,6 +197,7 @@
                   </label>
               </div>
               </div>
+              
               <div class="col-md-8 text-center">
                   
   <div  *ngIf="!loaded" >
@@ -244,8 +245,9 @@
                         <div>
                         <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>  <a  (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
                         <div>
-                        <label class="item-loc ml-4"><i class="fab fa-twitter" ></i>  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
+                        <label class="item-loc ml-4" *ngIf="item['twitter_profile']"><i class="fab fa-twitter" ></i>  <a  (click)="goToMedium(item['twitter_profile'])"> {{item['twitter_profile']}}
                           </a></label>
+
                       </div>
                       </div>
                       
@@ -294,6 +296,9 @@
               </label>
             </div>
           </div>
+          <div class="col-md-4 col-sm-4 center-showing">
+              <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+            </div>
 
       
               <div class="col-md-8 text-center"  *ngIf="loaded">

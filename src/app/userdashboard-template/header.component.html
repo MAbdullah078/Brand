@@ -106,9 +106,61 @@
                         <i class="fa fa-microphone" id="box"></i>
                         <!-- *ngIf="searchResult.length>0"  -->
                         <ul class="list-group" style="position:absolute;">
-                                <li (click)="find1(item)" *ngFor="let item of searchResult" class="list-group-item">
-                                  {{item}}
+                                <li (click)="find1(item)" *ngFor="let item of searchResult.blogs" class="list-group-item">
+                                    Blog Data
+                                  <!-- {{item.description}} -->
+                                  {{item.main_url}}
                                 </li>
+                                <li (click)="find1(item)" *ngFor="let item of searchResult.facebook" class="list-group-item">
+                                    Facebook Data
+                                    <!-- {{item.facebook.image_url}} -->
+                                    <!-- {{item.facebook.title}} -->
+                                    {{item.fb_page_link}}
+                                    
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.twitter" class="list-group-item">
+                                    Twitter Data
+                                    <!-- {{item.image_url}} -->
+                                    <!-- {{item.twitter_name}} -->
+                                    {{item.profile_url}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.youtube" class="list-group-item">
+                                    Youtube Data
+                                    <!-- {{item.thumbnail_url}} -->
+                                    <!-- {{item.name}} -->
+                                    {{item.channel_link}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.pinterest" class="list-group-item">
+                                    Pinterest Data
+                                    <!-- {{item.image}} -->
+                                    <!-- {{item.profile_name}} -->
+                                    {{item.profile_linked}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.periscope" class="list-group-item">
+                                    Periscope Data
+                                    <!-- {{item.image_url}} -->
+                                    <!-- {{item.profile_name}} -->
+                                    {{item.profile_link}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.medium" class="list-group-item">
+                                    Medium Data
+                                    <!-- {{item.image_url}} -->
+                                    {{item.account_link}}
+                                    <!-- {{item.name}} -->
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.flicker" class="list-group-item">
+                                        flicker Data
+                                    <!-- {{item.image_link}} -->
+                                    <!-- {{item.profile_name}} -->
+                                    {{item.profile_linked}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.instagram" class="list-group-item">
+                                    Instagram Data
+                                    <!-- {{item.image_url}} -->
+                                    <!-- {{item.name}} -->
+                                    {{item.account_link}}
+                                  </li>
+
                               </ul>
                         <!-- <button type="submit" class="close"  style=" position: absolute; display:  none"
                         (click)="find1(searchvalue1.value)">Search</button> -->
