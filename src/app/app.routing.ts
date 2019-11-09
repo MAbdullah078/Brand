@@ -16,6 +16,7 @@ import {
     PrivacyComponent,
     WhatIsInfluexpaiComponent
 } from './contact/contact.component';
+import { GoogleaccountComponent } from './googleaccount/googleaccount.component';
 import {BrandComponent} from './brand/brand.component';
 import {InfluencersComponent} from './influencers/influencers.component';
 import {AgenciesComponent} from './Agencies/Agencies.component';
@@ -40,6 +41,7 @@ export const AppRoutes: Routes = [
         path: 'what-is-InfluExpAI',
         component: WhatIsInfluexpaiComponent
     },
+    { path: 'googleaccount/:code' , component : GoogleaccountComponent},
     {
         path: 'How-It-Works',
         component: HowItWorksComponent

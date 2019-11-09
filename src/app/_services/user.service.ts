@@ -194,7 +194,7 @@ let username =  this.currentUser.username;
     }
 
     gmail(){
-      alert(JSON.parse(localStorage.getItem('currentUser')).token);
+      // alert(JSON.parse(localStorage.getItem('currentUser')).token);
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
       let headers = new Headers({'Authorization': 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token});
       headers.append('Content-Type', 'application/json');

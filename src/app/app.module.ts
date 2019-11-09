@@ -30,6 +30,7 @@ import {PricingComponent} from './pricing/pricing.component';
 import { InfluencersComponent } from './influencers/influencers.component';
 import {AgenciesComponent} from './Agencies/Agencies.component';
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular5-social-login';
+import { GoogleaccountService} from './googleaccount/googleaccount.service';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { SocialLoginModule, AuthService } from 'angular5-social-login';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
@@ -67,6 +68,7 @@ import { RfmDetailComponent } from './rfm-detail/rfm-detail.component';
 import { FileValidatorDirective } from './rfm/FileValidator.directive';
 import { from } from 'rxjs';
 import { GmailComponent } from './gmail/gmail.component';
+import { GoogleaccountComponent } from './googleaccount/googleaccount.component';
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -119,7 +121,8 @@ export function provideConfig() {
     RfmDetailComponent,
     GmailComponent,
     FileValidatorDirective,
-    GmailComponent
+    GmailComponent,
+    GoogleaccountComponent
     
     // GenericSearchComponent
   ],
@@ -150,7 +153,7 @@ export function provideConfig() {
   },
 
     AuthGuard, PushNotificationsService,AuthService, PaymentmethodsService,
-    DatePipe
+    DatePipe, GoogleaccountService
 
 
    ],
