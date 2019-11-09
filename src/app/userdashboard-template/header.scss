@@ -118,6 +118,10 @@ body {
   color: #000;
   font-size: 51px;
 }
+.dropdown-content img{
+  width: 16px;
+  margin-right: 5px;
+}
 @media(max-width: 1367px) and  (min-width: 1344px){
 
         .navbar{
@@ -195,10 +199,6 @@ body {
   background: none;
   border: transparent;
   padding-top: 2px;
-}
-.dropdown-images{
-  width: 15px;
-    margin-right: 5px;
 }
 .dropbtn {
   color: #000 !important;

@@ -149,6 +149,27 @@ md-list-item {
   width: 70%;
   margin: 0 auto;
 }
+.absolute-drp{
+  position: absolute!important;
+  top: 0!important;
+  right: 100%!important;
+  display: none!important;
+}
+.rfmdd:hover .absolute-drp{
+  display: block!important;
+}
+.fa-user-circle{
+  color: #ff6347
+}
+.fa-history{
+  color: #fb1893;
+}
+.fa-key{
+  color:#4cdc6b;
+}
+.fa-sign-out-alt{
+  color:#c00;
+}
 //ul .side-menu-list>li.sub-list a.active{
 //  background-color: #1f2b36;
 //}
