@@ -173,7 +173,7 @@ export class LoginComponent implements OnInit {
                               this.recptha.resetImg();
                         }
                         // swal('Invalid username or password', 'error');
-                        if(error.status== 400){
+                        else if(error.status== 400){
                         swal.fire({
                             type: 'error',
                             title: 'Wrong Credantials',
@@ -183,23 +183,20 @@ export class LoginComponent implements OnInit {
                             timer: 2000
                       
                           });
-                          
-                          this.recptha.resetImg();
-                          // this.robot()
+                          // this.recptha.resetImg();
                         }
-                        else if(this.recaptcha== false){
-                          swal.fire({
-                            type: 'error',
-                            title: 'Please confirm that you are not a robot',
-                            showConfirmButton: false,
-                            width: '512px',
-                            timer: 2000
-                          });
-                        }
-                    //    this.recptha.capchaText = "";
-                    // error => {
-                    //     this.alertService.error('Invalid username or password.');
                      });
+        }
+        else {
+          this.recptha.resetImg();
+          swal.fire({
+            type: 'error',
+            title: 'Recaptcha Confirmation',
+            text: 'Please confirm you are not a robot',
+            showConfirmButton: false,
+            width: '512px',
+            timer: 2000
+          });
         }
     }
     robot(){

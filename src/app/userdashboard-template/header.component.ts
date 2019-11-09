@@ -5,7 +5,7 @@ import {Headers, Response} from '@angular/http';
 import {HttpService} from '../services/http-service';
 import {PushNotificationsService} from 'angular2-notifications';
 import {Config} from '../../config';
-import {DataService} from '../_services';
+import {DataService, UserService} from '../_services';
 import {AuthenticationService} from '../_services';
 import swal from 'sweetalert2';
 import { isPlatformBrowser } from '@angular/common';
@@ -26,14 +26,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         timeOut: 0,
         lastOnBottom: true,
     };
-    maxnotifications;
+    maxnotifications;Data;
     currentUser;
     notification_class: any = 'header-alarm dropdown-toggle';
     notifications: any = {'notifications': [{msg: 'Welcome!', created_at: Date.now()}]};
     currentUserLoaded: boolean = false;
      profile_image: any;
 
-    constructor(private router: Router, private obj:AuthenticationService, private _pushNotifications: PushNotificationsService, private http: HttpService, private data: DataService,  @Inject(PLATFORM_ID) private platformId: Object) {
+    constructor(private router: Router, private obj:AuthenticationService, private _pushNotifications: PushNotificationsService, private http: HttpService, private data: DataService,  @Inject(PLATFORM_ID) private platformId: Object,private userservice :UserService) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         // alert(this.currentUser);
         this.notificationpage = 1;
@@ -288,11 +288,24 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 //         localStorage.setItem('searchQuery1', e);
 //     }
 
-    find1(e) {
+    // find1(e) {
 
-        this.router.navigate(['/search/results/', e])
-        localStorage.setItem('searchQuery1', e);
-    }
+    //     this.router.navigate(['/search/results/', e])
+    //     localStorage.setItem('searchQuery1', e);
+    // }
+    getsearch;
+  searchResult:any = [];
+
+  find1(query,e) {
+    
+    this.userservice.getAllresult(query).subscribe(
+      res => {
+        console.log(res['Data']);
+
+        this.searchResult = res['Data'];
+
+      });
+  }
 
 
     loadprofilepic(){

@@ -80,21 +80,28 @@
                             </mat-form-field>
                         </div>
                     </div>
-                    <div class="col-md-12 row text-center">
-                        <div class="col-md-6">
-                        <button type="submit"  class="btn btn-primary" >
+                    <!-- <div class="col-md-12 row text-center"> -->
+                        <div class="col-sm-12">
+                        <button type="submit"  class="btn btn-primary w-100" >
                             Search 
                         </button>
                     </div>
-                    <div class="col-md-6">
+                    <!-- <div class="col-md-6">
                             <button type="submit"  class="btn btn-primary" >
                                 Clear 
                             </button>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
 
                 
             </form>
+            <div class="m-0 row mt-2 text-center">
+                <div class="col-sm-12">
+                  <button type="submit"  class="btn btn-primary w-100" (click)="clearsearch()" >
+                          Clear Search 
+                      </button>
+          </div>
+              </div>
 </div>
 <div class="facebook-content p-3">
     <div class="page-content">
@@ -358,133 +365,8 @@
 
     <div class="container-fluid" *ngIf="!loaded">
 
-        <div class="row m-0" id="myHeader">
-                    <div class="col-md-2">
-                        <!--<button  class="btn btn-success">Select All</button>-->
-                        <div id="ck-button">
-                            <label>
 
-                                <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
-                            </label>
-                        </div>
-                        </div>
-                        <div class="col-md-8 text-center">
-                            
-    <div  *ngIf="!loaded" >
-                <h4 class="m-0" >Featured Youtube Influencers</h4>
+        </div>
        
-    
-        </div>
-                        </div>
-                        <div class="col-md-2">
-                        <button  class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
-                    </div>
-        
-            
-            </div>
-        </div>
-        <div class="row influcener-div" *ngFor="let item of influencers_by_default.results" >
-                    <div class="col-md-1 profile-checkbox" type="checkbox">
-                            <div class="custom-control custom-checkbox mb-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
-                                    <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
-                                  </div>
-                        </div>
-                <div class="col-md-1 image-div ">
-                    <img [src]="item['thumbnail_url']"  class="twitter-image">
-                </div>
-                <div class="col-md-1 followers-profile">
-                        <h6 class="m-0">Subscribers</h6>
-                        <h4 class="Follwers-div">{{item['subscribers'] |thousandSuff}}</h4>
-                    </div>
-                <div class="col-md-9 ">
-        
-                            <div class="d-flex">
-                                <i class="fab fa-youtube"></i>
-                                
-                    <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
-                    <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
-                </div>
-                        <label class="item-content ml-4" 
-                        title="{{item['description']}}">{{item['description']}}</label>
-                        <label class="item-loc ml-4 " (click)="goToMedium(item['channel_link'])"><i class="fab fa-youtube link"></i> {{item['channel_link']}}</label>
-                     <div class="row" >
-                        <div class="col-md-6 ">
-                            <div class="ml-3">
-                            <div>
-                            <span class="right-item "><i class="fa fa-users" ></i>  Views:</span>
-                                <span class="list-item1"> {{item['total_views'] | thousandSuff}}</span>
-                                </div>
-                                <div>
-                    <!-- <span class="right-item "><i  class="fa fa-upload"></i>Videos Uploaded Today:</span> <span class="list-item1">{{item['today_upload_videos']}}</span> -->
-                </div>
-            </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div>
-                                <span class="right-item"><i class="fas fa-sign-in-alt"></i>Year Joined:</span> <span class="list-item1">{{item['date']}}</span>
-                            <!-- <span class="right-item"><i class="fa fa-upload"></i>Videos Uploaded Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span> -->
-                              <span class="right-item ml-5"><i class="fas fa-chart-bar"></i>Rank:</span> <span class="list-item1">{{item['rank']}}</span> 
-                        </div>
-                      
-                        <div>
-                          <!-- <span class="right-item"><i class="fas fa-sign-in-alt"></i>Year Joined:</span> <span class="list-item1">{{item['date']}}</span> -->
-                        </div>
-                         </div>
-             
-                </div>
-            </div>
-    <div class="container-fluid" *ngIf="loaded && influencers.Items==0">
-    <div class="box-typical box-typical-full-height" style="min-height: 119px;">
-      <div class="add-customers-screen tbl" style="height: 119px;">
-        <div class="add-customers-screen-in">
-          <div class="add-customers-screen-user">
-            <i class="font-icon font-icon-user"></i>
-          </div>
-          <h2>OOPS!</h2>
-          <p class="lead color-blue-grey-lighter">No Search results are found<br> try another category.</p>
-          <!--<a href="#" class="btn">Add customer</a>-->
-        </div>
-  
-<div class="col-md-12 "> 
-        <nav class="text-center">
-                <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
-
-                    <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
-                    <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
-                    <!--</li>-->
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a class="page-link" (click)="setPage(1)" aria-label="Previous">
-                            First
-                        </a>
-                    </li>
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-
-                    <li class="page-item" *ngFor="let page of pager.pages"
-                        [ngClass]="{active:pager.currentPage === page}"
-                        (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a></li>
-                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-                    <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
-                    <!--</li>-->
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                    <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
-                            Last
-                        </a>
-                    </li>
-                    <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-                    <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
-                    <!--</li>-->
-                </ul>
-            </nav>
-    </div>
+</div>
+</section>
