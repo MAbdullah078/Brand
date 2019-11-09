@@ -13,6 +13,7 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HeaderComponent} from "./userdashboard-template/header.component";
 import {SideMenuComponent} from "./userdashboard-template/side-menu.component";
 import { AppComponent } from './app.component';
+import { UpdatePassComponent} from './update-pass/update-pass.component';
 import { PaymentmethodsComponent } from './paymentmethods/paymentmethods.component';
 import {SidebarComponent} from './sidebar/sidebar.component'
 import { PaymentmethodsService} from './paymentmethods/paymentmethods.service'
@@ -105,6 +106,7 @@ export function provideConfig() {
     FooterComponent,
     PaymentmethodsComponent,
     BlogComponent,
+    UpdatePassComponent,
     ProfileComponent,
     InfluencersComponent,
     HowItWorksComponent,

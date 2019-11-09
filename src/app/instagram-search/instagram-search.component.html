@@ -86,9 +86,10 @@
                     <!-- <input matInput type="text" [(ngModel)]="minpost" placeholder="Minimum Posts" name="er"> -->
                     <input matInput placeholder="Min " type="number"  [(ngModel)]="minpost" name="er" class="example-right-align">
                 </mat-form-field>
-                <div class="col-md-1 p-0 followers-profile">
-                    <span>-</span>
-                  </div>
+              
+              </div>
+              <div class="col-md-1 p-0 followers-profile">
+                <span>-</span>
               </div>
                 <div class="col-md-6 pl-0">
                     <mat-form-field>
@@ -104,12 +105,12 @@
             <div class="col-md-12 row">
             <div class="col-md-6  text-center">
                 <button type="submit"  class="btn btn-primary" >
-                    Clear <i class="fa fa-sliders"></i>
+                    Search
                 </button>
             </div>
             <div class="col-md-6  text-center">
                 <button type="submit"  class="btn btn-primary" >
-                    Clear <i class="fa fa-sliders"></i>
+                    Clear
                 </button>
             </div>
           </div>
@@ -155,7 +156,7 @@
                     <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
                   </div>
                 </div>
-                <div class="col-md-1 followers-division">
+                <div class="col-md-2 followers-division">
               
                   <img [src]="item['image_url']" class="twitter-image">
                 </div>
@@ -166,7 +167,7 @@
                   <h3 class="Follwers-div">{{item['follower']| thousandSuff}}</h3>
               
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7">
                   <div class="title-name">
                     <div class="d-flex">
                       <img class="social-icon2" src="../../assets/header-images/Insta@1x-.png">
@@ -326,11 +327,11 @@
                 </div>
           </div>
 
-<div class="col-md-1 followers-division">
+<div class="col-md-2 followers-division">
 
 <img [src]="item['image_url']"  class="twitter-image">
 </div>
-          <div class="col-md-2 followers-division">
+          <div class="col-md-7 followers-division">
       
               <div>
                       <h6 class="m-1">Follower</h6>
