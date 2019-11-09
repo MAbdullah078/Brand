@@ -66,8 +66,8 @@
             <a class="footer-readmore" routerLink="/what-is-InfluExpAI">Read More</a>
           </p>
           <form class="form-inline" style="position: relative">
-            <input type="text" class="form-control" name="subscription" placeholder="Email Address">
-            <button class="btn btn-primary subscribe-btn">
+            <input type="text" class="form-control" [(ngModel)]="email" name="subscription" placeholder="Email Address">
+            <button class="btn btn-primary subscribe-btn" (click)="sub()">
               <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up"></i>
             </button>
             <!-- <div class="send-div">
@@ -98,8 +98,8 @@
     <div class="">
       <p class="copyright-text">Copyright © 2019, InfluExpert.AI. All rights reserved.
         <span class="pull-right">
-          <a routerLink="/Terms-and-Conditions" class="footer-link-border">Terms of Use</a>
-          <a routerLink="privacy_policy/">Privacy Policy</a>
+          <a routerLink="/terms" class="footer-link-border">Terms of Use</a>
+          <a routerLink="/privacy">Privacy Policy</a>
         </span>
       </p>
     </div>

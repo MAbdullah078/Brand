@@ -70,7 +70,7 @@
                              <a [routerLink]="['/pricingsub']"> <img src="../../assets/img/subscription50px.png">Subscription</a>
                              <a [routerLink]="['/paymentmethod']"><img src="../../assets/img/payment method50px.png">Payment Method</a>
                              <a [routerLink]="['/gmail']"> <i class="fa fa-history"></i>Gmail</a>
-                             <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a>
+                             <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
                              <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
                              <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
                              <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
@@ -98,11 +98,36 @@
             <div id="search">
                 <div class="searsh-box container">
                     <button type="button" class="close">×</button>
-                    <form #myform id="myform"> <input #searchvalue1 type="search" value="" placeholder="Search to influence with Roar!"  >
+                    <form > 
+                        
+                        <input #searchvalue1 type="search"   (ngModelChange)="find1(searchvalue1.value)" 
+                        [(ngModel)]="getsearch" name="getsearch"
+                        placeholder="Search to influencer with Roar!"  >
                         <i class="fa fa-microphone" id="box"></i>
-                        <button type="submit" class="close"  style=" position: absolute; display:  none"
-                        (click)="find1(searchvalue1.value)">Search</button>
+                        <!-- *ngIf="searchResult.length>0"  -->
+                        <ul class="list-group" style="position:absolute;">
+                                <li (click)="find1(item)" *ngFor="let item of searchResult" class="list-group-item">
+                                  {{item}}
+                                </li>
+                              </ul>
+                        <!-- <button type="submit" class="close"  style=" position: absolute; display:  none"
+                        (click)="find1(searchvalue1.value)">Search</button> -->
                     </form>
+
+
+
+                    <!-- <form>
+                            <div class="form-group ">
+                              <input #query (ngModelChange)="search(query.value)" [(ngModel)]="getsearch" class="form-control "
+                                name="getsearch" placeholder="Search by buyr etc" type="email">
+                              <ul *ngIf="searchResult.length>0" class="list-group" style="position:absolute;">
+                                <li (click)="setFilter(item)" *ngFor="let item of searchResult" class="list-group-item">
+                                  {{item?.name}}
+                                </li>
+                              </ul>
+                            </div>
+                    
+                          </form> -->
                 </div>
             </div>
         </div>
