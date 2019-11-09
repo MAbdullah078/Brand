@@ -300,7 +300,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     
     this.userservice.getAllresult(query).subscribe(res => {
         this.searchResult = res;
-        console.log(this.searchResult);
+        console.log('blogs', this.searchResult.blogs);
+        console.log('medium',this.searchResult.medium);
+        console.log('flicker',this.searchResult.flicker);
+        console.log('periscope',this.searchResult.periscope);
+        console.log('pinterest',this.searchResult.pinterest);
+        console.log('twitter',this.searchResult.twitter);
+        console.log('instagram',this.searchResult.instagram);
+        console.log('youtube',this.searchResult.youtube);
+        console.log('facebook',this.searchResult.facebook);
 
       });
   }

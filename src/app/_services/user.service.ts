@@ -207,7 +207,7 @@ let username =  this.currentUser.username;
 
     getAllresult(obj) {
       return this.http.get(Config.api+'/ml/ses/?query='+obj).map((response: Response) => {
-       response.json();
+      return response.json();
       })
   }
 
