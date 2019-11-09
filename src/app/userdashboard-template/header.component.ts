@@ -298,11 +298,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   find1(query,e) {
     
-    this.userservice.getAllresult(query).subscribe(
-      res => {
-        console.log(res['Data']);
-
-        this.searchResult = res['Data'];
+    this.userservice.getAllresult(query).subscribe(res => {
+        this.searchResult = res;
+        console.log(this.searchResult);
 
       });
   }
