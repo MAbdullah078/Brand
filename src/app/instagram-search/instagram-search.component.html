@@ -140,7 +140,6 @@
   <div class="max-container p-0" *ngIf="!loaded">
     <div class="row m-0 mb-2  " id="myHeader">
         <div class="col-md-2 p-0">
-            <!--<button  class="btn btn-success">Select All</button>-->
             <div id="ck-button">
                 <label>
 
@@ -269,9 +268,7 @@
               </label>
             </div>
           </div>
-          <div class="col-md-4 col-sm-4 center-showing">
-              <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
-            </div>
+         
           <div class="col-md-8 "  *ngIf="loaded&& influencers.totalItems!=0">
               <nav class="text-center">
                 <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
@@ -330,7 +327,9 @@
           </div>
         </div>
       </div>
-
+      <div class="col-md-12 col-sm-12 text-center">
+        <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+      </div>
 
  
     <div class="profile-container" *ngFor="let item of influencers.results" >
@@ -348,14 +347,13 @@
 
 <img [src]="item['image_url']"  class="twitter-image">
 </div>
-          <div class="col-md-7 followers-division">
+          <div class="col-md-2 followers-division">
       
-              <div>
                       <h6 class="m-1">Follower</h6>
                   <h3 class="Follwers-div" >{{item['follower']| thousandSuff}}</h3>
-              </div>
+             
           </div>
-                  <div class="col-md-8">
+                  <div class="col-md-7">
                       <div class="title-name">
                         <div class="d-flex">
                           <img class="social-icon2" src="../../assets/header-images/Insta@1x-.png">

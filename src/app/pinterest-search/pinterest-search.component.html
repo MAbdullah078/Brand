@@ -262,9 +262,7 @@
                         </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-4 center-showing">
-                                <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
-                              </div>
+                       
                         <div class="col-md-8 text-center">
                             <nav>
                                 <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
@@ -310,6 +308,9 @@
 
                         <div class="col-md-2">
                         <button  class="btn add-to-list" (click)="add_create_list()"> Add to list</button>
+                      </div>
+                      <div class="col-md-12 text-center">
+                        <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
                       </div>
                     </div>
                     
