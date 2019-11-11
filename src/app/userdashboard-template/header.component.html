@@ -66,10 +66,10 @@
                             class="fa fa-user-circle"></i> My InfluExpAI <span
                             class="fa fa-angle-down"></span></button>
                         <div class="dropdown-content"> <a [routerLink]="['/my-profile']"> 
-                            <i class="fa fa-user-circle"></i>My Profile</a>
-                             <a [routerLink]="['/pricingsub']"> <i class="fa fa-history"></i>Subscription</a>
-                             <a [routerLink]="['/paymentmethod']"> <i class="fa fa-history"></i>Payment Method</a>
-                             <a [routerLink]="['/gmail']"> <i class="fa fa-history"></i>Gmail</a>
+                            <img src="../../assets/img/my profile50px.png"> My Profile</a>
+                             <a [routerLink]="['/pricingsub']"> <img src="../../assets/img/subscription50px.png">Subscription</a>
+                             <a [routerLink]="['/paymentmethod']"><img src="../../assets/img/payment method50px.png">Payment Method</a>
+                             <a [routerLink]="['/gmail']"><img src="../../assets/img/GAMIL.png">Gmail</a>
                              <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
                              <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
                              <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
@@ -86,8 +86,8 @@
                                                 <a [routerLink]="['/rfm']"> <i class="fas fa-plus"></i>Create RFM</a> 
                                          </div>
                                         </a>
-                                <a [routerLink]="['/update-password']"> <i class="fa fa-key"></i>Change Password</a> 
-                                <a [routerLink]="['/login']" (click)="logout()"> <i class="fas fa-sign-out-alt"></i>Logout</a>
+                                <a [routerLink]="['/update-password']"><img src="../../assets/img//CHange password50px.png">Change Password</a> 
+                                <a [routerLink]="['/login']" (click)="logout()"><img src="../../assets/img/signout50px.png">Logout</a>
                                  </div>
                     </div>
                 </a>
@@ -106,9 +106,61 @@
                         <i class="fa fa-microphone" id="box"></i>
                         <!-- *ngIf="searchResult.length>0"  -->
                         <ul class="list-group" style="position:absolute;">
-                                <li (click)="find1(item)" *ngFor="let item of searchResult" class="list-group-item">
-                                  {{item}}
+                                <li (click)="find1(item)" *ngFor="let item of searchResult.blogs" class="list-group-item">
+                                    Blog Data
+                                  <!-- {{item.description}} -->
+                                  {{item.main_url}}
                                 </li>
+                                <li (click)="find1(item)" *ngFor="let item of searchResult.facebook" class="list-group-item">
+                                    Facebook Data
+                                    <!-- {{item.facebook.image_url}} -->
+                                    <!-- {{item.facebook.title}} -->
+                                    {{item.fb_page_link}}
+                                    
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.twitter" class="list-group-item">
+                                    Twitter Data
+                                    <!-- {{item.image_url}} -->
+                                    <!-- {{item.twitter_name}} -->
+                                    {{item.profile_url}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.youtube" class="list-group-item">
+                                    Youtube Data
+                                    <!-- {{item.thumbnail_url}} -->
+                                    <!-- {{item.name}} -->
+                                    {{item.channel_link}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.pinterest" class="list-group-item">
+                                    Pinterest Data
+                                    <!-- {{item.image}} -->
+                                    <!-- {{item.profile_name}} -->
+                                    {{item.profile_linked}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.periscope" class="list-group-item">
+                                    Periscope Data
+                                    <!-- {{item.image_url}} -->
+                                    <!-- {{item.profile_name}} -->
+                                    {{item.profile_link}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.medium" class="list-group-item">
+                                    Medium Data
+                                    <!-- {{item.image_url}} -->
+                                    {{item.account_link}}
+                                    <!-- {{item.name}} -->
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.flicker" class="list-group-item">
+                                        flicker Data
+                                    <!-- {{item.image_link}} -->
+                                    <!-- {{item.profile_name}} -->
+                                    {{item.profile_linked}}
+                                  </li>
+                                  <li (click)="find1(item)" *ngFor="let item of searchResult.instagram" class="list-group-item">
+                                    Instagram Data
+                                    <!-- {{item.image_url}} -->
+                                    <!-- {{item.name}} -->
+                                    {{item.account_link}}
+                                  </li>
+
                               </ul>
                         <!-- <button type="submit" class="close"  style=" position: absolute; display:  none"
                         (click)="find1(searchvalue1.value)">Search</button> -->

@@ -275,7 +275,7 @@
                   </div>
             </div>
     
-    <div class="col-md-1 followers-division">
+    <div class="col-md-2 followers-division">
     
     
         <img [src]="item['image_url']"  class="twitter-image">
@@ -286,7 +286,7 @@
                     <h3 class="Follwers-div" >{{item['followers']| thousandSuff}}</h3>
                
             </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="title-name">
                           <div class="d-flex">
                               <i class="fab fa-periscope periscope-icon"></i>
@@ -297,7 +297,7 @@
                         <div>
                         <label class="item-loc ml-4"> <i class="fab fa-periscope "></i>  <a  (click)="goTwitterProfile(item['profile_link'])">{{item['profile_link']}}</a></label>
                         <div>
-                        <label class="item-loc ml-4"><i class="fab fa-twitter "></i> <a> {{item['twitter_name']}}
+                        <label class="item-loc ml-4" *ngIf="item['twitter_name']"><i class="fab fa-twitter "></i> <a> {{item['twitter_name']}}
                           </a></label>
                       </div>
                       </div>
@@ -352,6 +352,10 @@
               </label>
             </div>
             </div>
+
+            <div class="col-md-4 col-sm-4 center-showing">
+                <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+              </div>
             <div class="col-md-8  text-center">
                 <nav>
                   <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
@@ -431,7 +435,7 @@
                       <div>
                       <label class="item-loc ml-4"> <i class="fas fa-user-alt"></i>  <a  (click)="goTwitterProfile(item['profile_link'])">{{item['profile_link']}}</a></label>
                       <div>
-                      <label class="item-loc ml-4"><i class="fab fa-periscope "></i>Periscope Name: <a> {{item['twitter_name']}}
+                      <label class="item-loc ml-4" *ngIf="item['twitter_name']"><i class="fab fa-periscope "></i>Periscope Name: <a> {{item['twitter_name']}}
                         </a></label>
                     </div>
                     </div>
