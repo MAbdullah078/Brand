@@ -124,7 +124,7 @@
   width: 100%;
   height: 100%;
 }
-.add-customers-screen .add-customers-screen-in {
+.add-customers-screen .add-customers-screen-in p-4 {
   display: table-cell;
   vertical-align: middle;
   padding: 15px;

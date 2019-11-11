@@ -136,7 +136,7 @@
                                                 <div id="ck-button">
                                                         <label>
                                     
-                                                            <input type="checkbox" class="checkbox custom-control-input" (change)="checkedAll($event.target.checked)" ><span>Select All</span>
+                                                            <input type="checkbox" class="checkbox" (change)="checkedAll($event.target.checked)" ><span>Select All</span>
                                                         </label>
                                                     </div>
                         
@@ -215,7 +215,7 @@
                                                 <!-- <input type="checkbox" class="custom-control-input" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                                                 <label for="table-check-{{item['id']}}"></label> -->
                                                 
-                                                <div class="custom-control custom-checkbox mb-3">
+                                                <div class="custom-control custom-check mb-3">
                                                     <input type="checkbox" class="custom-control-input" id="customCheck"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
                                                     <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
                                                   </div>
@@ -233,7 +233,7 @@
                                 </div> -->
                                 <img [src]="item['image_url']"  class="twitter-image">
                             </div>
-                                            <div class="col-md-2 followers-division">
+                                            <div class="col-md-1 followers-division">
                                                 <!-- <div class="row">
                                                     <label class="tbl-cell tbl-cell-name">
                                                     <img src="../../assets/homepage/images/facebook_24.png">
@@ -245,9 +245,9 @@
                                                     <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                                                 </div>
                                             </div>
-                                                    <div class="col-md-7">
+                                                    <div class="col-md-8">
                                                         <div class="title-name">
-                                                                <i class="fab fa-facebook"></i>
+                                                                <img class="social-icon2" src="../../assets/img/facebook.png">
                                                         <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
                                                         <label class="item-loc" *ngIf="item['category']['location']"> <i class="fas fa-map-marker-alt"></i> {{item['category']['location']}}</label>
                                                         </div>
@@ -342,7 +342,7 @@
                             
                                     <img [src]="item['image_url']"  class="twitter-image">
                                 </div>
-                                                <div class="col-md-2 followers-division">
+                                                <div class="col-md-1 followers-division">
                                                     <!-- <div class="row">
                                                         <label class="Featured Top Facebook Influencers-cell tbl-cell-name">
                                                         <img src="../../assets/homepage/images/facebook_24.png">
@@ -354,7 +354,7 @@
                                                         <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                                                     
                                                 </div>
-                                                        <div class="col-md-7 ">
+                                                        <div class="col-md-8 ">
                                                             <div class="title-name">
                                                            <img  class="social-icon2"  src="../../assets/img/facebook.png">
                                                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
