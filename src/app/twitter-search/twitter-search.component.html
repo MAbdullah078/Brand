@@ -86,20 +86,27 @@
                     </mat-form-field>
                 </div>
             </div>
-            <div class="col-md-12 row text-center ">
-            <div class="col-md-6">
-                <button type="submit"  class="btn btn-primary" >
-                    Search 
-                </button>
-            </div>
-            <div class="col-md-6 ">
+            <!-- <div class="col-md-12 row text-center "> -->
+                <div class="col-sm-12">
+                    <button type="submit"  class="btn btn-primary w-100" >
+                        Search 
+                    </button>
+                </div>
+            <!-- <div class="col-md-6 ">
                     <button type="submit"  class="btn btn-primary" >
                         Clear 
                     </button>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
     </form>
+    <div class="m-0 row mt-2 text-center">
+        <div class="col-sm-12">
+          <button type="submit"  class="btn btn-primary w-100" (click)="clearsearch()" >
+                  Clear Search 
+              </button>
+  </div>
+      </div>
 
     
 </div>
@@ -240,6 +247,8 @@
                         </label>
                     </div>
            </div>
+
+           
           
             <div class="col-md-8 ">
                     <nav class="text-center">
@@ -308,7 +317,7 @@
                             <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
                           </div>
               </div>
-              <div class="col-md-1 followers-division">
+              <div class="col-md-2 followers-division">
                 <img [src]="item['image_url']" class="twitter-image" >
               </div>
       
@@ -318,7 +327,7 @@
                         <h6 class="m-1">Likes:</h6>
                         <h3 class="Follwers-div" >{{item['likes'] | thousandSuff}}</h3>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7">
                         <div class="d-flex">
                                 <img  class="social-icon2" src="../../assets/img/twitter.png">
                           <label class="tbl-cell tbl-cell-name">{{item['twitter_name']}}</label>
@@ -330,7 +339,7 @@
                 <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
                 <span class="right-item" ><i class="fab fa-twitter"></i></span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
                 <div>
-                <span class="right-item" ><i class="fas fa-globe"></i> </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+                <span class="right-item" *ngIf="item['website']" ><i class="fas fa-globe"></i> </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
             </div>    
             </div>
                  <div class="row">
@@ -351,7 +360,7 @@
                         <span class="right-item"> <i class="fab fa-twitter" ></i>Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
                     </div>
                     <div>
-                        <span class="right-item"><i class="fa fa-upload" ></i>Date Joined :</span> <span class="list-item1">{{item['joined_date']}}</span> 
+                        <span class="right-item" *ngIf="item['joined_date']"><i class="fa fa-upload" ></i>Date Joined :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                     </div>
                 </div>
                     <div class="col-md-4">
@@ -367,6 +376,8 @@
    
           </div>
         </div>
+
+
 
 
 <div class="col-md-12 p-2 mt-1 ">
@@ -473,7 +484,7 @@
                                     <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
                                   </div>
                       </div>
-                      <div class="col-md-1 followers-division">
+                      <div class="col-md-2 followers-division">
                         <img [src]="item['image_url']" class="twitter-image" >
                       </div>
               
@@ -483,7 +494,7 @@
                                 <h6 class="m-1">Likes:</h6>
                                 <h3 class="Follwers-div" >{{item['likes'] | thousandSuff}}</h3>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-7">
                                 <div class="d-flex">
                                         <img  class="social-icon2" src="../../assets/img/twitter.png">
                                   <label class="tbl-cell tbl-cell-name">{{item['twitter_name']}}</label>
@@ -495,7 +506,7 @@
                         <!-- <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile:  <a style="color: #0a6aa1; font-weight: bolder">{{item['tweets_count']}}</a></label> -->
                         <span class="right-item" ><i class="fab fa-twitter"></i> </span> <span class="list-item1" (click)="goTwitterProfile_by_default(item['profile_url'])">{{item['profile_url']}}</span>
                         <div>
-                        <span class="right-item"><i class="fas fa-globe"></i> </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
+                        <span class="right-item" *ngIf="item['website']"><i class="fas fa-globe"></i> </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span>
                     </div>
                         </div>
                          <div class="row">
@@ -516,7 +527,7 @@
                                 <span class="right-item"> <i class="fab fa-twitter" ></i>Tweets :</span> <span class="list-item1">{{item['tweets_count'] | thousandSuff}}  </span>
                             </div>
                             <div>
-                                <span class="right-item"><i class="fa fa-upload" ></i>Date Joined :</span> <span class="list-item1">{{item['joined_date']}}</span> 
+                                <span class="right-item" *ngIf="item['joined_date']"><i class="fa fa-upload" ></i>Date Joined :</span> <span class="list-item1">{{item['joined_date']}}</span> 
                             </div>
                         </div>
                             <div class="col-md-4">
@@ -610,8 +621,8 @@
                             <ul style="display: flex; padding-top: 5px">
                                 <!--<li style="font-weight: bolder"> Videos Uploads | </li>-->
                                 <!--<li><span class="right-item"> <i class="fa fa-file-video-o" style="font-size:16px;color:#0a4069"></i> Tweets :</span> <span class="list-item1">{{item['tweets_count']}} |   </span></li>-->
-                                <li><span class="right-item"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Date Joined :</span> <span class="list-item1">{{item['joined_date']}} |  </span> </li>
-                                <li><span class="right-item"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i>  Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span></li>
+                                <li><span class="right-item" *ngIf="item['joined_date']"><i class="fa fa-upload" style="font-size:16px;color:#0a4069; padding-left: 5px"></i> Date Joined :</span> <span class="list-item1">{{item['joined_date']}} |  </span> </li>
+                                <li><span class="right-item" *ngIf="item['website']"><i class="fa fa-newspaper-o" style="font-size:16px;color:#0a4069"></i>  Web Link: </span> <span class="list-item1" (click)="goTwitterProfile(item['website'])">{{item['website']}}</span></li>
                                 <!--<li><span class="right-item"><i class="fa fa-random" style="font-size:16px;color:#0a4069"></i> Last Month:</span> <span class="list-item1">{{item['last_month_upload_videos']}}</span></li>-->
 
                             </ul>

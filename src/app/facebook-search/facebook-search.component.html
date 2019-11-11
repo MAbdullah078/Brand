@@ -92,21 +92,23 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-                                <div class="col-md-12 row text-center">
-                                    <div class="col-md-6">
-                                    <button type="submit"  class="btn btn-primary" >
+                                <!-- <div class="col-md-12 row text-center"> -->
+                                    <div class="col-sm-12">
+                                    <button type="submit"  class="btn btn-primary w-100" >
                                         Search 
                                     </button>
                                 </div>
-                                <div class="col-md-6">
-                                        <button type="submit"  class="btn btn-primary" >
-                                                Clear 
-                                            </button>
-                                </div>
-                                </div>
+                                <!-- </div> -->
                             </div>
                         
                             </form>
+                            <div class="m-0 row mt-2 text-center">
+                                <div class="col-sm-12">
+                                  <button type="submit"  class="btn btn-primary w-100" (click)="clearsearch()" >
+                                          Clear Search 
+                                      </button>
+                          </div>
+                              </div>
                             
             </div>
             <div class="facebook-content">
@@ -221,7 +223,7 @@
                                             
                                             </div>
                             
-                            <div class="col-md-1 followers-division">
+                            <div class="col-md-2 followers-division">
                             
                                 <!-- <div class="row" >
                                     <label style="color: #919fa9;  margin-top: 30%; font-size: 20px;padding-left: 23%; padding-bottom: 0%">Likes: </label>
@@ -243,7 +245,7 @@
                                                     <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                                                 </div>
                                             </div>
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-7">
                                                         <div class="title-name">
                                                                 <i class="fab fa-facebook"></i>
                                                         <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
@@ -336,7 +338,7 @@
                                                           </div>
                                                 </div>
                                 
-                                <div class="col-md-1 followers-division">
+                                <div class="col-md-2 followers-division">
                             
                                     <img [src]="item['image_url']"  class="twitter-image">
                                 </div>
@@ -352,7 +354,7 @@
                                                         <h3 class="Follwers-div" >{{item['likes']| thousandSuff}}</h3>
                                                     
                                                 </div>
-                                                        <div class="col-md-8 p-2">
+                                                        <div class="col-md-7 ">
                                                             <div class="title-name">
                                                            <img  class="social-icon2"  src="../../assets/img/facebook.png">
                                                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>

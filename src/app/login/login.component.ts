@@ -9,11 +9,13 @@ import {FormControl, NgForm, Validators} from '@angular/forms';
 import {RecapchaService} from '../recapcha/recapcha.service';
 import swal from "sweetalert2";
 import { HttpClient } from '@angular/common/http';
+import { ViewChild } from '@angular/core';
 import { AuthService } from 'angular5-social-login';
 import {  Headers, RequestOptions,  } from '@angular/http';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angular5-social-login';
 // import { JwtHelper } from 'angular2-jwt';
-import {JwtHelperService} from '@auth0/angular-jwt'
+import {JwtHelperService} from '@auth0/angular-jwt';
+import { RecapchaComponent } from '../recapcha/recapcha.component';
 // import { JwtHelper } from 'angular2-jwt';
 
 @Component({
@@ -40,6 +42,7 @@ export class LoginComponent implements OnInit {
     ]);
     passwordFormControl = new FormControl('', [
         Validators.required]);
+        @ViewChild(RecapchaComponent) captcha: RecapchaComponent;
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -112,14 +115,6 @@ export class LoginComponent implements OnInit {
         });
       }
     
-
-
-
-
-
-
-
-
     facebooklogin(): void {
         this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(this.socialCallBack).catch(user => console.log(user));
     
@@ -178,7 +173,7 @@ export class LoginComponent implements OnInit {
                               this.recptha.resetImg();
                         }
                         // swal('Invalid username or password', 'error');
-                        if(error.status== 400){
+                        else if(error.status== 400){
                         swal.fire({
                             type: 'error',
                             title: 'Wrong Credantials',
@@ -188,13 +183,30 @@ export class LoginComponent implements OnInit {
                             timer: 2000
                       
                           });
-                          this.recptha.resetImg();
+                          // this.recptha.resetImg();
                         }
-                    //    this.recptha.capchaText = "";
-                    // error => {
-                    //     this.alertService.error('Invalid username or password.');
                      });
         }
+        else {
+          this.recptha.resetImg();
+          swal.fire({
+            type: 'error',
+            title: 'Recaptcha Confirmation',
+            text: 'Please confirm you are not a robot',
+            showConfirmButton: false,
+            width: '512px',
+            timer: 2000
+          });
+        }
+    }
+    robot(){
+      swal.fire({
+        type: 'error',
+        title: 'Please confirm that you are not a robot',
+        showConfirmButton: false,
+        width: '512px',
+        timer: 2000
+      });
     }
     doThis() {
 

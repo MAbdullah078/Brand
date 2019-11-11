@@ -43,14 +43,21 @@
                 </div>
         
 
-            <div class="col-md-12  text-center">
-                <button type="submit"  class="btn btn-primary search-button" >
-                    Search <i class="fa fa-sliders"></i>
-                </button>
-            </div>
+                <div class="col-sm-12">
+                    <button type="submit"  class="btn btn-primary w-100" >
+                        Search 
+                    </button>
+                </div>
         
     </div>
     </form>
+    <div class="m-0 row mt-2 text-center">
+        <div class="col-sm-12">
+          <button type="submit"  class="btn btn-primary w-100" (click)="clearsearch()" >
+                  Clear Search 
+              </button>
+  </div>
+      </div>
 </div>
 <div class="facebook-content">
 <p-overlayPanel #op>
@@ -164,7 +171,7 @@
 <div class="SickyPage" *ngIf="loaded&& blogs.totalItems!=0">
         <div class="row" >
             <div class="container-fluid ">
-                <mat-tab-group   >
+                <!-- <mat-tab-group   >
 
 
                     <mat-tab class="font-icon font-icon-page" label="Web" style="margin: 0 auto">
@@ -252,7 +259,7 @@
                         </div>
 
                     </mat-tab>
-                </mat-tab-group>
+                </mat-tab-group> -->
             </div>
         </div>
           
@@ -588,6 +595,9 @@
                             </label>
                         </div>
                         </div>
+                        <div class="col-md-4 col-sm-4 center-showing">
+                                <h5 style="margin: 10px">Displaying {{blogs.results.length}} of {{blogs.totalItems}} Results</h5>
+                              </div>
                         <div class="col-md-8">
                             <nav class="text-center"> 
                                 <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg" >
@@ -664,7 +674,7 @@
                               <div class="d-flex">
                                     <i class="fab fa-blogger-b"></i>
                             <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
-                            <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
+                            <label class="item-loc" *ngIf="item['location']"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
                           </div>
                       
                             </div>
@@ -1105,7 +1115,7 @@
                                   <div class="d-flex">
                                         <i class="fab fa-blogger-b"></i>
                                 <label class="tbl-cell tbl-cell-name">{{item['title']}}</label>
-                                <label class="item-loc"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
+                                <label class="item-loc" *ngIf="item['location']"> <i class="fas fa-map-marker-alt"></i> {{item['location']}}</label>
                               </div>
                           
                                 </div>

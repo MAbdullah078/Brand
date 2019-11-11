@@ -6,6 +6,7 @@ import {Http} from '@angular/http';
 import { User } from '../_models';
 import {tap} from 'rxjs/operators';
 import Swal from 'sweetalert2';
+import { query } from '@angular/core/src/render3';
 
 @Injectable({
   providedIn: 'root'
@@ -194,14 +195,29 @@ let username =  this.currentUser.username;
     }
 
     gmail(){
-      alert(JSON.parse(localStorage.getItem('currentUser')).token);
+      // alert(JSON.parse(localStorage.getItem('currentUser')).token);
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
       let headers = new Headers({'Authorization': 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token});
       headers.append('Content-Type', 'application/json');
       // let username = localStorage.getItem('username');
-      return this.http.get('http://192.168.29.166:8000/email/gmailAuthenticate/',{headers: headers}).map((response: Response) => { response.json();
+      return this.http.get(Config.api+'/email/gmailAuthenticate/',{headers: headers}).map((response: Response) => { response.json();
       })
       
     }
+
+    getAllresult(obj) {
+      return this.http.get(Config.api+'/ml/ses/?query='+obj).map((response: Response) => {
+      return response.json();
+      })
+  }
+
+
+    // https://apis.influexpai.com/ml/ses/?query=b
+
+    // generalsearch(query) {
+    //   const headers = new Headers();
+    //   headers.append('Content-Type', 'application/json');
+    //   return this.http.get(Config.api + '/ml/ses/?query=' + query , { headers: headers }).map((response: Response) => response.json());
+    // }
 
 }
