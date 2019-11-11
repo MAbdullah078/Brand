@@ -295,7 +295,7 @@ mat-tab-group{
   border-radius: 5px;
   background-color: #fff;
   /* box-shadow: 0 0px 4px #ccc; */
-  /* box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important; */
+  /* box-shadow: 0 1px 5px #ccc; */
   display: inline-block;
   /*height: 165px;*/
   border-bottom:1px solid #f1f1f1
@@ -371,7 +371,7 @@ mat-tab-group{
   background: #000;
   color: #fff;
   float: right;
-  padding:6px 26px;
+  padding:6px 16px;
   border-radius: 50px;
   box-shadow: 0 5px 5px #ccc;
 }
@@ -32030,5 +32030,8 @@ body {
   width: 100% !important;
 }
 .signin-signup .mat-form-field-appearance-legacy .mat-form-field-label {
-  top: 2.18125em;
+  top: 1.88125em;
+}
+.mat-form-field-label{
+  font-weight: 600 !important;
 }

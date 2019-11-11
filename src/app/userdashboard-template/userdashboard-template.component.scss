@@ -141,8 +141,8 @@ color: #79CDCD;
   //font-weight: 500;
   font-size: 16px;
   padding: 5px 0;
-  -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  box-shadow: 0 1px 5px #ccc;
+  box-shadow: 0 1px 5px #ccc;
 }
 .sh-n-table table tbody tr td {
   width: 300px;

@@ -7336,8 +7336,8 @@ textarea.form-control {
 .tasks-grid .header {
     margin-bottom: 12px;
     background: #ffffff;
-    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+    box-shadow: 0 1px 5px #ccc;
+    box-shadow: 0 1px 5px #ccc;
 }
 
 .tasks-grid .header .tasks-grid-col-title {
