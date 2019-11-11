@@ -136,7 +136,7 @@
             <div class="col-md-4">
               <div [ngClass]="{ 'has-error':!recaptcha}">
                 <app-recapcha></app-recapcha>
-  <div *ngIf="!recaptcha" >Recaptcha is require</div>
+  <div *ngIf="!recaptcha" > Please confirm that you are not a Robot.</div>
             </div>
             </div>
             <div class="col-md-8 p-0">
@@ -270,7 +270,7 @@
               <div class="row">
                 <div class="col-lg-12 mt10px" [ngClass]="{ 'has-error':!recaptcha}">
                                 <app-recapcha></app-recapcha>
-                  <div  style="font-size: 21px;font-weight: bold;color: red"  *ngIf="!recaptcha" >Recaptcha is require</div>
+                  <div  style="font-size: 21px;font-weight: bold;color: red"  *ngIf="!recaptcha" > Please confirm that you are not a Robot.</div>
                 </div>
               </div>
             <div class="footer text-center">
