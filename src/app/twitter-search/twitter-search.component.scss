@@ -216,24 +216,8 @@ mat-form-field{
 input[type=checkbox]{
   zoom: 1.5;
 }
-.tbl-cell{
-  font-weight: 600;
-  font-size: 14px;
-  padding-top: 12px;
-  margin:0px
 
-}
-i{
-  color: #000;
-}
 
-.item-content{
- 
-  color: #4e5f6b;
-  font-size: 12px;
-  font-weight: 500!important;
-  margin: 0;
-}
 
 .influcener-div{
   box-shadow: 0 0 12px #ccc;
@@ -241,13 +225,7 @@ i{
     padding: 0;
     border-radius: 15px;
 }
-.item-loc{
-  color: #919fa9;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  margin:0!important
-}
+
 .progress-url{
   margin: 0;
   list-style: none;
@@ -321,17 +299,6 @@ mat-tab-header{
   display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.twitter-image{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-.item-content{
-
-  color: #6a6794;
-  font-size: 12px;
-  font-family: Roboto,sans-serif;
 }
 .title-name img{
   width: 40px

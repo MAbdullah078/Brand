@@ -12,6 +12,7 @@
                 </a>
             </div>
             <div class="">
+                <button routerLink="/login">Connect to google</button>
                 <div class="nav-Bar">
                         <a
                         [routerLink]="['/instagram/search']" routerlinkactive="active"> <img alt=""
@@ -99,20 +100,22 @@
             <div id="search">
                 <div class="searsh-box container">
                     <button type="button" class="close">×</button>
-                    <form > 
+                    <form  class="search-form"> 
                         
                         <input #searchvalue1 type="search"   (ngModelChange)="find1(searchvalue1.value)" 
                         [(ngModel)]="getsearch" name="getsearch"
                         placeholder="Search to influencer with Roar!"  >
                         <i class="fa fa-microphone" id="box"></i>
                         <!-- *ngIf="searchResult.length>0"  -->
-                        <ul class="list-group" style="position:absolute;">
-                                <li (click)="find1(item)" *ngFor="let item of searchResult.blogs" class="list-group-item">
+                        <ul class="list-group list-normal" style="position:absolute;">
+                                <li (click)="find1(item)" *ngFor="let item of searchResult.blogs" class="list-group-item ">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Blog Data
                                   <!-- {{item.description}} -->
                                   {{item.main_url}}
                                 </li>
                                 <li (click)="find1(item)" *ngFor="let item of searchResult.facebook" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Facebook Data
                                     <!-- {{item.facebook.image_url}} -->
                                     <!-- {{item.facebook.title}} -->
@@ -120,30 +123,35 @@
                                     
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.twitter" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Twitter Data
                                     <!-- {{item.image_url}} -->
                                     <!-- {{item.twitter_name}} -->
                                     {{item.profile_url}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.youtube" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Youtube Data
                                     <!-- {{item.thumbnail_url}} -->
                                     <!-- {{item.name}} -->
                                     {{item.channel_link}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.pinterest" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Pinterest Data
                                     <!-- {{item.image}} -->
                                     <!-- {{item.profile_name}} -->
                                     {{item.profile_linked}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.periscope" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Periscope Data
                                     <!-- {{item.image_url}} -->
                                     <!-- {{item.profile_name}} -->
                                     {{item.profile_link}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.medium" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Medium Data
                                     <!-- {{item.image_url}} -->
                                     {{item.account_link}}

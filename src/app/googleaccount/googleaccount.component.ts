@@ -23,7 +23,7 @@ export class GoogleaccountComponent implements OnInit {
     this.endRequest = this.test.googleaccounts(uid)
       .subscribe(
         data => {
-
+// alert('testing google')
         });
   }
 }
