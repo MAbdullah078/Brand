@@ -42,7 +42,7 @@ export const AppRoutes: Routes = [
         path: 'what-is-InfluExpAI',
         component: WhatIsInfluexpaiComponent
     },
-    { path: 'googleaccount/:code' , component : GoogleaccountComponent},
+    { path: 'googleaccount/code' , component : GoogleaccountComponent},
     {
         path: 'How-It-Works',
         component: HowItWorksComponent
