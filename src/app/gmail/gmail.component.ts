@@ -35,7 +35,7 @@ export class GmailComponent implements OnInit {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
       let headers = new Headers({'Authorization': 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token});
       headers.append('Content-Type', 'application/json');
-    return this.http.get('http://192.168.29.166:8000//email/gmailAuthenticate',{headers:headers}).subscribe(data=>{
+    return this.http.get('http://192.168.29.166:8000/email/gmailAuthenticate',{headers:headers}).subscribe(data=>{
       this.data=data.json()
       this.link=this.data['link']
       if(this.link!=''){

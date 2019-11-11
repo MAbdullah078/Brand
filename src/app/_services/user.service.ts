@@ -206,8 +206,8 @@ let username =  this.currentUser.username;
     }
 
     getAllresult(obj) {
-      return this.http.get(Config.api+'/ml/ses/?query='+obj).pipe(tap((response: Response) => {
-        return response.json();
+      return this.http.get('http://192.168.29.166:8000/ml/ses/?query='+obj).pipe(tap((response: Response) => {
+         response.json();
       }))
   }
 

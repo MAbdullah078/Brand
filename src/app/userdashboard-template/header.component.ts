@@ -300,9 +300,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     
     this.userservice.getAllresult(query).subscribe(
       res => {
-        console.log(res['Data']);
 
-        this.searchResult = res['Data'];
+        this.searchResult = res.json();
+        console.log(this.searchResult);
 
       });
   }
