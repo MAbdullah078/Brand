@@ -213,20 +213,15 @@ mat-tab-group{
   width: 20px;
   height: 20px;
 }
-.tbl-cell{
-  font-weight: 600;
-  font-size: 16px;
-  margin: 3px;
-}
 .custom-control-input:checked~.custom-control-label::before {
   color: #fff;
   border-color: #f83f70;
   background-color: #b82573;
 }
 .fa-map-marker-alt {
-  margin-top: 13px;
-  font-size: 14px;
-  color: #b74545!important
+  margin: 8px 0 7px 9px;
+  font-size: 16px;
+  color: #b74545!important;
 }
 .followers-division{
   display: flex;
@@ -237,7 +232,7 @@ mat-tab-group{
 .tbl-cell {
   font-weight: 600;
   font-size: 16px;
-  margin: 8px;
+  margin: 4px 0 3px 4px;
   font-family: Roboto,sans-serif;
 }
 .fa-random {
@@ -307,7 +302,7 @@ mat-tab-group{
   font-size:15px
 }
 .Follwers-div{
-  color: #e613e0!important;
+  color: #000!important;
   text-align: center;
   font-size:30px
 }
@@ -325,8 +320,8 @@ mat-tab-group{
   border-radius: 50%
 }
 .social-icon2{
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin-top: 8px;
 }
 .fa-twitter {
@@ -31667,6 +31662,9 @@ body:not(.no-transition) #wrapper {
   padding: 6px 26px;
   box-shadow: 0 5px 5px #ccc;
   border-radius:50px;
+    }
+    .btn-primary:focus{
+      box-shadow:none!important
     }
 .btn-primary:hover{
   background: #000!important;

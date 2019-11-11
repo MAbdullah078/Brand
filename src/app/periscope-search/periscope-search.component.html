@@ -223,7 +223,7 @@
     <div class="container-fluid" *ngIf="loaded && influencers.totalItems==0">
         <div class="box-typical box-typical-full-height" style="min-height: 119px;">
           <div class="add-customers-screen tbl" style="height: 119px;">
-            <div class="add-customers-screen-in">
+            <div class="add-customers-screen-in p-4">
               <div class="add-customers-screen-user">
                 <i class="font-icon font-icon-user"></i>
               </div>
@@ -280,16 +280,16 @@
     
         <img [src]="item['image_url']"  class="twitter-image">
     </div>
-            <div class="col-md-2 followers-division">
+            <div class="col-md-1 followers-division">
                 
                         <h6 class="m-0">Followers:</h6>
                     <h3 class="Follwers-div" >{{item['followers']| thousandSuff}}</h3>
                
             </div>
-                    <div class="col-md-7">
+                    <div class="col-md-8">
                         <div class="title-name">
                           <div class="d-flex">
-                              <i class="fab fa-periscope periscope-icon"></i>
+                            <img class="social-icon2" src="../../assets/img/periscope_16.png">
                         <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
                       </div>
                       <label *ngIf="item.description.length>0" class="item-content ml-4"> {{item['description']}}</label>
@@ -353,9 +353,7 @@
             </div>
             </div>
 
-            <div class="col-md-4 col-sm-4 center-showing">
-                <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
-              </div>
+          
             <div class="col-md-8  text-center">
                 <nav>
                   <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
@@ -401,6 +399,9 @@
             <div class="col-md-2">
             <button  class="btn add-to-list  " (click)="add_create_list()"> Add to list</button>
           </div>
+          <div class="col-md-12 text-center">
+            <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
+          </div>
         </div>
         <div class="profile-container" *ngFor="let item of influencers.results" >
       <div class="row">
@@ -413,12 +414,12 @@
                 </div>
           </div>
   
-  <div class="col-md-1 followers-division">
+  <div class="col-md-2 followers-division">
   
   
       <img [src]="item['image_url']"  class="twitter-image">
   </div>
-          <div class="col-md-2 followers-division">
+          <div class="col-md-1 followers-division">
        
                       <h6 class="m-0">Followers:</h6>
                   <h3 class="item-content" >{{item['followers']| thousandSuff}}</h3>
@@ -427,7 +428,7 @@
                   <div class="col-md-8">
                       <div class="title-name">
                         <div class="d-flex">
-                            <i class="fab fa-periscope periscope-icon"></i>
+                            <img src="../../assets/img/periscope.png">
                       <label class="tbl-cell tbl-cell-name">{{item['profile_name']}}</label>
                     </div>
                 
