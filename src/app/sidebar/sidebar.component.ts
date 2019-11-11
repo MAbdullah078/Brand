@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import swal from 'sweetalert2';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -62,7 +61,7 @@ export class SidebarComponent {
 
         swal.fire({
             type: 'success',
-            title: 'You have sucessfully logged out from RFPGurus',
+            title: 'You have sucessfully logged out from Influexpert.AI',
             showConfirmButton: false,
             timer: 1500
         });

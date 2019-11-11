@@ -71,15 +71,16 @@
                              <a [routerLink]="['/paymentmethod']"><img src="../../assets/img/payment method50px.png">Payment Method</a>
                              <a [routerLink]="['/gmail']"><img src="../../assets/img/GAMIL.png">Gmail</a>
                              <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
-                             <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
-                             <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
-                             <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
-                             <a [routerLink]="['/twitter/search']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
-                             <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
-                             <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
-                             <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
-                             <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
-                          
+                             <a href="/dashboard" (click)="get_value_names_fb()" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_yt()"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_in()"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
+                             <a href="/dashboard" (click)="get_value()"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
+                             <a href="/dashboard" (click)="get_value_dd()"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_pt()"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
+                             <a href="/dashboard" (click)="get_value_meduim()"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_fl()"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
+                             <a hfre="/dashboard" (click)="get_value_periscope()"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Periscope Campaign</a>
+
                                     <a class="rfm-anchor" [routerLink]="['/my-rfm']"> <i class="fas fa-bookmark"></i>RFM
                                         <div class="dropdown-content rfm-dropdown">
                                                 <a [routerLink]="['/my-rfm']"> <i class="fas fa-book-reader"></i>My RFM</a> 
