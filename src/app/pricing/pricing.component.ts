@@ -285,8 +285,8 @@ export class PricingComponent implements OnInit {
                               this.nofound = true;
 
                           })
-                  } else {
-                      this.nofound = true;
+                  } else if (data['message'] == "Not subscribe user"){
+                      this.nofound = false;
                       // alert(this.nofound)
                   }
               },

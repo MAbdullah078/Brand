@@ -15,12 +15,15 @@ export class GoogleaccountComponent implements OnInit {
     private router: Router,private test : GoogleaccountService) { }
 
   ngOnInit() {
-    this.endRequest = this.sub = this.route.params.subscribe(params => {
-      this.authenticate(params['code']);
-    });
+      
+       this.sub = this.route.params.subscribe(params => {
+        this.authenticate(params['code']);
+     
+  console.log(params['code']);
+      });
   }
   authenticate(uid) {
-    this.endRequest = this.test.googleaccounts(uid)
+     this.test.googleaccounts(uid)
       .subscribe(
         data => {
 // alert('testing google')

@@ -12,15 +12,13 @@ import swal from 'sweetalert2';
 export class GoogleaccountService {
   currentUser;
   constructor(private http : Http) { }
-  googleaccounts(code){
-    alert('google');
-    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+  googleaccounts(uid){
+    // alert('google');
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + currentUser.token});
     headers.append('Content-Type', 'application/json');
     // let username = localStorage.getItem('username');
-    return this.http.get('https://apis.influexpai.com/email/oauth2callback/' + code,{headers: headers}).map((response: Response) => {
-
-    })
-    
+    return this.http.get('http://192.168.29.164:8000/email/oauth2callback/' + uid,{headers: headers})
+  
   }
 }
