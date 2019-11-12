@@ -12,89 +12,96 @@
                 </a>
             </div>
             <div class="">
-                <button routerLink="/login">Connect to google</button>
-                <div class="nav-Bar">
-                        <a
-                        [routerLink]="['/instagram/search']" routerlinkactive="active"> <img alt=""
-                                                                                             src="../../assets/header-images/Insta@1x-.png">  </a>
-                    <a [routerLink]="['/facebook/search']" routerlinkactive="active" class="active">
-                    <img alt="" src="../../assets/header-images/Fb@1x-.png"> 
-                 </a> <a
-                        [routerLink]="['/youtube/search']" routerlinkactive="active"> <img
-                        src="../../assets/header-images/YouTube@1x-.png">  </a> <a
-                        [routerLink]="['/twitter/search']" routerlinkactive="active"> <img alt=""
-                                                                                           src="../../assets/header-images/Twitter@1x-.png">  </a> <a
-                        [routerLink]="['/blogosphere/search']" routerlinkactive="active"> <img alt=""
-                                                                                               src="../../assets/header-images/Blog@1x-.png">  </a> 
-                                                                                               
-                    <a [routerLink]="['/pinterest/search']" routerlinkactive="active">
-                        <img alt=""  src="../../assets/header-images/Pin@1x-.png"> 
-                    </a>
-                    <a [routerLink]="['/periscope/search']" routerlinkactive="active">
-                        <img alt=""  src="../../assets/img/periscope_24.png"> 
-                    </a>
-                    <a [routerLink]="['/medium/search']" routerlinkactive="active">
-                        <img alt=""  src="../../assets/header-images/medium.png"> 
-                    </a>
-                    <a [routerLink]="['/flickr/search']" routerlinkactive="active">
-                        <img alt=""  src="../../assets/header-images/flickr_32.png" height="25">
-                    </a>
-
-
-
-
-                    <!-- <div class="dropdown"> <button class="dropbtn"> <i
-                        class="fa fa-user-circle"></i> Web Campaign <span
-                        class="fa fa-angle-down"></span></button>
-                    <div class="dropdown-content">
-                         <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a>
-                         <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
-                         <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
-                         <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
-                         <a [routerLink]="['/twitter/search']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
-                         <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
-                         <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
-                         <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
-                         <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
-                             </div>
-                </div> -->
-                 
-                        <a class="font-additional color-main text-uppercase hover-focus-color"
-                            data-target=".example-modal-lg" data-toggle="modal" href="#search" id="icon-type-to-search">
-                        <button class="top-search-btn" id="serbtn"> <img src="../../assets/img/search.png"> </button> </a>
-                        <a>
-                    <div class="dropdown" *ngIf="check_login()"> <button class="dropbtn"> <i
-                            class="fa fa-user-circle"></i> My InfluExpAI <span
-                            class="fa fa-angle-down"></span></button>
-                        <div class="dropdown-content"> <a [routerLink]="['/my-profile']"> 
-                            <img src="../../assets/img/my profile50px.png"> My Profile</a>
-                             <a [routerLink]="['/pricingsub']"> <img src="../../assets/img/subscription50px.png">Subscription</a>
-                             <a [routerLink]="['/paymentmethod']"><img src="../../assets/img/payment method50px.png">Payment Method</a>
-                             <a [routerLink]="['/gmail']"><img src="../../assets/img/GAMIL.png">Gmail</a>
-                             <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
-                             <a href="/dashboard" (click)="get_value_names_fb()" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
-                             <a href="/dashboard" (click)="get_value_names_yt()"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
-                             <a href="/dashboard" (click)="get_value_names_in()"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
-                             <a href="/dashboard" (click)="get_value()"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
-                             <a href="/dashboard" (click)="get_value_dd()"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
-                             <a href="/dashboard" (click)="get_value_names_pt()"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
-                             <a href="/dashboard" (click)="get_value_meduim()"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
-                             <a href="/dashboard" (click)="get_value_names_fl()"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
-                             <a hfre="/dashboard" (click)="get_value_periscope()"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Periscope Campaign</a>
-
-                                    <a class="rfm-anchor" [routerLink]="['/my-rfm']"> <i class="fas fa-bookmark"></i>RFM
-                                        <div class="dropdown-content rfm-dropdown">
-                                                <a [routerLink]="['/my-rfm']"> <i class="fas fa-book-reader"></i>My RFM</a> 
-                                                <a [routerLink]="['/rfm']"> <i class="fas fa-plus"></i>Create RFM</a> 
-                                         </div>
-                                        </a>
-                                <a [routerLink]="['/update-password']"><img src="../../assets/img//CHange password50px.png">Change Password</a> 
-                                <a [routerLink]="['/login']" (click)="logout()"><img src="../../assets/img/signout50px.png">Logout</a>
-                                 </div>
-                    </div>
+              <!-- <button routerLink="/login">Connect to google</button> -->
+              <div class="nav-Bar">
+                <button routerLink="/login" class="btn btn-priamry">
+                    Connect to Google
+                </button>
+                <a [routerLink]="['/instagram/search']" routerlinkactive="active"> <img alt=""
+                    src="../../assets/header-images/Insta@1x-.png"> </a>
+                <a [routerLink]="['/facebook/search']" routerlinkactive="active" class="active">
+                  <img alt="" src="../../assets/header-images/Fb@1x-.png">
+                </a> <a [routerLink]="['/youtube/search']" routerlinkactive="active"> <img
+                    src="../../assets/header-images/YouTube@1x-.png"> </a> <a [routerLink]="['/twitter/search']"
+                  routerlinkactive="active"> <img alt="" src="../../assets/header-images/Twitter@1x-.png"> </a> <a
+                  [routerLink]="['/blogosphere/search']" routerlinkactive="active"> <img alt=""
+                    src="../../assets/header-images/Blog@1x-.png"> </a>
+            
+                <a [routerLink]="['/pinterest/search']" routerlinkactive="active">
+                  <img alt="" src="../../assets/header-images/Pin@1x-.png">
                 </a>
-                </div>
-
+                <a [routerLink]="['/periscope/search']" routerlinkactive="active">
+                  <img alt="" src="../../assets/img/periscope_24.png">
+                </a>
+                <a [routerLink]="['/medium/search']" routerlinkactive="active">
+                  <img alt="" src="../../assets/header-images/medium.png">
+                </a>
+                <a [routerLink]="['/flickr/search']" routerlinkactive="active">
+                  <img alt="" src="../../assets/header-images/flickr_32.png" height="25">
+                </a>
+            
+            
+            
+            
+                <!-- <div class="dropdown"> <button class="dropbtn"> <i
+                                    class="fa fa-user-circle"></i> Web Campaign <span
+                                    class="fa fa-angle-down"></span></button>
+                                <div class="dropdown-content">
+                                     <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a>
+                                     <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
+                                     <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
+                                     <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
+                                     <a [routerLink]="['/twitter/search']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
+                                     <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
+                                     <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
+                                     <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
+                                     <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
+                                         </div>
+                            </div> -->
+            
+                <a class="font-additional color-main text-uppercase hover-focus-color" data-target=".example-modal-lg"
+                  data-toggle="modal" href="#search" id="icon-type-to-search">
+                  <button class="top-search-btn" id="serbtn"> <img src="../../assets/img/search.png"> </button> </a>
+                <a>
+                  <div class="dropdown" *ngIf="check_login()"> <button class="dropbtn"> <i class="fa fa-user-circle"></i> My
+                      InfluExpAI <span class="fa fa-angle-down"></span></button>
+                    <div class="dropdown-content"> <a [routerLink]="['/my-profile']">
+                        <img src="../../assets/img/my profile50px.png"> My Profile</a>
+                      <a [routerLink]="['/pricingsub']"> <img src="../../assets/img/subscription50px.png">Subscription</a>
+                      <a [routerLink]="['/paymentmethod']"><img src="../../assets/img/payment method50px.png">Payment Method</a>
+                      <a [routerLink]="['/gmail']"><img src="../../assets/img/GAMIL.png">Gmail</a>
+                      <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
+                      <a [routerLink]="['/facebook/search']"> <img class="dropdown-images"
+                          src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
+                      <a [routerLink]="['/youtube/search']"> <img class="dropdown-images"
+                          src="../../assets/header-images/YouTube@1x-.png">Youtube Campaign</a>
+                      <a [routerLink]="['/instagram/search']"> <img class="dropdown-images"
+                          src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
+                      <a [routerLink]="['/twitter/search']"><img class="dropdown-images"
+                          src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
+                      <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images"
+                          src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
+                      <a [routerLink]="['/pinterest/search']"><img class="dropdown-images"
+                          src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
+                      <a [routerLink]="['/medium/search']"><img class="dropdown-images"
+                          src="../../assets/header-images/medium.png">Medium Campaign</a>
+                      <a [routerLink]="['/flickr/search']"> <img class="dropdown-images"
+                          src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
+            
+                      <a class="rfm-anchor" [routerLink]="['/my-rfm']"> <i class="fas fa-bookmark"></i>RFM
+                        <div class="dropdown-content rfm-dropdown">
+                          <a [routerLink]="['/my-rfm']"> <i class="fas fa-book-reader"></i>My RFM</a>
+                          <a [routerLink]="['/rfm']"> <i class="fas fa-plus"></i>Create RFM</a>
+                        </div>
+                      </a>
+                      <a [routerLink]="['/update-password']"><img src="../../assets/img//CHange password50px.png">Change
+                        Password</a>
+                      <a [routerLink]="['/login']" (click)="logout()"><img src="../../assets/img/signout50px.png">Logout</a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            
             </div>
 
             <div id="search">

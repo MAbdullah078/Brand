@@ -44,11 +44,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       if (localStorage.getItem('currentUser')) {
         return true;
+      this.routerlinks();
       }
       else {
         return false;
       }
     }
+  }
+  routerlinks(){
+    this.router.navigate(['/gmail']);
   }
     logout() {
         localStorage.clear();

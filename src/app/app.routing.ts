@@ -42,7 +42,7 @@ export const AppRoutes: Routes = [
         path: 'what-is-InfluExpAI',
         component: WhatIsInfluexpaiComponent
     },
-    { path: 'googleaccount/code' , component : GoogleaccountComponent},
+   
     {
         path: 'How-It-Works',
         component: HowItWorksComponent
@@ -81,6 +81,7 @@ export const AppRoutes: Routes = [
     { path: '', component: DashboardLayoutComponent,  children: [
         // { path: 'twitter/categories',  loadChildren: './home/twittercategories.module#TwittercategoriesModule' },
         { path: 'youtube/search', loadChildren: './youtube-search/youtube-search.module#YoutubeSearchModule'},
+        { path: 'googleaccount' , component : GoogleaccountComponent},
         { path: 'facebook/search', loadChildren: './facebook-search/facebook-search.module#FacebookSearchModule'},
         { path: 'instagram/search', loadChildren: './instagram-search/instagram-search.module#InstagramSearchModule' },
         { path: 'linkedin/search', loadChildren: './linkedin-search/linkedin-search.module#LinkedinSearchModule' },
@@ -126,7 +127,7 @@ export const AppRoutes: Routes = [
     ], canActivate: [AuthGuard] },
 
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
-    {path: 'gmail', component: GmailComponent},
+    {path: 'gmail', component: GmailComponent, canActivate: [AuthGuard] },
     { path: 'register', component: RegisterComponent },
     {path: 'contactus', component: ContactComponent},
     { path: 'payment', component: GetpaymentComponent },
