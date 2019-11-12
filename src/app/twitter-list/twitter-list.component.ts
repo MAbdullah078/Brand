@@ -205,12 +205,12 @@ export class TwitterListComponent implements OnInit {
         this.loaded = false;
         this.sub = this.route.params.subscribe(params => {
             if (Number(params['query'])) {
-                // this.http.get(Config.api + '/ml/get_list_inf_twitter/' + params['query'] + '/?page='+page, {headers: headers}
-                //     , 'full')
-                this.http.post(Config.api+'/ml/get_list_inf_twitter' + '/?page=' + page + '', {
-                    pk:+ params['query'],
-                    username: this.currentUser['username'],
-                },{headers: headers})
+                this.http.get(Config.api + '/get_list_inf_dd/' + params['query'] + '/?page='+page, {headers: headers}
+                    , 'full')
+                // this.http.post(Config.api+'/ml/get_list_inf_twitter' + '/?page=' + page + '', {
+                //     pk:+ params['query'],
+                //     username: this.currentUser['username'],
+                // },{headers: headers})
                     .subscribe(res => {
                             this.main_checkbox = false;
                             this.influencers = res.json();
