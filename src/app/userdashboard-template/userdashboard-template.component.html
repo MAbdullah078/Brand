@@ -12,17 +12,15 @@
 										<i class="fab fa-twitter" ></i>
 										Twitter
 									</span>
-
                 </ng-template>
                 <br>
-
                 <div>
                     <div class="tasks-grid" *ngIf="loaded" style="margin: 0 auto; width: 90%">
                         <div class="row header">
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Twitter Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -113,7 +111,7 @@
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Blogosphere Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -196,7 +194,7 @@
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Youtube Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -332,7 +330,7 @@
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Instagram Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -424,7 +422,7 @@
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Facebook Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -496,110 +494,11 @@
 
             </mat-tab>
 
-            <!-- <mat-tab label="linkedIn">
-                <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-										<i class="fab fa-linkedin"></i>
-										Linkedin
-									</span>
-
-                </ng-template>
-                <br>
-
-                <div>
-                    <div class="tasks-grid" *ngIf="loaded" style="margin: 0 auto; width: 90%">
-                        <div class="row header">
-                            <div class="col-sm-12">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-8 col-sm-6 pull-right">
-                                                <mat-select (change)="sort_list_lnkd()" name="selected_choice" [(ngModel)]="selected_choice"
-                                                           placeholder="Sort By" style="width: 60%; float: right">
-                                                    <mat-option *ngFor="let choice of linkedin_choices" [value]="choice.code">{{ choice.name }}
-                                                    </mat-option>
-                                                </mat-select>
-                                            </div>
-                                            <div class="col-md-4 col-sm-6 pull-right">
-                                                <button type="button" class="btn btn-primary" (click)="create_empty_list_lnkd()">
-                                                    Create List
-                                                </button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div *ngFor="let li of user_lists.results; let i = index" [ngClass]="{'tasks-grid-col': i%7===0, 'tasks-grid-col red': i%3===0, 'tasks-grid-col black': i%2===0, 'tasks-grid-col blue': i%1===0}">
-                            
-                            <div class="tasks-grid-col-title">Done <strong>100</strong></div>
-
-                            <div class="sortable">
-                                <section class="box-typical task-card task">
-                                    <div class="task-card-photo">
-                                        <img src="img/img-task.jpg" alt="">
-                                    </div>
-                                    <div class="task-card-in">
-
-                                        <div class="task-card-title-label text-center">
-                                            <h6 style="font-weight: bolder">{{li.name}}</h6>
-                                        </div>
-                                        <div class="task-card-title text-center">
-
-                                            <div class="button__holder">
-                                            <button class="plus"
-                                            (click)="select_add_influencers(li.id,li.name)"></button>
-                                            </div>
-
-                                            <h6>  Total Influencers: <b>{{li.influencers_count}}</b></h6>
-                                            <button style="margin-bottom: 5%" type="button" class="btn btn-primary" (click)="select_add_influencers_lnkd(li.id, li.name) ">
-                                                Add Influencers
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                    <div class="task-card-footer">
-                                        
-                                        <div class="task-card-meta-item"><i class="font-icon font-icon-comments-2"></i>10</div>
-                                        
-                                        <div class="task-card-meta-item" title="Click to Show all Influencers in this list" style="cursor: pointer;" (click)="go_to_list_lnkd(li.id, li.name)">
-                                            <i class="fa  fa-edit"></i>
-                                        </div>
-                                        
-                                        <div class="task-card-meta-item" title="Click to Email" style="cursor: pointer;" (click)="email_list_dd(li.id, li.name)">
-                                            <i class="fab fa-envelope"></i>
-                                        </div>
-                                        <div class="task-card-meta-item text-right" title="Click to Delete" style="cursor: pointer;" (click)="email_list(li.id, li.name)">
-                                        
-                                        </div>
-                                        
-                                        
-                                        <div class="avatar-preview avatar-preview-32">
-                                            <i class="fab fa-trash" style="cursor: pointer;" (click)="delete_ilist_lnkd(li.id, li.name)"></i>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    .tasks-grid
-                </div>
-
-
-            </mat-tab> -->
-
-
             <!--  For Pinterest Coded by Amjad-->
             <mat-tab label="Pinterest">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash" (click)="get_value_names_pt()">
-										<i class="fab fa-pinterest "></i>
-										Pinterest
+                     <span class="nav-link-in-dash">
+										<i class="fab fa-pinterest "></i>Pinterest
 									</span>
 
                 </ng-template>
@@ -611,7 +510,7 @@
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Pinterest Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                     </div>
                                     <div class="col-md-6">
@@ -700,7 +599,7 @@
                         <div class="col-sm-12">
                             <div class="row">
                                 <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Periscope Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                 </div>
                                 <div class="col-md-6">
@@ -787,7 +686,7 @@
                         <div class="col-sm-12">
                             <div class="row">
                                 <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Medium Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                 </div>
                                 <div class="col-md-6">
@@ -872,7 +771,7 @@
                         <div class="col-sm-12">
                             <div class="row">
                                 <div class="col-md-6">
-                                        <span class="tasks-grid-col-title align-left">Total Lists: <strong>{{user_lists.totalItems}}</strong>
+                                        <span class="tasks-grid-col-title align-left">Flickr Total Lists: <strong>{{user_lists.totalItems}}</strong>
                                         </span>
                                 </div>
                                 <div class="col-md-6">

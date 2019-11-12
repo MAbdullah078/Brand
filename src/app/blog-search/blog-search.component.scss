@@ -1,7 +1,7 @@
 
 section{
-  -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  box-shadow: 0 1px 5px #ccc;
+  box-shadow: 0 1px 5px #ccc;
 }
 .body{
   background-color: #f9f9f9!important;
@@ -26,7 +26,7 @@ mat-form-field{
   margin-left: 15px;
   border-radius: 3px;
   height: 45px;
-  /*-webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;*/
+  /*box-shadow: 0 1px 5px #ccc;*/
   /*box-shadow: 0 0px 0px 0 rgba(0,0,0,.5),0 0px 2px 0 rgba(0,0,0,.19)!important;*/
 }
 
@@ -37,7 +37,7 @@ mat-form-field{
   border-radius: 5px;
   background-color: #fff;
   /*box-shadow: 0 3px 4px 0 #bdbdc3;*/
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+  box-shadow: 0 1px 5px #ccc;
   max-width: 1200px;
   /*height: 300px;*/
   /*display: inline-block;*/
@@ -79,7 +79,6 @@ mat-select-header{
 .facebook-influencer{
   font-size: 14px;
 font-weight: 600;
-color: #ea6732;
 margin-left: 3px;
 
 }
