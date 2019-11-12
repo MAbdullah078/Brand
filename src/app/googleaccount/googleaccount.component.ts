@@ -18,8 +18,10 @@ export class GoogleaccountComponent implements OnInit {
       
        this.sub = this.route.params.subscribe(params => {
         this.authenticate(params['code']);
+        this.id = +params; 
      
   console.log(params['code']);
+  // console.log(params,'params')
       });
   }
   authenticate(uid) {
