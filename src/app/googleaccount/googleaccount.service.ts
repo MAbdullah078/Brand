@@ -18,7 +18,7 @@ export class GoogleaccountService {
     let headers = new Headers({'Authorization': 'JWT ' + currentUser.token});
     headers.append('Content-Type', 'application/json');
     // let username = localStorage.getItem('username');
-    return this.http.get('http://192.168.29.164:8000/email/oauth2callback/' + uid,{headers: headers})
+    return this.http.get('https://apis.influexpai.com/email/oauth2callback/' + uid,{headers: headers})
   
   }
 }
