@@ -9,6 +9,7 @@ import {MatSelectModule, MatTabsModule,  MatListModule, MatTableModule,
 import {FormsModule} from "@angular/forms";
 import {PreloaderModule} from "../components/preloader.module";
 import {CdkTableModule} from '@angular/cdk/table';
+import { TwitterListComponent } from '../twitter-list/twitter-list.component';
 
 
 // import {} from '@angular/material';

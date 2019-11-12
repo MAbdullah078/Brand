@@ -72,15 +72,16 @@
                              <a [routerLink]="['/googleaccount']"><img src="../../assets/img/payment method50px.png">Payment Method</a>
                              <a [routerLink]="['/gmail']"><img src="../../assets/img/GAMIL.png">Gmail</a>
                              <!-- <a [routerLink]="['/blogosphere/search']" > <i class="fas fa-globe"></i>Web Campaign</a> -->
-                             <a [routerLink]="['/facebook/search']" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
-                             <a [routerLink]="['/youtube/search']"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
-                             <a [routerLink]="['/instagram/search']"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
-                             <a [routerLink]="['/twitter/search']"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
-                             <a [routerLink]="['/blogosphere/search']"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
-                             <a [routerLink]="['/pinterest/search']"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
-                             <a [routerLink]="['/medium/search']"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
-                             <a [routerLink]="['/flickr/search']"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
-                          
+                             <a href="/dashboard" (click)="get_value_names_fb()" > <img class="dropdown-images" src="../../assets/header-images/Fb@1x-.png">facebook Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_yt()"> <img class="dropdown-images" src="../../assets/header-images/YouTube@1x-.png" >Youtube Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_in()"> <img class="dropdown-images" src="../../assets/header-images/Insta@1x-.png">instagram Campaign</a>
+                             <a href="/dashboard" (click)="get_value()"><img  class="dropdown-images" src="../../assets/header-images/Twitter@1x-.png">Twitter Campaign</a>
+                             <a href="/dashboard" (click)="get_value_dd()"><img class="dropdown-images" src="../../assets/header-images/Blog@1x-.png">Blogosphere Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_pt()"><img class="dropdown-images" src="../../assets/header-images/Pin@1x-.png">Pinterest Campaign</a>
+                             <a href="/dashboard" (click)="get_value_meduim()"><img class="dropdown-images" src="../../assets/header-images/medium.png">Medium Campaign</a>
+                             <a href="/dashboard" (click)="get_value_names_fl()"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Flicker Campaign</a>
+                             <a hfre="/dashboard" (click)="get_value_periscope()"> <img class="dropdown-images" src="../../assets/header-images/flickr_32.png">Periscope Campaign</a>
+
                                     <a class="rfm-anchor" [routerLink]="['/my-rfm']"> <i class="fas fa-bookmark"></i>RFM
                                         <div class="dropdown-content rfm-dropdown">
                                                 <a [routerLink]="['/my-rfm']"> <i class="fas fa-book-reader"></i>My RFM</a> 
@@ -99,20 +100,22 @@
             <div id="search">
                 <div class="searsh-box container">
                     <button type="button" class="close">×</button>
-                    <form > 
+                    <form  class="search-form"> 
                         
                         <input #searchvalue1 type="search"   (ngModelChange)="find1(searchvalue1.value)" 
                         [(ngModel)]="getsearch" name="getsearch"
                         placeholder="Search to influencer with Roar!"  >
                         <i class="fa fa-microphone" id="box"></i>
                         <!-- *ngIf="searchResult.length>0"  -->
-                        <ul class="list-group" style="position:absolute;">
-                                <li (click)="find1(item)" *ngFor="let item of searchResult.blogs" class="list-group-item">
+                        <ul class="list-group list-normal" style="position:absolute;">
+                                <li (click)="find1(item)" *ngFor="let item of searchResult.blogs" class="list-group-item ">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Blog Data
                                   <!-- {{item.description}} -->
                                   {{item.main_url}}
                                 </li>
                                 <li (click)="find1(item)" *ngFor="let item of searchResult.facebook" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Facebook Data
                                     <!-- {{item.facebook.image_url}} -->
                                     <!-- {{item.facebook.title}} -->
@@ -120,30 +123,35 @@
                                     
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.twitter" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Twitter Data
                                     <!-- {{item.image_url}} -->
                                     <!-- {{item.twitter_name}} -->
                                     {{item.profile_url}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.youtube" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Youtube Data
                                     <!-- {{item.thumbnail_url}} -->
                                     <!-- {{item.name}} -->
                                     {{item.channel_link}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.pinterest" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Pinterest Data
                                     <!-- {{item.image}} -->
                                     <!-- {{item.profile_name}} -->
                                     {{item.profile_linked}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.periscope" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Periscope Data
                                     <!-- {{item.image_url}} -->
                                     <!-- {{item.profile_name}} -->
                                     {{item.profile_link}}
                                   </li>
                                   <li (click)="find1(item)" *ngFor="let item of searchResult.medium" class="list-group-item">
+                                        <i _ngcontent-frg-c2="" class="material-icons">arrow_forward</i>
                                     Medium Data
                                     <!-- {{item.image_url}} -->
                                     {{item.account_link}}
