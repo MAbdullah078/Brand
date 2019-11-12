@@ -320,7 +320,7 @@ mat-tab-group{
 .social-icon2{
   width: 20px;
   height: 20px;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 .fa-twitter {
   color: #1da5de!important;
@@ -10333,7 +10333,7 @@ ul.tab-nav.tab-nav2 li:first-child {
 }
 .item-loc{
 color: #0a6aa1;
-font-weight: 700;
+font-weight: normal;
 font-size: 12px;
 margin: 0;
 font-family: Roboto,sans-serif;
@@ -31974,8 +31974,7 @@ font-size:15px;
   width: 250px;
   padding: 5px;
   background: #fff;
-  box-shadow: 0px 0px 8px 5px #ccc;
-  border-right: 1px solid #ebebeb;
+  box-shadow: 0px 0px 5px #ccc;
 }
 .facebook-content{
   width: calc(100% - 250px);
@@ -32048,4 +32047,8 @@ body {
 }
 .InfluDetails >div{
   flex: 0 0 50%;
+}
+.influ-list-wrapper{
+  border-radius: 5px;
+  box-shadow: 0 0 2px #ccc;
 }

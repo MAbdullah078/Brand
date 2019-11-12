@@ -280,8 +280,6 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
 
     add_create_list() {
         let currentUser =this.currentUser;
-
-
         let mysvc = this.http;
         let list=this.inflist;
         let ilist = false;
