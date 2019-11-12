@@ -82,6 +82,7 @@ export const AppRoutes: Routes = [
         // { path: 'twitter/categories',  loadChildren: './home/twittercategories.module#TwittercategoriesModule' },
         { path: 'youtube/search', loadChildren: './youtube-search/youtube-search.module#YoutubeSearchModule'},
         { path: 'googleaccount' , component : GoogleaccountComponent},
+        
         { path: 'facebook/search', loadChildren: './facebook-search/facebook-search.module#FacebookSearchModule'},
         { path: 'instagram/search', loadChildren: './instagram-search/instagram-search.module#InstagramSearchModule' },
         { path: 'linkedin/search', loadChildren: './linkedin-search/linkedin-search.module#LinkedinSearchModule' },
