@@ -1,4 +1,70 @@
+<div class="sidebar-holder side-bar-component" id="side">
+    <div class="sidebar-admin">
+
+            <div class="user-sidebar">
+              
+                <ul class="m-0">
+
+
+                    <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value_names_fb()"> <img class="dropdown-images"
+                                            src="../../assets/header-images/Fb@1x-.png">facebook
+                                    Campaign</a>
+                    </li>
+                    <li>
+
+                            <a [routerLink]="['/dashboard']" (click)="get_value_names_yt()"> <img class="dropdown-images"
+                                            src="../../assets/header-images/YouTube@1x-.png">Youtube
+                                    Campaign</a>
+                    </li>
+                     <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value_names_in()"> <img class="dropdown-images"
+                                            src="../../assets/header-images/Insta@1x-.png">instagram
+                                    Campaign</a>
+                    </li>
+
+                    <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value()"><img class="dropdown-images" 
+                                            src="../../assets/header-images/Twitter@1x-.png">Twitter
+                                    Campaign</a>
+                    </li>
+                    <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value_dd()"><img class="dropdown-images"
+                                            src="../../assets/header-images/Blog@1x-.png">Blogosphere
+                                    Campaign</a>
+                    </li>
+
+                    <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value_names_pt()"><img class="dropdown-images"
+                                            src="../../assets/header-images/Pin@1x-.png">Pinterest
+                                    Campaign</a>
+                    </li>
+
+                    <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value_meduim()"><img class="dropdown-images" 
+                                            src="../../assets/header-images/medium.png">Medium Campaign</a>
+                    </li>
+                    <li>
+                            <a [routerLink]="['/dashboard']" (click)="get_value_names_fl()"> <img class="dropdown-images"
+                                            src="../../assets/header-images/flickr_32.png">Flicker
+                                    Campaign</a>
+                    </li>
+
+            </ul>
+            </div>
+    </div>
+    <div class="m-0 row mt-2 text-center">
+        <div class="col-sm-12">
+    <button routerLink="/dashboard" class="btn btn-primary w-50"> Back </button>
+    </div>
+      </div>
+
+</div>
+
+
+
 <div class="page-content">
+    
   <div class="container-fluid" *ngIf="loaded && fb_Influencers.totalItems==0">
     <div class="box-typical box-typical-full-height">
       <div class="add-customers-screen tbl">

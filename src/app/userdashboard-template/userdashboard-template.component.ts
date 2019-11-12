@@ -117,7 +117,34 @@ export class UserdashboardTemplateComponent implements OnInit {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
         // this.get_lists(this.selected_choice);
-        this.getTwLists(this.selected_choice);
+        // this.getTwLists(this.selected_choice);
+        if(localStorage.getItem('setpage') == 'meduim'){
+            this.get_list_med(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'twitter'){
+            this.getTwLists(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'periscope'){
+            this.get_list_peri(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'blogosphere'){
+            this.get_lists_dd(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'youtube'){
+            this.get_lists_yt(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'instagram'){
+            this.get_lists_in(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'facebook'){
+            this.get_list_fb(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'pinterest'){
+            this.get_list_pinterest(this.selected_choice);
+        }
+        else if (localStorage.getItem('setpage') == 'flickr'){
+            this.get_list_flkr(this.selected_choice);
+        }
     }
 
     // // Start Dashboard Web all API's Implements by Amjad
@@ -293,7 +320,43 @@ export class UserdashboardTemplateComponent implements OnInit {
     // }
 
                         //Start Twitter all API's Implements by Amjad
-
+ 
+get_value(){
+    
+    localStorage.setItem('setpage','twitter')
+}
+get_value_meduim(){
+    
+    localStorage.setItem('setpage','meduim')
+}
+get_value_periscope(){
+    
+    localStorage.setItem('setpage','periscope')
+}
+get_value_dd(){
+    
+    localStorage.setItem('setpage','blogosphere')
+}
+get_value_names_yt(){
+    
+    localStorage.setItem('setpage','youtube')
+}
+get_value_names_in(){
+    
+    localStorage.setItem('setpage','instagram')
+}
+get_value_names_fb(){
+    
+    localStorage.setItem('setpage','facebook')
+}
+get_value_names_pt(){
+    
+    localStorage.setItem('setpage','pinterest')
+}
+get_value_names_fl(){
+    
+    localStorage.setItem('setpage','flickr')
+}
 
     create_empty_list_twitter() {
         // let dashboard = this.current_dashboard;

@@ -1,13 +1,16 @@
 
 <!-- <div *ngIf="loaded"> -->
 <div class="page-content">
-<div class="padding-zero position-relative">
-        <mat-tab-group (selectedIndexChange)="selectedIndexChange($event)"  [selectedIndex]="selectedIndex">
+<div class="container-fluid padding-zero position-relative">
+        <mat-tab-group (selectedIndexChange)="selectedIndexChange($event)" style="background:
+         #ffffff; -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important; 
+         box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important; " [selectedIndex]="selectedIndex">
 
             <mat-tab label="Twitter">
-                <ng-template mat-tab-label>
-											<span class="nav-link-in-dash">
-										<i class="fab fa-twitter"></i>Twitter
+                <ng-template mat-tab-label  >
+											<span class="nav-link-in-dash"  (click)="get_value()" >
+										<i class="fab fa-twitter" ></i>
+										Twitter
 									</span>
                 </ng-template>
                 <br>
@@ -94,8 +97,9 @@
 
             <mat-tab label="Blogosphere">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-                        <i class="fab fa-blogger"></i>Blogosphere
+                     <span class="nav-link-in-dash" (click)="get_value_dd()">
+                        <i class="fab fa-blogger"></i>
+										Blogosphere
 									</span>
 
                 </ng-template>
@@ -176,8 +180,9 @@
 
             <mat-tab label="Youtube">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-										<i class="fab fa-youtube"></i>Youtube
+                     <span class="nav-link-in-dash" (click)="get_value_names_yt()">
+										<i class="fab fa-youtube"></i>
+										Youtube
 									</span>
 
                 </ng-template>
@@ -311,8 +316,9 @@
             </mat-tab>
             <mat-tab label="Instagram">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-										<i class="fab fa-instagram"></i>Instagram
+                     <span class="nav-link-in-dash" (click)="get_value_names_in()">
+										<i class="fab fa-instagram"></i>
+										Instagram
 									</span>
 
                 </ng-template>
@@ -402,8 +408,9 @@
 
             <mat-tab label="Facebook">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-										<i class="fab fa-facebook"></i>Facebook
+                     <span class="nav-link-in-dash" (click)="get_value_names_fb()">
+										<i class="fab fa-facebook"></i>
+										Facebook
 									</span>
 
                 </ng-template>
@@ -577,8 +584,11 @@
             </mat-tab>
             <mat-tab label="Periscope">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-                         <img src="../../assets/img/periscope_24 (1).png">Periscope
+                     <span class="nav-link-in-dash" (click)="get_value_periscope()" >
+                        <!-- <a >  -->
+                            <img src="../../assets/img/periscope_24 (1).png">
+                         Periscope
+                        <!-- </a> -->
 									</span>
 
                 </ng-template>
@@ -662,8 +672,10 @@
 
             <mat-tab label="Periscope">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-                         <img src="../../assets/img/medium.png">Medium
+                     <span class="nav-link-in-dash" (click)="get_value_meduim()" >
+                         <img src="../../assets/img/medium.png">
+                         <!-- <i class="fab fa-medium"></i> -->
+                         Medium
 									</span>
 
                 </ng-template>
@@ -745,8 +757,10 @@
             </mat-tab>
             <mat-tab label="Flickr">
                 <ng-template mat-tab-label>
-                     <span class="nav-link-in-dash">
-                         <img src="../../assets/img/flickr_32.png">Flickr
+                     <span class="nav-link-in-dash" (click)="get_value_names_fl()">
+                         <img src="../../assets/img/flickr_32.png">
+                         <!-- <i class="fab fa-flickr"></i> -->
+                         Flickr
 									</span>
 
                 </ng-template>
@@ -830,7 +844,7 @@
             </mat-tab>
         </mat-tab-group>
       <!-- ...................................................................... -->
-        <preloader-small></preloader-small>
+        <!-- <preloader-small></preloader-small> -->
     </div>
 </div>
 <!--  -->
