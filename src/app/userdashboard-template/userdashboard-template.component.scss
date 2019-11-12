@@ -27,6 +27,7 @@
       .mat-ink-bar {
           height: 100%;
           left: 98% !important;
+          color: #ccc;
       }
       .mat-tab-body-wrapper {
           flex: 1 1 auto;
@@ -311,4 +312,12 @@ mat-tab-header{
   border: 1px solid #ccc;
   border-radius: 5px;
  }
+}
+.page-content{
+  padding: 45px 0;
+  width: 100%;
+  max-width: 100%;
+}
+.mat-tab-group{
+  box-shadow: none !important;
 }
