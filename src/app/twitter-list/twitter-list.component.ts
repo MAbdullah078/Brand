@@ -40,6 +40,43 @@ export class TwitterListComponent implements OnInit {
         this.setPage(1);
     }
 
+    get_value(){
+        
+        localStorage.setItem('setpage','twitter')
+    }
+    get_value_meduim(){
+        
+        localStorage.setItem('setpage','meduim')
+    }
+    get_value_periscope(){
+        
+        localStorage.setItem('setpage','periscope')
+    }
+    get_value_dd(){
+        
+        localStorage.setItem('setpage','blogosphere')
+    }
+    get_value_names_yt(){
+        
+        localStorage.setItem('setpage','youtube')
+    }
+    get_value_names_in(){
+        
+        localStorage.setItem('setpage','instagram')
+    }
+    get_value_names_fb(){
+        
+        localStorage.setItem('setpage','facebook')
+    }
+    get_value_names_pt(){
+        
+        localStorage.setItem('setpage','pinterest')
+    }
+    get_value_names_fl(){
+        
+        localStorage.setItem('setpage','flickr')
+    }
+
     saveEditable(t) {
         this.loading = true;
         let currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -168,12 +205,12 @@ export class TwitterListComponent implements OnInit {
         this.loaded = false;
         this.sub = this.route.params.subscribe(params => {
             if (Number(params['query'])) {
-                // this.http.get(Config.api + '/ml/get_list_inf_twitter/' + params['query'] + '/?page='+page, {headers: headers}
-                //     , 'full')
-                this.http.post(Config.api+'/ml/get_list_inf_twitter' + '/?page=' + page + '', {
-                    pk:+ params['query'],
-                    username: this.currentUser['username'],
-                },{headers: headers})
+                this.http.get(Config.api + '/get_list_inf_dd/' + params['query'] + '/?page='+page, {headers: headers}
+                    , 'full')
+                // this.http.post(Config.api+'/ml/get_list_inf_twitter' + '/?page=' + page + '', {
+                //     pk:+ params['query'],
+                //     username: this.currentUser['username'],
+                // },{headers: headers})
                     .subscribe(res => {
                             this.main_checkbox = false;
                             this.influencers = res.json();

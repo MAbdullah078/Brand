@@ -29,6 +29,43 @@ export class MediumListInfComponent implements OnInit{
     ngOnInit(){
         this.setPage(1);
     }
+
+    get_value(){
+        
+        localStorage.setItem('setpage','twitter')
+    }
+    get_value_meduim(){
+        
+        localStorage.setItem('setpage','meduim')
+    }
+    get_value_periscope(){
+        
+        localStorage.setItem('setpage','periscope')
+    }
+    get_value_dd(){
+        
+        localStorage.setItem('setpage','blogosphere')
+    }
+    get_value_names_yt(){
+        
+        localStorage.setItem('setpage','youtube')
+    }
+    get_value_names_in(){
+        
+        localStorage.setItem('setpage','instagram')
+    }
+    get_value_names_fb(){
+        
+        localStorage.setItem('setpage','facebook')
+    }
+    get_value_names_pt(){
+        
+        localStorage.setItem('setpage','pinterest')
+    }
+    get_value_names_fl(){
+        
+        localStorage.setItem('setpage','flickr')
+    }
     saveEditableList(t){
         this.loading=true;
         let currentUser= JSON.parse(localStorage.getItem('currentUser'));

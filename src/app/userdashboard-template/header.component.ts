@@ -44,11 +44,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       if (localStorage.getItem('currentUser')) {
         return true;
+      this.routerlinks();
       }
       else {
         return false;
       }
     }
+  }
+  routerlinks(){
+    this.router.navigate(['/gmail']);
   }
     logout() {
         localStorage.clear();
@@ -130,6 +134,44 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         this._pushNotifications.requestPermission();
         
         this.currentUserLoaded = true;
+    }
+
+
+    get_value(){
+    
+        localStorage.setItem('setpage','twitter')
+    }
+    get_value_meduim(){
+        
+        localStorage.setItem('setpage','meduim')
+    }
+    get_value_periscope(){
+        
+        localStorage.setItem('setpage','periscope')
+    }
+    get_value_dd(){
+        
+        localStorage.setItem('setpage','blogosphere')
+    }
+    get_value_names_yt(){
+        
+        localStorage.setItem('setpage','youtube')
+    }
+    get_value_names_in(){
+        
+        localStorage.setItem('setpage','instagram')
+    }
+    get_value_names_fb(){
+        
+        localStorage.setItem('setpage','facebook')
+    }
+    get_value_names_pt(){
+        
+        localStorage.setItem('setpage','pinterest')
+    }
+    get_value_names_fl(){
+        
+        localStorage.setItem('setpage','flickr')
     }
 
     initializeNotifications(username) {

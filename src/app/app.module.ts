@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -9,7 +9,6 @@ import { DatePipe } from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {SlimLoadingBarModule} from "ng2-slim-loading-bar";
 import {AppRoutes} from './app.routing';
-
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HeaderComponent} from "./userdashboard-template/header.component";
 import {SideMenuComponent} from "./userdashboard-template/side-menu.component";
@@ -70,6 +69,7 @@ import { FileValidatorDirective } from './rfm/FileValidator.directive';
 import { from } from 'rxjs';
 import { GmailComponent } from './gmail/gmail.component';
 import { GoogleaccountComponent } from './googleaccount/googleaccount.component';
+import {ListsidebarComponent} from './listsidebar/listsidebar.component'
 
 // import { GenericSearchComponent } from './generic-search/generic-search.component';
 export function provideConfig() {
@@ -99,6 +99,7 @@ export function provideConfig() {
     AgenciesComponent,
     BrandComponent,
     SidebarComponent,
+    ListsidebarComponent,
     ContactComponent,
     MyRfmComponent,
     GetpaymentComponent,
@@ -124,8 +125,7 @@ export function provideConfig() {
     GmailComponent,
     FileValidatorDirective,
     GmailComponent,
-    GoogleaccountComponent
-    
+    GoogleaccountComponent 
     // GenericSearchComponent
   ],
   imports: [
@@ -159,7 +159,11 @@ export function provideConfig() {
 
 
    ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:
+  [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }
 export class MaterialModule { }

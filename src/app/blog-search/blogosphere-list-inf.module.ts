@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {DataTableModule, OverlayPanelModule} from 'primeng/primeng';
@@ -16,7 +16,10 @@ import {InlineEditorModule} from "ng2-inline-editor";
 @NgModule({
     imports: [CommonModule, RouterModule.forChild(BlogosphereListInfRoutes),ReactiveFormsModule,SliderModule,DataTableModule,InlineEditorModule,OverlayPanelModule,DialogModule,FormsModule,RoundpipeModule,NgPipesModule],
     declarations: [BlogosphereListInfComponent],
-    providers:[PagerService]
+    providers:[PagerService],
+    schemas:[
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
 })
 
 export class BlogosphereListInfModule { }

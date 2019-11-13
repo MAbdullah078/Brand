@@ -7,6 +7,68 @@
 </p-overlayPanel>
 
 
+<div class="sidebar-holder side-bar-component" id="side">
+  <div class="sidebar-admin">
+
+    <div class="user-sidebar">
+
+      <ul class="m-0">
+
+
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value_names_fb()"> <img class="dropdown-images"
+              src="../../assets/header-images/Fb@1x-.png">facebook
+            Campaign</a>
+        </li>
+        <li>
+
+          <a [routerLink]="['/dashboard']" (click)="get_value_names_yt()"> <img class="dropdown-images"
+              src="../../assets/header-images/YouTube@1x-.png">Youtube
+            Campaign</a>
+        </li>
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value_names_in()"> <img class="dropdown-images"
+              src="../../assets/header-images/Insta@1x-.png">instagram
+            Campaign</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value()"><img class="dropdown-images"
+              src="../../assets/header-images/Twitter@1x-.png">Twitter
+            Campaign</a>
+        </li>
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value_dd()"><img class="dropdown-images"
+              src="../../assets/header-images/Blog@1x-.png">Blogosphere
+            Campaign</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value_names_pt()"><img class="dropdown-images"
+              src="../../assets/header-images/Pin@1x-.png">Pinterest
+            Campaign</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value_meduim()"><img class="dropdown-images"
+              src="../../assets/header-images/medium.png">Medium Campaign</a>
+        </li>
+        <li>
+          <a [routerLink]="['/dashboard']" (click)="get_value_names_fl()"> <img class="dropdown-images"
+              src="../../assets/header-images/flickr_32.png">Flicker
+            Campaign</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="m-0 row mt-2 text-center">
+    <div class="col-sm-12"><button routerLink="/dashboard" class="btn btn-primary w-50"> Back </button> </div>
+  </div>
+</div>
+
+
+
 <div class="page-content">
 
   <div class="container-fluid" *ngIf="loaded && blogs.totalItems==0">
@@ -17,57 +79,59 @@
             <i class="font-icon font-icon-user"></i>
           </div>
           <h2>OOPS!</h2>
-          <p class="lead color-blue-grey-lighter">Zero influencers in the list.<br> Add some influencers <strong></strong></p>
+          <p class="lead color-blue-grey-lighter">Zero influencers in the list.<br> Add some influencers
+            <strong></strong></p>
           <!--<a href="#" class="btn">Add customer</a>-->
         </div>
       </div>
-    </div><!--.box-typical-->
+    </div>
+    <!--.box-typical-->
   </div>
-<div class="row" *ngIf="loaded&& blogs.totalItems!=0">
-  <div class="col-md-12 text-center">
-    <nav>
-    <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
+  <div class="row" *ngIf="loaded&& blogs.totalItems!=0">
+    <div class="col-md-12 text-center">
+      <nav>
+        <ul *ngIf="pager.pages && pager.pages.length" class="pagination pagination-lg">
 
-      <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
-      <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
-      <!--</li>-->
-      <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-        <a class="page-link" (click)="setPage(1)" aria-label="Previous">
-          First
-        </a>
-      </li>
-      <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
-        <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
-        </a>
-      </li>
+          <!--<li [ngClass]="{disabled:pager.currentPage === 1}">-->
+          <!--<a (click)="setPage(pager.currentPage - 1)" class="page-link" aria-label="Previous"></a>-->
+          <!--</li>-->
+          <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+            <a class="page-link" (click)="setPage(1)" aria-label="Previous">
+              First
+            </a>
+          </li>
+          <li class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+            <a class="page-link" (click)="setPage(pager.currentPage - 1)" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
 
-      <li class="page-item" *ngFor="let page of pager.pages"
-          [ngClass]="{active:pager.currentPage === page}"
-          (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a>
-      </li>
-      <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-      <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
-      <!--</li>-->
-      <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-        <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
-      <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-        <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
-          Last
-        </a>
-      </li>
-      <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
-      <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
-      <!--</li>-->
-    </ul>
-  </nav></div>
+          <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}"
+            (click)="setPage(page)"><a class="page-link" (click)="navSearch()">{{page}}</a>
+          </li>
+          <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+          <!--<a (click)="setPage(pager.currentPage + 1)">Next</a>-->
+          <!--</li>-->
+          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+            <a class="page-link" (click)="setPage(pager.currentPage + 1)" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+          <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+            <a class="page-link" (click)="setPage(pager.totalPages)" aria-label="Next">
+              Last
+            </a>
+          </li>
+          <!--<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">-->
+          <!--<a (click)="setPage(pager.totalPages)">Last</a>-->
+          <!--</li>-->
+        </ul>
+      </nav>
+    </div>
 
-</div>
+  </div>
   <div class="container-fluid" *ngIf="loaded&& blogs.totalItems!=0">
 
     <div class="row" id="myHeader">
@@ -79,10 +143,10 @@
 
               <!--<button  style="width:70%;font-size: x-large;font-weight: bold;" class="btn btn-rounded">Login</button>-->
 
-              <inline-editor [disabled]="loading" class="bootstrap-table-header" type="text" [(ngModel)]="list_name" min="1"
-                             max="30" [fnErrorLength]="myHandleError" (onSave)="saveEditable($event)" name="editableText1" size="30"></inline-editor>
-              <img *ngIf="loading"
-                   src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
+              <inline-editor [disabled]="loading" class="bootstrap-table-header" type="text" [(ngModel)]="list_name"
+                min="1" max="30" [fnErrorLength]="myHandleError" (onSave)="saveEditable($event)" name="editableText1"
+                size="30"></inline-editor>
+              <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
                         GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ
                         CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd
                         Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W
@@ -93,12 +157,12 @@
                         AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC
                         gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW
                         zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq
-                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
-              <button  class="btn btn-success" (click)="update_delete_list()">
+                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+              <button class="btn btn-success" (click)="update_delete_list()">
                 <!--<i class="font-icon font-icon-close-2"></i> -->
                 Delete selected
               </button>
-              <button  class="btn btn-success" (click)="clear_list()">
+              <button class="btn btn-success" (click)="clear_list()">
                 <!--<i class="font-icon font-icon-close-2"></i> -->
                 Clear selected
               </button>
@@ -111,15 +175,16 @@
     </div>
 
 
-    <div class="profile-container" *ngFor="let item of blogs.results" >
+    <div class="profile-container" *ngFor="let item of blogs.results">
       <div class="row">
 
 
         <div class="col-md-2 profile-checkbox" type="checkbox">
-          <input type="checkbox" style="display: flex"  name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()" id="table-check-{{item['id']}}">
+          <input type="checkbox" style="display: flex" name="{{item['id']}}" [(ngModel)]="inflist[item['id']]"
+            (change)="chec()" id="table-check-{{item['id']}}">
         </div>
         <div class="col-md-2 text-center">
-          <img [src]="item['image_url']"  style="height: 100px;  width: 100px; margin-top: 15px; border-radius: 100%">
+          <img [src]="item['image_url']" style="height: 100px;  width: 100px; margin-top: 15px; border-radius: 100%">
         </div>
 
 
@@ -130,34 +195,44 @@
 
           <div class="row" style="">
             <div class="col-md-3 text-left">
-              <label class="item-loc"> <i class="fa fa-clipboard" style="font-size:16px;color:#c00"></i> Posts: <span class="list-item1"> {{item['posts']}}</span></label>
+              <label class="item-loc"> <i class="fa fa-clipboard" style="font-size:16px;color:#c00"></i> Posts: <span
+                  class="list-item1"> {{item['posts']}}</span></label>
 
             </div>
             <div class="col-md-9 text-left">
 
-              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile Url:  <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
+              <label class="item-loc"> <i class="fa fa-location-arrow" style="font-size:16px;color:#c00; "></i> Profile
+                Url: <a style="color: #0a6aa1; font-weight: bolder">{{item['account_link']}}</a></label>
             </div>
           </div>
           <hr style="color: #555555">
-          <div class="row" >
+          <div class="row">
             <ul style="display: flex; ">
-              <li><span class="right-item"><i class="fa fa-users" ></i> Follower:</span>
+              <li><span class="right-item"><i class="fa fa-users"></i> Follower:</span>
 
-                <span *ngIf="item['follower']<1000" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['follower'] | thousandSuff}}</span></span>
-                <span *ngIf="item['follower']>1000 && item['follower']<10000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['follower'] | thousandSuff}}</span></span>
-                <span *ngIf="item['follower']>10000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['follower'] | thousandSuff}}</span></span>
-
-              </li>
-
-              <li><span class="right-item"><i class="fa fa-users" ></i> Following:</span>
-
-                <span *ngIf="item['following']<100" class="list-item1"><span class="label label-danger"><small>Poor</small> {{item['following']| thousandSuff}}</span></span>
-                <span *ngIf="item['following']>100 && item['following']<1000" class="list-item1"><span class="label label-primary"><small>Normal</small> {{item['following']| thousandSuff}}</span></span>
-                <span *ngIf="item['following']>1000" class="list-item1"><span class="label label-success"><small>Perfect</small> {{item['following']| thousandSuff}}</span></span>
+                <span *ngIf="item['follower']<1000" class="list-item1"><span
+                    class="label label-danger"><small>Poor</small> {{item['follower'] | thousandSuff}}</span></span>
+                <span *ngIf="item['follower']>1000 && item['follower']<10000" class="list-item1"><span
+                    class="label label-primary"><small>Normal</small> {{item['follower'] | thousandSuff}}</span></span>
+                <span *ngIf="item['follower']>10000" class="list-item1"><span
+                    class="label label-success"><small>Perfect</small> {{item['follower'] | thousandSuff}}</span></span>
 
               </li>
-              <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i> Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
-              <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i> Username:</span> <span class="list-item1">{{item['username']}}</span></li>
+
+              <li><span class="right-item"><i class="fa fa-users"></i> Following:</span>
+
+                <span *ngIf="item['following']<100" class="list-item1"><span
+                    class="label label-danger"><small>Poor</small> {{item['following']| thousandSuff}}</span></span>
+                <span *ngIf="item['following']>100 && item['following']<1000" class="list-item1"><span
+                    class="label label-primary"><small>Normal</small> {{item['following']| thousandSuff}}</span></span>
+                <span *ngIf="item['following']>1000" class="list-item1"><span
+                    class="label label-success"><small>Perfect</small> {{item['following']| thousandSuff}}</span></span>
+
+              </li>
+              <li><span class="right-item"><i class="fa fa-bar-chart" style="font-size:16px;color:#0a4069"></i>
+                  Rank:</span> <span class="list-item1">{{item['account_rank']}}</span></li>
+              <li><span class="right-item"><i class="fa fa-user" style="font-size:16px;color:#0a4069"></i>
+                  Username:</span> <span class="list-item1">{{item['username']}}</span></li>
 
             </ul>
           </div>
@@ -167,7 +242,8 @@
     </div>
   </div>
 
-  <p-dialog *ngIf="dialogVisible_features" [(visible)]="dialogVisible_features" [responsive]="true" showEffect="fade" [modal]="true" width="450">
+  <p-dialog *ngIf="dialogVisible_features" [(visible)]="dialogVisible_features" [responsive]="true" showEffect="fade"
+    [modal]="true" width="450">
     <p-header *ngIf="dialogVisible_features">
 
       Web features of <a href="{{feature_data.main_url}}">{{feature_data.data.title}}</a>
@@ -184,7 +260,8 @@
         <span style="float: right;">{{feature_data.data.performance_score}}</span></li>
       <li *ngIf="feature_data.data.site_categories[0]" class="list-group-item">Category:
         <ul>
-          <li *ngFor="let c of feature_data.data.site_categories" class="list-group-item" style="text-align: right;">{{c}}</li>
+          <li *ngFor="let c of feature_data.data.site_categories" class="list-group-item" style="text-align: right;">
+            {{c}}</li>
         </ul>
       </li>
 
@@ -192,7 +269,7 @@
   </p-dialog>
 
 
-  <p-dialog [(visible)]="dialogVisible" [responsive]="true" showEffect="fade" [modal]="true" width="933" >
+  <p-dialog [(visible)]="dialogVisible" [responsive]="true" showEffect="fade" [modal]="true" width="933">
     <p-header *ngIf="dialogVisible">
 
       SEO stats for <a href="{{seodata.main_url}}">{{seodata.data.site_full}}</a>
@@ -201,40 +278,40 @@
     <table id="table-xs" *ngIf="dialogVisible" class="table table-bordered table-hover table-xs">
 
       <tbody>
-      <tr>
-        <td title="Worth Of Web Traffic Rank"><strong>WOWTR</strong></td>
-        <td title="Worth Of Web Traffic Rank">{{seodata.seoData.WOWTR}}</td>
-      </tr>
-      <tr>
-        <td title="Estimated worth of website"><strong>EWOW</strong></td>
-        <td title="Estimated worth of website">{{seodata.seoData.EWOW}}</td>
-        <td title="Estimated revenue per day"><strong>ERPD</strong></td>
-        <td title="Estimated revenue per day">{{seodata.seoData.EREVD}}</td>
-        <td title="Estimated revenue per month"><strong>ERPM</strong></td>
-        <td title="Estimated revenue per month">{{seodata.seoData.EREVM}}</td>
-        <td title="Estimated revenue per year"><strong>ERPY</strong></td>
-        <td title="Estimated revenue per year">{{seodata.seoData.EREVY}}</td>
-      </tr>
-      <tr>
-        <td title="Estimated visits per day"><strong>EVISD</strong></td>
-        <td title="Estimated visits per day">{{seodata.seoData.EVISD}}</td>
-        <td title="Estimated visits per month"><strong>EVISM</strong></td>
-        <td title="Estimated visits per month">{{seodata.seoData.EVISM}}</td>
-        <td title="Estimated visits per year"><strong>EVISY</strong></td>
-        <td title="Estimated visits per year">{{seodata.seoData.EVISY}}</td>
-        <td title="Estimated pageviews per day"><strong>EPVISD</strong></td>
-        <td title="Estimated pageviews per day">{{seodata.seoData.EPVISD}}</td>
-      </tr>
-      <tr>
-        <td title="Estimated pageviews per month"><strong>EPVISM</strong></td>
-        <td title="Estimated pageviews per month">{{seodata.seoData.EPVISM}}</td>
-        <td title="Estimated pageviews per year"><strong>EPVISY</strong></td>
-        <td title="Estimated pageviews per year">{{seodata.seoData.EPVISY}}</td>
-        <td title="Alexa Rank"><strong>ALEXA</strong></td>
-        <td title="Alexa Rank">{{seodata.seoData.ALEXA}}</td>
-        <td title="Worth Of Web Traffic Score"><strong>WOWTS</strong></td>
-        <td title="Worth Of Web Traffic Score">{{seodata.seoData.WOWTS}}</td>
-      </tr>
+        <tr>
+          <td title="Worth Of Web Traffic Rank"><strong>WOWTR</strong></td>
+          <td title="Worth Of Web Traffic Rank">{{seodata.seoData.WOWTR}}</td>
+        </tr>
+        <tr>
+          <td title="Estimated worth of website"><strong>EWOW</strong></td>
+          <td title="Estimated worth of website">{{seodata.seoData.EWOW}}</td>
+          <td title="Estimated revenue per day"><strong>ERPD</strong></td>
+          <td title="Estimated revenue per day">{{seodata.seoData.EREVD}}</td>
+          <td title="Estimated revenue per month"><strong>ERPM</strong></td>
+          <td title="Estimated revenue per month">{{seodata.seoData.EREVM}}</td>
+          <td title="Estimated revenue per year"><strong>ERPY</strong></td>
+          <td title="Estimated revenue per year">{{seodata.seoData.EREVY}}</td>
+        </tr>
+        <tr>
+          <td title="Estimated visits per day"><strong>EVISD</strong></td>
+          <td title="Estimated visits per day">{{seodata.seoData.EVISD}}</td>
+          <td title="Estimated visits per month"><strong>EVISM</strong></td>
+          <td title="Estimated visits per month">{{seodata.seoData.EVISM}}</td>
+          <td title="Estimated visits per year"><strong>EVISY</strong></td>
+          <td title="Estimated visits per year">{{seodata.seoData.EVISY}}</td>
+          <td title="Estimated pageviews per day"><strong>EPVISD</strong></td>
+          <td title="Estimated pageviews per day">{{seodata.seoData.EPVISD}}</td>
+        </tr>
+        <tr>
+          <td title="Estimated pageviews per month"><strong>EPVISM</strong></td>
+          <td title="Estimated pageviews per month">{{seodata.seoData.EPVISM}}</td>
+          <td title="Estimated pageviews per year"><strong>EPVISY</strong></td>
+          <td title="Estimated pageviews per year">{{seodata.seoData.EPVISY}}</td>
+          <td title="Alexa Rank"><strong>ALEXA</strong></td>
+          <td title="Alexa Rank">{{seodata.seoData.ALEXA}}</td>
+          <td title="Worth Of Web Traffic Score"><strong>WOWTS</strong></td>
+          <td title="Worth Of Web Traffic Score">{{seodata.seoData.WOWTS}}</td>
+        </tr>
 
 
     </table>
@@ -243,4 +320,3 @@
 
   </div>
 </div>
-

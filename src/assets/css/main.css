@@ -1,6 +1,4 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
+
 .pull-right{
     float: right;
 }
@@ -616,18 +614,7 @@ a:hover {
     margin: 0 -3px 0 0
 }
 
-*,
-body,
-dl,
-fieldset,
-figure,
-form,
-menu,
-ol,
-pre,
-ul {
-    /*margin: 0*/
-}
+
 
 .flag-icon {
     width: 1.33333333em;
@@ -5414,9 +5401,10 @@ html,
 input,
 select,
 textarea {
-    color: #343434;
-    font-family: 'Proxima Nova', sans-serif;
-    line-height: 1.4;
+    font-family: Roboto,"Helvetica Neue",sans-serif ;
+    display: block !important;
+    line-height: 1.5;
+    color: #555;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -7336,8 +7324,8 @@ textarea.form-control {
 .tasks-grid .header {
     margin-bottom: 12px;
     background: #ffffff;
-    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19)!important;
+    box-shadow: 0 1px 5px #ccc;
+    box-shadow: 0 1px 5px #ccc;
 }
 
 .tasks-grid .header .tasks-grid-col-title {
@@ -12920,9 +12908,6 @@ body.modal-open {
     margin-top: 2px
 }
 
-body {
-    background: #eceff4
-}
 
 .site-header-search {
     width: 100%;
@@ -13064,7 +13049,7 @@ body {
     background-image: -webkit-linear-gradient(180deg,#fff 18%,#fff 100%)!important;
 }
 .site-header .nav-Bar a{
-    padding: 5px 28px 0;
+    padding: 5px 18px 0;
     color: #000;
     /*background-color: #fff;*/
     cursor: pointer;
@@ -13103,7 +13088,6 @@ body {
 .site-header .site-logo {
     display: block;
     float: left;
-    height: 40px;
     zoom: 1;
     color: #343434;
     line-height: 40px
@@ -16614,6 +16598,8 @@ body.sidebar-hidden .page-content {
     float: left;
     width: 245px;
     margin: 0 11px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
 }
 .mat-card{
     font-size: 20px;
@@ -16621,6 +16607,9 @@ body.sidebar-hidden .page-content {
 }
 .task-card .task-card-title {
      margin: 0px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 }
 .task-card .task-card-meta-item .font-icon {
     color: #c00;
@@ -16965,62 +16954,9 @@ mat-option:hover {
     font-size: 18px;
     font-weight: bolder;
 }
-
-/*End media Querys*/
-
-
-/* #ck-button {
-    margin:4px;
-    background-color:#000;
-    color: white;
-  padding: 3.5px;
-    border-radius:50px;
-    border:1px solid #000;
-    overflow:auto;
-    -webkit-box-shadow: 0 14px 26px -12px rgba(0, 0, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)!important;
-    box-shadow: 0 14px 26px -12px rgba(0, 0, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)!important;
-    float:left;
-} */
-
-/* #ck-button label {
-    float:left;
-    width:8em;
+.page-content .mat-tab-label{
+  justify-content: left;
 }
-
-#ck-button label span {
-    text-align:center;
-    padding:3px 0px;
-    display:block;
-    font-family: inherit;
-    font-weight: 600;
-    border-radius:4px;
-}
-
-#ck-button label input {
-    position:absolute;
-    display: none;
-    top:-20px;
-}
-
-#ck-button input:hover + span {
-    background-color:#000;
-    cursor: pointer;
-    border: 1px solid #000!important;
-}
-
-#ck-button input:checked + span {
-    background-color:#000;
-    cursor: pointer;
-    border: 1px solid #000!important;
-    color:#fff;
-}
-
-#ck-button input:checked:hover + span {
-    background-color:#000;
-    cursor: pointer;
-    border: 1px solid #000!important;
-    color:#fff;
-} */
 
 mat-tab-body{
     background-color: #FFFFFF;
@@ -17041,4 +16977,28 @@ mat-tab-body{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     cursor: pointer; */
+}
+.mat-ink-bar{
+  display: none;
+}
+.w-40{
+  width: 40%;
+}
+.w-10{
+  width: 10%;
+}
+.sidebarAllFilters i{
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.sidebarAllFilters .mat-form-field-label,.sidebarAllFilters .mat-select-placeholder{
+  color: #333 !important;
+  font-weight: normal !important;
+  font-size: 12px;
+}
+.InfluDetails p{
+  font-size: 12px;
 }
