@@ -280,8 +280,6 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
 
     add_create_list() {
         let currentUser =this.currentUser;
-
-
         let mysvc = this.http;
         let list=this.inflist;
         let ilist = false;
@@ -297,7 +295,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
         if (current_list) {
             Swal.fire(
                 {
-                    title: 'Add influencers to the list"'+current_list.name+'" or cancel and add to other list?',
+                    title: ' list"'+current_list.name+'" or cancel and add to other list?',
                     // text: "List",
                     type: "question",
                     preConfirm:  () => {
@@ -314,8 +312,7 @@ export class InstagramSearchComponent implements OnInit, AfterViewInit{
                     // input: "text",
                     showCloseButton: true,
                     showCancelButton: true,
-                    confirmButtonText: 'Add to list"'+current_list.name+'"',
-
+                    confirmButtonText: 'Add to list"' +current_list.name+ '"',
                 }
             ).then( () => {
 

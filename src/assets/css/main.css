@@ -1,6 +1,4 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
+
 .pull-right{
     float: right;
 }
@@ -616,18 +614,7 @@ a:hover {
     margin: 0 -3px 0 0
 }
 
-*,
-body,
-dl,
-fieldset,
-figure,
-form,
-menu,
-ol,
-pre,
-ul {
-    /*margin: 0*/
-}
+
 
 .flag-icon {
     width: 1.33333333em;
@@ -5414,9 +5401,10 @@ html,
 input,
 select,
 textarea {
-    color: #343434;
-    font-family: 'Proxima Nova', sans-serif;
-    line-height: 1.4;
+    font-family: Roboto,"Helvetica Neue",sans-serif ;
+    display: block !important;
+    line-height: 1.5;
+    color: #555;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -12920,9 +12908,6 @@ body.modal-open {
     margin-top: 2px
 }
 
-body {
-    background: #eceff4
-}
 
 .site-header-search {
     width: 100%;
@@ -16622,6 +16607,9 @@ body.sidebar-hidden .page-content {
 }
 .task-card .task-card-title {
      margin: 0px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 }
 .task-card .task-card-meta-item .font-icon {
     color: #c00;
@@ -17009,5 +16997,8 @@ mat-tab-body{
 .sidebarAllFilters .mat-form-field-label,.sidebarAllFilters .mat-select-placeholder{
   color: #333 !important;
   font-weight: normal !important;
+  font-size: 12px;
+}
+.InfluDetails p{
   font-size: 12px;
 }

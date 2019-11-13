@@ -98,8 +98,8 @@
         <!-- sidebarAllFilters -->
       </div>
     </form>
-    <div class="col-sm-12 d-flex justify-content-center flex-column">
-        <button type="submit" class="btn btn-primary w-100">
+    <div class="col-sm-12 d-flex justify-content-center flex-column ">
+        <button type="submit" class="btn btn-primary w-100 ">
             Search
           </button>
           <button type="submit" class="btn btn-primary w-100 mt-2" (click)="clearsearch()">
@@ -113,23 +113,22 @@
       <div class="max-container p-0" *ngIf="!loaded">
         <div class="row m-0 mb-2  " id="myHeader">
           <div class="mb-2 p-0 col-sm-12 d-flex justify-content-between align-items-center">
-            <!--  -->
-            <div id="ck-button">
-              <label>
-                <input type="checkbox" class="checkbox" (change)="cheakalldef($event.target.checked)"><span>Select
-                  All</span>
-              </label>
-            </div>
-            <!--  -->
             <div>
               <h3 *ngIf="!loaded" class="m-0">Featured Instagram Influencers</h3>
             </div>
             <!--  -->
-            <div>
-            <button class="btn btn-priamry add-to-list" (click)="add_create_list()"> Add to list</button>
+            <div class="d-flex align-items-center">
+              <div>
+                  <button class="btn btn-priamry add-to-list ml-2" (click)="add_create_list()"> Add to list</button>
+              </div>
+              <div id="ck-button">
+                  <label>
+                      <input type="checkbox"  (change)="cheakalldef($event.target.checked)" ><span>Select All</span>
+                  </label>
+              </div>
             </div>
           </div>
-          <div class="col-sm-12 p-0">
+          <div class="col-sm-12 p-0 influ-list-wrapper">
             <div class="profile-container" *ngFor="let item of default_influencers.results">
               <!-- dflex start -->
               <div class="d-flex p-2">
@@ -191,12 +190,12 @@
                           <!--  -->
                           <div>
                             <p class="m-0">
-                                <i class="fa fa-eye"></i>Following :<span  class="list-item1">{{item['following']}}</span>
+                                <i class="fa fa-eye"></i>Following : <span  class="list-item1">{{item['following']}}</span>
                             </p>  
                           </div>
                           <!--  -->
                           <div>
-                              <i class="fas fa-random"></i>Posts :<span
+                              <i class="fas fa-random"></i>Posts : <span
                               class="list-item1">{{item['posts']}}</span>
                           </div>
                        </div>
@@ -283,13 +282,12 @@
         <div class="col-md-12 col-sm-12 text-center">
           <h5 style="margin: 10px">Displaying {{influencers.results.length}} of {{influencers.totalItems}} Results</h5>
         </div>
-
-
+        <!--  -->
         <div class="profile-container" *ngFor="let item of influencers.results">
           <div class="row m-0 p-0 p-2">
 
 
-            <div class="col-md-1 profile-checkbox" type="checkbox">
+            <div class=" profile-checkbox" type="checkbox">
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck" name="example1"
                   name="{{item['id']}}" [(ngModel)]="inflist[item['id']]" (change)="chec()"
@@ -297,67 +295,63 @@
                 <label class="custom-control-label" for="table-check-{{item['id']}}"></label>
               </div>
             </div>
+            <!-- main image -->
             <div class="col-md-1 followers-division">
               <img [src]="item['image_url']" class="twitter-image">
             </div>
-
-            <div class="col-md-2 followers-division">
-
-              <img [src]="item['image_url']" class="twitter-image">
-            </div>
+            <!-- main img end -->
+            <!-- followers -->
             <div class="col-md-1 followers-division">
 
               <h6 class="m-1">Follower</h6>
               <h3 class="Follwers-div">{{item['follower']| thousandSuff}}</h3>
 
             </div>
+            <!-- followers -->
+
             <div class="col-md-8">
               <div class="title-name">
+                <!-- image and name start -->
                 <div class="d-flex">
                   <img class="social-icon2" src="../../assets/header-images/Insta@1x-.png">
                   <label class="tbl-cell tbl-cell-name">{{item['name']}}</label>
                   <label class="tbl-cell tbl-cell-name">{{item['user_name']}}</label>
                 </div>
+                 <!-- image and name end -->
+                 <!-- description start -->
                 <div class="ml-4">
                   <label class="item-content" title="{{item['description']}}">{{item['description']}}</label>
                   <div>
-
-                    <!-- <label class="item-loc"><i class="fab fa-instagram" ></i>Profile Link:<a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label> -->
                     <label class="item-loc"><i class="fas fa-globe"></i> <a
                         (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
                   </div>
-                  <div class="ml-4">
-                    <label class="item-content" title="{{item['description']}}">{{item['description']}}</label>
-                    <div>
-                      <!-- <label class="item-loc"><i class="fab fa-instagram" ></i>Profile Link:<a (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label> -->
-                      <label class="item-loc"><i class="fas fa-globe"></i> <a
-                          (click)="goToMedium(item['account_link'])">{{item['account_link']}}</a></label>
-                    </div>
-                    <!-- <div >
-                <label class="item-loc"><i class="fa fa-map-marker marker-icon" ></i>External url<span class="list-item1" (click)="goToMedium(item['external_url'])" > {{item['external_url']}}</span></label>
-              </div> -->
-                  </div>
+                  
                 </div>
+                <!-- description end -->
+
                 <div class="row">
                   <div class="col-md-6">
+                    <!--  -->
                     <div class="ml-4">
-                      <span class="right-item"><i class="fa fa-user"></i>Username:</span> <span
+                      <span class="right-item"><i class="fa fa-user"></i>Username: </span> <span
                         class="list-item1">{{item['name']}}</span>
                     </div>
+                    <!--  -->
                     <div class="ml-4">
-                      <span class="right-item"> <i class="fa fa-eye"></i>Following:</span> <span
+                      <span class="right-item"> <i class="fa fa-eye"></i>Following : </span> <span
                         class="list-item1">{{item['following']}}</span>
                     </div>
+                    <!--  -->
                   </div>
                   <div class="col-md-6">
+                    <!--  -->
                     <div>
-                      <span class="right-item"><i class="fas fa-chart-bar"></i>Rank:</span> <span
-                        class="list-item1">{{item['account_rank']}}</span>
+                      <span class="right-item"><i class="fas fa-chart-bar"></i>Rank: </span> <span class="list-item1">{{item['account_rank']}}</span>
                     </div>
                     <div>
-                      <span class="right-item"><i class="fas fa-random"></i>Posts</span> <span
-                        class="list-item1">{{item['posts']}}</span>
+                      <span class="right-item"><i class="fas fa-random"></i>Posts : </span> <span class="list-item1">{{item['posts']}}</span>
                     </div>
+                    <!--  -->
                   </div>
                 </div>
               </div>
@@ -403,5 +397,6 @@
             </nav>
           </div>
         </div>
+        <!--  -->
       </div>
       <!-- </div> -->

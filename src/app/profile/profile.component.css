@@ -22,16 +22,19 @@
     padding: 8px 11px;
     position: relative;
     font-weight: 600;
-    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+    background: #000;
     border-radius: 50px;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    border: 1px solid #fff;
     -webkit-transition: .4s;
     -o-transition: .4s;
     transition: .4s;
     vertical-align: top;
+    box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
+}
+.btn-file:hover{
+box-shadow: none;
 }
 .login-form-1{
     background: #fafafa;
@@ -46,11 +49,12 @@
 
 .login-form-1-header{
     position: relative;
-    background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+    background: #000;
     padding: 10px;
     box-sizing: border-box;
-    box-shadow: 0 1px 5px #ccc;
-    box-shadow: 0 1px 5px #ccc;
+    -webkit-box-shadow:0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4); */
+    /* box-shadow: 0 1px 5px #ccc; */
     margin-top: -60px;
     width: 100%;
     border-radius: 5px;
