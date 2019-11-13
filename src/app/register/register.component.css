@@ -74,9 +74,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     background: url(../../assets/img/LoginInflu.png)center/100% no-repeat;
-    padding: 30px 0;
+    padding: 60px 0;
   }
   .heading{
     font-size: 36px;
@@ -85,10 +84,9 @@
   }
   .form-content{
     width: 700px;
-    background: url(../../assets/img/backkk.png);
     padding: 10px 20px 20px;
-    opacity: 1.0;
     border-radius: 20px;
+    background:#fff
   }
   .mat-form-field input,
   .mat-select {

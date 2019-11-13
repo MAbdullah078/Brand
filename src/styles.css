@@ -8753,7 +8753,7 @@ body:not(.device-touch) .button.button-full strong {
   border-bottom: 1px solid #ccc;
 } */
 .form-content .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-  transform: translateY(-1.98125em) scale(.75) perspective(100px) translateZ(.001px);
+  transform: translateY(-27px) scale(.75) perspective(100px) translateZ(.001px);
 }
 .form-content .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label {
   -webkit-transform: translateY(-1.78125em) scale(.75) perspective(100px) translateZ(.00101px);
