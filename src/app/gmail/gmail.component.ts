@@ -13,10 +13,10 @@ import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http'
 export class GmailComponent implements OnInit {
 
   constructor(private app_Service: UserService,  private router: Router, private http: Http,private _http: HttpClient,private authService: AuthService ) { }
-
+  href
   ngOnInit() {
     window.scroll(0,0)
-    // this.integrategmail();
+    // this.integrategmail()
   }
   getemail;
   integrategmail(){
