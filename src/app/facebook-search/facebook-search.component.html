@@ -24,9 +24,9 @@
                                                     <input matInput type="text" [(ngModel)]="location" placeholder="Search by Location" name="loc">
                                                 </mat-form-field>
                                             </div>
-                                <div class="col-md-12 row">
+                                <div class="col-md-12">
 
-                                 
+                                 <div class="row">
                                     <!-- <mat-label>Search by Likes:</mat-label> -->
                                     <div class="col-md-12"><h5 class="m-0"><i class="fa fa-heart"></i> Likes</h5></div>
                                     <div class="col-md-5 pr-0">
@@ -44,8 +44,10 @@
                                         <input matInput placeholder="Max" type="number"  name="social2" [(ngModel)]="maxlikes" class="example-right-align" >
                                     </mat-form-field>
                                 </div>
+                                </div>
                             </div>
-                                <div class="col-md-12 row">
+                                <div class="col-md-12 ">
+                                    <div class="row">
                                         <div class="col-md-12"><h5 class="m-0"><i class="fa fa-barcode"></i> Perfomance</h5></div>
                                         <div class="col-md-5 pr-0">
                                     <mat-form-field>
@@ -67,9 +69,13 @@
                                     </mat-form-field>
                                 </div>
                             </div>
+                            </div>
                             
                              
-                                <div class="col-md-12 row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        
+                                 
                                         <div class="col-md-12"><h5 class="m-0"><i class="fas fa-sliders-h"></i> Engagement Rate</h5></div>
 
                                         <div class="col-md-5 pr-0">
@@ -91,6 +97,7 @@
                                         <input matInput placeholder="Max" type="number"  name="er2" [(ngModel)]="maxER" class="example-right-align" >
                                     </mat-form-field>
                                 </div>
+                            </div>
                             </div>
                                 <!-- <div class="col-md-12 row text-center"> -->
                                     <div class="col-sm-12">
@@ -297,31 +304,34 @@
                                 </div>
                                 <div class="col-sm-12" *ngIf="!loaded">
 
+
+
+
+
+
+
+
                                         <div class="row m-0" id="myHeader">
-                                            <div class="col-md-12 ">
-                                                <div class="row pl-0 pr-0 pt-2 pb-2">
-                                                  <div class="col-md-2 p-0">
-                                                        <div id="ck-button">
-                                                            <label>
-                                
-                                                                <input type="checkbox" class="checkbox"  (change)="checkedAllDef($event.target.checked)" ><span>Select All</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                      <div class="col-md-8">
-                                                            <div  *ngIf="!loaded">
-                                                                    <div class="col-md-12 text-left">
-                                                                        <h3 class="text-center m-0">Featured Facebook Influencers</h3>
-                                                                    </div>
-                                                      </div>
-                                                      </div>
-                                                      <div class="col-md-2 p-0">
-                                                        <button  class="btn  add-to-list" (click)="add_create_list()"> Add to list</button>
-                                                    </div>
-                                                    
-                                              
-                                            </div>
-                                        </div>
+                       
+    <div class="mb-2 p-0 col-sm-12 d-flex justify-content-between align-items-center">
+            <div>
+              <h3 *ngIf="!loaded" class="m-0">Featured Facebook Influencers</h3>
+            </div>
+            <!--  -->
+            <div class="d-flex align-items-center">
+              <div>
+                  <button class="btn btn-priamry add-to-list ml-2" (click)="add_create_list()"> Add to list</button>
+              </div>
+              <div id="ck-button">
+                  <label>
+                      <input type="checkbox"   (change)="checkedAllDef($event.target.checked)" ><span>Select All</span>
+                  </label>
+              </div>
+            </div>
+          </div>
+
+
+
 
                                         <!-- Top Influencers in this div section -->
                                 
@@ -390,6 +400,9 @@
                                                         </div>
                                 
                                                 </div>
+
+
+                                                
                                             </div> 
                                         
                                         </div>

@@ -1,18 +1,16 @@
 ﻿<!-- <app-loader></app-loader> -->
   <div class="flexy signin-signup">
-      <form class="form-content"(ngSubmit)="!userFormControl.hasError('required') && !userFormControl.hasError('pattern') && !passwordFormControl.hasError('required')
+      <form class="form-content m-0"(ngSubmit)="!userFormControl.hasError('required') && !userFormControl.hasError('pattern') && !passwordFormControl.hasError('required')
       && login()" #f="ngForm" novalidate>
-          <div class="text-center">
-              <img class="w-50" src="../../assets/img/Logo.png" alt="image">
-          </div>
-          <ul>
-            <li class="mr-2">
-            <br> <a (click)=" facebooklogin()"> <img src="../../assets/img/icon-facebook.png"> </a>
-            </li>
-            <li class="ml-2">
-               <br> <a (click)="googlelogin()"> <img src="../../assets/img/icon-Google.png"> </a>
-            </li>
-          </ul>
+          <div class="text-center div-header">
+              <h3 class="m-0 sign-header">Sign In to Your Account</h3>
+              <div class="text-center social-icons">
+               <a (click)=" facebooklogin()"> <img src="../../assets/img/icon-facebook.png"> </a>
+                 
+                    <a (click)="googlelogin()"> <img src="../../assets/img/icon-Google.png"> </a>
+                  </div>
+                  </div>
+         <div class="mt-4">
             <mat-form-field class="w-100">
               <input matInput type="text" placeholder="Username"  tabindex=1 [formControl]="userFormControl" [(ngModel)]="model.username" required>
               <span class="pointer" *ngIf="model.username"  matSuffix md-list-icon aria-label="Clear" (click)="model.username=''">
@@ -34,6 +32,7 @@
                 Password is <strong>required</strong>
               </mat-error>
             </mat-form-field>
+          </div>
             <div class="row ">
               <div class="col-md-6">
                   <div class="text-left">
