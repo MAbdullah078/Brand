@@ -198,17 +198,15 @@ mat-tab-group{
   padding: 5px;
   border-radius: 5px;
 }
-.right-item{
-  color: #000;
-  font-size: 12px;
-  margin-right: 3px;
-
+.fa-instagram {
+  color: #a82f82;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-globe{
-  color: #1da5de!important;
-  font-size: 15px;
-  width: 20px;
-  height: 20px;
+  color: #1da5de;
+  font-size: 16px;
+  margin-right: 5px;
 }
 .custom-control-input:checked~.custom-control-label::before {
   color: #fff;
@@ -216,9 +214,9 @@ mat-tab-group{
   background-color: #b82573;
 }
 .fa-map-marker-alt {
-  margin: 8px 0 7px 9px;
-  font-size: 16px;
-  color: #b74545!important;
+  margin: 0 5px 0 8px;
+    font-size: 16px;
+    color: #b74545;
 }
 .followers-division{
   display: flex;
@@ -233,47 +231,40 @@ mat-tab-group{
   font-family: Roboto,sans-serif;
 }
 .fa-random {
-  color: #fa8072!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #fa8072;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-pinterest {
-  color:  #b72025!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color:  #b72025;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-facebook{
-  color: #36569b!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #36569b;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-eye {
-  color: #a0522d!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #a0522d;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-upload{
-  color: #ff6347!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #ff6347;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-users,
 .fa-user-alt{
-  color: #5f9ea0!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #5f9ea0;
+  margin-right: 5px;
+  font-size: 16px;
 }
  .fa-heart{
-  color:#c00!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color:#c00;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .mat-horizontal-stepper-header-container{
   background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
@@ -318,7 +309,7 @@ mat-tab-group{
 }
 .social-icon2{
   width: 20px;
-  height: 20px;
+  /* height: 20px; */
   margin-top: 5px;
 }
 .fa-twitter {
@@ -339,10 +330,9 @@ mat-tab-group{
   align-items: center;
 }
 .fa-phone-alt{
-  color: #4682b4!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #4682b4;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-hackerrank{
   color: #6495ed!important;
@@ -10344,10 +10334,19 @@ font-family: Roboto,sans-serif;
 
 } 
 .fa-chart-bar {
-  color: #ed143d!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #ed143d;
+  margin-right: 5px;
+  font-size: 16px;
+}
+.fa-barcode{
+  color: #4cdc6b;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.fa-sliders-h{
+  color: #ff6347;
+  font-size: 16px;
+  margin-right: 5px;
 }
 .fa-accusoft{
   color: #ee82ee!important;
@@ -10357,11 +10356,15 @@ font-family: Roboto,sans-serif;
 }
 .list-item1 {
   color: #0a6aa1;
-  font-weight: 500;
-  font-size: 12px;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
 }
-
-
+.fa-facebook-square{
+  color: #36569b;
+    font-size: 16px;
+    margin-right: 5px;
+}
 .fa-venus{
   color:#82d0dc!important;
   margin: 3px;
