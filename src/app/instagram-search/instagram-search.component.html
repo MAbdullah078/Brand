@@ -129,6 +129,7 @@
             </div>
           </div>
           <div class="col-sm-12 p-0 influ-list-wrapper">
+            <!-- Profile Container  start -->
             <div class="profile-container" *ngFor="let item of default_influencers.results">
               <!-- dflex start -->
               <div class="d-flex p-2">
@@ -156,7 +157,7 @@
                         <h3 class="Follwers-div">{{item['follower']| thousandSuff}}</h3>
                       </div>
                 </div>
-                <!--  -->
+                <!-- Name Description and data start -->
                 <div class="remainingWidth">
                   <div class="d-flex">
                     <div class="mr-2">
@@ -195,8 +196,10 @@
                           </div>
                           <!--  -->
                           <div>
-                              <i class="fas fa-random"></i>Posts : <span
-                              class="list-item1">{{item['posts']}}</span>
+                              <p class="m-0">
+                                  <i class="fas fa-random"></i>Posts : <span
+                                  class="list-item1">{{item['posts']}}</span>
+                              </p>
                           </div>
                        </div>
                        <!--  -->
@@ -204,9 +207,12 @@
                     <!-- content here end -->
                   </div>
                 </div>
+                 <!-- Name Description and data End -->
+
               </div>
               <!--d-flex end  -->
             </div>
+            <!-- Profile Container end -->
           </div>
         </div>
       </div>
