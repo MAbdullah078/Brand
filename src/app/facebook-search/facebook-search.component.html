@@ -139,17 +139,11 @@
                              <div class="col-sm-12" *ngIf="loaded && fbinfluencers.totalItems!=0">
                                     <div class="row p-2 m-0" id="myHeader" style="margin-top: 1%">
                                         <div class="col-md-2">
-                        
-                                                <div id="ck-button">
-                                                        <label>
-                                    
-                                                            <input type="checkbox" class="checkbox" (change)="checkedAll($event.target.checked)" ><span>Select All</span>
-                                                        </label>
-                                                    </div>
-                        
-                        
-                                         
-                            
+                                                    <button class="btn btn-primary select-btn">
+                                                            <label>
+                                                                    <input type="checkbox" class="checkbox" (change)="checkedAll($event.target.checked)" ><span>Select All</span>
+                                                                </label>
+                                                    </button>
                                         </div>
                                         <div class="col-md-8  center-showing">
                                          
@@ -319,14 +313,12 @@
             </div>
             <!--  -->
             <div class="d-flex align-items-center">
-              <div>
-                  <button class="btn btn-priamry add-to-list ml-2" (click)="add_create_list()"> Add to list</button>
-              </div>
-              <div id="ck-button">
-                  <label>
-                      <input type="checkbox"   (change)="checkedAllDef($event.target.checked)" ><span>Select All</span>
-                  </label>
-              </div>
+                  <button class="btn btn-priamry add-to-list mr-2" (click)="add_create_list()"> Add to list</button>
+                  <button class="btn btn-primary select-btn">
+                        <label>
+                                <input type="checkbox"   (change)="checkedAllDef($event.target.checked)" ><span>Select All</span>
+                            </label>
+                  </button>
             </div>
           </div>
 

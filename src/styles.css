@@ -84,7 +84,6 @@ display: none!important;
 
 .pw-solutions {
   padding: 10px !important;
-  /* font-family: 'Hind Madurai', sans-serif; */
 }
 
 .home.pw-solutions ul li, .pw-solutions ul li {
@@ -100,7 +99,7 @@ display: none!important;
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+  background: #e20074;
   color: rgb(255, 255, 255);
   width: 60px;
   height: 60px;
@@ -372,7 +371,7 @@ mat-tab-group{
   display: flex;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 65px;
+  /* width: 65px; */
   padding-right: 12px;
   -ms-flex-pack: center;
   justify-content: center;
@@ -383,23 +382,21 @@ mat-tab-group{
   border-bottom-left-radius: 5px;
   cursor: pointer;
 }
-#ck-button{
+/* #ck-button{
 background: #000;
   display: inline-block;
   border-radius: 50px;
   padding: 2px 26px;
   box-shadow: 0 5px 5px #ccc;
   margin: 0 0 0 6px;
-}
-#ck-button label{
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
+} */
+.select-btn label{
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0;
 }
 .mat-select {
   width: 100%!important;
@@ -8777,6 +8774,9 @@ body:not(.device-touch) .button.button-full strong {
 .search-form  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
   transform: translateY(-29px) scale(.75) perspective(100px) translateZ(.001px);
 }
+.sidebar-forms .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+  transform: translateY(-20px) scale(.75) perspective(100px) translateZ(.001px)!important;
+}
 .style-msg2 {
   border-left: 4px solid rgba(0, 0, 0, 0.2);
 }
@@ -12063,16 +12063,6 @@ fieldset[disabled] .sm-form-control {
 .form-control:focus {
   border-color: #999;
   box-shadow: none;
-}
-
-label {
-  display: inline-block;
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #555;
-  margin-bottom: 10px;
-  cursor: pointer;
 }
 
 label.label-muted {
@@ -31986,12 +31976,14 @@ font-size:15px;
 }
 .sidebar-forms .mat-form-field-appearance-legacy .mat-form-field-label {
   font-size: 12px;
+  font-weight: 500!important;
 }
 .sidebar-forms  [placeholder], input[placeholder] {
   font-size: 12px;
+  font-weight: 500;
 }
 .sidebar-forms .mat-form-field-appearance-legacy .mat-form-field-label {
-  top: 27px;
+  top: 26px!important;
 }
 
 .mat-input{
@@ -32030,13 +32022,17 @@ font-size:15px;
 }
 .btn{
   font-size: 16px!important;
-  font-weight: 400!important;
-  background: #000;
+  font-weight: 500!important;
+  background: #000!important;
   border: none;
   padding: 6px 16px;
-  box-shadow: 0 5px 5px #ccc;
+  box-shadow: 0 5px 5px #ccc!important;
   border-radius: 50px;
-  color: #fff;
+  color: #fff!important;
+}
+.btn:hover{
+  background: #e20074!important;
+  box-shadow: none!important;
 }
 .width175px{
   width: 175px;
@@ -32045,7 +32041,7 @@ font-size:15px;
   width: 60px;
 }
 body {
-  font-family: Roboto,"Helvetica Neue",sans-serif ;
+  font-family: 'Roboto', sans-serif!important;
   display: block !important;
   line-height: 1.5;
   color: #555;

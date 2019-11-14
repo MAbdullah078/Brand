@@ -16987,17 +16987,17 @@ mat-tab-body{
 .w-10{
   width: 10%;
 }
-.sidebarAllFilters i{
+.sidebar-forms i{
   width: 20px;
   height: 20px;
   vertical-align: bottom;
   font-size: 20px;
   margin-right: 5px;
 }
-.sidebarAllFilters .mat-form-field-label,.sidebarAllFilters .mat-select-placeholder{
-  color: #333 !important;
-  font-weight: normal !important;
-  font-size: 12px;
+.sidebar-forms .mat-form-field-label,.sidebar-forms .mat-select-placeholder{
+    color: #333 !important;
+    font-weight: 500!important;
+    font-size: 12px;
 }
 .InfluDetails p{
   font-size: 12px;
