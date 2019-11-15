@@ -234,6 +234,11 @@ button#btn-chat {
     min-height: 402px;
     float: left;
 }
+.How-It-Works img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
 .footer-stores-img h2 {
     color: #000;
     font-size: 14px;
