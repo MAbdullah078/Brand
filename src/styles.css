@@ -84,7 +84,6 @@ display: none!important;
 
 .pw-solutions {
   padding: 10px !important;
-  /* font-family: 'Hind Madurai', sans-serif; */
 }
 
 .home.pw-solutions ul li, .pw-solutions ul li {
@@ -100,7 +99,7 @@ display: none!important;
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+  background: #e20074;
   color: rgb(255, 255, 255);
   width: 60px;
   height: 60px;
@@ -199,17 +198,15 @@ mat-tab-group{
   padding: 5px;
   border-radius: 5px;
 }
-.right-item{
-  color: #000;
-  font-size: 12px;
-  margin-right: 3px;
-
+.fa-instagram {
+  color: #a82f82;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-globe{
-  color: #1da5de!important;
-  font-size: 15px;
-  width: 20px;
-  height: 20px;
+  color: #1da5de;
+  font-size: 16px;
+  margin-right: 5px;
 }
 .custom-control-input:checked~.custom-control-label::before {
   color: #fff;
@@ -217,9 +214,9 @@ mat-tab-group{
   background-color: #b82573;
 }
 .fa-map-marker-alt {
-  margin: 8px 0 7px 9px;
-  font-size: 16px;
-  color: #b74545!important;
+  margin: 0 5px 0 8px;
+    font-size: 16px;
+    color: #b74545;
 }
 .followers-division{
   display: flex;
@@ -234,47 +231,40 @@ mat-tab-group{
   font-family: Roboto,sans-serif;
 }
 .fa-random {
-  color: #fa8072!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #fa8072;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-pinterest {
-  color:  #b72025!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color:  #b72025;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-facebook{
-  color: #36569b!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #36569b;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-eye {
-  color: #a0522d!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #a0522d;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-upload{
-  color: #ff6347!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #ff6347;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-users,
 .fa-user-alt{
-  color: #5f9ea0!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #5f9ea0;
+  margin-right: 5px;
+  font-size: 16px;
 }
  .fa-heart{
-  color:#c00!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color:#c00;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .mat-horizontal-stepper-header-container{
   background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
@@ -319,7 +309,7 @@ mat-tab-group{
 }
 .social-icon2{
   width: 20px;
-  height: 20px;
+  /* height: 20px; */
   margin-top: 5px;
 }
 .fa-twitter {
@@ -340,10 +330,9 @@ mat-tab-group{
   align-items: center;
 }
 .fa-phone-alt{
-  color: #4682b4!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #4682b4;
+  margin-right: 5px;
+  font-size: 16px;
 }
 .fa-hackerrank{
   color: #6495ed!important;
@@ -372,7 +361,7 @@ mat-tab-group{
   display: flex;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 65px;
+  /* width: 65px; */
   padding-right: 12px;
   -ms-flex-pack: center;
   justify-content: center;
@@ -383,23 +372,21 @@ mat-tab-group{
   border-bottom-left-radius: 5px;
   cursor: pointer;
 }
-#ck-button{
+/* #ck-button{
 background: #000;
   display: inline-block;
   border-radius: 50px;
   padding: 2px 26px;
   box-shadow: 0 5px 5px #ccc;
   margin: 0 0 0 6px;
-}
-#ck-button label{
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
+} */
+.select-btn label{
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0;
 }
 .mat-select {
   width: 100%!important;
@@ -8777,6 +8764,9 @@ body:not(.device-touch) .button.button-full strong {
 .search-form  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
   transform: translateY(-29px) scale(.75) perspective(100px) translateZ(.001px);
 }
+.sidebar-forms .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+  transform: translateY(-20px) scale(.75) perspective(100px) translateZ(.001px)!important;
+}
 .style-msg2 {
   border-left: 4px solid rgba(0, 0, 0, 0.2);
 }
@@ -10344,10 +10334,19 @@ font-family: Roboto,sans-serif;
 
 } 
 .fa-chart-bar {
-  color: #ed143d!important;
-  width: 20px;
-  height: 20px;
-  font-size: 15px;
+  color: #ed143d;
+  margin-right: 5px;
+  font-size: 16px;
+}
+.fa-barcode{
+  color: #4cdc6b;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.fa-sliders-h{
+  color: #ff6347;
+  font-size: 16px;
+  margin-right: 5px;
 }
 .fa-accusoft{
   color: #ee82ee!important;
@@ -10357,11 +10356,15 @@ font-family: Roboto,sans-serif;
 }
 .list-item1 {
   color: #0a6aa1;
-  font-weight: 500;
-  font-size: 12px;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
 }
-
-
+.fa-facebook-square{
+  color: #36569b;
+    font-size: 16px;
+    margin-right: 5px;
+}
 .fa-venus{
   color:#82d0dc!important;
   margin: 3px;
@@ -12063,16 +12066,6 @@ fieldset[disabled] .sm-form-control {
 .form-control:focus {
   border-color: #999;
   box-shadow: none;
-}
-
-label {
-  display: inline-block;
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #555;
-  margin-bottom: 10px;
-  cursor: pointer;
 }
 
 label.label-muted {
@@ -31986,12 +31979,14 @@ font-size:15px;
 }
 .sidebar-forms .mat-form-field-appearance-legacy .mat-form-field-label {
   font-size: 12px;
+  font-weight: 500!important;
 }
 .sidebar-forms  [placeholder], input[placeholder] {
   font-size: 12px;
+  font-weight: 500;
 }
 .sidebar-forms .mat-form-field-appearance-legacy .mat-form-field-label {
-  top: 27px;
+  top: 26px!important;
 }
 
 .mat-input{
@@ -32030,13 +32025,17 @@ font-size:15px;
 }
 .btn{
   font-size: 16px!important;
-  font-weight: 400!important;
-  background: #000;
+  font-weight: 500!important;
+  background: #000!important;
   border: none;
   padding: 6px 16px;
-  box-shadow: 0 5px 5px #ccc;
+  box-shadow: 0 5px 5px #ccc!important;
   border-radius: 50px;
-  color: #fff;
+  color: #fff!important;
+}
+.btn:hover{
+  background: #e20074!important;
+  box-shadow: none!important;
 }
 .width175px{
   width: 175px;
@@ -32045,7 +32044,7 @@ font-size:15px;
   width: 60px;
 }
 body {
-  font-family: Roboto,"Helvetica Neue",sans-serif ;
+  font-family: 'Roboto', sans-serif!important;
   display: block !important;
   line-height: 1.5;
   color: #555;
